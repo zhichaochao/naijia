@@ -6,17 +6,18 @@ define('HTTP_SERVER', 'http://hotnajia.com/');
 define('HTTPS_SERVER', 'http://hotnajia.com/');
 
 // DIR
-define('DIR_APPLICATION', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/');
-define('DIR_SYSTEM', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/');
-define('DIR_IMAGE', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/');
-define('DIR_LANGUAGE', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/language/');
-define('DIR_TEMPLATE', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/');
-define('DIR_CONFIG', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/config/');
-define('DIR_CACHE', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/storage/cache/');
-define('DIR_DOWNLOAD', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/storage/download/');
-define('DIR_LOGS', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/storage/logs/');
-define('DIR_MODIFICATION', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/storage/modification/');
-define('DIR_UPLOAD', 'D:/phpStudy/PHPTutorial/WWW/hotnajia/system/storage/upload/');
+define('DIR_ROOT', str_replace('\\', '/', __DIR__).'/');
+define('DIR_APPLICATION', DIR_ROOT.'catalog/');
+define('DIR_LANGUAGE', DIR_APPLICATION.'language/');
+define('DIR_TEMPLATE', DIR_APPLICATION.'view/theme/');
+define('DIR_IMAGE', DIR_ROOT.'image/');
+define('DIR_SYSTEM', DIR_ROOT.'system/');
+define('DIR_CONFIG', DIR_SYSTEM.'config/');
+define('DIR_CACHE', DIR_SYSTEM.'storage/cache/');
+define('DIR_DOWNLOAD', DIR_SYSTEM.'storage/download/');
+define('DIR_LOGS', DIR_SYSTEM.'storage/logs/');
+define('DIR_UPLOAD', DIR_SYSTEM.'storage/upload/');
+define('DIR_MODIFICATION', DIR_SYSTEM.'storage/modification/');
 
 // DB
 define('DB_DRIVER', 'mpdo');
