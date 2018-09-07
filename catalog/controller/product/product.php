@@ -364,7 +364,7 @@ class ControllerProductProduct extends Controller {
                     'thumb2'=> $this->model_tool_image->resize($result['image'], 800, 800)
                 );
             }
-
+// print_r($data['images']);exit;
             
             //包邮
             // if($product_info['free_postage']){
@@ -595,8 +595,8 @@ class ControllerProductProduct extends Controller {
                 $data['error'] = $this->error;
             }
             //产品浏览量
-            $this->load->model('common/gallery');
-            $this->model_common_gallery->updateProductView($product_id);
+            // $this->load->model('common/gallery');
+            // $this->model_common_gallery->updateProductView($product_id);
 
             //询盘请求的url   dyl add
             $data['inquiry_url'] = $this->url->link('product/product/addinquiry');

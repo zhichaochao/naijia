@@ -17,7 +17,7 @@ class ControllerAccountReset extends Controller {
 
 		$customer_info = $this->model_account_customer->getCustomerByCode($code);
 
-		// if ($customer_info) {
+		if ($customer_info) {
 			$this->load->language('account/reset');
 
 			$this->document->setTitle($this->language->get('heading_title'));
@@ -105,13 +105,13 @@ class ControllerAccountReset extends Controller {
 			$data['header'] = $this->load->controller('common/header');
 
 			$this->response->setOutput($this->load->view('account/reset', $data));
-		// } else {
-		// 	$this->load->language('account/reset');
+		} else {
+			$this->load->language('account/reset');
 
-		// 	$this->session->data['error'] = $this->language->get('error_code');
+			$this->session->data['error'] = $this->language->get('error_code');
 
-		// 	return new Action('account/login');
-		// }
+			return new Action('account/login');
+		}
 	}
 
 	protected function validate() {

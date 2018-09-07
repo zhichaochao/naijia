@@ -2735,3 +2735,68 @@
 2018-09-06 11:00:55 - PHP Notice:  Undefined index: relation_product in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 569
 2018-09-06 11:01:11 - PHP Notice:  Undefined variable: productIdArray in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 571
 2018-09-06 11:01:11 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 571
+2018-09-07 7:39:25 - PHP Notice:  Error: E-Mail from required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 67
+2018-09-07 7:44:32 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-09-07 7:45:35 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-09-07 7:47:23 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-09-07 8:03:47 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-09-07 8:34:12 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:34:12 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:34:12 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:34:12 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:34:14 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:34:14 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:34:14 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:34:14 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:34:30 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:34:30 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:34:30 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:34:30 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:34:33 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:34:33 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:34:33 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:34:33 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:35:02 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:35:02 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:35:02 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:35:02 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:25 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:25 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:25 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:25 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:26 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:26 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:26 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:26 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:26 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:26 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:26 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:26 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:27 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:27 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:27 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:27 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:27 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:27 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:27 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
+2018-09-07 8:37:32 - PHP Notice:  Undefined variable: data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 15
+2018-09-07 8:37:32 - PHP Notice:  Undefined variable: subject in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 18
+2018-09-07 8:37:32 - PHP Notice:  Undefined variable: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 19
+2018-09-07 8:37:32 - PHP Notice:  Error: E-Mail to required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 61
