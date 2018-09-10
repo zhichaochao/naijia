@@ -244,7 +244,7 @@ class ControllerProductCategory extends Controller {
 				//    }
 			 //    }
 
-			 //    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
+			    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
                             
     //             //texture
     //             $texture = $this->model_catalog_product->getOptionDes('Texture',$result['product_id']);
@@ -254,6 +254,7 @@ class ControllerProductCategory extends Controller {
 					'thumb'       => $image,
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
+					'reviews'	  => $result['reviews'],
 					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
 					//  'color_name'  => $color_name,
                     // 'texture'     => $texture,
@@ -264,8 +265,8 @@ class ControllerProductCategory extends Controller {
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
-					// 'wishlist'	  =>$wishlist
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+					'wishlist'	  =>$wishlist
 				);
 				//print_r(	$data['products'][0]['href']);exit();
 			}
@@ -395,8 +396,8 @@ class ControllerProductCategory extends Controller {
 			$data['product_total']=$product_total;
 			// $data['page']=$page;
 			// print_r($data['product_total']);exit;
-			$data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
-			$data['allpage']=ceil($product_total / $limit);
+			// $data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
+			$data['allpage']=ceil($product_total / $limit);		
 // var_dump(ceil($product_total / $limit));exit();
 			// http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
 			if ($page == 1) {

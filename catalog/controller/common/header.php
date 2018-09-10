@@ -51,9 +51,9 @@ class ControllerCommonHeader extends Controller {
 		if ($this->customer->isLogged()) {
 			$this->load->model('account/wishlist');
 
-			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), $this->model_account_wishlist->getTotalWishlist());
+			$data['text_wishlist'] =  $this->model_account_wishlist->getTotalWishlist();
 		} else {
-			$data['text_wishlist'] = sprintf($this->language->get('text_wishlist'), (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0));
+			$data['text_wishlist'] =  (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
 		}
 
 		$data['text_shopping_cart'] = $this->language->get('text_shopping_cart');
@@ -161,7 +161,8 @@ class ControllerCommonHeader extends Controller {
 				),
 
 		 );
-
+		//购物车数量
+		$data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 		// Menu
 		$this->load->model('catalog/category');
 

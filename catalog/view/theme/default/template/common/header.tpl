@@ -71,10 +71,10 @@
                 <a href="<?php echo $login?>"></a>
               </li>
               <li class="sc_li">
-                <a href="###"></a>
+                <a href="###"><span id='wishlist_count'><?php echo $text_wishlist; ?></span></a>
               </li>
               <li class="gw_li">
-                <a href="###"></a>
+                <a href="###"><span id='cart_count'><?=$text_cart_items;?></span></a>
               </li>
               <li class="fb_li">
                 <a href="###"></a>

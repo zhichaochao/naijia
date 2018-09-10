@@ -536,4 +536,30 @@ class ModelCatalogProduct extends Model {
 			return 0;
 		}
 	}
+	public function wishlistornot($product_id){
+           $customer_id = $this->customer->isLogged() ? $this->customer->getId() : 0;
+            if( empty($product_id)|| $customer_id==0){
+                return false;
+            }
+          
+          // print_r($product_id);
+          // print_r('<br/>');
+           
+          // print_r($customer_id);
+
+
+          // print_r('<br/>');
+           
+            $sql ="select * from ".DB_PREFIX."customer_wishlist   where product_id = '".$product_id."' AND customer_id =". $customer_id;
+            $query = $this->db->query($sql);
+            // print_r($query->row)
+           if (empty($query->row)) {
+           	return  false;
+           }else {
+           		return  true;
+           }
+          
+            
+          
+	}
 }

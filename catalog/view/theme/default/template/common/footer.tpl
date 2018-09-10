@@ -21,7 +21,7 @@
               <!-- <form > -->
                 <label for="">
                   <i></i>
-                  <input type="text" name="txtemail" id="txtemail" placeholder="Enter your e-mail"/>
+                  <input type="text" name="txtemail" id="txtemails" placeholder="Enter your e-mail"/>
                 </label>
                 <p>
                   join us and get the exclusive sales, productlanunches, 
@@ -149,39 +149,39 @@
     
     
   })
-//   function subscribe()
-// {
-//     var emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//     var email = $('#txtemail').val();
-//     if(email != "")
-//     {
-//         if(!emailpattern.test(email))
-//         {
-//             alert("Invalid Email");
-//             return false;
-//         }
-//         else
-//         {
-//             $.ajax({
-//                 url: 'index.php?route=module/newsletters/news',
-//                 type: 'post',
-//                 data: 'email=' + $('#txtemail').val(),
-//                 dataType: 'json',
+  function subscribe()
+{
+    var emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var email = $('#txtemails').val();
+    if(email != "")
+    {
+        if(!emailpattern.test(email))
+        {
+            alert("Invalid Email");
+            return false;
+        }
+        else
+        {
+            $.ajax({
+                url: 'index.php?route=module/newsletters/news',
+                type: 'post',
+                data: 'email=' + $('#txtemails').val(),
+                dataType: 'json',
 
-//                 success: function(json) {
-//                     alert(json.message);
-//                 }
-//             });
-//             return false;
-//         }
-//     }
-//     else
-//     {
-//         alert("Email Is Require");
-//         $(email).focus();
-//         return false;
-//     }
-// }
+                success: function(json) {
+                    alert(json.message);
+                }
+            });
+            return false;
+        }
+    }
+    else
+    {
+        alert("Email Is Require");
+        $(email).focus();
+        return false;
+    }
+}
   
   
 </script>

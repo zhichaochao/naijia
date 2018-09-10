@@ -9,10 +9,14 @@
           <div class="sortby">
             <p>Sort by : <img src="catalog/view/theme/default/img/png/icon_26.png  " alt="" /></p>
             <ul class="clearfix">
-              <li><a href="###">Best selling</a></li>
+             <!--  <li><a href="###">Best selling</a></li>
               <li><a href="###">Newest</a></li>
               <li><a href="###">Lowest price</a></li>
-              <li><a href="###">Highest price</a></li>
+              <li><a href="###">Highest price</a></li> -->
+              <li><a href="<?php echo $sort_sort_rating?>">Best selling</a></li>
+            <li><a href="<?php echo $sort_sort_add?>">Newest</a></li>
+            <li><a href="<?php echo $sort_sort_order?>">Lowest price</a></li>
+            <li><a href="<?php echo $sort_sort_order_d?>">Highest price</a></li>
             </ul>
           </div>
         </div>
@@ -29,7 +33,7 @@
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumb']; ?>"  class="top_img" />
                   <div class="bg_hui">
-                    <p class="djs_p" title="2018/10/01 10:06:00">SALE ENDS 
+                    <p class="djs_p" title="2018/09/15 10:06:00">SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
@@ -46,7 +50,7 @@
                     <li></li>
                     <li></li>
                   </ol>
-                  <p class="pl_p">9999 reviews</p>
+                  <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                 <?php if($product['special']) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
@@ -61,7 +65,9 @@
                 <em class="red_em">HOT<br />SALE</em>
               </a>
               <!-- 收藏 -->
-              <div class="sc active"></div>
+              <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"
+              onclick="wishlist('<?php echo $product['product_id']; ?>',this);"
+              ></div>
             </li>
           <?php } ?>
            
@@ -69,7 +75,7 @@
          
         
 
-            <li>
+         <!--    <li>
               <a href="###">
                 <div class="pic_img">
                   <img class="top_img lazyLoad" srcs="catalog/view/theme/default/img/pro_1.jpg" data-src="catalog/view/theme/default/img/pro_2.jpg" alt="" class="top_img" />
@@ -128,21 +134,22 @@
                 <em class="red_em">HOT<br />SALE</em>
               </a>
               <div class="sc active"></div>
-            </li>
+            </li> -->
 
            
            
           </ul>
           
-        <div class="fy_div">
+        <!-- <div class="fy_div">
         <div class="left"><?php echo $pagination; ?></div>
           <div class="right">
             <p><?php echo $results; ?></p>
           </div>
-        </div>
-          <!-- <div class="fy_div">
+        </div> -->
+          <div class="fy_div">
             <ul>
-              <li><a href="###">< Last</a></li>
+            <?php echo $pagination; ?>
+             <!--  <li><a href="###">< Last</a></li>
               <li><a href="###">1</a></li>
               <li><a href="###">2</a></li>
               <li><a href="###">3</a></li>
@@ -151,14 +158,46 @@
               <li><a href="###">6</a></li>
               <li><a href="###">7</a></li>
               <li><a href="###">8</a></li>
-              <li><a href="###">Next ></a></li>
+              <li><a href="###">Next ></a></li> -->
             </ul>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
 <?php echo $footer; ?>
 <script>
+function wishlist(product_id,e) {
+  if ($(e).hasClass('active')) {
+     // alert(product_id);die;
+       $.ajax({
+    url:'<?php echo $delewishlist ;?>',
+    type:'post',
+    data:{'product_id':product_id},
+    dataType: 'json',
+    success:function(data){
+      if (data.success) {
+        $('#wishlist_count').html(data.total);
+      }
+               // location.reload(); 
+    }
+   })
+
+  }else{
+  // alert(product_id);die;
+   $.ajax({
+    url:'<?php echo $wishlist ;?>',
+    type:'post',
+    data:{'product_id':product_id},
+    dataType: 'json',
+    success:function(data){
+      if (data.success) {
+        $('#wishlist_count').html(data.total);
+      }
+               // location.reload(); 
+    }
+   })
+ }
+}
   $(function(){
     $(".sortby").hover(function(){
       $(this).find("ul").stop().slideDown();
