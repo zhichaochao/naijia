@@ -28,7 +28,6 @@ ul,ol,li{list-style: none;}
 i,em{font-style: normal;}
 div,ul,ol,li{box-sizing: border-box;}
 
-
 .clearfix:before, .clearfix:after{content:"";display:table;}
 .clearfix:after{clear:both;overflow:hidden;}
 .clearfix{zoom:1;}

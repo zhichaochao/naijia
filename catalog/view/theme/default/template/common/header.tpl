@@ -39,10 +39,10 @@
             <ul class="nav_ul">
               <li class="active"><a href="###">Home</a></li>
 
-              <li><a href="<?php echo $category ?>">Hot Sales</a></li>
+              <li><a href="<?php echo $hotcategory ?>">Hot Sales</a></li>
 
               <li>
-                <a href="###">Wigs</a>
+                <a href="<?php echo $category ?>">Wigs</a>
                 <ol class="nav_ol">
                   <li><a href="###">Luxury Hand-Make Wigs</a></li>
                   <li><a href="###">Basic Lace Wig</a></li>
