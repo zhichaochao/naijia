@@ -100,7 +100,7 @@
 		<div class="in_content clearfix"></div>
 		
 		<div class="pro_det clearfix">
-			<div class="content">
+			<div class="contents clearfix">
 				<div class="img_lf">
 					<div class="top time" title="2018/10/05 10:06:00">
 						<p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
@@ -112,6 +112,7 @@
 						</p>
 					</div>
 					
+					<!--pc左边大图-->
 					<ul class="img_ul clearfix">
 						<li><img src="img/pro_det1.jpg"/></li>
 						<li><img src="img/pro_det2.jpg"/></li>
@@ -120,37 +121,344 @@
 						<li><img src="img/pro_det1.jpg"/></li>
 						<li><img src="img/pro_det2.jpg"/></li>
 					</ul>
+					
+					<!--yd顶部大图轮播-->
+					<div class="pro_ban">
+						<!-- Swiper -->
+					  	<div class="swiper-container yd_ban_lb">
+						    <div class="swiper-wrapper">
+						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+						    </div>
+					  	</div>
+					    <!-- Add Pagination -->
+					    <div class="swiper-pagination"></div>
+					</div>
+					
 				</div>
-				
 				<div class="text_rf">
-					<div class="top">
-						<h1>ILLUSION FRONTAL KKS WIG</h1>
-						<p class="p1">
-							It has the natural appearance of scalp wherever the hair is seperated, 
-							and imitates most sucessfully the natural movement of real hair. They 
-							are virtually undetectable and can be worn in a variety of styles 
-							including a high ponytail or updo.
-						</p>
-						<em class="em1">₦100k - ₦120K</em>
-						<div class="price">
-							<span class="red_span">44%OFF</span>
-							<em class="em2">₦54K- ₦66k</em>
+					<div class="big_rf clearfix">
+						<div class="top">
+							<h1>ILLUSION FRONTAL KKS WIG</h1>
+							<p class="p1">
+								It has the natural appearance of scalp wherever the hair is seperated, 
+								and imitates most sucessfully the natural movement of real hair. They 
+								are virtually undetectable and can be worn in a variety of styles 
+								including a high ponytail or updo.
+							</p>
+							<div class="price">
+								<em class="em1">₦100k - ₦120K</em>
+								<em class="em2">₦54K- ₦66k</em>
+								<span class="red_span">44%OFF</span>
+							</div>
 						</div>
-					</div>
-					
-					<div class="quantity number">
-						<span>Quantity :</span>
-						<input type="text" class="num_in" value="1" />
-						<div class="num_rf">
-							<em class="add"><i></i></em>
-							<em class="sub"><i></i></em>
-						</div>
-						<p>This hair need  3-7 customize process days</p>
+						
+						<ol class="text_ol">
+							<li class="clearfix number_li">
+								<div class="number">
+									<span class="bt_span">
+										<p class="quantity">Quantity :</p>
+										<input type="text" class="num_in" value="1" />
+										<div class="num_rf">
+											<em class="add"><i></i></em>
+											<em class="sub"><i></i></em>
+										</div>
+									</span>
+									<p class="ts_p">This hair need  3-7 customize process days</p>
+								</div>
+							</li>
+							
+							<!--默认选择-->
+							<li class="clearfix">
+								<span class="bt_span slide">Select Style/Color: <i></i></span>
+								<p class="rf_style">5 styles</p>
+								<!-- Swiper -->
+								<div class="swiper-container pro_det_ul2 slide_ul clearfix">
+								    <div class="swiper-wrapper">
+								      	<div class="swiper-slide active"><img src="img/pro_det3.jpg" alt="" /></div>
+								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
+								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
+								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
+								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
+								    </div>
+								</div>
+							</li>
+							
+							<!--默认不选择-->
+							<li class="clearfix">
+								<span class="bt_span slide">Select Length : <em>18″</em> <i></i><p class="ts_ps">Please select Length</p></span>
+								
+								<ul class="pro_det_ul3 slide_ul clearfix">
+									<li><span>12″</span></li>
+									<li><span>14″</span></li>
+									<li><span>16″</span></li>
+									<li class="active"><span>18″</span></li>
+									<li><span>20″</span></li>
+									<li><span>22″</span></li>
+									<li><span>24″</span></li>
+									<li><span>26″</span></li>
+									<li><span>28″(model size)</span></li>
+								</ul>
+								<p class="size_p">Select Size Guide</p>
+							</li>
+							
+							<!--默认不选中-->
+							<li class="clearfix">
+								<span class="bt_span slide">Wig with: <i></i><p class="ts_ps">Please select Wig with</p></span>
+								
+								<ul class="pro_det_ul4 slide_ul clearfix">
+									<li class="active"><span>13*4 Frontal</span></li>
+									<li><span>4*4 Closure</span></li>
+								</ul>
+							</li>
+							
+							<li>
+								<a class="shop_a" href="###">Add To Shopping Bag</a>
+								<button class="wish_btn">
+									<span><i></i> Add To Wish List</span>
+								</button>
+							</li>
+							
+							<!--默认展开评价-->
+							<li class="active">
+								<h2 class="slide_h2">Reviews (119) <em class="jian active"></em></h2>
+								<div class="slide_text">
+									<div class="bg_hui clearfix">
+										<ol>
+											<li><img src="img/png/icon_8.png"/></li>
+											<li><img src="img/png/icon_8.png"/></li>
+											<li><img src="img/png/icon_8.png"/></li>
+											<li><img src="img/png/icon_8.png"/></li>
+											<li><img src="img/png/icon_8.png"/></li>
+										</ol>
+										<span>Average Star Rating</span>
+									</div>
+									<div class="pl_div">
+										<ol class="start_ol">
+											<li class="active"></li>
+											<li class="active"></li>
+											<li class="active"></li>
+											<li class="active"></li>
+											<li></li>
+										</ol>
+										<p class="p1">
+											<span>A***G</span>
+											<em>Length: 16 & 16 & 18</em>
+										</p>
+										<p class="p2">
+											Very nice unit...hair is very soft and shiny. Not a lot of shedding after
+											cowash. I will definitely use this seller again, quick delivery and the seller 
+											stays in touch.
+										</p>
+										
+										<ol class="pl_img_ol clearfix">
+											<li class="active"><img src="img/pro_det4.jpg" alt="" /></li>
+											<li><img src="img/pro_det4.jpg" alt="" /></li>
+											<li><img src="img/pro_det4.jpg" alt="" /></li>
+											<li><img src="img/pro_det4.jpg" alt="" /></li>
+											<li><img src="img/pro_det4.jpg" alt="" /></li>
+										</ol>
+										
+										<div class="pro_big_img">
+											<div class="swiper-container" id="swiper3">
+											    <div class="swiper-wrapper">
+											      	<div class="swiper-slide ban_img">
+											      		<img src="img/pro_det5.jpg"/>
+											      	</div>
+												    <div class="swiper-slide ban_img">
+												    	<img src="img/pro_det4.jpg"/>
+												    </div>
+												    <div class="swiper-slide ban_img">
+												    	<img src="img/pro_det5.jpg"/>
+												    </div>
+												    <div class="swiper-slide ban_img">
+											      		<img src="img/pro_det5.jpg"/>
+											      	</div>
+												    <div class="swiper-slide ban_img">
+											      		<img src="img/pro_det5.jpg"/>
+											      	</div>
+											    </div>
+											    <div class="swiper-paginations" style="display: none;"></div>
+											    <div class="swiper-button-prev"></div>
+												<div class="swiper-button-next"></div>
+											</div>
+											<div class="close"></div>
+										</div>
+										
+										<a class="view_a" href="###">View All Reviews <i>></i></a>
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<h2 class="slide_h2">Details <em class="jian"></em></h2>
+								<div class="slide_text">
+									<p>Model Length: 24"</p>
+									<p>Fiber: 100% Remy Human Hair</p>
+									<p>Density: Full</p>
+									<p>Texture: Straight</p>
+								</div>
+							</li>
+							
+							<li>
+								<h2 class="slide_h2">Shipping & Returns <em class="jian"></em></h2>
+								<div class="slide_text">
+									<dl>
+										<dt>Shipping</dt>
+										<dd>Ready to ship in 1-3 Days</dd>
+										<dd>From Lagos Get the shipping cost</dd>
+									</dl>
+									<dl>
+										<dt>Return Policy</dt>
+										<dd class="dd_s">We gladly accept returns and exchanges</dd>
+										<dd>Contact us within: 5 days of delivery</dd>
+										<dd>Ship items back within : 10 days of delivery</dd>
+										
+										<dd class="dd_s">We don't accept cancellations</dd>
+										<dd>
+											But please contact us if you have any problems with your order.
+											The following items can't be returned or exchanged
+											Because of the nature of these items, unless they arrive damaged or 
+											defective,
+										</dd>
+										
+										<dd class="dd_s">I can't accept returns for:</dd>
+										<dd>Custom or personalized orders</dd>
+										
+										<dd class="dd_s">Conditions of return</dd>
+										<dd>
+											Buyers are responsible for return shipping costs. If the item is not 
+											returned in its original condition, the buyer is responsible for any loss 
+											in value.
+										</dd>
+									</dl>
+								</div>
+							</li>
+							
+							<li>
+								<h2 class="slide_h2">Payment Method <em class="jian"></em></h2>
+								<div class="slide_text">
+									<ul class="pay_ul clearfix">
+										<li><img src="img/png/fot1_.png"/></li>
+										<li><img src="img/png/fot2_.png"/></li>
+										<li><img src="img/png/fot3_.png"/></li>
+										<li><img src="img/png/fot4_.png"/></li>
+										<li><img src="img/png/fot5_.png"/></li>
+									</ul>
+								</div>
+							</li>
+							
+							<li>
+								<h2 class="slide_h2">Share <em class="jian"></em></h2>
+								<div class="slide_text">
+									<ul class="pay_ul clearfix">
+										<li><img src="img/png/icon_35_.png"/></li>
+										<li><img src="img/png/icon_34_.png"/></li>
+									</ul>
+								</div>
+							</li>
+						</ol>
+						
 					</div>
 					
 				</div>
 				
 				
+			</div>
+		
+			<div class="bottom">
+				<button class="ft_btn">Back to top ↑</button>
+				<button class="yd_ft_btn"><img src="img/png/icon_7_.png"/><span>TOP</span></button>
+				<h5>YOU MAY ALSO LIKE</h5>
+				
+				<!-- Swiper -->
+			  <div class="swiper-container in_ul2">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
+			    </div>
+			    <!-- Add Arrows -->
+			    <div class="swiper-button-next"></div>
+			    <div class="swiper-button-prev"></div>
+			  </div>
 				
 			</div>
 		</div>
@@ -252,7 +560,7 @@
 		</div>
 		
 		
-		<!--返回顶部-->
+		
 		<div class="xf_right">
 			<div class="vip"><a href="###"><span>VIP</span></a></div>
 		</div>
@@ -261,8 +569,10 @@
 <script>
 	$(function(){
 		//动态改变头部红色广告条的宽度
-		var p_win = 100/parseInt($(".time>p").length);
-		$(".pro_det .img_lf .time>p").css("width",p_win+"%");
+		if($(window).width()>920){
+			var p_win = 100/parseInt($(".time>p").length);
+			$(".pro_det .img_lf .time>p").css("width",p_win+"%");
+		}
 		
 		//数量加减
 		$(".number .add").click(function(){
@@ -278,7 +588,156 @@
 			}
 		})
 		
+		//style/color选择
+		var swiper4 = new Swiper('.pro_det_ul2', {
+	      slidesPerView: 3,
+	      spaceBetween: '3%',
+	    });
+		$(".pro_det_ul2 .swiper-slide").click(function(){
+			$(this).addClass("active").siblings(".swiper-slide").removeClass("active");
+		})
+		//length选择
+		$(".pro_det_ul3>li>span").click(function(){
+			$(this).parents("li").addClass("active").siblings("li").removeClass("active");
+			$(this).parents("li").find(".slide>em").text($(this).text());
+		})
+		//wig with选择
+		$(".pro_det_ul4>li").click(function(){
+			$(this).addClass("active").siblings("li").removeClass("active");
+		})
+		
+		//Wish List添加收藏
+		$(".wish_btn").click(function(){
+			if($(this).hasClass("active")){
+				$(this).removeClass("active");
+			}else{
+				$(this).addClass("active");
+			}
+		})
+		
+		//下拉收起
+		$(".slide").click(function(){
+			if($(this).hasClass("active")){
+				$(this).removeClass("active");
+				$(this).siblings(".slide_ul").stop().slideDown();
+			}else{
+				$(this).addClass("active");
+				$(this).siblings(".slide_ul").stop().slideUp();
+			}
+			rl_scroll();
+		})
+		$(".pro_det .text_rf .text_ol>li.active .slide_text").css("display","block");		
+		$(".slide_h2").click(function(){
+			if($(this).parent().hasClass("active")){
+				$(this).siblings(".slide_text").stop().slideUp();
+				$(this).parent().removeClass("active");
+				$(this).find("em").removeClass("active");
+			}else{
+				$(".slide_h2").siblings(".slide_text").stop().slideUp();
+				$(".slide_h2").parent().removeClass("active");
+				$(".slide_h2").find("em").removeClass("active");
+				$(this).siblings(".slide_text").stop().slideDown();
+				$(this).parent().addClass("active");
+				$(this).find("em").addClass("active");
+			}
+			rl_scroll();
+		})
+		
+		//评价轮播
+		var swiper3 = new Swiper('#swiper3', {
+			autoHeight: true,
+			navigation: {
+			    nextEl: '.swiper-button-next',
+			    prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				el: '.swiper-paginations',
+				clickable: true,
+		    },
+		    on: {
+			    slideChangeTransitionStart: function(){
+			      $(".pl_img_ol>li").eq(this.activeIndex).addClass("active").siblings("li").removeClass("active");
+			      console.log($(".swiper-pagination-clickable span"))
+			      rl_scroll();
+			    },
+			 },
+		});
+		//绑定评价轮播
+		$(".pl_img_ol>li").click(function(){
+			var this_index = $(this).index();
+			$(this).addClass("active").siblings("li").removeClass("active");
+			console.log($(".swiper-pagination-clickable span").length)
+			$(".pro_big_img .swiper-pagination-clickable span").eq(this_index).trigger('click');
+		})
+		//关闭评价轮播
+		$(".pro_big_img .close").click(function(){
+			$(".pro_big_img").slideUp();
+		})
+		
+		//返回顶部
+		$(".bottom .ft_btn,.bottom .yd_ft_btn").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({
+			    scrollTop: 0
+			}, 500);
+		})
+		
+//		pc端滚动触发左右内容滚动
+		$(document).scroll(function(){
+			rl_scroll();
+		})
+		var left_h = $(".img_lf").height();
+		function rl_scroll(){
+			if($(window).width()>920){
+				var lf_h =  $(".img_lf").height();
+				var rf_h = $(".text_rf").height();
+				var text_h = $(".big_rf").height();
+				rf_h = text_h;
+				if(text_h>left_h){
+					$(".img_lf").height(left_h);
+					lf_h = left_h;
+				}
+				if(lf_h>rf_h){
+					$(".img_lf").height(rf_h);
+				}else{
+					$(".text_rf").height(lf_h);
+				}
+			}
+		}
+		
+		//ydban轮播
+	    var swiper1 = new Swiper('.yd_ban_lb', {
+	      pagination: {
+	        el: '.swiper-pagination',
+	        clickable: true,
+	      },
+	    });
+		
+		
+		//底部产品轮播
+		var li_w=4;
+	  	if($(window).innerWidth()>920){
+	  		li_w=4;
+	  		mr_w=30;
+	  	}else{
+	  		li_w=2;
+	  		mr_w="3%";
+	  	}
+		var swiper2 = new Swiper('.in_ul2', {
+		      slidesPerView: li_w,
+		      spaceBetween: mr_w ,
+		      slidesPerGroup: li_w,
+		      loop: true,
+		      loopFillGroupWithBlank: true,
+		      navigation: {
+		        nextEl: '.swiper-button-next',
+		        prevEl: '.swiper-button-prev',
+		      },
+		});
+		
+		
 	})
+	
 	
 	//倒计时
 	function show_time() {
@@ -320,4 +779,5 @@
         timer = setTimeout("show_time()", 1000);
     }
     show_time();
+    
 </script>
