@@ -79,6 +79,7 @@ class ControllerCommonHeader extends Controller {
 
 		$data['category'] = $this->url->link('product/category');
 		$data['hotcategory'] = $this->url->link('product/hotcategory');
+		$data['boxcategory'] = $this->url->link('product/boxcategory');
 
 		$data['login'] = $this->url->link('account/login', '', true);
 		$data['order'] = $this->url->link('account/order', '', true);
