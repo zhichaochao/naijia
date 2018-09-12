@@ -82,9 +82,9 @@
     
     
     <!--返回顶部-->
-    <div class="xf_right">
+    <<!-- div class="xf_right">
       <div class="vip"><a href="###"><span>VIP</span></a></div>
-    </div>
+    </div> -->
     
     
     

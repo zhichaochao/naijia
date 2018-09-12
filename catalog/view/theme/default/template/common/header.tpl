@@ -50,7 +50,7 @@
                 </ol>
               </li>
 
-              <li><a href="###">Weaves Box</a></li>
+              <li><a href="<?php echo $boxcategory ?>">Weaves Box</a></li>
 
               <li>
                 <a href="###">Hair Care</a>
