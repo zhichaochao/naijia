@@ -22,11 +22,8 @@
       <div class="nav clearfix">
         <div class="top">
           <div class="content">
-            <p class="money">
-              <a class="active" href="###">$ USD</a>
-              <em>/</em>
-              <a href="###">₦ NGN</a>
-            </p>
+            <?=$currency;?>
+           
             <a class="logo" href="###">
               <img src="/catalog/view/theme/default/img/png/logo.png"/>
             </a>
