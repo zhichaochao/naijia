@@ -189,10 +189,10 @@
           <div class="close"><img src="/catalog/view/theme/default/img/png/close.png" alt="" /></div>
           <label class="clearfix" for="">
             <span class="ss_img">
-              <input type="submit"/> 
+              <input type="submit" class="search_li" /> 
             </span>
-            <input class="in_text" type="text" placeholder="Search  keyword" />
-            <img class="in_close" src="img/png/icon_24.png" alt="" />
+            <input class="in_text" type="text" placeholder="Search  keyword" name="new_search" />
+            <img class="in_close" src="catalog/view/theme/default/img/png/icon_24.png" alt="" />
           </label>
           
           <div class="con clearfix">
@@ -237,3 +237,24 @@
         </div>
       </div>
     </div>
+ <script>
+        $(document).ready(function() {
+            /* Search */
+            $('.search_li ').click(function() {
+              
+                url = '<?php echo $search_url; ?>';
+                var value = $("input[name='new_search']").val();
+
+                if (value) {
+                    url += '&search=' + encodeURIComponent(value);
+                }
+                location = url;
+            });
+
+            // $('#header-search').keydown(function(e){
+            //     if(e.keyCode==13){
+            //         $('.search_li').click();
+            //     }
+            // })
+        });
+    </script>

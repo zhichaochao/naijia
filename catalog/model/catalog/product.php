@@ -36,6 +36,8 @@ class ModelCatalogProduct extends Model {
 				'tax_class_id'     => $query->row['tax_class_id'],
 				'date_available'   => $query->row['date_available'],
 				'weight'           => $query->row['weight'],
+				'hot'            => $query->row['hot'],
+				'ends_date'            => $query->row['ends_date'],
 				'weight_class_id'  => $query->row['weight_class_id'],
 				'length'           => $query->row['length'],
 				'width'            => $query->row['width'],
@@ -419,6 +421,8 @@ class ModelCatalogProduct extends Model {
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
 				$sql .= " FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (cp.category_id = p2c.category_id)";
+
+				$sql .= " LEFT JOIN " . DB_PREFIX . "category c ON (c.category_id = p2c.category_id)";  //dyl add
 			} else {
 				$sql .= " FROM " . DB_PREFIX . "product_to_category p2c";
 			}
@@ -432,11 +436,18 @@ class ModelCatalogProduct extends Model {
 			$sql .= " FROM " . DB_PREFIX . "product p";
 		}
 
-		$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '0'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+		$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '0'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
 
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
-				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
+				//$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
+
+				//dyl add
+                $sql .= " AND (
+                		     (c.parent_id=0 AND c.category_id=".(int)$data['filter_category_id'].")
+						     OR (c.parent_id!=0 AND (c.category_id=".(int)$data['filter_category_id']." OR c.parent_id=".(int)$data['filter_category_id'].") )
+						     OR (c.parent_id!=0 AND c.category_id=".(int)$data['filter_category_id'].")
+						     ) ";
 			} else {
 				$sql .= " AND p2c.category_id = '" . (int)$data['filter_category_id'] . "'";
 			}

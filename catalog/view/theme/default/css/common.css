@@ -173,7 +173,7 @@ background: url(../img/png/icon_23.png) no-repeat;background-size: 100%;}
 	.ss_modal .text label{width: 100%;display: block;line-height: 64px;border-bottom: 1px solid #000;position: relative;}
 	.ss_modal .text label .ss_img{display: block;float: left;margin: 20px 20px 20px 0;width: 24px;height: 24px;background: url(../img/png/icon_25.png);position: relative;}
 	.ss_modal .text label .ss_img input{width: 100%;height: 100%;cursor: pointer;position: absolute;top: 0;left: 0;opacity: 0;}
-	.ss_modal .text label .in_text{line-height: 64px;font-size: 24px;color: #999;width: 60%;display: block;float: left;font-size: 24px;}
+	.ss_modal .text label .in_text{line-height: 64px;font-size: 24px;color: #333;width: 60%;display: block;float: left;font-size: 24px;}
 	.ss_modal .text label img.in_close{position: absolute;width: 19px;height: 19px;right: 0;top: 23px;cursor: pointer;}
 	.ss_modal .con h1{font-size: 16px;color: #333;font-weight: normal;margin: 50px 0 40px 0;}
 	.ss_modal .con ul li{display: inline-block;float: left;margin:0 55px 20px 0;}
@@ -343,7 +343,7 @@ text-align: center; position: absolute;bottom: 10px;}
 	.footer .bot .fot_ul2>li:nth-child(5) img{width: 1.36rem;}
 	.footer .fot_p{font-size: 0.24rem;margin: 0.3rem 0;}
 	
-	.yd_footer2{position: fixed;bottom: 0;left: 0;width: 100%;height:1.1rem;background: #fff;z-index: 99;display: none; -webkit-overflow-scrolling: touch;}
+	.yd_footer2{position: fixed;bottom: 0;left: 0;width: 100%;height:1.1rem;background: #fff;z-index: 99;display: none; -webkit-overflow-scrolling: touch;border-top: 1px solid #ddd;}
 	.yd_footer2 .ol_ydfot{border-top: 1px solid #fff;margin-top: 0.07rem;}
 	.yd_footer2 .ol_ydfot li{float: left;width: 25%;text-align: center;position: relative;}
 	.yd_footer2 .ol_ydfot li .a_text{position: absolute;bottom: 100%;left: 0;display: none;margin-bottom: 0.08rem;}

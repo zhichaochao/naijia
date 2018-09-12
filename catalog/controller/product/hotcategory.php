@@ -246,15 +246,19 @@ class ControllerProductHotcategory extends Controller {
 			 //    }
 
 			    $wishlist= $this->model_catalog_hotproduct->wishlistornot($result['product_id']);
-                            
+                $res = $this->model_catalog_hotproduct->getHotproductImages($result['product_id']); 
+                // print_r($res[0]['image']);exit;           
     //             //texture
     //             $texture = $this->model_catalog_product->getOptionDes('Texture',$result['product_id']);
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
+					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
+					'hot'	  => $result['hot'],
+					'ends_date'	  => $result['ends_date'],
 					'reviews'	  => $result['reviews'],
 					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
 					//  'color_name'  => $color_name,
@@ -390,7 +394,8 @@ class ControllerProductHotcategory extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('product/product', 'path=' . $this->request->get['path'] . $url . '&page={page}');
+			// $pagination->url = $this->url->link('product/product', 'path=' . $this->request->get['path'] . $url . '&page={page}');
+			$pagination->url = $this->url->link('product/product', $url . '&page={page}');
 
 			$data['pagination'] = $pagination->render();
 			

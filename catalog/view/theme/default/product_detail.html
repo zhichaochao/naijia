@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="css/common.css" />
 		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/swiper.min.css" />
@@ -102,42 +103,43 @@
 		<div class="pro_det clearfix">
 			<div class="contents clearfix">
 				<div class="img_lf">
-					<div class="top time" title="2018/10/05 10:06:00">
-						<p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
-						<p>Sales end in 
-							<span class="int_day">00</span>:
-							<span class="int_hour">00</span>:
-							<span class="int_minute">00</span>:
-							<span class="int_second">00</span>
-						</p>
+					<div class="big_lf clearfix">
+						<div class="top time" title="2018/10/05 10:06:00">
+							<p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
+							<p>Sales end in 
+								<span class="int_day">00</span>:
+								<span class="int_hour">00</span>:
+								<span class="int_minute">00</span>:
+								<span class="int_second">00</span>
+							</p>
+						</div>
+						
+						<!--pc左边大图-->
+						<ul class="img_ul clearfix">
+							<li><img src="img/pro_det1.jpg"/></li>
+							<li><img src="img/pro_det2.jpg"/></li>
+							<li><img src="img/pro_det2.jpg"/></li>
+							<li><img src="img/pro_det1.jpg"/></li>
+							<li><img src="img/pro_det1.jpg"/></li>
+							<li><img src="img/pro_det2.jpg"/></li>
+						</ul>
+						
+						<!--yd顶部大图轮播-->
+						<div class="pro_ban">
+							<!-- Swiper -->
+						  	<div class="swiper-container yd_ban_lb">
+							    <div class="swiper-wrapper">
+							      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+							      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+							      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+							      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+							      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
+							    </div>
+						  	</div>
+						    <!-- Add Pagination -->
+						    <div class="swiper-pagination"></div>
+						</div>
 					</div>
-					
-					<!--pc左边大图-->
-					<ul class="img_ul clearfix">
-						<li><img src="img/pro_det1.jpg"/></li>
-						<li><img src="img/pro_det2.jpg"/></li>
-						<li><img src="img/pro_det2.jpg"/></li>
-						<li><img src="img/pro_det1.jpg"/></li>
-						<li><img src="img/pro_det1.jpg"/></li>
-						<li><img src="img/pro_det2.jpg"/></li>
-					</ul>
-					
-					<!--yd顶部大图轮播-->
-					<div class="pro_ban">
-						<!-- Swiper -->
-					  	<div class="swiper-container yd_ban_lb">
-						    <div class="swiper-wrapper">
-						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
-						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
-						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
-						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
-						      	<div class="swiper-slide"><img src="img/yd_pro_det1.jpg"/></div>
-						    </div>
-					  	</div>
-					    <!-- Add Pagination -->
-					    <div class="swiper-pagination"></div>
-					</div>
-					
 				</div>
 				<div class="text_rf">
 					<div class="big_rf clearfix">
@@ -189,13 +191,13 @@
 							
 							<!--默认不选择-->
 							<li class="clearfix">
-								<span class="bt_span slide">Select Length : <em>18″</em> <i></i><p class="ts_ps">Please select Length</p></span>
+								<span class="bt_span slide">Select Length : <em></em> <i></i><p class="ts_ps">Please select Length</p></span>
 								
 								<ul class="pro_det_ul3 slide_ul clearfix">
 									<li><span>12″</span></li>
 									<li><span>14″</span></li>
 									<li><span>16″</span></li>
-									<li class="active"><span>18″</span></li>
+									<li><span>18″</span></li>
 									<li><span>20″</span></li>
 									<li><span>22″</span></li>
 									<li><span>24″</span></li>
@@ -207,13 +209,26 @@
 							
 							<!--默认不选中-->
 							<li class="clearfix">
-								<span class="bt_span slide">Wig with: <i></i><p class="ts_ps">Please select Wig with</p></span>
-								
-								<ul class="pro_det_ul4 slide_ul clearfix">
+								<span class="bt_span slide active">Wig with: <em>13*4 Frontal</em> <i></i><p class="ts_ps">Please select Wig with</p></span>
+								<ul class="pro_det_ul4 slide_ul clearfix" style="display: none;">
 									<li class="active"><span>13*4 Frontal</span></li>
 									<li><span>4*4 Closure</span></li>
 								</ul>
 							</li>
+							
+							<li class="clearfix number_li_yd">
+								<div class="number">
+									<p class="quantity">Quantity :</p>
+									
+									<div class="label">
+										<span><em class="sub"></em></span>
+										<input type="text" class="num_in" value="1" />
+										<span><em class="add"></em></span>
+									</div>
+									<p class="ts_p">This hair need  3-7 customize process days</p>
+								</div>
+							</li>
+
 							
 							<li>
 								<a class="shop_a" href="###">Add To Shopping Bag</a>
@@ -224,7 +239,15 @@
 							
 							<!--默认展开评价-->
 							<li class="active">
-								<h2 class="slide_h2">Reviews (119) <em class="jian active"></em></h2>
+								<h2 class="">Reviews (119) 
+									<ol class="start_ols">
+										<li class="active"></li>
+										<li class="active"></li>
+										<li class="active"></li>
+										<li class="active"></li>
+										<li></li>
+									</ol>
+								</h2>
 								<div class="slide_text">
 									<div class="bg_hui clearfix">
 										<ol>
@@ -237,6 +260,10 @@
 										<span>Average Star Rating</span>
 									</div>
 									<div class="pl_div">
+										<p class="p1 clearfix">
+											<span>A***G</span>
+											<em>Length: 16 & 16 & 18</em>
+										</p>
 										<ol class="start_ol">
 											<li class="active"></li>
 											<li class="active"></li>
@@ -244,10 +271,6 @@
 											<li class="active"></li>
 											<li></li>
 										</ol>
-										<p class="p1">
-											<span>A***G</span>
-											<em>Length: 16 & 16 & 18</em>
-										</p>
 										<p class="p2">
 											Very nice unit...hair is very soft and shiny. Not a lot of shedding after
 											cowash. I will definitely use this seller again, quick delivery and the seller 
@@ -263,29 +286,33 @@
 										</ol>
 										
 										<div class="pro_big_img">
-											<div class="swiper-container" id="swiper3">
-											    <div class="swiper-wrapper">
-											      	<div class="swiper-slide ban_img">
-											      		<img src="img/pro_det5.jpg"/>
-											      	</div>
-												    <div class="swiper-slide ban_img">
-												    	<img src="img/pro_det4.jpg"/>
+											<div class="text_madal">
+												
+												<div class="swiper-container" id="swiper3">
+												    <div class="swiper-wrapper">
+												      	<div class="swiper-slide ban_img">
+												      		<img src="img/pro_det5.jpg"/>
+												      	</div>
+													    <div class="swiper-slide ban_img">
+													    	<img src="img/pro_det4.jpg"/>
+													    </div>
+													    <div class="swiper-slide ban_img">
+													    	<img src="img/pro_det5.jpg"/>
+													    </div>
+													    <div class="swiper-slide ban_img">
+												      		<img src="img/pro_det5.jpg"/>
+												      	</div>
+													    <div class="swiper-slide ban_img">
+												      		<img src="img/pro_det5.jpg"/>
+												      	</div>
 												    </div>
-												    <div class="swiper-slide ban_img">
-												    	<img src="img/pro_det5.jpg"/>
-												    </div>
-												    <div class="swiper-slide ban_img">
-											      		<img src="img/pro_det5.jpg"/>
-											      	</div>
-												    <div class="swiper-slide ban_img">
-											      		<img src="img/pro_det5.jpg"/>
-											      	</div>
-											    </div>
-											    <div class="swiper-paginations" style="display: none;"></div>
-											    <div class="swiper-button-prev"></div>
-												<div class="swiper-button-next"></div>
+												    <!--<div class="swiper-button-prev"></div>
+													<div class="swiper-button-next"></div>-->
+												</div>
+												<div class="swiper-paginations" style="display: none;"></div>
+												<div class="close" ></div>
+												<div class="fy_zsq"><i class="fy_i1">2</i>/<i class="fy_i2">5</i></div>
 											</div>
-											<div class="close"></div>
 										</div>
 										
 										<a class="view_a" href="###">View All Reviews <i>></i></a>
@@ -296,10 +323,12 @@
 							<li>
 								<h2 class="slide_h2">Details <em class="jian"></em></h2>
 								<div class="slide_text">
-									<p>Model Length: 24"</p>
-									<p>Fiber: 100% Remy Human Hair</p>
-									<p>Density: Full</p>
-									<p>Texture: Straight</p>
+									<div class="details">
+										<p>Model Length: 24"</p>
+										<p>Fiber: 100% Remy Human Hair</p>
+										<p>Density: Full</p>
+										<p>Texture: Straight</p>
+									</div>
 								</div>
 							</li>
 							
@@ -337,11 +366,10 @@
 									</dl>
 								</div>
 							</li>
-							
 							<li>
 								<h2 class="slide_h2">Payment Method <em class="jian"></em></h2>
 								<div class="slide_text">
-									<ul class="pay_ul clearfix">
+									<ul class="pay_ul pay_img clearfix">
 										<li><img src="img/png/fot1_.png"/></li>
 										<li><img src="img/png/fot2_.png"/></li>
 										<li><img src="img/png/fot3_.png"/></li>
@@ -354,9 +382,9 @@
 							<li>
 								<h2 class="slide_h2">Share <em class="jian"></em></h2>
 								<div class="slide_text">
-									<ul class="pay_ul clearfix">
-										<li><img src="img/png/icon_35_.png"/></li>
-										<li><img src="img/png/icon_34_.png"/></li>
+									<ul class="pay_ul share_img clearfix">
+										<li><a href="###"><img src="img/png/icon_35_.png"/></a></li>
+										<li><a href="###"><img src="img/png/icon_34_.png"/></a></li>
 									</ul>
 								</div>
 							</li>
@@ -369,7 +397,7 @@
 				
 			</div>
 		
-			<div class="bottom">
+			<div class="bottom content">
 				<button class="ft_btn">Back to top ↑</button>
 				<button class="yd_ft_btn"><img src="img/png/icon_7_.png"/><span>TOP</span></button>
 				<h5>YOU MAY ALSO LIKE</h5>
@@ -567,6 +595,7 @@
 	</body>
 </html>
 <script>
+window.onload=function(){
 	$(function(){
 		//动态改变头部红色广告条的宽度
 		if($(window).width()>920){
@@ -589,8 +618,8 @@
 		})
 		
 		//style/color选择
-		var swiper4 = new Swiper('.pro_det_ul2', {
-	      slidesPerView: 3,
+		new Swiper('.pro_det_ul2', {
+	      slidesPerView: 3.3,
 	      spaceBetween: '3%',
 	    });
 		$(".pro_det_ul2 .swiper-slide").click(function(){
@@ -604,6 +633,7 @@
 		//wig with选择
 		$(".pro_det_ul4>li").click(function(){
 			$(this).addClass("active").siblings("li").removeClass("active");
+			$(this).parents("li").find(".slide>em").text($(this).text());
 		})
 		
 		//Wish List添加收藏
@@ -624,7 +654,9 @@
 				$(this).addClass("active");
 				$(this).siblings(".slide_ul").stop().slideUp();
 			}
-			rl_scroll();
+			setTimeout(function(){
+				rl_scroll();
+			},250)
 		})
 		$(".pro_det .text_rf .text_ol>li.active .slide_text").css("display","block");		
 		$(".slide_h2").click(function(){
@@ -640,35 +672,49 @@
 				$(this).parent().addClass("active");
 				$(this).find("em").addClass("active");
 			}
-			rl_scroll();
+			setTimeout(function(){
+				rl_scroll();
+			},250)
 		})
 		
-		//评价轮播
-		var swiper3 = new Swiper('#swiper3', {
-			autoHeight: true,
-			navigation: {
-			    nextEl: '.swiper-button-next',
-			    prevEl: '.swiper-button-prev',
-			},
-			pagination: {
-				el: '.swiper-paginations',
-				clickable: true,
-		    },
-		    on: {
-			    slideChangeTransitionStart: function(){
-			      $(".pl_img_ol>li").eq(this.activeIndex).addClass("active").siblings("li").removeClass("active");
-			      console.log($(".swiper-pagination-clickable span"))
-			      rl_scroll();
-			    },
-			 },
-		});
+		
 		//绑定评价轮播
 		$(".pl_img_ol>li").click(function(){
 			var this_index = $(this).index();
+			var this_len = $(".pl_img_ol>li").length;
 			$(this).addClass("active").siblings("li").removeClass("active");
-			console.log($(".swiper-pagination-clickable span").length)
+			$(".fy_zsq .fy_i1").text(this_index+1);
+			$(".fy_zsq .fy_i2").text(this_len);
+			$(".pro_big_img").show();
+			
+			setTimeout(function(){
+				rl_scroll();
+			},250)
+			
+//			评价轮播
+			new Swiper('#swiper3', {
+				autoHeight: true,
+				pagination: {
+					el: '.swiper-paginations',
+					clickable: true,
+//					type: 'fraction',
+			    },
+			    on: {
+				    slideChangeTransitionStart: function(){
+				      $(".pl_img_ol>li").eq(this.activeIndex).addClass("active").siblings("li").removeClass("active");
+				      $(".fy_zsq .fy_i1").text(this.activeIndex+1);
+					  $(".fy_zsq .fy_i2").text($(".pl_img_ol>li").length);
+				      setTimeout(function(){
+						rl_scroll();
+					},250)
+				    },
+				 },
+			});
 			$(".pro_big_img .swiper-pagination-clickable span").eq(this_index).trigger('click');
+		
 		})
+
+
 		//关闭评价轮播
 		$(".pro_big_img .close").click(function(){
 			$(".pro_big_img").slideUp();
@@ -684,35 +730,19 @@
 		
 //		pc端滚动触发左右内容滚动
 		$(document).scroll(function(){
-			rl_scroll();
-		})
-		var left_h = $(".img_lf").height();
-		function rl_scroll(){
-			if($(window).width()>920){
-				var lf_h =  $(".img_lf").height();
-				var rf_h = $(".text_rf").height();
-				var text_h = $(".big_rf").height();
-				rf_h = text_h;
-				if(text_h>left_h){
-					$(".img_lf").height(left_h);
-					lf_h = left_h;
-				}
-				if(lf_h>rf_h){
-					$(".img_lf").height(rf_h);
-				}else{
-					$(".text_rf").height(lf_h);
-				}
-			}
-		}
-		
-		//ydban轮播
-	    var swiper1 = new Swiper('.yd_ban_lb', {
-	      pagination: {
-	        el: '.swiper-pagination',
-	        clickable: true,
-	      },
+	        rl_scroll();
 	    });
-		
+	
+		//ydban轮播
+		if($(window).innerWidth()<=920){
+			new Swiper('.yd_ban_lb', {
+			  autoplay: true,
+			  pagination: {
+			    el: '.swiper-pagination',
+			    clickable: true,
+			  },
+			});
+		}
 		
 		//底部产品轮播
 		var li_w=4;
@@ -723,11 +753,12 @@
 	  		li_w=2;
 	  		mr_w="3%";
 	  	}
-		var swiper2 = new Swiper('.in_ul2', {
+		new Swiper('.in_ul2', {
 		      slidesPerView: li_w,
 		      spaceBetween: mr_w ,
 		      slidesPerGroup: li_w,
 		      loop: true,
+		      autoplay: true,
 		      loopFillGroupWithBlank: true,
 		      navigation: {
 		        nextEl: '.swiper-button-next',
@@ -737,9 +768,38 @@
 		
 		
 	})
+	function rl_scroll(){
+		if($(window).innerWidth()>920){
+			var left =  $(".img_lf").height();
+			var right =  $(".text_rf").height();
+			var nav_h = $(".nav").height();
+	        var top = $(document).scrollTop();
+	        var win_h = $(window).height();
+	        $(".img_lf").css("position","relative").css("top","0");  
+	        if(left<right){
+	        	if(top>=left-win_h){
+	        		$(".img_lf").css("position","fixed").css("top",-(left-win_h)+"px"); 
+		        }else{
+		        	$(".img_lf").css("position","relative").css("top","0");    
+		        }
+		        if(top>=right-win_h+nav_h){
+		        	$(".img_lf").css("position","absolute").css("top","auto").css("bottom",0); 
+		        }
+	        }
+		}
+	}
+	rl_scroll();
 	
 	
-	//倒计时
+	$(".text_rf").resize(function() {
+	    console.log($(this).height());
+	});
+	
+}
+
+
+
+//倒计时
 	function show_time() {
         $(".time").each(function() {
             var endtime = $(this).prop("title");
@@ -779,5 +839,6 @@
         timer = setTimeout("show_time()", 1000);
     }
     show_time();
-    
+
 </script>
+

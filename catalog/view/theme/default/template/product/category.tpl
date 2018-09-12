@@ -3,6 +3,12 @@
     <div class="in_content clearfix"></div>
     
     <div class="product clearfix">
+    <!-- 放父分类照片 -->
+      <!-- <div class="pro_ban">
+        <div class="content">
+          <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban1.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban1.jpg'  />
+        </div>
+      </div> -->
       <div class="content">
         <div class="top_f clearfix">
           <p><?php echo $product_total; ?> items found</p>
@@ -31,15 +37,15 @@
             <li>
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
-                  <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumb']; ?>"  class="top_img" />
-                  <div class="bg_hui">
+                  <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
+                  <!-- <div class="bg_hui">
                     <p class="djs_p" title="2018/09/15 10:06:00">SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
                       <span class="int_second">00</span>
                     </p>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
@@ -60,7 +66,7 @@
                   <!-- <span class="price">₦26K 
                   <em>₦46K </em>
                   </span> -->
-                  <span class="red_span">-56%</span>
+                  <!-- <span class="red_span">-56%</span> -->
                 </div>
                 <em class="red_em">HOT<br />SALE</em>
               </a>

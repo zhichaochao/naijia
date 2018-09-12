@@ -245,13 +245,16 @@ class ControllerProductCategory extends Controller {
 			 //    }
 
 			    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
-                            
+			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
     //             //texture
     //             $texture = $this->model_catalog_product->getOptionDes('Texture',$result['product_id']);
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
+					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
+					// 'hot'	  => $result['hot'],
+					// 'ends_date'	  => $result['ends_date'],
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
@@ -389,13 +392,13 @@ class ControllerProductCategory extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url . '&page={page}');
+			$pagination->url = $this->url->link('product/category',$url . '&page={page}');
 
 			$data['pagination'] = $pagination->render();
 			
 			$data['product_total']=$product_total;
 			// $data['page']=$page;
-			// print_r($data['product_total']);exit;
+			// print_r($data['pagination']);exit;
 			// $data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
 			$data['allpage']=ceil($product_total / $limit);		
 // var_dump(ceil($product_total / $limit));exit();

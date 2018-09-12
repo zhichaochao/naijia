@@ -33,9 +33,9 @@
             <li>
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
-                  <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumb']; ?>"  class="top_img" />
+                  <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
                   <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/15 10:06:00">SALE ENDS 
+                    <p class="djs_p" title="<?php echo $product['ends_date']; ?>">SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
@@ -64,7 +64,7 @@
                   </span> -->
                   <span class="red_span">-56%</span>
                 </div>
-                <em class="red_em active">HOT<br />SALE</em>
+                <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>
               </a>
               <!-- 收藏 -->
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"
@@ -74,8 +74,13 @@
           <?php } ?>
 
           </ul>
-        
           <div class="fy_div">
+            <ul>
+            <?php echo $pagination; ?>
+            </ul>
+          </div>
+        
+          <!-- <div class="fy_div">
             <ul>
               <li><a href="###">< Last</a></li>
               <li><a href="###">1</a></li>
@@ -88,7 +93,7 @@
               <li><a href="###">8</a></li>
               <li><a href="###">Next ></a></li>
             </ul>
-          </div>
+          </div> -->
 
         </div>
       </div>

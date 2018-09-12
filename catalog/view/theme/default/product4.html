@@ -102,7 +102,17 @@
 		<div class="product product4 clearfix">
 			<div class="pro_ban">
 				<div class="content">
-					<img class="changeimage lazyLoad" data-image='img/pro_ban3.jpg' data-mimage='img/yd_pro_ban3.jpg'  />
+					<div class="swiper-container">
+					    <div class="swiper-wrapper">
+					      	<div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='img/pro_ban3.jpg' data-mimage='img/yd_pro_ban3.jpg'  /></div>
+					      	<div class="swiper-slide">
+					      		<video src="img/myvideo.mp4" width="100%" controls="controls"></video>
+					      	</div>
+					      	<div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='img/pro_ban3.jpg' data-mimage='img/yd_pro_ban3.jpg'  /></div>
+					    </div>
+				       <!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					 </div>
 				</div>
 			</div>
 			
@@ -362,6 +372,13 @@
 </html>
 <script>
 	$(function(){
+		//ban輪播
+		var swiper = new Swiper('.swiper-container', {
+	      pagination: {
+	        el: '.swiper-pagination',
+	      },
+	    });
+		
 		$(".sortby").hover(function(){
 			$(this).find("ul").stop().slideDown();
 		},function(){
@@ -427,4 +444,12 @@
         timer = setTimeout("show_time()", 1000);
     }
     show_time();
+    
+    
+    window.onload=function(){
+    	var img_h = $(".pro_ban img.ban_img").height();
+		$(".pro_ban video").css("max-height",img_h+"px");
+    }
+    
 </script>
+

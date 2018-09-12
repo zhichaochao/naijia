@@ -75,6 +75,7 @@ class ControllerCommonHeader extends Controller {
 		$data['logged'] = $this->customer->isLogged();
 		$data['account'] = $this->url->link('account/account', '', true);
 		$data['register'] = $this->url->link('account/register', '', true);
+		$data['search_url'] = $this->url->link('product/search');
 
 		$data['category'] = $this->url->link('product/category');
 		$data['hotcategory'] = $this->url->link('product/hotcategory');
