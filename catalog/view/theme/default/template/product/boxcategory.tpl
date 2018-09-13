@@ -52,11 +52,13 @@
                   <h2><?php echo $product['name']; ?> </h2>
                   <div class="pl_div">
                     <ol class="start_ol">
+                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
                       <li class="active"></li>
-                      <li class="active"></li>
-                      <li class="active"></li>
-                      <li class="active"></li>
-                      <li></li>
+                      <?php } ?>
+                      <?php } ?>
                     </ol>
                     <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                   </div>
@@ -128,6 +130,8 @@ function wishlist(product_id,e) {
   $(function(){
 
     var swiper = new Swiper('.swiper-container', {
+      autoplay: true,
+      loop: true,
         pagination: {
           el: '.swiper-pagination',
         },

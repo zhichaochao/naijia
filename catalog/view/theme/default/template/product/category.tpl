@@ -50,12 +50,14 @@
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
                   <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
-                  </ol>
+                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
+                      <li class="active"></li>
+                      <?php } ?>
+                      <?php } ?>
+                     </ol>
                   <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                 <?php if($product['special']) { ?>
                      <span class="price"><?php echo $product['special']; ?>

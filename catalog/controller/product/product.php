@@ -17,6 +17,7 @@ class ControllerProductProduct extends Controller {
         );
 
         $this->load->model('catalog/category');
+        $this->load->model('catalog/review');
         //引入样式
 
         //分类面包屑
@@ -229,7 +230,38 @@ class ControllerProductProduct extends Controller {
           
 
             $data['heading_title'] = $product_info['name'];
-            // $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
+            $data['ends_date'] = $product_info['ends_date'];
+            $data['revi'] = $product_info['reviews'];
+            $data['rating'] = $product_info['rating'];
+            $data['hot'] = $product_info['hot'];
+            $data['m_description'] = utf8_substr(strip_tags($product_info['m_description']),0,100).'...';
+            $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
+
+            $resultsone = $this->model_catalog_review->getReviewsByProductIdone($this->request->get['product_id'],$limit=1);
+            // print_r($resultsone);exit;
+            $this->load->model('tool/image');
+            foreach ($resultsone as $result) {
+                $review_img = $this->model_catalog_review->getReviewImg($result['review_id']);
+// print_r($review_img);exit;
+                foreach($review_img as $key=>$row){
+                    //$review_img[$key]['img'] = HTTP_SERVER.$row['path'];
+                    $review_img[$key]['img'] = $this->model_tool_image->resize( $row['images'], 120, 144);
+                    $review_img[$key]['min_img'] = $this->model_tool_image->resize($row['images'], 286, 380);
+                }
+
+                $data['reviews'][] = array(
+                    //'author'     => $result['author'],
+                    'author'        => substr($result['author'],0,-2).'***',
+                    'text'          => nl2br($result['text']),
+                    'rating'        => (int)$result['rating'],
+                    //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
+                    'date_added'    => date('m/d/Y', strtotime($result['date_added'])),
+                    'rating_starts' => $this->ratingStarts($result['rating']),
+                    'images'        => $review_img
+                );
+            }
+            // print_r($data['reviews']);exit;
+        // }
 
             $data['text_select'] = $this->language->get('text_select');
             $data['text_manufacturer'] = $this->language->get('text_manufacturer');
@@ -277,7 +309,7 @@ class ControllerProductProduct extends Controller {
             // $data['material'] = $product_info['material'];
             // 
  
-            $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+            // $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             // $data['m_description'] = html_entity_decode($product_info['m_description'], ENT_QUOTES, 'UTF-8');
             // 
            
@@ -346,22 +378,22 @@ class ControllerProductProduct extends Controller {
             $data['images'] = array();
              $data['images'][] = array(
                 
-                    'thumb' => $this->model_tool_image->resize($product_info['image'], 200, 200),  //小图
+                    'thumb' => $this->model_tool_image->resize($product_info['image'], 540, 540),  //小图
                   
                     'image'=> $this->model_tool_image->resize($product_info['image'], 800, 800),  //小图
                   
-                    'thumb2'=> $this->model_tool_image->resize($product_info['image'], 800, 800)
+                    'thumb2'=> $this->model_tool_image->resize($product_info['image'], 320, 320)
                 );
             // print_r($product_info);exit();
             $results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
             foreach ($results as $result) {
                 $data['images'][] = array(
                 
-                    'thumb' => $this->model_tool_image->resize($result['image'], 200, 200),  //小图
+                    'thumb' => $this->model_tool_image->resize($result['image'], 540, 540),  //小图
                   
                     'image'=> $this->model_tool_image->resize($result['image'], 800, 800),  //小图
                   
-                    'thumb2'=> $this->model_tool_image->resize($result['image'], 800, 800)
+                    'thumb2'=> $this->model_tool_image->resize($result['image'], 320, 320)
                 );
             }
 // print_r($data['images']);exit;
@@ -490,8 +522,9 @@ class ControllerProductProduct extends Controller {
             //评论提交的地址
             $data['reviews_action'] = $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id']);
 
-            $data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
-            $data['rating'] = (int)$product_info['rating'];
+            // $data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
+            // $data['rating'] = (int)$product_info['rating'];
+            // print_r($data['rating']);exit;
 
             // Captcha
             if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('review', (array)$this->config->get('config_captcha_page'))) {
@@ -578,16 +611,16 @@ class ControllerProductProduct extends Controller {
             // 
             $productIdString = mb_substr($productIdString,0,-1,'utf-8');
             //评论总个数
-            $data['reviewstotal'] = $this->model_catalog_review->getTotalReviewsByProductId($productIdString);
+//             $data['reviewstotal'] = $this->model_catalog_review->getTotalReviewsByProductId($productIdString);
+// // print_r($data['reviewstotal']);exit;
+//             //该产品的评论总分数
+//             // $data['reviewsrating'] = $this->model_catalog_review->getRatingByProductId($productIdString);
 
-            //该产品的评论总分数
-            // $data['reviewsrating'] = $this->model_catalog_review->getRatingByProductId($productIdString);
-
-            //该产品的评论平均分(四舍五入,保留一位小数)
-            //星星
-            $data['reviewsratingStar'] = $data['reviewstotal'] > 0 ? round(($data['reviewsrating'] / $data['reviewstotal'])*20, 1) : 0;
-            //数字
-            $data['reviewsratingNum'] = $data['reviewstotal'] > 0 ? round($data['reviewsrating'] / $data['reviewstotal'], 1) : 0;
+//             //该产品的评论平均分(四舍五入,保留一位小数)
+//             //星星
+//             $data['reviewsratingStar'] = $data['reviewstotal'] > 0 ? round(($data['reviewsrating'] / $data['reviewstotal'])*20, 1) : 0;
+//             //数字
+//             $data['reviewsratingNum'] = $data['reviewstotal'] > 0 ? round($data['reviewsrating'] / $data['reviewstotal'], 1) : 0;
             //产品的评论Reviews,end
 
             //产品评论的提交
