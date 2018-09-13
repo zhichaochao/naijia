@@ -144,6 +144,7 @@ class ControllerProductProduct extends Controller {
         $this->load->model('catalog/product');
 
         $product_info = $this->model_catalog_product->getProduct($product_id);
+        // print_r($product_info);exit;
         // $sp= $this->model_catalog_product->getProductSpecialPrice($product_id);
         
         // print_r($sp);exit();
@@ -234,7 +235,8 @@ class ControllerProductProduct extends Controller {
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['hot'] = $product_info['hot'];
-            $data['m_description'] = utf8_substr(strip_tags($product_info['m_description']),0,100).'...';
+            $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+            $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
 
             $resultsone = $this->model_catalog_review->getReviewsByProductIdone($this->request->get['product_id'],$limit=1);
@@ -474,7 +476,7 @@ class ControllerProductProduct extends Controller {
                     'required'             => $option['required']
                 );
             }
-//var_dump($data['options']);exit;
+// print_r($data['options']);exit;
 
             if ($product_info['minimum']) {
                 $data['minimum'] = $product_info['minimum'];
@@ -1205,6 +1207,7 @@ class ControllerProductProduct extends Controller {
 
         $price=  $this->model_catalog_product->getProductPricebyOptions($product_id,$options);
         $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
+        print_r($price);exit;
       $json=$price;
      if ($price['special']>0) {
           $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
@@ -1212,6 +1215,7 @@ class ControllerProductProduct extends Controller {
       }else{
             $json['html']= '<span>'. $price_c.'</span>';  
         }
+        // 
 
      $this->response->addHeader('Content-Type: application/json');
      $this->response->setOutput(json_encode($json));

@@ -42,7 +42,7 @@
             <div class="top">
                 <h1><?php echo $heading_title;?></h1>
               <p class="p1">
-                <?php echo $m_description;?>
+                <?php echo $meta_description;?>
               </p>
               <?php if($hot==1){?>
                 <div class="price" >
@@ -56,7 +56,11 @@
                 </div>
               <?php }else{?>
                   <div class="price" >
-                  <em id="money" class="em2">₦54K- ₦66k</em>
+                <?php if(isset($special)){ ?>
+                  <em id="money" class="em2"><?=$special?>- ₦66k</em>
+                  <?php }else{ ?>
+                  <em id="money" class="em2"><?=$price?>- ₦66k</em>
+                   <?php } ?>
                   </div>
               <?php }?>    
             </div>
@@ -66,7 +70,7 @@
                 <div class="number">
                   <span class="bt_span">
                     <p class="quantity">Quantitysss :</p>
-                    <input type="text" class="num_in" value="1" />
+                    <input type="text" class="num_in" value="1" readonly="readonly" />
                     <div class="num_rf">
                       <em class="add"><i></i></em>
                       <em class="sub"><i></i></em>
@@ -129,9 +133,9 @@
                   <p class="quantity">Quantity :</p>
                   
                   <div class="label">
-                    <span><em class="sub"></em></span>
-                    <input type="text" class="num_in" value="1" />
-                    <span><em class="add"></em></span>
+                    <span class="span_sub"><em class="sub"></em></span>
+                    <input type="text" class="num_in" value="1" readonly="readonly" />
+                    <span class="span_add"><em class="add"></em></span>
                   </div>
                   <p class="ts_p">This hair need  3-7 customize process days</p>
                 </div>
@@ -233,10 +237,7 @@
                 <h2 class="slide_h2">Details <em class="jian"></em></h2>
                 <div class="slide_text">
                   <div class="details">
-                    <p>Model Length: 24"</p>
-                    <p>Fiber: 100% Remy Human Hair</p>
-                    <p>Density: Full</p>
-                    <p>Texture: Straight</p>
+                    <?=$description;?>
                   </div>
                 </div>
               </li>
@@ -326,7 +327,7 @@
                 </div>
               </a>
             </div>
-            
+
           </div>
           <!-- Add Arrows -->
           <div class="swiper-button-next"></div>
@@ -346,12 +347,12 @@ window.onload=function(){
     }
     
     //数量加减
-    $(".number .add").click(function(){
+    $(".number .add , .number .span_add").click(function(){
       var num_val = $(".number .num_in").val();
       num_val++;
       $(".number .num_in").val(num_val);
     })
-    $(".number .sub").click(function(){
+    $(".number .sub , .number .span_sub").click(function(){
       var num_val = $(".number .num_in").val();
       if(num_val>1){
         num_val--;
@@ -371,13 +372,14 @@ window.onload=function(){
     $(".pro_det_ul3>li>span").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
+      changeprice();
     })
     //wig with选择
     $(".pro_det_ul4").siblings(".bt_span").find("em").text($(".pro_det_ul4>li").eq(0).find("span").text());
     $(".pro_det_ul4>li").click(function(){
       $(this).addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
-      changeprice();
+      // changeprice();
     })
     
     //Wish List添加收藏
@@ -423,6 +425,7 @@ window.onload=function(){
     
     
     //绑定评价轮播
+    $(".pl_img_ol>li").eq(0).addClass("active");
     $(".pl_img_ol>li").click(function(){
       var this_index = $(this).index();
       var this_len = $(".pl_img_ol>li").length;
@@ -519,11 +522,11 @@ function changeprice() {
         $.ajax({
             url: 'index.php?route=product/product/getprice&product_id=<?php echo $product_id; ?>',
             type: 'post',
-            dataType: 'json',
+            // dataType: 'json',
             data: $("#form-product input"),
 
             success: function(json) {
-               // alert(json);
+               alert(json);
                 $('#money').html(json['html']);
             }
         });
