@@ -5258,3 +5258,20 @@
 2018-09-13 9:47:42 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
 2018-09-13 9:49:49 - PHP Notice:  Undefined variable: m_description in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\product.tpl on line 45
 2018-09-13 9:50:02 - PHP Notice:  Undefined variable: m_description in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\product.tpl on line 45
+2018-09-13 9:59:25 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:21:49 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:22:09 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:22:46 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:23:50 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:25:41 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:30:48 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:30:52 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:36:16 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:40:00 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:46:07 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-14 1:49:21 - PHP Notice:  Undefined index: ends_date in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 51
+2018-09-14 1:49:21 - PHP Notice:  Undefined index: ends_date in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 51
+2018-09-14 1:49:21 - PHP Notice:  Undefined index: ends_date in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 51
+2018-09-14 1:57:14 - PHP Notice:  Use of undefined constant title - assumed 'title' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 13
+2018-09-14 1:57:16 - PHP Notice:  Use of undefined constant title - assumed 'title' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 13
+2018-09-14 1:57:34 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154

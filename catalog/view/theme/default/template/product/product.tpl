@@ -212,7 +212,7 @@
                   </div>
                    <?php } ?>
                   <?php }else{?>
-                  <h2 class="">Reviews (0) 
+                  <h2 class="">Reviews (<?php echo $revi; ?>) 
                   <ol class="start_ols">
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
                       <?php if ($rating < $i) { ?>
