@@ -5,7 +5,7 @@
     <div class="product clearfix">
       <div class="pro_ban">
         <div class="content">
-          <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban1.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban1.jpg'  />
+          <img class="changeimage lazyLoad" data-image='<?php echo $image1?>' data-mimage='<?php echo $ydimage1?>'  />
         </div>
       </div>
       

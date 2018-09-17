@@ -52,6 +52,7 @@
                     <span class="red_span">44%OFF</span>
                   <?php }else{ ?>
                   <em class="em2"><?=$price?>- ₦66k</em>
+                  <span class="red_span">44%OFF</span>
                   <?php } ?>
                 </div>
               <?php }else{?>
@@ -315,19 +316,27 @@
         <!-- Swiper -->
         <div class="swiper-container in_ul2">
           <div class="swiper-wrapper">
-
+ <?php foreach ($products_like as $product) { ?>
             <div class="swiper-slide clearfix">
-              <a class="in_ul2_a clearfix" href="###">
+              <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
-                  <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
+                  <img class="lazyLoad" src="" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"/>
                 </div>
                 <div class="text">
-                  <h1>FUNMI HAIR WIG </h1>
-                  <span>₦26K <em>₦46K</em></span>
+                  <h1><?php echo $product['name']; ?></h1>
+
+                  <?php if($product['special']) { ?>
+                     <span ><?php echo $product['special']; ?>
+                     <em><?php echo $product['price']; ?></em></span>
+                  <?php }else{ ?>
+                     <span ><?php echo $product['price']; ?></span>
+                  <?php } ?>
+
+                  <!-- <span>₦26K <em>₦46K</em></span> -->
                 </div>
               </a>
             </div>
-
+<?php } ?>
           </div>
           <!-- Add Arrows -->
           <div class="swiper-button-next"></div>

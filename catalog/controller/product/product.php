@@ -4,11 +4,6 @@ class ControllerProductProduct extends Controller {
 
     public function index() {
         $this->load->language('product/product');
-
-       
-          
-    
-
         $data['breadcrumbs'] = array();
 
         $data['breadcrumbs'][] = array(
@@ -23,10 +18,6 @@ class ControllerProductProduct extends Controller {
         //分类面包屑
         $this->load->model('catalog/product');
         //$category_list = $this->model_catalog_product->getCatalogName($this->request->get['product_id']);
-        //
-
-  
-
         //新
         // foreach($category_list as $k => $row){
         //     if( $k==0 && !empty($category_list[$k]) ){       //父类
@@ -48,12 +39,6 @@ class ControllerProductProduct extends Controller {
         //         );
         //     }
         // }
-        // 
-        // 
-
-
-     
-
         $this->load->model('catalog/manufacturer');
 
         if (isset($this->request->get['manufacturer_id'])) {
@@ -164,16 +149,7 @@ class ControllerProductProduct extends Controller {
         //         $temp = explode(':',$item);
         //         $shareoption[preg_replace('/\D/s', '', $temp[0])] = preg_replace('/\D/s', '', $temp[1]);
         //     }
-        //     $data['shareoption'] = $shareoption;
-        //     
-        //     
-        
-
-     
-      // print_r($shareoption);exit();
-
-
-		// print_r($product_info);die;
+        //     $data['shareoption'] = $shareoption;   
         if ($product_info) {
             $url = '';
 
@@ -224,9 +200,7 @@ class ControllerProductProduct extends Controller {
             if (isset($this->request->get['limit'])) {
                 $url .= '&limit=' . $this->request->get['limit'];
             }
-
            
-
             $this->document->setTitle($product_info['meta_title']);
             $this->document->setDescription($product_info['meta_description']);
             $this->document->setKeywords($product_info['meta_keyword']);
@@ -241,13 +215,13 @@ class ControllerProductProduct extends Controller {
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
-
+// print_r($data['hot']);exit;
             $resultsone = $this->model_catalog_review->getReviewsByProductIdone($this->request->get['product_id'],$limit=1);
             // print_r($resultsone);exit;
             $this->load->model('tool/image');
             foreach ($resultsone as $result) {
                 $review_img = $this->model_catalog_review->getReviewImg($result['review_id']);
-// print_r($review_img);exit;
+
                 foreach($review_img as $key=>$row){
                     //$review_img[$key]['img'] = HTTP_SERVER.$row['path'];
                     $review_img[$key]['img'] = $this->model_tool_image->resize( $row['images'], 120, 144);
@@ -267,7 +241,6 @@ class ControllerProductProduct extends Controller {
             }
             // print_r($data['reviews']);exit;
         // }
-
             $data['text_select'] = $this->language->get('text_select');
             $data['text_manufacturer'] = $this->language->get('text_manufacturer');
             $data['text_model'] = $this->language->get('text_model');
@@ -419,11 +392,6 @@ class ControllerProductProduct extends Controller {
             if ($product_info['special']>0) {
                  $data['special']=$this->currency->format($product_info['special'], $this->session->data['currency']);
             }
-           
-        
-
-      
-           
 
             $data['isLogged'] = $this->customer->isLogged();
 
@@ -441,7 +409,6 @@ class ControllerProductProduct extends Controller {
                     'price'    => $this->currency->format($this->tax->calculate($discount['price'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency'])
                 );
             }
-
 
             $data['options'] = array();
             $options=$this->model_catalog_product->getProductOptions($this->request->get['product_id']);
@@ -504,12 +471,6 @@ class ControllerProductProduct extends Controller {
             // } else {
             //     $data['video_link'] = '';
             // }
-            // 
-            // 
-            // 
-            // 
-
-
             $data['review_status'] = $this->config->get('config_review_status');
 
             if ($this->config->get('config_review_guest') || $this->customer->isLogged()) {
@@ -558,40 +519,70 @@ class ControllerProductProduct extends Controller {
 
          $this->load->model('catalog/information');
 
-            $faq = $this->model_catalog_information->getInformation(9);
+            // $faq = $this->model_catalog_information->getInformation(9);
             // print_r($faq);exit();
             // $data['faq']= html_entity_decode($faq['description'], ENT_QUOTES, 'UTF-8');
 
             //首页推荐商品
-            // $recommend_products = $this->model_catalog_product->getRecommendProducts(4);
-             //print_r($recommend_products);exit();
-            // $i = 0;
-            // foreach($recommend_products as $key=>$row){
-            //     $recommend_products[$key]['key_id'] = $i;   //作为索引值 dyl add
+           // print_r($this->request->get['hot']);exit;
+                $filter_data = array(
+                'hot' => $this->request->get['hot']
+            );
+                // print_r($filter_data);exit;
+            $recommend_products = $this->model_catalog_product->getRecommendProducts($filter_data,8);
+            foreach ($recommend_products as $result) {
+                // print_r($result);exit;
+                if ($result['image']) {
+                    $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+                } else {
+                    $image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+                }
+
+                if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+                    //$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+                    $price = $this->currency->format($result['price'], $this->session->data['currency']);
+                } else {
+                    $price = false;
+                }
+
             
-            //     $recommend_products[$key]['description'] = utf8_substr(strip_tags(html_entity_decode($row['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..';
-            
-            //     if($recommend_products[$key]['image']){
-            //         $recommend_products[$key]['image'] = $this->model_tool_image->resize($row['image'], 360, 360);
-            //     }else{
-            //         $recommend_products[$key]['image'] = $this->model_tool_image->resize('placeholder.png', 360, 360);
-            //     }
-            
-            //     $recommend_products[$key]['product_link'] = $this->url->link('product/product','product_id='.$row['product_id']);
-            //     $recommend_products[$key]['texture'] = $this->model_catalog_product->getOptionDes('Texture',$row['product_id']);
-            //     $recommend_products[$key]['price'] = $this->currency->format($row['price'], $this->session->data['currency']);
-            //     $recommend_products[$key]['min_name'] = utf8_substr(strip_tags($row['name']),0,40).'...';
-            //     $i++;
-            // }
-            
-            // $data['recommend_products'] = $recommend_products;
-            // 
-            // 
-            // 
-            // 
-            // 
+
+                if ($this->config->get('config_tax')) {
+                    $tax = $this->currency->format((float)$result['special']>0 ? $result['special'] : $result['price'], $this->session->data['currency']);
+                } else {
+                    $tax = false;
+                }
+
+                if ($this->config->get('config_review_status')) {
+                    $rating = (int)$result['rating'];
+                } else {
+                    $rating = false;
+                }
 
 
+                $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
+                $res = $this->model_catalog_product->getProductImages($result['product_id']); 
+
+                $data['products_like'][] = array(
+                    'product_id'  => $result['product_id'],
+                    'thumb'       => $image,
+                    'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
+                    'hot'     => $result['hot'],
+                    'ends_date'   => $result['ends_date'],
+                    //'name'        => $result['name'],
+                    'max_name'    => $result['name'],
+                    'reviews'     => $result['reviews'],
+                    'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
+                    'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
+                    'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
+                    'special'     => $result['special']>0? $this->currency->format($result['special'],$this->session->data['currency']) : '',
+                    'tax'         => $tax,
+                    'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
+                    'rating'      => $result['rating'],
+                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$result['hot'])
+                );
+
+            }                
             $data['recurrings'] = $this->model_catalog_product->getProfiles($this->request->get['product_id']);
 
             $this->model_catalog_product->updateViewed($this->request->get['product_id']);
@@ -1212,8 +1203,9 @@ class ControllerProductProduct extends Controller {
         $this->load->model('catalog/product');
 
         $price=  $this->model_catalog_product->getProductPricebyOptions($product_id,$options);
+       // print_r($price);exit;
         $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
-        print_r($price);exit;
+         
       $json=$price;
      if ($price['special']>0) {
           $price_s= $this->currency->format($price['special'], $this->session->data['currency']);

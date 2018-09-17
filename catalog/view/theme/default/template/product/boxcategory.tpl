@@ -8,11 +8,11 @@
         <div class="content">
           <div class="swiper-container">
               <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban3.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban3.jpg'  /></div>
+                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image1; ?>' data-mimage='<?php echo $ydimage1; ?>'  /></div>
                   <div class="swiper-slide">
-                    <video src="catalog/view/theme/default/img/myvideo.mp4" width="100%" controls="controls"></video>
+                    <video src="<?php echo $video; ?>" width="100%" controls="controls"></video>
                   </div>
-                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban3.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban3.jpg'  /></div>
+                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div>
               </div>
                <!-- Add Pagination -->
             <div class="swiper-pagination"></div>

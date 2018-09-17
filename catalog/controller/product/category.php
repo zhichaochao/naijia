@@ -130,6 +130,13 @@ class ControllerProductCategory extends Controller {
 			$data['button_list'] = $this->language->get('button_list');
 			$data['button_grid'] = $this->language->get('button_grid');
 
+
+			$data['image1']=HTTP_SERVER.$category_info['image1'];
+			$data['ydimage1']=HTTP_SERVER.$category_info['ydimage1'];
+			$data['image2']=HTTP_SERVER.$category_info['image2'];
+			$data['ydimage2']=HTTP_SERVER.$category_info['ydimage2'];
+			$data['video']=HTTP_SERVER.$category_info['video'];
+
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);
 			 if (!isset($this->request->get['path'])) {
@@ -245,7 +252,6 @@ class ControllerProductCategory extends Controller {
 				// 	  $color_name = $color_arr[0];
 				//    }
 			 //    }
-
 			    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
 			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
     //             //texture
@@ -273,7 +279,6 @@ class ControllerProductCategory extends Controller {
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$result['hot']),
 					'wishlist'	  =>$wishlist
 				);
-				//print_r(	$data['products'][0]['href']);exit();
 			}
 			// print_r(	$data['products']);exit();
 			$url = '';

@@ -774,7 +774,7 @@ if(isset($data['hot'])) {
     		}
     		$k++;
     		$query = $this->db->query("SELECT  price".$price_type." as price,product_option_value_id,product_option_id FROM " . DB_PREFIX . "product_option_value   WHERE product_id='".$product_id."' AND  product_option_id ='".$key."' AND product_option_value_id='".$value."'");
-// print_r($query);exit;
+print_r($query);exit;
     		$tem_price=$query->row;
     		$price+= $tem_price['price'];
 			$ids.=','.$value;
@@ -804,4 +804,20 @@ if(isset($data['hot'])) {
 
     	
     }
+    public function getRecommendProducts($data=array(),$limit=20){
+		$sql = "select distinct p.product_id from " . DB_PREFIX . "product p
+			    left join " . DB_PREFIX . "product_to_category ptc on p.product_id = ptc.product_id
+			    left join " . DB_PREFIX . "category c on c.category_id = ptc.category_id
+			    left join " . DB_PREFIX . "product_to_store p2s on p.product_id = p2s.product_id
+			    where p.status = 1 and p.date_available <= NOW() and p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'
+			    and c.status = 1 and p.hot ='" . (int)$data['hot'] . "'  order by p.viewed desc, p.date_added desc limit ".$limit;
+			  
+		$query = $this->db->query($sql);
+// print_r($query);exit;
+			$filter_data=$data;
+		foreach ($query->rows as $result) {
+			$product_data[] = $this->getProduct($filter_data,$result['product_id']);	
+		}
+		return $product_data;
+	}
 }
