@@ -141,9 +141,12 @@ class ControllerProductProduct extends Controller {
             $product_id = 0;
         }
 
+        $filter_data = array(
+                'hot' => $this->request->get['hot']
+            );
         $this->load->model('catalog/product');
 
-        $product_info = $this->model_catalog_product->getProduct($product_id);
+        $product_info = $this->model_catalog_product->getProduct($filter_data,$product_id);
         // print_r($product_info);exit;
         // $sp= $this->model_catalog_product->getProductSpecialPrice($product_id);
         
@@ -752,7 +755,10 @@ class ControllerProductProduct extends Controller {
 
         $product_id = $this->request->get['product_id'];   //产品id
         $this->load->model('catalog/product');
-        $product_info = $this->model_catalog_product->getProduct($product_id);
+         $filter_data = array(
+                'hot' => $this->request->get['hot']
+            );
+        $product_info = $this->model_catalog_product->getProduct($filter_data,$product_id);
         
         if(!empty($product_info)){
 

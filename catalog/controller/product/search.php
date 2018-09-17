@@ -217,14 +217,14 @@ class ControllerProductSearch extends Controller {
 				'limit'               => $limit
 			);
 
-			$product_to = $this->model_catalog_product->getTotalProducts($filter_data);
-			$res = $this->model_catalog_product->getProducts($filter_data);
+			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
+			$results = $this->model_catalog_product->getProducts($filter_data);
 
-			$product_tota = $this->model_catalog_hotproduct->getTotalHotproducts($filter_data);
-			$resul = $this->model_catalog_hotproduct->getHotproducts($filter_data);
+			// $product_tota = $this->model_catalog_hotproduct->getTotalHotproducts($filter_data);
+			// $resul = $this->model_catalog_hotproduct->getHotproducts($filter_data);
 
-			$product_total=$product_to+$product_tota;
-			$results=array_merge_recursive($res,$resul);
+			// $product_total=$product_to+$product_tota;
+			// $results=array_merge_recursive($res,$resul);
 
 			// print_r($results);exit;
 

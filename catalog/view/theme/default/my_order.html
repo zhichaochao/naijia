@@ -108,11 +108,11 @@
 				
 				<div class="or_nav">
 					<ol class="ornav_ol clearfix">
-						<li class="active"><span>All</span></li>
-						<li><span>Pending</span></li>
-						<li><span>Delivered</span></li>
-						<li><span>Completed</span></li>
-						<li><span>Invalid</span></li>
+						<li class="active"><a href="###">All</a></li>
+						<li><a href="###">Pending</a></li>
+						<li><a href="###">Delivered</a></li>
+						<li><a href="###">Completed</a></li>
+						<li><a href="###">Invalid</a></li>
 					</ol>
 				</div>
 				
@@ -151,50 +151,7 @@
 						<p class="p1 clearfix">
 							<span class="span1">Pending</span>
 							<span class="span2">(2018-11-02)</span>
-							<span class="djs_p" title="2018/09/13 19:00:00">
-								<em>Invalid in</em>
-								<span class="int_hour">00</span><i>:</i>
-								<span class="int_minute">00</span><i>:</i>
-								<span class="int_second">00</span>
-							</span>
-						</p>
-						<a class="or_a clearfix" href="###">
-							<div class="pic_img">
-								<img src="img/yd_shop1.jpg"/>
-							</div>
-							<div class="text">
-								<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-								<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-							</div>
-							<span class="price">$35.05</span>
-							<span class="num">X1</span>
-						</a>
-						<a class="or_a clearfix" href="###">
-							<div class="pic_img">
-								<img src="img/yd_shop1.jpg"/>
-							</div>
-							<div class="text">
-								<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-								<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-							</div>
-							<span class="price">$35.05</span>
-							<span class="num">X1</span>
-						</a>
-						<p class="p2 clearfix">
-							Total: <span>$70.10</span>
-						</p>
-						
-						<div class="bot">
-							<div class="det"></div>
-							<a class="bot_a a1" href="###">Continue To Pay</a>
-							<a class="bot_a a2" href="###">Cancel</a>
-						</div>
-					</li>
-					<li class="clearfix">
-						<p class="p1 clearfix">
-							<span class="span1">Pending</span>
-							<span class="span2">(2018-11-02)</span>
-							<span class="djs_p" title="2018/09/13 22:00:00">
+							<span class="djs_p" title="2018/09/14 19:00:00">
 								<em>Invalid in</em>
 								<span class="int_hour">00</span><i>:</i>
 								<span class="int_minute">00</span><i>:</i>
@@ -321,7 +278,7 @@
 					</li>
 					<li class="clearfix">
 						<p class="p1 clearfix">
-							<span class="span1">Pending unfilled</span>
+							<span class="span1">Pending-unfilled</span>
 							<span class="span2">(2018-11-02)</span>
 							<span class="span3">Order Number:000001</span>
 						</p>
@@ -646,7 +603,7 @@
                 $(this).find(".int_second").text(int_second);
             }else{
                 clearInterval(timer);
-                $(this).parent(".djs_p").css("display","none");
+                $(this).css("display","none");
             }
         })
         timer = setTimeout("show_time()", 1000);
