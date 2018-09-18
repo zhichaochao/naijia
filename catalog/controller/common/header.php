@@ -40,7 +40,7 @@ class ControllerCommonHeader extends Controller {
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
 			$data['logo'] = $server . 'image/' . $this->config->get('config_logo');
 		} else {
-			$data['logo'] = '';
+			$data['logo'] = '/catalog/view/theme/default/img/png/logo.png';
 		}
 
 		$this->load->language('common/header');
@@ -227,7 +227,7 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
-
+// print_r($this->request->get['route']);exit();
 		return $this->load->view('common/header', $data);
 	}
 }

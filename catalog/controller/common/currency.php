@@ -42,6 +42,7 @@ class ControllerCommonCurrency extends Controller {
 			if ($url_data) {
 				$url = '&' . urldecode(http_build_query($url_data, '', '&'));
 			}
+		
 
 			$data['redirect'] = $this->url->link($route, $url, $this->request->server['HTTPS']);
 		}
