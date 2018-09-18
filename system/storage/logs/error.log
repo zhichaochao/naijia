@@ -4824,3 +4824,38 @@
 2018-09-12 7:41:51 - PHP Notice:  Array to string conversion in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 371
 2018-09-12 7:41:51 - PHP Notice:  Array to string conversion in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 371
 2018-09-12 7:42:11 - PHP Notice:  Uninitialized string offset: 0 in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 154
+2018-09-12 7:48:54 - PHP Notice:  Undefined variable: results in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\category.tpl on line 152
+2018-09-12 7:49:05 - PHP Notice:  Undefined variable: results in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\category.tpl on line 152
+2018-09-12 7:49:12 - PHP Notice:  Undefined variable: results in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\category.tpl on line 152
+2018-09-12 7:49:39 - PHP Notice:  Undefined variable: results in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\category.tpl on line 152
+2018-09-12 7:49:46 - PHP Notice:  Undefined variable: results in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\category.tpl on line 152
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 142
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 292
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 298
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 304
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 310
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 316
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 323
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 329
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 336
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 342
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 7:59:35 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 142
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 292
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 298
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 304
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 310
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 316
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 323
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 329
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 336
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 342
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369
+2018-09-12 8:00:23 - PHP Notice:  Undefined index: path in D:\phpStudy\WWW\naijia\catalog\controller\product\hotcategory.php on line 369

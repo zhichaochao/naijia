@@ -24,8 +24,8 @@
           <div class="content">
             <?=$currency;?>
            
-            <a class="logo" href="###">
-              <img src="/catalog/view/theme/default/img/png/logo.png"/>
+            <a class="logo" href="<?=$home;?>">
+              <img src="<?=$logo;?>"/>
             </a>
           </div>
         </div>
@@ -34,7 +34,7 @@
             <span class="search"><i></i>All store search</span>
             
             <ul class="nav_ul">
-              <li class="active"><a href="###">Home</a></li>
+              <li class="active"><a href="<?=$home;?>">Home</a></li>
 
               <li><a href="<?php echo $hotcategory ?>">Hot Sales</a></li>
 
