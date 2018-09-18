@@ -21064,3 +21064,108 @@
 2018-09-17 9:28:03 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
 2018-09-17 9:28:03 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
 2018-09-17 9:28:09 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 2:49:03 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:03 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:03 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:03 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:03 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:03 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:03 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:03 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:06 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:06 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:06 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:06 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:06 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:06 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:06 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:06 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:08 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:08 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:08 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:08 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:08 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:08 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:49:08 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:49:08 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:12 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:12 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:12 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:12 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:12 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:12 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:12 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:12 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:34 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:34 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:34 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:34 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:34 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:34 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:50:34 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:50:34 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:51:59 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:51:59 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:51:59 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:51:59 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:51:59 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:51:59 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:51:59 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:51:59 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:26 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:26 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:26 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:26 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:26 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:26 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:26 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:26 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:28 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 2:53:28 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 2:53:28 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:28 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:28 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:28 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:28 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:28 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:53:28 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:53:28 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:09 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 2:56:09 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 2:56:09 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:09 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:09 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:09 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:09 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:09 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:09 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:09 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: image1 in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 134
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: ydimage1 in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 135
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: image2 in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 136
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: ydimage2 in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 137
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: video in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 138
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: hot in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 205
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: m_description in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 103
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: m_description in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 103
+2018-09-18 2:56:12 - PHP Notice:  Undefined index: m_description in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 103
+2018-09-18 2:56:13 - PHP Notice:  Undefined index: hot in D:\phpStudy\WWW\naijia\catalog\controller\product\category.php on line 440
+2018-09-18 2:56:13 - PHP Notice:  Undefined variable: results in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 2:56:13 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:13 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:13 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:13 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:13 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:13 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:13 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:13 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:15 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 2:56:15 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 2:56:15 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:15 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:15 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:15 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:15 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:15 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33
+2018-09-18 2:56:15 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\WWW\naijia\system\engine\loader.php on line 178 and defined in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 7
+2018-09-18 2:56:15 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 33

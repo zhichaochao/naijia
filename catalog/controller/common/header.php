@@ -227,7 +227,7 @@ class ControllerCommonHeader extends Controller {
 		} else {
 			$data['class'] = 'common-home';
 		}
-
+// print_r($this->request->get['route']);exit();
 		return $this->load->view('common/header', $data);
 	}
 }

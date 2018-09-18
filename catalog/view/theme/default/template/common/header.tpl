@@ -34,11 +34,11 @@
             <span class="search"><i></i>All store search</span>
             
             <ul class="nav_ul">
-              <li class="active"><a href="<?=$home;?>">Home</a></li>
+              <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
 
-              <li><a href="<?php echo $hotcategory ?>">Hot Sales</a></li>
+              <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>><a href="<?php echo $hotcategory ?>">Hot Sales</a></li>
 
-              <li>
+              <li <?=(strpos($class,'category') !==false&&strpos($class,'hotcategory') ==false)?'class="active"':'';?>>
                 <a href="<?php echo $category ?>">Wigs</a>
                 <ol class="nav_ol">
                   <li><a href="###">Luxury Hand-Make Wigs</a></li>
@@ -47,9 +47,9 @@
                 </ol>
               </li>
 
-              <li><a href="<?php echo $boxcategory ?>">Weaves Box</a></li>
+              <li <?=strpos($class,'boxcategory') !==false?'class="active"':'';?>><a href="<?php echo $boxcategory ?>">Weaves Box</a></li>
 
-              <li>
+              <li >
                 <a href="###">Hair Care</a>
                 <ol class="nav_ol">
                   <li><a href="###">Accessories</a></li>
