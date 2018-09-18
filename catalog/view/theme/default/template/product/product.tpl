@@ -383,6 +383,7 @@ window.onload=function(){
     $(".pro_det_ul3>li>span").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
+      $(this).parent().siblings("input").val($(this).attr("value"));
       changeprice();
     })
     //wig with选择
@@ -533,11 +534,11 @@ function changeprice() {
         $.ajax({
             url: 'index.php?route=product/product/getprice&product_id=<?php echo $product_id; ?>',
             type: 'post',
-            // dataType: 'json',
+            dataType: 'json',
             data: $("#form-product input"),
 
             success: function(json) {
-               alert(json);
+               // alert(json);
                 $('#money').html(json['html']);
             }
         });

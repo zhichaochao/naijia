@@ -774,7 +774,7 @@ if(isset($data['hot'])) {
     		}
     		$k++;
     		$query = $this->db->query("SELECT  price".$price_type." as price,product_option_value_id,product_option_id FROM " . DB_PREFIX . "product_option_value   WHERE product_id='".$product_id."' AND  product_option_id ='".$key."' AND product_option_value_id='".$value."'");
-print_r($query);exit;
+// print_r($query);exit;
     		$tem_price=$query->row;
     		$price+= $tem_price['price'];
 			$ids.=','.$value;
