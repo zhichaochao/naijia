@@ -21064,3 +21064,101 @@
 2018-09-17 9:28:03 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
 2018-09-17 9:28:03 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
 2018-09-17 9:28:09 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:16:25 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:16:25 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:16:25 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:16:25 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:16:25 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:16:25 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:16:25 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:16:25 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:19:43 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:19:43 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:19:43 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:19:43 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:19:43 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:19:43 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:19:43 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-18 1:19:43 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-18 1:36:19 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 11
+2018-09-18 1:36:19 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 11
+2018-09-18 1:36:19 - PHP Notice:  Undefined variable: video in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 13
+2018-09-18 1:36:19 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 15
+2018-09-18 1:36:19 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\boxcategory.tpl on line 15
+2018-09-18 1:41:24 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:47:00 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 130
+2018-09-18 1:47:03 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:47:36 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:47:43 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:47:51 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:48:13 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 1:48:45 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 2:07:17 - PHP Notice:  Undefined variable: sql in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 223
+2018-09-18 2:09:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 130
+2018-09-18 2:09:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 529
+2018-09-18 2:09:55 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 130
+2018-09-18 2:09:55 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 529
+2018-09-18 2:22:17 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 2:22:21 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 2:22:28 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-18 3:24:00 - PHP Notice:  Undefined variable: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 89
+2018-09-18 3:24:47 - PHP Notice:  Undefined variable: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 89
+2018-09-18 3:25:34 - PHP Notice:  Undefined variable: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 89
+2018-09-18 3:26:17 - PHP Notice:  Undefined variable: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 89
+2018-09-18 3:26:29 - PHP Notice:  Undefined variable: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 89
+2018-09-18 3:35:44 - PHP Notice:  Undefined variable: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 89
+2018-09-18 3:58:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:58:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:58:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:58:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:58:51 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:01 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:01 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:01 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:01 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:01 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:04 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:04 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:04 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:04 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:04 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:07 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:07 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:07 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:07 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:07 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:09 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:09 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:09 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:09 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 3:59:09 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 635
+2018-09-18 5:47:14 - PHP Notice:  Undefined variable: product in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 92
+2018-09-18 6:25:05 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 174
+2018-09-18 6:25:05 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 181
+2018-09-18 6:25:05 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 188
+2018-09-18 6:25:05 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 195
+2018-09-18 6:25:06 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 174
+2018-09-18 6:25:06 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 181
+2018-09-18 6:25:06 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 188
+2018-09-18 6:25:06 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 195
+2018-09-18 6:25:21 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 174
+2018-09-18 6:25:21 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 181
+2018-09-18 6:25:21 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 188
+2018-09-18 6:25:21 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 195
+2018-09-18 6:26:03 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 174
+2018-09-18 6:26:03 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 181
+2018-09-18 6:26:03 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 188
+2018-09-18 6:26:03 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 195
+2018-09-18 6:26:29 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 174
+2018-09-18 6:26:29 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 181
+2018-09-18 6:26:29 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 188
+2018-09-18 6:26:29 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 195
+2018-09-18 6:26:34 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 174
+2018-09-18 6:26:34 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 181
+2018-09-18 6:26:34 - PHP Notice:  Undefined variable: image2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 188
+2018-09-18 6:26:34 - PHP Notice:  Undefined variable: ydimage2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\category_form.tpl on line 195
+2018-09-18 6:45:11 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-18 7:05:12 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-09-18 7:05:18 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-18 7:11:18 - PHP Notice:  Undefined variable: image1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8
+2018-09-18 7:11:18 - PHP Notice:  Undefined variable: ydimage1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\hotcategory.tpl on line 8

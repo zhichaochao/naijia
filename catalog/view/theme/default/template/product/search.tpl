@@ -39,6 +39,7 @@
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
+              <?php if($product['hot']==1){?>
                   <div class="bg_hui">
                     <p class="djs_p" title="<?php echo $product['ends_date']; ?>">SALE ENDS 
                       <span class="int_day">00</span>:
@@ -47,6 +48,7 @@
                       <span class="int_second">00</span>
                     </p>
                   </div>
+              <?php }?>
                 </div>
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>

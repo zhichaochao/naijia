@@ -20,6 +20,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->load->model('catalog/category');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+			// print_r($this->request->post);exit;
 			$this->model_catalog_category->addCategory($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -52,6 +53,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->load->model('catalog/category');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+			// print_r($this->request->post);exit;
 			$this->model_catalog_category->editCategory($this->request->get['category_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -398,7 +400,7 @@ class ControllerCatalogCategory extends Controller {
 		if (isset($this->request->get['category_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$category_info = $this->model_catalog_category->getCategory($this->request->get['category_id']);
 		}
-
+// print_r($category_info);exit();
 		$data['token'] = $this->session->data['token'];
 
 		$this->load->model('localisation/language');
@@ -429,6 +431,12 @@ class ControllerCatalogCategory extends Controller {
 			$data['parent_id'] = 0;
 		}
 
+		if (!empty($category_info)) {
+			$data['hot'] = $category_info['hot'];
+		} else {
+			$data['hot'] = 0;
+		}
+// print_r($data['hot']);exit;
 		$this->load->model('catalog/filter');
 
 		if (isset($this->request->post['category_filter'])) {
@@ -480,6 +488,38 @@ class ControllerCatalogCategory extends Controller {
 			$data['image'] = '';
 		}
 
+		if (isset($this->request->post['image1'])) {
+			$data['image1'] = $this->request->post['image1'];
+		} elseif (!empty($category_info)) {
+			$data['image1'] = $category_info['image1'];
+		} else {
+			$data['image1'] = '';
+		}
+
+		if (isset($this->request->post['ydimage1'])) {
+			$data['ydimage1'] = $this->request->post['ydimage1'];
+		} elseif (!empty($category_info)) {
+			$data['ydimage1'] = $category_info['ydimage1'];
+		} else {
+			$data['ydimage1'] = '';
+		}
+
+		if (isset($this->request->post['image2'])) {
+			$data['image2'] = $this->request->post['image2'];
+		} elseif (!empty($category_info)) {
+			$data['image2'] = $category_info['image2'];
+		} else {
+			$data['image2'] = '';
+		}
+
+		if (isset($this->request->post['ydimage2'])) {
+			$data['ydimage2'] = $this->request->post['ydimage2'];
+		} elseif (!empty($category_info)) {
+			$data['ydimage2'] = $category_info['ydimage2'];
+		} else {
+			$data['ydimage2'] = '';
+		}
+// print_r($data['image1']);exit();
 		$this->load->model('tool/image');
 
 		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
@@ -488,6 +528,41 @@ class ControllerCatalogCategory extends Controller {
 			$data['thumb'] = $this->model_tool_image->resize($category_info['image'], 100, 100);
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+
+
+		if (isset($this->request->post['image1']) && is_file(DIR_IMAGE . $this->request->post['image1'])) {
+			$data['thumb1'] = $this->model_tool_image->resize($this->request->post['image1'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['image1'])) {
+			$data['thumb1'] = $this->model_tool_image->resize($category_info['image1'], 100, 100);
+		} else {
+			$data['thumb1'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+
+		if (isset($this->request->post['ydimage1']) && is_file(DIR_IMAGE . $this->request->post['ydimage1'])) {
+			$data['ydthumb1'] = $this->model_tool_image->resize($this->request->post['ydimage1'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['ydimage1'])) {
+			$data['ydthumb1'] = $this->model_tool_image->resize($category_info['ydimage1'], 100, 100);
+		} else {
+			$data['ydthumb1'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['image2']) && is_file(DIR_IMAGE . $this->request->post['image2'])) {
+			$data['thumb2'] = $this->model_tool_image->resize($this->request->post['image2'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['image2'])) {
+			$data['thumb2'] = $this->model_tool_image->resize($category_info['image2'], 100, 100);
+		} else {
+			$data['thumb2'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['ydimage2']) && is_file(DIR_IMAGE . $this->request->post['ydimage2'])) {
+			$data['ydthumb2'] = $this->model_tool_image->resize($this->request->post['ydimage2'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['ydimage2'])) {
+			$data['ydthumb2'] = $this->model_tool_image->resize($category_info['ydimage2'], 100, 100);
+		} else {
+			$data['ydthumb2'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
@@ -514,6 +589,13 @@ class ControllerCatalogCategory extends Controller {
 			$data['sort_order'] = $category_info['sort_order'];
 		} else {
 			$data['sort_order'] = 0;
+		}
+		if (isset($this->request->post['video'])) {
+			$data['video'] = $this->request->post['video'];
+		} elseif (!empty($category_info)) {
+			$data['video'] = $category_info['video'];
+		} else {
+			$data['video'] ='xxx.mp4';
 		}
 
 		if (isset($this->request->post['status'])) {

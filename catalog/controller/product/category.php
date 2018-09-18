@@ -131,11 +131,11 @@ class ControllerProductCategory extends Controller {
 			$data['button_grid'] = $this->language->get('button_grid');
 
 
-			$data['image1']=HTTP_SERVER.$category_info['image1'];
-			$data['ydimage1']=HTTP_SERVER.$category_info['ydimage1'];
-			$data['image2']=HTTP_SERVER.$category_info['image2'];
-			$data['ydimage2']=HTTP_SERVER.$category_info['ydimage2'];
-			$data['video']=HTTP_SERVER.$category_info['video'];
+			$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
+			$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
+			$data['image2']=HTTP_SERVER.'image/'.$category_info['image2'];
+			$data['ydimage2']=HTTP_SERVER.'image/'.$category_info['ydimage2'];
+			$data['video']=HTTP_SERVER.'image/video/home/'.$category_info['video'];
 
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);

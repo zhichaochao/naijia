@@ -198,7 +198,7 @@ class ModelCatalogProduct extends Model {
 		} else {
 			$sql .= " FROM " . DB_PREFIX . "product p";
 		}
-	// print_r($data['hot']);exit;
+	// print_r($data);exit;
 if(isset($data['hot'])) {
 	// print_r($data['hot']);exit;
 		if($data['hot']==0){
@@ -224,7 +224,7 @@ if(isset($data['hot'])) {
 			// print_r($sql);exit;
 		}
 	
-
+// print_r($sql);exit;
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
 				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
