@@ -5,7 +5,7 @@
     <div class="product clearfix">
       <div class="pro_ban">
         <div class="content">
-          <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban1.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban1.jpg'  />
+          <img class="changeimage lazyLoad" data-image='<?php echo $image1?>' data-mimage='<?php echo $ydimage1?>'  />
         </div>
       </div>
       
@@ -46,11 +46,13 @@
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
                   <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
+                   <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
+                      <li class="active"></li>
+                      <?php } ?>
+                      <?php } ?>
                   </ol>
                   <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                 <?php if($product['special']) { ?>

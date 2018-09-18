@@ -137,7 +137,7 @@ class ControllerProductHotcategory extends Controller {
 		        $this->request->get['path']=$category_info['category_id'];
 		    
 		      }
-
+ $path = isset($this->request->get['path'])?$this->request->get['path']:$category_info['category_id'];
 			// Set the last category breadcrumb
 			$data['breadcrumbs'][] = array(
 				'text' => $category_info['name'],
@@ -395,7 +395,7 @@ class ControllerProductHotcategory extends Controller {
 			$pagination->page = $page;
 			$pagination->limit = $limit;
 			// $pagination->url = $this->url->link('product/product', 'path=' . $this->request->get['path'] . $url . '&page={page}');
-			$pagination->url = $this->url->link('product/product', $url . '&page={page}');
+			$pagination->url = $this->url->link('product/hotcategory', $url . '&page={page}');
 
 			$data['pagination'] = $pagination->render();
 			

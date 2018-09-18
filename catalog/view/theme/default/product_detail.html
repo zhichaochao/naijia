@@ -207,9 +207,9 @@
 								<p class="size_p">Select Size Guide</p>
 							</li>
 							
-							<!--默认不选中-->
+							<!--默认选中-->
 							<li class="clearfix">
-								<span class="bt_span slide active">Wig with: <em>13*4 Frontal</em> <i></i><p class="ts_ps">Please select Wig with</p></span>
+								<span class="bt_span slide active">Wig with: <em></em> <i></i></span>
 								<ul class="pro_det_ul4 slide_ul clearfix" style="display: none;">
 									<li class="active"><span>13*4 Frontal</span></li>
 									<li><span>4*4 Closure</span></li>
@@ -221,9 +221,9 @@
 									<p class="quantity">Quantity :</p>
 									
 									<div class="label">
-										<span><em class="sub"></em></span>
+										<span class="span_sub"><em class="sub"></em></span>
 										<input type="text" class="num_in" value="1" />
-										<span><em class="add"></em></span>
+										<span class="span_add"><em class="add"></em></span>
 									</div>
 									<p class="ts_p">This hair need  3-7 customize process days</p>
 								</div>
@@ -308,8 +308,8 @@
 												    </div>
 												    <!--<div class="swiper-button-prev"></div>
 													<div class="swiper-button-next"></div>-->
+													<div class="swiper-paginations" style="display: none;"></div>
 												</div>
-												<div class="swiper-paginations" style="display: none;"></div>
 												<div class="close" ></div>
 												<div class="fy_zsq"><i class="fy_i1">2</i>/<i class="fy_i2">5</i></div>
 											</div>
@@ -405,6 +405,17 @@
 				<!-- Swiper -->
 			  <div class="swiper-container in_ul2">
 			    <div class="swiper-wrapper">
+			      <div class="swiper-slide clearfix">
+			      	<a class="in_ul2_a clearfix" href="###">
+			      		<div class="pic_img">
+				      		<img class="lazyLoad" src="" srcs="img/in_ul5.jpg" data-src="img/in_ul6.jpg"/>
+			      		</div>
+			      		<div class="text">
+			      			<h1>FUNMI HAIR WIG </h1>
+			      			<span>₦26K <em>₦46K</em></span>
+			      		</div>
+			      	</a>
+			      </div>
 			      <div class="swiper-slide clearfix">
 			      	<a class="in_ul2_a clearfix" href="###">
 			      		<div class="pic_img">
@@ -604,12 +615,12 @@ window.onload=function(){
 		}
 		
 		//数量加减
-		$(".number .add").click(function(){
+		$(".number .add , .number .span_add").click(function(){
 			var num_val = $(".number .num_in").val();
 			num_val++;
 			$(".number .num_in").val(num_val);
 		})
-		$(".number .sub").click(function(){
+		$(".number .sub , .number .span_sub").click(function(){
 			var num_val = $(".number .num_in").val();
 			if(num_val>1){
 				num_val--;
@@ -631,6 +642,7 @@ window.onload=function(){
 			$(this).parents("li").find(".slide>em").text($(this).text());
 		})
 		//wig with选择
+		$(".pro_det_ul4").siblings(".bt_span").find("em").text($(".pro_det_ul4>li").eq(0).find("span").text());
 		$(".pro_det_ul4>li").click(function(){
 			$(this).addClass("active").siblings("li").removeClass("active");
 			$(this).parents("li").find(".slide>em").text($(this).text());
@@ -679,29 +691,43 @@ window.onload=function(){
 		
 		
 		//绑定评价轮播
-		$(".pl_img_ol>li").click(function(){
+		var modal_off = 0;
+		$(".pl_img_ol>li").click(function(event){
+			event.stopPropagation();
 			var this_index = $(this).index();
 			var this_len = $(".pl_img_ol>li").length;
 			$(this).addClass("active").siblings("li").removeClass("active");
 			$(".fy_zsq .fy_i1").text(this_index+1);
 			$(".fy_zsq .fy_i2").text(this_len);
 			$(".pro_big_img").show();
-			
+			modal_off = 1;
 			setTimeout(function(){
 				rl_scroll();
 			},250)
 			
 //			评价轮播
+			var loopzt;
+			if($(window).width()>920){
+				loopzt = true;
+			}else{
+				loopzt = false;
+			}
+			
 			new Swiper('#swiper3', {
 				autoHeight: true,
+				loop: loopzt,
 				pagination: {
 					el: '.swiper-paginations',
 					clickable: true,
-//					type: 'fraction',
 			    },
 			    on: {
 				    slideChangeTransitionStart: function(){
-				      $(".pl_img_ol>li").eq(this.activeIndex).addClass("active").siblings("li").removeClass("active");
+				    	if($(window).width()>920){
+				    		$(".pl_img_ol>li").eq(this.activeIndex-1).addClass("active").siblings("li").removeClass("active");
+				    	}else{
+				    		$(".pl_img_ol>li").eq(this.activeIndex).addClass("active").siblings("li").removeClass("active");
+				    	}
+				      
 				      $(".fy_zsq .fy_i1").text(this.activeIndex+1);
 					  $(".fy_zsq .fy_i2").text($(".pl_img_ol>li").length);
 				      setTimeout(function(){
@@ -711,13 +737,21 @@ window.onload=function(){
 				 },
 			});
 			$(".pro_big_img .swiper-pagination-clickable span").eq(this_index).trigger('click');
-		
 		})
-
-
 		//关闭评价轮播
 		$(".pro_big_img .close").click(function(){
 			$(".pro_big_img").slideUp();
+		})
+		$("body").click(function(e){
+			if($(window).width()<=920){
+				if(modal_off==1){
+					var close = $('.text_madal .swiper-container img , .text_madal .swiper-paginations'); 
+				   	if(!close.is(e.target) && close.has(e.target).length === 0){
+				      	$(".pro_big_img").slideUp();
+					}
+				}
+				
+		   }
 		})
 		
 		//返回顶部

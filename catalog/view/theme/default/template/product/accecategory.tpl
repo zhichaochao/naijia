@@ -4,11 +4,11 @@
     
     <div class="product clearfix">
     <!-- 放父分类照片 -->
-      <div class="pro_ban">
+     <!--  <div class="pro_ban">
         <div class="content">
-          <img class="changeimage lazyLoad" data-image='<?php echo $image1?>' data-mimage='<?php echo $ydimage1?>'  />
+          <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban2.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban2.jpg'  />
         </div>
-      </div>
+      </div> -->
       <div class="content">
         <div class="top_f clearfix">
           <p><?php echo $product_total; ?> items found</p>

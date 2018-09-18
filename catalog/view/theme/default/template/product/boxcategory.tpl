@@ -8,11 +8,11 @@
         <div class="content">
           <div class="swiper-container">
               <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban3.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban3.jpg'  /></div>
+                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image1; ?>' data-mimage='<?php echo $ydimage1; ?>'  /></div>
                   <div class="swiper-slide">
-                    <video src="catalog/view/theme/default/img/myvideo.mp4" width="100%" controls="controls"></video>
+                    <video src="<?php echo $video; ?>" width="100%" controls="controls"></video>
                   </div>
-                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='catalog/view/theme/default/img/pro_ban3.jpg' data-mimage='catalog/view/theme/default/img/yd_pro_ban3.jpg'  /></div>
+                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div>
               </div>
                <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -52,11 +52,13 @@
                   <h2><?php echo $product['name']; ?> </h2>
                   <div class="pl_div">
                     <ol class="start_ol">
+                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
                       <li class="active"></li>
-                      <li class="active"></li>
-                      <li class="active"></li>
-                      <li class="active"></li>
-                      <li></li>
+                      <?php } ?>
+                      <?php } ?>
                     </ol>
                     <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                   </div>
@@ -128,6 +130,8 @@ function wishlist(product_id,e) {
   $(function(){
 
     var swiper = new Swiper('.swiper-container', {
+      autoplay: true,
+      loop: true,
         pagination: {
           el: '.swiper-pagination',
         },

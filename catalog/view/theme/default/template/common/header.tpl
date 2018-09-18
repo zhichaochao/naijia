@@ -10,7 +10,7 @@
     <script type="text/javascript" src="/catalog/view/theme/default/js/jquery.min.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/common.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/swiper.js" ></script>
-    <title>HOME</title>
+    <title><?=$title?></title>
   </head>
   <body>
     <!--头部-->

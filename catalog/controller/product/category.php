@@ -130,6 +130,13 @@ class ControllerProductCategory extends Controller {
 			$data['button_list'] = $this->language->get('button_list');
 			$data['button_grid'] = $this->language->get('button_grid');
 
+
+			$data['image1']=HTTP_SERVER.$category_info['image1'];
+			$data['ydimage1']=HTTP_SERVER.$category_info['ydimage1'];
+			$data['image2']=HTTP_SERVER.$category_info['image2'];
+			$data['ydimage2']=HTTP_SERVER.$category_info['ydimage2'];
+			$data['video']=HTTP_SERVER.$category_info['video'];
+
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);
 			 if (!isset($this->request->get['path'])) {
@@ -195,14 +202,16 @@ class ControllerProductCategory extends Controller {
 				'filter_category_id' => $category_id,
 				'filter_sub_category' => true,       //dyl add
 				'filter_filter'      => $filter,
+				'hot'      => $category_info['hot'],
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
 				'limit'              => $limit
 			);
-
+			// print_r($filter_data);exit;			
+// print_r($category_info['hot']);exit();
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
-
+// print_r($product_total);exit();
 			$results = $this->model_catalog_product->getProducts($filter_data);
 			 // print_r($results);exit();
 
@@ -243,7 +252,6 @@ class ControllerProductCategory extends Controller {
 				// 	  $color_name = $color_arr[0];
 				//    }
 			 //    }
-
 			    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
 			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
     //             //texture
@@ -253,8 +261,8 @@ class ControllerProductCategory extends Controller {
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-					// 'hot'	  => $result['hot'],
-					// 'ends_date'	  => $result['ends_date'],
+					'hot'	  => $result['hot'],
+					'ends_date'	  => $result['ends_date'],
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
@@ -268,10 +276,9 @@ class ControllerProductCategory extends Controller {
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$result['hot']),
 					'wishlist'	  =>$wishlist
 				);
-				//print_r(	$data['products'][0]['href']);exit();
 			}
 			// print_r(	$data['products']);exit();
 			$url = '';
@@ -429,7 +436,30 @@ class ControllerProductCategory extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			$this->response->setOutput($this->load->view('product/category', $data));
+
+			if($category_info['hot']==0){
+
+				$this->response->setOutput($this->load->view('product/category', $data));
+			}elseif($category_info['hot']==1){
+
+				$this->response->setOutput($this->load->view('product/hotcategory', $data));
+			}elseif($category_info['hot']==2){
+
+				$this->response->setOutput($this->load->view('product/boxcategory', $data));
+			}elseif($category_info['hot']==3){
+
+				$this->response->setOutput($this->load->view('product/basiccategory', $data));				
+			}elseif($category_info['hot']==4){
+
+				$this->response->setOutput($this->load->view('product/lacecategory', $data));		
+			}else{
+
+				$this->response->setOutput($this->load->view('product/accecategory', $data));
+			}
+
+
+			
+			// $this->response->setOutput($this->load->view('product/hiotcategory', $data));
 		} else {
 			$url = '';
 
@@ -636,10 +666,12 @@ class ControllerProductCategory extends Controller {
 				'filter_sub_category' => true,       //dyl add
 				'filter_filter'      => $filter,
 				'sort'               => $sort,
+				'hot'      => $category_info['hot'],
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
 				'limit'              => $limit
 			);
+
 
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
