@@ -1,12 +1,18 @@
+
 <?php echo $header; ?>
 <!--内容-->
     <!--内容-->
+    <style type="text/css">
+  .ts_ps{display:none;}
+  .ts_ps.off{display: block;}
+</style>
     <div class="in_content clearfix"></div>
     <input type="hidden" name="product_id" value="<?=$product_id?>">
     <div class="pro_det clearfix">
       <div class="contents clearfix">
         <div class="img_lf">
           <div class="big_lf clearfix">
+          <?php if($hot==1){?>
             <div class="top time" title="<?php echo $ends_date; ?>">
               <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
               <p>Sales end in 
@@ -16,6 +22,7 @@
                 <span class="int_second">00</span>
               </p>
             </div>
+          <?php }?>
             <!--pc左边大图-->
             <ul class="img_ul clearfix">
             <?php foreach ($images as $k => $image) {?>
@@ -102,7 +109,7 @@
                 <?php if ($option['product_option_value']) { ?>
                 <?php if ($option['type'] == 'radio') { ?> 
                   <li class="clearfix">
-                    <span class="bt_span slide">Select <?=$option['name']?> : <em></em> <i></i><p class="ts_ps">Please select Length</p></span> 
+                    <span class="bt_span slide">Select <?=$option['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select Length</p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix">
                       <input type="hidden" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php if(isset($shareoption[$option['product_option_id']])){ echo $shareoption[$option['product_option_id']];}else{ echo $option['product_option_value'][0]['product_option_value_id'];} ?>" />
                         <?php foreach ($option['product_option_value'] as $k=> $option_value) { ?>
@@ -144,11 +151,11 @@
 
               
               <li>
-                <?php if (!isset($logins)) { ?>
+                  <?php if (!isset($logins)) { ?>
                 <a class="shop_a" href="<?php echo $login; ?>">Please Login First</a>
-                <?php }else{ ?>
+                  <?php }else{ ?>
                 <a class="shop_a" id="button-cart" >Add To Shopping Bag</a>
-                <?php }?>
+                  <?php }?>
                 <button class="wish_btn <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);">
                   <span><i></i> Add To Wish List</span>
                 </button>
@@ -346,6 +353,7 @@
       </div>
     </div>
 <?php echo $footer; ?>
+
 <script>
 window.onload=function(){
   $(function(){
@@ -381,6 +389,7 @@ window.onload=function(){
     $(".pro_det_ul3>li>span").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
+      $(this).parent().siblings("input").val($(this).attr("value"));
       changeprice();
     })
     //wig with选择
@@ -388,7 +397,8 @@ window.onload=function(){
     $(".pro_det_ul4>li").click(function(){
       $(this).addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
-      // changeprice();
+      $(this).siblings("input").val($(this).attr("value"));
+      changeprice();
     })
     
     //Wish List添加收藏
@@ -531,11 +541,11 @@ function changeprice() {
         $.ajax({
             url: 'index.php?route=product/product/getprice&product_id=<?php echo $product_id; ?>',
             type: 'post',
-            // dataType: 'json',
+            dataType: 'json',
             data: $("#form-product input"),
 
             success: function(json) {
-               alert(json);
+               // alert(json);
                 $('#money').html(json['html']);
             }
         });
@@ -643,4 +653,38 @@ function wishlist(product_id,e) {
    })
  }
 }
+</script>
+
+<script type="text/javascript">
+  
+    var product_id = "<?php echo $product_id; ?>";
+    $('#button-cart').on('click', function() {
+        if($(".length_em").text()!=""){
+            $.ajax({
+            url: 'index.php?route=checkout/cart/add',
+            type: 'post',
+             dataType: 'json',
+            data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+           
+     
+            success: function(json) {
+              if (json.success) {
+              $('#cart_count').html(json.total);
+                $(".cart_li").click();
+
+                
+
+
+             }
+              },
+              error: function(xhr, ajaxOptions, thrownError) {
+                  alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+              }
+            });
+        }else{
+          $(".length_em").siblings(".ts_ps").addClass("off");
+        }
+
+        
+    });
 </script>

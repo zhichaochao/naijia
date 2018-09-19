@@ -11,6 +11,7 @@ class ControllerCommonContentTop extends Controller {
 
 		$layout_id = 0;
 
+
 		if ($route == 'product/category' && isset($this->request->get['path'])) {
 			$this->load->model('catalog/category');
 
@@ -44,31 +45,32 @@ class ControllerCommonContentTop extends Controller {
 		$data['modules'] = array();
 
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_top');
+		// print_r($data['hot']);exit
 
-		foreach ($modules as $module) {
-			$part = explode('.', $module['code']);
+		// foreach ($modules as $module) {
+		// 	$part = explode('.', $module['code']);
 
-			if (isset($part[0]) && $this->config->get($part[0] . '_status')) {
-				$module_data = $this->load->controller('extension/module/' . $part[0]);
+		// 	if (isset($part[0]) && $this->config->get($part[0] . '_status')) {
+		// 		$module_data = $this->load->controller('extension/module/' . $part[0]);
 
-				if ($module_data) {
-					$data['modules'][] = $module_data;
-				}
-			}
+		// 		if ($module_data) {
+		// 			$data['modules'][] = $module_data;
+		// 		}
+		// 	}
 
-			if (isset($part[1])) {
-				$setting_info = $this->model_extension_module->getModule($part[1]);
+		// 	if (isset($part[1])) {
+		// 		$setting_info = $this->model_extension_module->getModule($part[1]);
 
-				if ($setting_info && $setting_info['status']) {
-					$output = $this->load->controller('extension/module/' . $part[0], $setting_info);
+		// 		if ($setting_info && $setting_info['status']) {
+		// 			$output = $this->load->controller('extension/module/' . $part[0], $setting_info);
 
-					if ($output) {
-						$data['modules'][] = $output;
-					}
-				}
-			}
-		}
-
+		// 			if ($output) {
+		// 				$data['modules'][] = $output;
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// print_r(1);exit;
 		return $this->load->view('common/content_top', $data);
 	}
 }

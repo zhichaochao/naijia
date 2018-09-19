@@ -198,7 +198,7 @@ class ModelCatalogProduct extends Model {
 		} else {
 			$sql .= " FROM " . DB_PREFIX . "product p";
 		}
-	// print_r($data['hot']);exit;
+	// print_r($data);exit;
 if(isset($data['hot'])) {
 	// print_r($data['hot']);exit;
 		if($data['hot']==0){
@@ -224,7 +224,7 @@ if(isset($data['hot'])) {
 			// print_r($sql);exit;
 		}
 	
-
+// print_r($sql);exit;
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
 				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
@@ -774,7 +774,7 @@ if(isset($data['hot'])) {
     		}
     		$k++;
     		$query = $this->db->query("SELECT  price".$price_type." as price,product_option_value_id,product_option_id FROM " . DB_PREFIX . "product_option_value   WHERE product_id='".$product_id."' AND  product_option_id ='".$key."' AND product_option_value_id='".$value."'");
-print_r($query);exit;
+// print_r($query);exit;
     		$tem_price=$query->row;
     		$price+= $tem_price['price'];
 			$ids.=','.$value;

@@ -81,6 +81,23 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-data">
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-hot"><span style="color: red;">*</span>所属模板</label>
+                <div class="col-sm-10">
+                  <select name="hot" id="input-hot" class="form-control">
+ 
+                    <option value="0" <?=$hot==0 ?'selected':'';?>>Luxury Hand-Make Wigs</option>
+                    <option value="1" <?=$hot==1 ?'selected':'';?>>Hot Sales</option>
+                    <option value="2" <?=$hot==2 ?'selected':'';?>>Weaves Box</option>
+                    <option value="3" <?=$hot==3 ?'selected':'';?> >Basic Lace Wig</option>
+                    <option value="4" <?=$hot==4 ?'selected':'';?>>Lace Closure & Frontal</option>
+                    <option value="5" <?=$hot==5 ?'selected':'';?>>Accessories</option>
+
+                  </select>
+                </div>
+              </div>
+         
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-parent"><?php echo $entry_parent; ?></label>
                 <div class="col-sm-10">
@@ -145,11 +162,50 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label"><?php echo $entry_image; ?></label>
+                <label class="col-sm-2 control-label">移动端分类照片</label>
                 <div class="col-sm-10"><a href="" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
                   <input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" />
                 </div>
               </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label">PC海报1</label>
+                <div class="col-sm-10"><a href="" id="thumb-image1" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb1; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="image1" value="<?php echo $image1; ?>" id="input-image1" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label">移动海报1</label>
+                <div class="col-sm-10"><a href="" id="thumb-image2" data-toggle="image" class="img-thumbnail"><img src="<?php echo $ydthumb1; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="ydimage1" value="<?php echo $ydimage1; ?>" id="input-ydimage1" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label"><span style="color:red;">仅Weaves Box模板可用</span>PC海报2</label>
+                <div class="col-sm-10"><a href="" id="thumb-image3" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb2; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="image2" value="<?php echo $image2; ?>" id="input-image2" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label"><span style="color:red;">仅Weaves Box模板可用</span>移动海报2</label>
+                <div class="col-sm-10"><a href="" id="thumb-image4" data-toggle="image" class="img-thumbnail"><img src="<?php echo $ydthumb2; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="ydimage2" value="<?php echo $ydimage2; ?>" id="input-ydimage2" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">仅Weaves Box模板可用</span>视频</label>
+                <div class="col-sm-10">
+                  <input type="text" name="video" value="<?php echo $video; ?>" placeholder="" id="input-sort-order" class="form-control" />
+                </div>
+              </div>
+
+
+
+
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>"><?php echo $entry_top; ?></span></label>
                 <div class="col-sm-10">
