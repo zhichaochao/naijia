@@ -280,7 +280,7 @@ class ControllerProductCategory extends Controller {
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-					'hot'	  => $result['hot'],
+					'hot'	  => $category_info['hot'],
 					'ends_date'	  => $result['ends_date'],
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],

@@ -126,12 +126,10 @@ class ControllerProductProduct extends Controller {
             $product_id = 0;
         }
 
-        $filter_data = array(
-                'hot' => $this->request->get['hot']
-            );
+        
         $this->load->model('catalog/product');
 
-        $product_info = $this->model_catalog_product->getProduct($filter_data,$product_id);
+        $product_info = $this->model_catalog_product->getProduct($product_id);
         // print_r($product_info);exit;
         // $sp= $this->model_catalog_product->getProductSpecialPrice($product_id);
         
@@ -529,7 +527,7 @@ class ControllerProductProduct extends Controller {
                 'hot' => $this->request->get['hot']
             );
                 // print_r($filter_data);exit;
-            $recommend_products = $this->model_catalog_product->getRecommendProducts($filter_data,8);
+            $recommend_products = $this->model_catalog_product->getRecommendProducts(8);
             foreach ($recommend_products as $result) {
                 // print_r($result);exit;
                 if ($result['image']) {
@@ -746,10 +744,8 @@ class ControllerProductProduct extends Controller {
 
         $product_id = $this->request->get['product_id'];   //产品id
         $this->load->model('catalog/product');
-         $filter_data = array(
-                'hot' => $this->request->get['hot']
-            );
-        $product_info = $this->model_catalog_product->getProduct($filter_data,$product_id);
+
+        $product_info = $this->model_catalog_product->getProduct($product_id);
         
         if(!empty($product_info)){
 

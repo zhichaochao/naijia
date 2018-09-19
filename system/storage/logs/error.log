@@ -21678,3 +21678,100 @@
 2018-09-19 6:12:52 - PHP Notice:  Undefined index: weight in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 47
 2018-09-19 6:12:52 - PHP Notice:  Undefined index: weight_prefix in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 47
 2018-09-19 6:12:52 - PHP Warning:  Cannot modify header information - headers already sent by (output started at D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\startup\error.php:34) in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\response.php on line 12
+2018-09-19 7:59:20 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 7:59:26 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 8:07:34 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 8:07:38 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:07:38 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:07:38 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:07:38 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:07:38 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:07:38 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:07:38 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:07:38 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:14:17 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 8:14:19 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:14:19 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:14:19 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:14:19 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:14:19 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:14:19 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:14:19 - PHP Warning:  Missing argument 2 for ModelCatalogProduct::getProduct(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 557 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 7
+2018-09-19 8:14:19 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 33
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:08 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:20:32 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:25 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 8:24:41 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:41 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:41 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:41 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:41 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:42 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:42 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:42 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:42 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:42 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:44 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:44 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:44 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:44 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:44 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:55 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:55 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:55 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:55 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:55 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:57 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:57 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:57 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:57 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:24:57 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:25:18 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:25:18 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:25:18 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:25:18 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:25:18 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 282
+2018-09-19 8:47:31 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 99
+2018-09-19 8:47:31 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 99
+2018-09-19 8:47:44 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 99
+2018-09-19 8:56:40 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 100
+2018-09-19 8:56:41 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 100
+2018-09-19 8:56:43 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 100
+2018-09-19 8:56:47 - PHP Notice:  Undefined index: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 100
+2018-09-19 9:13:10 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-19 9:13:25 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\category.tpl on line 154
+2018-09-19 9:14:04 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-09-19 9:14:08 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
