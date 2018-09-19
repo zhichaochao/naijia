@@ -53,6 +53,7 @@ class ControllerProductCategory extends Controller {
 			'href' => $this->url->link('common/home')
 		);
 
+
 		if (isset($this->request->get['path'])) {
 			$url = '';
 
@@ -93,8 +94,9 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$category_id = 0;
 		}
-
+	// 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
+	// print_r($category_info);exit;
 
 		$url = '';
 
@@ -139,26 +141,35 @@ class ControllerProductCategory extends Controller {
 
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);
-			 if (!isset($this->request->get['path'])) {
-		        $this->request->get['path']=$category_info['category_id'];
+			 // if (!isset($this->request->get['path'])) {
+		  //       $this->request->get['path']=$category_info['category_id'];
 		    
-		      }
+		  //     }
+
+
+ if (isset($this->request->get['path'])) {
 
 			// Set the last category breadcrumb
 			$data['breadcrumbs'][] = array(
 				'text' => $category_info['name'],
 				'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'])
 			);
+		}else{
+				$data['breadcrumbs'][] = array(
+				'text' => $category_info['name'],
+				'href' => $this->url->link('product/category')
+			);
+		}
 
             //该分类的banner图片
-            $category_array = !empty($this->request->get['path']) ? explode('_',$this->request->get['path']) : '';
-            if(!empty($category_array[2])){              //如果是第三级分类,获取第三级分类的banner图
-               $category_image_id = $category_array[2];
-            }else if(!empty($category_array[1])){        //如果是第二级分类,获取第二级分类的banner图
-               $category_image_id = $category_array[1];
-            }else{                                       //如果是第一级分类,获取第一级分类的banner图
-               $category_image_id = $category_array[0];
-            }
+            // $category_array = !empty($this->request->get['path']) ? explode('_',$this->request->get['path']) : '';
+            // if(!empty($category_array[2])){              //如果是第三级分类,获取第三级分类的banner图
+            //    $category_image_id = $category_array[2];
+            // }else if(!empty($category_array[1])){        //如果是第二级分类,获取第二级分类的banner图
+            //    $category_image_id = $category_array[1];
+            // }else{                                       //如果是第一级分类,获取第一级分类的banner图
+            //    $category_image_id = $category_array[0];
+            // }
 
             //该分类的描述
 			//$data['description'] = html_entity_decode($category_info['description'], ENT_QUOTES, 'UTF-8');
@@ -292,8 +303,8 @@ class ControllerProductCategory extends Controller {
 			}
 
 			$data['sorts'] = array();
-
-			$data['sorts'][] = array(
+	 if (isset($this->request->get['path'])) {
+				$data['sorts'][] = array(
 				'text'  => $this->language->get('text_default'),
 				'value' => 'p.sort_order-ASC',
 				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.sort_order&order=ASC' . $url)
@@ -349,6 +360,65 @@ class ControllerProductCategory extends Controller {
 				'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '&sort=p.model&order=DESC' . $url)
 			);
 
+			}else{
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_default'),
+				'value' => 'p.sort_order-ASC',
+				'href'  => $this->url->link('product/category','sort=p.sort_order&order=ASC' . $url)
+			);
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_name_asc'),
+				'value' => 'pd.name-ASC',
+				'href'  => $this->url->link('product/category', 'sort=pd.name&order=ASC' . $url)
+			);
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_name_desc'),
+				'value' => 'pd.name-DESC',
+				'href'  => $this->url->link('product/category', 'sort=pd.name&order=DESC' . $url)
+			);
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_price_asc'),
+				'value' => 'p.price-ASC',
+				'href'  => $this->url->link('product/category', 'sort=p.price&order=ASC' . $url)
+			);
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_price_desc'),
+				'value' => 'p.price-DESC',
+				'href'  => $this->url->link('product/category', 'sort=p.price&order=DESC' . $url)
+			);
+
+			if ($this->config->get('config_review_status')) {
+				$data['sorts'][] = array(
+					'text'  => $this->language->get('text_rating_desc'),
+					'value' => 'rating-DESC',
+					'href'  => $this->url->link('product/category', 'sort=rating&order=DESC' . $url)
+				);
+
+				$data['sorts'][] = array(
+					'text'  => $this->language->get('text_rating_asc'),
+					'value' => 'rating-ASC',
+					'href'  => $this->url->link('product/category', 'sort=rating&order=ASC' . $url)
+				);
+			}
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_model_asc'),
+				'value' => 'p.model-ASC',
+				'href'  => $this->url->link('product/category', 'sort=p.model&order=ASC' . $url)
+			);
+
+			$data['sorts'][] = array(
+				'text'  => $this->language->get('text_model_desc'),
+				'value' => 'p.model-DESC',
+				'href'  => $this->url->link('product/category', 'sort=p.model&order=DESC' . $url)
+			);
+
+}
 			$url = '';
 
 			if (isset($this->request->get['filter'])) {
@@ -369,6 +439,7 @@ class ControllerProductCategory extends Controller {
 
 			sort($limits);
 
+	 if (isset($this->request->get['path'])) {
 			foreach($limits as $value) {
 				$data['limits'][] = array(
 					'text'  => $value,
@@ -376,6 +447,15 @@ class ControllerProductCategory extends Controller {
 					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . $url . '&limit=' . $value)
 				);
 			}
+		}else{
+				foreach($limits as $value) {
+				$data['limits'][] = array(
+					'text'  => $value,
+					'value' => $value,
+					'href'  => $this->url->link('product/category', '1'  . $url . '&limit=' . $value)
+				);
+			}
+		}
 
 			$url = '';
 
