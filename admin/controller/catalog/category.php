@@ -519,6 +519,55 @@ class ControllerCatalogCategory extends Controller {
 		} else {
 			$data['ydimage2'] = '';
 		}
+
+		if (isset($this->request->post['banner1'])) {
+			$data['banner1'] = $this->request->post['banner1'];
+		} elseif (!empty($category_info)) {
+			$data['banner1'] = $category_info['banner1'];
+		} else {
+			$data['banner1'] = '';
+		}
+
+		if (isset($this->request->post['ydbanner1'])) {
+			$data['ydbanner1'] = $this->request->post['ydbanner1'];
+		} elseif (!empty($category_info)) {
+			$data['ydbanner1'] = $category_info['ydbanner1'];
+		} else {
+			$data['ydbanner1'] = '';
+		}
+
+		if (isset($this->request->post['banner2'])) {
+			$data['banner2'] = $this->request->post['banner2'];
+		} elseif (!empty($category_info)) {
+			$data['banner2'] = $category_info['banner2'];
+		} else {
+			$data['banner2'] = '';
+		}
+
+		if (isset($this->request->post['ydbanner2'])) {
+			$data['ydbanner2'] = $this->request->post['ydbanner2'];
+		} elseif (!empty($category_info)) {
+			$data['ydbanner2'] = $category_info['ydbanner2'];
+		} else {
+			$data['ydbanner2'] = '';
+		}
+
+		if (isset($this->request->post['banner3'])) {
+			$data['banner3'] = $this->request->post['banner3'];
+		} elseif (!empty($category_info)) {
+			$data['banner3'] = $category_info['banner3'];
+		} else {
+			$data['banner3'] = '';
+		}
+
+		if (isset($this->request->post['ydbanner3'])) {
+			$data['ydbanner3'] = $this->request->post['ydbanner3'];
+		} elseif (!empty($category_info)) {
+			$data['ydbanner3'] = $category_info['ydbanner3'];
+		} else {
+			$data['ydbanner3'] = '';
+		}
+
 // print_r($data['image1']);exit();
 		$this->load->model('tool/image');
 
@@ -565,6 +614,53 @@ class ControllerCatalogCategory extends Controller {
 			$data['ydthumb2'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
+		if (isset($this->request->post['banner1']) && is_file(DIR_IMAGE . $this->request->post['banner1'])) {
+			$data['thumb3'] = $this->model_tool_image->resize($this->request->post['banner1'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['banner1'])) {
+			$data['thumb3'] = $this->model_tool_image->resize($category_info['banner1'], 100, 100);
+		} else {
+			$data['thumb3'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['ydbanner1']) && is_file(DIR_IMAGE . $this->request->post['ydbanner1'])) {
+			$data['ydthumb3'] = $this->model_tool_image->resize($this->request->post['ydbanner1'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['ydbanner1'])) {
+			$data['ydthumb3'] = $this->model_tool_image->resize($category_info['ydbanner1'], 100, 100);
+		} else {
+			$data['ydthumb3'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['banner2']) && is_file(DIR_IMAGE . $this->request->post['banner2'])) {
+			$data['thumb4'] = $this->model_tool_image->resize($this->request->post['banner2'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['banner2'])) {
+			$data['thumb4'] = $this->model_tool_image->resize($category_info['banner2'], 100, 100);
+		} else {
+			$data['thumb4'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['ydbanner2']) && is_file(DIR_IMAGE . $this->request->post['ydbanner2'])) {
+			$data['ydthumb4'] = $this->model_tool_image->resize($this->request->post['ydbanner2'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['ydbanner2'])) {
+			$data['ydthumb4'] = $this->model_tool_image->resize($category_info['ydbanner2'], 100, 100);
+		} else {
+			$data['ydthumb4'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+		if (isset($this->request->post['banner3']) && is_file(DIR_IMAGE . $this->request->post['banner3'])) {
+			$data['thumb5'] = $this->model_tool_image->resize($this->request->post['banner3'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['banner3'])) {
+			$data['thumb5'] = $this->model_tool_image->resize($category_info['banner3'], 100, 100);
+		} else {
+			$data['thumb5'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['ydbanner3']) && is_file(DIR_IMAGE . $this->request->post['ydbanner3'])) {
+			$data['ydthumb5'] = $this->model_tool_image->resize($this->request->post['ydbanner3'], 100, 100);
+		} elseif (!empty($category_info) && is_file(DIR_IMAGE . $category_info['ydbanner3'])) {
+			$data['ydthumb5'] = $this->model_tool_image->resize($category_info['ydbanner3'], 100, 100);
+		} else {
+			$data['ydthumb5'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 
 		if (isset($this->request->post['top'])) {
@@ -596,6 +692,14 @@ class ControllerCatalogCategory extends Controller {
 			$data['video'] = $category_info['video'];
 		} else {
 			$data['video'] ='xxx.mp4';
+		}
+
+		if (isset($this->request->post['video1'])) {
+			$data['video1'] = $this->request->post['video1'];
+		} elseif (!empty($category_info)) {
+			$data['video1'] = $category_info['video1'];
+		} else {
+			$data['video1'] ='xxx.mp4';
 		}
 
 		if (isset($this->request->post['status'])) {

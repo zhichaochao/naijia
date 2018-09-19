@@ -196,9 +196,52 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">仅Weaves Box模板可用</span>视频</label>
+                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">Weaves Box和Basic Wig模板可用</span>视频</label>
                 <div class="col-sm-10">
                   <input type="text" name="video" value="<?php echo $video; ?>" placeholder="" id="input-sort-order" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">仅Basic Wig模板可用</span>【4楼】视频</label>
+                <div class="col-sm-10">
+                  <input type="text" name="video1" value="<?php echo $video1; ?>" placeholder="" id="input-sort-order" class="form-control" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label"><span style="color:red;">以下照片仅Basic Wig模板可用</span>Banner1</label>
+                <div class="col-sm-10"><a href="" id="thumb-image5" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb3; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="banner1" value="<?php echo $banner1; ?>" id="input-banner1" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">YDbanner1</label>
+                <div class="col-sm-10"><a href="" id="thumb-image6" data-toggle="image" class="img-thumbnail"><img src="<?php echo $ydthumb3; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="ydbanner1" value="<?php echo $ydbanner1; ?>" id="input-ydbanner1" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Banner2</label>
+                <div class="col-sm-10"><a href="" id="thumb-image7" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb4; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="banner2" value="<?php echo $banner2; ?>" id="input-banner2" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">YDbanner2</label>
+                <div class="col-sm-10"><a href="" id="thumb-image8" data-toggle="image" class="img-thumbnail"><img src="<?php echo $ydthumb4; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="ydbanner2" value="<?php echo $ydbanner2; ?>" id="input-ydbanner2" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Banner3</label>
+                <div class="col-sm-10"><a href="" id="thumb-image9" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb5; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="banner3" value="<?php echo $banner3; ?>" id="input-banner3" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">YDbanner3</label>
+                <div class="col-sm-10"><a href="" id="thumb-image0" data-toggle="image" class="img-thumbnail"><img src="<?php echo $ydthumb5; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="ydbanner3" value="<?php echo $ydbanner3; ?>" id="input-ydbanner3" />
                 </div>
               </div>
 

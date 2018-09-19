@@ -138,6 +138,14 @@ class ControllerProductCategory extends Controller {
 			$data['image2']=HTTP_SERVER.'image/'.$category_info['image2'];
 			$data['ydimage2']=HTTP_SERVER.'image/'.$category_info['ydimage2'];
 			$data['video']=HTTP_SERVER.'image/video/home/'.$category_info['video'];
+			$data['video1']=HTTP_SERVER.'image/video/home/'.$category_info['video1'];
+
+			$data['banner1']=HTTP_SERVER.'image/'.$category_info['banner1'];
+			$data['ydbanner1']=HTTP_SERVER.'image/'.$category_info['ydbanner1'];
+			$data['banner2']=HTTP_SERVER.'image/'.$category_info['banner2'];
+			$data['ydbanner2']=HTTP_SERVER.'image/'.$category_info['ydbanner2'];
+			$data['banner3']=HTTP_SERVER.'image/'.$category_info['banner3'];
+			$data['ydbanner3']=HTTP_SERVER.'image/'.$category_info['ydbanner3'];
 
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);

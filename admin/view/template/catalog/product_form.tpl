@@ -25,6 +25,15 @@
       </div>
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-product" class="form-horizontal">
+        <!-- 被舍去的字段 -->
+          <input type="hidden" name="sku" value="" />
+          <input type="hidden" name="upc" value="" />
+          <input type="hidden" name="ean" value="" />
+          <input type="hidden" name="jan" value="" />
+          <input type="hidden" name="isbn" value="" />
+          <input type="hidden" name="mpn" value="" />
+          <input type="hidden" name="location" value="" />
+          <input type="hidden" name="price" value="" />
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
@@ -104,7 +113,7 @@
                   <?php } ?>
                 </div>
               </div>
-              <div class="form-group">
+             <!--  <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-sku"><span data-toggle="tooltip" title="<?php echo $help_sku; ?>"><?php echo $entry_sku; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="sku" value="<?php echo $sku; ?>" placeholder="<?php echo $entry_sku; ?>" id="input-sku" class="form-control" />
@@ -115,7 +124,7 @@
                 <div class="col-sm-10">
                   <input type="text" name="upc" value="<?php echo $upc; ?>" placeholder="<?php echo $entry_upc; ?>" id="input-upc" class="form-control" />
                 </div>
-              </div>
+              </div> 
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-ean"><span data-toggle="tooltip" title="<?php echo $help_ean; ?>"><?php echo $entry_ean; ?></span></label>
                 <div class="col-sm-10">
@@ -151,7 +160,7 @@
                 <div class="col-sm-10">
                   <input type="text" name="price" value="<?php echo $price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
                 </div>
-              </div>
+               </div> -->
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-tax-class"><?php echo $entry_tax_class; ?></label>
                 <div class="col-sm-10">
@@ -551,9 +560,9 @@
                           <thead>
                             <tr>
                               <td class="text-left"><?php echo $entry_option_value; ?></td>
-                              <td class="text-right"><?php echo $entry_quantity; ?></td>
+                              <td class="text-left"><?php echo $entry_quantity; ?></td>
                               <td class="text-left"><?php echo $entry_subtract; ?></td>
-                              <td class="text-right"><?php echo $entry_price; ?></td>
+                              <td class="text-left"><?php echo $entry_price; ?></td>
                               <td class="text-right"><?php echo $entry_option_points; ?></td>
                               <td class="text-right"><?php echo $entry_weight; ?></td>
                               <td></td>
@@ -561,6 +570,10 @@
                           </thead>
                           <tbody>
                             <?php foreach ($product_option['product_option_value'] as $product_option_value) { ?>
+                            <!-- 被舍去的字段 -->
+                         <!--  <input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][subtract]" value=''/>
+                          <input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price_prefix]" value='+'/>
+                             <!--// 被舍去的字段 -->
                             <tr id="option-value-row<?php echo $option_value_row; ?>">
                               <td class="text-left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][option_value_id]" class="form-control">
                                   <?php if (isset($option_values[$product_option['option_id']])) { ?>

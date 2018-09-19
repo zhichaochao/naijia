@@ -13,7 +13,7 @@
         
         <div class="context">
           <div class="top clearfix">
-            <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/wig1.jpg"/>
+            <img class="lazyLoad" src="" srcs="<?php echo $banner1; ?>"/>
             <div class="top_video">
               <div class="bf_img"></div>
               <video id="top_video" src="catalog/view/theme/default/img/myvideo.mp4" width="100%"></video>           
@@ -55,7 +55,7 @@
           
           <ul class="wig_ul clearfix">
             <li class="clearfix">
-              <img class="lf_img" src="catalog/view/theme/default/img/wig3.jpg" alt="" />
+              <img class="lf_img" src="<?php echo $banner2; ?>" alt="" />
               <div class="right">
                 <!-- Swiper -->
                   <div class="swiper-container in_ul2 swiper2">
@@ -91,7 +91,7 @@
               </div>
             </li>
             <li class="clearfix">
-              <img class="lf_img" src="catalog/view/theme/default/img/wig3.jpg" alt="" />
+              <img class="lf_img" src="<?php echo $banner3; ?>" alt="" />
               <div class="right">
                 <!-- Swiper -->
                   <div class="swiper-container in_ul2 swiper3">
