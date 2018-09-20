@@ -86,13 +86,13 @@
                 <label class="col-sm-2 control-label" for="input-hot"><span style="color: red;">*</span>所属模板</label>
                 <div class="col-sm-10">
                   <select name="hot" id="input-hot" class="form-control">
- 
-                    <option value="0" <?=$hot==0 ?'selected':'';?>>Luxury Hand-Make Wigs</option>
-                    <option value="1" <?=$hot==1 ?'selected':'';?>>Hot Sales</option>
-                    <option value="2" <?=$hot==2 ?'selected':'';?>>Weaves Box</option>
-                    <option value="3" <?=$hot==3 ?'selected':'';?> >Basic Lace Wig</option>
-                    <option value="4" <?=$hot==4 ?'selected':'';?>>Lace Closure & Frontal</option>
-                    <option value="5" <?=$hot==5 ?'selected':'';?>>Accessories</option>
+                    <option value="" <?=$hot==0 ?'selected':'';?>></option>
+                    <option value="1" <?=$hot==1 ?'selected':'';?>>Luxury Hand-Make Wigs</option>
+                    <option value="2" <?=$hot==2 ?'selected':'';?>>Hot Sales</option>
+                    <option value="3" <?=$hot==3 ?'selected':'';?>>Weaves Box</option>
+                    <option value="4" <?=$hot==4 ?'selected':'';?> >Basic Lace Wig</option>
+                    <option value="5" <?=$hot==5 ?'selected':'';?>>Lace Closure & Frontal</option>
+                    <option value="6" <?=$hot==6?'selected':'';?>>Accessories</option>
 
                   </select>
                 </div>

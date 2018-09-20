@@ -434,7 +434,7 @@ class ControllerCatalogCategory extends Controller {
 		if (!empty($category_info)) {
 			$data['hot'] = $category_info['hot'];
 		} else {
-			$data['hot'] = 0;
+			$data['hot'] ="";
 		}
 // print_r($data['hot']);exit;
 		$this->load->model('catalog/filter');

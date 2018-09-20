@@ -525,19 +525,19 @@ class ControllerProductCategory extends Controller {
 			$data['header'] = $this->load->controller('common/header');
 
 
-			if($category_info['hot']==0){
+			if($category_info['hot']==1){
 
 				$this->response->setOutput($this->load->view('product/category', $data));
-			}elseif($category_info['hot']==1){
-
-				$this->response->setOutput($this->load->view('product/hotcategory', $data));
 			}elseif($category_info['hot']==2){
 
-				$this->response->setOutput($this->load->view('product/boxcategory', $data));
+				$this->response->setOutput($this->load->view('product/hotcategory', $data));
 			}elseif($category_info['hot']==3){
 
-				$this->response->setOutput($this->load->view('product/basiccategory', $data));				
+				$this->response->setOutput($this->load->view('product/boxcategory', $data));
 			}elseif($category_info['hot']==4){
+
+				$this->response->setOutput($this->load->view('product/basiccategory', $data));				
+			}elseif($category_info['hot']==5){
 
 				$this->response->setOutput($this->load->view('product/lacecategory', $data));		
 			}else{

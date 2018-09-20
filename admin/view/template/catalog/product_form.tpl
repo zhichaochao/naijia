@@ -34,6 +34,8 @@
           <input type="hidden" name="mpn" value="" />
           <input type="hidden" name="location" value="" />
           <input type="hidden" name="price" value="" />
+          <input type="hidden" name="manufacturer_id" value="" />
+          <!-- <input type="hidden" name="store_id" value="0" /> -->
           <ul class="nav nav-tabs">
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
@@ -44,8 +46,8 @@
             <!-- <li><a href="#tab-discount" data-toggle="tab"><?php echo $tab_discount; ?></a></li> -->
             <li><a href="#tab-special" data-toggle="tab"><?php echo $tab_special; ?></a></li>
             <li><a href="#tab-image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
-           <!--  <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
-            <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li> -->
+            <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
+            <!-- <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li> -->
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -363,7 +365,20 @@
                   </div>
                 </div>
               </div> -->
-             <!--  <div class="form-group">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="<?php echo $help_related; ?>"><?php echo $entry_related; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="related" value="" placeholder="<?php echo $entry_related; ?>" id="input-related" class="form-control" />
+                  <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
+                    <?php foreach ($product_relateds as $product_related) { ?>
+                    <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i> <?php echo $product_related['name']; ?>
+                      <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
+                    </div>
+                    <?php } ?>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
                 <div class="col-sm-10">
                   <div class="well well-sm" style="height: 150px; overflow: auto;">
@@ -393,7 +408,7 @@
                     <?php } ?>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-download"><span data-toggle="tooltip" title="<?php echo $help_download; ?>"><?php echo $entry_download; ?></span></label>
                 <div class="col-sm-10">
@@ -407,19 +422,7 @@
                   </div>
                 </div>
               </div> -->
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="<?php echo $help_related; ?>"><?php echo $entry_related; ?></span></label>
-                <div class="col-sm-10">
-                  <input type="text" name="related" value="" placeholder="<?php echo $entry_related; ?>" id="input-related" class="form-control" />
-                  <div id="product-related" class="well well-sm" style="height: 150px; overflow: auto;">
-                    <?php foreach ($product_relateds as $product_related) { ?>
-                    <div id="product-related<?php echo $product_related['product_id']; ?>"><i class="fa fa-minus-circle"></i> <?php echo $product_related['name']; ?>
-                      <input type="hidden" name="product_related[]" value="<?php echo $product_related['product_id']; ?>" />
-                    </div>
-                    <?php } ?>
-                  </div>
-                </div>
-              </div>
+              
             </div>
            <!--  <div class="tab-pane" id="tab-attribute">
               <div class="table-responsive">
@@ -888,7 +891,7 @@
                 </table>
               </div>
             </div> -->
-            <!-- <div class="tab-pane" id="tab-design">
+           <!--  <div class="tab-pane" id="tab-design">
               <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                   <thead>

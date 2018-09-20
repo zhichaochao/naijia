@@ -147,13 +147,7 @@
            
            
           </ul>
-          
-        <!-- <div class="fy_div">
-        <div class="left"><?php echo $pagination; ?></div>
-          <div class="right">
-            <p><?php echo $results; ?></p>
-          </div>
-        </div> -->
+
           <div class="fy_div">
             <ul>
             <?php echo $pagination; ?>
