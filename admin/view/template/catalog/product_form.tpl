@@ -38,14 +38,14 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-links" data-toggle="tab"><?php echo $tab_links; ?></a></li>
-            <li><a href="#tab-attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
+            <!-- <li><a href="#tab-attribute" data-toggle="tab"><?php echo $tab_attribute; ?></a></li> -->
             <li><a href="#tab-option" data-toggle="tab"><?php echo $tab_option; ?></a></li>
-            <li><a href="#tab-recurring" data-toggle="tab"><?php echo $tab_recurring; ?></a></li>
-            <li><a href="#tab-discount" data-toggle="tab"><?php echo $tab_discount; ?></a></li>
+            <!-- <li><a href="#tab-recurring" data-toggle="tab"><?php echo $tab_recurring; ?></a></li> -->
+            <!-- <li><a href="#tab-discount" data-toggle="tab"><?php echo $tab_discount; ?></a></li> -->
             <li><a href="#tab-special" data-toggle="tab"><?php echo $tab_special; ?></a></li>
             <li><a href="#tab-image" data-toggle="tab"><?php echo $tab_image; ?></a></li>
-            <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
-            <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+           <!--  <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
+            <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li> -->
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -330,13 +330,13 @@
               </div>
             </div>
             <div class="tab-pane" id="tab-links">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-manufacturer"><span data-toggle="tooltip" title="<?php echo $help_manufacturer; ?>"><?php echo $entry_manufacturer; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="manufacturer" value="<?php echo $manufacturer; ?>" placeholder="<?php echo $entry_manufacturer; ?>" id="input-manufacturer" class="form-control" />
                   <input type="hidden" name="manufacturer_id" value="<?php echo $manufacturer_id; ?>" />
                 </div>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-category"><span data-toggle="tooltip" title="<?php echo $help_category; ?>"><?php echo $entry_category; ?></span></label>
                 <div class="col-sm-10">
@@ -350,7 +350,7 @@
                   </div>
                 </div>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-filter"><span data-toggle="tooltip" title="<?php echo $help_filter; ?>"><?php echo $entry_filter; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="filter" value="" placeholder="<?php echo $entry_filter; ?>" id="input-filter" class="form-control" />
@@ -362,8 +362,8 @@
                     <?php } ?>
                   </div>
                 </div>
-              </div>
-              <div class="form-group">
+              </div> -->
+             <!--  <div class="form-group">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
                 <div class="col-sm-10">
                   <div class="well well-sm" style="height: 150px; overflow: auto;">
@@ -393,8 +393,8 @@
                     <?php } ?>
                   </div>
                 </div>
-              </div>
-              <div class="form-group">
+              </div> -->
+              <!-- <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-download"><span data-toggle="tooltip" title="<?php echo $help_download; ?>"><?php echo $entry_download; ?></span></label>
                 <div class="col-sm-10">
                   <input type="text" name="download" value="" placeholder="<?php echo $entry_download; ?>" id="input-download" class="form-control" />
@@ -406,7 +406,7 @@
                     <?php } ?>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-related"><span data-toggle="tooltip" title="<?php echo $help_related; ?>"><?php echo $entry_related; ?></span></label>
                 <div class="col-sm-10">
@@ -421,7 +421,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="tab-attribute">
+           <!--  <div class="tab-pane" id="tab-attribute">
               <div class="table-responsive">
                 <table id="attribute" class="table table-striped table-bordered table-hover">
                   <thead>
@@ -455,7 +455,7 @@
                   </tfoot>
                 </table>
               </div>
-            </div>
+            </div> -->
             <div class="tab-pane" id="tab-option">
               <div class="row">
                 <div class="col-sm-2">
@@ -664,7 +664,7 @@
                 </div>
               </div>
             </div>
-            <div class="tab-pane" id="tab-recurring">
+            <!-- <div class="tab-pane" id="tab-recurring">
               <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover">
                   <thead>
@@ -710,8 +710,8 @@
                   </tfoot>
                 </table>
               </div>
-            </div>
-            <div class="tab-pane" id="tab-discount">
+            </div> -->
+            <!-- <div class="tab-pane" id="tab-discount">
               <div class="table-responsive">
                 <table id="discount" class="table table-striped table-bordered table-hover">
                   <thead>
@@ -764,7 +764,7 @@
                   </tfoot>
                 </table>
               </div>
-            </div>
+            </div> -->
             <div class="tab-pane" id="tab-special">
               <div class="table-responsive">
                 <table id="special" class="table table-striped table-bordered table-hover">
@@ -862,7 +862,7 @@
                 </table>
               </div>
             </div>
-            <div class="tab-pane" id="tab-reward">
+          <!--   <div class="tab-pane" id="tab-reward">
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-points"><span data-toggle="tooltip" title="<?php echo $help_points; ?>"><?php echo $entry_points; ?></span></label>
                 <div class="col-sm-10">
@@ -887,8 +887,8 @@
                   </tbody>
                 </table>
               </div>
-            </div>
-            <div class="tab-pane" id="tab-design">
+            </div> -->
+            <!-- <div class="tab-pane" id="tab-design">
               <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                   <thead>
@@ -929,7 +929,7 @@
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div> -->
           </div>
         </form>
       </div>

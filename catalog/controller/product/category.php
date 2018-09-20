@@ -139,7 +139,7 @@ class ControllerProductCategory extends Controller {
 			$data['ydimage2']=HTTP_SERVER.'image/'.$category_info['ydimage2'];
 			$data['video']=HTTP_SERVER.'image/video/home/'.$category_info['video'];
 			$data['video1']=HTTP_SERVER.'image/video/home/'.$category_info['video1'];
-
+// print_r($category_info['image2']);exit;
 			$data['banner1']=HTTP_SERVER.'image/'.$category_info['banner1'];
 			$data['ydbanner1']=HTTP_SERVER.'image/'.$category_info['ydbanner1'];
 			$data['banner2']=HTTP_SERVER.'image/'.$category_info['banner2'];
@@ -218,10 +218,10 @@ class ControllerProductCategory extends Controller {
 			$data['products'] = array();
 
 			$filter_data = array(
-				'filter_category_id' => $category_id,
+				'filter_category_id' => $category_info['category_id'],
 				'filter_sub_category' => true,       //dyl add
 				'filter_filter'      => $filter,
-				'hot'      => $category_info['hot'],
+				// 'hot'      => $category_info['hot'],
 				'sort'               => $sort,
 				'order'              => $order,
 				'start'              => ($page - 1) * $limit,
@@ -295,7 +295,7 @@ class ControllerProductCategory extends Controller {
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$result['hot']),
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$category_info['hot']),
 					'wishlist'	  =>$wishlist
 				);
 			}

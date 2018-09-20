@@ -59,7 +59,6 @@ class ModelCatalogProduct extends Model {
 				'tax_class_id'     => $query->row['tax_class_id'],
 				'date_available'   => $query->row['date_available'],
 				'weight'           => $query->row['weight'],
-				'hot'            => $query->row['hot'],
 				'ends_date'            => $query->row['ends_date'],
 				'weight_class_id'  => $query->row['weight_class_id'],
 				'length'           => $query->row['length'],
@@ -166,7 +165,22 @@ class ModelCatalogProduct extends Model {
 		$sql = "SELECT p.product_id, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special";
 
 		if (!empty($data['filter_category_id'])) {
-			if (!empty($data['filter_sub_category'])) {
+			if (!empty($data['filter_sub_category'])) {	
+			// if(){
+
+			// }elseif () {
+				
+			// }elseif(){
+
+			// }elseif(){
+
+			// }elseif(){
+
+			// }else{
+				
+			// }
+
+
 				$sql .= " FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (cp.category_id = p2c.category_id)";
 			} else {
 				$sql .= " FROM " . DB_PREFIX . "product_to_category p2c";
@@ -180,31 +194,10 @@ class ModelCatalogProduct extends Model {
 		} else {
 			$sql .= " FROM " . DB_PREFIX . "product p";
 		}
-	// print_r($data);exit;
-if(isset($data['hot'])) {
-	// print_r($data['hot']);exit;
-		if($data['hot']==0){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '0' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-		}elseif($data['hot']==1){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '1' AND p.ends_date >= NOW() AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";	
-		}elseif($data['hot']==2){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '2' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
 
-		}elseif($data['hot']==3){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '3' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
+			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1'  AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
 
-		}elseif($data['hot']==4){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '4' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-
-		}else{
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '5' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-		}
-		// print_r($sql);exit;
-		}else{
-			// print_r($data);exit;
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1'   AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-			// print_r($sql);exit;
-		}
+		
 	
 // print_r($sql);exit;
 		if (!empty($data['filter_category_id'])) {
@@ -534,12 +527,13 @@ if(isset($data['hot'])) {
 		$product_data = array();
 
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_related pr LEFT JOIN " . DB_PREFIX . "product p ON (pr.related_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pr.product_id = '" . (int)$product_id . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
-
+		
+		$product_datas=$query->num_rows;
 		foreach ($query->rows as $result) {
 			$product_data[$result['related_id']] = $this->getProduct($result['related_id']);
 		}
-
-		return $product_data;
+		$arr = array(0=>$product_datas,1=>$product_data);
+		return $arr;
 	}
 
 	public function getProductLayoutId($product_id) {
@@ -579,28 +573,8 @@ if(isset($data['hot'])) {
 		} else {
 			$sql .= " FROM " . DB_PREFIX . "product p";
 		}
-		if(isset($data['hot'])){
-			// print_r($data['hot']);exit;
-		if($data['hot']==0){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '0'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
-		}elseif($data['hot']==1){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '1' AND p.ends_date >= NOW() AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-		}elseif($data['hot']==2){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '2'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
-
-		}elseif($data['hot']==3){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '3'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
-
-		}elseif($data['hot']==4){
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '4'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
-
-		}else{
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.hot = '5'AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
-		}
-		// sousuo
-		}else{
-			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.ends_date >= NOW() AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
-		}
+		
+			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "' ";
 
 
 
@@ -786,19 +760,18 @@ if(isset($data['hot'])) {
 
     	
     }
-    public function getRecommendProducts($data=array(),$limit=20){
+    public function getRecommendProducts($limit=20){
 		$sql = "select distinct p.product_id from " . DB_PREFIX . "product p
 			    left join " . DB_PREFIX . "product_to_category ptc on p.product_id = ptc.product_id
 			    left join " . DB_PREFIX . "category c on c.category_id = ptc.category_id
 			    left join " . DB_PREFIX . "product_to_store p2s on p.product_id = p2s.product_id
 			    where p.status = 1 and p.date_available <= NOW() and p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'
-			    and c.status = 1 and p.hot ='" . (int)$data['hot'] . "'  order by p.viewed desc, p.date_added desc limit ".$limit;
+			    and c.status = 1  order by p.viewed desc, p.date_added desc limit ".$limit;
 			  
 		$query = $this->db->query($sql);
 // print_r($query);exit;
-			$filter_data=$data;
 		foreach ($query->rows as $result) {
-			$product_data[] = $this->getProduct($filter_data,$result['product_id']);	
+			$product_data[] = $this->getProduct($result['product_id']);	
 		}
 		return $product_data;
 	}

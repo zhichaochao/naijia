@@ -209,7 +209,7 @@ class ControllerProductProduct extends Controller {
             $data['ends_date'] = $product_info['ends_date'];
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
-            $data['hot'] = $product_info['hot'];
+            $data['hot'] = $this->request->get['hot'];
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
@@ -565,7 +565,7 @@ class ControllerProductProduct extends Controller {
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
                     'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-                    'hot'     => $result['hot'],
+                    'hot'     => $this->request->get['hot'],
                     'ends_date'   => $result['ends_date'],
                     //'name'        => $result['name'],
                     'max_name'    => $result['name'],
@@ -577,7 +577,7 @@ class ControllerProductProduct extends Controller {
                     'tax'         => $tax,
                     'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
                     'rating'      => $result['rating'],
-                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$result['hot'])
+                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$this->request->get['hot'])
                 );
 
             }                
@@ -585,7 +585,22 @@ class ControllerProductProduct extends Controller {
 
             $this->model_catalog_product->updateViewed($this->request->get['product_id']);
 
-
+            $results_rela = $this->model_catalog_product->getProductRelated($product_id);
+            // print_r($results_rela);exit;
+            foreach ($results_rela[1] as $result) {
+                if ($result['image']) {
+                    $image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+                } else {
+                    $image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+                }
+                $data['products_related'][] = array(
+                    'product_id'  => $result['product_id'],
+                    'thumb'       => $image,
+                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$this->request->get['hot'])
+                );
+                // print_r($data['products_related']);exit;
+            }
+            $data['results_relatotal']=$results_rela[0];
             //产品详情页的FAQ
             // $data['product_faq'] = html_entity_decode($this->model_catalog_product->getInformaintion(7),ENT_QUOTES,'UTF-8');
 

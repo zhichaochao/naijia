@@ -58,7 +58,7 @@
                   <em id="money" class="em2"><?=$special?>- ₦66k</em>
                     <span class="red_span">44%OFF</span>
                   <?php }else{ ?>
-                  <em class="em2"><?=$price?>- ₦66k</em>
+                  <em id="money" class="em2" ><?=$price?>- ₦66k</em>
                   <span class="red_span">44%OFF</span>
                   <?php } ?>
                 </div>
@@ -89,20 +89,21 @@
               </li>
 
               <!--默认选择-->
+              <?php if (isset($products_related) ) {?>
               <li class="clearfix">
                 <span class="bt_span slide">Select Style/Color: <i></i></span>
-                <p class="rf_style">5 styles</p>
+                <p class="rf_style"><?php echo $results_relatotal; ?> styles</p>
                 <!-- Swiper -->
                 <div class="swiper-container pro_det_ul2 slide_ul clearfix">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide active"><img src="catalog/view/theme/default/img/pro_det3.jpg" alt="" /></div>
-                        <div class="swiper-slide"><img src="catalog/view/theme/default/img/pro_det3.jpg" alt="" /></div>
-                        <div class="swiper-slide"><img src="catalog/view/theme/default/img/pro_det3.jpg" alt="" /></div>
-                        <div class="swiper-slide"><img src="catalog/view/theme/default/img/pro_det3.jpg" alt="" /></div>
-                        <div class="swiper-slide"><img src="catalog/view/theme/default/img/pro_det3.jpg" alt="" /></div>
+                  <?php foreach ($products_related as $related) { ?> 
+                        <div class="swiper-slide "><a href="<?php echo $related['href']; ?>"> <img src="<?php echo $related['thumb']; ?>" alt="" /></a></div>
+                   <?php } ?>
                     </div>
                 </div>
               </li>
+              <?php }?>
+              
               <div id="form-product">
               <?php if ($options) { ?>
                 <?php foreach ($options as $option) { ?>  
@@ -382,6 +383,7 @@ window.onload=function(){
         slidesPerView: 3.3,
         spaceBetween: '3%',
       });
+    $(".pro_det_ul2 .swiper-slide").eq(0).addClass("active");
     $(".pro_det_ul2 .swiper-slide").click(function(){
       $(this).addClass("active").siblings(".swiper-slide").removeClass("active");
     })
