@@ -12,7 +12,7 @@
       <div class="contents clearfix">
         <div class="img_lf">
           <div class="big_lf clearfix">
-          <?php if($hot==1){?>
+          <?php if($hot==2){?>
             <div class="top time" title="<?php echo $ends_date; ?>">
               <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
               <p>Sales end in 
@@ -51,7 +51,7 @@
               <p class="p1">
                 <?php echo $meta_description;?>
               </p>
-              <?php if($hot==1){?>
+              <?php if($hot==2){?>
                 <div class="price" >
                    <?php if(isset($special)){ ?>
                   <em class="em1">₦100k - ₦120K</em>

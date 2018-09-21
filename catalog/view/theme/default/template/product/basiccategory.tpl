@@ -16,7 +16,7 @@
             <img class="lazyLoad" src="" srcs="<?php echo $banner1; ?>"/>
             <div class="top_video">
               <div class="bf_img"></div>
-              <video id="top_video" src="catalog/view/theme/default/img/myvideo.mp4" width="100%"></video>           
+              <video id="top_video" src="<?php echo $video; ?>" width="100%"></video>           
             </div>
             
             <!-- Swiper -->
@@ -136,7 +136,7 @@
       
       <div class="fot_video clearfix">
         <div class="bf_img"></div>
-        <video id="fot_video" src="catalog/view/theme/default/img/myvideo.mp4" width="100%"></video>
+        <video id="fot_video" src="<?php echo $video1; ?>" width="100%"></video>
       </div>
     </div>
 <?php echo $footer; ?>

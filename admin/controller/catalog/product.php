@@ -362,6 +362,7 @@ class ControllerCatalogProduct extends Controller {
 			}
 
 			$special = false;
+			$percent = false;
 
 			$product_specials = $this->model_catalog_product->getProductSpecials($result['product_id']);
 
@@ -611,7 +612,8 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_tag'] = $this->language->get('entry_tag');
 		$data['entry_customer_group'] = $this->language->get('entry_customer_group');
 		$data['entry_reward'] = $this->language->get('entry_reward');
-		$data['entry_layout'] = $this->language->get('entry_layout');
+		$data['entry_layout'] = $this->language->get('entry_layout');		
+		$data['entry_percent'] = $this->language->get('entry_percent');
 		$data['entry_recurring'] = $this->language->get('entry_recurring');
 
 		$data['help_keyword'] = $this->language->get('help_keyword');
@@ -1188,6 +1190,7 @@ class ControllerCatalogProduct extends Controller {
 				'customer_group_id' => $product_special['customer_group_id'],
 				'priority'          => $product_special['priority'],
 				'price'             => $product_special['price'],
+				'percent'           => $product_special['percent'],
 				'date_start'        => ($product_special['date_start'] != '0000-00-00') ? $product_special['date_start'] : '',
 				'date_end'          => ($product_special['date_end'] != '0000-00-00') ? $product_special['date_end'] :  ''
 			);
