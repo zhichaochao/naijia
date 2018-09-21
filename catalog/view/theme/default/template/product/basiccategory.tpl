@@ -308,4 +308,7 @@ function wishlist(product_id,e) {
     });
     
   })
+  window.onload =function(){
+    $(".top_video").height($(".top_video").siblings("img").height());
+  }
 </script>

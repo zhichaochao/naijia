@@ -66,7 +66,7 @@
                   </span> -->
                   <span class="red_span">-56%</span>
                 </div>
-                <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>
+                <em class="red_em <?=$product['hot']==2 ?'active':'';?>">HOT<br />SALE</em>
               </a>
               <!-- 收藏 -->
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"

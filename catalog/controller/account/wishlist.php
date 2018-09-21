@@ -23,6 +23,19 @@ class ControllerAccountWishList extends Controller {
 
 			$this->response->redirect($this->url->link('account/wishlist'));
 		}
+		if (isset($this->request->get['page'])) {
+			$page = $this->request->get['page'];
+		} else {
+			$page = 1;
+		}
+		if (isset($this->request->get['limit'])) {
+			$limit = (int)$this->request->get['limit'];
+		} else {
+			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			$limit =2;
+		}
+$url = '';
+
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -67,12 +80,17 @@ class ControllerAccountWishList extends Controller {
 		}
 
 		$data['products'] = array();
+		
 
 		$results = $this->model_account_wishlist->getWishlist();
-
+		$product_total =  $this->model_account_wishlist->getTotalWishlist();
+// print_r($product_total);exit;
 		foreach ($results as $result) {
 			$product_info = $this->model_catalog_product->getProduct($result['product_id']);
-
+			// 
+			$product_infohot= $this->model_catalog_product->getProcatehot($result['product_id']);
+			// print_r($product_infohot);exit;
+			$res = $this->model_catalog_product->getProductImages($result['product_id']); 
 			if ($product_info) {
 				if ($product_info['image']) {
 					$image = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_wishlist_width'), $this->config->get($this->config->get('config_theme') . '_image_wishlist_height'));
@@ -103,12 +121,15 @@ class ControllerAccountWishList extends Controller {
 				$data['products'][] = array(
 					'product_id' => $product_info['product_id'],
 					'thumb'      => $image,
+					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],385,385),
+					'quantity'	 => $product_info['quantity'],	 
 					'name'       => $product_info['name'],
 					'model'      => $product_info['model'],
 					'stock'      => $stock,
 					'price'      => $price,
 					'special'    => $special,
-					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
+					'hot'    => $product_infohot['hot'],
+					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id'].'&hot='.$product_infohot['hot']),
 					'remove'     => $this->url->link('account/wishlist', 'remove=' . $product_info['product_id'])
 				);
 			} else {
@@ -116,8 +137,16 @@ class ControllerAccountWishList extends Controller {
 			}
 		}
 
+// print_r($data['products']);exit;
 		$data['continue'] = $this->url->link('account/account', '', true);
-
+		$data['wishlist_delete'] = $this->url->link('account/wishlist/delete');
+		if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+		}else{
+			$data['home'] =$this->url->link('common/home');
+		}
+		$data['product_total'] =$product_total;
+// print_r($data['home']);exit;
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

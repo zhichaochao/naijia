@@ -1,70 +1,199 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $heading_title; ?></h2>
-      <?php if ($products) { ?>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-center"><?php echo $column_image; ?></td>
-              <td class="text-left"><?php echo $column_name; ?></td>
-              <td class="text-left"><?php echo $column_model; ?></td>
-              <td class="text-right"><?php echo $column_stock; ?></td>
-              <td class="text-right"><?php echo $column_price; ?></td>
-              <td class="text-right"><?php echo $column_action; ?></td>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach ($products as $product) { ?>
-            <tr>
-              <td class="text-center"><?php if ($product['thumb']) { ?>
-                <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" /></a>
-                <?php } ?></td>
-              <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></td>
-              <td class="text-left"><?php echo $product['model']; ?></td>
-              <td class="text-right"><?php echo $product['stock']; ?></td>
-              <td class="text-right"><?php if ($product['price']) { ?>
-                <div class="price">
-                  <?php if (!$product['special']) { ?>
-                  <?php echo $product['price']; ?>
-                  <?php } else { ?>
-                  <b><?php echo $product['special']; ?></b> <s><?php echo $product['price']; ?></s>
+<!--内容-->
+    <div class="in_content clearfix"></div>
+    
+    <div class="list_wish clearfix">
+      <div class="top_yd clearfix">
+        <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY WISH LIST <span ><em id="total"><?php echo $product_total; ?></em> Items</span></h1>
+      </div>
+      <div class="pro_text">
+        <div class="content">
+          <ul class="pro_ul clearfix">
+          <?php foreach ($products as $product) { ?>
+            <li class="<?=$product['quantity']<1 ?'hui':'';?>">
+              <a href="<?php echo $product['href']; ?>">
+                <div class="pic_img">
+                  <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" alt="" />
+                  <div class="bg_hui">
+                    <p class="djs_p" title="2018/11/05 10:06:00">SALE ENDS 
+                      <span class="int_day">00</span>:
+                      <span class="int_hour">00</span>:
+                      <span class="int_minute">00</span>:
+                      <span class="int_second">00</span>s
+                    </p>
+                  </div>
+                </div>
+                <div class="text clearfix">
+                  <h2><?php echo $product['name']; ?></h2>
+                    <?php if($product['special']) { ?>
+                     <span class="price"><?php echo $product['special']; ?><em><?php echo $product['price']; ?></em></span>
+                    <?php }else{ ?>
+                     <span class="price"><?php echo $product['price']; ?></span>
+                    <?php } ?>
+                 
+                  <?php if($product['hot']==2) { ?>
+                  <button class="red_btn">-56%</button>
                   <?php } ?>
                 </div>
-                <?php } ?></td>
-              <td class="text-right"><button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');" data-toggle="tooltip" title="<?php echo $button_cart; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></button>
-                <a href="<?php echo $product['remove']; ?>" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-times"></i></a></td>
-            </tr>
-            <?php } ?>
-          </tbody>
-        </table>
+                <em class="red_em <?=$product['hot']==2 ?'active':'';?>">HOT<br />SALE</em>
+              </a>
+              <div class="close" value="<?=$product['product_id']?>"></div>
+              <div class="bot clearfix">
+                <div class="share">
+                  <button>
+                    <span>Share <img src="catalog/view/theme/default/img/png/icon_26.png"/></span>
+                  </button>
+                  <ul class="clearfix">
+                    <li><a href="###"></a></li>
+                    <li><a href="###"></a></li>
+                    <li><a href="###"></a></li>
+                  </ul>
+                </div>
+                    <?php if($product['quantity']<1){?>
+                    <a class="add_a" href="javascript:void(0);" onclick="return false;">Out Of Stock</a>
+                    <?php }else{?>
+                    <a class="add_a" href="<?php echo $product['href']; ?>">Add To Bag</a>
+                    <?php }?>
+              </div>
+            </li>
+        <?php }?>
+          </ul>
+          <!-- <div class="fy_div"><?php echo  $pagination?>
+            <ul>
+
+              <li><a href="###">< Last</a></li>
+              <li><a href="###">1</a></li>
+              <li><a href="###">2</a></li>
+              <li><a href="###">3</a></li>
+              <li><a href="###">4</a></li>
+              <li class="active"><a href="###">5</a></li>
+              <li><a href="###">6</a></li>
+              <li><a href="###">7</a></li>
+              <li><a href="###">8</a></li>
+              <li><a href="###">Next ></a></li>
+            </ul>
+          </div> -->
+        </div>
       </div>
-      <?php } else { ?>
-      <p><?php echo $text_empty; ?></p>
-      <?php } ?>
-      <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
-      </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
+    </div>
+    
 <?php echo $footer; ?>
+
+<script>
+  $(function(){
+//    close
+    $(".close").click(function(){
+      $(this).parents("li").remove();
+      var product_id=$(this).attr('value');
+   console.log(product_id);
+   $.ajax({
+    url:'<?php echo $wishlist_delete ;?>',
+    type:'post',
+    data:{'product_id':product_id},
+    dataType: 'json',
+    success:function(data){
+    if (data.success) {
+        $('#wishlist_count').html(data.total);
+        $('#total').html(data.total);
+      }
+               // location.reload(); 
+    }
+   })
+    })
+    
+    
+//    share 
+    var sh_off = 0;
+    $(".share").click(function(event){
+      if($(window).width()>920){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(this).find("ul").stop().slideUp();
+        }else{
+          $(".share").removeClass("active");
+          $(".share ul").css("display","none");
+          $(this).addClass("active");
+          $(this).find("ul").stop().slideDown();
+        }
+      }else{
+        
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(this).find("ol").stop().slideUp();
+        }else{
+          $(".share").removeClass("active");
+          $(".share ol").css("display","none");
+          $(this).addClass("active");
+          $(this).find("ol").stop().slideDown();
+        }
+      }
+      
+      sh_off=1;
+      event.stopPropagation()
+    })
+    
+    $("body").click(function(e){
+      if(sh_off==1){
+        var close = $('.share'); 
+          if(!close.is(e.target) && close.has(e.target).length === 0){
+            $(".share").removeClass("active");
+            if($(window).width()>920){
+              $(".share").find("ul").stop().slideUp();
+            }else{
+              $(".share").find("ol").stop().slideUp();
+            }
+        }
+       }
+    })
+    
+    //产品鼠标经过换图
+    $(".list_wish  .pro_text .pro_ul>li .top_img").hover(function(){
+      var src = $(this).attr("data-src");
+      $(this).attr("src",src);
+    },function(){
+      var src = $(this).attr("srcs");
+      $(this).attr("src",src);
+    })
+  })
+  
+  //倒计时
+  function show_time() {
+        $(".djs_p").each(function() {
+            var endtime = $(this).prop("title");
+            var time_start = new Date().getTime(); //设定当前时间
+            var time_end = new Date(endtime).getTime(); //设定目标时间
+            var time_distance = time_end - time_start;
+            var timer;
+            if (time_distance >= 0) {
+                var int_day = Math.floor(time_distance / 86400000)
+                time_distance -= int_day * 86400000;
+                var int_hour = Math.floor(time_distance / 3600000)
+                time_distance -= int_hour * 3600000;
+                var int_minute = Math.floor(time_distance / 60000)
+                time_distance -= int_minute * 60000;
+                var int_second = Math.floor(time_distance / 1000)
+                if (int_day < 10) {
+                    int_day = "0" + int_day;
+                }
+                if (int_hour < 10) {
+                    int_hour = "0" + int_hour;
+                }
+                if (int_minute < 10) {
+                    int_minute = "0" + int_minute;
+                }
+                if (int_second < 10) {
+                    int_second = "0" + int_second;
+                }
+                $(this).find(".int_day").text(int_day);
+                $(this).find(".int_hour").text(int_hour);
+                $(this).find(".int_minute").text(int_minute);
+                $(this).find(".int_second").text(int_second);
+            }else{
+                clearInterval(timer);
+                $(this).parent(".bg_hui").css("display","none");
+            }
+        })
+        timer = setTimeout("show_time()", 1000);
+    }
+    show_time();
+</script>

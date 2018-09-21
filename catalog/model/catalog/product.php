@@ -761,4 +761,11 @@ class ModelCatalogProduct extends Model {
 		}
 		return $product_data;
 	}
+	 public function getProcatehot($product_id){
+	
+// 
+	 	$sql = "SELECT c.hot,c.category_id  From " . DB_PREFIX . "category c WHERE  c.category_id= (SELECT category_id From " . DB_PREFIX . "product_to_category where product_id= '".$product_id."')";
+	 	$query = $this->db->query($sql);
+	 	return $query->row;
+	 }
 }

@@ -154,9 +154,11 @@
               <li>
                   <?php if (!isset($logins)) { ?>
                 <a class="shop_a" href="<?php echo $login; ?>">Please Login First</a>
-                  <?php }else{ ?>
+                  <?php }elseif($quantity>0){ ?>
                 <a class="shop_a" id="button-cart" >Add To Shopping Bag</a>
-                  <?php }?>
+                  <?php }else{?>
+                  <a class="shop_a">Lack of stock</a>
+                  <?php } ?>
                 <button class="wish_btn <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);">
                   <span><i></i> Add To Wish List</span>
                 </button>

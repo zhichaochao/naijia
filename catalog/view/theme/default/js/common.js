@@ -24,7 +24,7 @@ $(function(){
 	//返回顶部
 	$(document).scroll(function(){
         var top = $(document).scrollTop();
-        if(top>100){
+        if(top>5){
             $(".gg_nav").slideUp();   
         }else{
         	$(".gg_nav").slideDown();

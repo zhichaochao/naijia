@@ -209,6 +209,7 @@ class ControllerProductProduct extends Controller {
             $data['ends_date'] = $product_info['ends_date'];
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
+            $data['quantity'] = $product_info['quantity'];
             $data['hot'] = $this->request->get['hot'];
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
