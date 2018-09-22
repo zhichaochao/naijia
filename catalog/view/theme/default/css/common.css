@@ -6,9 +6,12 @@ body{background:#fff;width: 100%;margin: 0 auto;font:normal 12px 'Arial','Micros
 a{color: #595757;text-decoration: none;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);/*transition:all 0.3s;*/}
 a:hover{text-decoration: none;transition:all 0.3s;}
 button,input,select,textarea{font-size: 100%;margin: 0;padding: 0;outline: none;font:normal 12px 'Arial','Microsoft YaHei', '微软雅黑';}
+@media only screen and (min-width: 1px) and (max-width: 750px) {
+	body,button,input,select,textarea,span,a,p,em,i{font:normal 12px 'helvetica','Microsoft YaHei', '微软雅黑';}
+}
 a,button{cursor: pointer;}
 input[type="submit"],input[type="reset"],input[type="button"],button{appearance:none;-moz-appearance:none;-webkit-appearance:none;}
-input{border:none;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-appearance: none;border-radius: 0;}
+input{border:none;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-appearance: none !important;border-radius: 0;}
 input::-webkit-input-placeholder{/* WebKit browsers*/color:#999;}
 input:-moz-placeholder{/* Mozilla Firefox 4 to 18*/color:#999;}
 input::-moz-placeholder{/* Mozilla Firefox 19+*/color:#999;}
@@ -81,6 +84,13 @@ header{position:fixed;top:0;left:0;width:100%;background: #fff;z-index:10;height
 .ts_ps.off{display: none;}
 .text-danger{color: red;}
 
+	.pc_no{display: none;}
+	.yd_no{display: block;}
+@media only screen and (min-width: 1px) and (max-width: 920px) {
+	.pc_no{display: block;}
+	.yd_no{display:  none;}
+	
+}
 
 /*字体*/
 @font-face {

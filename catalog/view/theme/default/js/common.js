@@ -20,14 +20,38 @@ var fun = function (doc, win) {
 fun(document, window);
 
 $(function(){
+	//select颜色
+	$("select").each(function(){
+		let a = $(this).find("option:selected").text();
+		let b = $(this).find("option").eq(0).text();
+		if(a==b){
+			$(this).css("color","#999");
+		}else{
+			$(this).css("color","#333");
+		}
+	})
+	
+	
+	$("select").change(function(){
+	    let a = $(this).find("option:selected").text();
+		let b = $(this).find("option").eq(0).text();
+		if(a==b){
+			$(this).css("color","#999");
+		}else{
+			$(this).css("color","#333");
+		}
+    });
+	
 	 var win = $(window).width();
 	//返回顶部
 	$(document).scroll(function(){
         var top = $(document).scrollTop();
         if(top>5){
-            $(".gg_nav").slideUp();   
+            $(".gg_nav").slideUp(); 
+            $(".fixed_text .in_content").css("margin-top","105px");
         }else{
         	$(".gg_nav").slideDown();
+        	$(".fixed_text .in_content").css("margin-top","155px");
         }
     });
 	$('.xf_right .top').on('click',function (event) {
