@@ -16,24 +16,13 @@ class ModelCatalogProduct extends Model {
 
 			$query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special, (SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND pr.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "') AS reward, (SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status, (SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class, (SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");		
 
-		
-$special=$this->getProductSpecialPrice($product_id);
-	// print_r($special);exit();
-// 		if (!$price) {
-// 			$price=array();
-// 			$old_price=$this->getProductMinPrice($product_id);
-// 			$price['special']=0;
-// 			$price['old_price']=$old_price['price'];
-// 			$price['share']=$old_price['share'];
-// 		}
-$min_price=$this->getProductMinPrice($product_id);
+				$special=$this->getProductSpecialPrice($product_id);
+				$min_price=$this->getProductMinPrice($product_id);
+				$max_price=$this->getProductMaxPrice($product_id);
+				$price=$min_price;
 
-$max_price=$this->getProductMaxPrice($product_id);
-// print_r($min_price);exit();
-$price=$min_price;
-
-		if ($query->num_rows) {
-			return array(
+				if ($query->num_rows) {
+					return array(
 				'product_id'       => $query->row['product_id'],
 				'name'             => $query->row['name'],
 				'description'      => $query->row['description'],
@@ -106,24 +95,21 @@ $price=$min_price;
 
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$product_id . "' ORDER BY priority, price");
 		}
-		// print_r($query);exit;
 		$row=array();
 		foreach ($query->rows as $key => $value) {
+
 		if (($value['date_start'] == '0000-00-00' || strtotime($value['date_start']) < time()) && ($value['date_end'] == '0000-00-00' || strtotime($value['date_end']) > time())) {
 			if ($value['product_option_value_id']==0) {
 				$old_price=$this->getProductMinPrice($product_id);
-				// print_r($query);exit;
 				$value['old_price']=$old_price['price'];
 				$value['share']=$old_price['share'];
 
 			}else{
 				$queryk = $this->db->query("SELECT price as price,product_option_value_id,product_option_id,option_id FROM " . DB_PREFIX . "product_option_value WHERE product_option_value_id = '" . (int)$value['product_option_value_id'] . "'");
 				$tem=$queryk->row;
-				 // print_r($queryk);exit;
 				$value['old_price']=$tem['price'];
 				  $queryp = $this->db->query("SELECT  price as price,product_option_value_id,product_option_id FROM (SELECT * FROM " . DB_PREFIX . "product_option_value WHERE  product_id='".$product_id."' ORDER BY  price ASC) as opv   WHERE product_id='".$product_id."' AND option_id <> '".(int)$tem['option_id'] ."' GROUP BY option_id");
 				  $share='{'.$tem['product_option_id'].':'.$tem['product_option_value_id'];
-				  // print_r($queryp->rows);exit();
 				  if ($queryp->rows) {
 				 	foreach ($queryp->rows as $ky => $val) {
 				 		$share.=','.$val['product_option_id'].':'.$val['product_option_value_id'];
@@ -133,13 +119,11 @@ $price=$min_price;
 				 $share.='}';
 				 	$value['old_price']=$tem['price'];
 				 	$value['share']=$share;
-
 			}
 			if ($value['percent'] > 0) {
 				$value['special']=$value['old_price']*$value['percent']/100;
 			}else{
-					$value['special']=$value['old_price']-$value['price'];
-					$value['percent']=round($value['special']/$value['old_price'],2)*100;
+					$value['special']=$value['old_price']-$value['price'];	
 			}
 			$row=$value;
 		}
@@ -170,7 +154,7 @@ $price=$min_price;
 		
 		 return array('price'=>$price,'share'=>$share);
     }
-//最大价
+	//最大价
 	public function getProductMaxPrice($product_id){
 	
 	      $query = $this->db->query("SELECT  price as price ,product_option_id,product_option_value_id FROM (SELECT * FROM " . DB_PREFIX . "product_option_value WHERE  product_id='".$product_id."' AND quantity>0 ORDER BY  price DESC,option_value_id ASC ) as opv  GROUP BY option_id ");
@@ -197,7 +181,6 @@ $price=$min_price;
 
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {	
-			// if(){}elseif () {}elseif(){}elseif(){}elseif(){}else{}
 				$sql .= " FROM " . DB_PREFIX . "category_path cp LEFT JOIN " . DB_PREFIX . "product_to_category p2c ON (cp.category_id = p2c.category_id)";
 			} else {
 				$sql .= " FROM " . DB_PREFIX . "product_to_category p2c";
@@ -214,9 +197,6 @@ $price=$min_price;
 
 			$sql .= " LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1'  AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'";
 
-		
-	
-// print_r($sql);exit;
 		if (!empty($data['filter_category_id'])) {
 			if (!empty($data['filter_sub_category'])) {
 				$sql .= " AND cp.path_id = '" . (int)$data['filter_category_id'] . "'";
@@ -709,14 +689,6 @@ $price=$min_price;
             if( empty($product_id)|| $customer_id==0){
                 return false;
             }
-          
-          // print_r($product_id);
-          // print_r('<br/>');
-           
-          // print_r($customer_id);
-
-
-          // print_r('<br/>');
            
             $sql ="select * from ".DB_PREFIX."customer_wishlist   where product_id = '".$product_id."' AND customer_id =". $customer_id;
             $query = $this->db->query($sql);
@@ -755,23 +727,25 @@ $price=$min_price;
     		 // 
     	}
     	 $share.='}';
-    	 if($this->customer->isLogged()){
+    	 $respecial=$this->getProductSpecialPrice($product_id);
+    	//  if($this->customer->isLogged()){
 
-    	 	 $queryk= $this->db->query("SELECT * FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$product_id . "' AND product_option_value_id in(".$ids.") AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW()))ORDER BY priority, price limit 1");
-    	 }else{
-    			$queryk= $this->db->query("SELECT * FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$product_id . "' AND product_option_value_id in(".$ids.") AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) AND customer_group_id in (0,".(int)$this->config->get('config_customer_group_id').")  ORDER BY priority, price limit 1");
-    	}
-    	 $tem_special_price=$queryk->row;
-    	 if ($tem_special_price) {
-    	 	if ($tem_special_price['percent']>0) {
-    	 		$special=$price*$tem_special_price['percent']/100;
+    	//  	 $queryk= $this->db->query("SELECT * FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$product_id . "' AND product_option_value_id in(".$ids.") AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW()))ORDER BY priority, price limit 1");
+    	//  }else{
+    	// 		$queryk= $this->db->query("SELECT * FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$product_id . "' AND product_option_value_id in(".$ids.") AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) AND customer_group_id in (0,".(int)$this->config->get('config_customer_group_id').")  ORDER BY priority, price limit 1");
+    	// }
+    	 // $tem_special_price=$query->row;
+    	 // print_r($respecial);exit;
+    	 if ($respecial) {
+    	 	if ($respecial['percent']>0) {
+    	 		$special=$price*$respecial['percent']/100;
     	 	}else{
-    	 		$special=$price-$tem_special_price['price'];
+    	 		$special=$price-$respecial['price'];
     	 	}
     	 }else{
     	 	$special='';
     	 }
-    	 	// print_r(1);exit;
+    	 	// print_r($special);exit;
 
     	 return   array('price'=>$price,'share'=>$share,'special'=>$special);
 

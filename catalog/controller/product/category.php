@@ -9,7 +9,6 @@ class ControllerProductCategory extends Controller {
 
 		$this->load->model('tool/image');
 
-	    //引入该页面的css样式
 
 		if (isset($this->request->get['filter'])) {
 			$filter = $this->request->get['filter'];
@@ -22,11 +21,7 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$sort = 'p.sort_order';
 		}
-		// if (isset($this->request->get['sort'])) {
-		// 	$sort = $this->request->get['price'];
-		// } else {
-		// 	$sort = 'i.price';
-		// }
+
 
 		if (isset($this->request->get['order'])) {
 			$order = $this->request->get['order'];
@@ -94,9 +89,9 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$category_id = 0;
 		}
-	// 
+
 		$category_info = $this->model_catalog_category->getCategory($category_id);
-	// print_r($category_info);exit;
+
 
 		$url = '';
 
@@ -139,7 +134,7 @@ class ControllerProductCategory extends Controller {
 			$data['ydimage2']=HTTP_SERVER.'image/'.$category_info['ydimage2'];
 			$data['video']=HTTP_SERVER.'image/video/home/'.$category_info['video'];
 			$data['video1']=HTTP_SERVER.'image/video/home/'.$category_info['video1'];
-// print_r($category_info['image2']);exit;
+
 			$data['banner1']=HTTP_SERVER.'image/'.$category_info['banner1'];
 			$data['ydbanner1']=HTTP_SERVER.'image/'.$category_info['ydbanner1'];
 			$data['banner2']=HTTP_SERVER.'image/'.$category_info['banner2'];
@@ -149,10 +144,7 @@ class ControllerProductCategory extends Controller {
 
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);
-			 // if (!isset($this->request->get['path'])) {
-		  //       $this->request->get['path']=$category_info['category_id'];
-		    
-		  //     }
+
 
 
  if (isset($this->request->get['path'])) {
@@ -168,21 +160,6 @@ class ControllerProductCategory extends Controller {
 				'href' => $this->url->link('product/category')
 			);
 		}
-
-            //该分类的banner图片
-            // $category_array = !empty($this->request->get['path']) ? explode('_',$this->request->get['path']) : '';
-            // if(!empty($category_array[2])){              //如果是第三级分类,获取第三级分类的banner图
-            //    $category_image_id = $category_array[2];
-            // }else if(!empty($category_array[1])){        //如果是第二级分类,获取第二级分类的banner图
-            //    $category_image_id = $category_array[1];
-            // }else{                                       //如果是第一级分类,获取第一级分类的banner图
-            //    $category_image_id = $category_array[0];
-            // }
-
-            //该分类的描述
-			//$data['description'] = html_entity_decode($category_info['description'], ENT_QUOTES, 'UTF-8');
-			//产品的对比
-			//$data['compare'] = $this->url->link('product/compare');
 
 			$url = '';
 
@@ -202,18 +179,6 @@ class ControllerProductCategory extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
-			/*$data['categories'] = array();
-			$results = $this->model_catalog_category->getCategories($category_id);
-			foreach ($results as $result) {
-				$filter_data = array(
-					'filter_category_id'  => $result['category_id'],
-					'filter_sub_category' => true
-				);
-				$data['categories'][] = array(
-					'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
-				);
-			}*/
 
 			$data['products'] = array();
 
@@ -227,12 +192,11 @@ class ControllerProductCategory extends Controller {
 				'start'              => ($page - 1) * $limit,
 				'limit'              => $limit
 			);
-			// print_r($filter_data);exit;			
-// print_r($category_info['hot']);exit();
+
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
-// print_r($product_total);exit();
+
 			$results = $this->model_catalog_product->getProducts($filter_data);
-			 // print_r($results);exit();
+
 
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -262,44 +226,45 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
-				//颜色名称
-				// $color_name = '';
-				// if($result['color_id']!=0){
-				//    $color_data = $this->model_catalog_product->getOptionValueByID($result['color_id']);
-				//    if($color_data){
-				// 	  $color_arr = explode(':',$color_data['name']);
-				// 	  $color_name = $color_arr[0];
-				//    }
-			 //    }
+		
 			    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
 			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
-    //             //texture
-    //             $texture = $this->model_catalog_product->getOptionDes('Texture',$result['product_id']);
 
+ 
+			    if(!empty($result['special'])){
+			    	$specials=$result['special']['special'];
+			    	if ($result['special']['percent']>0) {
+			    		$percents=$result['special']['percent'];
+			    	}else{
+			    		$percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    	}
+			    	
+			    	$date_ends=strtotime($result['special']['date_end'])-time();
+			    }else{
+			    	$specials='';
+			    	$percents='';
+			    	$date_ends='';
+			    }
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
 					'hot'	  => $category_info['hot'],
-					'ends_date'	  => $result['ends_date'],
-					//'name'        => $result['name'],
+					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
+					'percent'    => $percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
-					//  'color_name'  => $color_name,
-                    // 'texture'     => $texture,
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
-					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
-					'special'     => $result['special']>0? $this->currency->format($result['special'],$this->session->data['currency']) : '',
+					'price'       => $this->currency->format($result['price']['price'],$this->session->data['currency']),
+					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
-					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$category_info['hot']),
 					'wishlist'	  =>$wishlist
 				);
 			}
-			// print_r(	$data['products']);exit();
 			$url = '';
 
 			if (isset($this->request->get['filter'])) {
@@ -496,8 +461,6 @@ class ControllerProductCategory extends Controller {
 			// print_r($data['pagination']);exit;
 			// $data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
 			$data['allpage']=ceil($product_total / $limit);		
-// var_dump(ceil($product_total / $limit));exit();
-			// http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
 			if ($page == 1) {
 			    $this->document->addLink($this->url->link('product/category', 'path=' . $category_info['category_id'], true), 'canonical');
 			} elseif ($page == 2) {
@@ -628,11 +591,7 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$sort = 'p.sort_order';
 		}
-		// if (isset($this->request->get['sort'])) {
-		// 	$sort = $this->request->get['price'];
-		// } else {
-		// 	$sort = 'i.price';
-		// }
+
 
 		if (isset($this->request->get['order'])) {
 			$order = $this->request->get['order'];
@@ -719,13 +678,6 @@ class ControllerProductCategory extends Controller {
 			$data['button_list'] = $this->language->get('button_list');
 			$data['button_grid'] = $this->language->get('button_grid');
 
-	
-          
-
-            //该分类的描述
-			//$data['description'] = html_entity_decode($category_info['description'], ENT_QUOTES, 'UTF-8');
-			//产品的对比
-			//$data['compare'] = $this->url->link('product/compare');
 
 			$url = '';
 
@@ -794,25 +746,9 @@ class ControllerProductCategory extends Controller {
 					$rating = false;
 				}
 
-				//颜色名称
-				// $color_name = '';
-				// if($result['color_id']!=0){
-				//    $color_data = $this->model_catalog_product->getOptionValueByID($result['color_id']);
-				//    if($color_data){
-				// 	  $color_arr = explode(':',$color_data['name']);
-				// 	  $color_name = $color_arr[0];
-				//    }
-			 //    }
-
-			    // $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
-                            
-                // //texture
-                // $texture = $this->model_catalog_product->getOptionDes('Texture',$result['product_id']);
-
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
-					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
 					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
 					'color_name'  => $color_name,
@@ -823,7 +759,6 @@ class ControllerProductCategory extends Controller {
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
-					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 					'wishlist'	  =>$wishlist
 				);

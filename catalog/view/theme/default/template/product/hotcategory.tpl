@@ -35,7 +35,8 @@
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
                   <div class="bg_hui">
-                    <p class="djs_p" title="<?php echo $product['ends_date']; ?>">SALE ENDS 
+
+                    <p class="djs_p" title="<?php echo $product['date_end']; ?>" >SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
@@ -55,7 +56,7 @@
                       <?php } ?>
                   </ol>
                   <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
-                <?php if($product['special']) { ?>
+                <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
                   <?php }else{ ?>
@@ -64,9 +65,10 @@
                   <!-- <span class="price">₦26K 
                   <em>₦46K </em>
                   </span> -->
-                  <span class="red_span">-56%</span>
+                     <?php if(!empty($product['special'])) { ?>
+                  <span class="red_span"><?php echo $product['percent']; ?>%</span> <?php } ?>
                 </div>
-                <em class="red_em <?=$product['hot']==2 ?'active':'';?>">HOT<br />SALE</em>
+                 <?php if(!empty($product['special'])) { ?>   <em class="red_em <?=$product['hot']==2 ?'active':'';?>">HOT<br />SALE</em> <?php } ?>
               </a>
               <!-- 收藏 -->
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"
@@ -81,22 +83,6 @@
             <?php echo $pagination; ?>
             </ul>
           </div>
-        
-          <!-- <div class="fy_div">
-            <ul>
-              <li><a href="###">< Last</a></li>
-              <li><a href="###">1</a></li>
-              <li><a href="###">2</a></li>
-              <li><a href="###">3</a></li>
-              <li><a href="###">4</a></li>
-              <li class="active"><a href="###">5</a></li>
-              <li><a href="###">6</a></li>
-              <li><a href="###">7</a></li>
-              <li><a href="###">8</a></li>
-              <li><a href="###">Next ></a></li>
-            </ul>
-          </div> -->
-
         </div>
       </div>
     </div>
@@ -115,7 +101,6 @@ function wishlist(product_id,e) {
       if (data.success) {
         $('#wishlist_count').html(data.total);
       }
-               // location.reload(); 
     }
    })
 
@@ -130,7 +115,6 @@ function wishlist(product_id,e) {
       if (data.success) {
         $('#wishlist_count').html(data.total);
       }
-               // location.reload(); 
     }
    })
  }
@@ -164,8 +148,12 @@ function wishlist(product_id,e) {
   //倒计时
   function show_time() {
         $(".djs_p").each(function() {
-            var endtime = $(this).prop("title");
+            var cha = $(this).prop("title");
             var time_start = new Date().getTime(); //设定当前时间
+            var  endtime=time_start+cha*1000;
+            cha-=1;
+            $(this).prop("title",cha);
+            time_start+=1000;
             var time_end = new Date(endtime).getTime(); //设定目标时间
             var time_distance = time_end - time_start;
             var timer;

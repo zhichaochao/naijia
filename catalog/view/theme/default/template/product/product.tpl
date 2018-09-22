@@ -13,7 +13,7 @@
         <div class="img_lf">
           <div class="big_lf clearfix">
           <?php if($hot==2){?>
-            <div class="top time" title="<?php echo $ends_date; ?>">
+            <div class="top time" title="<?php echo $ends_dates; ?>" >
               <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
               <p>Sales end in 
                 <span class="int_day">00</span>:
@@ -52,11 +52,11 @@
                 <?php echo $meta_description;?>
               </p>
               <?php if($hot==2){?>
-                <div class="price" >
+                <div class="price" id="price" >
                    <?php if(isset($special)){ ?>
                   <em class="em1"><?=$min_price?> -<?=$max_price?></em>
                   <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>
-                    <span class="red_span"><?=$percent;?>%OFF</span>
+                    <span  class="red_span"><?=$percent;?>%OFF</span>
                   <?php }else{ ?>
                   <em id="money" class="em2" ><?=$min_price?> -<?=$max_price?></em>
                   <!-- <span class="red_span">44%OFF</span> -->
@@ -96,6 +96,7 @@
                 <!-- Swiper -->
                 <div class="swiper-container pro_det_ul2 slide_ul clearfix">
                     <div class="swiper-wrapper">
+                    <div class="swiper-slide active"><a href="<?php echo $selfhref; ?>"> <img src="<?php echo $selfimage; ?>" alt="" /></a></div>
                   <?php foreach ($products_related as $related) { ?> 
                         <div class="swiper-slide "><a href="<?php echo $related['href']; ?>"> <img src="<?php echo $related['thumb']; ?>" alt="" /></a></div>
                    <?php } ?>
@@ -385,7 +386,7 @@ window.onload=function(){
         slidesPerView: 3.3,
         spaceBetween: '3%',
       });
-    $(".pro_det_ul2 .swiper-slide").eq(0).addClass("active");
+    // $(".pro_det_ul2 .swiper-slide").eq(0).addClass("active");
     $(".pro_det_ul2 .swiper-slide").click(function(){
       $(this).addClass("active").siblings(".swiper-slide").removeClass("active");
     })
@@ -551,6 +552,7 @@ function changeprice() {
             success: function(json) {
                // alert(json);
                 $('#money').html(json['html']);
+                $('#price').find('.red_span').html(json['percent']+'%OFF');
             }
         });
     }
@@ -584,12 +586,18 @@ function changeprice() {
 }
 
 
+           
 
 //倒计时
   function show_time() {
         $(".time").each(function() {
-            var endtime = $(this).prop("title");
+            var cha = $(this).prop("title");
             var time_start = new Date().getTime(); //设定当前时间
+            var  endtime=time_start+cha*1000;
+            cha-=1;
+           $(this).prop("title",cha);
+            time_start+=1000;
+
             var time_end = new Date(endtime).getTime(); //设定目标时间
             var time_distance = time_end - time_start;
             var timer;

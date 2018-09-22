@@ -55,7 +55,7 @@
                       <?php } ?>
                      </ol>
                   <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
-                <?php if($product['special']) { ?>
+                <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
                   <?php }else{ ?>

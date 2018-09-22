@@ -32,7 +32,7 @@
                       <div class="text">
                         <h1><?php echo $product['name']; ?></h1>
 
-                        <?php if($product['special']) { ?>
+                        <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
                   <?php }else{ ?>

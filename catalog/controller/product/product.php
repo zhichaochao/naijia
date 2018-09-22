@@ -13,32 +13,9 @@ class ControllerProductProduct extends Controller {
 
         $this->load->model('catalog/category');
         $this->load->model('catalog/review');
-        //引入样式
 
-        //分类面包屑
         $this->load->model('catalog/product');
-        //$category_list = $this->model_catalog_product->getCatalogName($this->request->get['product_id']);
-        //新
-        // foreach($category_list as $k => $row){
-        //     if( $k==0 && !empty($category_list[$k]) ){       //父类
-        //         $data['breadcrumbs'][] = array(
-        //             'text' => $row['name'],
-        //             'href' => $this->url->link('product/category', 'path='.$row['category_id'])
-        //         );
-        //     }
-        //     if( $k==1 && !empty($category_list[$k]) ){       //子类
-        //         $data['breadcrumbs'][] = array(
-        //             'text' => $row['name'],
-        //             'href' => $this->url->link('product/category', 'path='.$row['parent_id'].'_'.$row['category_id'])
-        //         );
-        //     }
-        //     if( $k==2 && !empty($category_list[$k]) ){       //子类的子类(第三级分类)
-        //         $data['breadcrumbs'][] = array(
-        //             'text' => $row['name'],
-        //             'href' => $this->url->link('product/category', 'path='.$category_list[$k-2]['category_id'].'_'.$row['parent_id'].'_'.$row['category_id'])
-        //         );
-        //     }
-        // }
+
         $this->load->model('catalog/manufacturer');
 
         if (isset($this->request->get['manufacturer_id'])) {
@@ -130,24 +107,7 @@ class ControllerProductProduct extends Controller {
         $this->load->model('catalog/product');
 
         $product_info = $this->model_catalog_product->getProduct($product_id);
-        // print_r($product_info);exit;
-        // $sp= $this->model_catalog_product->getProductSpecialPrice($product_id);
-        
-        // print_r($sp);exit();
-        // if (!$sp) {
-        //     $sp= $this->model_catalog_product->getProductMinPrice($product_id);
-        // }
-        //  if(isset($this->request->get['share'])&&$this->request->get['share']!='{}'){
-        //     $share = trim($this->request->get['share'],'{}');
-        // }else{
-        //     $share=trim($sp['share'],'{}');
-        // }
-        //     $shareoption = [];
-        //     foreach (explode(',',$share) as $item){
-        //         $temp = explode(':',$item);
-        //         $shareoption[preg_replace('/\D/s', '', $temp[0])] = preg_replace('/\D/s', '', $temp[1]);
-        //     }
-        //     $data['shareoption'] = $shareoption;   
+ 
         if ($product_info) {
             $url = '';
 
@@ -206,7 +166,12 @@ class ControllerProductProduct extends Controller {
           
 
             $data['heading_title'] = $product_info['name'];
-            $data['ends_date'] = $product_info['ends_date'];
+            $this->load->model('tool/image');
+            if ($product_info['image']) {
+                    $data['selfimage'] = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+                } 
+            $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id'].'&hot='.$this->request->get['hot']);
+            // print_r($data['selfhref']);exit;
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
@@ -214,31 +179,26 @@ class ControllerProductProduct extends Controller {
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
-//折扣前最大 小
+            //折扣前最大 小
             $data['min_price'] = $this->currency->format($product_info['min_price']['price'], $this->session->data['currency']);
             $data['max_price'] = $this->currency->format($product_info['max_price']['price'], $this->session->data['currency']);
-    // 折扣后价格最大 最小
-    // 
-    if ($product_info['special']) {
-         if($product_info['special']['price']>0){
-                $data['min_prices'] = $this->currency->format($product_info['min_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
-                $data['max_prices'] = $this->currency->format($product_info['max_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
+            // 折扣后价格最大 最小
 
-            }else{
-                $data['min_prices'] =$this->currency->format($product_info['min_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
-                $data['max_prices'] = $this->currency->format($product_info['max_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
-
-            }
-              $data['percent'] = $product_info['special']['percent'];
-
-    }else{
-        $data['min_prices'] =  '';
-          $data['max_prices'] = '';
-            $data['percent']='';
-    }
-           
-  
-// print_r($data['percent']);exit;
+            if ($product_info['special']) {
+                 if($product_info['special']['percent']>0){
+                        $data['min_prices'] =$this->currency->format($product_info['min_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
+                        $data['max_prices'] = $this->currency->format($product_info['max_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
+                               $data['percent'] = $product_info['special']['percent'];
+                    }else{
+                        $data['min_prices'] = $this->currency->format($product_info['min_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
+                        $data['max_prices'] = $this->currency->format($product_info['max_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
+                               $data['percent'] =round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
+                    }              
+                }else{
+                    $data['min_prices'] =  '';
+                      $data['max_prices'] = '';
+                        $data['percent']='';
+                } 
             $resultsone = $this->model_catalog_review->getReviewsByProductIdone($this->request->get['product_id'],$limit=1);
             // print_r($resultsone);exit;
             $this->load->model('tool/image');
@@ -262,8 +222,6 @@ class ControllerProductProduct extends Controller {
                     'images'        => $review_img
                 );
             }
-            // print_r($data['reviews']);exit;
-        // }
             $data['text_select'] = $this->language->get('text_select');
             $data['text_manufacturer'] = $this->language->get('text_manufacturer');
             $data['text_model'] = $this->language->get('text_model');
@@ -548,11 +506,10 @@ class ControllerProductProduct extends Controller {
 
             //首页推荐商品
            // print_r($this->request->get['hot']);exit;
-                $filter_data = array(
-                'hot' => $this->request->get['hot']
-            );
+            
                 // print_r($filter_data);exit;
             $recommend_products = $this->model_catalog_product->getRecommendProducts(8);
+            // print_r($recommend_products);exit;
             foreach ($recommend_products as $result) {
                 // print_r($result);exit;
                 if ($result['image']) {
@@ -586,26 +543,42 @@ class ControllerProductProduct extends Controller {
                 $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
                 $res = $this->model_catalog_product->getProductImages($result['product_id']); 
 
+                if(!empty($result['special'])){
+                    $specials=$result['special']['special'];
+                    if ($result['special']['percent']>0) {
+                        $percents=$result['special']['percent'];
+                    }else{
+                        $percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+                    }
+                    
+                    $date_ends=strtotime($result['special']['date_end'])-time();
+                }else{
+                    $specials='';
+                    $percents='';
+                    $date_ends='';
+                }
+
                 $data['products_like'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
                     'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
                     'hot'     => $this->request->get['hot'],
-                    'ends_date'   => $result['ends_date'],
+                    'date_end'    => $date_ends,
                     //'name'        => $result['name'],
                     'max_name'    => $result['name'],
+                    'percent'    => $percents,
                     'reviews'     => $result['reviews'],
                     'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
                     'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
-                    'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
-                    'special'     => $result['special']>0? $this->currency->format($result['special'],$this->session->data['currency']) : '',
+                    'price'       => $this->currency->format($result['price']['price'],$this->session->data['currency']),
+                    'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
                     'tax'         => $tax,
                     'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
                     'rating'      => $result['rating'],
                     'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$this->request->get['hot'])
                 );
 
-            }                
+            }               
             $data['recurrings'] = $this->model_catalog_product->getProfiles($this->request->get['product_id']);
 
             $this->model_catalog_product->updateViewed($this->request->get['product_id']);
@@ -644,20 +617,7 @@ class ControllerProductProduct extends Controller {
             // 
             // 
             $productIdString = mb_substr($productIdString,0,-1,'utf-8');
-            //评论总个数
-//             $data['reviewstotal'] = $this->model_catalog_review->getTotalReviewsByProductId($productIdString);
-// // print_r($data['reviewstotal']);exit;
-//             //该产品的评论总分数
-//             // $data['reviewsrating'] = $this->model_catalog_review->getRatingByProductId($productIdString);
 
-//             //该产品的评论平均分(四舍五入,保留一位小数)
-//             //星星
-//             $data['reviewsratingStar'] = $data['reviewstotal'] > 0 ? round(($data['reviewsrating'] / $data['reviewstotal'])*20, 1) : 0;
-//             //数字
-//             $data['reviewsratingNum'] = $data['reviewstotal'] > 0 ? round($data['reviewsrating'] / $data['reviewstotal'], 1) : 0;
-            //产品的评论Reviews,end
-
-            //产品评论的提交
             if($this->request->server['REQUEST_METHOD'] == 'POST' && $this->write()){
                 $data['error'] = $this->error;
             }
@@ -672,10 +632,14 @@ class ControllerProductProduct extends Controller {
             //询盘请求的url  end
 
             $data['email'] = $this->config->get('config_email');
-       // print_r($this->customer);exit();
             //购物车链接
             $data['shopping_cart'] = $this->url->link('checkout/cart');
-
+            if($product_info['special']){
+                $data['ends_dates'] = strtotime($product_info['special']['date_end'])-time();
+            }else{
+                $data['ends_dates']="";
+            }
+              
             $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
@@ -1241,15 +1205,19 @@ class ControllerProductProduct extends Controller {
         $price=  $this->model_catalog_product->getProductPricebyOptions($product_id,$options);
        // print_r($price);exit;
         $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
+
+       
          
       $json=$price;
+       $json['percent']=round($price['special']/$price['price'],2)*100;
      if ($price['special']>0) {
           $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
-           $json['html']= '<span>'.$price_s.'</span><i>'. $price_c.'</i>';
+           $json['html']= '<span>'.$price_s.'</span><del>'. $price_c.'</del>';
       }else{
             $json['html']= '<span>'. $price_c.'</span>';  
         }
         // 
+        // print_r($json);exit;
 
      $this->response->addHeader('Content-Type: application/json');
      $this->response->setOutput(json_encode($json));

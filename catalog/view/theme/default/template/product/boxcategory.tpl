@@ -65,7 +65,7 @@
                   <p class="yd_textp">
                     <?php echo $product['description']; ?>
                   </p>                  
-                  <?php if($product['special']) { ?>
+                  <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
                   <?php }else{ ?>
