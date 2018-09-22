@@ -54,20 +54,20 @@
               <?php if($hot==2){?>
                 <div class="price" >
                    <?php if(isset($special)){ ?>
-                  <em class="em1">₦100k - ₦120K</em>
-                  <em id="money" class="em2"><?=$special?>- ₦66k</em>
-                    <span class="red_span">44%OFF</span>
+                  <em class="em1"><?=$min_price?> -<?=$max_price?></em>
+                  <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>
+                    <span class="red_span"><?=$percent;?>%OFF</span>
                   <?php }else{ ?>
-                  <em id="money" class="em2" ><?=$price?>- ₦66k</em>
-                  <span class="red_span">44%OFF</span>
+                  <em id="money" class="em2" ><?=$min_price?> -<?=$max_price?></em>
+                  <!-- <span class="red_span">44%OFF</span> -->
                   <?php } ?>
                 </div>
               <?php }else{?>
                   <div class="price" >
                 <?php if(isset($special)){ ?>
-                  <em id="money" class="em2"><?=$special?>- ₦66k</em>
+                  <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>
                   <?php }else{ ?>
-                  <em id="money" class="em2"><?=$price?>- ₦66k</em>
+                  <em id="money" class="em2"><?=$min_price?> -<?=$max_price?></em>
                    <?php } ?>
                   </div>
               <?php }?>    

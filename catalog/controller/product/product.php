@@ -214,7 +214,31 @@ class ControllerProductProduct extends Controller {
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
-// print_r($data['hot']);exit;
+//折扣前最大 小
+            $data['min_price'] = $this->currency->format($product_info['min_price']['price'], $this->session->data['currency']);
+            $data['max_price'] = $this->currency->format($product_info['max_price']['price'], $this->session->data['currency']);
+    // 折扣后价格最大 最小
+    // 
+    if ($product_info['special']) {
+         if($product_info['special']['price']>0){
+                $data['min_prices'] = $this->currency->format($product_info['min_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
+                $data['max_prices'] = $this->currency->format($product_info['max_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
+
+            }else{
+                $data['min_prices'] =$this->currency->format($product_info['min_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
+                $data['max_prices'] = $this->currency->format($product_info['max_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
+
+            }
+              $data['percent'] = $product_info['special']['percent'];
+
+    }else{
+        $data['min_prices'] =  '';
+          $data['max_prices'] = '';
+            $data['percent']='';
+    }
+           
+  
+// print_r($data['percent']);exit;
             $resultsone = $this->model_catalog_review->getReviewsByProductIdone($this->request->get['product_id'],$limit=1);
             // print_r($resultsone);exit;
             $this->load->model('tool/image');
@@ -384,12 +408,12 @@ class ControllerProductProduct extends Controller {
             // 
             // 
             // 
-            // print_r($product_info);exit();
+            // print_r($product_info['price']['price']);exit();
 
         
-            $data['price']=$this->currency->format($product_info['price'], $this->session->data['currency']);
-            if ($product_info['special']>0) {
-                 $data['special']=$this->currency->format($product_info['special'], $this->session->data['currency']);
+            $data['price']=$this->currency->format($product_info['price']['price'], $this->session->data['currency']);
+            if ($product_info['special']) {
+                 $data['special']=$this->currency->format($product_info['special']['special'], $this->session->data['currency']);
             }
 
             $data['isLogged'] = $this->customer->isLogged();

@@ -368,7 +368,12 @@ class ControllerCatalogProduct extends Controller {
 
 			foreach ($product_specials  as $product_special) {
 				if (($product_special['date_start'] == '0000-00-00' || strtotime($product_special['date_start']) < time()) && ($product_special['date_end'] == '0000-00-00' || strtotime($product_special['date_end']) > time())) {
-					$special = $product_special['price'];
+
+				if ( $product_special['percent']>0) {
+					$special=$result['price']*$product_special['percent']/100;
+				}else{
+					$special=$result['price']-$product_special['price'];
+				}
 
 					break;
 				}
@@ -381,6 +386,7 @@ class ControllerCatalogProduct extends Controller {
 				'model'      => $result['model'],
 				'price'      => $result['price'],
 				'special'    => $special,
+				// 'percent'=$special/ $result['price']*
 				'quantity'   => $result['quantity'],
 				'status'     => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'edit'       => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $result['product_id'] . $url, true)

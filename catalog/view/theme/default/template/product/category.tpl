@@ -15,10 +15,6 @@
           <div class="sortby">
             <p>Sort by : <img src="catalog/view/theme/default/img/png/icon_26.png  " alt="" /></p>
             <ul class="clearfix">
-             <!--  <li><a href="###">Best selling</a></li>
-              <li><a href="###">Newest</a></li>
-              <li><a href="###">Lowest price</a></li>
-              <li><a href="###">Highest price</a></li> -->
               <li><a href="<?php echo $sort_sort_rating?>">Best selling</a></li>
             <li><a href="<?php echo $sort_sort_add?>">Newest</a></li>
             <li><a href="<?php echo $sort_sort_order?>">Lowest price</a></li>
@@ -78,74 +74,6 @@
               ></div>
             </li>
           <?php } ?>
-           
-           
-         
-        
-
-         <!--    <li>
-              <a href="###">
-                <div class="pic_img">
-                  <img class="top_img lazyLoad" srcs="catalog/view/theme/default/img/pro_1.jpg" data-src="catalog/view/theme/default/img/pro_2.jpg" alt="" class="top_img" />
-                  <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/05 10:06:00">SALE ENDS 
-                      <span class="int_day">00</span>:
-                      <span class="int_hour">00</span>:
-                      <span class="int_minute">00</span>:
-                      <span class="int_second">00</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="text clearfix">
-                  <h2>FUNMI HAIR WIG </h2>
-                  <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class=""></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ol>
-                  <p class="pl_p">9999 reviews</p>
-                  <span class="price">₦26K <em>₦46K </em></span>
-                  <span class="red_span">-56%</span>
-                </div>
-                <em class="red_em active">HOT<br />SALE</em>
-              </a>
-              <div class="sc"></div>
-            </li>
-            <li>
-              <a href="###">
-                <div class="pic_img">
-                  <img class="top_img lazyLoad" srcs="catalog/view/theme/default/img/pro_1.jpg" data-src="catalog/view/theme/default/img/pro_2.jpg" alt="" class="top_img" />
-                  <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/01 10:06:00">SALE ENDS 
-                      <span class="int_day">00</span>:
-                      <span class="int_hour">00</span>:
-                      <span class="int_minute">00</span>:
-                      <span class="int_second">00</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="text clearfix">
-                  <h2>FUNMI HAIR WIG </h2>
-                  <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li class=""></li>
-                    <li class=""></li>
-                    <li class=""></li>
-                  </ol>
-                  <p class="pl_p">9999 reviews</p>
-                  <span class="price">₦26K <em>₦46K </em></span>
-                  <span class="red_span">-56%</span>
-                </div>
-                <em class="red_em">HOT<br />SALE</em>
-              </a>
-              <div class="sc active"></div>
-            </li> -->
-
-           
-           
           </ul>
 
           <div class="fy_div">
