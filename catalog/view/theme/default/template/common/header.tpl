@@ -35,12 +35,15 @@
             
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
+              <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
+                <a href="<?php echo $hothref;?>">Hot Sales</a>
+              </li>
         <?php foreach($categories as $key => $category) { ?>
         <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
                 <a href="<?php echo $category['href'];?>"><?php echo $category['name'];?></a>
                 <?php if( $category['children']){ ?>
                 <ol class="nav_ol">
-                   <?php foreach($category['child'] as $key => $child) { ?>
+                   <?php foreach($category['children'] as $k => $child) { ?>
                   <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
                   <?php } ?>
                 </ol>
@@ -54,7 +57,7 @@
               <li >
                 <a href="###">Hair Care</a>
                 <ol class="nav_ol">
-                  <li><a href="###">Accessories</a></li>
+                  <li><a href="<?php echo $acchref;?>">Accessories</a></li>
                   <li><a href="###">Blog</a></li>
                 </ol>
               </li>
@@ -87,43 +90,45 @@
         </div>
       </div>
       <!-- pc导航结束 -->
-
-      <div class="yd_nav">
+        <div class="yd_nav">
         <ul class="yd_navul">
           <li class="kg_li"></li>
-          <li class="logo_li"><a href="###"></a></li>
+          <li class="logo_li"><a href="<?=$home;?>"></a></li>
           <li class="ss_li"></li>
-          <li class="mn_li">
-            <p class="money">
-              <a class="active" href="###">$ USD</a>
-              <em>/</em>
-              <a href="###">₦ NGN</a>
-            </p>
-          </li>
+           <?=$mcurrency;?>
           <li class="gw_li"></li>
         </ul>
       </div>
+
+    
     </div>
     <!--yd导航-->
     <div class="yd_nav_modal">
       <div class="text">
         <div class="top_nav">
           <ul>
-            <li><a href="###">Home <i></i></a></li>
-            <li><a href="###">Hot Sales <i></i></a></li>
-            <li>
-              <p class="nav_p active">Wigs <i></i></p>
-              <ol class="yd_nav_ol" style="display: block;">
-                <li><a href="###">Luxury Hand-Make Wigs</a></li>
-                <li><a href="###">Lace Wig <span>Stock In Lagos</span></a></li>
-                <li><a href="###">Lace Closure & Frontal</a></li>
-              </ol> 
-            </li>
-            <li><a href="###">Weaves Box <i></i></a></li>
+            <li><a href="<?=$home;?>">Home <i></i></a></li>
+            <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
+            <?php foreach($categories as $key => $category) { ?>
+            <li >
+               <p class="nav_p active"><?php echo $category['name'];?> <i></i></p>
+                    
+                    <?php if( $category['children']){ ?>
+                 <ol class="yd_nav_ol" style="display: block;">
+                       <?php foreach($category['children'] as $k => $child) { ?>
+                      <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
+                      <?php } ?>
+                    </ol>
+                    <?php } ?>
+                  </li>
+
+            <?php } ?>
+
+           
             <li>
               <p class="nav_p">Hair Care<i></i></p>
               <ol class="yd_nav_ol">
-                <li><a href="###">Accessories</a></li>
+                <li><a href="<?php echo $acchref;?>">Accessories</a></li>
                 <li><a href="###">Blogs</a></li>
               </ol> 
             </li>

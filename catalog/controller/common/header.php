@@ -177,7 +177,7 @@ class ControllerCommonHeader extends Controller {
 		// print_r($categories);exit();
 
 		foreach ($categories as $category) {
-			if ($category['top']) {
+			if ($category['top']&&$category['category_id']!=67) {
 				// Level 2
 				$children_data = array();
 
@@ -208,8 +208,11 @@ class ControllerCommonHeader extends Controller {
 		}
 		// print_r(	$this->request->get['path']);;exit();
 
+		$data['hothref'] = $this->url->link('product/hotcategory');
+		$data['acchref'] = $this->url->link('product/acccategory');
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
+		$data['mcurrency'] = $this->load->controller('common/mcurrency');
 		$data['search'] = $this->load->controller('common/search');
 		$data['cart'] = $this->load->controller('common/cart');
 
