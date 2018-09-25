@@ -183,33 +183,39 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-2 control-label"><span style="color:red;">仅Weaves Box模板可用</span>PC海报2</label>
+                <label class="col-sm-2 control-label"><span style="color:red;">以下仅Weaves Box模板可用</span>PC海报2</label>
                 <div class="col-sm-10"><a href="" id="thumb-image3" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb2; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
                   <input type="hidden" name="image2" value="<?php echo $image2; ?>" id="input-image2" />
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="col-sm-2 control-label"><span style="color:red;">仅Weaves Box模板可用</span>移动海报2</label>
+                <label class="col-sm-2 control-label">移动海报2</label>
                 <div class="col-sm-10"><a href="" id="thumb-image4" data-toggle="image" class="img-thumbnail"><img src="<?php echo $ydthumb2; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
                   <input type="hidden" name="ydimage2" value="<?php echo $ydimage2; ?>" id="input-ydimage2" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">Weaves Box和Basic Wig模板可用</span>视频</label>
+                <label class="col-sm-2 control-label" for="input-sort-order">视频</label>
                 <div class="col-sm-10">
                   <input type="text" name="video" value="<?php echo $video; ?>" placeholder="" id="input-sort-order" class="form-control" />
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">仅Basic Wig模板可用</span>【4楼】视频</label>
+                <label class="col-sm-2 control-label" for="input-sort-order"><span style="color:red;">以下仅Basic Wig模板可用</span>【1楼】视频</label>
+                <div class="col-sm-10">
+                  <input type="text" name="video2" value="<?php echo $video2; ?>" placeholder="" id="input-sort-order" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-sort-order">【4楼】视频</label>
                 <div class="col-sm-10">
                   <input type="text" name="video1" value="<?php echo $video1; ?>" placeholder="" id="input-sort-order" class="form-control" />
                 </div>
               </div>
 
               <div class="form-group">
-                <label class="col-sm-2 control-label"><span style="color:red;">以下照片仅Basic Wig模板可用</span>Banner1</label>
+                <label class="col-sm-2 control-label">Banner1</label>
                 <div class="col-sm-10"><a href="" id="thumb-image5" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb3; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
                   <input type="hidden" name="banner1" value="<?php echo $banner1; ?>" id="input-banner1" />
                 </div>

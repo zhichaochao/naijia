@@ -16,7 +16,7 @@
             <img class="lazyLoad" src="" srcs="<?php echo $banner1; ?>"/>
             <div class="top_video">
               <div class="bf_img"></div>
-              <video id="top_video" src="<?php echo $video; ?>" width="100%"></video>           
+              <video id="top_video" src="<?php echo $video2; ?>" width="100%"></video>           
             </div>
             
             <!-- Swiper -->
