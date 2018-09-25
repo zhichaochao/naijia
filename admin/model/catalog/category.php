@@ -1,7 +1,7 @@
 <?php
 class ModelCatalogCategory extends Model {
 	public function addCategory($data) {
-		$this->db->query("INSERT INTO " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', hot = '" . (int)$data['hot'] . "', video = '" . $data['video'] . "', video1 = '" . $data['video1'] . "', date_modified = NOW(), date_added = NOW()");
+		$this->db->query("INSERT INTO " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', hot = '" . (int)$data['hot'] . "', video = '" . $data['video'] . "', video1 = '" . $data['video1'] . "', video2 = '" . $data['video2'] . "', date_modified = NOW(), date_added = NOW()");
 
 		$category_id = $this->db->getLastId();
 
@@ -55,7 +55,7 @@ class ModelCatalogCategory extends Model {
 	}
 
 	public function editCategory($category_id, $data) {
-		$this->db->query("UPDATE " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', hot = '" . (int)$data['hot'] . "', video = '" . $data['video'] . "', video1 = '" . $data['video1'] . "', date_modified = NOW() WHERE category_id = '" . (int)$category_id . "'");
+		$this->db->query("UPDATE " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "', status = '" . (int)$data['status'] . "', hot = '" . (int)$data['hot'] . "', video = '" . $data['video'] . "', video1 = '" . $data['video1'] . "', video2 = '" . $data['video2'] . "', date_modified = NOW() WHERE category_id = '" . (int)$category_id . "'");
 
 		if (isset($data['image'])) {
 			$this->db->query("UPDATE " . DB_PREFIX . "category SET image = '" . $this->db->escape($data['image']) . "', image1 = '" . $this->db->escape($data['image1']) . "', ydimage1 = '" . $this->db->escape($data['ydimage1']) . "', image2 = '" . $this->db->escape($data['image2']) . "', ydimage2 = '" . $this->db->escape($data['ydimage2']) . "', banner1 = '" . $this->db->escape($data['banner1']) . "', ydbanner1 = '" . $this->db->escape($data['ydbanner1']) . "', banner2 = '" . $this->db->escape($data['banner2']) . "', ydbanner2 = '" . $this->db->escape($data['ydbanner2']) . "', banner3 = '" . $this->db->escape($data['banner3']) . "', ydbanner3 = '" . $this->db->escape($data['ydbanner3']) . "' WHERE category_id = '" . (int)$category_id . "'");

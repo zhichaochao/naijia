@@ -702,6 +702,14 @@ class ControllerCatalogCategory extends Controller {
 			$data['video1'] ='xxx.mp4';
 		}
 
+		if (isset($this->request->post['video2'])) {
+			$data['video2'] = $this->request->post['video2'];
+		} elseif (!empty($category_info)) {
+			$data['video2'] = $category_info['video2'];
+		} else {
+			$data['video2'] ='xxx.mp4';
+		}
+
 		if (isset($this->request->post['status'])) {
 			$data['status'] = $this->request->post['status'];
 		} elseif (!empty($category_info)) {

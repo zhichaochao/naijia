@@ -618,3 +618,9 @@
 2018-09-22 9:10:31 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 211
 2018-09-25 2:53:42 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 174
 2018-09-25 2:53:46 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 174
+2018-09-25 3:13:49 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-09-25 3:13:54 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-25 3:14:07 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-09-25 5:49:50 - PHP Notice:  Undefined index: video2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 708
+2018-09-25 5:50:56 - PHP Notice:  Undefined index: video2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 708
+2018-09-25 5:51:12 - PHP Notice:  Undefined index: video2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\catalog\category.php on line 708
