@@ -35,19 +35,21 @@
             
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
-
-              <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>><a href="<?php echo $hotcategory ?>">Hot Sales</a></li>
-
-              <li <?=(strpos($class,'category') !==false&&strpos($class,'hotcategory') ==false)?'class="active"':'';?>>
-                <a href="<?php echo $category ?>">Wigs</a>
+        <?php foreach($categories as $key => $category) { ?>
+        <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
+                <a href="<?php echo $category['href'];?>"><?php echo $category['name'];?></a>
+                <?php if( $category['children']){ ?>
                 <ol class="nav_ol">
-                  <li><a href="###">Luxury Hand-Make Wigs</a></li>
-                  <li><a href="###">Basic Lace Wig</a></li>
-                  <li><a href="###">Lace Closure & Frontal</a></li>
+                   <?php foreach($category['child'] as $key => $child) { ?>
+                  <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
+                  <?php } ?>
                 </ol>
+                <?php } ?>
               </li>
 
-              <li <?=strpos($class,'boxcategory') !==false?'class="active"':'';?>><a href="<?php echo $boxcategory ?>">Weaves Box</a></li>
+        <?php } ?>
+
+
 
               <li >
                 <a href="###">Hair Care</a>

@@ -174,6 +174,7 @@ class ControllerCommonHeader extends Controller {
 		$data['categories'] = array();
 
 		$categories = $this->model_catalog_category->getCategories(0);
+		// print_r($categories);exit();
 
 		foreach ($categories as $category) {
 			if ($category['top']) {
@@ -189,6 +190,7 @@ class ControllerCommonHeader extends Controller {
 					);
 
 					$children_data[] = array(
+					
 						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
@@ -196,6 +198,7 @@ class ControllerCommonHeader extends Controller {
 
 				// Level 1
 				$data['categories'][] = array(
+						'category_id'=>$category['category_id'],
 					'name'     => $category['name'],
 					'children' => $children_data,
 					'column'   => $category['column'] ? $category['column'] : 1,
@@ -203,6 +206,7 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+		// print_r(	$this->request->get['path']);;exit();
 
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
