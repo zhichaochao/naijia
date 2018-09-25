@@ -616,3 +616,5 @@
 2018-09-22 8:56:45 - PHP Notice:  Undefined index: date_end in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 700
 2018-09-22 9:10:29 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 211
 2018-09-22 9:10:31 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 211
+2018-09-25 2:53:42 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 174
+2018-09-25 2:53:46 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 174

@@ -261,7 +261,7 @@ class ControllerProductCategory extends Controller {
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$category_info['hot']),
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 					'wishlist'	  =>$wishlist
 				);
 			}

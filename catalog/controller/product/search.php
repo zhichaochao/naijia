@@ -260,12 +260,13 @@ class ControllerProductSearch extends Controller {
 				}
 				$wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
 			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
+ 				$producthot = $this->model_catalog_product->getProcatehot($result['product_id']);
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-					'hot'	  => $result['hot'],
+					'hot'	  => $producthot['hot'],
 					'ends_date'	  => $result['ends_date'],
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
@@ -280,7 +281,7 @@ class ControllerProductSearch extends Controller {
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$result['hot']),
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 					'wishlist'	  =>$wishlist
 				);
 

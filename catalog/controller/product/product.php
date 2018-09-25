@@ -107,7 +107,8 @@ class ControllerProductProduct extends Controller {
         $this->load->model('catalog/product');
 
         $product_info = $this->model_catalog_product->getProduct($product_id);
- 
+        $producthot = $this->model_catalog_product->getProcatehot($product_id);
+
         if ($product_info) {
             $url = '';
 
@@ -170,12 +171,13 @@ class ControllerProductProduct extends Controller {
             if ($product_info['image']) {
                     $data['selfimage'] = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
                 } 
-            $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id'].'&hot='.$this->request->get['hot']);
+            $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id']);
             // print_r($data['selfhref']);exit;
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
-            $data['hot'] = $this->request->get['hot'];
+            $data['hot'] = $producthot['hot'];
+
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
@@ -562,7 +564,7 @@ class ControllerProductProduct extends Controller {
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
                     'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-                    'hot'     => $this->request->get['hot'],
+                    'hot'     => $producthot['hot'],
                     'date_end'    => $date_ends,
                     //'name'        => $result['name'],
                     'max_name'    => $result['name'],
@@ -575,7 +577,7 @@ class ControllerProductProduct extends Controller {
                     'tax'         => $tax,
                     'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
                     'rating'      => $result['rating'],
-                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$this->request->get['hot'])
+                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
                 );
 
             }               
@@ -594,7 +596,7 @@ class ControllerProductProduct extends Controller {
                 $data['products_related'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
-                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'].'&hot='.$this->request->get['hot'])
+                    'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
                 );
                 // print_r($data['products_related']);exit;
             }
@@ -1212,7 +1214,7 @@ class ControllerProductProduct extends Controller {
        $json['percent']=round($price['special']/$price['price'],2)*100;
      if ($price['special']>0) {
           $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
-           $json['html']= '<span>'.$price_s.'</span><del>'. $price_c.'</del>';
+           $json['html']= '<span>'.$price_s.'</span><del style="color:#999;font-size:18px;font-weight:normal;">'. $price_c.'</del>';
       }else{
             $json['html']= '<span>'. $price_c.'</span>';  
         }

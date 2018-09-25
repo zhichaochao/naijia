@@ -86,7 +86,7 @@
                 <label class="col-sm-2 control-label" for="input-hot"><span style="color: red;">*</span>所属模板</label>
                 <div class="col-sm-10">
                   <select name="hot" id="input-hot" class="form-control">
-                    <option value="" <?=$hot==0 ?'selected':'';?>></option>
+                    <option value="" <?=$hot==0 ?'selected':'';?>>Default</option>
                     <option value="1" <?=$hot==1 ?'selected':'';?>>Luxury Hand-Make Wigs</option>
                     <option value="2" <?=$hot==2 ?'selected':'';?>>Hot Sales</option>
                     <option value="3" <?=$hot==3 ?'selected':'';?>>Weaves Box</option>
