@@ -38,13 +38,13 @@ class ControllerAccountLogin extends Controller {
 				}
 
 				//$this->response->redirect($this->url->link('account/account', '', true));
-				$this->response->redirect($this->url->link('common/home', '', true));
+				$this->response->redirect($this->url->link('common/dashboard', '', true));
 			}			
 		}
 
 		if ($this->customer->isLogged()) {
 			//$this->response->redirect($this->url->link('account/account', '', true));
-			$this->response->redirect($this->url->link('common/home', '', true));
+			$this->response->redirect($this->url->link('common/dashboard', '', true));
 		}
 
 		$this->load->language('account/login');

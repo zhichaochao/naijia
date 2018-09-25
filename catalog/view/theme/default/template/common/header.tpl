@@ -67,7 +67,7 @@
             
             <ol class="img_ol">
               <li class="dl_li">
-                <a href="<?php echo $login?>"></a>
+                <a href="<?php echo $login_li?>"></a>
               </li>
               <li class="sc_li">
                 <a href="<?=$wishlist;?>"><span id='wishlist_count'><?php echo $text_wishlist; ?></span></a>
