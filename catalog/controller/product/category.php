@@ -134,6 +134,7 @@ class ControllerProductCategory extends Controller {
 			$data['ydimage2']=HTTP_SERVER.'image/'.$category_info['ydimage2'];
 			$data['video']=HTTP_SERVER.'image/video/home/'.$category_info['video'];
 			$data['video1']=HTTP_SERVER.'image/video/home/'.$category_info['video1'];
+			$data['video2']=HTTP_SERVER.'image/video/home/'.$category_info['video2'];
 
 			$data['banner1']=HTTP_SERVER.'image/'.$category_info['banner1'];
 			$data['ydbanner1']=HTTP_SERVER.'image/'.$category_info['ydbanner1'];

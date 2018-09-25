@@ -45,7 +45,9 @@
           </div>
         </div>
         <div class="text_rf">
-          <div class="big_rf clearfix">
+          <div class="big_rf clearfix" id="product">
+          
+          <input type="hidden" name="product_id" value="<?=$product_id?>">
             <div class="top">
                 <h1><?php echo $heading_title;?></h1>
               <p class="p1">
@@ -78,7 +80,7 @@
                 <div class="number">
                   <span class="bt_span">
                     <p class="quantity">Quantitysss :</p>
-                    <input type="text" class="num_in" value="1" readonly="readonly" />
+                    <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
                     <div class="num_rf">
                       <em class="add"><i></i></em>
                       <em class="sub"><i></i></em>
