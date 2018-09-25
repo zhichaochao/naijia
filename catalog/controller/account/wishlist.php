@@ -89,7 +89,7 @@ $url = '';
 			$product_info = $this->model_catalog_product->getProduct($result['product_id']);
 			// 
 			$product_infohot= $this->model_catalog_product->getProcatehot($result['product_id']);
-			// print_r($product_infohot);exit;
+			// print_r($product_info);exit;
 			$res = $this->model_catalog_product->getProductImages($result['product_id']); 
 			if ($product_info) {
 				if ($product_info['image']) {
@@ -118,6 +118,22 @@ $url = '';
 					$special = false;
 				}
 
+				if(!empty($product_info['special'])){
+			    	$specials=$product_info['special']['special'];
+			    	if ($product_info['special']['percent']>0) {
+			    		$percents=$product_info['special']['percent'];
+			    	}else{
+			    		$percents=round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
+			    	}
+			    	
+			    	$date_ends=strtotime($product_info['special']['date_end'])-time();
+			    }else{
+			    	$specials='';
+			    	$percents='';
+			    	$date_ends='';
+			    }
+
+
 				$data['products'][] = array(
 					'product_id' => $product_info['product_id'],
 					'thumb'      => $image,
@@ -125,13 +141,16 @@ $url = '';
 					'quantity'	 => $product_info['quantity'],	 
 					'name'       => $product_info['name'],
 					'model'      => $product_info['model'],
+					'date_end'	  => $date_ends,
+					'percent'    => $percents,
 					'stock'      => $stock,
-					'price'      => $price,
-					'special'    => $special,
+					'price'      => $this->currency->format($product_info['price']['price'],$this->session->data['currency']),
+					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'hot'    => $product_infohot['hot'],
 					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
 					'remove'     => $this->url->link('account/wishlist', 'remove=' . $product_info['product_id'])
 				);
+				// print_r($data['products']);exit;
 			} else {
 				$this->model_account_wishlist->deleteWishlist($result['product_id']);
 			}

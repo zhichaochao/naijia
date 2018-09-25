@@ -15,7 +15,7 @@
                 <div class="pic_img">
                   <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" alt="" />
                   <div class="bg_hui">
-                    <p class="djs_p" title="2018/11/05 10:06:00">SALE ENDS 
+                    <p class="djs_p" title="<?php echo $product['date_end']; ?>">SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
@@ -32,7 +32,7 @@
                     <?php } ?>
                  
                   <?php if($product['hot']==2) { ?>
-                  <button class="red_btn">-56%</button>
+                  <button class="red_btn"><?php echo $product['percent']; ?>%</button>
                   <?php } ?>
                 </div>
                 <em class="red_em <?=$product['hot']==2 ?'active':'';?>">HOT<br />SALE</em>
@@ -159,8 +159,12 @@
   //倒计时
   function show_time() {
         $(".djs_p").each(function() {
-            var endtime = $(this).prop("title");
+            var cha = $(this).prop("title");
             var time_start = new Date().getTime(); //设定当前时间
+            var  endtime=time_start+cha*1000;
+            cha-=1;
+            $(this).prop("title",cha);
+            time_start+=1000;
             var time_end = new Date(endtime).getTime(); //设定目标时间
             var time_distance = time_end - time_start;
             var timer;
