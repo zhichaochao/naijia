@@ -54,7 +54,7 @@ class ControllerProductHotcategory extends Controller {
 			'href' => $this->url->link('common/home')
 		);
 
-		if (isset($this->request->get['path'])) {
+		// if (isset($this->request->get['path'])) {
 			$url = '';
 
 			if (isset($this->request->get['sort'])) {
@@ -69,35 +69,37 @@ class ControllerProductHotcategory extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
-			$path = '';
+			// $path = 67;
+			$this->request->get['path']='67';
+			//$parts = explode('_', (string)$this->request->get['path']);
 
-			$parts = explode('_', (string)$this->request->get['path']);
+			//$category_id = (int)array_pop($parts);
+			$category_id=67;
+			// foreach ($parts as $path_id) {
+			// 	if (!$path) {
+			// 		$path = (int)$path_id;
+			// 	} else {
+			// 		$path .= '_' . (int)$path_id;
+			// 	}
 
-			$category_id = (int)array_pop($parts);
-
-			foreach ($parts as $path_id) {
-				if (!$path) {
-					$path = (int)$path_id;
-				} else {
-					$path .= '_' . (int)$path_id;
-				}
-
-				$category_info = $this->model_catalog_category->getCategory($path_id);
+				$category_info = $this->model_catalog_category->getCategory($category_id);
 
 				if ($category_info) {
 					$data['breadcrumbs'][] = array(
 						'text' => $category_info['name'],
-						'href' => $this->url->link('product/product', 'path=' . $path . $url)
+						'href' => $this->url->link('product/product', 'path=' . '67' . $url)
 					);
 				}
-			}
-		} else {
-			$category_id = 0;
-		}
+			// }
+		// } else {
+		// 	$category_id = 0;
+		// }
 
-		$category_info = $this->model_catalog_category->getCategory($category_id);
-// print_r($category_info);exit;
+		$category_info = $this->model_catalog_category->getCategory(67);
+// print_r($this->request->get['path']);exit;
 		$url = '';
+			$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
+			$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
 
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
@@ -244,6 +246,20 @@ class ControllerProductHotcategory extends Controller {
 				// 	  $color_name = $color_arr[0];
 				//    }
 			 //    }
+				if(!empty($result['special'])){
+			    	$specials=$result['special']['special'];
+			    	if ($result['special']['percent']>0) {
+			    		$percents=$result['special']['percent'];
+			    	}else{
+			    		$percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    	}
+			    	
+			    	$date_ends=strtotime($result['special']['date_end'])-time();
+			    }else{
+			    	$specials='';
+			    	$percents='';
+			    	$date_ends='';
+			    }
 
 			    $wishlist= $this->model_catalog_hotproduct->wishlistornot($result['product_id']);
                 $res = $this->model_catalog_hotproduct->getHotproductImages($result['product_id']); 
@@ -258,14 +274,15 @@ class ControllerProductHotcategory extends Controller {
 					//'name'        => $result['name'],
 					'max_name'	  => $result['name'],
 					'hot'	  => $result['hot'],
-					'ends_date'	  => $result['ends_date'],
+					'date_end'	  => $date_ends,
+					'percent'    => $percents,
 					'reviews'	  => $result['reviews'],
 					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
 					//  'color_name'  => $color_name,
                     // 'texture'     => $texture,
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
-					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
-					'special'     => $result['special']>0? $this->currency->format($result['special'],$this->session->data['currency']) : '',
+					'price'       => $this->currency->format($result['price']['price'],$this->session->data['currency']),
+					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
