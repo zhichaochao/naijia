@@ -856,6 +856,13 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['shipping'] = 1;
 		}
+		if (isset($this->request->post['hot'])) {
+			$data['hot'] = $this->request->post['hot'];
+		} elseif (!empty($product_info)) {
+			$data['hot'] = $product_info['hot'];
+		} else {
+			$data['hot'] = 0;
+		}
 
 		if (isset($this->request->post['price'])) {
 			$data['price'] = $this->request->post['price'];

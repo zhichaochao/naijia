@@ -12,7 +12,8 @@
       <div class="contents clearfix">
         <div class="img_lf">
           <div class="big_lf clearfix">
-          <?php if($hot==2){?>
+
+          <?php if($sspecial){?>
             <div class="top time" title="<?php echo $ends_dates; ?>" >
               <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
               <p>Sales end in 
@@ -23,6 +24,7 @@
               </p>
             </div>
           <?php }?>
+
             <!--pc左边大图-->
             <ul class="img_ul clearfix">
             <?php foreach ($images as $k => $image) {?>
@@ -53,7 +55,7 @@
               <p class="p1">
                 <?php echo $meta_description;?>
               </p>
-              <?php if($hot==2){?>
+              <?php if($sspecial){?>
                 <div class="price" id="price" >
                    <?php if(isset($special)){ ?>
                   <em class="em1"><?=$min_price?> -<?=$max_price?></em>

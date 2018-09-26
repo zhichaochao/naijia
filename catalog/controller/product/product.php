@@ -176,7 +176,8 @@ class ControllerProductProduct extends Controller {
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
-            $data['hot'] = $producthot['hot'];
+            // $data['hot'] = $producthot['hot'];
+            
 
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
@@ -559,7 +560,7 @@ class ControllerProductProduct extends Controller {
                     $percents='';
                     $date_ends='';
                 }
-
+                $data['sspecial']=$product_info['special'];
                 $data['products_like'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
