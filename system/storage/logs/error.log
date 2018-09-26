@@ -817,3 +817,9 @@
 2018-09-26 2:40:16 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 229
 2018-09-26 2:44:38 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 229
 2018-09-26 3:00:01 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 229
+2018-09-26 3:13:53 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-09-26 3:14:05 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-26 3:14:18 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-26 3:14:27 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-09-26 3:58:27 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 229
+2018-09-26 8:59:14 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 229

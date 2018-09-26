@@ -81,7 +81,7 @@
               <li class="clearfix number_li">
                 <div class="number">
                   <span class="bt_span">
-                    <p class="quantity">Quantitysss :</p>
+                    <p class="quantity">Quantity :</p>
                     <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
                     <div class="num_rf">
                       <em class="add"><i></i></em>
@@ -154,7 +154,7 @@
                   
                   <div class="label">
                     <span class="span_sub"><em class="sub"></em></span>
-                    <input type="text" class="num_in" value="1" readonly="readonly" />
+                    <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
                     <span class="span_add"><em class="add"></em></span>
                   </div>
                   <p class="ts_p">This hair need  3-7 customize process days</p>
