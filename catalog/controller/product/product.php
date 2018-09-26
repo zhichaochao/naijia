@@ -396,7 +396,7 @@ class ControllerProductProduct extends Controller {
 
             $data['options'] = array();
             $options=$this->model_catalog_product->getProductOptions($this->request->get['product_id']);
-           // var_dump($options);exit;
+           // print_r($options);exit;
             foreach ( $options as $option) {
                 $product_option_value_data = array();
                 foreach ($option['product_option_value'] as $option_value) {
@@ -411,6 +411,7 @@ class ControllerProductProduct extends Controller {
                             'product_option_value_id' => $option_value['product_option_value_id'],
                             'option_value_id'         => $option_value['option_value_id'],
                             'name'                    => $option_value['name'],
+                            'remarks'                    => $option_value['remarks'],
                             'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
                             'price'                   => $price,
                             'price_prefix'            => $option_value['price_prefix']

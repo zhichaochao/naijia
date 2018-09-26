@@ -491,6 +491,7 @@
                             <tr>
                               <td class="text-left"><?php echo $entry_option_value; ?></td>
                               <td class="text-left"><?php echo $entry_quantity; ?></td>
+                              <td class="text-left">备注</td>
                               <td class="text-left"><?php echo $entry_subtract; ?></td>
                               <td class="text-left"><?php echo $entry_price; ?></td>
                               <!-- <td class="text-right"><?php echo $entry_option_points; ?></td> -->
@@ -518,6 +519,9 @@
                                 </select>
                                 <input type="hidden" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][product_option_value_id]" value="<?php echo $product_option_value['product_option_value_id']; ?>" /></td>
                               <td class="text-right"><input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][quantity]" value="<?php echo $product_option_value['quantity']; ?>" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>
+
+                              <td class="text-right"><input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][remarks]" value="<?php echo $product_option_value['remarks']; ?>" placeholder="" class="form-control" /></td>
+
                               <td class="text-left"><select name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][subtract]" class="form-control">
                                   <?php if ($product_option_value['subtract']) { ?>
                                   <option value="1" selected="selected"><?php echo $text_yes; ?></option>
@@ -958,6 +962,7 @@ $('input[name=\'option\']').autocomplete({
 			html += '      <tr>';
 			html += '        <td class="text-left"><?php echo $entry_option_value; ?></td>';
 			html += '        <td class="text-right"><?php echo $entry_quantity; ?></td>';
+      html += '        <td class="text-right">备注</td>';
 			html += '        <td class="text-left"><?php echo $entry_subtract; ?></td>';
 			html += '        <td class="text-right"><?php echo $entry_price; ?></td>';
 			html += '        <td class="text-right"><?php echo $entry_option_points; ?></td>';
@@ -1023,6 +1028,9 @@ function addOptionValue(option_row) {
 	html += $('#option-values' + option_row).html();
 	html += '  </select><input type="hidden" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][product_option_value_id]" value="" /></td>';
 	html += '  <td class="text-right"><input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][quantity]" value="" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>';
+
+  html += '  <td class="text-right"><input type="text" name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][remarks]" value="" placeholder="" class="form-control" /></td>';
+
 	html += '  <td class="text-left"><select name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][subtract]" class="form-control">';
 	html += '    <option value="1"><?php echo $text_yes; ?></option>';
 	html += '    <option value="0"><?php echo $text_no; ?></option>';

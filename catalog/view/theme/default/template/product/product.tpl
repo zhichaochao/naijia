@@ -119,7 +119,13 @@
                     <ul class="pro_det_ul3 slide_ul clearfix">
                       <input type="hidden" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php if(isset($shareoption[$option['product_option_id']])){ echo $shareoption[$option['product_option_id']];}else{ echo $option['product_option_value'][0]['product_option_value_id'];} ?>" />
                         <?php foreach ($option['product_option_value'] as $k=> $option_value) { ?>
+                        <?php if($option_value['remarks']){?>
+                        <li><span  value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remarks']; ?>)</span></li>
+                        <?php }else{?>
                         <li><span  value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></span></li>
+                        <?php } ?>
+                        
+
                         <!-- <li><span>28″(model size)</span></li> -->
                         <?php } ?>
                     </ul>
