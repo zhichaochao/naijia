@@ -2,6 +2,9 @@
 class ControllerCheckoutShippingMethod extends Controller {
 	public function index() {
 		$this->load->language('checkout/checkout');
+		// print_r($this->session->data);exit();
+
+		$this->session->data['shipping_address']=isset($this->session->data['payment_address'])?$this->session->data['payment_address']:false;
 
 		if (isset($this->session->data['shipping_address'])) {
 			// Shipping Methods
@@ -10,6 +13,7 @@ class ControllerCheckoutShippingMethod extends Controller {
 			$this->load->model('extension/extension');
 
 			$results = $this->model_extension_extension->getExtensions('shipping');
+
 
 			foreach ($results as $result) {
 				if ($this->config->get($result['code'] . '_status')) {
@@ -37,8 +41,21 @@ class ControllerCheckoutShippingMethod extends Controller {
 			array_multisort($sort_order, SORT_ASC, $method_data);
 
 			$this->session->data['shipping_methods'] = $method_data;
+			// 自动选择一个运输方式
+			foreach ($method_data as $key => $value) {
+				if (isset($value['quote'])) {
+				$tem= $value['quote'];
+			
+					foreach ($tem as $k => $val) {
+						$this->session->data['shipping_method']=$val;
+					}
+				}
+				
+			}
+			// $this->session->data['shipping_method'] = $this->session->data['shipping_methods'][$shipping[0]]['quote'][$shipping[1]];
 		}
 
+// print_r($this->session->data['shipping_method']);exit();
 		$data['text_shipping_method'] = $this->language->get('text_shipping_method');
 		$data['text_comments'] = $this->language->get('text_comments');
 		$data['text_loading'] = $this->language->get('text_loading');
@@ -69,7 +86,11 @@ class ControllerCheckoutShippingMethod extends Controller {
 			$data['comment'] = '';
 		}
 
-		$this->response->setOutput($this->load->view('checkout/shipping_method', $data));
+		$json=array();
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+
+		// $this->response->setOutput($this->load->view('checkout/shipping_method', $data));
 	}
 
 	public function save() {

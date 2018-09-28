@@ -21,6 +21,7 @@ class ControllerCheckoutPaymentAddress extends Controller {
 
 		$data['button_continue'] = $this->language->get('button_continue');
 		$data['button_upload'] = $this->language->get('button_upload');
+		// print_r($this->session->data['payment_address']);exit();
 
 		if (isset($this->session->data['payment_address']['address_id'])) {
 			$data['address_id'] = $this->session->data['payment_address']['address_id'];
@@ -43,6 +44,14 @@ class ControllerCheckoutPaymentAddress extends Controller {
 		} else {
 			$data['zone_id'] = '';
 		}
+		if (isset($this->request->get['address_id'])&&$this->request->get['address_id']>0) {
+			$data['address']=$this->model_account_address->getAddress($this->request->get['address_id']);
+			$data['zone_id']=$data['address']['zone_id'];
+
+		}
+
+		// print_r($data['address']);exit();
+		 
 
 		$this->load->model('localisation/country');
 
@@ -58,6 +67,7 @@ class ControllerCheckoutPaymentAddress extends Controller {
 		} else {
 			$data['payment_address_custom_field'] = array();
 		}
+		$data['pick']=isset($this->session->data['shippingorpick'])?$this->session->data['shippingorpick']:'shipping';
 
 		$this->response->setOutput($this->load->view('checkout/payment_address', $data));
 	}
@@ -144,6 +154,10 @@ class ControllerCheckoutPaymentAddress extends Controller {
 					$json['error']['country'] = $this->language->get('error_country');
 				}
 
+				if ($this->request->post['phone'] == '') {
+					$json['error']['phone'] = $this->language->get('error_country');
+				}
+
 				if (!isset($this->request->post['zone_id']) || $this->request->post['zone_id'] == '' || !is_numeric($this->request->post['zone_id'])) {
 					$json['error']['zone'] = $this->language->get('error_zone');
 				}
@@ -161,13 +175,21 @@ class ControllerCheckoutPaymentAddress extends Controller {
                     }
 				}
 
+// print_r($this->request->post);exit();
 				if (!$json) {
 					// Default Payment Address
 					$this->load->model('account/address');
+					if (isset($this->request->post['address_id'])&&$this->request->post['address_id']>0) {
+						$address_id=$this->request->post['address_id'];
+						 $this->model_account_address->editAddress($address_id,$this->request->post);
+					}else{
+						$address_id = $this->model_account_address->addAddress($this->request->post);
+					}
 
-					$address_id = $this->model_account_address->addAddress($this->request->post);
+					
 
 					$this->session->data['payment_address'] = $this->model_account_address->getAddress($address_id);
+					// print_r($this->session->data['payment_address']);exit();
 
 					unset($this->session->data['payment_method']);
 					unset($this->session->data['payment_methods']);
@@ -185,6 +207,34 @@ class ControllerCheckoutPaymentAddress extends Controller {
 				}
 			}
 		}
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
+
+	public function delete() {
+		$this->load->language('checkout/checkout');
+
+		$json = array();
+		$this->load->model('account/address');
+		// Validate if customer is logged in.
+		if (!$this->customer->isLogged()) {
+			$json['redirect'] = $this->url->link('checkout/checkout', '', true);
+		}
+
+		// Validate cart has products and has stock.
+		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+			$json['redirect'] = $this->url->link('checkout/cart');
+		}
+		if (empty($this->request->post['address_id'])) {
+					$json['error']['warning'] = $this->language->get('error_address');
+		} elseif (!in_array($this->request->post['address_id'], array_keys($this->model_account_address->getAddresses()))) {
+					$json['error']['warning'] = $this->language->get('error_address');
+		}else{
+		
+			$this->model_account_address->deleteAddress($this->request->post['address_id']);
+		}
+
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));

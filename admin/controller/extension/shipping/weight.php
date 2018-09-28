@@ -66,6 +66,7 @@ class ControllerExtensionShippingWeight extends Controller {
 		$this->load->model('localisation/geo_zone');
 
 		$geo_zones = $this->model_localisation_geo_zone->getGeoZones();
+		// print_r($geo_zones);exit();
 
 		foreach ($geo_zones as $geo_zone) {
 			if (isset($this->request->post['weight_' . $geo_zone['geo_zone_id'] . '_rate'])) {

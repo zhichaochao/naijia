@@ -3,6 +3,11 @@ class ControllerCommonCart extends Controller {
 	public function index() {
 		$this->load->language('common/cart');
 
+		if (!isset($this->session->cart_ids)) {
+			$this->session->data['cart_ids']=$this->cart->getCartids();
+		}
+
+	// print_r($this->session);exit();
 		// Totals
 		$this->load->model('extension/extension');
 
@@ -60,6 +65,7 @@ class ControllerCommonCart extends Controller {
 		$this->load->model('tool/upload');
 
 		$data['products'] = array();
+		// print_r($this->cart->getProducts());exit();
 
 		foreach ($this->cart->getProducts() as $product) {
 			if ($product['image']) {
@@ -137,7 +143,11 @@ class ControllerCommonCart extends Controller {
 			);
 		}
 
+		$data['cart_ids'] = explode(',',$this->session->data['cart_ids']);
+		// print_r($data['cart_ids']);exit();
 		$data['cart'] = $this->url->link('checkout/cart');
+		// $data['home'] = $this->url->link('common/home', '', true);
+		// printf($data['home']);exit();
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 
 		return $this->load->view('common/cart', $data);

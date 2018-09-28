@@ -1,132 +1,426 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($attention) { ?>
-  <div class="alert alert-info"><i class="fa fa-info-circle"></i> <?php echo $attention; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <?php if ($error_warning) { ?>
-  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?>
-        <?php if ($weight) { ?>
-        &nbsp;(<?php echo $weight; ?>)
-        <?php } ?>
-      </h1>
-      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <td class="text-center"><?php echo $column_image; ?></td>
-                <td class="text-left"><?php echo $column_name; ?></td>
-                <td class="text-left"><?php echo $column_model; ?></td>
-                <td class="text-left"><?php echo $column_quantity; ?></td>
-                <td class="text-right"><?php echo $column_price; ?></td>
-                <td class="text-right"><?php echo $column_total; ?></td>
-              </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($products as $product) { ?>
-              <tr>
-                <td class="text-center"><?php if ($product['thumb']) { ?>
-                  <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" /></a>
-                  <?php } ?></td>
-                <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-                  <?php if (!$product['stock']) { ?>
-                  <span class="text-danger">***</span>
-                  <?php } ?>
+
+    <div class="in_content clearfix"></div>
+    <!--内容-->
+    <div class="shop_con clearfix">
+      <div class="top_yd clearfix">
+        <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY SHOPPING BAG</h1>
+      </div>
+
+      
+      <div class="shop_content">
+        <div class="text">
+        <div class="qx">
+          <label for="" class="qx_label">
+            <input class="check_input" type="checkbox">
+            <i class="check_i"></i>
+            <span>ALL</span>
+            
+            <em class="em4">Total Prices</em>
+            <em class="em3">Quantity</em>
+            <em class="em2">Unit Price</em>
+            <em class="em1">Product Information</em>
+          </label>
+        </div>
+        
+        <ul class="shop_ul">
+ 
+
+            <?php foreach ($products as $product) { ?>
+             
+               <li class="clearfix">
+            <div class="top clearfix">
+              <label for="" class="dx_label">
+                <input class="check_input" type="checkbox" <?=in_array($product['cart_id'],$cart_ids)?'checked':'';?> name="ids[]" value="<?php echo $product['cart_id']; ?>">
+                <i class="check_i <?=in_array($product['cart_id'],$cart_ids)?'active':'';?>"></i>
+              </label>
+
+              <a class="text" href="<?php echo $product['href']; ?>">
+                <img class="img1 lazyLoad" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                <span class="text_p">
+               
+
+                  <p class="p1"><?php echo $product['name']; ?></p>
+
                   <?php if ($product['option']) { ?>
                   <?php foreach ($product['option'] as $option) { ?>
-                  <br />
-                  <small><?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
+                 <p class="p2"><?php echo $option['name']; ?>: <?php echo $option['value']; ?></p>
                   <?php } ?>
                   <?php } ?>
+                 <?php if (!$product['stock']) { ?>
+                  <span class="span1">Lack of stock</span>
+                  <?php } ?>
+                  
                   <?php if ($product['reward']) { ?>
-                  <br />
-                  <small><?php echo $product['reward']; ?></small>
+                <span class="span1"><?php echo $product['reward']; ?></span>
                   <?php } ?>
                   <?php if ($product['recurring']) { ?>
-                  <br />
-                  <span class="label label-info"><?php echo $text_recurring_item; ?></span> <small><?php echo $product['recurring']; ?></small>
-                  <?php } ?></td>
-                <td class="text-left"><?php echo $product['model']; ?></td>
-                <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
-                    <input type="text" name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>" size="1" class="form-control" />
-                    <span class="input-group-btn">
-                    <button type="submit" data-toggle="tooltip" title="<?php echo $button_update; ?>" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
-                    <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="cart.remove('<?php echo $product['cart_id']; ?>');"><i class="fa fa-times-circle"></i></button>
-                    </span></div></td>
-                <td class="text-right"><?php echo $product['price']; ?></td>
-                <td class="text-right"><?php echo $product['total']; ?></td>
-              </tr>
+                  <span class="span1"><?php echo $text_recurring_item; ?>:<?php echo $product['recurring']; ?></span>
+                  <?php } ?>
+                 
+                </span>
+              </a>
+              <?php if($product['old_price']){?>
+              <span class="price" id="price_<?php echo $product['cart_id']; ?>" ><?php echo $product['old_price']; ?></span>
+              <span class="prices" id="prices_<?php echo $product['cart_id']; ?>"><?php echo $product['price']; ?></span>
+              <?php }else{?>
+              <span class="prices hei" id="prices_<?php echo $product['cart_id']; ?>"><?php echo $product['price']; ?></span>
+              <?php }?>
+            </div>
+          
+            <div class="bot clearfix">
+              <div class="num_label">
+                <span class="sub_span" onclick="cart_sub(<?php echo $product['cart_id']; ?>,this);"><em class="sub" ></em></span>
+                <input type="text" class="num_in" id="quantity_<?php echo $product['cart_id']; ?>"  name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>"  />
+                <span class="add_span" onclick="cart_add(<?php echo $product['cart_id']; ?>,this);"><em class="add" ></em></span>
+              </div>
+              <span class="price_zj" id="total_<?php echo $product['cart_id']; ?>"><?php echo $product['total']; ?></span>
+              <button class="save <?=$product['wish']==1?'active':'';?>" onclick="cart_wishlist('<?php echo $product['cart_id']; ?>' ,'<?php echo $product['product_id']; ?>' ,this);"><img src="/catalog/view/theme/default/img/png/icon_36.png"/> Save for later</button>
+            </div>
+            <?php if($product['date_end']){ ?>
+            <p class="time clear clearfix">This product is on  Sales，that ends in <?=$product['date_end'];?></p>
+            <?php }?>
+            <div class="shop_close" onclick="cart_remove('<?php echo $product['cart_id']; ?>',this);">
+              <em></em>
+            </div>
+          </li>
               <?php } ?>
-              <?php foreach ($vouchers as $voucher) { ?>
-              <tr>
-                <td></td>
-                <td class="text-left"><?php echo $voucher['description']; ?></td>
-                <td class="text-left"></td>
-                <td class="text-left"><div class="input-group btn-block" style="max-width: 200px;">
-                    <input type="text" name="" value="1" size="1" disabled="disabled" class="form-control" />
-                    <span class="input-group-btn">
-                    <button type="button" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger" onclick="voucher.remove('<?php echo $voucher['key']; ?>');"><i class="fa fa-times-circle"></i></button>
-                    </span></div></td>
-                <td class="text-right"><?php echo $voucher['amount']; ?></td>
-                <td class="text-right"><?php echo $voucher['amount']; ?></td>
-              </tr>
-              <?php } ?>
-            </tbody>
-          </table>
+
+         
+          
+        </ul>
+        
+      <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
+        <ol class="shop_type_ol clearfix">
+          <li class="active">
+            <div class="li_label" data='shipping'>
+              <i class="ck_i active"></i>
+              <span>Shipping</span>
+            </div>
+            <em class="sjx_em"></em>
+          </li>
+          <li>
+            <div class="li_label" data='pick'>
+              <i class="ck_i"></i>
+              <span>Pick up</span>
+            </div>
+            <em class="sjx_em"></em>
+          </li>
+        </ol>
+        <ul class="shop_type_ul clearfix" id="shop_type_ul">
+          <li class="active clearfix">
+            <label for="country_id">
+              <span>Country*</span>
+              
+              <div class="select clearfix">
+                <select id="country_id" name="country_id">
+                              <option value=""><?php echo $text_select; ?></option>
+                                        <?php foreach ($countries as $country) { ?>
+                                        <?php if ($country['country_id'] == $address['country_id']) { ?>
+                                        <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
+                                        <?php } else { ?>
+                                        <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
+                                        <?php } ?>
+                                        <?php } ?>
+                </select>
+              </div>
+            </label>
+            <label for="zone_id">
+              <span>City*</span>
+              <select name="zone_id" id='zone_id' onchange ="get_address_cost();">
+               
+              </select>
+            </label>
+            <span class="ship_span" id='shipping_cost'>Shipping Cost:  </span>
+            <p class="ship_p">Get shipping cost here<i><br /></i> NOTE* Final cost based on pratice</p>
+          </li>
+          <li class="clearfix">
+            <p class="pick_1">Lagos Store</p>
+            <p class="pick_2">30 Mobolaji Bank Anthony Way, Maryland 000012, Lagos,  Nigeria</p>
+          </li>
+        </ul>
+        
+        <div class="total clearfix">
+          <div class="right" id='total'>
+            
+          </div>
+          
+          <div class="left">
+            <label class="label_are clearfix" for="">
+              <span>Order Notes :</span>
+              <textarea id='message' placeholder="Leave message here if you have any further request."><?=$message;?></textarea>
+              <input type="hidden" id='shippingorpick' name="shippingorpick" value="shipping" />
+            </label>
+          </div>
         </div>
-      </form>
-      <?php if ($modules) { ?>
-      <h2><?php echo $text_next; ?></h2>
-      <p><?php echo $text_next_choice; ?></p>
-      <div class="panel-group" id="accordion">
-        <?php foreach ($modules as $module) { ?>
-        <?php echo $module; ?>
-        <?php } ?>
+        </form>
       </div>
-      <?php } ?>
-      <br />
-      <div class="row">
-        <div class="col-sm-4 col-sm-offset-8">
-          <table class="table table-bordered">
-            <?php foreach ($totals as $total) { ?>
-            <tr>
-              <td class="text-right"><strong><?php echo $total['title']; ?>:</strong></td>
-              <td class="text-right"><?php echo $total['text']; ?></td>
-            </tr>
-            <?php } ?>
-          </table>
-        </div>
+      
       </div>
-      <div class="buttons clearfix">
-        <div class="pull-left"><a href="<?php echo $continue; ?>" class="btn btn-default"><?php echo $button_shopping; ?></a></div>
-        <div class="pull-right"><a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout; ?></a></div>
-      </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
+    </div>  
+    
 <?php echo $footer; ?>
+ <link rel="stylesheet" href="/catalog/view/theme/default/js/select2/css/select2.css" />
+        <script type="text/javascript" src="/catalog/view/theme/default/js/select2/js/select2.js" ></script>
+<script type="text/javascript"><!--
+$('#shop_type_ul select[name=\'country_id\']').on('change', function() {
+  $.ajax({
+    url: 'index.php?route=checkout/checkout/country&country_id=' + this.value,
+    dataType: 'json',
+    beforeSend: function() {
+      $('#collapse-payment-address select[name=\'country_id\']').after(' <i class="fa fa-circle-o-notch fa-spin"></i>');
+    },
+    complete: function() {
+      $('.fa-spin').remove();
+    },
+    success: function(json) {
+   
+
+      html = '<option value=""><?php echo $text_select; ?></option>';
+
+      if (json['zone'] && json['zone'] != '') {
+        for (i = 0; i < json['zone'].length; i++) {
+          html += '<option value="' + json['zone'][i]['zone_id'] + '"';
+
+          if (json['zone'][i]['zone_id'] == '<?php echo $zone_id; ?>') {
+            html += ' selected="selected"';
+          }
+
+          html += '>' + json['zone'][i]['name'] + '</option>';
+        }
+      } else {
+        html += '<option value="0" selected="selected"><?php echo $text_none; ?></option>';
+      }
+
+      $('#shop_type_ul select[name=\'zone_id\']').html(html);
+    },
+    error: function(xhr, ajaxOptions, thrownError) {
+      alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+    }
+  });
+});
+
+$('#collapse-payment-address select[name=\'country_id\']').trigger('change');
+$(document).ready(function(){
+  $("#country_id").select2();
+  $("#zone_id").select2();
+});
+</script>
+<script>
+  function get_address_cost() {
+    $.ajax({
+          url:'<?php echo $address_cost ;?>',
+          type:'post',
+          data:{'country_id':$('#country_id').val(),'zone_id':$('#zone_id').val()},
+          dataType: 'json',
+          success:function(data){
+            $('#shipping_cost').html('Shipping Cost:'+data['cost']);
+                
+          }
+      })
+  }
+  function submit_message(){
+      $.ajax({
+          url:'<?php echo $message_submit ;?>',
+          type:'post',
+          data:{'content':$('#message').val(),'shippingorpick':$('#shippingorpick').val(),'country_id':$('#country_id').val(),'zone_id':$('#zone_id').val()},
+          dataType: 'json',
+          success:function(data){
+            window.location.href=data['href'];
+                
+          }
+      })
+
+
+   
+  }
+  // 加入收藏
+  function cart_wishlist(cart_id,product_id,th) {
+    
+         $.ajax({
+          url:'<?php echo $wishlist_add ;?>',
+          type:'post',
+          data:{'product_id':product_id},
+          dataType: 'json',
+          success:function(data){
+           // alert(data);
+                
+          }
+         })
+         cart_remove(cart_id,th);
+
+  }
+
+      // 获得已选的产品的cart_ids;
+    function get_ids() {
+      var ids=new Array();
+       $.each($('input[name="ids[]"]:checked'),function(){
+        ids.push($(this).val());
+       })
+     return ids.join(",");
+    }
+
+    //刪除當前購物車訂單 
+
+  function cart_remove(id,th) {
+   
+    var ids=get_ids();
+    // alert(ids);
+
+     $.ajax({
+        url: '<?=$cart_remove;?>',
+        dataType: 'json',
+        type:'POST',
+        data:{key:id,ids:ids},
+        success: function(json) {
+          get_total();
+         }
+
+     
+    });
+  $(th).parents("li").remove();
+ }
+ // 重新计算一次总价
+ get_total();
+ function get_total() {
+        $.ajax({
+          url:'<?php echo $cart_total_href ;?>',
+        
+          dataType: 'html',
+          success:function(html){
+           $('#total').html(html);
+                
+          }
+         })
+  
+ }
+
+ // 数量减
+
+ function cart_add(id,th) {
+    var num_val = $(th).siblings(".num_in").val();
+      num_val++;
+      $(th).siblings(".num_in").val(num_val);
+      submit_num(id,num_val);
+      
+ }
+ function cart_sub(id,th) {
+  var num_val = $(th).siblings(".num_in").val();
+      if(num_val>1){
+        num_val--;
+        $(th).siblings(".num_in").val(num_val);
+      }
+        submit_num(id,num_val);
+ }
+ // 提交修改后的数量
+ function submit_num(id,num) {
+    $.ajax({
+        url:'<?=$cart_editnum;?>',
+        dataType: 'json',
+        type:'POST',
+        data:{id:id,num:num},
+        success: function(json) {
+          $('#total_'+json['id']).html(json['total']);
+          get_total();
+         }
+
+     
+    });
+ }
+  $(function(){
+
+    
+  //全选
+    $(".qx_label input").click(function(){
+      if($(this).prop("checked")){
+        $(this).siblings(".check_i").addClass("active");
+        $(".dx_label input").each(function(){
+          $(this).prop("checked",true);
+          $(this).siblings(".check_i").addClass("active");
+        })
+      }else{
+        $(this).siblings(".check_i").removeClass("active");
+        $(".dx_label input").each(function(){
+          $(this).prop("checked","");
+          $(this).siblings(".check_i").removeClass("active");
+        })
+      }
+    })
+  //单选
+    $(".dx_label input").click(function(){
+      if($(this).prop("checked")){
+        $(this).siblings(".check_i").addClass("active");
+        var len = $(".dx_label .check_i").length;
+        var i=0;
+        $(".dx_label .check_i").each(function(){
+          if($(this).hasClass("active")){
+            i++
+          }
+          return i;
+        })
+        if(i>=len){
+          $(".qx_label input").prop("checked",true);
+          $(".qx_label .check_i").addClass("active");
+        }
+        
+      }else{
+        $(this).siblings(".check_i").removeClass("active");
+        $(".qx_label .check_i").removeClass("active");
+        $(".qx_label input").prop("checked","");
+      }
+    })
+
+
+ 
+    
+  //点击切换pick ship
+    $(".shop_type_ol .li_label").click(function(){
+      $('#shippingorpick').val($(this).attr('data'));
+      $(this).parents("li").addClass("active").siblings("li").removeClass("active");
+      $(".shop_type_ol .li_label .check_i").removeClass("active");
+      $(this).find(".check_i").addClass("active");
+      $(".shop_type_ul>li").eq($(this).parents("li").index()).addClass("active").siblings("li").removeClass("active");
+    })
+    
+  // //点击加入心愿列表、
+  //   $(".shop_ul .bot .save").click(function(){
+  //     if($(this).hasClass("active")){
+  //       $(this).removeClass("active");
+  //     }else{
+  //       $(this).addClass("active");
+  //     }
+  //   })
+  
+  //下拉收起
+    $(".xl_i").click(function(){
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).parents(".total").find(".xl_ul").stop().slideUp();
+      }else{
+        $(this).addClass("active");
+        $(this).parents(".total").find(".xl_ul").stop().slideDown();
+      }
+    })
+  //下拉li
+    $(".xl_ul>li").click(function(){
+      $(this).addClass("active").siblings("li").removeClass("active");
+    })
+  
+  //pc端total下拉
+    $(".total_p").click(function(){
+      if($(window).width()>920){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(".slide_p").stop().slideUp();
+          $(".xl_i").removeClass("active");
+          $(".xl_i").parents(".total").find(".xl_ul").css("display","none");
+        }else{
+          $(".xl_i").addClass("active");
+          $(".xl_i").parents(".total").find(".xl_ul").css("display","block");
+          $(this).addClass("active");         
+          $(".slide_p").stop().slideDown();
+        }
+      }
+    })
+  })
+</script>

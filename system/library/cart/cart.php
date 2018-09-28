@@ -29,11 +29,27 @@ class Cart {
 			}
 		}
 	}
+	public function getCartids() {
+	
+		$cart_query = $this->db->query("SELECT cart_id FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+		$cart_ids=array();
+		foreach ($cart_query->rows as $key => $value) {
+			$cart_ids[]=$value['cart_id'];
+		}
+		return implode(',', $cart_ids);
+		
+	}
 
 	public function getProducts() {
 		$product_data = array();
 
-		$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+		if (isset($this->session->data['cart_ids'])) {
+			  $cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND cart_id IN (".$this->session->data['cart_ids'].")");
+		}else{
+			$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' ");
+	}
+
+		
 
 		foreach ($cart_query->rows as $cart) {
 			$stock = true;
@@ -174,17 +190,27 @@ class Cart {
 					}
 				}
 
-				$product_discount_query = $this->db->query("SELECT price FROM " . DB_PREFIX . "product_discount WHERE product_id = '" . (int)$cart['product_id'] . "' AND customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND quantity <= '" . (int)$discount_quantity . "' AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) ORDER BY quantity DESC, priority ASC, price ASC LIMIT 1");
+				// $product_discount_query = $this->db->query("SELECT price FROM " . DB_PREFIX . "product_discount WHERE product_id = '" . (int)$cart['product_id'] . "' AND customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND quantity <= '" . (int)$discount_quantity . "' AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) ORDER BY quantity DESC, priority ASC, price ASC LIMIT 1");
 
-				if ($product_discount_query->num_rows) {
-					$price = $product_discount_query->row['price'];
-				}
+				// if ($product_discount_query->num_rows) {
+				// 	$price = $product_discount_query->row['price'];
+				// }
 
 				// Product Specials
-				$product_special_query = $this->db->query("SELECT price FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$cart['product_id'] . "' AND customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) ORDER BY priority ASC, price ASC LIMIT 1");
+				$product_special_query = $this->db->query("SELECT price,percent,date_end FROM " . DB_PREFIX . "product_special WHERE product_id = '" . (int)$cart['product_id'] . "' AND customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((date_start = '0000-00-00' OR date_start < NOW()) AND (date_end = '0000-00-00' OR date_end > NOW())) ORDER BY priority ASC, price ASC LIMIT 1");
 
 				if ($product_special_query->num_rows) {
+					$old_price=$option_price;
+					if ($product_special_query->row['percent']>0) {
+						$option_price=$option_price*$product_special_query->row['percent'];
+					}else{
+						$option_price=$option_price-$product_special_query->row['price'];
+					}
 					$price = $product_special_query->row['price'];
+					$date_end= $product_special_query->row['date_end'];
+				}else{
+					$date_end='';
+					$old_price='';
 				}
 
 				// Reward Points
@@ -248,8 +274,9 @@ class Cart {
 					'minimum'         => $product_query->row['minimum'],
 					'subtract'        => $product_query->row['subtract'],
 					'stock'           => $stock,
-					'price'           => ($price + $option_price),
-					'total'           => ($price + $option_price) * $cart['quantity'],
+					'old_price'           => $old_price,
+					'price'           => $option_price,
+					'total'           => $option_price * $cart['quantity'],
 					'reward'          => $reward * $cart['quantity'],
 					'points'          => ($product_query->row['points'] ? ($product_query->row['points'] + $option_points) * $cart['quantity'] : 0),
 					'tax_class_id'    => $product_query->row['tax_class_id'],
@@ -259,7 +286,8 @@ class Cart {
 					'width'           => $product_query->row['width'],
 					'height'          => $product_query->row['height'],
 					'length_class_id' => $product_query->row['length_class_id'],
-					'recurring'       => $recurring
+					'recurring'       => $recurring,
+					'date_end'        =>$date_end,
 				);
 			} else {
 				$this->remove($cart['cart_id']);
@@ -290,6 +318,7 @@ class Cart {
 	public function clear() {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
 	}
+
 
 	public function getRecurringProducts() {
 		$product_data = array();

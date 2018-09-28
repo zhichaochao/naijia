@@ -48,6 +48,7 @@ class ModelLocalisationGeoZone extends Model {
 	}
 
 	public function getGeoZones($data = array()) {
+
 		if ($data) {
 			$sql = "SELECT * FROM " . DB_PREFIX . "geo_zone";
 
@@ -81,6 +82,7 @@ class ModelLocalisationGeoZone extends Model {
 			}
 
 			$query = $this->db->query($sql);
+			// print_r($query->rows);exit();
 
 			return $query->rows;
 		} else {
@@ -93,6 +95,7 @@ class ModelLocalisationGeoZone extends Model {
 
 				$this->cache->set('geo_zone', $geo_zone_data);
 			}
+			
 
 			return $geo_zone_data;
 		}
