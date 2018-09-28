@@ -12,7 +12,8 @@
       <div class="contents clearfix">
         <div class="img_lf">
           <div class="big_lf clearfix">
-          <?php if($hot==2){?>
+
+          <?php if($sspecial){?>
             <div class="top time" title="<?php echo $ends_dates; ?>" >
               <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
               <p>Sales end in 
@@ -23,6 +24,7 @@
               </p>
             </div>
           <?php }?>
+
             <!--pc左边大图-->
             <ul class="img_ul clearfix">
             <?php foreach ($images as $k => $image) {?>
@@ -53,7 +55,7 @@
               <p class="p1">
                 <?php echo $meta_description;?>
               </p>
-              <?php if($hot==2){?>
+              <?php if($sspecial){?>
                 <div class="price" id="price" >
                    <?php if(isset($special)){ ?>
                   <em class="em1"><?=$min_price?> -<?=$max_price?></em>
@@ -79,7 +81,7 @@
               <li class="clearfix number_li">
                 <div class="number">
                   <span class="bt_span">
-                    <p class="quantity">Quantitysss :</p>
+                    <p class="quantity">Quantity :</p>
                     <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
                     <div class="num_rf">
                       <em class="add"><i></i></em>
@@ -117,7 +119,13 @@
                     <ul class="pro_det_ul3 slide_ul clearfix">
                       <input type="hidden" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php if(isset($shareoption[$option['product_option_id']])){ echo $shareoption[$option['product_option_id']];}else{ echo $option['product_option_value'][0]['product_option_value_id'];} ?>" />
                         <?php foreach ($option['product_option_value'] as $k=> $option_value) { ?>
+                        <?php if($option_value['remarks']){?>
+                        <li><span  value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remarks']; ?>)</span></li>
+                        <?php }else{?>
                         <li><span  value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></span></li>
+                        <?php } ?>
+                        
+
                         <!-- <li><span>28″(model size)</span></li> -->
                         <?php } ?>
                     </ul>
@@ -146,7 +154,7 @@
                   
                   <div class="label">
                     <span class="span_sub"><em class="sub"></em></span>
-                    <input type="text" class="num_in" value="1" readonly="readonly" />
+                    <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
                     <span class="span_add"><em class="add"></em></span>
                   </div>
                   <p class="ts_p">This hair need  3-7 customize process days</p>

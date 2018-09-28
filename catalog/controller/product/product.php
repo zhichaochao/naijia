@@ -176,7 +176,8 @@ class ControllerProductProduct extends Controller {
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
-            $data['hot'] = $producthot['hot'];
+            // $data['hot'] = $producthot['hot'];
+            
 
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = utf8_substr(strip_tags($product_info['meta_description']),0,100).'...';
@@ -395,7 +396,7 @@ class ControllerProductProduct extends Controller {
 
             $data['options'] = array();
             $options=$this->model_catalog_product->getProductOptions($this->request->get['product_id']);
-           // var_dump($options);exit;
+           // print_r($options);exit;
             foreach ( $options as $option) {
                 $product_option_value_data = array();
                 foreach ($option['product_option_value'] as $option_value) {
@@ -410,6 +411,7 @@ class ControllerProductProduct extends Controller {
                             'product_option_value_id' => $option_value['product_option_value_id'],
                             'option_value_id'         => $option_value['option_value_id'],
                             'name'                    => $option_value['name'],
+                            'remarks'                    => $option_value['remarks'],
                             'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
                             'price'                   => $price,
                             'price_prefix'            => $option_value['price_prefix']
@@ -559,7 +561,7 @@ class ControllerProductProduct extends Controller {
                     $percents='';
                     $date_ends='';
                 }
-
+                $data['sspecial']=$product_info['special'];
                 $data['products_like'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,

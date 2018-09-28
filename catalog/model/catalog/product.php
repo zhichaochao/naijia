@@ -486,6 +486,7 @@ class ModelCatalogProduct extends Model {
 					'name'                    => $product_option_value['name'],
 					'image'                   => $product_option_value['image'],
 					'quantity'                => $product_option_value['quantity'],
+					'remarks'                => $product_option_value['remarks'],
 					'subtract'                => $product_option_value['subtract'],
 					'price'                   => $product_option_value['price'],
 					'price_prefix'            => $product_option_value['price_prefix'],

@@ -12,9 +12,6 @@
 		<script type="text/javascript" src="js/swiper.js" ></script>
 		<title>ADDRESS</title>
 	</head>
-	<style>
-		.yd_footer2{display: none !important; }
-	</style>
 	<body>
 		<!--头部-->
 		<div class="big_nav">
@@ -110,15 +107,16 @@
 						<h1>Shipping Address</h1>
 						<div class="form_text clearfix">
 							<form>
-								<label class="clearfix" for="">
+							<!--label的class  true是输入正确的一种显示格式-->
+								<label class="clearfix true" for="">
 									<span class="pl_span">Frist Name</span>
-									<input type="text" placeholder="Frist Name" />
-									<p class="ts_ps off">please enter your first name. </p>
+									<input type="text" value="Frist Name" />
+									<p class="ts_ps">please enter your first name. </p>
 								</label>
 								<label class="clearfix" for="">
 									<span class="pl_span">Last Name</span>
 									<input type="text" placeholder="Last Name" />
-									<p class="ts_ps">please enter your first name. </p>
+									<p class="ts_ps off">please enter your first name. </p>
 								</label>
 								<label class="clearfix" for="">
 									<span class="pl_span">Address</span>
@@ -176,39 +174,6 @@
 						</div>
 						
 					</li>
-					<li class="active">
-						<h1>Your Contacts</h1>
-						<div class="form_text clearfix">
-							<form>
-								<label class="clearfix" for="">
-									<span class="pl_span">Frist Name</span>
-									<input type="text" placeholder="Frist Name" />
-									<p class="ts_ps off">please enter your first name. </p>
-								</label>
-								<label class="clearfix" for="">
-									<span class="pl_span">Last Name</span>
-									<input type="text" placeholder="Last Name" />
-									<p class="ts_ps">please enter your first name. </p>
-								</label>
-								
-								<label class="clearfix clear" for="">
-									<span class="pl_span">Phone</span>
-									<input type="text" placeholder="Phone" />
-									<p class="ts_ps">please enter your first name. </p>
-								</label>
-								<label class="clearfix clear" for="">
-									<span class="pl_span">Email</span>
-									<input type="text" placeholder="Email" />
-									<p class="ts_ps">please enter your first name. </p>
-								</label>
-								
-								<button class="qx_btn" type="reset">Cancel</button>
-								<button class="tj_btn" type="submit">Save & Continue</button>
-							</form>
-						</div>
-						
-					</li>
-					
 					<li class="active">
 						<h1>Shipping Address</h1>
 						<div class="form_text clearfix">
@@ -279,6 +244,62 @@
 					</li>
 					
 					<li class="active">
+						<h1>Your Contacts</h1>
+						<div class="form_text clearfix">
+							<form>
+								<label class="clearfix" for="">
+									<span class="pl_span">Frist Name</span>
+									<input type="text" placeholder="Frist Name" />
+									<p class="ts_ps off">please enter your first name. </p>
+								</label>
+								<label class="clearfix" for="">
+									<span class="pl_span">Last Name</span>
+									<input type="text" placeholder="Last Name" />
+									<p class="ts_ps">please enter your first name. </p>
+								</label>
+								
+								<label class="clearfix clear" for="">
+									<span class="pl_span">Phone</span>
+									<input type="text" placeholder="Phone" />
+									<p class="ts_ps">please enter your first name. </p>
+								</label>
+								<label class="clearfix clear" for="">
+									<span class="pl_span">Email</span>
+									<input type="text" placeholder="Email" />
+									<p class="ts_ps">please enter your first name. </p>
+								</label>
+								
+								<button class="qx_btn" type="reset">Cancel</button>
+								<button class="tj_btn" type="submit">Save & Continue</button>
+							</form>
+						</div>
+						
+					</li>
+					<li class="active">
+						<h1>Your Contacts</h1>
+						<div class="form_text clearfix">
+							<ol class="add_ol clearfix">
+								<li class="active zq_li clearfix">
+									<div class="text">
+										<span>Xiaoxiao</span>
+										<span>+8611000000000</span>	
+										<span>1230464@qq.com</span>
+									</div>
+									<span class="edit">Edit</span>
+								</li>
+							</ol>
+							<div class="store_address">
+								<h1>Store Address</h1>
+								<span>Lagos Store</br >
+									30 Mobolaji Bank Anthony Way, Maryland 000012, Lagos, Nigeria
+								</span>
+							</div>
+							<button href="###" class="qx_btn">Add new address</button>
+							<button class="tj_btn" type="submit">Save & Continue</button>
+						</div>
+					</li>
+					
+					<li class="active">
 						<h1>Payment Method</h1>
 						
 						<div class="form_text">
@@ -301,6 +322,8 @@
 							</ol>
 						</div>
 					</li>
+					
+					
 					<li class="active pc_no">
 						
 						<div class="form_text">
@@ -709,20 +732,6 @@
 			$(this).addClass("active").siblings("li").removeClass("active");
 		})
 		
-		if($(window).width()<=920){
-			$(window).scroll(function(){
-				var div_top =parseInt($(".check_order").offset().top) ;
-				var sc_top = $(window).scrollTop();
-				if(sc_top < div_top-200){
-					$(".address_con .a_btn").removeClass("active");
-					$(".address_con .a_btn").css("position","fixed").css("padding","0.2rem 0.5rem");
-				}else{
-					$(".address_con .a_btn").addClass("active");
-					$(".address_con .a_btn").css("position","inherit").css("padding","0");
-				}
-			})
-		}
-		
 		//支付弹窗
 		$(".slides").click(function(){
 			if($(this).hasClass("active")){
@@ -738,26 +747,15 @@
 		$(".slide_h1").click(function(){
 			if($(this).hasClass("active")){
 				$(this).removeClass("active");
-				
-//				$(this).siblings(".slides").show();
-//				$(this).siblings(".slide").stop().slideUp();
-				$(this).siblings(".slides").stop().slideDown();
+				$(this).siblings(".slides").stop().fadeIn();
 				$(this).siblings(".slide").hide();
 			}else{
 				$(this).addClass("active");
 				$(this).siblings(".slides").hide();
-				$(this).siblings(".slide").stop().slideDown();
+				$(this).siblings(".slide").stop().fadeIn();
 			}
 		})
 		
-		$(document).scroll(function(){
-	        var top = $(document).scrollTop();
-	        if(top>$(window).height()){
-	            $(".slide_h1").removeClass("active");
-				$(".slide_h1").siblings(".slides").show();
-				$(".slide_h1").siblings(".slide").hide();
-	        }
-	    });
 		
 		
 	})

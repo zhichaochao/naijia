@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>MY ORDER</title>
+		<title>PAY1</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,235 +100,71 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="order_con clearfix">
-			<div class="or_content clearfix">
-					<div class="top_yd clearfix">
-						<h1><a class="fh" href="###">< BACK</a> MY ORDERG</h1>
-					</div>
-					
-				<div class="lf_nav">
-					<img class="tx_img" src="img/png/touxiang.png" alt="" />
-					<h2>Tyler Durden</h2>
-					<p class="p1">+8613286484822</p>
-					
-					<ul>
-						<li class="active"><a href="###"><span>My Orders</span><i></i></a></li>
-						<li><a href="###"><span>My Profile</span><i></i></a></li>
-						<li><a href="###"><span>My addresses</span><i></i></a></li>
-						<li><a href="###"><span>My Favorites</span><i></i></a></li>
-						<li><a href="###"><span>My Coupon</span><i></i></a></li>
-					</ul>
-					
-					<img class="vip_img" src="img/vip.jpg" alt="" />
+		<div class="pay">
+			<div class="pay_text clearfix">
+			
+				<div class="text_1 clearfix">
+					<h1>Two steps to place your order.</h1>
+					<p class="lv_p">Order Number:N12345664866</p>
+					<table class="pay_tb1">
+						<tr>
+							<td><span>Sub-Total</span></td>
+							<td><span>$227.00</span></td>
+						</tr>
+						<tr>
+							<td><span>Shipping</span></td>
+							<td><span>$10.00</span></td>
+						</tr>
+						<tr>
+							<td><span>Total</span></td>
+							<td><span>$227.00</span></td>
+						</tr>
+					</table>
+				</div>			
+				
+				<div class="text2 clearfix">
+					<h2>1.Please transfer to the following bank account</h2>
+					<table class="pay_tb1 pay_tb2">
+						<tr>
+							<td><span>Bank Acccount </span></td>
+							<td><span> 0093345081</span></td>
+						</tr>
+						<tr>
+							<td><span>Bank Name</span></td>
+							<td><span>Diamond Bank</span></td>
+						</tr>
+						<tr>
+							<td><span>Benificiary Name</span></td>
+							<td><span>GUANGEN LI</span></td>
+						</tr>
+					</table>
 				</div>
 				
-				<div class="right_text">
-					
-					
-					<div class="or_nav">
-						<ol class="ornav_ol clearfix">
-							<li class="active"><a href="###">Pending</a></li>
-							<li><a href="###">Unfilled</a></li>
-							<li><a href="###">Delivered</a></li>
-							<li><a href="###">Completed</a></li>
-							<li><a href="###">Invalid</a></li>
-						</ol>
+				<div class="text3 clearfix">
+					<h2>2.Please upload the bank alert in 
+						<span class="djs_p" title="2018/09/29 19:00:00">
+							<span class="int_hour">00</span><i>:</i>
+							<span class="int_minute">00</span><i>:</i>
+							<span class="int_second">00</span>s
+						</span>
+					</h2>
+					<div class="pd_div clearfix">
+						<div class="file_div">
+							<input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+							<img class="file_img" src="img/png/icon_58_.png"/>
+						</div>
+						<div class="text_div">
+							<img src="" alt="" />
+							<div class="close" onclick="del_img($(this))"></div>
+						</div>
+						<p class="tsp_2">Click to upload</p>
 					</div>
-					
-					<ul class="or_ul">
-						<li class="clearfix">
-							
-							<p class="p1 clearfix">
-								<span class="span1">Completed</span>
-								<span class="span2">(2018-11-02)</span>
-								<span class="span3">Order Number:000001</span>
-							</p>
-							
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							
-							<p class="p2 clearfix">
-								Total: <span>$35.05</span>
-							</p>
-							
-							<div class="bot">
-								<div class="det active"></div>
-								<a class="bot_a" href="###">Review</a>
-							</div>
-						</li>
-						
-						<li class="clearfix">
-							<p class="p1 clearfix">
-								<span class="span1">Pending</span>
-								<span class="span2">(2018-11-02)</span>
-								<span class="djs_p" title="2018/09/29 19:00:00">
-									<em>Invalid in</em>
-									<span class="int_hour">00</span><i>:</i>
-									<span class="int_minute">00</span><i>:</i>
-									<span class="int_second">00</span>
-								</span>
-							</p>
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							<p class="p2 clearfix">
-								Total: <span>$70.10</span>
-							</p>
-							
-							<div class="bot">
-								<div class="det"></div>
-								<a class="bot_a a1" href="###">Continue To Pay</a>
-								<a class="bot_a a2" href="###">Cancel</a>
-							</div>
-						</li>
-						
-						<li class="clearfix">
-							
-							<p class="p1 clearfix">
-								<span class="span1">Delivered</span>
-								<span class="span2">(2018-11-02)</span>
-								<span class="span3">Order Number:000001</span>
-							</p>
-							
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							<p class="p2 clearfix">
-								Total: <span>$35.25</span>
-							</p>
-							
-							<div class="bot">
-								<div class="det"></div>
-								<a class="bot_a" href="###">Confirm Receipt</a>
-							</div>
-						</li>
-						
-						<li class="clearfix">
-							
-							<p class="p1 clearfix">
-								<span class="span1">Cancelled</span>
-								<span class="span2">(2018-11-02)</span>
-								<span class="span3">Order Number:000001</span>
-							</p>
-							
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							<p class="p2 clearfix">
-								Total: <span>$35.25</span>
-							</p>
-							
-							<div class="bot">
-								<div class="det active"></div>
-								<a class="bot_a a1" href="###">Recover Order</a>
-							</div>
-						</li>
-						<li class="clearfix">
-							
-							<p class="p1 clearfix">
-								<span class="span1">Invalid</span>
-								<span class="span2">(2018-11-02)</span>
-								<span class="span3">Order Number:000001</span>
-							</p>
-							
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							<p class="p2 clearfix">
-								Total: <span>$35.25</span>
-							</p>
-							
-							<div class="bot">
-								<div class="det active"></div>
-								<a class="bot_a a1" href="###">Recover Order</a>
-							</div>
-						</li>
-						<li class="clearfix">
-							<p class="p1 clearfix">
-								<span class="span1">Pending-unfilled</span>
-								<span class="span2">(2018-11-02)</span>
-								<span class="span3">Order Number:000001</span>
-							</p>
-							
-							<a class="or_a clearfix" href="###">
-								<div class="pic_img">
-									<img src="img/yd_shop1.jpg"/>
-								</div>
-								<div class="text">
-									<h1 class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan</h1>
-									<p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>
-								</div>
-								<span class="price">$35.05</span>
-								<span class="num">x1</span>
-							</a>
-							<p class="p2 clearfix">
-								Total: <span>$35.25</span>
-							</p>
-							
-							<div class="bot">
-								<div class="det"></div>
-								<a class="bot_a" href="###">View Details</a>
-							</div>
-						</li>
-					</ul>
-				
+					<p class="p_ts">Please click to upload</p>
+					<button class="sub_btn">SUBMIT</button>
+					<p class="p_ts2">*We will check and confirmed your payment as soon as you submit</p>
 				</div>
 			</div>
-			
 		</div>
-		
 		
 		
 		
@@ -582,15 +418,51 @@
 	</body>
 </html>
 <script>
-	$(function(){
-		//删除订单
-		$(".order_con .bot .det").click(function(){
-			$(this).parents("li").remove();
-		})
-	})
-	
-	
-	//倒计时
+		//调取上传框
+	    function getphoto(node) {
+	        var imgURL = "";
+	        try{
+	            var file = null;
+	            if(node.files && node.files[0] ){
+	                file = node.files[0];
+	            }else if(node.files && node.files.item(0)) {
+	                file = node.files.item(0);
+	            }
+	            try{
+	                imgURL =  file.getAsDataURL();
+	            }catch(e){
+	                imgRUL = window.URL.createObjectURL(file);
+	            }
+	        }catch(e){
+	            if (node.files && node.files[0]) {
+	                var reader = new FileReader();
+	                reader.onload = function (e) {
+	                    imgURL = e.target.result;
+	                };
+	                reader.readAsDataURL(node.files[0]);
+	            }
+	        }
+	        creatImg(imgRUL);
+	        $(".text_div").css("display","inline-block");
+	        $(".tsp_2").css("display","none");
+	        $(".file_div").css("display","none");
+	        return imgURL;
+	    }
+	 
+	 	//上传选中的图片 显示页面
+	    function creatImg(imgRUL){
+	        $(".text_div img").attr("src",imgRUL);
+	    }
+		
+		//删除选中的图片
+		function del_img(obj){
+			obj.siblings("img").attr("src","");
+			obj.parent().css("display","none");
+			$(".file_div").css("display","block");
+		}
+		
+		
+		//倒计时
 	function show_time() {
         $(".djs_p").each(function() {
             var endtime = $(this).prop("title");
@@ -631,3 +503,4 @@
     }
     show_time();
 </script>
+
