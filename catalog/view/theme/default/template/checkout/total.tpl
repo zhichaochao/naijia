@@ -27,3 +27,40 @@
               <em><?=$totals['total']['text']?></em>
             </p>
             <a class="btn_a" onclick="submit_message('<?php echo $checkout; ?>')">CHECK OUT</a>
+
+        <script type="text/javascript">
+          
+            $(function(){
+                //下拉收起
+    $(".xl_i").click(function(){
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).parents(".total").find(".xl_ul").stop().slideUp();
+      }else{
+        $(this).addClass("active");
+        $(this).parents(".total").find(".xl_ul").stop().slideDown();
+      }
+    })
+  //下拉li
+    $(".xl_ul>li").click(function(){
+      $(this).addClass("active").siblings("li").removeClass("active");
+    })
+  
+  //pc端total下拉
+    $(".total_p").click(function(){
+      if($(window).width()>920){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(".slide_p").stop().slideUp();
+          $(".xl_i").removeClass("active");
+          $(".xl_i").parents(".total").find(".xl_ul").css("display","none");
+        }else{
+          $(".xl_i").addClass("active");
+          $(".xl_i").parents(".total").find(".xl_ul").css("display","block");
+          $(this).addClass("active");         
+          $(".slide_p").stop().slideDown();
+        }
+      }
+    })
+            })
+        </script>

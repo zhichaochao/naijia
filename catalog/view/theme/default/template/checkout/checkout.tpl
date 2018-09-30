@@ -14,61 +14,50 @@
                 <div class="fixed clearfix">
                     <div class="fixed_text clearfix">
                         <div class="in_content clearfix"></div>
-                        <div class="check_order yd_no clearfix">
+                        <div class="check_order yd_no clearfix confirm"  >
                             <h1 class="slide_h1">Order Details <em></em></h1>
                             <div class="slides clear clearfix">
-                                <p>KIM K CLOSURE WIG <span class="num">x1</span></p>
-                                <p>KIM K CLOSURE WIG <span class="num">x1</span></p>
-                                <p>KIM K CLOSURE WIG <span class="num">x1</span></p>
+                             <?php foreach ($products as $product) { ?>
+                                <p><?=$product['name'];?> <span class="num">x<?=$product['quantity'];?></span></p>
+                              <?php } ?>
                                 <hr />
-                                <p class="p2">Total: <span>$485.17</span></p>
+                                  <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+
+                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                                      <?php }} ?>
                             </div>
                             <div class="slide clear clearfix">
                                 <div class="total clearfix">
-                                    <p class="p1">Total Products <span>$477.27</span></p>
-                                    <p class="p1">Total Points <span>-$0.00</span></p>
-                                    <p class="p1">Total Shipping <span>$9.90</span></p>
-                                    <p class="p1">Coupon: Summer Sale <span>-$2.00</span></p>
-                                    <p class="p2">Total <span>$485.17</span></p>
+                                      <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+
+                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                                      <?php }else{?>
+
+
+                                <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+
+                                <?php  }} ?>
+                                   
                                 </div>
                                 <ul class="check_ul clearfix">
+                                       <?php foreach ($products as $product) { ?>
                                     <li class="clearfix">
-                                        <div class="pic_img"><img src="img/yd_shop1.jpg"/></div>
+                                        <div class="pic_img"><img src="<?=$product['image'];?>"/></div>
                                         <div class="text">
-                                            <h2>KIM K CLOSURE WIG</h2>
-                                            <p>Color: Black</p>
-                                            <p>Lenght: 18inch</p>
-                                            <p>Wig With: 13*4 Frontal cap</p>
-                                            <p>Quantity: 1</p>
-                                            <span>$159.09</span>
+                                            <h2><?=$product['name'];?></h2>
+                                             <?php foreach ($product['option'] as $option) { ?>
+                                            <p><?=$option['name'];?>: <?=$option['value'];?></p>
+                                              <?php  } ?>
+                                        
+                                            <p>Quantity:  <?=$product['quantity'];?></p>
+                                            <span> <?=$product['price'];?></span>
                                         </div>
                                     </li>
-                                    <li class="clearfix">
-                                        <div class="pic_img"><img src="img/yd_shop1.jpg"/></div>
-                                        <div class="text">
-                                            <h2>KIM K CLOSURE WIG</h2>
-                                            <p>Color: Black</p>
-                                            <p>Lenght: 18inch</p>
-                                            <p>Wig With: 13*4 Frontal cap</p>
-                                            <p>Quantity: 1</p>
-                                            <span>$159.09</span>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <div class="pic_img"><img src="img/yd_shop1.jpg"/></div>
-                                        <div class="text">
-                                            <h2>KIM K CLOSURE WIG</h2>
-                                            <p>Color: Black</p>
-                                            <p>Lenght: 18inch</p>
-                                            <p>Wig With: 13*4 Frontal cap</p>
-                                            <p>Quantity: 1</p>
-                                            <span>$159.09</span>
-                                        </div>
-                                    </li>
+                                     <?php  } ?>
                                 </ul>
                             </div>
                             <div class="a_btn">
-                                <a href="###" class="a_qd_btn">Continue to pay</a>
+                                <a onclick="pay();"  class="a_qd_btn">Continue to pay</a>
                             </div>
                         </div>
                     
@@ -80,6 +69,9 @@
 
 
 <script>
+    function pay() {
+       alert('Please choose payment method.');
+    }
     $(function(){
 //         $("input").focus(function(){
 //             $(this).attr("placeholder","");
@@ -101,23 +93,11 @@
 //         })
         
 //      支付方式选择
-        $(".pay_ol>li").click(function(){
-            $(this).addClass("active").siblings("li").removeClass("active");
-        })
+        // $(".pay_ol>li").click(function(){
+        //     $(this).addClass("active").siblings("li").removeClass("active");
+        // })
         
-        if($(window).width()<=920){
-            $(window).scroll(function(){
-                var div_top =parseInt($(".check_order").offset().top) ;
-                var sc_top = $(window).scrollTop();
-                if(sc_top < div_top-200){
-                    $(".address_con .a_btn").removeClass("active");
-                    $(".address_con .a_btn").css("position","fixed").css("padding","0.2rem 0.5rem");
-                }else{
-                    $(".address_con .a_btn").addClass("active");
-                    $(".address_con .a_btn").css("position","inherit").css("padding","0");
-                }
-            })
-        }
+     
         
         //支付弹窗
         $(".slides").click(function(){
@@ -173,10 +153,10 @@
 <script type="text/javascript">
     // 获取支付方式
     function get_payment() {
-         $.ajax({
-         url: 'index.php?route=checkout/shipping_method',
-         dataType: 'html',
-          success: function(html) {
+         // $.ajax({
+         // url: 'index.php?route=checkout/shipping_method',
+         // dataType: 'html',
+         //  success: function(html) {
                 $.ajax({
                  url: 'index.php?route=checkout/payment_method',
                  dataType: 'html',
@@ -186,8 +166,8 @@
               })
 
           
-          }
-      })
+      //     }
+      // })
 
 
       
@@ -195,6 +175,8 @@
 
     // 选择地址，进入选支付方式
     function save_address() {
+
+        if ($('#address_id').val()>0) {
         $.ajax({
         url: 'index.php?route=checkout/payment_address/save',
         type: 'post',
@@ -209,6 +191,11 @@
 
         }
         })
+    }
+        else{
+           alert('Please choose address.');
+
+        }
     }
     function deleteaddress(address_id) {
        $.ajax({

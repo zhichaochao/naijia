@@ -44,7 +44,7 @@
 
                   <?php if ($product['option']) { ?>
                   <?php foreach ($product['option'] as $option) { ?>
-                 <p class="p2"><?php echo $option['name']; ?>: <?php echo $option['value']; ?></p>
+                 <p class="p2" data='<?php echo $option['quantity']; ?>'><?php echo $option['name']; ?>: <?php echo $option['value']; ?></p>
                   <?php } ?>
                   <?php } ?>
                  <?php if (!$product['stock']) { ?>
@@ -69,7 +69,7 @@
             </div>
           
             <div class="bot clearfix">
-              <div class="num_label">
+              <div class="num_label"  data='<?php echo $product['stock_quantity']; ?>'>
                 <span class="sub_span" onclick="cart_sub(<?php echo $product['cart_id']; ?>,this);"><em class="sub" ></em></span>
                 <input type="text" class="num_in" id="quantity_<?php echo $product['cart_id']; ?>"  name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>"  />
                 <span class="add_span" onclick="cart_add(<?php echo $product['cart_id']; ?>,this);"><em class="add" ></em></span>
@@ -92,14 +92,14 @@
         
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data">
         <ol class="shop_type_ol clearfix">
-          <li class="active">
+          <li class="<?=$shippingorpick=='shipping'?'active':'';?>">
             <div class="li_label" data='shipping'>
               <i class="ck_i active"></i>
               <span>Shipping</span>
             </div>
             <em class="sjx_em"></em>
           </li>
-          <li>
+          <li class="<?=$shippingorpick=='shipping'?'':'active';?>">
             <div class="li_label" data='pick'>
               <i class="ck_i"></i>
               <span>Pick up</span>
@@ -108,7 +108,7 @@
           </li>
         </ol>
         <ul class="shop_type_ul clearfix" id="shop_type_ul">
-          <li class="active clearfix">
+          <li class="<?=$shippingorpick=='shipping'?'active':'';?> clearfix">
             <label for="country_id">
               <span>Country*</span>
               
@@ -116,7 +116,7 @@
                 <select id="country_id" name="country_id">
                               <option value=""><?php echo $text_select; ?></option>
                                         <?php foreach ($countries as $country) { ?>
-                                        <?php if ($country['country_id'] == $address['country_id']) { ?>
+                                        <?php if ($country['country_id'] == $country_id) { ?>
                                         <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
                                         <?php } else { ?>
                                         <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
@@ -134,7 +134,7 @@
             <span class="ship_span" id='shipping_cost'>Shipping Cost:  </span>
             <p class="ship_p">Get shipping cost here<i><br /></i> NOTE* Final cost based on pratice</p>
           </li>
-          <li class="clearfix">
+          <li class="clearfix <?=$shippingorpick=='shipping'?'':'active';?>">
             <p class="pick_1">Lagos Store</p>
             <p class="pick_2">30 Mobolaji Bank Anthony Way, Maryland 000012, Lagos,  Nigeria</p>
           </li>
@@ -149,7 +149,7 @@
             <label class="label_are clearfix" for="">
               <span>Order Notes :</span>
               <textarea id='message' placeholder="Leave message here if you have any further request."><?=$message;?></textarea>
-              <input type="hidden" id='shippingorpick' name="shippingorpick" value="shipping" />
+              <input type="hidden" id='shippingorpick' name="shippingorpick" value="<?=$shippingorpick;?>" />
             </label>
           </div>
         </div>
@@ -193,6 +193,11 @@ $('#shop_type_ul select[name=\'country_id\']').on('change', function() {
       }
 
       $('#shop_type_ul select[name=\'zone_id\']').html(html);
+         if ($('#zone_id').val()>0) {
+      get_address_cost();
+      }else{
+          $('#shipping_cost').html('Shipping Cost:');
+      }
     },
     error: function(xhr, ajaxOptions, thrownError) {
       alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
@@ -200,13 +205,15 @@ $('#shop_type_ul select[name=\'country_id\']').on('change', function() {
   });
 });
 
-$('#collapse-payment-address select[name=\'country_id\']').trigger('change');
+$('#shop_type_ul select[name=\'country_id\']').trigger('change');
+
 $(document).ready(function(){
   $("#country_id").select2();
   $("#zone_id").select2();
 });
 </script>
 <script>
+  
   function get_address_cost() {
     $.ajax({
           url:'<?php echo $address_cost ;?>',
@@ -220,14 +227,18 @@ $(document).ready(function(){
       })
   }
   function submit_message(){
+    var ids=get_ids();
       $.ajax({
           url:'<?php echo $message_submit ;?>',
           type:'post',
-          data:{'content':$('#message').val(),'shippingorpick':$('#shippingorpick').val(),'country_id':$('#country_id').val(),'zone_id':$('#zone_id').val()},
+          data:{ids:ids,'content':$('#message').val(),'shippingorpick':$('#shippingorpick').val(),'country_id':$('#country_id').val(),'zone_id':$('#zone_id').val()},
           dataType: 'json',
           success:function(data){
+            if (data['error']) {
+              alert(data['error']);
+            }else{
             window.location.href=data['href'];
-                
+                }
           }
       })
 
@@ -283,9 +294,11 @@ $(document).ready(function(){
  // 重新计算一次总价
  get_total();
  function get_total() {
+  var ids=get_ids();
         $.ajax({
           url:'<?php echo $cart_total_href ;?>',
-        
+          data:{ids:ids},
+          type:'POST',
           dataType: 'html',
           success:function(html){
            $('#total').html(html);
@@ -300,6 +313,9 @@ $(document).ready(function(){
  function cart_add(id,th) {
     var num_val = $(th).siblings(".num_in").val();
       num_val++;
+      var stock_quantity=$(th).parent().attr('data');
+      // alert(stock_quantity);
+      if (num_val>stock_quantity) {alert('Lack of stock'); return false;}
       $(th).siblings(".num_in").val(num_val);
       submit_num(id,num_val);
       
@@ -327,6 +343,7 @@ $(document).ready(function(){
      
     });
  }
+
   $(function(){
 
     
@@ -345,6 +362,7 @@ $(document).ready(function(){
           $(this).siblings(".check_i").removeClass("active");
         })
       }
+      get_total();
     })
   //单选
     $(".dx_label input").click(function(){
@@ -368,6 +386,7 @@ $(document).ready(function(){
         $(".qx_label .check_i").removeClass("active");
         $(".qx_label input").prop("checked","");
       }
+      get_total();
     })
 
 
@@ -391,36 +410,6 @@ $(document).ready(function(){
   //     }
   //   })
   
-  //下拉收起
-    $(".xl_i").click(function(){
-      if($(this).hasClass("active")){
-        $(this).removeClass("active");
-        $(this).parents(".total").find(".xl_ul").stop().slideUp();
-      }else{
-        $(this).addClass("active");
-        $(this).parents(".total").find(".xl_ul").stop().slideDown();
-      }
-    })
-  //下拉li
-    $(".xl_ul>li").click(function(){
-      $(this).addClass("active").siblings("li").removeClass("active");
-    })
-  
-  //pc端total下拉
-    $(".total_p").click(function(){
-      if($(window).width()>920){
-        if($(this).hasClass("active")){
-          $(this).removeClass("active");
-          $(".slide_p").stop().slideUp();
-          $(".xl_i").removeClass("active");
-          $(".xl_i").parents(".total").find(".xl_ul").css("display","none");
-        }else{
-          $(".xl_i").addClass("active");
-          $(".xl_i").parents(".total").find(".xl_ul").css("display","block");
-          $(this).addClass("active");         
-          $(".slide_p").stop().slideDown();
-        }
-      }
-    })
+
   })
 </script>

@@ -1,56 +1,86 @@
 <?php if (!isset($redirect)) { ?>
-<div class="table-responsive">
-  <table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <td class="text-left"><?php echo $column_name; ?></td>
-        <td class="text-left"><?php echo $column_model; ?></td>
-        <td class="text-right"><?php echo $column_quantity; ?></td>
-        <td class="text-right"><?php echo $column_price; ?></td>
-        <td class="text-right"><?php echo $column_total; ?></td>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($products as $product) { ?>
-      <tr>
-        <td class="text-left"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
-          <?php foreach ($product['option'] as $option) { ?>
-          <br />
-          &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
-          <?php } ?>
-          <?php if($product['recurring']) { ?>
-          <br />
-          <span class="label label-info"><?php echo $text_recurring_item; ?></span> <small><?php echo $product['recurring']; ?></small>
-          <?php } ?></td>
-        <td class="text-left"><?php echo $product['model']; ?></td>
-        <td class="text-right"><?php echo $product['quantity']; ?></td>
-        <td class="text-right"><?php echo $product['price']; ?></td>
-        <td class="text-right"><?php echo $product['total']; ?></td>
-      </tr>
-      <?php } ?>
-      <?php foreach ($vouchers as $voucher) { ?>
-      <tr>
-        <td class="text-left"><?php echo $voucher['description']; ?></td>
-        <td class="text-left"></td>
-        <td class="text-right">1</td>
-        <td class="text-right"><?php echo $voucher['amount']; ?></td>
-        <td class="text-right"><?php echo $voucher['amount']; ?></td>
-      </tr>
-      <?php } ?>
-    </tbody>
-    <tfoot>
-      <?php foreach ($totals as $total) { ?>
-      <tr>
-        <td colspan="4" class="text-right"><strong><?php echo $total['title']; ?>:</strong></td>
-        <td class="text-right"><?php echo $total['text']; ?></td>
-      </tr>
-      <?php } ?>
-    </tfoot>
-  </table>
-</div>
-<?php echo $payment; ?>
+
+
+ <h1 class="slide_h1">Order Details <em></em></h1>
+                            <div class="slides clear clearfix">
+                             <?php foreach ($products as $product) { ?>
+                                <p><?=$product['name'];?> <span class="num">x<?=$product['quantity'];?></span></p>
+                              <?php } ?>
+                                <hr />
+                                  <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+
+                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                                      <?php }} ?>
+                            </div>
+                            <div class="slide clear clearfix">
+                                <div class="total clearfix">
+                                      <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+
+                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                                      <?php }else{?>
+
+
+                                <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+
+                                <?php  }} ?>
+                                   
+                                </div>
+                                <ul class="check_ul clearfix">
+                                       <?php foreach ($products as $product) { ?>
+                                    <li class="clearfix">
+                                        <div class="pic_img"><img src="<?=$product['image'];?>"/></div>
+                                        <div class="text">
+                                            <h2><?=$product['name'];?></h2>
+                                             <?php foreach ($product['option'] as $option) { ?>
+                                            <p><?=$option['name'];?>: <?=$option['value'];?></p>
+                                              <?php  } ?>
+                                        
+                                            <p>Quantity:  <?=$product['quantity'];?></p>
+                                            <span> <?=$product['price'];?></span>
+                                        </div>
+                                    </li>
+                                     <?php  } ?>
+                                </ul>
+                            </div>
+                            <div class="a_btn">
+                              <?php echo $payment; ?>
+                               
+                            </div>
+
+
+
 <?php } else { ?>
 <script type="text/javascript"><!--
 location = '<?php echo $redirect; ?>';
 //--></script>
 <?php } ?>
+
+<script type="text/javascript">
+  
+ $(function(){
+          $(".slide_h1").click(function(){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+                
+//              $(this).siblings(".slides").show();
+//              $(this).siblings(".slide").stop().slideUp();
+                $(this).siblings(".slides").stop().slideDown();
+                $(this).siblings(".slide").hide();
+            }else{
+                $(this).addClass("active");
+                $(this).siblings(".slides").hide();
+                $(this).siblings(".slide").stop().slideDown();
+            }
+        })
+        
+        $(document).scroll(function(){
+            var top = $(document).scrollTop();
+            if(top>$(window).height()){
+                $(".slide_h1").removeClass("active");
+                $(".slide_h1").siblings(".slides").show();
+                $(".slide_h1").siblings(".slide").hide();
+            }
+        });
+        
+        });
+</script>

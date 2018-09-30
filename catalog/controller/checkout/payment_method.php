@@ -2,6 +2,52 @@
 class ControllerCheckoutPaymentMethod extends Controller {
 	public function index() {
 		$this->load->language('checkout/checkout');
+		$this->session->data['shipping_address']=isset($this->session->data['payment_address'])?$this->session->data['payment_address']:false;
+
+		// 自动选择运输方式
+		if (isset($this->session->data['shipping_address'])) {
+			// Shipping Methods
+			$method_data = array();
+
+			$this->load->model('extension/extension');
+
+			$results = $this->model_extension_extension->getExtensions('shipping');
+
+
+			foreach ($results as $result) {
+				if ($this->config->get($result['code'] . '_status')) {
+					$this->load->model('extension/shipping/' . $result['code']);
+
+					$quote = $this->{'model_extension_shipping_' . $result['code']}->getQuote($this->session->data['shipping_address']);
+
+					if ($quote) {
+						$method_data[$result['code']] = array(
+							'title'      => $quote['title'],
+							'quote'      => $quote['quote'],
+							'sort_order' => $quote['sort_order'],
+							'error'      => $quote['error']
+						);
+					}
+				}
+			}
+
+
+
+			$this->session->data['shipping_methods'] = $method_data;
+			// 自动选择一个运输方式
+			foreach ($method_data as $key => $value) {
+				if (isset($value['quote'])) {
+				$tem= $value['quote'];
+			
+					foreach ($tem as $k => $val) {
+						$this->session->data['shipping_method']=$val;
+					}
+				}
+				
+			}
+			// $this->session->data['shipping_method'] = $this->session->data['shipping_methods'][$shipping[0]]['quote'][$shipping[1]];
+		}
+
 
 		if (isset($this->session->data['payment_address'])) {
 			// Totals
@@ -36,6 +82,32 @@ class ControllerCheckoutPaymentMethod extends Controller {
 					$this->{'model_extension_total_' . $result['code']}->getTotal($total_data);
 				}
 			}
+
+				$products = $this->cart->getProducts();
+
+				$this->load->model('tool/image');
+				foreach ($products as $key=> $product) {
+					$product_total = 0;
+					$products[$key]['image']=$this->model_tool_image->resize($product['image'], 200,200);
+					$products[$key]['total']=$this->currency->format($products[$key]['total'], $this->session->data['currency']);
+					$products[$key]['price']=$this->currency->format($products[$key]['price'], $this->session->data['currency']);
+
+					foreach ($products as $product_2) {
+						if ($product_2['product_id'] == $product['product_id']) {
+							$product_total += $product_2['quantity'];
+						}
+					}
+
+					if ($product['minimum'] > $product_total) {
+						$this->response->redirect($this->url->link('checkout/cart'));
+					}
+				}
+				$data['totals']=$this->load->controller('checkout/total');
+				$data['products']=$products;
+
+				$data['address']=$this->session->data['payment_address'];
+				// print_r($data['address']);exit();
+				$data['shippingorpick']=isset($this->session->data['shippingorpick'])?$this->session->data['shippingorpick']:'shipping';
 
 			// Payment Methods
 			$method_data = array();
@@ -98,6 +170,7 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		} else {
 			$data['code'] = '';
 		}
+		// print_r($this->session->data['payment_method']);exit();
 
 		if (isset($this->session->data['comment'])) {
 			$data['comment'] = $this->session->data['comment'];
@@ -183,10 +256,13 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		if (!$json) {
 			$this->session->data['payment_method'] = $this->session->data['payment_methods'][$this->request->post['payment_method']];
 
-			$this->session->data['comment'] = strip_tags($this->request->post['comment']);
+			// $this->session->data['comment'] = strip_tags($this->request->post['comment']);
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+	
+
 }

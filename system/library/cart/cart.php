@@ -40,10 +40,11 @@ class Cart {
 		
 	}
 
-	public function getProducts() {
+	public function getProducts($all='') {
 		$product_data = array();
+	
 
-		if (isset($this->session->data['cart_ids'])) {
+		if (!$all&&isset($this->session->data['cart_ids'])&&$this->session->data['cart_ids']) {
 			  $cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND cart_id IN (".$this->session->data['cart_ids'].")");
 		}else{
 			$cart_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' ");
@@ -274,6 +275,7 @@ class Cart {
 					'minimum'         => $product_query->row['minimum'],
 					'subtract'        => $product_query->row['subtract'],
 					'stock'           => $stock,
+					'stock_quantity'=>$product_query->row['quantity'],
 					'old_price'           => $old_price,
 					'price'           => $option_price,
 					'total'           => $option_price * $cart['quantity'],
@@ -316,7 +318,12 @@ class Cart {
 	}
 
 	public function clear() {
-		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+
+		if (isset($this->session->data['cart_ids'])&&$this->session->data['cart_ids']) {
+		$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND cart_id in(" . $this->session->data['cart_ids']. ")");
+		}else{
+			$this->db->query("DELETE FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "'");
+		}
 	}
 
 

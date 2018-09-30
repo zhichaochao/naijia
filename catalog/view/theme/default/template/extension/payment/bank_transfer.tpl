@@ -1,29 +1,27 @@
-<h2><?php echo $text_instruction; ?></h2>
+<!-- <h2><?php echo $text_instruction; ?></h2>
 <p><b><?php echo $text_description; ?></b></p>
 <div class="well well-sm">
   <p><?php echo $bank; ?></p>
   <p><?php echo $text_payment; ?></p>
-</div>
-<div class="buttons">
-  <div class="pull-right">
-    <input type="button" value="<?php echo $button_confirm; ?>" id="button-confirm" class="btn btn-primary" data-loading-text="<?php echo $text_loading; ?>" />
-  </div>
-</div>
-<script type="text/javascript"><!--
-$('#button-confirm').on('click', function() {
+</div> -->
+
+
+ <a  href="<?=$continue?>"  class="a_qd_btn">Continue to pay</a>
+<!-- <script type="text/javascript">
+function bank_transfer_gay() {
+
+
 	$.ajax({
 		type: 'get',
 		url: 'index.php?route=extension/payment/bank_transfer/confirm',
 		cache: false,
 		beforeSend: function() {
-			$('#button-confirm').button('loading');
+			$('.a_qd_btn').html('loading');
 		},
-		complete: function() {
-			$('#button-confirm').button('reset');
-		},
+		
 		success: function() {
-			location = '<?php echo $continue; ?>';
+			// location = '<?php echo $continue; ?>';
 		}
 	});
-});
-//--></script>
+};
+</script> -->

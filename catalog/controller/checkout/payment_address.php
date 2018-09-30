@@ -122,7 +122,7 @@ class ControllerCheckoutPaymentAddress extends Controller {
 
 					$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->request->post['address_id']);
 
-					unset($this->session->data['payment_method']);
+					// unset($this->session->data['payment_method']);
 					unset($this->session->data['payment_methods']);
 				}
 			} else {
@@ -191,7 +191,7 @@ class ControllerCheckoutPaymentAddress extends Controller {
 					$this->session->data['payment_address'] = $this->model_account_address->getAddress($address_id);
 					// print_r($this->session->data['payment_address']);exit();
 
-					unset($this->session->data['payment_method']);
+					// unset($this->session->data['payment_method']);
 					unset($this->session->data['payment_methods']);
 
 					if ($this->config->get('config_customer_activity')) {

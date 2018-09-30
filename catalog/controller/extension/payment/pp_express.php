@@ -6,7 +6,8 @@ class ControllerExtensionPaymentPPExpress extends Controller {
 		$data['button_continue'] = $this->language->get('button_continue');
 		$data['text_loading'] = $this->language->get('text_loading');
 
-		$data['continue'] = $this->url->link('extension/payment/pp_express/checkout', '', true);
+		$data['continue'] = $this->url->link('checkout/payment', '', true);
+		$this->session->data['wait_href']=$this->url->link('extension/payment/pp_express/checkout', '', true);
 
 		unset($this->session->data['paypal']);
 
@@ -1355,11 +1356,16 @@ class ControllerExtensionPaymentPPExpress extends Controller {
 
 		$this->session->data['paypal']['token'] = $result['TOKEN'];
 
+
 		if ($this->config->get('pp_express_test') == 1) {
-			header('Location: https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=' . $result['TOKEN'] . '&useraction=commit');
+			$json['href']='https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=' . $result['TOKEN'] . '&useraction=commit';
 		} else {
-			header('Location: https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=' . $result['TOKEN'] . '&useraction=commit');
+			$json['href']='https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=' . $result['TOKEN'] . '&useraction=commit';
 		}
+		
+			$this->response->addHeader('Content-Type: application/json');
+			$this->response->setOutput(json_encode($json));
+
 	}
 
 	public function checkoutReturn() {

@@ -76,7 +76,7 @@
                 <a href="<?=$wishlist;?>"><span id='wishlist_count'><?php echo $text_wishlist; ?></span></a>
               </li>
               <li class="gw_li">
-                <a href="###"><span id='cart_count'><?=$text_cart_items;?></span></a>
+                <a href="<?=$shopping_cart;?>"><span id='cart_count'><?=$text_cart_items;?></span></a>
               </li>
               <li class="fb_li">
                 <a href="###"></a>

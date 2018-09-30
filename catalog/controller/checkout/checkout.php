@@ -1,16 +1,23 @@
 <?php
 class ControllerCheckoutCheckout extends Controller {
 	public function index() {
+		// print_r($this->session->data['payment_method']);exit();
 		// Validate cart has products and has stock.
-		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
+		// print_r($this->cart->hasStock());exit();
+		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))||(!isset($this->session->data['cart_ids'])||!$this->session->data['cart_ids']) ) {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
+		// print_r($this->session->data['cart_ids']);exit();
 
 		// Validate minimum quantity requirements.
 		$products = $this->cart->getProducts();
 
-		foreach ($products as $product) {
+		$this->load->model('tool/image');
+		foreach ($products as $key=> $product) {
 			$product_total = 0;
+			$products[$key]['image']=$this->model_tool_image->resize($product['image'], 200,200);
+			$products[$key]['total']=$this->currency->format($products[$key]['total'], $this->session->data['currency']);
+			$products[$key]['price']=$this->currency->format($products[$key]['price'], $this->session->data['currency']);
 
 			foreach ($products as $product_2) {
 				if ($product_2['product_id'] == $product['product_id']) {
@@ -26,15 +33,6 @@ class ControllerCheckoutCheckout extends Controller {
 		$this->load->language('checkout/checkout');
 
 		$this->document->setTitle($this->language->get('heading_title'));
-
-		$this->document->addScript('catalog/view/javascript/jquery/datetimepicker/moment.js');
-		$this->document->addScript('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js');
-		$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
-
-		// Required by klarna
-		if ($this->config->get('klarna_account') || $this->config->get('klarna_invoice')) {
-			$this->document->addScript('http://cdn.klarna.com/public/kitt/toc/v1.0/js/klarna.terms.min.js');
-		}
 
 		$data['breadcrumbs'] = array();
 
@@ -85,6 +83,9 @@ class ControllerCheckoutCheckout extends Controller {
 		}
 
 		$data['shipping_required'] = $this->cart->hasShipping();
+		$data['totals']=$this->load->controller('checkout/total');
+		$data['products']=$products;
+		// print_r($data['totals']);print_r($data['products']);exit();
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
@@ -146,4 +147,6 @@ class ControllerCheckoutCheckout extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+	
 }

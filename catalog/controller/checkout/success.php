@@ -27,6 +27,17 @@ class ControllerCheckoutSuccess extends Controller {
 					$this->model_account_activity->addActivity('order_guest', $activity_data);
 				}
 			}
+			// $data['payment'] = $this->load->controller('extension/payment/' . $this->session->data['payment_method']['code']);
+			if ($this->session->data['payment_method']['code']=='bank_transfer') {
+				$data['bank']= htmlspecialchars_decode($this->config->get('bank_transfer_bank' . $this->config->get('config_language_id')));
+			}else{
+				$data['bank']='';
+			}
+			$data['order_number']=$this->session->data['order_number'];
+			$data['order_id']=$this->session->data['order_id'];
+			$data['upload_receipt']=$this->url->link('checkout/payment/success');
+
+			// print_r($data['bank']);exit();
 
 			unset($this->session->data['shipping_method']);
 			unset($this->session->data['shipping_methods']);
@@ -42,6 +53,7 @@ class ControllerCheckoutSuccess extends Controller {
 			unset($this->session->data['totals']);
 			unset($this->session->data['cart_ids']);
 			unset($this->session->data['message']);
+		
 		}
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -80,6 +92,7 @@ class ControllerCheckoutSuccess extends Controller {
 
 		$data['continue'] = $this->url->link('common/home');
 
+		$data['totals'] = $this->load->controller('checkout/total');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
@@ -87,6 +100,6 @@ class ControllerCheckoutSuccess extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('common/success', $data));
+		$this->response->setOutput($this->load->view('checkout/success', $data));
 	}
 }

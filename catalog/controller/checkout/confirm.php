@@ -37,7 +37,8 @@ class ControllerCheckoutConfirm extends Controller {
 		// Validate minimum quantity requirements.
 		$products = $this->cart->getProducts();
 
-		foreach ($products as $product) {
+		foreach ($products as $key=> $product) {
+	
 			$product_total = 0;
 
 			foreach ($products as $product_2) {
@@ -210,6 +211,7 @@ class ControllerCheckoutConfirm extends Controller {
 
 			$order_data['products'] = array();
 
+		$this->load->model('tool/image');
 			foreach ($this->cart->getProducts() as $product) {
 				$option_data = array();
 
@@ -235,6 +237,7 @@ class ControllerCheckoutConfirm extends Controller {
 					'subtract'   => $product['subtract'],
 					'price'      => $product['price'],
 					'total'      => $product['total'],
+
 					'tax'        => $this->tax->getTax($product['price'], $product['tax_class_id']),
 					'reward'     => $product['reward']
 				);
@@ -324,6 +327,9 @@ class ControllerCheckoutConfirm extends Controller {
 			}
 
 			$this->load->model('checkout/order');
+			// if (isset($this->session->data['order_id'])&&$this->session->data['order_id']>0) {
+			// 	$this->model_checkout_order->deleteOrder($this->session->data['order_id']);
+			// }
 
 			$this->session->data['order_id'] = $this->model_checkout_order->addOrder($order_data);
 
@@ -393,6 +399,7 @@ class ControllerCheckoutConfirm extends Controller {
 					'recurring'  => $recurring,
 					'quantity'   => $product['quantity'],
 					'subtract'   => $product['subtract'],
+						'image'      =>$this->model_tool_image->resize($product['image'], 200,200),
 					'price'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']),
 					'total'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity'], $this->session->data['currency']),
 					'href'       => $this->url->link('product/product', 'product_id=' . $product['product_id'])
@@ -411,14 +418,10 @@ class ControllerCheckoutConfirm extends Controller {
 				}
 			}
 
-			$data['totals'] = array();
+			$data['totals'] = $this->load->controller('checkout/total');
 
-			foreach ($order_data['totals'] as $total) {
-				$data['totals'][] = array(
-					'title' => $total['title'],
-					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
-				);
-			}
+// print_r($this->session->data['payment_method']['code']);exit();
+			
 
 			$data['payment'] = $this->load->controller('extension/payment/' . $this->session->data['payment_method']['code']);
 		} else {
@@ -427,4 +430,5 @@ class ControllerCheckoutConfirm extends Controller {
 
 		$this->response->setOutput($this->load->view('checkout/confirm', $data));
 	}
+
 }

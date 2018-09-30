@@ -19,9 +19,9 @@
                                         <i class="ck_i"></i>
                                     </div>
                                     <div class="text">
-                                     <span> <?php echo $add['firstname']; ?>   </span> 
-                                     <span> <?php echo $add['lastname']; ?>  </span> 
-                                       <span><?php echo $add['address_1']; ?>  </span> 
+                                     <span> <?php echo $add['firstname']; ?>  <?php echo $add['lastname']; ?> </span> 
+                             
+                                       <span><?php echo $add['address_1']; ?> <?php echo $add['address_2']; ?>  </span> 
                                       <span>  <?php echo $add['city']; ?>  </span> 
                                         <span> <?php echo $add['zone']; ?>  </span> 
 
