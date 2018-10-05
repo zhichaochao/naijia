@@ -50,13 +50,13 @@ class ControllerAccountOrder extends Controller {
 
 		$order_total = $this->model_account_order->getTotalOrders();
 		$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit);
-		//print_r($results);exit;
+		// print_r($results);exit;
 		foreach ($results as $result) {
 			//$product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);
 			//$voucher_total = $this->model_account_order->getTotalOrderVouchersByOrderId($result['order_id']);
 			
 			$product_num = $this->model_account_order->getOrderProductNumber($result['order_id']);
-			
+			// print_r($product_num);exit;
 			//根据order_id获取其中一件产品的图片和产品名字
 			$order_products = $this->model_account_order->getOrderProducts($result['order_id']);
 			// print_r($order_products);exit();
@@ -66,7 +66,7 @@ class ControllerAccountOrder extends Controller {
 				$order_products[$key]['price']=$this->currency->format($value['price'], $result['currency_code'], $result['currency_value']);
 				$order_products[$key]['options']= $this->model_account_order->getOrderOptions($result['order_id'],$value['order_product_id']);
 			}
-			// print_r($order_product_array);exit;
+			
 			$data['totals'] = array();
 			$totals = $this->model_account_order->getOrderTotals($result['order_id']);
 			$total=$this->currency->format(0, $result['currency_code'], $result['currency_value']);
@@ -78,7 +78,7 @@ class ControllerAccountOrder extends Controller {
 			$data['orders'][] = array(
 				'order_id'   => $result['order_id'],
 				'products'   => $order_products,
-				'order_no'   => $result['order_no'],
+				'order_num'   => $result['order_num'],
 			
 				'status'     => $result['status'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
@@ -94,6 +94,7 @@ class ControllerAccountOrder extends Controller {
 			);
 			
 		}
+		// print_r($data['orders']);exit;
 		// 
 		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 
@@ -233,11 +234,12 @@ class ControllerAccountOrder extends Controller {
 			}
 
 			//订单号 dyl add
-			if ($order_info['order_no']) {
-				$data['order_no'] = $order_info['order_no'];
+			if ($order_info['order_num']) {
+				$data['order_num'] = $order_info['order_num'];
 			} else {
-				$data['order_no'] = '';
+				$data['order_num'] = '';
 			}
+			// print_r($data['order_num']);exit;
 			if (isset($this->request->get['page'])) {
 			$page = $this->request->get['page'];
 			} else {
@@ -260,7 +262,8 @@ class ControllerAccountOrder extends Controller {
 
 			$data['order_id'] = $this->request->get['order_id'];
 			$data['date_added'] = date($this->language->get('date_format_short'), strtotime($order_info['date_added']));
-
+			$data['date_endadd'] =date('Y-m-d h:i:s',strtotime($order_info['date_added'])+7200);
+// print_r($data['date_endadd'] );exit;
 // 			if ($order_info['payment_address_format']) {
 // 				$format = $order_info['payment_address_format'];
 // 			} else {
@@ -826,13 +829,14 @@ class ControllerAccountOrder extends Controller {
 	   foreach ($options_tem as $k => $val) {
 	   	$options[$val['product_option_id']]=$val['product_option_value_id'];
 	   }
- // print_r(	$options);exit;
+ // print_r(	$options_tem);exit;
 
 		$price=  $this->model_catalog_product->getProductPricebyOptions($result['product_id'],$options);
+		// print_r($price);exit;
 		if ($price['price']!=$result['price']&&$result['price']!=$price['special']) {
 			$error=1;
 		}
-		// print_r($price);exit;
+		
 	  
 	    }
 	    if($error==1){

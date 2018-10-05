@@ -94,14 +94,29 @@ class ModelAccountOrder extends Model {
 				'currency_value'          => $order_query->row['currency_value'],
 				'date_modified'           => $order_query->row['date_modified'],
 				'date_added'              => $order_query->row['date_added'],
+				'order_num'                => $order_query->row['order_num'], 
 				'ip'                      => $order_query->row['ip']
 			);
 		} else {
 			return false;
 		}
 	}
+// 	public function getOrders($start = 0, $limit = 20) {
+// 		if ($start < 0) {
+// 			$start = 0;
+// 		}
 
-	public function getOrders($start = 0, $limit = 20) {
+// 		if ($limit < 1) {
+// 			$limit = 1;
+// 		}
+// // "SELECT o.order_id, o.firstname, o.lastname, os.name as status, o.date_added, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC LIMIT " . (int)$start . "," . (int)$limit
+
+// 		$query = $this->db->query("SELECT o.order_id,o.order_no, o.firstname, o.lastname, o.payment_code, os.name as status, o.date_added, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0'  AND o.del = '0' AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC LIMIT " . (int)$start . "," . (int)$limit);
+
+// 		return $query->rows;
+// 	}
+
+	public function getOrders($start = 0, $limit = 30) {
 		if ($start < 0) {
 			$start = 0;
 		}
@@ -109,10 +124,32 @@ class ModelAccountOrder extends Model {
 		if ($limit < 1) {
 			$limit = 1;
 		}
+		// $sql="SELECT o.order_id,o.order_num, o.firstname, o.lastname, os.name as status, o.date_added, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC " ;
+		// print_r($sql);exit;
 
-		$query = $this->db->query("SELECT o.order_id, o.firstname, o.lastname, os.name as status, o.date_added, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC LIMIT " . (int)$start . "," . (int)$limit);
+		$query = $this->db->query("SELECT o.order_id,o.order_num, o.firstname, o.lastname, os.name as status, o.date_added, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC  ");
 
 		return $query->rows;
+	}
+	public function deleteWishlist($order_id) {
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET del = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+	}
+	public function changeStatus($order_id,$order_status_id){
+	    $sql = "update `".DB_PREFIX."order` set order_status_id = '".$order_status_id."' where order_id = '".$order_id."'";
+	    $query = $this->db->query($sql);
+	    $this->db->query("INSERT INTO " . DB_PREFIX . "order_history SET order_id = '" . (int)$order_id . "', order_status_id = '" . (int)$order_status_id . "', notify = '0', comment = 'customer cancel', date_added = NOW()");
+
+        //根据订单ID,把
+        //该订单对应的产品数量加回去
+	    /*$product_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_id . "'");
+		foreach($product_query->rows as $product) {
+			$this->db->query("UPDATE `" . DB_PREFIX . "product` SET quantity = (quantity + " . (int)$product['quantity'] . ") WHERE product_id = '" . (int)$product['product_id'] . "' AND subtract = '1'");
+
+			$option_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_option WHERE order_id = '" . (int)$order_id . "' AND order_product_id = '" . (int)$product['order_product_id'] . "'");
+			foreach ($option_query->rows as $option) {
+				$this->db->query("UPDATE " . DB_PREFIX . "product_option_value SET quantity = (quantity + " . (int)$product['quantity'] . ") WHERE product_option_value_id = '" . (int)$option['product_option_value_id'] . "' AND subtract = '1'");
+			}
+		}*/
 	}
 
 	public function getOrderProduct($order_id, $order_product_id) {
@@ -122,7 +159,8 @@ class ModelAccountOrder extends Model {
 	}
 
 	public function getOrderProducts($order_id) {
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_id . "'");
+		// $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_id . "'");
+		$query = $this->db->query("SELECT op.*,p.image FROM " . DB_PREFIX . "order_product as op LEFT JOIN " . DB_PREFIX . "product as p on p.product_id=op.product_id WHERE order_id = '" . (int)$order_id . "'");
 
 		return $query->rows;
 	}
@@ -167,5 +205,10 @@ class ModelAccountOrder extends Model {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM `" . DB_PREFIX . "order_voucher` WHERE order_id = '" . (int)$order_id . "'");
 
 		return $query->row['total'];
+	}
+	public function getOrderProductNumber($order_id){
+		$query = $this->db->query("SELECT SUM(quantity) qty FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_id . "'");
+
+		return $query->row['qty'];
 	}
 }

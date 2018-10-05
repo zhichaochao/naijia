@@ -498,7 +498,7 @@ window.onload=function(){
 
     //关闭评价轮播
     $(".pro_big_img .close").click(function(){
-      $(".pro_big_img").slideUp();
+      $(".pro_big_img").hide();
     })
     
     //返回顶部

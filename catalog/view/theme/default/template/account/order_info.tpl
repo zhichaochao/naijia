@@ -1,4 +1,140 @@
 <?php echo $header; ?>
+<div class="in_content clearfix"></div>
+    <!--内容-->
+    
+    <!--pc端-->
+    <div class="pc_ordet_con clearfix">
+      <div class="bt">
+        <h1>ORDER INFORMATION</h1>
+        <p>Order No:<?php echo $order_num; ?></p>
+      </div>
+      
+      <div class="top clearfix">
+        <div class="left clearfix">
+          <h2><?php echo $order_status; ?></h2>
+          <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
+            <span class="span_r djs_p" title="<?php echo $date_endadd; ?>">
+              <span class="int_hour">02</span><i>:</i>
+              <span class="int_minute">00</span><i>:</i>
+              <span class="int_second">00</span>
+            </span>
+          </p>
+          <a class="pay_a" href="###">Continue To Pay</a>
+          <span>Order date:<?php echo $date_added; ?></span>
+        </div>
+        <div class="right">
+          <div class="text">
+            <div class="slide_p clearfix">
+              <p>Total Products <span>₦216K</span></p>
+              <p>Total Points <span>-₦0K</span></p>
+              <p>Total Shipping <span>₦0K</span></p>
+              <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p>
+            </div>
+            <hr />
+            <p class="total_p active clearfix">
+              <span>Total</span>
+              <em>₦216K</em>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="address clearfix">
+        <dl class="clearfix">
+          <dt>Name:</dt>
+          <dd>xiaoyanjing</dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>Address:</dt>
+          <dd>A lane in huangbian vllage district guangzhouguangdong province<br />
+          510000  China</dd>
+        </dl>
+        <dl class="clearfix">
+          <dt>Contact:</dt>
+          <dd>+8615601634559</dd>
+        </dl>
+      </div>
+      
+      <div class="bot clearfix">
+        <div class="top_span clearfix">
+          <span>COMMODITY </span>
+          <span>TEXTIRE OF MATERIAL</span>
+          <span>UNIT PRICE</span>
+          <span>NUMBER</span>
+          <span>TOTAL</span>
+        </div>  
+        <ul class="table_ul clearfix">
+          <li class="clearfix">
+            <div>
+              <a href="###">
+                <div class="pic_img">
+                  <img src="img/yd_shop1.jpg" alt="" />
+                </div>
+                <p class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan Brazilioan.</p>
+              </a>
+            </div>
+            <div>
+              <span>
+                Natural black; 12inch  <br />
+                4*13 frontal cap;
+              </span>
+            </div>
+            <div>
+              <span>$35.05</span>
+            </div>
+            <div><span>x1</span></div>
+            <div>
+              <span>$35.05</span>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div>
+              <a href="###">
+                <div class="pic_img">
+                  <img src="img/yd_shop1.jpg" alt="" />
+                </div>
+                <p class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan Brazilioan.</p>
+              </a>
+            </div>
+            <div>
+              <span>
+                Natural black; 12inch  <br />
+                4*13 frontal cap;
+              </span>
+            </div>
+            <div>
+              <span>$35.05</span>
+            </div>
+            <div><span>x1</span></div>
+            <div>
+              <span>$35.05</span>
+            </div>
+          </li>
+          <li class="clearfix">
+            <div>
+              <a href="###">
+                <div class="pic_img">
+                  <img src="img/yd_shop1.jpg" alt="" />
+                </div>
+                <p class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan Brazilioan.</p>
+              </a>
+            </div>
+            <div>
+              <span>
+                Natural black; 12inch  <br />
+                4*13 frontal cap;
+              </span>
+            </div>
+            <div>
+              <span>$35.05</span>
+            </div>
+            <div><span>x1</span></div>
+            <div>
+              <span>$35.05</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 <div class="container">
   <ul class="breadcrumb">
     <?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -172,3 +308,65 @@
     <?php echo $column_right; ?></div>
 </div>
 <?php echo $footer; ?>
+<script>
+  $(function(){
+    
+    //下拉total_p
+      $(".total_p").click(function(){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(this).siblings(".slide_p").stop().slideUp();
+          $(this).siblings("hr").hide();
+        }else{
+          $(this).addClass("active");
+          $(this).siblings(".slide_p").stop().slideDown();
+          $(this).siblings("hr").show();
+        }
+        
+        
+      })
+    
+  })
+  
+  
+  //倒计时
+  function show_time() {
+        $(".djs_p").each(function() {
+            var endtime = $(this).prop("title");
+            var time_start = new Date().getTime(); //设定当前时间
+            var time_end = new Date(endtime).getTime(); //设定目标时间
+            var time_distance = time_end - time_start;
+            var timer;
+            if (time_distance >= 0) {
+                var int_day = Math.floor(time_distance / 86400000)
+                time_distance -= int_day * 86400000;
+                var int_hour = Math.floor(time_distance / 3600000)
+                time_distance -= int_hour * 3600000;
+                var int_minute = Math.floor(time_distance / 60000)
+                time_distance -= int_minute * 60000;
+                var int_second = Math.floor(time_distance / 1000)
+                if (int_day < 10) {
+                    int_day = "0" + int_day;
+                }
+                if (int_hour < 10) {
+                    int_hour = "0" + int_hour;
+                }
+                if (int_minute < 10) {
+                    int_minute = "0" + int_minute;
+                }
+                if (int_second < 10) {
+                    int_second = "0" + int_second;
+                }
+                $(this).find(".int_day").text(int_day);
+                $(this).find(".int_hour").text(int_hour);
+                $(this).find(".int_minute").text(int_minute);
+                $(this).find(".int_second").text(int_second);
+            }else{
+                clearInterval(timer);
+                $(this).css("display","none");
+            }
+        })
+        timer = setTimeout("show_time()", 1000);
+    }
+    show_time();
+</script>
