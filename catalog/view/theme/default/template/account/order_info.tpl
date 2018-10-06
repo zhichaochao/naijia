@@ -10,6 +10,7 @@
       </div>
       
       <div class="top clearfix">
+<?php if($order_status=='Pending'){?>
         <div class="left clearfix">
           <h2><?php echo $order_status; ?></h2>
           <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
@@ -19,21 +20,94 @@
               <span class="int_second">00</span>
             </span>
           </p>
-          <a class="pay_a" href="###">Continue To Pay</a>
+
+        <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
+                    &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay;?>" title="Pay"  class="pay_a">Continue too pay</a>
+                  <?php } ?>
+
+                  <?php if($bank_receipt) { ?>
+                    &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay_receipt;?>" title="Pay"  class="pay_a">Re Submit Receipt</a>
+                  <?php }elseif(!($payment_code == 'pp_standard' || $payment_code == 'pp_express')){ ?>
+                    &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay_receipt;?>" title="Pay"  class="pay_a">Continues to pay</a>
+                <?php } ?>
+
+          <!-- <a class="pay_a" href="###">Continue To Pay</a> -->
+
           <span>Order date:<?php echo $date_added; ?></span>
         </div>
+<?php }elseif($order_status=='Completed'){?>
+        <div class="left clearfix">
+          <h2 class="huang"><?php echo $order_status; ?>  </h2>
+          <p class="p3">
+            Pending:<?php echo $date_added; ?> <br />
+            <!-- Delivered 2018-08-28<br /> -->
+            Delivered:<?php echo $date_modified; ?><br />
+            Complete:<?php echo $date_modified; ?>
+          </p>
+          <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a>
+          <span>Order date:<?php echo $date_added; ?></span>
+        </div>
+<?php }elseif($order_status=='Pending-unfilled'){?>
+          <div class="left clearfix">
+          <h2 class="huang"><?php echo $order_status; ?></h2>
+          <p class="p2">
+            Thanks for your order .<br />
+            · Payment has been completed<br />
+            · It will ready to ship in 1- 2 days.<br />
+            Emails will update to you if your <br />
+            package situation changes.
+          </p>
+          <span>Order date:<?php echo $date_added; ?></span>
+          <a class="btn_a" href="###">Contact us</a>
+        </div>
+<?php }elseif($order_status=='Delivered'){?>
+
+        <div class="left clearfix">
+          <h2 class="lv"><?php echo $order_status; ?> </h2>
+          <p class="p3">
+            Your package has been delivered<br /> 
+            on <?php echo $date_modified; ?>
+          </p>
+          <a class="pay_a lv" onclick="javascript:confirm_order('<?php echo $order_id; ?>');">Confirm Receipt</a>
+          <span>Order date:<?php echo $date_added; ?></span>
+          <a class="btn_a" href="###">Contact us</a>
+        </div>
+
+<?php }elseif($order_status=='lnvalid'){?>
+        <div class="left clearfix">
+          <h2 class="hong"><?php echo $order_status; ?> </h2>
+          <p class="p1">
+            Fail to complete payment or upload 
+            bank alert in time.
+          </p>
+          <a class="pay_a hong" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover To Pay</a>
+          <span>Order date:<?php echo $date_added; ?></span>
+        </div>
+
+<?php }elseif($order_status=='Canceled'){?>
+        <div class="left clearfix">
+          <h2 class="hei"><?php echo $order_status; ?>   </h2>
+          <a class="pay_a huang" onclick="javascript:recover_order('<?php echo $order_id; ?>');" >RE-ORDER</a>
+          <span>Order date:<?php echo $date_added; ?></span>
+        </div>
+
+<?php }?>
+        
+
         <div class="right">
           <div class="text">
             <div class="slide_p clearfix">
-              <p>Total Products <span>₦216K</span></p>
-              <p>Total Points <span>-₦0K</span></p>
-              <p>Total Shipping <span>₦0K</span></p>
+              <p>Total Products <span><?php echo $subtotals; ?></span></p>
+              <p>Total Points <span><?php echo $subtotals; ?></span></p>
+              <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
+
               <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p>
+
             </div>
             <hr />
             <p class="total_p active clearfix">
               <span>Total</span>
-              <em>₦216K</em>
+              <em><?php echo $total; ?></em>
             </p>
           </div>
         </div>
@@ -41,19 +115,18 @@
       <div class="address clearfix">
         <dl class="clearfix">
           <dt>Name:</dt>
-          <dd>xiaoyanjing</dd>
+          <dd><?php echo $shipping_firstname; ?></dd>
         </dl>
         <dl class="clearfix">
           <dt>Address:</dt>
-          <dd>A lane in huangbian vllage district guangzhouguangdong province<br />
-          510000  China</dd>
+          <dd><?php echo $shipping_addres; ?></dd>
         </dl>
         <dl class="clearfix">
           <dt>Contact:</dt>
-          <dd>+8615601634559</dd>
+          <dd><?php echo $shipping_telephones; ?></dd>
         </dl>
       </div>
-      
+
       <div class="bot clearfix">
         <div class="top_span clearfix">
           <span>COMMODITY </span>
@@ -63,252 +136,219 @@
           <span>TOTAL</span>
         </div>  
         <ul class="table_ul clearfix">
+         <?php foreach ($products as $product) { ?>
           <li class="clearfix">
             <div>
               <a href="###">
                 <div class="pic_img">
-                  <img src="img/yd_shop1.jpg" alt="" />
+                  <img src="<?php echo $product['order_image']; ?>" alt="" />
                 </div>
-                <p class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan Brazilioan.</p>
+                <p class="ov_text"><?php echo $product['name']; ?></p>
               </a>
             </div>
             <div>
               <span>
-                Natural black; 12inch  <br />
-                4*13 frontal cap;
+              <?php foreach ($product['option'] as $option) { ?>
+
+              <?php echo $option['name']; ?>: <?php echo $option['value']; ?>
+                <?php } ?>
+               <!--  Natural black; 12inch  <br />
+                4*13 frontal cap; -->
               </span>
             </div>
             <div>
-              <span>$35.05</span>
+              <span><?php echo $product['price']; ?></span>
             </div>
-            <div><span>x1</span></div>
+            <div><span>x<?php echo $product['quantity']; ?></span></div>
             <div>
-              <span>$35.05</span>
+              <span><?php echo $product['total']; ?></span>
             </div>
           </li>
-          <li class="clearfix">
-            <div>
-              <a href="###">
-                <div class="pic_img">
-                  <img src="img/yd_shop1.jpg" alt="" />
-                </div>
-                <p class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan Brazilioan.</p>
-              </a>
-            </div>
-            <div>
-              <span>
-                Natural black; 12inch  <br />
-                4*13 frontal cap;
-              </span>
-            </div>
-            <div>
-              <span>$35.05</span>
-            </div>
-            <div><span>x1</span></div>
-            <div>
-              <span>$35.05</span>
-            </div>
-          </li>
-          <li class="clearfix">
-            <div>
-              <a href="###">
-                <div class="pic_img">
-                  <img src="img/yd_shop1.jpg" alt="" />
-                </div>
-                <p class="ov_text">10”-30” Virgin Brazilioan Brazilioan Brazilioan Brazilioan Brazilioan.</p>
-              </a>
-            </div>
-            <div>
-              <span>
-                Natural black; 12inch  <br />
-                4*13 frontal cap;
-              </span>
-            </div>
-            <div>
-              <span>$35.05</span>
-            </div>
-            <div><span>x1</span></div>
-            <div>
-              <span>$35.05</span>
-            </div>
-          </li>
+          <?php } ?>
         </ul>
       </div>
+      <?php if($order_status=='Completed'){?>
+      <p class="ms_p">Please contact us if you have any problem of your order.</p>
+      <?php } ?>
     </div>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <?php if ($error_warning) { ?>
-  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
-    <button type="button" class="close" data-dismiss="alert">&times;</button>
-  </div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $heading_title; ?></h2>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left" colspan="2"><?php echo $text_order_detail; ?></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left" style="width: 50%;"><?php if ($invoice_no) { ?>
-              <b><?php echo $text_invoice_no; ?></b> <?php echo $invoice_no; ?><br />
-              <?php } ?>
-              <b><?php echo $text_order_id; ?></b> #<?php echo $order_id; ?><br />
-              <b><?php echo $text_date_added; ?></b> <?php echo $date_added; ?></td>
-            <td class="text-left" style="width: 50%;"><?php if ($payment_method) { ?>
-              <b><?php echo $text_payment_method; ?></b> <?php echo $payment_method; ?><br />
-              <?php } ?>
-              <?php if ($shipping_method) { ?>
-              <b><?php echo $text_shipping_method; ?></b> <?php echo $shipping_method; ?>
-              <?php } ?></td>
-          </tr>
-        </tbody>
-      </table>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left" style="width: 50%; vertical-align: top;"><?php echo $text_payment_address; ?></td>
-            <?php if ($shipping_address) { ?>
-            <td class="text-left" style="width: 50%; vertical-align: top;"><?php echo $text_shipping_address; ?></td>
-            <?php } ?>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left"><?php echo $payment_address; ?></td>
-            <?php if ($shipping_address) { ?>
-            <td class="text-left"><?php echo $shipping_address; ?></td>
-            <?php } ?>
-          </tr>
-        </tbody>
-      </table>
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover">
-          <thead>
-            <tr>
-              <td class="text-left"><?php echo $column_name; ?></td>
-              <td class="text-left"><?php echo $column_model; ?></td>
-              <td class="text-right"><?php echo $column_quantity; ?></td>
-              <td class="text-right"><?php echo $column_price; ?></td>
-              <td class="text-right"><?php echo $column_total; ?></td>
-              <?php if ($products) { ?>
-              <td style="width: 20px;"></td>
-              <?php } ?>
-            </tr>
-          </thead>
-          <tbody>
+    <!--移动端-->
+    <div class="ordet_con clearfix">
+      <div class="or_content clearfix">
+        <div class="top_yd clearfix">
+          <p><a class="fh" href="###">< BACK</a> <span>Order No:<?php echo $order_num; ?></span></p>
+        </div>
+
+        <?php if($order_status=='Pending'){?>
+        <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Please finish payment or upload the bank alert.</p>
+          <p class="p1">Or it will be invalid in 
+            <span class="span_r djs_p" title="<?php echo $date_endadd; ?>">
+              <span class="int_hour">02</span><i>:</i>
+              <span class="int_minute">00</span><i>:</i>
+              <span class="int_second">00</span>
+            </span>
+          </p>
+        </div>
+
+        <?php }elseif($order_status=='Completed'){?>
+
+        <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <ul>
+            <li>Pending <span><?php echo $date_added; ?></span></li>
+            <li>Delivered <span><?php echo $date_modified; ?></span></li>
+            <li>Completed <span><?php echo $date_modified; ?></span></li>
+          </ul>
+          <button class="modal_btn">Review</button>
+        </div>
+
+        <?php }elseif($order_status=='Pending-unfilled'){?>
+
+        <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Thanks for your order .</p>
+          <p class="p1">· Payment has been completed.</p>
+          <p class="p1">· It will ready to ship in 1- 2 days.</p>
+          <p class="p1">Emails will update to you if your package situation changes.</p>
+        </div>
+
+<?php }elseif($order_status=='Delivered'){?>
+          <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1 class="lv"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Your package has been delivered on <?php echo $date_modified; ?>. </p>
+        </div>
+<?php }elseif($order_status=='lnvalid'){?>
+        <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Fail to complete payment or <i><br /></i>  upload bank alert in time.</p>
+          <a class="pay_a" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover to pay</a>
+        </div>
+
+<?php }elseif($order_status=='Canceled'){?>
+        <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1 class="hei"><i></i> <span><?php echo $order_status; ?></span><p>(<?php echo $date_added; ?>)</p></h1>
+        </div>
+
+<?php }?>
+        
+        <div class="pro_order clearfix">
+          <h1>Product information</h1>
+          <ul>
             <?php foreach ($products as $product) { ?>
-            <tr>
-              <td class="text-left"><?php echo $product['name']; ?>
+            <li class="clearfix">
+              <a href="###">
+                <div class="pic_img">
+                  <img src="<?php echo $product['order_image']; ?>"/>
+                </div>
+                <p class="ov_text"><?php echo $product['name']; ?></p>
                 <?php foreach ($product['option'] as $option) { ?>
-                <br />
-                &nbsp;<small> - <?php echo $option['name']; ?>: <?php echo $option['value']; ?></small>
-                <?php } ?></td>
-              <td class="text-left"><?php echo $product['model']; ?></td>
-              <td class="text-right"><?php echo $product['quantity']; ?></td>
-              <td class="text-right"><?php echo $product['price']; ?></td>
-              <td class="text-right"><?php echo $product['total']; ?></td>
-              <td class="text-right" style="white-space: nowrap;"><?php if ($product['reorder']) { ?>
-                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
+             <p class="type"> <?php echo $option['name']; ?>: <?php echo $option['value']; ?></p>
                 <?php } ?>
-                <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
-            </tr>
+                <!-- <p class="type">Natural black; 12inch <i><br /></i> 4*13 frontal cap;</p> -->
+                <span class="num">x<?php echo $product['quantity']; ?></span>
+                <!-- <span class="price1">₦100K</span> -->
+                <span class="price2"><?php echo $product['price']; ?></span>
+              </a>
+            </li>
             <?php } ?>
-            <?php foreach ($vouchers as $voucher) { ?>
-            <tr>
-              <td class="text-left"><?php echo $voucher['description']; ?></td>
-              <td class="text-left"></td>
-              <td class="text-right">1</td>
-              <td class="text-right"><?php echo $voucher['amount']; ?></td>
-              <td class="text-right"><?php echo $voucher['amount']; ?></td>
-              <?php if ($products) { ?>
-              <td></td>
-              <?php } ?>
-            </tr>
-            <?php } ?>
-          </tbody>
-          <tfoot>
-            <?php foreach ($totals as $total) { ?>
-            <tr>
-              <td colspan="3"></td>
-              <td class="text-right"><b><?php echo $total['title']; ?></b></td>
-              <td class="text-right"><?php echo $total['text']; ?></td>
-              <?php if ($products) { ?>
-              <td></td>
-              <?php } ?>
-            </tr>
-            <?php } ?>
-          </tfoot>
-        </table>
+          </ul>
+        </div>
+        
+        <div class="or_address clearfix">
+          <h1>Shipping Address</h1>
+          <div class="text">
+          <p><?php echo $shipping_address; ?></p>
+          </div>
+        </div>
+        
+        <div class="total clearfix">
+          <div class="right clearfix">
+            <p class="total_p active clearfix">
+              <i class="text_i">Coupon: <i>- ₦5K</i></i>
+              <span>Total</span>
+              <i class="img_i"></i>
+              <em><?php echo $total; ?></em>
+              <i class="down_img"></i>
+            </p>
+            <hr />
+            <div class="slide_p clearfix">
+              <p>Total Products <span><?php echo $subtotals; ?></span></p>
+              <p>Total Points <span><?php echo $subtotals; ?></span></p>
+              <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
+              <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p>
+            </div>
+
+            
+          </div>
+
+            <?php if($order_status=='Pending' || $order_status=='lnvalid'){?>
+              <a class="btn_a hong" href="###">CONTINUE TO PAY</a>
+            <?php }?>
+
+            <?php if($order_status=='Completed' ){?>
+              <button class="md_btn w_50">CONTACT US</button>
+              <a class="btn_a1 btn_a" href="###">REVIEW</a>
+              <p class="ms_p pd_no">You package is on preparing,contact us if you have any problem.</p>
+            <?php }?>
+
+             <?php if($order_status=='Delivered'){?>
+              <button class="md_btn w_50">CONTACT US</button>
+              <a class="btn_a1 btn_a"  onclick="javascript:confirm_order('<?php echo $order_id; ?>');">CONFIRM RECEIPT</a>
+              <p class="ms_p pd_no">You package is on preparing,contact us if you have any problem.</p>
+            <?php }?>
+
+
+            <?php if($order_status=='Pending-unfilled'){?>
+              <a class="btn_a huang" href="###">CONTACT US</a>
+              <p class="ms_p">You package is on preparing,contact us if you have any problem.</p>
+            <?php }?>
+
+            <?php if($order_status=='Canceled'){?>
+            <a class="btn_a huang" onclick="javascript:recover_order('<?php echo $order_id; ?>');">RE-ORDER</a>
+            <?php }?>
+
+        </div>
       </div>
-      <?php if ($comment) { ?>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left"><?php echo $text_comment; ?></td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="text-left"><?php echo $comment; ?></td>
-          </tr>
-        </tbody>
-      </table>
-      <?php } ?>
-      <?php if ($histories) { ?>
-      <h3><?php echo $text_history; ?></h3>
-      <table class="table table-bordered table-hover">
-        <thead>
-          <tr>
-            <td class="text-left"><?php echo $column_date_added; ?></td>
-            <td class="text-left"><?php echo $column_status; ?></td>
-            <td class="text-left"><?php echo $column_comment; ?></td>
-          </tr>
-        </thead>
-        <tbody>
-          <?php if ($histories) { ?>
-          <?php foreach ($histories as $history) { ?>
-          <tr>
-            <td class="text-left"><?php echo $history['date_added']; ?></td>
-            <td class="text-left"><?php echo $history['status']; ?></td>
-            <td class="text-left"><?php echo $history['comment']; ?></td>
-          </tr>
-          <?php } ?>
-          <?php } else { ?>
-          <tr>
-            <td colspan="3" class="text-center"><?php echo $text_no_results; ?></td>
-          </tr>
-          <?php } ?>
-        </tbody>
-      </table>
-      <?php } ?>
-      <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
-      </div>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
+      
+    </div>
+
 <?php echo $footer; ?>
 <script>
+function confirm_order(order_id){
+if(confirm('Are you sure?')){
+           $.ajax({
+            url: 'index.php?route=account/order/confirm',
+            type: 'post',
+            data: {order_id:order_id},
+            dataType: 'json',
+            success: function(json) {
+               location.reload();
+            }
+        })
+      
+    }
+}
+function recover_order(order_id){
+if(confirm('Are you sure?')){
+           $.ajax({
+            url: 'index.php?route=account/order/recover',
+            type: 'post',
+            data: {order_id:order_id},
+            dataType: 'json',
+            success: function(json) {
+               location.reload();
+            }
+        })
+      
+    }
+}
   $(function(){
     
     //下拉total_p

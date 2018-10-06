@@ -94,7 +94,7 @@ class ControllerAccountOrder extends Controller {
 			);
 			
 		}
-		// print_r($data['orders']);exit;
+		// 
 		// 
 		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 
@@ -247,9 +247,9 @@ class ControllerAccountOrder extends Controller {
 			}
 			$limit=10;
 			$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit);
-			//print_r($results);exit;
-			$data['payment_code']=$results[0]['payment_code'];
-			//print_r($payment_code);exit;
+			// print_r($results);exit;
+			$data['payment_code']=$order_info['payment_code'];
+			// print_r($data['payment_code']);exit;
 			$data['repay']	      = $this->url->link('account/order/repay', 'order_id=' . $order_id, true);
 			$data['repay_receipt']	      = $this->url->link('account/order/repay_receipt', 'order_id=' . $order_id, true);
 			$data['cancel_href'] = $this->url->link('account/order/cancel', 'order_id=' . $order_id, true);
@@ -260,9 +260,12 @@ class ControllerAccountOrder extends Controller {
 				$data['order_status'] = '';
 			}
 
+			$data['compltedorder']=$_SERVER['REQUEST_URI'];
+// print_r($data['order_status']);exit;
 			$data['order_id'] = $this->request->get['order_id'];
 			$data['date_added'] = date($this->language->get('date_format_short'), strtotime($order_info['date_added']));
 			$data['date_endadd'] =date('Y-m-d h:i:s',strtotime($order_info['date_added'])+7200);
+			$data['date_modified'] = date($this->language->get('date_format_short'), strtotime($order_info['date_modified']));
 // print_r($data['date_endadd'] );exit;
 // 			if ($order_info['payment_address_format']) {
 // 				$format = $order_info['payment_address_format'];
@@ -294,8 +297,7 @@ class ControllerAccountOrder extends Controller {
 				'postcode'  => $order_info['payment_postcode'],
 				'zone'      => $order_info['payment_zone'],
 				'zone_code' => $order_info['payment_zone_code'],
-				'country'   => $order_info['payment_country'],
-				'payment_telephone' => $order_info['payment_telephone']
+				'country'   => $order_info['payment_country']
 			);
 
 			$data['payment_address'] = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
@@ -332,22 +334,25 @@ class ControllerAccountOrder extends Controller {
 				'postcode'  => $order_info['shipping_postcode'],
 				'zone'      => $order_info['shipping_zone'],
 				'zone_code' => $order_info['shipping_zone_code'],
-				'country'   => $order_info['shipping_country'],
-				'shipping_telephone' => $order_info['shipping_telephone']
+				'country'   => $order_info['shipping_country']
 			);
 
 			$data['shipping_address'] = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
- 			 //var_dump($data['shipping_address']);exit;
+ 			 // print_r($data['shipping_address']);exit;
  			$data['replace'] = $replace;
- 			//var_dump($data['replace']);exit;
-			$data['shipping_method'] = $order_info['shipping_method'];
+ 			$data['shipping_firstname'] = $order_info['shipping_firstname'];
+ 			$data['shipping_addres'] = $order_info['shipping_address_1'];
+ 			$data['shipping_telephones'] = $order_info['telephone'];
 
+ 			// var_dump($data['shipping_telephones']);exit;
+			$data['shipping_method'] = $order_info['shipping_method'];
+// print_r($data['shipping_method']);exit;
 			//物流号 dyl add
-			if ($order_info['shippingNumber']) {
-				$data['shippingNumber'] = $order_info['shippingNumber'];
-			} else {
-				$data['shippingNumber'] = '';
-			}
+			// if ($order_info['shippingNumber']) {
+			// 	$data['shippingNumber'] = $order_info['shippingNumber'];
+			// } else {
+			// 	$data['shippingNumber'] = '';
+			// }
 
 			$this->load->model('catalog/product');
 			$this->load->model('tool/upload');
@@ -406,8 +411,8 @@ class ControllerAccountOrder extends Controller {
 				);
 			
 			}
- //var_dump($data['products']);exit;
-			// Voucher
+ // print_r($data['products']);exit;
+			// Voucher  凭证
 			$data['vouchers'] = array();
 			$vouchers = $this->model_account_order->getOrderVouchers($this->request->get['order_id']);
 			foreach ($vouchers as $voucher) {
@@ -416,10 +421,12 @@ class ControllerAccountOrder extends Controller {
 					'amount'      => $this->currency->format($voucher['amount'], $order_info['currency_code'], $order_info['currency_value'])
 				);
 			}
-			//var_dump($vouchers);exit;
+			// var_dump($vouchers);exit;
 			// Totals
 			$data['totals'] = array();
 			$totals = $this->model_account_order->getOrderTotals($this->request->get['order_id']);
+			// print_r($totals);exit;
+			$data['subtotals']=$totals[0]['value'];
 			foreach ($totals as $total) {
 				$data['totals'][] = array(
 					'title' => $total['title'],
@@ -433,8 +440,8 @@ class ControllerAccountOrder extends Controller {
 				}
 			}
 
-			$data['comment'] = nl2br($order_info['comment']);
 
+			$data['comment'] = nl2br($order_info['comment']);
 			// History
 			$data['histories'] = array();
 			$results = $this->model_account_order->getOrderHistories($this->request->get['order_id']);
@@ -597,7 +604,7 @@ class ControllerAccountOrder extends Controller {
 		if (isset($this->session->orderaddress['telephone'])) {
 			$data['telephone'] = $this->session->orderaddress['telephone'];
 		}  elseif (!empty($order_info)) {
-			$data['telephone'] = $order_info['shipping_telephone'];
+			$data['telephone'] = '';
 		} else {
 			$data['telephone'] = '';
 		}
@@ -836,7 +843,7 @@ class ControllerAccountOrder extends Controller {
 		if ($price['price']!=$result['price']&&$result['price']!=$price['special']) {
 			$error=1;
 		}
-		
+		// print_r($error);exit;
 	  
 	    }
 	    if($error==1){
@@ -904,51 +911,65 @@ class ControllerAccountOrder extends Controller {
 	private function checkOrderStatus($orderStatusId){
 	   switch($orderStatusId){
 	   	  case 1:  $orderStatus='Pending'; break;
-	   	  case 2:  $orderStatus='Processing'; break;
+	   	  case 2:  $orderStatus='lnvalid'; break;
 	   	  case 3:  $orderStatus='Shipped'; break;
 	   	  case 5:  $orderStatus='Completed'; break;
+	   	  // case 5:  $orderStatus='Pending-unfilled'; break;
           case 7:  $orderStatus='Canceled'; break;
-	   	  case 8:  $orderStatus='Denied'; break;
+	   	  case 8:  $orderStatus='Pending-unfilled'; break;
           case 9:  $orderStatus='Canceled Reversal'; break;
           case 10: $orderStatus='Failed'; break;
           case 11: $orderStatus='refunded'; break;
 		  case 12: $orderStatus='Reversed'; break;
 		  case 13: $orderStatus='Chargeback'; break;
-          case 14: $orderStatus='Expired'; break;
+          // case 14: $orderStatus='Expired'; break;
+          case 14: $orderStatus='Delivered'; break;
           case 15: $orderStatus='Processed'; break;
           case 16: $orderStatus='Voided'; break;
 	   }
        return $orderStatus;
 	}
-public function delete() {
-		//$this->load->language('account/wishlist');
+	public function delete() {
 		$order_id=$this->request->post['order_id'];
-		//print_r($order_id);exit;
 		$json = array();
-
-		// if (isset($this->request->post['order_id'])) {
-		// 	$product_id = $this->request->post['order_id'];
-		// } else {
-		// 	$order_id = 0;
-		// }
-
 		$this->load->model('account/order');
-
 		$product_info = $this->model_account_order->getOrder($order_id);
-//print_r($product_info);exit;
 		if ($product_info) {
 			if ($this->customer->isLogged()) {
-				// Edit customers cart
 				$this->load->model('account/order');
-
 				$this->model_account_order->deleteWishlist($order_id);
-
-				// $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
-
-				//$json['total'] =  $this->model_account_wishlist->getTotalWishlist();
 			}
 		}
-
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
+	//恢复订单
+	public function recover() {
+		$order_id=$this->request->post['order_id'];
+		$json = array();
+		$this->load->model('account/order');
+		$product_info = $this->model_account_order->getOrder($order_id);
+		if ($product_info) {
+			if ($this->customer->isLogged()) {
+				$this->load->model('account/order');
+				$this->model_account_order->recoverorder($order_id);
+			}
+		}
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
+	//确认订单
+	public function confirm() {
+		$order_id=$this->request->post['order_id'];
+		$json = array();
+		$this->load->model('account/order');
+		$product_info = $this->model_account_order->getOrder($order_id);
+		if ($product_info) {
+			if ($this->customer->isLogged()) {
+				$this->load->model('account/order');
+				$this->model_account_order->confirmorder($order_id);
+			}
+		}
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}

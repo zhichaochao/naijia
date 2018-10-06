@@ -27,7 +27,7 @@
               <li class="active"><a href="###">Pending</a></li>
               <li><a href="###">Unfilled</a></li>
               <li><a href="###">Delivered</a></li>
-              <li><a href="###">Completed</a></li>
+              <li><a href="###">Complete</a></li>
               <li><a href="###">Invalid</a></li>
             </ol>
           </div>
@@ -71,6 +71,16 @@
                 <?php if($order['payment_code'] == 'pp_standard' || $order['payment_code'] == 'pp_express') { ?>
                 <a class="bot_a a1" href="<?php echo $order['repay'];?>">Continue To Pay</a>
                 <?php } ?>
+
+                <?php if($order['status'] == 'Canceled' || $order['status'] == 'lnvalid' ){ ?>
+                <a class="bot_a a1"  onclick="javascript:recover_order('<?php echo $order['order_id']; ?>');">Recover Order</a>
+                <?php } ?>
+                 <?php if($order['status'] == 'Delivered'){ ?>
+                 <a class="bot_a" onclick="javascript:confirm_order('<?php echo $order['order_id']; ?>');">Confirm Receipt</a>
+                <?php } ?>
+
+
+
                 <a class="bot_a" href="<?php echo $order['view']; ?>">Review</a>
               </div>
             </li>
@@ -261,18 +271,41 @@ function cancel_order(url){
   }
 }
 function order_remove(order_id){
-//alert(order_id);
 if(confirm('Are you sure?')){
-
            $.ajax({
             url: 'index.php?route=account/order/delete',
             type: 'post',
             data: {order_id:order_id},
             dataType: 'json',
-     
             success: function(json) {
-              // alert(json);
-              // if (json['link']) { }
+               location.reload();
+            }
+        })
+      
+    }
+}
+function recover_order(order_id){
+if(confirm('Are you sure?')){
+           $.ajax({
+            url: 'index.php?route=account/order/recover',
+            type: 'post',
+            data: {order_id:order_id},
+            dataType: 'json',
+            success: function(json) {
+               location.reload();
+            }
+        })
+      
+    }
+}
+function confirm_order(order_id){
+if(confirm('Are you sure?')){
+           $.ajax({
+            url: 'index.php?route=account/order/confirm',
+            type: 'post',
+            data: {order_id:order_id},
+            dataType: 'json',
+            success: function(json) {
                location.reload();
             }
         })

@@ -1549,3 +1549,339 @@
 2018-10-05 10:05:27 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
 2018-10-05 10:05:27 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
 2018-10-05 10:05:27 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:14:25 - PHP Notice:  Undefined index: payment_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 298
+2018-10-06 1:14:25 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 336
+2018-10-06 1:14:25 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 346
+2018-10-06 1:14:25 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 600
+2018-10-06 1:14:25 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 639
+2018-10-06 1:14:25 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:14:25 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:14:25 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:14:25 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:17:12 - PHP Notice:  Undefined index: payment_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 298
+2018-10-06 1:17:12 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 336
+2018-10-06 1:17:12 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 346
+2018-10-06 1:17:12 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 600
+2018-10-06 1:17:12 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 639
+2018-10-06 1:17:12 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:17:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:17:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:17:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:35:57 - PHP Notice:  Undefined index: payment_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 298
+2018-10-06 1:35:57 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 336
+2018-10-06 1:36:07 - PHP Notice:  Undefined index: payment_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 298
+2018-10-06 1:36:07 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 336
+2018-10-06 1:36:07 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 346
+2018-10-06 1:36:07 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 600
+2018-10-06 1:36:07 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 639
+2018-10-06 1:36:07 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:36:07 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:36:07 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:36:07 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:37:12 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 335
+2018-10-06 1:37:12 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 345
+2018-10-06 1:37:12 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 599
+2018-10-06 1:37:12 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 638
+2018-10-06 1:37:12 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:37:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:37:14 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 335
+2018-10-06 1:37:14 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 345
+2018-10-06 1:37:14 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 599
+2018-10-06 1:37:14 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 638
+2018-10-06 1:37:14 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:14 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:14 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:37:14 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:37:29 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 344
+2018-10-06 1:37:29 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 598
+2018-10-06 1:37:29 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 637
+2018-10-06 1:37:29 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:29 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:29 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:37:29 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:37:30 - PHP Notice:  Undefined index: shippingNumber in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 344
+2018-10-06 1:37:30 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 598
+2018-10-06 1:37:30 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 637
+2018-10-06 1:37:30 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:30 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:30 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:37:30 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:37:47 - PHP Notice:  Undefined index: shipping_telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 598
+2018-10-06 1:37:47 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 637
+2018-10-06 1:37:47 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:37:47 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:37:47 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:38:37 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 637
+2018-10-06 1:38:37 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:38:37 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:38:37 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:38:37 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:38:39 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 637
+2018-10-06 1:38:39 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:38:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:38:39 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:38:39 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:38:53 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:38:53 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:38:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:38:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:39:49 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:39:49 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:39:49 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:39:49 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:39:50 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:39:50 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:39:50 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:39:50 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:40:33 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:40:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:40:33 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:40:33 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:41:47 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:41:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:41:47 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:41:47 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:44:24 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-06 1:44:24 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 1:44:24 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 1:52:24 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:52:24 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 140
+2018-10-06 1:52:24 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 157
+2018-10-06 1:52:24 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 308
+2018-10-06 1:54:53 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:54:53 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:54:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:54:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:55:17 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:17 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:55:17 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:55:18 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:18 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:55:18 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:55:33 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:33 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:55:33 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:55:34 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:34 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:55:34 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:55:49 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:49 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:55:49 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:55:49 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:56:00 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:56:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:56:00 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:56:00 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:56:01 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:56:01 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:56:01 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:56:01 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:56:48 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:56:48 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:56:48 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:56:48 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 1:58:43 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:58:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 1:58:43 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 1:58:43 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 2:00:58 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 2:00:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 139
+2018-10-06 2:00:58 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 156
+2018-10-06 2:00:58 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 307
+2018-10-06 2:07:48 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:07:48 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:07:48 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 165
+2018-10-06 2:07:48 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 316
+2018-10-06 2:08:20 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:08:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:08:20 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 165
+2018-10-06 2:08:20 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 316
+2018-10-06 2:08:43 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:08:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:08:43 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 165
+2018-10-06 2:08:43 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 316
+2018-10-06 2:08:55 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:08:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 148
+2018-10-06 2:08:55 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 165
+2018-10-06 2:08:55 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 316
+2018-10-06 2:09:06 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:06 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 166
+2018-10-06 2:09:06 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 317
+2018-10-06 2:09:12 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 166
+2018-10-06 2:09:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 317
+2018-10-06 2:09:14 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:14 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:14 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 166
+2018-10-06 2:09:14 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 317
+2018-10-06 2:09:20 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:09:20 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 166
+2018-10-06 2:09:20 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 317
+2018-10-06 2:11:03 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:11:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:11:03 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 166
+2018-10-06 2:11:03 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 317
+2018-10-06 2:11:29 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:11:29 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 149
+2018-10-06 2:11:29 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 166
+2018-10-06 2:11:29 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 317
+2018-10-06 2:18:20 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:18:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:18:20 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:18:20 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 319
+2018-10-06 2:20:44 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:20:44 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:20:44 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:20:44 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:20:50 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:20:50 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:20:50 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:20:50 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:26:53 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:26:53 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:26:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:26:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:27:04 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:27:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:27:04 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:27:04 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:27:04 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:27:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:27:04 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:27:04 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:27:13 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:27:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:27:13 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:27:13 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:28:01 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-06 2:28:01 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 2:28:01 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 2:28:14 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-06 2:28:14 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 2:28:14 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 2:28:46 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-06 2:28:46 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 2:28:46 - PHP Notice:  Undefined index: quantity in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 47
+2018-10-06 2:29:25 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:29:25 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 151
+2018-10-06 2:29:25 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 168
+2018-10-06 2:29:25 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 320
+2018-10-06 2:29:59 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 141
+2018-10-06 2:29:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 141
+2018-10-06 2:29:59 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 158
+2018-10-06 2:29:59 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 310
+2018-10-06 2:31:33 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 154
+2018-10-06 2:31:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 154
+2018-10-06 2:31:33 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 171
+2018-10-06 2:31:33 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 323
+2018-10-06 2:31:34 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 154
+2018-10-06 2:31:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 154
+2018-10-06 2:31:34 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 171
+2018-10-06 2:31:34 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 323
+2018-10-06 2:32:36 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 141
+2018-10-06 2:32:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 141
+2018-10-06 2:32:36 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 158
+2018-10-06 2:32:36 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 310
+2018-10-06 2:37:03 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:03 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 127
+2018-10-06 2:37:03 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 279
+2018-10-06 2:37:06 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:06 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 127
+2018-10-06 2:37:06 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 279
+2018-10-06 2:37:07 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:07 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:07 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 127
+2018-10-06 2:37:07 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 279
+2018-10-06 2:37:08 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:08 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 110
+2018-10-06 2:37:08 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 127
+2018-10-06 2:37:08 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 279
+2018-10-06 2:39:55 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 99
+2018-10-06 2:39:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 99
+2018-10-06 2:39:55 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 116
+2018-10-06 2:39:55 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 268
+2018-10-06 2:40:45 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:40:45 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:40:45 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:40:45 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:40:46 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:40:46 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:40:46 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:40:46 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:40:54 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:40:54 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:40:54 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:40:54 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:41:07 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:41:07 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:41:07 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:41:07 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:41:34 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:41:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:41:34 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:41:34 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:42:35 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:42:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:42:35 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:42:35 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:42:50 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:42:50 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:42:50 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:42:50 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:42:53 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:42:53 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:42:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:42:53 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:43:12 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:43:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:43:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:43:12 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:43:19 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:43:19 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:43:19 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:43:19 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 2:44:22 - PHP Notice:  Undefined variable: breadcrumbs in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:44:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 103
+2018-10-06 2:44:22 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 120
+2018-10-06 2:44:22 - PHP Notice:  Undefined variable: column_right in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 272
+2018-10-06 5:44:14 - PHP Notice:  Undefined variable: date_modified in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 32
+2018-10-06 5:44:16 - PHP Notice:  Undefined variable: date_modified in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 32
+2018-10-06 6:23:13 - PHP Notice:  Undefined variable: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 27
+2018-10-06 6:23:14 - PHP Notice:  Undefined variable: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 27
+2018-10-06 6:23:15 - PHP Notice:  Undefined variable: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 27
+2018-10-06 6:23:16 - PHP Notice:  Undefined variable: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_info.tpl on line 27
+2018-10-06 6:23:37 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:23:43 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:23:54 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:24:00 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:24:05 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:32:53 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:33:31 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:33:42 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:34:33 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:34:39 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:34:44 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:34:47 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:35:32 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:35:46 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:38:28 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:42:44 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:48:01 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:50:48 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 6:51:03 - PHP Notice:  Undefined index: bank_receipt in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 645
+2018-10-06 7:02:38 - PHP Notice:  Undefined variable: payment_code in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 252
+2018-10-06 9:16:54 - PHP Notice:  Undefined variable: orderStatus in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 930
+2018-10-06 9:17:15 - PHP Notice:  Undefined variable: orderStatus in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 930
+2018-10-06 9:17:22 - PHP Notice:  Undefined variable: orderStatus in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\order.php on line 930

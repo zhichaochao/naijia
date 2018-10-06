@@ -69,6 +69,7 @@ class ModelAccountOrder extends Model {
 				'payment_iso_code_3'      => $payment_iso_code_3,
 				'payment_address_format'  => $order_query->row['payment_address_format'],
 				'payment_method'          => $order_query->row['payment_method'],
+				'payment_code'            => $order_query->row['payment_code'],
 				'shipping_firstname'      => $order_query->row['shipping_firstname'],
 				'shipping_lastname'       => $order_query->row['shipping_lastname'],
 				'shipping_company'        => $order_query->row['shipping_company'],
@@ -95,7 +96,8 @@ class ModelAccountOrder extends Model {
 				'date_modified'           => $order_query->row['date_modified'],
 				'date_added'              => $order_query->row['date_added'],
 				'order_num'                => $order_query->row['order_num'], 
-				'ip'                      => $order_query->row['ip']
+				'ip'                      => $order_query->row['ip'],
+				'bank_receipt'            => $order_query->row['bank_receipt']
 			);
 		} else {
 			return false;
@@ -133,6 +135,12 @@ class ModelAccountOrder extends Model {
 	}
 	public function deleteWishlist($order_id) {
 		$this->db->query("UPDATE " . DB_PREFIX ."order SET del = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+	}
+	public function recoverorder($order_id) {
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+	}
+	public function confirmorder($order_id) {
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '5',date_modified = NOW() WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
 	}
 	public function changeStatus($order_id,$order_status_id){
 	    $sql = "update `".DB_PREFIX."order` set order_status_id = '".$order_status_id."' where order_id = '".$order_id."'";
