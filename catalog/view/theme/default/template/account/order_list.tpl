@@ -4,7 +4,7 @@
     <div class="order_con clearfix">
       <div class="or_content clearfix">
           <div class="top_yd clearfix">
-            <h1><a class="fh" href="###">< BACK</a> MY ORDERG</h1>
+            <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY ORDERG</h1>
           </div>
           
         <div class="lf_nav">

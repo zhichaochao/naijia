@@ -130,6 +130,12 @@
                         <?php } ?>
                     </ul>
                     <p class="size_p">Select Size Guide</p>
+                    <div class="size_img">
+                      <div class="img">
+                        <div class="close"></div>
+                        <img src="catalog/view/theme/default/img/size.jpg" alt="" />
+                      </div>
+                  </div>
                   </li>
                 <?php }elseif ($option['type'] == 'select') { ?>
                 <li class="clearfix">
@@ -230,7 +236,7 @@
                         <div class="fy_zsq"><i class="fy_i1">2</i>/<i class="fy_i2">5</i></div>
                       </div>
                     </div>
-                    <a class="view_a" href="###">View All Reviews <i>></i></a>
+                    <a class="view_a" href="<?php echo $review_tpl; ?>">View All Reviews <i>></i></a>
                   </div>
                    <?php } ?>
                   <?php }else{?>
@@ -247,7 +253,7 @@
                 </h2>
                 <div class="slide_text">
                   <div class="pl_div">
-                  <p class="no_review"> This product hasn't any review yet</p>
+                  <!-- <p class="no_review"> This product hasn't any review yet</p> -->
                   </div>
                   <?php }?>
                  
@@ -377,17 +383,17 @@ window.onload=function(){
       $(".pro_det .img_lf .time>p").css("width",p_win+"%");
     }
     
-    //数量加减
-    $(".number .add , .number .span_add").click(function(){
-      var num_val = $(".number .num_in").val();
+  //数量加减
+    $(".number .num_rf>.add , .number .span_add").click(function(){
+      var num_val =$(this).parents(".number").find(".num_in").val();
       num_val++;
-      $(".number .num_in").val(num_val);
+      $(this).parents(".number").find(".num_in").val(num_val);
     })
-    $(".number .sub , .number .span_sub").click(function(){
-      var num_val = $(".number .num_in").val();
+    $(".number .num_rf>.sub , .number .span_sub").click(function(){
+      var num_val =$(this).parents(".number").find(".num_in").val();
       if(num_val>1){
         num_val--;
-        $(".number .num_in").val(num_val);
+        $(this).parents(".number").find(".num_in").val(num_val);
       }
     })
     
@@ -592,7 +598,22 @@ function changeprice() {
   $(".text_rf").resize(function() {
       console.log($(this).height());
   });
-  
+  //size
+  $(".size_p").click(function(){
+    $(".size_img").fadeIn();
+    $("body").css("overflow","hidden");
+  })
+  $(".size_img .close").click(function(){
+    $(".size_img").fadeOut();
+    $("body").css("overflow","");
+  })
+  $(".size_img").click(function(e){
+      var close = $('.size_img .img'); 
+         if(!close.is(e.target) && close.has(e.target).length === 0){
+           $(".size_img").fadeOut();
+           $("body").css("overflow","");
+      }
+    })
 }
 
 

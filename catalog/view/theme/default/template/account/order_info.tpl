@@ -175,7 +175,7 @@
     <div class="ordet_con clearfix">
       <div class="or_content clearfix">
         <div class="top_yd clearfix">
-          <p><a class="fh" href="###">< BACK</a> <span>Order No:<?php echo $order_num; ?></span></p>
+          <p><a class="fh" href="<?=$home;?>">< BACK</a> <span>Order No:<?php echo $order_num; ?></span></p>
         </div>
 
         <?php if($order_status=='Pending'){?>
