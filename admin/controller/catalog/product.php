@@ -686,7 +686,7 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['error_model'] = '';
 		}
-
+	
 		if (isset($this->error['keyword'])) {
 			$data['error_keyword'] = $this->error['keyword'];
 		} else {
@@ -771,6 +771,13 @@ class ControllerCatalogProduct extends Controller {
 			$data['model'] = $product_info['model'];
 		} else {
 			$data['model'] = '';
+		}
+		if (isset($this->request->post['color'])) {
+			$data['color'] = $this->request->post['color'];
+		} elseif (!empty($product_info)) {
+			$data['color'] = $product_info['color'];
+		} else {
+			$data['color'] = '';
 		}
 
 		if (isset($this->request->post['sku'])) {
@@ -1109,60 +1116,7 @@ class ControllerCatalogProduct extends Controller {
 			}
 		}
 
-		// Options
-		$this->load->model('catalog/option');
-
-		if (isset($this->request->post['product_option'])) {
-			$product_options = $this->request->post['product_option'];
-		} elseif (isset($this->request->get['product_id'])) {
-			$product_options = $this->model_catalog_product->getProductOptions($this->request->get['product_id']);
-		} else {
-			$product_options = array();
-		}
-
-		$data['product_options'] = array();
-
-		foreach ($product_options as $product_option) {
-			$product_option_value_data = array();
-
-			if (isset($product_option['product_option_value'])) {
-				foreach ($product_option['product_option_value'] as $product_option_value) {
-					$product_option_value_data[] = array(
-						'product_option_value_id' => $product_option_value['product_option_value_id'],
-						'option_value_id'         => $product_option_value['option_value_id'],
-						'quantity'                => $product_option_value['quantity'],
-						'remarks'                 => $product_option_value['remarks'],
-						'subtract'                => $product_option_value['subtract'],
-						'price'                   => $product_option_value['price'],
-						'price_prefix'            => $product_option_value['price_prefix'],
-						'points'                  => $product_option_value['points'],
-						'points_prefix'           => $product_option_value['points_prefix'],
-						'weight'                  => $product_option_value['weight'],
-						'weight_prefix'           => $product_option_value['weight_prefix']
-					);
-				}
-			}
-
-			$data['product_options'][] = array(
-				'product_option_id'    => $product_option['product_option_id'],
-				'product_option_value' => $product_option_value_data,
-				'option_id'            => $product_option['option_id'],
-				'name'                 => $product_option['name'],
-				'type'                 => $product_option['type'],
-				'value'                => isset($product_option['value']) ? $product_option['value'] : '',
-				'required'             => $product_option['required']
-			);
-		}
-
-		$data['option_values'] = array();
-
-		foreach ($data['product_options'] as $product_option) {
-			if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') {
-				if (!isset($data['option_values'][$product_option['option_id']])) {
-					$data['option_values'][$product_option['option_id']] = $this->model_catalog_option->getOptionValues($product_option['option_id']);
-				}
-			}
-		}
+	
 
 		$this->load->model('customer/customer_group');
 
@@ -1326,12 +1280,23 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['product_layout'] = array();
 		}
-		$data['product_selects'] = $this->model_catalog_product->getProductSelects($this->request->get['product_id']);;
+		
+		$this->load->model('catalog/option');
+
+		if (isset($this->request->post['product_select'])) {
+			$data['product_selects'] =$this->request->post['product_select'];
+		}elseif (isset($this->request->get['product_id'])) {
+			$data['product_selects'] = $this->model_catalog_product->getProductSelects($this->request->get['product_id']);
+		}else{
+			$data['product_selects'] = array();
+		}
+		
 		$lengths= $this->model_catalog_option->getOptionValues(1);
 		$len_tems=array();
 		foreach ($lengths as $key => $value) {
 			$len_tems[$value['option_value_id']]=$value['name'];
 		}
+		// print_r($len_tems);exit();
 		$data['lengths']=$len_tems;
 		$wigs= $this->model_catalog_option->getOptionValues(5);
 			$len_tems=array();
