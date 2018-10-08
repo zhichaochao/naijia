@@ -205,6 +205,12 @@
 									<li><span>28″(model size)</span></li>
 								</ul>
 								<p class="size_p">Select Size Guide</p>
+								<div class="size_img">
+									<div class="img">
+										<div class="close"></div>
+										<img src="img/size.jpg" alt="" />
+									</div>
+								</div>
 							</li>
 							
 							<!--默认选中-->
@@ -740,7 +746,7 @@ window.onload=function(){
 		})
 		//关闭评价轮播
 		$(".pro_big_img .close").click(function(){
-			$(".pro_big_img").slideUp();
+			$(".pro_big_img").hide();
 		})
 		$("body").click(function(e){
 			if($(window).width()<=920){
@@ -828,6 +834,24 @@ window.onload=function(){
 	$(".text_rf").resize(function() {
 	    console.log($(this).height());
 	});
+	
+	//size
+	$(".size_p").click(function(){
+		$(".size_img").fadeIn();
+		$("body").css("overflow","hidden");
+	})
+	$(".size_img .close").click(function(){
+		$(".size_img").fadeOut();
+		$("body").css("overflow","");
+	})
+	$(".size_img").click(function(e){
+      var close = $('.size_img .img'); 
+         if(!close.is(e.target) && close.has(e.target).length === 0){
+           $(".size_img").fadeOut();
+           $("body").css("overflow","");
+      }
+    })
+	
 	
 }
 

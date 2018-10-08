@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>ORDER DTEAILS</title>
+		<title>ORDER DTEAILS7</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,7 +100,6 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		
 		<!--pc端-->
 		<div class="pc_ordet_con clearfix">
 			<div class="bt">
@@ -110,16 +109,16 @@
 			
 			<div class="top clearfix">
 				<div class="left clearfix">
-					<h2>Pending</h2>
-					<p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
-						<span class="span_r djs_p" title="2018/09/20 19:00:00">
-							<span class="int_hour">02</span><i>:</i>
-							<span class="int_minute">00</span><i>:</i>
-							<span class="int_second">00</span>
-						</span>
+					<h2 class="huang">Pending-unfilled</h2>
+					<p class="p2">
+						Thanks for your order .<br />
+						· Payment has been completed<br />
+						· It will ready to ship in 1- 2 days.<br />
+						Emails will update to you if your <br />
+						package situation changes.
 					</p>
-					<a class="pay_a" href="###">Continue To Pay</a>
 					<span>Order date:2018-09-07</span>
+					<a class="btn_a" href="###">Contact us</a>
 				</div>
 				<div class="right">
 					<div class="text">
@@ -244,15 +243,11 @@
 				
 				<div class="zt_top clearfix">
 					<em class="line_h"></em>
-					<h1><i></i> <span>Pending </span><p>(2018-09-07)</p></h1>
-					<p class="p1">Please finish payment or upload the bank alert.</p>
-					<p class="p1">Or it will be invalid in 
-						<span class="span_r djs_p" title="2018/09/20 19:00:00">
-							<span class="int_hour">02</span><i>:</i>
-							<span class="int_minute">00</span><i>:</i>
-							<span class="int_second">00</span>
-						</span>
-					</p>
+					<h1 class="hei"><i></i> <span>Pending-unfilled </span><p>(2018-09-07)</p></h1>
+					<p class="p1">Thanks for your order .</p>
+					<p class="p1">· Payment has been completed.</p>
+					<p class="p1">· It will ready to ship in 1- 2 days.</p>
+					<p class="p1">Emails will update to you if your package situation changes.</p>
 				</div>
 				
 				<div class="pro_order clearfix">
@@ -286,13 +281,34 @@
 				</div>
 				
 				<div class="or_address clearfix">
-					<h1>Shipping Address</h1>
+					<h1>Pickup Address</h1>
 					<div class="text">
 						<p>xiaoyanjing</p>
 						<p>A lane in huangbian vllage district guangzhou guangdong province</p>
 						<p>510000  China</p>
 						<p>+8615601634559</p>
 					</div>
+				</div>
+				
+				<div class="xianxia clearfix">
+					<span class="span1">Bank Alert</span>
+					<span class="span2">Voucher picture</span>
+					<div class="hui">
+						<div class="img">
+							<img src=""/>
+							<div class="close" onclick="del_img($(this))"></div>
+						</div>
+					</div>
+					<div class="center">
+						<div class="btn">
+							<div class="file_div">
+								<input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+								<a class="btn1" href="###">Re-upload</a>
+							</div>
+							<a class="btn2" href="###">SUBMIT</a>
+						</div>
+					</div>
+					<p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
 				</div>
 				
 				<div class="total clearfix">
@@ -314,8 +330,10 @@
 
 						
 					</div>
-					<a class="btn_a hong" href="###">CONTINUE TO PAY</a>
+					<a class="btn_a huang" href="###">CONTACT US</a>
+					<p class="ms_p">You package is on preparing,contact us if you have any problem.</p>
 				</div>
+			
 			</div>
 			
 		</div>
@@ -589,48 +607,47 @@
 				
 				
 			})
-		
 	})
-	
-	
-	//倒计时
-	function show_time() {
-        $(".djs_p").each(function() {
-            var endtime = $(this).prop("title");
-            var time_start = new Date().getTime(); //设定当前时间
-            var time_end = new Date(endtime).getTime(); //设定目标时间
-            var time_distance = time_end - time_start;
-            var timer;
-            if (time_distance >= 0) {
-                var int_day = Math.floor(time_distance / 86400000)
-                time_distance -= int_day * 86400000;
-                var int_hour = Math.floor(time_distance / 3600000)
-                time_distance -= int_hour * 3600000;
-                var int_minute = Math.floor(time_distance / 60000)
-                time_distance -= int_minute * 60000;
-                var int_second = Math.floor(time_distance / 1000)
-                if (int_day < 10) {
-                    int_day = "0" + int_day;
-                }
-                if (int_hour < 10) {
-                    int_hour = "0" + int_hour;
-                }
-                if (int_minute < 10) {
-                    int_minute = "0" + int_minute;
-                }
-                if (int_second < 10) {
-                    int_second = "0" + int_second;
-                }
-                $(this).find(".int_day").text(int_day);
-                $(this).find(".int_hour").text(int_hour);
-                $(this).find(".int_minute").text(int_minute);
-                $(this).find(".int_second").text(int_second);
-            }else{
-                clearInterval(timer);
-                $(this).css("display","none");
+	//调取上传框
+    function getphoto(node) {
+        var imgURL = "";
+        try{
+            var file = null;
+            if(node.files && node.files[0] ){
+                file = node.files[0];
+            }else if(node.files && node.files.item(0)) {
+                file = node.files.item(0);
             }
-        })
-        timer = setTimeout("show_time()", 1000);
+            try{
+                imgURL =  file.getAsDataURL();
+            }catch(e){
+                imgRUL = window.URL.createObjectURL(file);
+            }
+        }catch(e){
+            if (node.files && node.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgURL = e.target.result;
+                };
+                reader.readAsDataURL(node.files[0]);
+            }
+        }
+        creatImg(imgRUL);
+        return imgURL;
     }
-    show_time();
+ 
+ 	//上传选中的图片 显示页面
+    function creatImg(imgRUL){
+        $(".hui img").attr("src",imgRUL);
+        $(".hui .close").css("display","block");
+    }
+	
+	//删除选中的图片
+	function del_img(obj){
+		obj.siblings("img").attr("src","");
+		 $(".hui .close").css("display","none");
+	}
+		
+		
+		
 </script>
