@@ -37,7 +37,7 @@ function bank_transfer_gay() {
 		},
 		
 		success: function(json) {
-			location =json['href'];
+			// location =json['href'];
 		}
 	});
 };

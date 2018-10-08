@@ -70,7 +70,7 @@
 
 <script>
     function pay() {
-       alert('Please choose payment method.');
+       alert('Please choose address and payment method.');
     }
     $(function(){
 //         $("input").focus(function(){

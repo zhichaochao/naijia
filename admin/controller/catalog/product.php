@@ -1326,6 +1326,20 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['product_layout'] = array();
 		}
+		$data['product_selects'] = $this->model_catalog_product->getProductSelects($this->request->get['product_id']);;
+		$lengths= $this->model_catalog_option->getOptionValues(1);
+		$len_tems=array();
+		foreach ($lengths as $key => $value) {
+			$len_tems[$value['option_value_id']]=$value['name'];
+		}
+		$data['lengths']=$len_tems;
+		$wigs= $this->model_catalog_option->getOptionValues(5);
+			$len_tems=array();
+		foreach ($wigs as $key => $value) {
+			$len_tems[$value['option_value_id']]=$value['name'];
+		}
+		$data['wigs']=$len_tems;
+		// print_r($data['lengths']);exit();
 
 		$this->load->model('design/layout');
 
