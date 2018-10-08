@@ -2018,3 +2018,7 @@
 2018-10-08 7:22:42 - PHP Notice:  Undefined variable: url in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 825
 2018-10-08 7:22:48 - PHP Notice:  Undefined variable: url in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 825
 2018-10-08 7:22:54 - PHP Notice:  Undefined variable: url in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 825
+2018-10-08 7:57:00 - PHP Notice:  Undefined variable: header in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\review.tpl on line 1
+2018-10-08 7:57:00 - PHP Notice:  Undefined variable: footer in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\review.tpl on line 171
+2018-10-08 7:57:01 - PHP Notice:  Undefined variable: header in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\review.tpl on line 1
+2018-10-08 7:57:01 - PHP Notice:  Undefined variable: footer in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\review.tpl on line 171

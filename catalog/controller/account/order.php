@@ -109,6 +109,11 @@ class ControllerAccountOrder extends Controller {
 		} else {
 			$data['telephone'] = '';
 		}
+		if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+		}else{
+			$data['home'] =$this->url->link('common/home');
+		}
 		$pagination = new Pagination();
 		$pagination->total = $order_total;
 		$pagination->page = $page;
@@ -245,6 +250,11 @@ class ControllerAccountOrder extends Controller {
 			} else {
 				$page = 1;
 			}
+			if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+		}else{
+			$data['home'] =$this->url->link('common/home');
+		}
 			$limit=10;
 			$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit);
 			// print_r($results);exit;
