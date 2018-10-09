@@ -41,8 +41,8 @@ class ModelCatalogProduct extends Model {
 
 		if (isset($data['product_select'])) {
 			foreach ($data['product_select'] as $product_select) {
-				if ($price=0) {$price= $product_select['price'];}else{if ($product_select['price']<$price) {$price= $product_select['price'];}}
-				if ($max_price=0) {$max_price= $product_select['price'];}else{if ($product_select['price']>$max_price) {$max_price= $product_select['price'];}}
+				if ($price==0) {$price= $product_select['price'];}else{if ($product_select['price']<$price) {$price= $product_select['price'];}}
+				if ($max_price==0) {$max_price= $product_select['price'];}else{if ($product_select['price']>$max_price) {$max_price= $product_select['price'];}}
 				$this->db->query("INSERT INTO " . DB_PREFIX . "product_select SET product_id = '" . (int)$product_id . "', length_id = '" . (int)$product_select['length_id'] . "', main = '" . (int)$product_select['main'] . "', quantity = '" . (int)$product_select['quantity'] . "', wig_id = '" . (int)$product_select['wig_id'] . "', price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "', wig_remark = '" .$this->db->escape($product_select['wig_remark']) . "', length_remark = '" .$this->db->escape($product_select['length_remark']) . "'");
 
 				
@@ -176,8 +176,8 @@ class ModelCatalogProduct extends Model {
 			}
 	// print_r($data['product_select']);exit();
 			foreach ($data['product_select'] as $k=> $product_select) {
-				if ($price=0) {$price= $product_select['price'];}else{if ($product_select['price']<$price) {$price= $product_select['price'];}}
-				if ($max_price=0) {$max_price= $product_select['price'];}else{if ($product_select['price']>$max_price) {$max_price= $product_select['price'];}}
+				if ($price==0) {$price= $product_select['price'];}else{if ($product_select['price']<$price) {$price= $product_select['price'];}}
+				if ($max_price==0) {$max_price= $product_select['price'];}else{if ($product_select['price']>$max_price) {$max_price= $product_select['price'];}}
 
 				if (isset($data['product_select_id'][$k])&&$data['product_select_id'][$k]>0) {
 
@@ -197,6 +197,8 @@ class ModelCatalogProduct extends Model {
 		}
 		// print_r("UPDATE " . DB_PREFIX . "product SET price = '" . (float)$price . "',points = '" . (float)$price . "' product_id = '" . (int)$product_id . "'");exit();
 		$this->db->query("UPDATE " . DB_PREFIX . "product SET max_price = '" . (float)$max_price . "',price = '" . (float)$price . "',points = '" . (float)$price . "' WHERE product_id = '" . (int)$product_id . "'");
+		// print_r("UPDATE " . DB_PREFIX . "product SET max_price = '" . (float)$max_price . "',price = '" . (float)$price . "',points = '" . (float)$price . "' WHERE product_id = '" . (int)$product_id . "'");exit();
+
 
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id = '" . (int)$product_id . "'");
