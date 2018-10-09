@@ -102,7 +102,31 @@ class ControllerProductProduct extends Controller {
         } else {
             $product_id = 0;
         }
+        $resultss= $this->model_catalog_product->getProductSelects($product_id);
+        $length_id=array();
+        $wig_id=array();
+        foreach ($resultss as $key => $value) {
 
+            $length_id[]=$value['length_id'];
+
+            $wig_id[]=$value['wig_id'];
+
+            $length_ids=implode(",",$length_id);
+            // print_r($length_ids);exit;
+         $lengths= $this->model_catalog_product->getOptionValues($length_ids);
+
+  
+        }
+
+          // print_r($lengths);exit;
+        $wigs= $this->model_catalog_product->getOptionValues(5);
+            $len_tems=array();
+        foreach ($wigs as $key => $value) {
+            $len_tems[$value['option_value_id']]=$value['name'];
+        }
+        $data['wigs']=$len_tems;
+//   $manufacturers = $this->model_catalog_product->getOptionValues();
+// print_r($data['wigs']);exit;
         
         $this->load->model('catalog/product');
 
