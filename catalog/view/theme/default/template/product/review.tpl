@@ -4,7 +4,7 @@
     <div class="reviews clearfix">
       <div class="pl_text clearfix">
         <div class="top clearfix">
-          <a class="fh" href="###">&lt; BACK</a>
+          <a class="fh" href="<?php echo $home; ?>">&lt; BACK</a>
           <ol class="start_ol">
             <?php for ($i = 1; $i <= 5; $i++) { ?>
               <?php if ($rating < $i) { ?>

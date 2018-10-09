@@ -171,7 +171,7 @@ class ModelCatalogProduct extends Model {
 			if (isset($data['product_select'])) {
 
 			if (isset($data['product_select_id'])) {
-				$this->db->query("DELETE FROM " . DB_PREFIX . "product_select WHERE product_select_id NOT IN (".implode(',', $data['product_select_id']).")");
+				$this->db->query("DELETE FROM " . DB_PREFIX . "product_select WHERE product_select_id NOT IN (".implode(',', $data['product_select_id']).") AND product_id = '" . (int)$product_id . "' ");
 				// print_r("DELETE FROM " . DB_PREFIX . "product_select WHERE product_select_id NOT IN (".implode(',', $data['product_select_id']).")");exit();
 			}
 	// print_r($data['product_select']);exit();

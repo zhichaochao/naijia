@@ -795,6 +795,12 @@ class ControllerProductProduct extends Controller {
             }
             // print_r( $data['reviews']);exit;
         }
+        if(isset($_SERVER['HTTP_REFERER'])){
+            $data['home'] =$_SERVER['HTTP_REFERER'];
+        }
+        // else{
+        //     $data['home'] =$this->url->link('common/home');
+        // }
 
         $data['revi'] = $product_info['reviews'];
         $data['rating'] = $product_info['rating'];
