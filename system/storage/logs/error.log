@@ -2160,3 +2160,4 @@
 2018-10-09 6:20:06 - PHP Notice:  Undefined variable: option_value_query in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 801
 2018-10-09 6:22:01 - PHP Notice:  Undefined variable: datas in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
 2018-10-09 6:22:02 - PHP Notice:  Undefined variable: datas in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 6:32:00 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23

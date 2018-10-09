@@ -95,7 +95,7 @@ class ModelAccountOrder extends Model {
 				'currency_value'          => $order_query->row['currency_value'],
 				'date_modified'           => $order_query->row['date_modified'],
 				'date_added'              => $order_query->row['date_added'],
-				'order_num'                => $order_query->row['order_num'], 
+				'order_number'                => $order_query->row['order_number'], 
 				'ip'                      => $order_query->row['ip'],
 				'bank_receipt'            => $order_query->row['bank_receipt']
 			);
@@ -126,10 +126,10 @@ class ModelAccountOrder extends Model {
 		if ($limit < 1) {
 			$limit = 1;
 		}
-		// $sql="SELECT o.order_id,o.order_num, o.firstname, o.lastname, os.name as status, o.date_added, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC " ;
+		// $sql="SELECT o.order_id,o.order_number, o.firstname, o.lastname, os.name as status, o.date_added, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC " ;
 		// print_r($sql);exit;
 
-		$query = $this->db->query("SELECT o.order_id,o.order_num, o.firstname, o.lastname, os.name as status, o.date_added, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC  ");
+		$query = $this->db->query("SELECT o.order_id,o.order_number, o.firstname, o.lastname, os.name as status, o.date_added, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC  ");
 
 		return $query->rows;
 	}

@@ -39,7 +39,7 @@
               <p class="p1 clearfix">
                 <span class="span1"><?php echo $order['status']; ?></span>
                 <span class="span2">(<?php echo $order['date_added']; ?>)</span>
-                <span class="span3">Order Number:<?php echo $order['order_num']; ?></span>
+                <span class="span3">Order Number:<?php echo $order['order_number']; ?></span>
               </p>
               <?php if ($order['products']) { ?>
                 <?php foreach ($order['products'] as $product) { ?>

@@ -6,7 +6,7 @@
     <div class="pc_ordet_con clearfix">
       <div class="bt">
         <h1>ORDER INFORMATION</h1>
-        <p>Order No:<?php echo $order_num; ?></p>
+        <p>Order No:<?php echo $order_number; ?></p>
       </div>
       
       <div class="top clearfix">
@@ -175,7 +175,7 @@
     <div class="ordet_con clearfix">
       <div class="or_content clearfix">
         <div class="top_yd clearfix">
-          <p><a class="fh" href="<?=$home;?>">< BACK</a> <span>Order No:<?php echo $order_num; ?></span></p>
+          <p><a class="fh" href="<?=$home;?>">< BACK</a> <span>Order No:<?php echo $order_number; ?></span></p>
         </div>
 
         <?php if($order_status=='Pending'){?>
