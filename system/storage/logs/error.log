@@ -2032,3 +2032,73 @@
 2018-10-09 3:00:08 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
 2018-10-09 3:03:54 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
 2018-10-09 3:04:14 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
+2018-10-09 7:26:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 427
+2018-10-09 7:26:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 427
+2018-10-09 7:26:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 427
+2018-10-09 7:26:10 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 7:33:41 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 429
+2018-10-09 7:33:41 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 429
+2018-10-09 7:33:41 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 429
+2018-10-09 7:33:41 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 453
+2018-10-09 7:34:00 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 453
+2018-10-09 7:42:52 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 460
+2018-10-09 7:42:52 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 779
+2018-10-09 7:42:52 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 779
+2018-10-09 7:42:52 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
+2018-10-09 7:42:52 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
+2018-10-09 7:43:22 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:43:22 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 781
+2018-10-09 7:43:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 781
+2018-10-09 7:43:22 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 786
+2018-10-09 7:43:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 786
+2018-10-09 7:44:35 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:44:35 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
+2018-10-09 7:44:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
+2018-10-09 7:44:35 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
+2018-10-09 7:44:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
+2018-10-09 7:49:17 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:49:17 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
+2018-10-09 7:49:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
+2018-10-09 7:49:17 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
+2018-10-09 7:49:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
+2018-10-09 7:49:39 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:49:39 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
+2018-10-09 7:49:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
+2018-10-09 7:49:39 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
+2018-10-09 7:49:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
+2018-10-09 7:50:04 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:50:11 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:52:58 - PHP Notice:  Undefined index: lengths in D:\phpStudy\WWW\naijia\admin\controller\catalog\product.php on line 1302
+2018-10-09 7:59:21 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 7:59:58 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
+2018-10-09 8:02:17 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:04:58 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:06:10 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:09:12 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:09:20 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:09:49 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:09:53 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:11:47 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:18:24 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:19:16 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:19:52 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:22:17 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:23:57 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:24:39 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:25:02 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
+2018-10-09 8:58:47 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
+2018-10-09 8:58:56 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
+2018-10-09 8:59:28 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
+2018-10-09 8:59:59 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
+2018-10-10 6:00:02 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
+2018-10-10 6:00:02 - PHP Notice:  Undefined index: wig_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
+2018-10-10 6:00:02 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
+2018-10-10 6:00:02 - PHP Notice:  Undefined index: wig_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
+2018-10-10 6:06:21 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
+2018-10-10 6:06:21 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
+2018-10-10 6:26:42 - PHP Notice:  Undefined index: option_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 570
+2018-10-10 6:26:42 - PHP Notice:  Undefined index: option_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 570
+2018-10-10 6:59:05 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 210
+2018-10-10 6:59:56 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 210
+2018-10-10 7:10:03 - PHP Notice:  Undefined index: product_select_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 201
+2018-10-10 7:10:03 - PHP Notice:  Undefined index: product_select_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 201

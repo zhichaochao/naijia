@@ -1290,21 +1290,24 @@ class ControllerCatalogProduct extends Controller {
 		}else{
 			$data['product_selects'] = array();
 		}
+		// print_r($data['product_selects']);exit();
+		$options= $this->model_catalog_option->getOptions();
+		// print_r($options);exit();
+		foreach ($options as $key => $value) {
+			$tmp= $this->model_catalog_option->getOptionValues($value['option_id']);
+			$option_tmp='';
+			if ($tmp) {
+				foreach ($tmp as $k => $val) {
+				$option_tmp.='<option value="'.$val['option_value_id'].'">'.$val['name'].'</option>';
+				}
+			}
+			
+			$options[$key]['value']=$option_tmp;
+		}
 		
-		$lengths= $this->model_catalog_option->getOptionValues(1);
-		$len_tems=array();
-		foreach ($lengths as $key => $value) {
-			$len_tems[$value['option_value_id']]=$value['name'];
-		}
-		// print_r($len_tems);exit();
-		$data['lengths']=$len_tems;
-		$wigs= $this->model_catalog_option->getOptionValues(5);
-			$len_tems=array();
-		foreach ($wigs as $key => $value) {
-			$len_tems[$value['option_value_id']]=$value['name'];
-		}
-		$data['wigs']=$len_tems;
-		// print_r($data['lengths']);exit();
+		
+		$data['options']=$options;
+		// print_r($data['options']);exit();
 
 		$this->load->model('design/layout');
 

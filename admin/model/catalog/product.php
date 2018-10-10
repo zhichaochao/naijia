@@ -37,13 +37,24 @@ class ModelCatalogProduct extends Model {
 
 		$price=0;
 		$max_price=0;
+		// print_r($data['product_select']);exit();
 
 
 		if (isset($data['product_select'])) {
 			foreach ($data['product_select'] as $product_select) {
 				if ($price==0) {$price= $product_select['price'];}else{if ($product_select['price']<$price) {$price= $product_select['price'];}}
 				if ($max_price==0) {$max_price= $product_select['price'];}else{if ($product_select['price']>$max_price) {$max_price= $product_select['price'];}}
-				$this->db->query("INSERT INTO " . DB_PREFIX . "product_select SET product_id = '" . (int)$product_id . "', length_id = '" . (int)$product_select['length_id'] . "', main = '" . (int)$product_select['main'] . "', quantity = '" . (int)$product_select['quantity'] . "', wig_id = '" . (int)$product_select['wig_id'] . "', price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "', wig_remark = '" .$this->db->escape($product_select['wig_remark']) . "', length_remark = '" .$this->db->escape($product_select['length_remark']) . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "product_select SET product_id = '" . (int)$product_id . "', quantity = '" . (int)$product_select['quantity'] . "', price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "'");
+					$product_select_id = $this->db->getLastId();
+					if (isset($product_select['option'])) {
+						foreach ($product_select['option'] as $key => $value) {
+							$this->db->query("INSERT INTO " . DB_PREFIX . "product_select_value SET product_id = '" . (int)$product_id . "', main = '" . (int)$value['main'] . "', product_select_id = '" . (int)$product_select_id . "', option_id = '" . (int)$value['option_id'] . "', option_value_id = '" . (int)$value['option_value_id'] . "', remark = '" .$this->db->escape($value['remark']) . "'");
+							
+						}
+
+
+					}
+
 
 				
 			}
@@ -170,8 +181,10 @@ class ModelCatalogProduct extends Model {
 
 			if (isset($data['product_select'])) {
 
+// 删除一种产品
 			if (isset($data['product_select_id'])) {
 				$this->db->query("DELETE FROM " . DB_PREFIX . "product_select WHERE product_select_id NOT IN (".implode(',', $data['product_select_id']).") AND product_id = '" . (int)$product_id . "' ");
+				$this->db->query("DELETE FROM " . DB_PREFIX . "product_select_value WHERE product_select_id NOT IN (".implode(',', $data['product_select_id']).") AND product_id = '" . (int)$product_id . "' ");
 				// print_r("DELETE FROM " . DB_PREFIX . "product_select WHERE product_select_id NOT IN (".implode(',', $data['product_select_id']).")");exit();
 			}
 	// print_r($data['product_select']);exit();
@@ -179,21 +192,56 @@ class ModelCatalogProduct extends Model {
 				if ($price==0) {$price= $product_select['price'];}else{if ($product_select['price']<$price) {$price= $product_select['price'];}}
 				if ($max_price==0) {$max_price= $product_select['price'];}else{if ($product_select['price']>$max_price) {$max_price= $product_select['price'];}}
 
-				if (isset($data['product_select_id'][$k])&&$data['product_select_id'][$k]>0) {
+				// 删除选项
+					if (isset($product_select['product_select_value_id'])) {
+			
+						$this->db->query("DELETE FROM " . DB_PREFIX . "product_select_value WHERE product_select_value_id NOT IN (".implode(',', $product_select['product_select_value_id']).") AND product_id = '" . (int)$product_id . "' AND product_select_id ='".(int)$data['product_select_id'][$k]."' ");
+				
+					}else{
+						$this->db->query("DELETE FROM " . DB_PREFIX . "product_select_value WHERE  product_id = '" . (int)$product_id . "' AND product_select_id ='".(int)$data['product_select_id'][$k]."' ");
 
-					$this->db->query("UPDATE  " . DB_PREFIX . "product_select SET  length_id = '" . (int)$product_select['length_id'] . "', main = '" . (int)$product_select['main'] . "', quantity = '" . (int)$product_select['quantity'] . "', wig_id = '" . (int)$product_select['wig_id'] . "', price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "', wig_remark = '" .$this->db->escape($product_select['wig_remark']) . "', length_remark = '" .$this->db->escape($product_select['length_remark']) . "' WHERE product_select_id ='" . (int)$data['product_select_id'][$k] . "'");
+					}
+
+				if (isset($data['product_select_id'][$k])&&$data['product_select_id'][$k]>0) {
+					$this->db->query("UPDATE  " . DB_PREFIX . "product_select SET   quantity = '" . (int)$product_select['quantity'] . "' ,price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "' WHERE product_select_id ='" . (int)$data['product_select_id'][$k] . "'");
+					foreach ($product_select['option'] as $y => $lue) {
+						if (isset($product_select['product_select_value_id'][$y])&&$product_select['product_select_value_id'][$y]>0) {
+
+							$this->db->query("UPDATE  " . DB_PREFIX . "product_select_value SET   option_id = '" . (int)$lue['option_id'] . "' , main = '" . (int)$lue['main'] . "' ,option_value_id = '" . (int)$lue['option_value_id'] . "' ,remark = '" .$this->db->escape($lue['remark']) . "' WHERE product_select_value_id ='" . (int)$product_select['product_select_value_id'][$y] . "'");
+						}else{
+
+							$this->db->query("INSERT INTO " . DB_PREFIX . "product_select_value SET product_id = '" . (int)$product_id . "', main = '" . (int)$lue['main'] . "', product_select_id = '" . (int)$data['product_select_id'][$k] . "', option_id = '" . (int)$lue['option_id'] . "', option_value_id = '" . (int)$lue['option_value_id'] . "', remark = '" .$this->db->escape($lue['remark']) . "'");
+
+						}
 					
 
+
+
+					}
+
+					
+
+					
 				}else{
 
+					$this->db->query("INSERT INTO " . DB_PREFIX . "product_select SET product_id = '" . (int)$product_id . "', quantity = '" . (int)$product_select['quantity'] . "', price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "'");
+					$product_select_id = $this->db->getLastId();
+					if (isset($product_select['option'])) {
+						foreach ($product_select['option'] as $key => $value) {
+							$this->db->query("INSERT INTO " . DB_PREFIX . "product_select_value SET product_id = '" . (int)$product_id . "', main = '" . (int)$value['main'] . "', product_select_id = '" . (int)$product_select_id . "', option_id = '" . (int)$value['option_id'] . "', option_value_id = '" . (int)$value['option_value_id'] . "', remark = '" .$this->db->escape($value['remark']) . "'");
+							
+						}
 
-				$this->db->query("INSERT INTO " . DB_PREFIX . "product_select SET product_id = '" . (int)$product_id . "', length_id = '" . (int)$product_select['length_id'] . "', main = '" . (int)$product_select['main'] . "', quantity = '" . (int)$product_select['quantity'] . "', wig_id = '" . (int)$product_select['wig_id'] . "', price = '" . (float)$product_select['price'] . "', sku = '" .$this->db->escape($product_select['sku']) . "', wig_remark = '" .$this->db->escape($product_select['wig_remark']) . "', length_remark = '" .$this->db->escape($product_select['length_remark']) . "'");
+
+					}
+
 				}
 
 				
 			}
 		}else{
 			$this->db->query("DELETE FROM " . DB_PREFIX . "product_select WHERE product_id = '" . (int)$product_id . "'");
+			$this->db->query("DELETE FROM " . DB_PREFIX . "product_select_value WHERE product_id = '" . (int)$product_id . "'");
 		}
 		// print_r("UPDATE " . DB_PREFIX . "product SET price = '" . (float)$price . "',points = '" . (float)$price . "' product_id = '" . (int)$product_id . "'");exit();
 		$this->db->query("UPDATE " . DB_PREFIX . "product SET max_price = '" . (float)$max_price . "',price = '" . (float)$price . "',points = '" . (float)$price . "' WHERE product_id = '" . (int)$product_id . "'");
@@ -329,6 +377,8 @@ class ModelCatalogProduct extends Model {
 
 	public function deleteProduct($product_id) {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "product_select WHERE product_id = '" . (int)$product_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "product_select_value WHERE product_id = '" . (int)$product_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_attribute WHERE product_id = '" . (int)$product_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_description WHERE product_id = '" . (int)$product_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "product_discount WHERE product_id = '" . (int)$product_id . "'");
@@ -550,8 +600,20 @@ class ModelCatalogProduct extends Model {
 
 	public function getProductSelects($product_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_select WHERE product_id = '" . (int)$product_id . "' ");
+		$return=array();
+		foreach ($query->rows as $key => $value) {
+			$tem= $this->db->query("SELECT * FROM " . DB_PREFIX . "product_select_value psv  LEFT JOIN " . DB_PREFIX . "option_value_description od ON (od.option_value_id =psv.option_value_id AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' AND od.option_id=psv.option_id) WHERE product_id = '" . (int)$product_id . "' AND product_select_id = '" . (int)$value['product_select_id'] . "' ");
+		$option=array();
+			foreach ($tem->rows as $k => $val) {
+				$t=$this->db->query("SELECT * FROM  " . DB_PREFIX . "option_value_description WHERE option_id = '" . (int)$val['option_id'] . "' AND language_id = '" . (int)$this->config->get('config_language_id') . "' ");
+				$val['option_select']=$t->rows;
+				$option[]=$val;
+			}
+			$value['option']=$option;
+			$return[]=$value;
+		}
 
-		return $query->rows;
+		return $return;
 	}
 	public function getProductImages($product_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_image WHERE product_id = '" . (int)$product_id . "' ORDER BY sort_order ASC");

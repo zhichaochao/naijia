@@ -402,16 +402,14 @@
                         <table id="option-value" class="table table-striped table-bordered table-hover">
                           <thead>
                             <tr>
-                              <td class="text-left">Length</td>
-                              <td class="text-left">Wig width</td>
+                              <td class="text-left">选项 （！值没有时请先点一下选项）</td>
+                           
                               <td class="text-left"><?php echo $entry_quantity; ?></td>
                               <td class="text-left">SKU</td>
                            
-                              <td class="text-left">默认产品</td>
                       
                               <td class="text-left"><?php echo $entry_price; ?></td>
-                              <!-- <td class="text-right"><?php echo $entry_option_points; ?></td> -->
-                              <!-- <td class="text-right"><?php echo $entry_weight; ?></td> -->
+                          
                               <td></td>
                             </tr>
                           </thead>
@@ -422,24 +420,61 @@
                           <tr id="option-value-row<?=$key;?>">
                               <input type="hidden" name="product_select_id[<?=$key;?>]"  value='<?=isset($product_select["product_select_id"])?$product_select["product_select_id"]:0;?>'>
                               <td class="text-left">
+                                <table>
+                                  <tbody>
+                                   
 
-                                <select name="product_select[<?=$key;?>][length_id]" class="form-control">
-                                  <?php foreach ($lengths as $lk=> $length) { ?>
-                                    <option value="<?=$lk;?>" <?=$lk==$product_select["length_id"]?'selected':''?>><?=$length;?></option>
+                                    <tr><th>选项（先点）</th><th>值</th><th>是否默认</th><th>备注</th><th></th></tr>
+                                      <?php if ($product_select['option']){foreach ($product_select['option'] as $k=> $select_option) { ?>
+                                    <tr id='option-value-row<?=$key;?>-<?=$k;?>-t'>
+                                      <input type="hidden" name="product_select[<?=$key;?>][product_select_value_id][<?=$k;?>]" value='<?=$select_option["product_select_value_id"];?>'>
+                                      <td> 
+                                        <select name="product_select[<?=$key;?>][option][<?=$k;?>][option_id]" class="form-control" id='option-value-row<?=$key;?>-<?=$k;?>' onclick='changevalue(this.id);'>
+                                            <?php foreach ($options as $lk=> $option) { ?>
+                                              <option value="<?=$option['option_id'];?>" <?=$select_option['option_id']==$option['option_id']?'selected':'';?>><?=$option['name'];?></option>
+                                            <?php } ?>
+                                           
+                                          </select>
+                                      </td>
+                                      <td>
+                                          <select name="product_select[<?=$key;?>][option][<?=$k;?>][option_value_id]" class="form-control" id='option-value-row<?=$key;?>-<?=$k;?>-s' >
+                                              <?php foreach ($select_option['option_select'] as $l=> $select) { ?>
+                                            <option <?=$select_option['option_value_id']==$select['option_value_id']?'selected':'';?> value="<?=$select['option_value_id']?>" ><?=$select['name']?></option>
+                                             <?php } ?>
+                                          </select>
+                                      </td>
+                                          <td class="text-left"><select name="product_select[<?=$key;?>][option][<?=$k;?>][main]" class="form-control">
+                                  <?php if ($select_option['main']) { ?>
+                                  <option value="1" selected="selected"><?php echo $text_yes; ?></option>
+                                  <option value="0"><?php echo $text_no; ?></option>
+                                  <?php } else { ?>
+                                  <option value="1"><?php echo $text_yes; ?></option>
+                                  <option value="0" selected="selected"><?php echo $text_no; ?></option>
                                   <?php } ?>
-                                 
-                                </select>
-                                <input type="text" name="product_select[<?=$key;?>][length_remark]" value="<?php echo $product_select['length_remark']; ?>" placeholder="" class="form-control" />
-                               </td>
-                              <td class="text-left">
+                                </select></td>
+                                <td>
+                                  <input type="text" value="<?=$select_option['remark'];?>" name="product_select[<?=$key;?>][option][<?=$k;?>][remark]"  placeholder="备注" class="form-control" />
+                                </td>
+                                  <td>
+                                    <button type="button" onclick="$(this).tooltip('destroy');$('#option-value-row<?=$key;?>-<?=$k;?>-t').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button>
+                                  </td>
+                                   
+                                    </tr>
+                                       <?php } ?>
+                                    <tr data-key='<?=$k+1;?>' onclick="addOption(this,<?=$key;?>);"><td>
+                                     <button  type="button"  data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="添加选项值"><i class="fa fa-plus-circle"></i></button>
+                                   </td>
 
-                                <select name="product_select[<?=$key;?>][wig_id]" class="form-control">
-                                  <?php foreach ($wigs as $wk=> $wig) { ?>
-                                    <option value="<?=$wk;?>" <?=$wk==$product_select["wig_id"]?'selected':''?>><?=$wig;?></option>
-                                  <?php } ?>
-                                </select>
-                                  <input type="text" name="product_select[<?=$key;?>][wig_remark]" value="<?php echo $product_select['wig_remark']; ?>" placeholder="" class="form-control" />
+                                   </tr>
+
+                                  </tbody>
+                                </table>
+
+
+                               
+                          
                                </td>
+                             
                               <td class="text-right">
                                 <input type="text" name="product_select[<?=$key;?>][quantity]" value="<?php echo $product_select['quantity']; ?>" placeholder="<?php echo $entry_quantity; ?>" class="form-control" />
                               </td>
@@ -449,15 +484,7 @@
 
                            
 
-                              <td class="text-left"><select name="product_select[<?=$key;?>][main]" class="form-control">
-                                  <?php if ($product_select['main']) { ?>
-                                  <option value="1" selected="selected"><?php echo $text_yes; ?></option>
-                                  <option value="0"><?php echo $text_no; ?></option>
-                                  <?php } else { ?>
-                                  <option value="1"><?php echo $text_yes; ?></option>
-                                  <option value="0" selected="selected"><?php echo $text_no; ?></option>
-                                  <?php } ?>
-                                </select></td>
+                         
                               <td class="text-right">
 
                        
@@ -466,10 +493,10 @@
                               
   
                                 </td>
-                              <td class="text-left"><button type="button" onclick="$(this).tooltip('destroy');$('#option-value-row0').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                              <td class="text-left"><button type="button" onclick="$('#option-value-row<?=$key;?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
                             </tr>
                   
-                      <?php } ?>
+                      <?php } }?>
                       <input type="hidden" name="select_key" value="<?=$key+1;?>" id='select_key'  />
                     <?php }else{?>
                      <input type="hidden" name="select_key" value="0" id='select_key'  />
@@ -762,27 +789,48 @@ $('#attribute tbody tr').each(function(index, element) {
 //--></script>
 
   <script type="text/javascript"><!--
+    var options= new Array();
+     <?php foreach ($options as $lk=> $option) { ?>
+      options[<?=$option['option_id'];?>]='<?=$option["value"];?>';
+      <?php } ?>
+
+
+  function addOption(th,select_key) {
+    var option_key=$(th).attr('data-key');
+    var js="$('#option-value-row"+select_key+"-"+option_key+"-t').remove();";
+    var html='<tr id="option-value-row'+select_key+'-'+option_key+'-t"><td>  <select name="product_select['+select_key+'][option]['+option_key+'][option_id]" class="form-control" id="option-value-row'+select_key+'-'+option_key+'" onclick="changevalue(this.id);"><option value="0">请选择</option>';
+       <?php foreach ($options as $lk=> $option) { ?>
+
+           html+= '<option value="<?=$option["option_id"]?>"><?=$option["name"]?></option>';
+               <?php } ?>                                                                  
+           html+= '  </select></td> <td> <select name="product_select['+select_key+'][option]['+option_key+'][option_value_id]" class="form-control" id="option-value-row'+select_key+'-'+option_key+'-s" ></select></td><td class="text-left"><select name="product_select['+select_key+'][option]['+option_key+'][main]" class="form-control"> <option value="1">是</option><option value="0" selected="selected">否</option></select></td><td><input name="product_select['+select_key+'][option]['+option_key+'][remark]" placeholder="备注" class="form-control" type="text"></td> <td> <button type="button" onclick="'+js+'" data-toggle="tooltip" title="" class="btn btn-danger" data-original-title="移除"><i class="fa fa-minus-circle"></i></button> </td> </tr>';
+    $(th).before(html);
+    option_key++;
+    $(th).attr('data-key',option_key);
+  }
+
+
+  function changevalue(id) {
+    var option_id=$('#'+id).val();
+    $('#'+id+'-s').html(options[option_id]);
+    // alert( options[option_id]);
+  }
 var select_key = $('#select_key').val();
 
 function addSelectValue() {
 
 
-  var html='<tr id="option-value-row'+select_key+'"> <input type="hidden" name="product_select_id['+select_key+']"  value="0"> <td class="text-left">  <select name="product_select['+select_key+'][length_id]" class="form-control">';
+  var html='<tr id="option-value-row'+select_key+'">';
+  html+=' <td class="text-left"> <table> <tbody> <tr><th>选项(先点)</th><th>值</th><th>是否默认</th><th>备注</th><th></th></tr> </tr> <tr data-key="0" onclick="addOption(this,'+select_key+');"><td> <button  type="button"  data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="添加选项值"><i class="fa fa-plus-circle"></i></button> </td></tr> </tbody> </table></td> ';
 
-      <?php foreach ($lengths as $lk=> $length) { ?>
-             html+='<option value="<?=$lk;?>" ><?=$length;?></option>';
-      <?php } ?>
-                                 
-     html+=' </select><input type="text" name="product_select['+select_key+'][length_remark]" value="" placeholder="备注" class="form-control" /></td> <td class="text-left"><select name="product_select['+select_key+'][wig_id]" class="form-control">';
-       <?php foreach ($wigs as $wk=> $wig) { ?>
-            html+=' <option value="<?=$wk;?>" ><?=$wig;?></option>';
-        <?php } ?>
-      html+='  </select><input type="text" name="product_select['+select_key+'][wig_remark]" value="" placeholder="备注" class="form-control" /> </td> <td class="text-right"> <input type="text" name="product_select['+select_key+'][quantity]" value="" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>  <td class="text-right"> <input type="text" name="product_select['+select_key+'][sku]" value="" placeholder="SKU" class="form-control" /> </td> <td class="text-left"><select name="product_select['+select_key+'][main]" class="form-control">';
+
+
+  html+= '<td class="text-right"> <input type="text" name="product_select['+select_key+'][quantity]" value="" placeholder="<?php echo $entry_quantity; ?>" class="form-control" /></td>  <td class="text-right"> <input type="text" name="product_select['+select_key+'][sku]" value="" placeholder="SKU" class="form-control" /> </td> ';
 
                          
-          html+='<option value="1">'+'<?php echo $text_yes; ?>'+'</option> <option value="0" selected="selected">'+'<?php echo $text_no; ?>'+'</option>';
+    var js="$('#option-value-row"+select_key+"').remove();";
                                
-        html+=' </select></td> <td class="text-right"><input type="text" name="product_select['+select_key+'][price]" value="" placeholder="<?php echo $entry_price; ?>" class="form-control" /> </td> <td class="text-left"><button type="button" onclick="$(this).tooltip("destroy");$("#option-value-row'+select_key+'").remove();" data-toggle="tooltip" title="'+'<?php echo $button_remove; ?>'+'" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td> </tr>';
+        html+=' <td class="text-right"><input type="text" name="product_select['+select_key+'][price]" value="" placeholder="<?php echo $entry_price; ?>" class="form-control" /> </td> <td class="text-left"><button type="button" onclick="'+js+'" data-toggle="tooltip" title="'+'<?php echo $button_remove; ?>'+'" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td> </tr>';
 
   $('#option-value-add').before(html);
 
