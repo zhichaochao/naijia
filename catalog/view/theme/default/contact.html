@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>ADDRESS2</title>
+		<title>CONTACT US</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,103 +100,33 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="address_con order_con clearfix" style="padding: 0.2rem 0.15rem;">
-			<div class="or_content clearfix">
+		<div class="contact_us clearfix">
 				<div class="top_yd clearfix">
-					<a class="fh" href="###">< BACK</a>
-				</div>
-			
-				<div class="lf_nav">
-					<img class="tx_img" src="img/png/touxiang.png" alt="" />
-					<h2>Tyler Durden</h2>
-					<p class="p1">+8613286484822</p>
-					
-					<ul>
-						<li><a href="###"><span>My Orders</span><i></i></a></li>
-						<li><a href="###"><span>My Profile</span><i></i></a></li>
-						<li><a href="###"><span>My addresses</span><i></i></a></li>
-						<li><a href="###"><span>My Favorites</span><i></i></a></li>
-						<li class="active"><a href="###"><span>My Coupon</span><i></i></a></li>
-					</ul>
-					
-					<img class="vip_img" src="img/vip.jpg" alt="" />
+					<h1><a class="fh" href="###">< BACK</a> CONTACT US</h1>
 				</div>
 				
-				<div class="address_a"> <a href="###">Add new address</a></div>
-				
-				<div class="add_con clearfix" style="margin-top: 0.2rem">
-					<div class="form_text clearfix">
-						<form>
-							<label class="clearfix true" for="">
-								<span class="pl_span">Frist Name</span>
-								<input type="text" value="Frist Name" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							<label class="clearfix" for="">
-								<span class="pl_span">Last Name</span>
-								<input type="text" placeholder="Last Name" />
-								<p class="ts_ps off">please enter your first name. </p>
-							</label>
-							<label class="clearfix" for="">
-								<span class="pl_span">Address</span>
-								<input type="text" placeholder="Address" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							<label class="clearfix" for="">
-								<span class="pl_span"></span>
-								<input type="text" placeholder="" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="w_50 fl clearfix" for="">
-								<span class="pl_span">Country</span>
-								<select name="">
-									<option value="">Country</option>
-									<option value="">Country2</option>
-									<option value="">Country3</option>
-									<option value="">Country4</option>
-								</select>
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							<label class="w_50 fr clearfix" for="">
-								<span class="pl_span">State</span>
-								<select name="">
-									<option value="">State</option>
-									<option value="">State2</option>
-									<option value="">State3</option>
-									<option value="">State4</option>
-								</select>
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="w_50 fl clearfix" for="">
-								<span class="pl_span">City</span>
-								<input type="text" placeholder="City" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="w_50 fr clearfix" for="">
-								<span class="pl_span">Zip Code</span>
-								<input type="text" placeholder="Zip Code" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="clearfix clear" for="">
-								<span class="pl_span">Phone</span>
-								<input type="text" placeholder="Phone" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<button class="qx_btn" type="reset">Cancel</button>
-							<button class="tj_btn" type="submit">SAVE</button>
-						</form>
-					</div>
-				
+				<div class="con_text clearfix">
+					<span class="line"></span>
+					<h1>CONTACT US</h1>
+					<p>
+						Your order is confirmed and we're getting it ready.<br />
+						Send us a message if you have any question, we will reply you within 48 hours.
+					</p>
+					<form>
+						<div class="form_div">
+							<span>SEND EMAIL </span>
+							<input type="text" value="xiaoyanjing" disabled="disabled" />
+							<input type="text" value="1009844628@qq.com" disabled="disabled" />
+							<input type="text" value="+8613286484822" disabled="disabled" />	
+							<textarea placeholder="message"></textarea>
+							<button class="tj_btn" type="submit">SEND OUT</button>
+						</div>
+					</form>
 				</div>
-			
-			</div>
-		
 		</div>
+			
+		
+		
 		
 		
 		<!--pc底部-->
@@ -390,6 +320,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!--pc搜索弹窗-->
 		<div class="ss_modal">
 			<div class="bg_f clearfix">
@@ -449,15 +380,51 @@
 </html>
 <script>
 	$(function(){
-		$("input").focus(function(){
-			$(this).attr("placeholder","");
-			$(this).siblings(".pl_span").css("display","block");
-		})
-		$("input").blur(function(){
-			
-			$(this).attr("placeholder",$(this).siblings(".pl_span").text());
-			$(this).siblings(".pl_span").css("display","none");
+		//删除订单
+		$(".order_con .bot .det").click(function(){
+			$(this).parents("li").remove();
 		})
 	})
+	
+	
+	//倒计时
+	function show_time() {
+        $(".djs_p").each(function() {
+            var endtime = $(this).prop("title");
+            var time_start = new Date().getTime(); //设定当前时间
+            var time_end = new Date(endtime).getTime(); //设定目标时间
+            var time_distance = time_end - time_start;
+            var timer;
+            if (time_distance >= 0) {
+                var int_day = Math.floor(time_distance / 86400000)
+                time_distance -= int_day * 86400000;
+                var int_hour = Math.floor(time_distance / 3600000)
+                time_distance -= int_hour * 3600000;
+                var int_minute = Math.floor(time_distance / 60000)
+                time_distance -= int_minute * 60000;
+                var int_second = Math.floor(time_distance / 1000)
+                if (int_day < 10) {
+                    int_day = "0" + int_day;
+                }
+                if (int_hour < 10) {
+                    int_hour = "0" + int_hour;
+                }
+                if (int_minute < 10) {
+                    int_minute = "0" + int_minute;
+                }
+                if (int_second < 10) {
+                    int_second = "0" + int_second;
+                }
+                $(this).find(".int_day").text(int_day);
+                $(this).find(".int_hour").text(int_hour);
+                $(this).find(".int_minute").text(int_minute);
+                $(this).find(".int_second").text(int_second);
+            }else{
+                clearInterval(timer);
+                $(this).css("display","none");
+            }
+        })
+        timer = setTimeout("show_time()", 1000);
+    }
+    show_time();
 </script>
-

@@ -115,9 +115,9 @@
 						Delivered 2018-08-28<br />
 						Cpmpleted 2018-09-07
 					</p>
-					<a class="pay_a huang" href="javascript:;">REVIEW</a>
+					<a class="pay_a huang review_tc" href="javascript:;">REVIEW</a>
 					<span>Order date:2018-09-07</span>
-					<span class="btn_a" href="###">Contact us</span>
+					<span class="btn_a contact_tc" href="###">Contact us</span>
 				</div>
 				<div class="right">
 					<div class="text">
@@ -154,9 +154,9 @@
 			<div class="bot clearfix">
 				<div class="top_span clearfix">
 					<span>COMMODITY </span>
-					<span>TEXTIRE OF MATERIAL</span>
+					<span>TEXTURE OF MATERIAL</span>
 					<span>UNIT PRICE</span>
-					<span>NUMBER</span>
+					<span>QUANTITY</span>
 					<span>TOTAL</span>
 				</div>	
 				<ul class="table_ul clearfix">
@@ -251,7 +251,7 @@
 						<li>Completed <span>2018-09-07</span></li>
 					</ul>
 					
-					<button class="modal_btn">Review</button>
+					<button class="modal_btn review_tc">Review</button>
 				</div>
 				
 				<div class="pro_order clearfix">
@@ -314,11 +314,11 @@
 						
 					</div>
 					
-					<button class="md_btn w_50">CONTACT US</button>
-					<a class="btn_a1 btn_a" href="###">REVIEW</a>
+					<button class="md_btn w_50 contact_tc">CONTACT US</button>
+					<a class="btn_a1 btn_a review_tc" href="###">REVIEW</a>
 					
 					
-					<p class="ms_p pd_no">You package is on preparing,contact us if you have any problem.</p>
+					<p class="ms_p pd_no">Your package is on preparing,contact us if you have any problem.</p>
 					
 				</div>
 			</div>
@@ -335,6 +335,36 @@
 					<a class="qd_btn" href="###">Yes, why not?</a>
 					<button class="qx_btn">Yes, But later.</button>
 				</div>
+			</div>
+		</div>
+		<!--联系我们弹窗-->
+		<div class="contact_modal clearfix">
+			<div class="text clearfix">
+				<ol class="clearfix">
+					<li>
+						<a href="###">
+							<span class="img"></span>
+							<span class="span_p">E-mail</span>
+						</a>
+					</li>
+					<li>
+						<a href="###">
+							<span class="img"></span>
+							<span class="span_p">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a href="###">
+							<span class="img"></span>
+							<span class="span_p">Whatsapp</span>
+						</a>
+					</li>
+				</ol>
+				<p>
+					Your order is confirmed and we're getting it ready.
+					Send us a message if you have any question, <br />
+					we will reply you within 24 hours.
+				</p>
 			</div>
 		</div>
 		
@@ -589,6 +619,36 @@
 </html>
 <script>
 	$(function(){
+		//REVIEW
+		$(".review_tc").click(function(){
+			$(".review_modal").fadeIn();
+			$("body").css("overflow","hidden");
+		})
+		$(".review_modal .qx_btn").click(function(){
+			$(".review_modal").fadeOut();
+			$("body").css("overflow","");
+		})
+		$(".review_modal").click(function(e){
+			var close = $('.review_modal .text'); 
+		   	if(!close.is(e.target) && close.has(e.target).length === 0){
+		   		$(".review_modal").fadeOut();
+				$("body").css("overflow","");
+			}
+		})
+		
+		//contact
+		$(".contact_tc").click(function(){
+			$(".contact_modal").fadeIn();
+			$("body").css("overflow","hidden");
+		})
+		$(".contact_modal").click(function(e){
+			var close = $('.contact_modal .text'); 
+		   	if(!close.is(e.target) && close.has(e.target).length === 0){
+		   		$(".contact_modal").fadeOut();
+				$("body").css("overflow","");
+			}
+		})
+		
 		
 		//下拉total_p
 			$(".total_p").click(function(){

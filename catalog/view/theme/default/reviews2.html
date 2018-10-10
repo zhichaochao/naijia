@@ -107,7 +107,7 @@
 						<h1>YOUR EVALUATION</h1>
 						<hr />
 					</div>				
-					
+					<p class="rating">Rating</p>
 					<div class="start clearfix">
 						<ol>
 							<li class="active"></li>
@@ -119,32 +119,18 @@
 					</div>
 					
 					<textarea class="text_p" maxlength="1000" onkeydown="if(this.value.length>=1000){}"
-						 placeholder="Your order is confirmed and we're getting it ready.Send us a message if you have any question, we will reply you within 48 hours."></textarea>
+						 placeholder="How was your overall exprience using the item? "></textarea>
 					<p class="num_p"><span>0</span>/1000</p>
 					
 					<div class="file clearfix">
 						<p>Let's show you some pictures.(up to 5)  </p>
 						
+						<ol class="file_ol clearfix">
+							
+						</ol>
 						<ul class="file_ul clearfix">
 							<li>
 								<input class="file_in"  onchange="getphoto(this)" type="file" />
-								<img src=""/>
-							</li>
-							<li>
-								<input class="file_in"  onchange="getphoto(this)" type="file" />
-								<img src=""/>
-							</li>
-							<li>
-								<input class="file_in"  onchange="getphoto(this)" type="file" />
-								<img src=""/>
-							</li>
-							<li>
-								<input class="file_in"  onchange="getphoto(this)" type="file" />
-								<img src=""/>
-							</li>
-							<li>
-								<input class="file_in"  onchange="getphoto(this)" type="file" />
-								<img src=""/>
 							</li>
 						</ul>
 					</div>
@@ -155,6 +141,7 @@
 			</form>		
 		</div>
 		
+		<!--查看大图弹窗-->
 		
 		
 		<!--pc底部-->
@@ -421,34 +408,57 @@
 			var val = $(this).val();
 			$(".num_p span").text(val.length);
 		})
+		
+		
+		
+		
 	})
+	
+	function flie_show(){
+		if($(".file_ol>li").length>=5){
+			$(".file_ul").css("display","none");
+		}else{
+			$(".file_ul").css("display","block");
+		}
+	}
 	
 	//调取上传框
     function getphoto(node) {
-        var imgURL = "";
-        try{
-            var file = null;
-            if(node.files && node.files[0] ){
-                file = node.files[0];
-            }else if(node.files && node.files.item(0)) {
-                file = node.files.item(0);
-            }
-            try{
-                imgURL =  file.getAsDataURL();
-            }catch(e){
-                imgRUL = window.URL.createObjectURL(file);
-            }
-        }catch(e){
-            if (node.files && node.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    imgURL = e.target.result;
-                };
-                reader.readAsDataURL(node.files[0]);
-            }
-        }
-        $(node).siblings("img").attr("src",imgRUL);
+    	if($(".file_ol>li").length<5){
+    		if($(window).width()<=920){
+    			$(".file_ul").css("margin-left",0.2+"rem");
+    		}
+	        var imgURL = "";
+	        try{
+	            var file = null;
+	            if(node.files && node.files[0] ){
+	                file = node.files[0];
+	            }else if(node.files && node.files.item(0)) {
+	                file = node.files.item(0);
+	            }
+	            try{
+	                imgURL =  file.getAsDataURL();
+	            }catch(e){
+	                imgRUL = window.URL.createObjectURL(file);
+	            }
+	        }catch(e){
+	            if (node.files && node.files[0]) {
+	                var reader = new FileReader();
+	                reader.onload = function (e) {
+	                    imgURL = e.target.result;
+	                };
+	                reader.readAsDataURL(node.files[0]);
+	            }
+	        }
+	        var li_text = '<li><div class="close" onclick="det($(this))"></div><img src="'+imgRUL+'"/></li>'
+	        $(".file_ol").append(li_text);
+	        flie_show();
+	    }
+//      $(node).siblings("img").attr("src",imgRUL);
     }
- 
-	
+    
+    function det(obj){
+    	obj.parent().remove();
+    	flie_show();
+    }
 </script>
