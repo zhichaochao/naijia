@@ -283,7 +283,7 @@ class ModelAccountCustomer extends Model {
 		if(!empty($data['confirm'])){        //修改用户密码
 			$sql .= " SET salt = '" . $this->db->escape($salt = substr(md5(uniqid(rand(), true)), 0, 9)) . "', password = '" . $this->db->escape(sha1($salt . sha1($salt . sha1($data['confirm'])))) . "'";
 		}else{                               //修改用户其他信息
-            $sql .= " SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', telephone = '" . $this->db->escape($data['telephone']) ."'";
+            $sql .= " SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "', email = '" . $this->db->escape($data['email']) . "', gender = '" . $this->db->escape($data['gender']) . "', birthday = '" . $this->db->escape($data['birthday']) . "', whatsapp = '" . $this->db->escape($data['whatsapp']) . "', facebook = '" . $this->db->escape($data['facebook']) . "', instagram = '" . $this->db->escape($data['instagram']) . "', telephone = '" . $this->db->escape($data['telephone']) ."'";
 		}
 
 		$sql .= " WHERE customer_id = " . (int)$customer_id;

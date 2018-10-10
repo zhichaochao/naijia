@@ -295,19 +295,19 @@
             <?php if($order_status=='Completed' ){?>
               <button class="md_btn w_50">CONTACT US</button>
               <a class="btn_a1 btn_a" href="###">REVIEW</a>
-              <p class="ms_p pd_no">You package is on preparing,contact us if you have any problem.</p>
+              <p class="ms_p pd_no">Please contact us if you have any problem of your order.</p>
             <?php }?>
 
              <?php if($order_status=='Delivered'){?>
               <button class="md_btn w_50">CONTACT US</button>
               <a class="btn_a1 btn_a"  onclick="javascript:confirm_order('<?php echo $order_id; ?>');">CONFIRM RECEIPT</a>
-              <p class="ms_p pd_no">You package is on preparing,contact us if you have any problem.</p>
+              <p class="ms_p pd_no">Your package is on shipping, contact us if you have any problem.</p>
             <?php }?>
 
 
             <?php if($order_status=='Pending-unfilled'){?>
               <a class="btn_a huang" href="###">CONTACT US</a>
-              <p class="ms_p">You package is on preparing,contact us if you have any problem.</p>
+              <p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
             <?php }?>
 
             <?php if($order_status=='Canceled'){?>

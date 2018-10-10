@@ -621,16 +621,16 @@ window.onload=function(){
 		}
 		
 		//数量加减
-		$(".number .add , .number .span_add").click(function(){
-			var num_val = $(".number .num_in").val();
+		$(".number .num_rf>.add , .number .span_add").click(function(){
+			var num_val =$(this).parents(".number").find(".num_in").val();
 			num_val++;
-			$(".number .num_in").val(num_val);
+			$(this).parents(".number").find(".num_in").val(num_val);
 		})
-		$(".number .sub , .number .span_sub").click(function(){
-			var num_val = $(".number .num_in").val();
+		$(".number .num_rf>.sub , .number .span_sub").click(function(){
+			var num_val =$(this).parents(".number").find(".num_in").val();
 			if(num_val>1){
 				num_val--;
-				$(".number .num_in").val(num_val);
+				$(this).parents(".number").find(".num_in").val(num_val);
 			}
 		})
 		
