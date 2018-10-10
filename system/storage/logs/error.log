@@ -2032,73 +2032,147 @@
 2018-10-09 3:00:08 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
 2018-10-09 3:03:54 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
 2018-10-09 3:04:14 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
-2018-10-09 7:26:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 427
-2018-10-09 7:26:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 427
-2018-10-09 7:26:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 427
-2018-10-09 7:26:10 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 7:33:41 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 429
-2018-10-09 7:33:41 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 429
-2018-10-09 7:33:41 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 429
-2018-10-09 7:33:41 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 453
-2018-10-09 7:34:00 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 453
-2018-10-09 7:42:52 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 460
-2018-10-09 7:42:52 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 779
-2018-10-09 7:42:52 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 779
-2018-10-09 7:42:52 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
-2018-10-09 7:42:52 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
-2018-10-09 7:43:22 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:43:22 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 781
-2018-10-09 7:43:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 781
-2018-10-09 7:43:22 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 786
-2018-10-09 7:43:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 786
-2018-10-09 7:44:35 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:44:35 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
-2018-10-09 7:44:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 784
-2018-10-09 7:44:35 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
-2018-10-09 7:44:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
-2018-10-09 7:49:17 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:49:17 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
-2018-10-09 7:49:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
-2018-10-09 7:49:17 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
-2018-10-09 7:49:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
-2018-10-09 7:49:39 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:49:39 - PHP Notice:  Undefined variable: lengths in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
-2018-10-09 7:49:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 789
-2018-10-09 7:49:39 - PHP Notice:  Undefined variable: wigs in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
-2018-10-09 7:49:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 794
-2018-10-09 7:50:04 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:50:11 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:52:58 - PHP Notice:  Undefined index: lengths in D:\phpStudy\WWW\naijia\admin\controller\catalog\product.php on line 1302
-2018-10-09 7:59:21 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 7:59:58 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 442
-2018-10-09 8:02:17 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:04:58 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:06:10 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:09:12 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:09:20 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:09:49 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:09:53 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:11:47 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:18:24 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:19:16 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:19:52 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:22:17 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:23:57 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:24:39 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:25:02 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 444
-2018-10-09 8:58:47 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
-2018-10-09 8:58:56 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
-2018-10-09 8:59:28 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
-2018-10-09 8:59:59 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
-2018-10-10 6:00:02 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
-2018-10-10 6:00:02 - PHP Notice:  Undefined index: wig_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
-2018-10-10 6:00:02 - PHP Notice:  Undefined index: length_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
-2018-10-10 6:00:02 - PHP Notice:  Undefined index: wig_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 47
-2018-10-10 6:06:21 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
-2018-10-10 6:06:21 - PHP Notice:  Undefined index: main in D:\phpStudy\WWW\naijia\admin\view\template\catalog\product_form.tpl on line 446
-2018-10-10 6:26:42 - PHP Notice:  Undefined index: option_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 570
-2018-10-10 6:26:42 - PHP Notice:  Undefined index: option_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 570
-2018-10-10 6:59:05 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 210
-2018-10-10 6:59:56 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 210
-2018-10-10 7:10:03 - PHP Notice:  Undefined index: product_select_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 201
-2018-10-10 7:10:03 - PHP Notice:  Undefined index: product_select_id in D:\phpStudy\WWW\naijia\admin\model\catalog\product.php on line 201
+2018-10-09 3:34:48 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
+2018-10-09 3:36:43 - PHP Notice:  Undefined variable: filter_data in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 107
+2018-10-09 3:37:54 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-09 3:37:58 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-10-09 4:22:26 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
+2018-10-09 4:34:03 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
+2018-10-09 4:46:22 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 111
+2018-10-09 4:46:22 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 111
+2018-10-09 4:48:09 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 112
+2018-10-09 4:48:09 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 112
+2018-10-09 4:48:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 112
+2018-10-09 4:48:10 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 112
+2018-10-09 4:51:56 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:51:56 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:52:04 - PHP Notice:  Undefined index: $key in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:52:04 - PHP Notice:  Undefined index: $key in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:52:05 - PHP Notice:  Undefined index: $key in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:52:05 - PHP Notice:  Undefined index: $key in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:52:11 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 4:52:11 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:00:36 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:00:36 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:00:37 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:00:37 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:00:45 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:00:45 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:03:59 - PHP Notice:  Undefined index: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 110
+2018-10-09 5:06:56 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:06:56 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:06:57 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:06:57 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:22:43 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 216
+2018-10-09 5:31:17 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:17 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:17 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:17 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:18 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:18 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:18 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:18 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:19 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:19 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:19 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:19 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:20 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:20 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:20 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:20 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:21 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:22 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:23 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:24 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:24 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:24 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:31:24 - PHP Notice:  Undefined offset: 3 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 113
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:47:51 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 5:51:34 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:51:34 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:51:34 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:51:34 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:53:26 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:53:26 - PHP Notice:  Undefined variable: length_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:57:40 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 5:57:40 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 6:12:04 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:04 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:04 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:04 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:23 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:23 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:23 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:23 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:24 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:24 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:24 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:12:24 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:02 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:39 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:39 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:39 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:39 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:40 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:40 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:40 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:40 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 116
+2018-10-09 6:13:51 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 120
+2018-10-09 6:13:51 - PHP Warning:  implode(): Invalid arguments passed in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 120
+2018-10-09 6:20:05 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 6:20:05 - PHP Notice:  Undefined variable: option_value_query in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 801
+2018-10-09 6:20:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 797
+2018-10-09 6:20:06 - PHP Notice:  Undefined variable: option_value_query in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 801
+2018-10-09 6:22:01 - PHP Notice:  Undefined variable: datas in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 6:22:02 - PHP Notice:  Undefined variable: datas in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\product.php on line 798
+2018-10-09 6:32:00 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/product/lacecategory.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-10-09 7:37:18 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:37:43 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:40:42 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:40:50 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:40:54 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:40:56 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:40:57 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:40:58 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:41:16 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:44:53 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:45:01 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-09 7:50:31 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-09 7:52:14 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-09 8:14:22 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-09 8:14:28 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7

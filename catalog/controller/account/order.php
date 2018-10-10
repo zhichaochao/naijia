@@ -78,7 +78,7 @@ class ControllerAccountOrder extends Controller {
 			$data['orders'][] = array(
 				'order_id'   => $result['order_id'],
 				'products'   => $order_products,
-				'order_num'   => $result['order_num'],
+				'order_number'   => $result['order_number'],
 			
 				'status'     => $result['status'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
@@ -239,10 +239,10 @@ class ControllerAccountOrder extends Controller {
 			}
 
 			//订单号 dyl add
-			if ($order_info['order_num']) {
-				$data['order_num'] = $order_info['order_num'];
+			if ($order_info['order_number']) {
+				$data['order_number'] = $order_info['order_number'];
 			} else {
-				$data['order_num'] = '';
+				$data['order_number'] = '';
 			}
 			// print_r($data['order_num']);exit;
 			if (isset($this->request->get['page'])) {
