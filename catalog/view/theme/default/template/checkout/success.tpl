@@ -6,20 +6,17 @@
       
         <div class="text_1 clearfix">
           <h1>Two steps to place your order.</h1>
-          <p class="lv_p">Order Number:N12345664866</p>
+          <p class="lv_p">Order Number:<?=$order_number;?></p>
           <table class="pay_tb1">
-            <tr>
-              <td><span>Sub-Total</span></td>
-              <td><span>$227.00</span></td>
+                  <?php foreach ($totals as $key=> $total) { ?>
+  <tr>
+              <td><span><?=$total['title'];?></span></td>
+              <td><span><?=$total['text'];?></span></td>
             </tr>
-            <tr>
-              <td><span>Shipping</span></td>
-              <td><span>$10.00</span></td>
-            </tr>
-            <tr>
-              <td><span>Total</span></td>
-              <td><span>$227.00</span></td>
-            </tr>
+                             
+                                      <?php } ?>
+          
+      
           </table>
         </div>      
         
