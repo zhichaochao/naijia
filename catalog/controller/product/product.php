@@ -102,31 +102,15 @@ class ControllerProductProduct extends Controller {
         } else {
             $product_id = 0;
         }
-        $resultss= $this->model_catalog_product->getProductSelects($product_id);
-        $length_id=array();
-        $wig_id=array();
-        foreach ($resultss as $key => $value) {
+        $data['selects']= $this->model_catalog_product->getProductSelects($product_id);
 
-            $length_id[]=$value['length_id'];
+        // print_r(  $data['selects']);exit();
+       
+        $data['options'] = $this->model_catalog_product->getOptionValues();
+     
+    
 
-            $wig_id[]=$value['wig_id'];
-
-            $length_ids=implode(",",$length_id);
-            // print_r($length_ids);exit;
-         $lengths= $this->model_catalog_product->getOptionValues($length_ids);
-
-  
-        }
-
-          // print_r($lengths);exit;
-        $wigs= $this->model_catalog_product->getOptionValues(5);
-            $len_tems=array();
-        foreach ($wigs as $key => $value) {
-            $len_tems[$value['option_value_id']]=$value['name'];
-        }
-        $data['wigs']=$len_tems;
-//   $manufacturers = $this->model_catalog_product->getOptionValues();
-// print_r($data['wigs']);exit;
+// print_r($data['options']);exit;
         
         $this->load->model('catalog/product');
 
@@ -201,24 +185,25 @@ class ControllerProductProduct extends Controller {
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
             // $data['hot'] = $producthot['hot'];
+            // print_r($product_info);exit();
             
 // 
             $data['description'] =html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
             $data['meta_description'] = $product_info['meta_description'];
             $data['wishlist']= $this->model_catalog_product->wishlistornot($product_info['product_id']);
             //折扣前最大 小
-            $data['min_price'] = $this->currency->format($product_info['min_price']['price'], $this->session->data['currency']);
-            $data['max_price'] = $this->currency->format($product_info['max_price']['price'], $this->session->data['currency']);
+            $data['min_price'] = $this->currency->format($product_info['price'], $this->session->data['currency']);
+            $data['max_price'] = $this->currency->format($product_info['max_price'], $this->session->data['currency']);
             // 折扣后价格最大 最小
 
             if ($product_info['special']) {
                  if($product_info['special']['percent']>0){
-                        $data['min_prices'] =$this->currency->format($product_info['min_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
-                        $data['max_prices'] = $this->currency->format($product_info['max_price']['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
+                        $data['min_prices'] =$this->currency->format($product_info['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
+                        $data['max_prices'] = $this->currency->format($product_info['max_price']*$product_info['special']['percent']/100, $this->session->data['currency']);
                                $data['percent'] = $product_info['special']['percent'];
                     }else{
-                        $data['min_prices'] = $this->currency->format($product_info['min_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
-                        $data['max_prices'] = $this->currency->format($product_info['max_price']['price']-$product_info['special']['price'], $this->session->data['currency']);
+                        $data['min_prices'] = $this->currency->format($product_info['price']-$product_info['special']['price'], $this->session->data['currency']);
+                        $data['max_prices'] = $this->currency->format($product_info['max_price']-$product_info['special']['price'], $this->session->data['currency']);
                                $data['percent'] =round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
                     }              
                 }else{
@@ -400,7 +385,7 @@ class ControllerProductProduct extends Controller {
             // print_r($product_info['price']['price']);exit();
 
         
-            $data['price']=$this->currency->format($product_info['price']['price'], $this->session->data['currency']);
+            $data['price']=$this->currency->format($product_info['price'], $this->session->data['currency']);
             if ($product_info['special']) {
                  $data['special']=$this->currency->format($product_info['special']['special'], $this->session->data['currency']);
             }
@@ -589,11 +574,16 @@ class ControllerProductProduct extends Controller {
                     $percents='';
                     $date_ends='';
                 }
+                if (isset($res[0]['image'])) {
+                  $thumbs=$this->model_tool_image->resize($res[0]['image'],380,380);
+                }else{
+                    $thumbs= $image;
+                }
                 $data['sspecial']=$product_info['special'];
                 $data['products_like'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
-                    'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
+                    'thumbs'       =>$thumbs,
                     'hot'     => $producthot['hot'],
                     'date_end'    => $date_ends,
                     //'name'        => $result['name'],
@@ -602,7 +592,7 @@ class ControllerProductProduct extends Controller {
                     'reviews'     => $result['reviews'],
                     'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
                     'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
-                    'price'       => $this->currency->format($result['price']['price'],$this->session->data['currency']),
+                    'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
                     'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
                     'tax'         => $tax,
                     'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,

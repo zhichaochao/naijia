@@ -5,21 +5,12 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function getProduct($product_id) {
-		// print_r($data);exit;
-		// $query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer,
-		// 		(SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND pr.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "') AS reward,
-		// 		(SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status,
-		// 		(SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class,
-		// 		(SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class,
-		// 		(SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating,
-		// 		(SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");
-
+		
 			$query = $this->db->query("SELECT DISTINCT *, pd.name AS name, p.image, m.name AS manufacturer, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special, (SELECT points FROM " . DB_PREFIX . "product_reward pr WHERE pr.product_id = p.product_id AND pr.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "') AS reward, (SELECT ss.name FROM " . DB_PREFIX . "stock_status ss WHERE ss.stock_status_id = p.stock_status_id AND ss.language_id = '" . (int)$this->config->get('config_language_id') . "') AS stock_status, (SELECT wcd.unit FROM " . DB_PREFIX . "weight_class_description wcd WHERE p.weight_class_id = wcd.weight_class_id AND wcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS weight_class, (SELECT lcd.unit FROM " . DB_PREFIX . "length_class_description lcd WHERE p.length_class_id = lcd.length_class_id AND lcd.language_id = '" . (int)$this->config->get('config_language_id') . "') AS length_class, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r2 WHERE r2.product_id = p.product_id AND r2.status = '1' GROUP BY r2.product_id) AS reviews, p.sort_order FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN " . DB_PREFIX . "product_to_store p2s ON (p.product_id = p2s.product_id) LEFT JOIN " . DB_PREFIX . "manufacturer m ON (p.manufacturer_id = m.manufacturer_id) WHERE p.product_id = '" . (int)$product_id . "' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND p.status = '1' AND p.date_available <= NOW() AND p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'");		
 
 				$special=$this->getProductSpecialPrice($product_id);
-				$min_price=$this->getProductMinPrice($product_id);
-				$max_price=$this->getProductMaxPrice($product_id);
-				$price=$min_price;
+			
+			
 
 				if ($query->num_rows) {
 					return array(
@@ -43,13 +34,11 @@ class ModelCatalogProduct extends Model {
 				'image'            => $query->row['image'],
 				'manufacturer_id'  => $query->row['manufacturer_id'],
 				'manufacturer'     => $query->row['manufacturer'],
-				'price'            => $price,
-				'min_price'            => $min_price,
-				'max_price'            => $max_price,
+				'price'            => $query->row['price'],
+			
+				'max_price'            =>$query->row['max_price'],
 				'special'          => $special,
-				// 'price'            => $price['old_price'],
-				// 'special'          => $price['special'],
-				// 'share'          => $price['share'],
+			
 
 				'reward'           => $query->row['reward'],
 				'points'           => $query->row['points'],
@@ -99,27 +88,12 @@ class ModelCatalogProduct extends Model {
 		foreach ($query->rows as $key => $value) {
 
 		if (($value['date_start'] == '0000-00-00' || strtotime($value['date_start']) < time()) && ($value['date_end'] == '0000-00-00' || strtotime($value['date_end']) > time())) {
-			if ($value['product_option_value_id']==0) {
-				$old_price=$this->getProductMinPrice($product_id);
-				$value['old_price']=$old_price['price'];
-				$value['share']=$old_price['share'];
-
-			}else{
-				$queryk = $this->db->query("SELECT price as price,product_option_value_id,product_option_id,option_id FROM " . DB_PREFIX . "product_option_value WHERE product_option_value_id = '" . (int)$value['product_option_value_id'] . "'");
+		
+				$queryk = $this->db->query("SELECT price  FROM " . DB_PREFIX . "product WHERE product_id = '" . (int)$product_id . "'");
 				$tem=$queryk->row;
 				$value['old_price']=$tem['price'];
-				  $queryp = $this->db->query("SELECT  price as price,product_option_value_id,product_option_id FROM (SELECT * FROM " . DB_PREFIX . "product_option_value WHERE  product_id='".$product_id."' ORDER BY  price ASC) as opv   WHERE product_id='".$product_id."' AND option_id <> '".(int)$tem['option_id'] ."' GROUP BY option_id");
-				  $share='{'.$tem['product_option_id'].':'.$tem['product_option_value_id'];
-				  if ($queryp->rows) {
-				 	foreach ($queryp->rows as $ky => $val) {
-				 		$share.=','.$val['product_option_id'].':'.$val['product_option_value_id'];
-				 			$tem['price']+=$val['price'];
-				 	}
-				 }
-				 $share.='}';
-				 	$value['old_price']=$tem['price'];
-				 	$value['share']=$share;
-			}
+				 
+		
 			if ($value['percent'] > 0) {
 				$value['special']=$value['old_price']*$value['percent']/100;
 			}else{
@@ -131,50 +105,7 @@ class ModelCatalogProduct extends Model {
 		}
 		return $row;
 	}
-		// 找最低的价格
-	public function getProductMinPrice($product_id){
-			//用户组
 		
-	      $query = $this->db->query("SELECT  price as price ,product_option_id,product_option_value_id FROM (SELECT * FROM " . DB_PREFIX . "product_option_value WHERE  product_id='".$product_id."' AND quantity>0 ORDER BY  price ASC,option_value_id ASC ) as opv  GROUP BY option_id ");
-			$price=0;
-			$share='{';
-			if ($query->rows) {
-			 	foreach ($query->rows as $key => $value) {
-			 		$price+=$value['price'];
-			 		if ($key==0) {
-			 			$share.=$value['product_option_id'].':'.$value['product_option_value_id'];
-			 		}else{
-			 			$share.=','.$value['product_option_id'].':'.$value['product_option_value_id'];
-			 		}
-			 		
-			 	}
-			 } 
-			 $share.='}';
-			 // print_r($price);exit;
-		
-		 return array('price'=>$price,'share'=>$share);
-    }
-	//最大价
-	public function getProductMaxPrice($product_id){
-	
-	      $query = $this->db->query("SELECT  price as price ,product_option_id,product_option_value_id FROM (SELECT * FROM " . DB_PREFIX . "product_option_value WHERE  product_id='".$product_id."' AND quantity>0 ORDER BY  price DESC,option_value_id ASC ) as opv  GROUP BY option_id ");
-			$price=0;
-			$share='{';
-			if ($query->rows) {
-			 	foreach ($query->rows as $key => $value) {
-			 		$price+=$value['price'];
-			 		if ($key==0) {
-			 			$share.=$value['product_option_id'].':'.$value['product_option_value_id'];
-			 		}else{
-			 			$share.=','.$value['product_option_id'].':'.$value['product_option_value_id'];
-			 		}
-			 		
-			 	}
-			 } 
-			 $share.='}';
-		
-		 return array('price'=>$price,'share'=>$share);
-    }
 
 	public function getProducts($data = array()) {
 		$sql = "SELECT p.product_id, (SELECT AVG(rating) AS total FROM " . DB_PREFIX . "review r1 WHERE r1.product_id = p.product_id AND r1.status = '1' GROUP BY r1.product_id) AS rating, (SELECT price FROM " . DB_PREFIX . "product_discount pd2 WHERE pd2.product_id = p.product_id AND pd2.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND pd2.quantity = '1' AND ((pd2.date_start = '0000-00-00' OR pd2.date_start < NOW()) AND (pd2.date_end = '0000-00-00' OR pd2.date_end > NOW())) ORDER BY pd2.priority ASC, pd2.price ASC LIMIT 1) AS discount, (SELECT price FROM " . DB_PREFIX . "product_special ps WHERE ps.product_id = p.product_id AND ps.customer_group_id = '" . (int)$this->config->get('config_customer_group_id') . "' AND ((ps.date_start = '0000-00-00' OR ps.date_start < NOW()) AND (ps.date_end = '0000-00-00' OR ps.date_end > NOW())) ORDER BY ps.priority ASC, ps.price ASC LIMIT 1) AS special";
@@ -775,45 +706,53 @@ class ModelCatalogProduct extends Model {
 	 	return $query->row;
 	 }
 
-	//  public function getOptionValues($option_id=null) {
-	// 	$option_value_data = array();
-	// 	if ($option_id) {
-	// 		$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE ov.option_id = '" . (int)$option_id . "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order, ovd.name");
-	// 	}else{
-	// 		$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE   ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order, ovd.name");
-	// 	}
-
-		
-
-	// 	foreach ($option_value_query->rows as $option_value) {
-	// 		$option_value_data[$option_value['option_value_id']] = $option_value['name'];
-	// 	}
-
-	// 	return $option_value_data;
-	// }
-	public function getOptionValues($data) {
-		// print_r($data);exit;
+	 public function getOptionValues($option_id=null) {
 		$option_value_data = array();
-
-	$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE ovd.option_value_id = '" .$data. "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order, ovd.name");
+		if ($option_id) {
+			$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE ov.option_id = '" . (int)$option_id . "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY  ovd.option_id, ovd.name");
+		}else{
+			$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE   ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY  ovd.option_id, ovd.name");
+		}
+		// print_r("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE   ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order, ovd.name");exit();
 
 		
-// print_r($option_value_query);exit;
+
 		foreach ($option_value_query->rows as $option_value) {
-			$option_value_data[] = array(
-				'option_value_id' => $option_value['option_value_id'],
-				'name'            => $option_value['name'],
-				'image'           => $option_value['image'],
-				'sort_order'      => $option_value['sort_order']
-			);
+			$option_value_data[$option_value['option_value_id']] = $option_value['name'];
 		}
 
 		return $option_value_data;
 	}
-	public function getProductSelects($product_id) {
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_select WHERE product_id = '" . (int)$product_id . "' ");
+// 	public function getOptionValues($data) {
+// 		// print_r($data);exit;
+// 		$option_value_data = array();
 
-		return $query->rows;
+// 	$option_value_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "option_value ov LEFT JOIN " . DB_PREFIX . "option_value_description ovd ON (ov.option_value_id = ovd.option_value_id) WHERE ovd.option_value_id = '" .$data. "' AND ovd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY ov.sort_order, ovd.name");
+
+		
+// // print_r($option_value_query);exit;
+// 		foreach ($option_value_query->rows as $option_value) {
+// 			$option_value_data[] = array(
+// 				'option_value_id' => $option_value['option_value_id'],
+// 				'name'            => $option_value['name'],
+// 				'image'           => $option_value['image'],
+// 				'sort_order'      => $option_value['sort_order']
+// 			);
+// 		}
+
+// 		return $option_value_data;
+// 	}
+	public function getProductSelects($product_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_description od  on od.option_id=psv.option_id  WHERE psv.product_id = '" . (int)$product_id . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY  psv.option_id ");
+		$return=array();
+		foreach ($query->rows as $key => $value) {
+			$que = $this->db->query("SELECT distinct(psv.option_value_id),psv.main,psv.remark, od.* FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_value_description od  on od.option_value_id=psv.option_value_id  WHERE psv.product_id = '" . (int)$product_id . "' AND psv.option_id = '" . (int)$value['option_id'] . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ");
+			// print_r("SELECT distinct(psv.option_value_id), od.* FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_value_description od  on od.option_value_id=psv.option_value_id  WHERE psv.product_id = '" . (int)$product_id . "' AND psv.option_id = '" . (int)$value['option_id'] . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ");
+			  $value['selects']=$que->rows;
+			$return[]=$value;
+		}
+
+		return $return;
 	}
 	public function getTotalOptions() {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM `" . DB_PREFIX . "option`");

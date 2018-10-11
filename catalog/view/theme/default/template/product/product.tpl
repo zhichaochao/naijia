@@ -110,25 +110,24 @@
               <?php }?>
               
               <div id="form-product">
-              <?php if ($options) { ?>
-                <?php foreach ($options as $option) { ?>  
-                <?php if ($option['product_option_value']) { ?>
-                <?php if ($option['type'] == 'radio') { ?> 
+              <?php if ($selects) { ?>
+                <?php foreach ($selects as $select) { ?>  
+            
                   <li class="clearfix">
-                    <span class="bt_span slide">Select <?=$option['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select Length</p></span> 
+                    <span class="bt_span slide">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix">
-                      <input type="hidden" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php if(isset($shareoption[$option['product_option_id']])){ echo $shareoption[$option['product_option_id']];}else{ echo $option['product_option_value'][0]['product_option_value_id'];} ?>" />
-                        <?php foreach ($option['product_option_value'] as $k=> $option_value) { ?>
-                        <?php if($option_value['remarks']){?>
-                        <li><span  value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remarks']; ?>)</span></li>
+                      <input type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?php echo $select['option_id']; ?>" />
+                        <?php foreach ($select['selects'] as $k=> $option_value) { ?>
+                        <?php if($option_value['remark']){?>
+                        <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remark']; ?>)</span></li>
                         <?php }else{?>
-                        <li><span  value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?></span></li>
+                        <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></span></li>
                         <?php } ?>
                         
 
-                        <!-- <li><span>28″(model size)</span></li> -->
                         <?php } ?>
                     </ul>
+                    <?php if( $select['option_id']==1){ ?>
                     <p class="size_p">Select Size Guide</p>
                     <div class="size_img">
                       <div class="img">
@@ -136,19 +135,10 @@
                         <img src="catalog/view/theme/default/img/size.jpg" alt="" />
                       </div>
                   </div>
+                  <?php } ?>
                   </li>
-                <?php }elseif ($option['type'] == 'select') { ?>
-                <li class="clearfix">
-                  <span class="bt_span slide active"><?=$option['name']?>: <em></em> <i></i><p class="ts_ps">Please select Wig with</p></span>
-                    <ul class="pro_det_ul4 slide_ul clearfix" style="display: none;">
-
-                      <input type="hidden" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php if(isset($shareoption[$option['product_option_id']])){ echo $shareoption[$option['product_option_id']];}else{ echo $option['product_option_value'][0]['product_option_value_id'];} ?>" />
-                        <?php foreach ($option['product_option_value'] as $k=> $option_value) { ?>
-                        <li class="<?php if(isset($shareoption[$option['product_option_id']])){ if($shareoption[$option['product_option_id']]==$option_value['product_option_value_id']) echo 'active';} else if($k==0) echo 'active'; ?>" value="<?php echo $option_value['product_option_value_id']; ?>"><span class="select_btn"><?php echo $option_value['name']; ?></span></li>
-                        <?php } ?>
-                    </ul>
-                </li>
-                <?php }} ?><?php }} ?>
+             
+                <?php }} ?>
                 </div>
               <!--默认不选择-->
               <!-- <p class="size_p">Select Size Guide</p> -->

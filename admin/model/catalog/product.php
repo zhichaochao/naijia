@@ -362,6 +362,7 @@ class ModelCatalogProduct extends Model {
 			$data['product_filter'] = $this->getProductFilters($product_id);
 			$data['product_image'] = $this->getProductImages($product_id);
 			$data['product_option'] = $this->getProductOptions($product_id);
+			$data['product_select'] = $this->getProductSelects($product_id);
 			$data['product_related'] = $this->getProductRelated($product_id);
 			$data['product_reward'] = $this->getProductRewards($product_id);
 			$data['product_special'] = $this->getProductSpecials($product_id);

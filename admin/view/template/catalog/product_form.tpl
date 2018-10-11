@@ -1,4 +1,5 @@
 <?php echo $header; ?><?php echo $column_left; ?>
+
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -394,6 +395,9 @@
                 </div>
               </div>
             </div>
+            <style type="text/css">
+#tab-select select{ padding-right: 20px; }
+</style>
             <div class="tab-pane" id="tab-select">
                <div class="row">
                   <div class="col-sm-10">
