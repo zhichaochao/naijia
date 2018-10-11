@@ -16,41 +16,41 @@ class ControllerProductProduct extends Controller {
 
         $this->load->model('catalog/product');
 
-        $this->load->model('catalog/manufacturer');
+        // $this->load->model('catalog/manufacturer');
 
-        if (isset($this->request->get['manufacturer_id'])) {
-            $data['breadcrumbs'][] = array(
-                'text' => $this->language->get('text_brand'),
-                'href' => $this->url->link('product/manufacturer')
-            );
+        // if (isset($this->request->get['manufacturer_id'])) {
+        //     $data['breadcrumbs'][] = array(
+        //         'text' => $this->language->get('text_brand'),
+        //         'href' => $this->url->link('product/manufacturer')
+        //     );
 
-            $url = '';
+        //     $url = '';
 
-            if (isset($this->request->get['sort'])) {
-                $url .= '&sort=' . $this->request->get['sort'];
-            }
+        //     if (isset($this->request->get['sort'])) {
+        //         $url .= '&sort=' . $this->request->get['sort'];
+        //     }
 
-            if (isset($this->request->get['order'])) {
-                $url .= '&order=' . $this->request->get['order'];
-            }
+        //     if (isset($this->request->get['order'])) {
+        //         $url .= '&order=' . $this->request->get['order'];
+        //     }
 
-            if (isset($this->request->get['page'])) {
-                $url .= '&page=' . $this->request->get['page'];
-            }
+        //     if (isset($this->request->get['page'])) {
+        //         $url .= '&page=' . $this->request->get['page'];
+        //     }
 
-            if (isset($this->request->get['limit'])) {
-                $url .= '&limit=' . $this->request->get['limit'];
-            }
+        //     if (isset($this->request->get['limit'])) {
+        //         $url .= '&limit=' . $this->request->get['limit'];
+        //     }
 
-            $manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($this->request->get['manufacturer_id']);
+        //     $manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($this->request->get['manufacturer_id']);
 
-            if ($manufacturer_info) {
-                $data['breadcrumbs'][] = array(
-                    'text' => $manufacturer_info['name'],
-                    'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
-                );
-            }
-        }
+        //     if ($manufacturer_info) {
+        //         $data['breadcrumbs'][] = array(
+        //             'text' => $manufacturer_info['name'],
+        //             'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
+        //         );
+        //     }
+        // }
 
         if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
             $url = '';
@@ -172,18 +172,23 @@ class ControllerProductProduct extends Controller {
             $this->document->setDescription($product_info['meta_description']);
             $this->document->setKeywords($product_info['meta_keyword']);
             $this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
+            // print_r($product_info);exit();
           
 
             $data['heading_title'] = $product_info['name'];
             $this->load->model('tool/image');
             if ($product_info['image']) {
                     $data['selfimage'] = $this->model_tool_image->resize($product_info['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
-                } 
+                } else{
+                      $data['selfimage']='';
+                }
+                // print_r( $data['selfimage']);exit();
             $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id']);
             // print_r($data['selfhref']);exit;
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
+            $data['color'] = $product_info['color'];
             // $data['hot'] = $producthot['hot'];
             // print_r($product_info);exit();
             
@@ -292,7 +297,7 @@ class ControllerProductProduct extends Controller {
             $data['manufacturer'] = $product_info['manufacturer'];
             $data['manufacturers'] = $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $product_info['manufacturer_id']);
             $data['model'] = $product_info['model'];
-            $data['reward'] = $product_info['reward'];
+            // $data['reward'] = $product_info['reward'];
             $data['image'] = 'image/'.$product_info['image'];
 
             if ($product_info['quantity'] <= 0) {
@@ -616,6 +621,7 @@ class ControllerProductProduct extends Controller {
                 $data['products_related'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
+                    'name'         =>$result['name'],
                     'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
                 );
                 // print_r($data['products_related']);exit;
@@ -1268,28 +1274,34 @@ class ControllerProductProduct extends Controller {
             $product_id = 0;
         }
         $options=$this->request->post['option'];
-
-        $this->load->model('catalog/product');
-
-        $price=  $this->model_catalog_product->getProductPricebyOptions($product_id,$options);
-       // print_r($price);exit;
-        $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
-
-       
-         
-      $json=$price;
-       $json['percent']=round($price['special']/$price['price'],2)*100;
-     if ($price['special']>0) {
-          $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
-           $json['html']= '<span>'.$price_s.'</span><del style="color:#999;font-size:18px;font-weight:normal;">'. $price_c.'</del>';
-      }else{
-            $json['html']= '<span>'. $price_c.'</span>';  
+        if (in_array('0', $options)) {
+           exit();
         }
-        // 
-        // print_r($json);exit;
 
-     $this->response->addHeader('Content-Type: application/json');
-     $this->response->setOutput(json_encode($json));
+            $this->load->model('catalog/product');
+
+            $price=  $this->model_catalog_product->getProductPricebyOptions($product_id,$options);
+           // print_r($price);exit;
+            if ($price) {
+                 $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
+                     
+                  $json=$price;
+                   $json['percent']=round($price['special']/$price['price'],2)*100;
+                 if ($price['special']>0) {
+                      $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
+                       $json['html']= '<span>'.$price_s.'</span><del style="color:#999;font-size:18px;font-weight:normal;">'. $price_c.'</del>';
+                  }else{
+                        $json['html']= '<span>'. $price_c.'</span>';  
+                    }
+            }else{
+                $json=array();
+            }
+           
+            // 
+            // print_r($json);exit;
+
+         $this->response->addHeader('Content-Type: application/json');
+         $this->response->setOutput(json_encode($json));
         
     }
 }

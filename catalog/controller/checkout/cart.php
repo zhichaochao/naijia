@@ -22,6 +22,7 @@ class ControllerCheckoutCart extends Controller {
 			'href' => $this->url->link('checkout/cart'),
 			'text' => $this->language->get('heading_title')
 		);
+		// print_r($this->cart->hasProducts(1));exit();
 
 		if ($this->cart->hasProducts(1) || !empty($this->session->data['vouchers'])) {
 			$data['heading_title'] = $this->language->get('heading_title');
@@ -101,26 +102,27 @@ class ControllerCheckoutCart extends Controller {
 					$image = '';
 				}
 
-				$option_data = array();
+				$option_data = $product['option'];
+				
 
-				foreach ($product['option'] as $option) {
-					if ($option['type'] != 'file') {
-						$value = $option['value'];
-					} else {
-						$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
+				// foreach ($product['option'] as $option) {
+				// 	if ($option['type'] != 'file') {
+				// 		$value = $option['value'];
+				// 	} else {
+				// 		$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
 
-						if ($upload_info) {
-							$value = $upload_info['name'];
-						} else {
-							$value = '';
-						}
-					}
+				// 		if ($upload_info) {
+				// 			$value = $upload_info['name'];
+				// 		} else {
+				// 			$value = '';
+				// 		}
+				// 	}
 
-					$option_data[] = array(
-						'name'  => $option['name'],
-						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
-					);
-				}
+				// 	$option_data[] = array(
+				// 		'name'  => $option['name'],
+				// 		'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
+				// 	);
+				// }
 
 				// Display prices
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
@@ -367,13 +369,20 @@ class ControllerCheckoutCart extends Controller {
 				$option = array();
 			}
 
-			$product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
-
-			foreach ($product_options as $product_option) {
-				if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
-					$json['error']['option'][$product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
-				}
+			$product_select_id= $this->model_catalog_product->getProductSelectId($this->request->post['product_id'],$option);
+			if (!$product_select_id>0) {
+				$json['error']='stockout';
 			}
+			// print_r($product_select_id);exit();
+
+			// $product_options = $this->model_catalog_product->getProductOptions($this->request->post['product_id']);
+
+			// foreach ($product_options as $product_option) {
+			// 	if ($product_option['required'] && empty($option[$product_option['product_option_id']])) {
+			// 		$json['error']['option'][$product_option['product_option_id']] = sprintf($this->language->get('error_required'), $product_option['name']);
+			// 	}
+			// }
+
 
 			if (isset($this->request->post['recurring_id'])) {
 				$recurring_id = $this->request->post['recurring_id'];
@@ -396,7 +405,7 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $option, $recurring_id);
+				$this->cart->add($this->request->post['product_id'], $quantity, $product_select_id, $recurring_id);
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
 

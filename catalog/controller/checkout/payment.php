@@ -7,6 +7,8 @@ class ControllerCheckoutPayment extends Controller {
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))||(!isset($this->session->data['cart_ids'])||!$this->session->data['cart_ids'])||!isset($this->session->data['wait_href'])||!isset($this->session->data['payment_method'])||!isset($this->session->data['payment_address']) ) {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
+
+		
 		$data['continue']=$this->session->data['wait_href'];
 		
 
@@ -31,6 +33,8 @@ class ControllerCheckoutPayment extends Controller {
 
 		}
 		$data['order_number']=$this->session->data['order_number'];
+		$data['continue']=$this->url->link('common/home');
+		$data['view_order']=$this->url->link('account/order/info','&order_id='.$this->request->post['order_id']);
 
 		$data['header'] = $this->load->controller('common/header');
 		$data['footer'] = $this->load->controller('common/footer');

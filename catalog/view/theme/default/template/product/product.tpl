@@ -58,20 +58,20 @@
               <?php if($sspecial){?>
                 <div class="price" id="price" >
                    <?php if(isset($special)){ ?>
-                  <em class="em1"><?=$min_price?> -<?=$max_price?></em>
-                  <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>
+               <?php if($min_price==$max_price) {?><em class="em1"><?=$min_price?></em> <?php }else{?>  <em class="em1"><?=$min_price?> -<?=$max_price?></em><?php } ?>
+                  <?php if($min_prices==$max_prices) {?> <em id="money" class="em2"><?=$min_prices;?> </em><?php }else{?><em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em><?php } ?>
                     <span  class="red_span"><?=$percent;?>%OFF</span>
                   <?php }else{ ?>
-                  <em id="money" class="em2" ><?=$min_price?> -<?=$max_price?></em>
+                 <?php if($min_price==$max_price) {?> <em id="money" class="em2" ><?=$min_price?> </em> <?php }else{?>  <em id="money" class="em2" ><?=$min_price?> -<?=$max_price?></em><?php } ?>
                   <!-- <span class="red_span">44%OFF</span> -->
                   <?php } ?>
                 </div>
               <?php }else{?>
                   <div class="price" >
                 <?php if(isset($special)){ ?>
-                  <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>
+                 <?php if($min_prices==$max_prices) {?><em id="money" class="em2"><?=$min_prices;?></em>  <?php }else{?> <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>  <?php } ?>
                   <?php }else{ ?>
-                  <em id="money" class="em2"><?=$min_price?> -<?=$max_price?></em>
+                 <?php if($min_price==$max_price) {?><em id="money" class="em2"><?=$min_price?></em>  <?php }else{?>  <em id="money" class="em2"><?=$min_price?> -<?=$max_price?></em>  <?php } ?>
                    <?php } ?>
                   </div>
               <?php }?>    
@@ -82,7 +82,7 @@
                 <div class="number">
                   <span class="bt_span">
                     <p class="quantity">Quantity :</p>
-                    <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
+                    <input type="text" class="num_in" value="1" name="quantity" class="quantity"/>
                     <div class="num_rf">
                       <em class="add"><i></i></em>
                       <em class="sub"><i></i></em>
@@ -100,9 +100,11 @@
                 <!-- Swiper -->
                 <div class="swiper-container pro_det_ul2 slide_ul clearfix">
                     <div class="swiper-wrapper">
-                    <div class="swiper-slide active"><a href="<?php echo $selfhref; ?>"> <img src="<?php echo $selfimage; ?>" alt="" /></a></div>
+                 
+                    <div class="swiper-slide active"><a href="<?php echo $selfhref; ?>"> <img name="<?=$color?$color:'no color';?>" title="<?=$color?$color:'no color';?>" src="<?php echo $selfimage; ?>" alt="<?=$color?$color:'no color';?>" /></a></div>
+                 
                   <?php foreach ($products_related as $related) { ?> 
-                        <div class="swiper-slide "><a href="<?php echo $related['href']; ?>"> <img src="<?php echo $related['thumb']; ?>" alt="" /></a></div>
+                        <div class="swiper-slide "><a href="<?php echo $related['href']; ?>"> <img src="<?php echo $related['thumb']; ?>" alt="<?=$related['name'];?>" /></a></div>
                    <?php } ?>
                     </div>
                 </div>
@@ -116,16 +118,18 @@
                   <li class="clearfix">
                     <span class="bt_span slide">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix">
-                      <input type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?php echo $select['option_id']; ?>" />
+                        <?php $select_option_id=0;?>
                         <?php foreach ($select['selects'] as $k=> $option_value) { ?>
+                        <?php if($option_value['main']){$select_option_id=$option_value['option_value_id'];} ?>
                         <?php if($option_value['remark']){?>
                         <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remark']; ?>)</span></li>
                         <?php }else{?>
                         <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></span></li>
                         <?php } ?>
-                        
+                       
 
                         <?php } ?>
+                           <input type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?=$select_option_id>0? $select_option_id:0; ?>" />
                     </ul>
                     <?php if( $select['option_id']==1){ ?>
                     <p class="size_p">Select Size Guide</p>
@@ -150,7 +154,7 @@
                   
                   <div class="label">
                     <span class="span_sub"><em class="sub"></em></span>
-                    <input type="text" class="num_in" value="1" readonly="readonly" name="quantity"/>
+                    <input type="text" class="num_in" value="1" class="quantity"/>
                     <span class="span_add"><em class="add"></em></span>
                   </div>
                   <p class="ts_p">This hair need  3-7 customize process days</p>
@@ -375,15 +379,15 @@ window.onload=function(){
     
   //数量加减
     $(".number .num_rf>.add , .number .span_add").click(function(){
-      var num_val =$(this).parents(".number").find(".num_in").val();
+      var num_val =$(".num_in").val();
       num_val++;
-      $(this).parents(".number").find(".num_in").val(num_val);
+      $(".num_in").val(num_val);
     })
     $(".number .num_rf>.sub , .number .span_sub").click(function(){
-      var num_val =$(this).parents(".number").find(".num_in").val();
+      var num_val =$(".num_in").val();
       if(num_val>1){
         num_val--;
-        $(this).parents(".number").find(".num_in").val(num_val);
+        $(".num_in").val(num_val);
       }
     })
     
@@ -401,16 +405,17 @@ window.onload=function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
       $(this).parent().siblings("input").val($(this).attr("value"));
+      $(this).parent().parent().parent().parent().find('.ts_ps').removeClass('off');
       changeprice();
     })
     //wig with选择
-    $(".pro_det_ul4").siblings(".bt_span").find("em").text($(".pro_det_ul4>li").eq(0).find("span").text());
-    $(".pro_det_ul4>li").click(function(){
-      $(this).addClass("active").siblings("li").removeClass("active");
-      $(this).parents("li").find(".slide>em").text($(this).text());
-      $(this).siblings("input").val($(this).attr("value"));
-      changeprice();
-    })
+    // $(".pro_det_ul4").siblings(".bt_span").find("em").text($(".pro_det_ul4>li").eq(0).find("span").text());
+    // $(".pro_det_ul4>li").click(function(){
+    //   $(this).addClass("active").siblings("li").removeClass("active");
+    //   $(this).parents("li").find(".slide>em").text($(this).text());
+    //   $(this).siblings("input").val($(this).attr("value"));
+    //   changeprice();
+    // })
     
     //Wish List添加收藏
     $(".wish_btn").click(function(){
@@ -557,9 +562,20 @@ function changeprice() {
 
             success: function(json) {
                // alert(json);
+               if (json) {
                 $('#money').html(json['html']);
-                $('#price').find('.red_span').html(json['percent']+'%OFF');
-            }
+                if ($('input[name="quantity"]').val()<json['quantity']) {
+                    $('#button-cart').html('Add To Shopping Bag');
+                }else{
+                   $('#button-cart').html('stockout');
+                }
+                if (json['percent']) {$('#price').find('.red_span').html(json['percent']+'%OFF');}
+              }else{
+                $('#money').html('stockout');
+                $('#button-cart').html('stockout');
+               
+                }
+             }
         });
     }
   function rl_scroll(){
@@ -692,7 +708,17 @@ function wishlist(product_id,e) {
   
     var product_id = "<?php echo $product_id; ?>";
     $('#button-cart').on('click', function() {
-        if($(".length_em").text()!=""){
+      var all=1;
+
+      $("#form-product li").each(function(){
+        if ($(this).find('input').val() < 1) {all=0;
+          $(this).find(".ts_ps").addClass("off");
+        }
+                   
+      });
+      // if ($('#button-cart').html()!='stockout') {alert(1);};
+
+        if(all&&$('#button-cart').html()!='stockout'){
             $.ajax({
             url: 'index.php?route=checkout/cart/add',
             type: 'post',
@@ -708,14 +734,14 @@ function wishlist(product_id,e) {
                 
 
 
+             }else{
+              $('#button-cart').html('stockout');
              }
               },
               error: function(xhr, ajaxOptions, thrownError) {
                   alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
               }
             });
-        }else{
-          $(".length_em").siblings(".ts_ps").addClass("off");
         }
 
         

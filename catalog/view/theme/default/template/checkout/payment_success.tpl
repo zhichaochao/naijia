@@ -29,8 +29,8 @@
 						</div>
 						
 						<div class="btn">
-							<a href="###">View My Order</a>
-							<a href="###">Continue Shopping</a>
+							<a href="<?=$view_order;?>">View My Order</a>
+							<a href="<?=$continue;?>">Continue Shopping</a>
 						</div>
 					</div>
 					
@@ -39,10 +39,10 @@
 				<div class="bot clearfix">
 					<ol>
 						<li>
-							<a href="###"><img class="changeimage lazyLoad" data-image='/catalog/view/theme/default/img/success1.jpg' data-mimage='/catalog/view/theme/default/img/yd_success1.jpg'  /></a>
+							<a ><img class="changeimage lazyLoad" data-image='/catalog/view/theme/default/img/success1.jpg' data-mimage='/catalog/view/theme/default/img/yd_success1.jpg'  /></a>
 						</li>
 						<li>
-							<a href="###"><img class="changeimage lazyLoad" data-image='/catalog/view/theme/default/img/success2.jpg' data-mimage='/catalog/view/theme/default/img/yd_success2.jpg'  /></a>
+							<a ><img class="changeimage lazyLoad" data-image='/catalog/view/theme/default/img/success2.jpg' data-mimage='/catalog/view/theme/default/img/yd_success2.jpg'  /></a>
 						</li>
 					</ol>
 				</div>

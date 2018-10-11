@@ -42,9 +42,9 @@
 
                   <p class="p1"><?php echo $product['name']; ?></p>
 
-                  <?php if ($product['option']) { ?>
-                  <?php foreach ($product['option'] as $option) { ?>
-                 <p class="p2" data='<?php echo $option['quantity']; ?>'><?php echo $option['name']; ?>: <?php echo $option['value']; ?></p>
+                  <?php if ($product['option']['selects']) { ?>
+                  <?php foreach ($product['option']['selects'] as $option) { ?>
+                 <p class="p2" data='<?php echo $product['option']['quantity']; ?>'><?php echo $option['option_name']; ?>: <?php echo $option['option_value_name']; ?></p>
                   <?php } ?>
                   <?php } ?>
                  <?php if (!$product['stock']) { ?>

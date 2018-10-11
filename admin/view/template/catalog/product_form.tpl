@@ -429,7 +429,9 @@
                                    
 
                                     <tr><th>选项（先点）</th><th>值</th><th>是否默认</th><th>备注</th><th></th></tr>
-                                      <?php if ($product_select['option']){foreach ($product_select['option'] as $k=> $select_option) { ?>
+                                      <?php if ($product_select['option']){
+
+                                      foreach ($product_select['option'] as $k=> $select_option) { ?>
                                     <tr id='option-value-row<?=$key;?>-<?=$k;?>-t'>
                                       <input type="hidden" name="product_select[<?=$key;?>][product_select_value_id][<?=$k;?>]" value='<?=$select_option["product_select_value_id"];?>'>
                                       <td> 
@@ -448,14 +450,14 @@
                                           </select>
                                       </td>
                                           <td class="text-left"><select name="product_select[<?=$key;?>][option][<?=$k;?>][main]" class="form-control">
-                                  <?php if ($select_option['main']) { ?>
-                                  <option value="1" selected="selected"><?php echo $text_yes; ?></option>
-                                  <option value="0"><?php echo $text_no; ?></option>
-                                  <?php } else { ?>
-                                  <option value="1"><?php echo $text_yes; ?></option>
-                                  <option value="0" selected="selected"><?php echo $text_no; ?></option>
-                                  <?php } ?>
-                                </select></td>
+                                                    <?php if ($select_option['main']) { ?>
+                                                    <option value="1" selected="selected"><?php echo $text_yes; ?></option>
+                                                    <option value="0"><?php echo $text_no; ?></option>
+                                                    <?php } else { ?>
+                                                    <option value="1"><?php echo $text_yes; ?></option>
+                                                    <option value="0" selected="selected"><?php echo $text_no; ?></option>
+                                                    <?php } ?>
+                                            </select></td>
                                 <td>
                                   <input type="text" value="<?=$select_option['remark'];?>" name="product_select[<?=$key;?>][option][<?=$k;?>][remark]"  placeholder="备注" class="form-control" />
                                 </td>
@@ -464,7 +466,9 @@
                                   </td>
                                    
                                     </tr>
-                                       <?php } ?>
+                                    <?php }} ?>
+
+
                                     <tr data-key='<?=$k+1;?>' onclick="addOption(this,<?=$key;?>);"><td>
                                      <button  type="button"  data-toggle="tooltip" title="" class="btn btn-primary" data-original-title="添加选项值"><i class="fa fa-plus-circle"></i></button>
                                    </td>
@@ -500,7 +504,7 @@
                               <td class="text-left"><button type="button" onclick="$('#option-value-row<?=$key;?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
                             </tr>
                   
-                      <?php } }?>
+                      <?php } ?>
                       <input type="hidden" name="select_key" value="<?=$key+1;?>" id='select_key'  />
                     <?php }else{?>
                      <input type="hidden" name="select_key" value="0" id='select_key'  />

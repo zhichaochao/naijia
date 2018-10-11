@@ -353,6 +353,7 @@ class ControllerCatalogProduct extends Controller {
 		$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 		$results = $this->model_catalog_product->getProducts($filter_data);
+		// print_r($results);exit();
 
 		foreach ($results as $result) {
 			if (is_file(DIR_IMAGE . $result['image'])) {
@@ -387,7 +388,7 @@ class ControllerCatalogProduct extends Controller {
 				'price'      => $result['price'],
 				'special'    => $special,
 				// 'percent'=$special/ $result['price']*
-				'quantity'   => $result['quantity'],
+				'quantity'   => $result['read_quantity'],
 				'status'     => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'edit'       => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $result['product_id'] . $url, true)
 			);

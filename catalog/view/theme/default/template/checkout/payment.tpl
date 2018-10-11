@@ -37,7 +37,12 @@ function bank_transfer_gay() {
 		},
 		
 		success: function(json) {
-			// location =json['href'];
+			console.log(json);
+			if (json['href']) {
+			location =json['href'];
+			}else{
+				alert('wrong email ! Please contact us.');
+			}
 		}
 	});
 };

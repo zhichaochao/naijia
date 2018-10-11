@@ -45,9 +45,11 @@
                                         <div class="pic_img"><img src="<?=$product['image'];?>"/></div>
                                         <div class="text">
                                             <h2><?=$product['name'];?></h2>
-                                             <?php foreach ($product['option'] as $option) { ?>
-                                            <p><?=$option['name'];?>: <?=$option['value'];?></p>
-                                              <?php  } ?>
+                                            <?php if($product['option']['selects']){?>
+                                             <?php foreach ($product['option']['selects'] as $option) { ?>
+                                            <p><?=$option['option_name'];?>: <?=$option['option_value_name'];?></p>
+                                              <?php  }} ?>
+
                                         
                                             <p>Quantity:  <?=$product['quantity'];?></p>
                                             <span> <?=$product['price'];?></span>

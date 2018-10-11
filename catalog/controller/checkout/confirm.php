@@ -213,19 +213,19 @@ class ControllerCheckoutConfirm extends Controller {
 
 		$this->load->model('tool/image');
 			foreach ($this->cart->getProducts() as $product) {
-				$option_data = array();
+				$option_data = $product['option'];
 
-				foreach ($product['option'] as $option) {
-					$option_data[] = array(
-						'product_option_id'       => $option['product_option_id'],
-						'product_option_value_id' => $option['product_option_value_id'],
-						'option_id'               => $option['option_id'],
-						'option_value_id'         => $option['option_value_id'],
-						'name'                    => $option['name'],
-						'value'                   => $option['value'],
-						'type'                    => $option['type']
-					);
-				}
+				// foreach ($product['option'] as $option) {
+				// 	$option_data[] = array(
+				// 		'product_option_id'       => $option['product_option_id'],
+				// 		'product_option_value_id' => $option['product_option_value_id'],
+				// 		'option_id'               => $option['option_id'],
+				// 		'option_value_id'         => $option['option_value_id'],
+				// 		'name'                    => $option['name'],
+				// 		'value'                   => $option['value'],
+				// 		'type'                    => $option['type']
+				// 	);
+				// }
 
 				$order_data['products'][] = array(
 					'product_id' => $product['product_id'],
@@ -347,27 +347,9 @@ class ControllerCheckoutConfirm extends Controller {
 			$data['products'] = array();
 
 			foreach ($this->cart->getProducts() as $product) {
-				$option_data = array();
+				$option_data = $product['option'];
 
-				foreach ($product['option'] as $option) {
-					if ($option['type'] != 'file') {
-						$value = $option['value'];
-					} else {
-						$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
-
-						if ($upload_info) {
-							$value = $upload_info['name'];
-						} else {
-							$value = '';
-						}
-					}
-
-					$option_data[] = array(
-						'name'  => $option['name'],
-						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
-					);
-				}
-
+			
 				$recurring = '';
 
 				if ($product['recurring']) {
