@@ -2176,3 +2176,45 @@
 2018-10-09 7:52:14 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
 2018-10-09 8:14:22 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
 2018-10-09 8:14:28 - PHP Notice:  Undefined variable: home in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-11 11:27:45 - PHP Notice:  Undefined variable: home in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Notice:  Undefined index: name in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:51 - PHP Notice:  Undefined index: value in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:27:59 - PHP Notice:  Error: DATA not accepted from server! in D:\phpStudy\WWW\naijia\system\library\mail.php on line 444
+2018-10-11 11:30:51 - PHP Notice:  Undefined variable: home in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\cart.tpl on line 7
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Notice:  Undefined index: name in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:30:56 - PHP Notice:  Undefined index: value in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Notice:  Undefined index: name in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:32:35 - PHP Notice:  Undefined index: value in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-11 11:33:16 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ý¡ï¿½  in D:\phpStudy\WWW\naijia\system\library\mail.php on line 177
+2018-10-11 11:33:16 - PHP Warning:  fsockopen(): unable to connect to email-smtp.us-east-1.amazonaws.com:25 (php_network_getaddresses: getaddrinfo failed: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ý¡ï¿½ ) in D:\phpStudy\WWW\naijia\system\library\mail.php on line 177
+2018-10-11 11:33:16 - PHP Notice:  Error: php_network_getaddresses: getaddrinfo failed: ÇëÇóµÄÃû³ÆÓÐÐ§£¬µ«ÊÇÕÒ²»µ½ÇëÇóµÄÀàÐÍµÄÊý¾Ý¡£  (0) in D:\phpStudy\WWW\naijia\system\library\mail.php on line 181

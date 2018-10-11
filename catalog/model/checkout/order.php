@@ -643,6 +643,7 @@ class ModelCheckoutOrder extends Model {
 				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
 				$mail->setHtml($this->load->view('mail/order', $data));
 				$mail->setText($text);
+				// print_r($mail);exit();
 				if($order_info['email']){
 				 $mail->send();
 				}
@@ -737,11 +738,11 @@ class ModelCheckoutOrder extends Model {
 						$mail->send();
 					}
 					
-					// print_r($mail);exit();
+					
 	
 					// Send to additional alert emails
 					$emails = explode(',', $this->config->get('config_alert_email'));
-	
+	// print_r($mail);	print_r($emails);exit();
 					foreach ($emails as $email) {
 						if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
 							$mail->setTo($email);
@@ -796,7 +797,7 @@ class ModelCheckoutOrder extends Model {
 				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
 				$mail->setText($message);
 					// print_r($mail);exit();
-				// $mail->send();
+				$mail->send();
 			}
 		}
 	}
