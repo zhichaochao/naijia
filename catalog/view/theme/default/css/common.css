@@ -39,8 +39,8 @@ img{max-width: 100%;height: auto;border:none;}
 .container{position: relative;min-width: 320px;max-width:750px;margin: 0 auto;}
 header{position:fixed;top:0;left:0;width:100%;background: #fff;z-index:10;height: 45px;border-bottom: 1px solid #e3e3e3;}
 .white-bg{background: #fff;}
-.fl{float: left;}
-.fr{float: right;}
+.fl{float: left !important;}
+.fr{float: right !important;}
 .no-pl{padding-left: 0;}
 .no-pr{padding-right: 0;}
 .no-pt{padding-left: 0;}

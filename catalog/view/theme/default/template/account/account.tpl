@@ -1,53 +1,86 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
-  <?php if ($success) { ?>
-  <div class="alert alert-success"><i class="fa fa-check-circle"></i> <?php echo $success; ?></div>
-  <?php } ?>
-  <div class="row"><?php echo $column_left; ?>
-    <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
-    <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
-    <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
-    <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h2><?php echo $text_my_account; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $edit; ?>"><?php echo $text_edit; ?></a></li>
-        <li><a href="<?php echo $password; ?>"><?php echo $text_password; ?></a></li>
-        <li><a href="<?php echo $address; ?>"><?php echo $text_address; ?></a></li>
-        <li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
-      </ul>
-      <?php if ($credit_cards) { ?>
-      <h2><?php echo $text_credit_card; ?></h2>
-      <ul class="list-unstyled">
-        <?php foreach ($credit_cards as $credit_card) { ?>
-        <li><a href="<?php echo $credit_card['href']; ?>"><?php echo $credit_card['name']; ?></a></li>
-        <?php } ?>
-      </ul>
-      <?php } ?>
-      <h2><?php echo $text_my_orders; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-        <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-        <?php if ($reward) { ?>
-        <li><a href="<?php echo $reward; ?>"><?php echo $text_reward; ?></a></li>
-        <?php } ?>
-        <li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
-        <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-        <li><a href="<?php echo $recurring; ?>"><?php echo $text_recurring; ?></a></li>
-      </ul>
-      <h2><?php echo $text_my_newsletter; ?></h2>
-      <ul class="list-unstyled">
-        <li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
-      </ul>
-      <?php echo $content_bottom; ?></div>
-    <?php echo $column_right; ?></div>
-</div>
+<div class="in_content clearfix"></div>
+    <!--内容-->
+    <div class="order_con clearfix">
+      <div class="or_content clearfix">
+          <div class="top_yd clearfix">
+            <h1><a class="fh" href="<?php echo $home?>">< BACK</a>My Profile</h1>
+          </div>
+          
+        <div class="lf_nav">
+          <img class="tx_img" src="catalog/view/theme/default/img/png/touxiang.png" alt="" />
+          <h2><?php echo $firstname ?></h2>
+          <p class="p1"><?php echo $telephone ?></p>
+          
+          <ul>
+          <?php echo $account_left; ?>
+          </ul>
+          
+          <img class="vip_img" src="catalog/view/theme/default/img/vip.jpg" alt="" />
+        </div>
+        
+        <div class="right_text clearfix">
+          
+          <div class="grxx_text clearfix">
+            <div class="grxx_con clearfix">
+              <div class="text_bt clearfix">
+                <h2>My Profile</h2>
+                <hr />              
+              </div>
+              
+              <div class="tx_div clearfix">
+                <img src="catalog/view/theme/default/img/png/touxiang.png"/>
+                <p><?php echo $firstname ?></p>
+                <span><?php echo $telephone ?></span>
+              </div>
+              <!--有vip的状态  给div.top加active-->
+              <div class="top clearfix">
+                <span class="sp_lf"><?php echo $firstname ?></span>
+                <span class="sp_top">VIP I</span>
+                <span class="sp_bot"> Join VIP Program Now</span>
+                <span class="sp_bot2"> Loyalty point 888</span>
+              </div>
+              
+              <ul class="grxx_ul clearfix">
+                <li>
+                  <span class="lf">Gender:</span>
+                  <span class="rf"><?php echo $gender; ?></span>
+                </li>
+                <li>
+                  <span class="lf">Birthday:</span>
+                  <span class="rf"><?php echo $birthday; ?></span>
+                </li>
+                <li>
+                  <span class="lf">Email:</span>
+                  <span class="rf"><?php echo $email; ?></span>
+                </li>
+                <li>
+                  <span class="lf">Phone:</span>
+                  <span class="rf">+<?php echo $telephone ?></span>
+                </li>
+                <li>
+                  <span class="lf">Whatsapp:</span>
+                  <span class="rf"><?php echo $whatsapp; ?></span>
+                </li>
+                <li>
+                  <span class="lf">Facebook:</span>
+                  <span class="rf"><?php echo $facebook; ?></span>
+                </li>
+                <li>
+                  <span class="lf">Instagram:</span>
+                  <span class="rf"><?php echo $instagram; ?></span>
+                </li>
+              </ul>
+              <a class="a_edit" href="<?php echo $edit ?>"><span>EDIT</span></a>
+              
+            </div>
+          </div>
+        
+          <a class="change_a" href="<?php echo $editchange ?>"><span>Change Password</span></a>
+        
+        </div>
+      </div>
+      
+    </div>
+
 <?php echo $footer; ?> 

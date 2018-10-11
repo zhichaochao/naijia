@@ -20,6 +20,11 @@ var fun = function (doc, win) {
 fun(document, window);
 
 $(function(){
+	//获取焦点隐藏textarea的提示文本
+	$("textarea").focus(function(){
+		$(this).attr("placeholder","");
+	})
+	
 	//select颜色
 	$("select").each(function(){
 		let a = $(this).find("option:selected").text();

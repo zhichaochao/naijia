@@ -138,26 +138,38 @@
 			</div>
 			<div class="address clearfix">
 				<dl class="clearfix">
-					<dt>Name:</dt>
-					<dd>xiaoyanjing</dd>
-				</dl>
-				<dl class="clearfix">
-					<dt>Address:</dt>
+					<dt style="width: 1.4rem;">Pickup Address:</dt>
 					<dd>A lane in huangbian vllage district guangzhouguangdong province<br />
 					510000  China</dd>
 				</dl>
-				<dl class="clearfix">
-					<dt>Contact:</dt>
-					<dd>+8615601634559</dd>
-				</dl>
+			</div>
+			<div class="xianxia clearfix">
+				<div class="left clearfix">
+					<span class="span1">Bank Alert</span>
+					<span class="span2">Voucher picture</span>
+					<div class="hui">
+						<div class="img">
+							<img src=""/>
+							<div class="close" onclick="del_img($(this))"></div>
+						</div>
+					</div>
+				</div>
+				<div class="center clearfix">
+					<div class="btn">
+						<div class="file_div">
+							<input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+							<a class="btn2" href="###">Re-upload</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<div class="bot clearfix">
 				<div class="top_span clearfix">
 					<span>COMMODITY </span>
-					<span>TEXTIRE OF MATERIAL</span>
+					<span>TEXTURE OF MATERIAL</span>
 					<span>UNIT PRICE</span>
-					<span>NUMBER</span>
+					<span><span>₦26K <em>₦46K</em></span></span>
 					<span>TOTAL</span>
 				</div>	
 				<ul class="table_ul clearfix">
@@ -232,6 +244,7 @@
 					</li>
 				</ul>
 			</div>
+			<p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
 		</div>
 		
 		<!--移动端-->
@@ -283,20 +296,26 @@
 				<div class="or_address clearfix">
 					<h1>Pickup Address</h1>
 					<div class="text">
-						<p>xiaoyanjing</p>
 						<p>A lane in huangbian vllage district guangzhou guangdong province</p>
 						<p>510000  China</p>
-						<p>+8615601634559</p>
 					</div>
 				</div>
 				
 				<div class="xianxia clearfix">
 					<span class="span1">Bank Alert</span>
 					<span class="span2">Voucher picture</span>
-					<div class="hui"></div>
+					<div class="hui">
+						<div class="img">
+							<img src=""/>
+							<div class="close" onclick="del_img($(this))"></div>
+						</div>
+					</div>
 					<div class="center">
 						<div class="btn">
-							<a class="btn2" href="###">Re-upload</a>
+							<div class="file_div">
+								<input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+								<a class="btn2" href="###">Re-upload</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -321,7 +340,7 @@
 						
 					</div>
 					<a class="btn_a huang" href="###">CONTACT US</a>
-					<p class="ms_p">You package is on preparing,contact us if you have any problem.</p>
+					<p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
 				</div>
 			
 			</div>
@@ -599,5 +618,43 @@
 			})
 		
 	})
+	//调取上传框
+    function getphoto(node) {
+        var imgURL = "";
+        try{
+            var file = null;
+            if(node.files && node.files[0] ){
+                file = node.files[0];
+            }else if(node.files && node.files.item(0)) {
+                file = node.files.item(0);
+            }
+            try{
+                imgURL =  file.getAsDataURL();
+            }catch(e){
+                imgRUL = window.URL.createObjectURL(file);
+            }
+        }catch(e){
+            if (node.files && node.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgURL = e.target.result;
+                };
+                reader.readAsDataURL(node.files[0]);
+            }
+        }
+        creatImg(imgRUL);
+        return imgURL;
+    }
+ 
+ 	//上传选中的图片 显示页面
+    function creatImg(imgRUL){
+        $(".hui img").attr("src",imgRUL);
+        $(".hui .close").css("display","block");
+    }
 	
+	//删除选中的图片
+	function del_img(obj){
+		obj.siblings("img").attr("src","");
+		 $(".hui .close").css("display","none");
+	}
 </script>

@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>ADDRESS2</title>
+		<title>REVIEWS2</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,103 +100,48 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="address_con order_con clearfix" style="padding: 0.2rem 0.15rem;">
-			<div class="or_content clearfix">
-				<div class="top_yd clearfix">
-					<a class="fh" href="###">< BACK</a>
-				</div>
-			
-				<div class="lf_nav">
-					<img class="tx_img" src="img/png/touxiang.png" alt="" />
-					<h2>Tyler Durden</h2>
-					<p class="p1">+8613286484822</p>
-					
-					<ul>
-						<li><a href="###"><span>My Orders</span><i></i></a></li>
-						<li><a href="###"><span>My Profile</span><i></i></a></li>
-						<li><a href="###"><span>My addresses</span><i></i></a></li>
-						<li><a href="###"><span>My Favorites</span><i></i></a></li>
-						<li class="active"><a href="###"><span>My Coupon</span><i></i></a></li>
-					</ul>
-					
-					<img class="vip_img" src="img/vip.jpg" alt="" />
-				</div>
-				
-				<div class="address_a"> <a href="###">Add new address</a></div>
-				
-				<div class="add_con clearfix" style="margin-top: 0.2rem">
-					<div class="form_text clearfix">
-						<form>
-							<label class="clearfix true" for="">
-								<span class="pl_span">Frist Name</span>
-								<input type="text" value="Frist Name" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							<label class="clearfix" for="">
-								<span class="pl_span">Last Name</span>
-								<input type="text" placeholder="Last Name" />
-								<p class="ts_ps off">please enter your first name. </p>
-							</label>
-							<label class="clearfix" for="">
-								<span class="pl_span">Address</span>
-								<input type="text" placeholder="Address" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							<label class="clearfix" for="">
-								<span class="pl_span"></span>
-								<input type="text" placeholder="" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="w_50 fl clearfix" for="">
-								<span class="pl_span">Country</span>
-								<select name="">
-									<option value="">Country</option>
-									<option value="">Country2</option>
-									<option value="">Country3</option>
-									<option value="">Country4</option>
-								</select>
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							<label class="w_50 fr clearfix" for="">
-								<span class="pl_span">State</span>
-								<select name="">
-									<option value="">State</option>
-									<option value="">State2</option>
-									<option value="">State3</option>
-									<option value="">State4</option>
-								</select>
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="w_50 fl clearfix" for="">
-								<span class="pl_span">City</span>
-								<input type="text" placeholder="City" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="w_50 fr clearfix" for="">
-								<span class="pl_span">Zip Code</span>
-								<input type="text" placeholder="Zip Code" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<label class="clearfix clear" for="">
-								<span class="pl_span">Phone</span>
-								<input type="text" placeholder="Phone" />
-								<p class="ts_ps">please enter your first name. </p>
-							</label>
-							
-							<button class="qx_btn" type="reset">Cancel</button>
-							<button class="tj_btn" type="submit">SAVE</button>
-						</form>
+		<div class="reviews2 clearfix">
+			<form action="">
+				<div class="pl_text clearfix">
+					<div class="top clearfix">
+						<h1>YOUR EVALUATION</h1>
+						<hr />
+					</div>				
+					<p class="rating">Rating</p>
+					<div class="start clearfix">
+						<ol>
+							<li class="active"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ol>
 					</div>
-				
+					
+					<textarea class="text_p" maxlength="1000" onkeydown="if(this.value.length>=1000){}"
+						 placeholder="How was your overall exprience using the item? "></textarea>
+					<p class="num_p"><span>0</span>/1000</p>
+					
+					<div class="file clearfix">
+						<p>Let's show you some pictures.(up to 5)  </p>
+						
+						<ol class="file_ol clearfix">
+							
+						</ol>
+						<ul class="file_ul clearfix">
+							<li>
+								<input class="file_in"  onchange="getphoto(this)" type="file" />
+							</li>
+						</ul>
+					</div>
 				</div>
-			
-			</div>
-		
+				<div class="sub">
+					<button class="sub_btn" type="submit">SUBMIT</button>
+				</div>
+			</form>		
 		</div>
+		
+		<!--查看大图弹窗-->
 		
 		
 		<!--pc底部-->
@@ -390,6 +335,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<!--pc搜索弹窗-->
 		<div class="ss_modal">
 			<div class="bg_f clearfix">
@@ -447,17 +393,72 @@
 		</div>
 	</body>
 </html>
-<script>
+<script type="text/javascript">
 	$(function(){
-		$("input").focus(function(){
-			$(this).attr("placeholder","");
-			$(this).siblings(".pl_span").css("display","block");
+		//星星
+		$(".start ol>li").click(function(){
+			var this_index = $(this).index();
+			$(".start ol>li").removeClass()
+			for(var i=0;i<this_index+1;i++){
+				$(".start ol>li").eq(i).addClass("active");
+			}
 		})
-		$("input").blur(function(){
-			
-			$(this).attr("placeholder",$(this).siblings(".pl_span").text());
-			$(this).siblings(".pl_span").css("display","none");
+		
+		$(".text_p").keyup(function(){
+			var val = $(this).val();
+			$(".num_p span").text(val.length);
 		})
+		
+		
+		
+		
 	})
+	
+	function flie_show(){
+		if($(".file_ol>li").length>=5){
+			$(".file_ul").css("display","none");
+		}else{
+			$(".file_ul").css("display","block");
+		}
+	}
+	
+	//调取上传框
+    function getphoto(node) {
+    	if($(".file_ol>li").length<5){
+    		if($(window).width()<=920){
+    			$(".file_ul").css("margin-left",0.2+"rem");
+    		}
+	        var imgURL = "";
+	        try{
+	            var file = null;
+	            if(node.files && node.files[0] ){
+	                file = node.files[0];
+	            }else if(node.files && node.files.item(0)) {
+	                file = node.files.item(0);
+	            }
+	            try{
+	                imgURL =  file.getAsDataURL();
+	            }catch(e){
+	                imgRUL = window.URL.createObjectURL(file);
+	            }
+	        }catch(e){
+	            if (node.files && node.files[0]) {
+	                var reader = new FileReader();
+	                reader.onload = function (e) {
+	                    imgURL = e.target.result;
+	                };
+	                reader.readAsDataURL(node.files[0]);
+	            }
+	        }
+	        var li_text = '<li><div class="close" onclick="det($(this))"></div><img src="'+imgRUL+'"/></li>'
+	        $(".file_ol").append(li_text);
+	        flie_show();
+	    }
+//      $(node).siblings("img").attr("src",imgRUL);
+    }
+    
+    function det(obj){
+    	obj.parent().remove();
+    	flie_show();
+    }
 </script>
-

@@ -22,6 +22,7 @@ $_['entry_city']           = 'City';
 $_['entry_country']        = 'Country';
 $_['entry_zone']           = 'Region / State';
 $_['entry_default']        = 'Default Address';
+$_['entry_telephone']           = 'telephone';
 
 // Error
 $_['error_delete']                = 'Warning: You must have at least one address!';
@@ -35,3 +36,7 @@ $_['error_city']                  = 'City must be between 2 and 128 characters!'
 $_['error_country']               = 'Please select a country!';
 $_['error_zone']                  = 'Please select a region / state!';
 $_['error_custom_field']          = '%s required!';
+$_['error_telephone']                  = 'telephone must be between 2 and 128 characters!';
+$_['error_whatsapp']                  = 'whatsapp must be between 2 and 128 characters!';
+$_['error_facebook']                  = 'facebook must be between 2 and 128 characters!';
+$_['error_instagram']                  = 'instagram must be between 2 and 128 characters!';
