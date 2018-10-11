@@ -804,6 +804,7 @@ class ModelCheckoutOrder extends Model {
 
 	public function UploadReceipt($order_id,$receipt)
 	{
-			$this->db->query("UPDATE " . DB_PREFIX . "order SET receipt = '" .$receipt . "' WHERE order_id = '" . (int)$order_id . "'");
+			$this->db->query("UPDATE " . DB_PREFIX . "order SET bank_receipt = '" .$receipt . "' WHERE order_id = '" . (int)$order_id . "'");
+			// print_r("UPDATE " . DB_PREFIX . "order SET receipt = '" .$receipt . "' WHERE order_id = '" . (int)$order_id . "'");exit();
 	}
 }

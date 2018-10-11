@@ -32,7 +32,10 @@ class ControllerCheckoutPayment extends Controller {
 			}
 
 		}
-		$data['order_number']=$this->session->data['order_number'];
+		$this->load->model('account/order');
+		$order_info=$this->model_account_order->getOrder($this->request->post['order_id']);
+
+		$data['order_number']=$order_info['order_number'];
 		$data['continue']=$this->url->link('common/home');
 		$data['view_order']=$this->url->link('account/order/info','&order_id='.$this->request->post['order_id']);
 
