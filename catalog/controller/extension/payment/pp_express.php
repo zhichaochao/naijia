@@ -8,6 +8,7 @@ class ControllerExtensionPaymentPPExpress extends Controller {
 
 		$data['continue'] = $this->url->link('checkout/payment', '', true);
 		$this->session->data['wait_href']=$this->url->link('extension/payment/pp_express/checkout', '', true);
+	$this->session->data['jump_href']=$this->url->link('checkout/success');
 
 		unset($this->session->data['paypal']);
 

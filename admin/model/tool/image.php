@@ -37,6 +37,7 @@ class ModelToolImage extends Model {
 				copy(DIR_IMAGE . $image_old, DIR_IMAGE . $image_new);
 			}
 		}
+		// print_r( HTTP_CATALOG );exit();
 
 		if ($this->request->server['HTTPS']) {
 			return HTTPS_CATALOG . 'image/' . $image_new;

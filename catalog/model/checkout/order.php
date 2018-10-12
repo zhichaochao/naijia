@@ -643,7 +643,7 @@ class ModelCheckoutOrder extends Model {
 				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
 				$mail->setHtml($this->load->view('mail/order', $data));
 				$mail->setText($text);
-				// print_r($mail);exit();
+				// print_r($text);exit();
 				if($order_info['email']){
 				 $mail->send();
 				}
