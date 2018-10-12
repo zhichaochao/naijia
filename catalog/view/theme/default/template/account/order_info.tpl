@@ -49,9 +49,9 @@
           <!-- <a class="pay_a" href="###">Continue To Pay</a> -->
 
           <span>Order date:<?php echo $date_added; ?></span>
-          <?php if($order_status == 'Pending-unfilled' ) { ?>
+         <!--  <?php if($order_status !== 'Pending' ) { ?>
           <a class="btn_a" href="###">Contact us</a>
-           <?php } ?>
+           <?php } ?> -->
         </div>
         <?php }elseif($order_status=='Completed'){?>
         <div class="left clearfix">
@@ -64,6 +64,7 @@
           </p>
           <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a>
           <span>Order date:<?php echo $date_added; ?></span>
+          <a class="btn_a" href="###">Contact us</a>
         </div>
           <?php }elseif($order_status=='Pending-unfilled'){?>
           <div class="left clearfix">
@@ -148,12 +149,15 @@
       <!-- s上传凭证 -->
       <?php if($payment_code=='bank_transfer') { ?>
     <div class="xianxia clearfix">
+    <!-- <form action="upload_receipt" method="post"> -->
+    <form  action="<?=$upload_receipt;?>" method="post"  enctype="multipart/form-data"  onsubmit="return bitian();">
+    <input type="hidden" value="<?php echo $order_id; ?>" name="order_id">
         <div class="left clearfix">
           <span class="span1">Bank Alert</span>
           <span class="span2">Voucher picture</span>
           <div class="hui">
             <div class="img">
-              <img src=""/>
+              <img src="<?php echo $bank_receipt;?>" name="bank_receipt"/>
               <div class="close" onclick="del_img($(this))"></div>
             </div>
           </div>
@@ -164,10 +168,12 @@
               <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
               <a class="btn1" href="###">Re-upload</a>
             </div>
-            <a class="btn2" href="###">SUBMIT</a>
+            <!-- <a  href="###" ></a> -->
+            <input type="submit" value="SUBMIT" class="btn2">
           </div>
           <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
         </div>
+        </form>
       </div>
 <?php } ?>
       <div class="bot clearfix">
@@ -222,7 +228,21 @@
         </div>
 
         <?php if($order_status=='Pending'){?>
-        <div class="zt_top clearfix">
+        <?php if($payment_code == 'bank_transfer' ) { ?>
+
+         <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Thanks for your order .</p>
+          <p class="p1">· Payment has been completed.</p>
+          <p class="p1">· It will ready to ship in 1- 2 days.</p>
+          <p class="p1">Emails will update to you if your package situation changes.</p>
+        </div>
+          <!-- <span>Order date:2018-09-07</span> -->
+       <!--  </div> -->
+
+        <?php }else{ ?>
+          <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Please finish payment or upload the bank alert.</p>
@@ -234,6 +254,9 @@
             </span>
           </p>
         </div>
+        <?php }?>
+        <!--  -->
+        
 
         <?php }elseif($order_status=='Completed'){?>
 
@@ -280,28 +303,7 @@
         </div>
 
           <?php }?>
-          <?php if($payment_code=='bank_transfer') { ?>
-          <div class="xianxia clearfix">
-          <span class="span1">Bank Alert</span>
-          <span class="span2">Voucher picture</span>
-          <div class="hui">
-            <div class="img">
-              <img src=""/>
-              <div class="close" onclick="del_img($(this))"></div>
-            </div>
-          </div>
-          <div class="center">
-            <div class="btn">
-              <div class="file_div">
-                <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
-                <a class="btn1" href="###">Re-upload</a>
-              </div>
-              <a class="btn2" href="###">SUBMIT</a>
-            </div>
-          </div>
-          <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
-        </div>
-        <?php }?>
+         
         
         <div class="pro_order clearfix">
           <h1>Product information</h1>
@@ -325,6 +327,7 @@
             <?php } ?>
           </ul>
         </div>
+
         
         <div class="or_address clearfix">
           <h1>Shipping Address</h1>
@@ -332,7 +335,36 @@
           <p><?php echo $shipping_address; ?></p>
           </div>
         </div>
-        
+         <?php if($payment_code=='bank_transfer') { ?>
+
+          <div class="xianxia clearfix">
+
+          <form  action="<?=$upload_receipt;?>" method="post"  enctype="multipart/form-data"  onsubmit="return bitian();">
+          <input type="hidden" value="<?php echo $order_id; ?>" name="order_id">
+          <span class="span1">Bank Alert</span>
+          <span class="span2">Voucher picture</span>
+          <div class="hui">
+            <div class="img">
+              <img src="<?php echo $bank_receipt;?>" name="bank_receipt"/>
+              <div class="close" onclick="del_img($(this))"></div>
+            </div>
+          </div>
+          <div class="center">
+            <div class="btn">
+              <div class="file_div">
+                <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+                <a class="btn1" href="###">Re-upload</a>
+              </div>
+              <!-- <a  href="###"></a> -->
+              <input type="submit" value="SUBMIT" class="btn2">
+            </div>
+          </div>
+          <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
+          </form>
+        </div>
+
+
+        <?php }?>
         <div class="total clearfix">
           <div class="right clearfix">
             <p class="total_p active clearfix">
@@ -354,7 +386,9 @@
           </div>
 
             <?php if($order_status=='Pending' || $order_status=='lnvalid'){?>
+              <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
               <a class="btn_a hong" href="###">CONTINUE TO PAY</a>
+            <?php }?>
             <?php }?>
 
             <?php if($order_status=='Completed' ){?>
@@ -386,6 +420,10 @@
 
 <?php echo $footer; ?>
 <script>
+function bitian() {
+    // alert($('#file').val());return false;
+    if (!$('#file').val()) {alert("Can't be empty");return false;}
+  }
   $(function(){
     
     //下拉total_p

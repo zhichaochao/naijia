@@ -448,26 +448,26 @@ class ControllerAccountAccount extends Controller {
 			$data['error_confirm'] = '';
 		}
 
-		if (isset($this->error['success'])) {
-			$data['success'] = $this->error['success'];
-		} else {
+		// if (isset($this->error['success'])) {
+		// 	$data['success'] = $this->error['success'];
+		// } else {
 			
-			$data['success'] = '';
-		}
-
+		// 	$data['success'] = '';
+		// }
+// print($data['success'] );exit;
 		
 
 
 
 
 		if (isset($this->request->post['email'])) {
-			$data['email'] = $this->request->post['email'];
+			$data['emails'] =$this->session->data['emails']=$this->request->post['email'];
 		} elseif (!empty($customer_info)) {
-			$data['email'] = $customer_info['email'];
+			$data['emails'] =$this->session->data['emails']=$customer_info['email'];
 		} else {
-			$data['email'] = '';
+			$data['emails'] = '';
 		}
-
+		// print_r($data['emails']);
 
 		if (isset($this->request->post['firstname'])) {
 			$data['firstname'] = $this->request->post['firstname'];
@@ -504,11 +504,11 @@ class ControllerAccountAccount extends Controller {
 		$data['action'] = $this->url->link('account/account/changemail', '', true);
 		$data['actions'] = $this->url->link('account/account/changepwd', '', true);
 
-		if ($data['success']) {
-			$this->response->redirect($this->url->link('account/account', '', true));
-		}else{
+		// if ($data['success']) {
+		// 	$this->response->redirect($this->url->link('account/account', '', true));
+		// }else{
 			$this->response->setOutput($this->load->view('account/change_from', $data));
-		}
+		// }
 		
 
 
@@ -603,9 +603,9 @@ class ControllerAccountAccount extends Controller {
 		}
 
 
-		// $this->change();
+		$this->change();
 
-		$this->response->redirect($this->url->link('account/account', '', true));
+		// $this->response->redirect($this->url->link('account/account', '', true));
 
 	}
 

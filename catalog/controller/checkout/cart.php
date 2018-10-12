@@ -206,6 +206,12 @@ class ControllerCheckoutCart extends Controller {
 // print_r($data['totals']);exit();
 			$data['continue'] = $this->url->link('common/home');
 
+			if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+			}else{
+				$data['home'] =$this->url->link('common/home');
+			}
+
 			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 
 			$this->load->model('extension/extension');
@@ -258,6 +264,12 @@ class ControllerCheckoutCart extends Controller {
 
 			$data['continue'] = $this->url->link('common/home');
 
+			if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+			}else{
+				$data['home'] =$this->url->link('common/home');
+			}
+
 			unset($this->session->data['success']);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
@@ -267,7 +279,7 @@ class ControllerCheckoutCart extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
-			$this->response->setOutput($this->load->view('error/not_found', $data));
+			$this->response->setOutput($this->load->view('checkout/cart', $data));
 		}
 	}
 

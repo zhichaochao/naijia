@@ -27,8 +27,8 @@
             <form method="post" action="<?php echo $actions?>">
               <h2>Change Password</h2>
               <label class="clearfix" for="">
-                <input class="email" type="text" value="<?php echo $email ?>" readonly="readonly" disabled="disabled" />
-                <button class="em_btn" type="button" onclick="changepwd()">Send CodeTo My Emeil </button>
+                <input class="email" type="text" value="<?php echo $emails ?>" readonly="readonly" disabled="disabled" />
+                <button class="em_btn" type="button" onclick="changepwd()">Click to get verification code</button>
               </label>
              <label class="clearfix" for="">
                 <span class="pl_span">Input validation code</span>

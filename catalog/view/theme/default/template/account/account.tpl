@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <span class="lf">Phone:</span>
-                  <span class="rf">+<?php echo $telephone ?></span>
+                  <span class="rf"><?php echo $telephone ?></span>
                 </li>
                 <li>
                   <span class="lf">Whatsapp:</span>

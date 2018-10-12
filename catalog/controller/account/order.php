@@ -451,7 +451,7 @@ class ControllerAccountOrder extends Controller {
 				}
 			}
 
-
+			$data['upload_receipt']=$this->url->link('account/order/receipt');
 			$data['comment'] = nl2br($order_info['comment']);
 			// History
 			$data['histories'] = array();
@@ -654,7 +654,13 @@ class ControllerAccountOrder extends Controller {
 			$data['default'] = false;
 		}
 			//结束
-		$data['bank_receipt'] =$order_info['bank_receipt'];
+		$http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https:' : 'http:';
+		if($order_info['bank_receipt']){
+			$data['bank_receipt'] =$http_type.'/image'.$order_info['bank_receipt'];
+		}else{
+			$data['bank_receipt']=$order_info['bank_receipt'];
+		}
+		
 		// print($data['bank_receipt']);exit;
 			$data['continue'] = $this->url->link('account/order', '', true);
 
@@ -890,26 +896,40 @@ class ControllerAccountOrder extends Controller {
 	}
 	public function receipt()
 	{
-		if (!$this->customer->isLogged()) {
-			$this->session->data['redirect'] = $this->url->link('account/order', '', 'SSL');
-			$this->response->redirect($this->url->link('account/login', '', 'SSL'));
+		$this->load->model('checkout/order');
+		// print_r($_FILES);exit();
+
+		if(!empty($_FILES['uploadPicture']['name'])){
+
+			$img = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).strtolower(strrchr($_FILES['uploadPicture']['name'],"."));
+			$souceName = DIR_IMAGE.'/receipt/'.$img;
+			$moveRes=move_uploaded_file($_FILES['uploadPicture']['tmp_name'],$souceName);
+			if (isset($this->request->post['order_id'])&&$this->request->post['order_id']>0) {
+				$this->model_checkout_order->UploadReceipt($this->request->post['order_id'],'/receipt/'.$img);
+			}
+
 		}
-	    if (isset($this->request->get['order_id'])) {
-	        $order_id = $this->request->get['order_id'];
-	    } else {
-	        $order_id = 0;
-	    }
+		$this->response->redirect($this->url->link('account/order/info','order_id='.$this->request->post['order_id']));
+		// if (!$this->customer->isLogged()) {
+		// 	$this->session->data['redirect'] = $this->url->link('account/order', '', 'SSL');
+		// 	$this->response->redirect($this->url->link('account/login', '', 'SSL'));
+		// }
+	 //    if (isset($this->request->get['order_id'])) {
+	 //        $order_id = $this->request->get['order_id'];
+	 //    } else {
+	 //        $order_id = 0;
+	 //    }
 	   
-	    $img = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).strtolower(strrchr($_FILES['bank_receipt']['name'],"."));
-		$souceName = DIR_IMAGE.'/bank_receipt/'.$img;
-		$imgk='../image/bank_receipt/'.$img;
-		$moveRes=move_uploaded_file($_FILES['bank_receipt']['tmp_name'],$souceName);
-		if ($moveRes) {
-			$this->load->model('account/order');
-			$this->model_account_order->submitOrderBankReceipt($order_id,$imgk);
+	 //    $img = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).strtolower(strrchr($_FILES['bank_receipt']['name'],"."));
+		// $souceName = DIR_IMAGE.'/bank_receipt/'.$img;
+		// $imgk='../image/bank_receipt/'.$img;
+		// $moveRes=move_uploaded_file($_FILES['bank_receipt']['tmp_name'],$souceName);
+		// if ($moveRes) {
+		// 	$this->load->model('account/order');
+		// 	$this->model_account_order->submitOrderBankReceipt($order_id,$imgk);
 			
-		}
-		 $this->response->redirect($this->url->link('account/order/info','order_id='.$order_id));
+		// }
+		//  $this->response->redirect($this->url->link('account/order/info','order_id='.$order_id));
 
 		
 	}

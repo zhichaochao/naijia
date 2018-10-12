@@ -2,6 +2,8 @@
 
     <div class="in_content clearfix"></div>
     <!--内容-->
+    <?php if(isset($products)){?>
+
     <div class="shop_con clearfix">
       <div class="top_yd clearfix">
         <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY SHOPPING BAG</h1>
@@ -159,6 +161,14 @@
       
       </div>
     </div>  
+     <?php }else{?>
+    <div class="shop_con clearfix">
+      <div class="top_yd clearfix">
+        <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY SHOPPING BAG</h1>
+      </div>
+      <h2>The shopping cart is empty.</h2>
+       </div>  
+    <?php }?>
     
 <?php echo $footer; ?>
  <link rel="stylesheet" href="/catalog/view/theme/default/js/select2/css/select2.css" />
