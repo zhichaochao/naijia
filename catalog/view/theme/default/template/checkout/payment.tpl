@@ -42,7 +42,7 @@ function bank_transfer_gay() {
 			location =json['href'];
 			}else{
 				alert('wrong email ! Please contact us.Please refresh');
-				  window.location.reload();
+				 location ='<?=$jump;?>';
 			}
 		}
 	});

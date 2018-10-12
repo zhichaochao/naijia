@@ -1278,6 +1278,7 @@ class ControllerExtensionPaymentPPExpress extends Controller {
 		$this->load->model('checkout/order');
 
 		$order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
+		// print_r($order_info );exit();
 
 		$max_amount = $this->cart->getTotal() * 1.5;
 		$max_amount = $this->currency->format($max_amount, $this->session->data['currency'], '', false);
@@ -1338,6 +1339,7 @@ class ControllerExtensionPaymentPPExpress extends Controller {
 		$data = array_merge($data, $this->model_extension_payment_pp_express->paymentRequestInfo());
 
 		$result = $this->model_extension_payment_pp_express->call($data);
+		// print_r(	$result );exit();
 
 		/**
 		 * If a failed PayPal setup happens, handle it.

@@ -10,6 +10,7 @@ class ControllerCheckoutPayment extends Controller {
 
 		
 		$data['continue']=$this->session->data['wait_href'];
+		$data['jump']=$this->url->link('checkout/checkout');
 		
 
 		$data['header'] = $this->load->controller('common/header');
