@@ -16,7 +16,7 @@
 		<div class="loading clearfix">
 			<img src="/catalog/view/theme/default/img/loading.gif" alt="" />
 			
-			<p id='log'>Redirecting... </p>
+			<p>Redirecting... </p>
 			<p>Please wait while we redirect you.</p>
 			
 		</div>
@@ -41,12 +41,8 @@ function bank_transfer_gay() {
 			if (json['href']) {
 			location =json['href'];
 			}else{
-				$('#log').html('wrong email ! Please contact us.');
-				<?php if(isset($jump_href)&&$jump_href){?>
-				 location ='<?=$jump_href;?>';
-				 <?php }else{?>
-				 	 location ='index.php?route=checkout/success';
-				 	<?php } ?>
+				alert('wrong email ! Please contact us.Please refresh');
+				  window.location.reload();
 			}
 		}
 	});

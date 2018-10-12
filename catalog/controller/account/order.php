@@ -59,14 +59,14 @@ class ControllerAccountOrder extends Controller {
 			// print_r($product_num);exit;
 			//根据order_id获取其中一件产品的图片和产品名字
 			$order_products = $this->model_account_order->getOrderProducts($result['order_id']);
-			// print_r($order_products);exit();
+			// print_r($order_products);exit;
 			foreach ($order_products as $key => $value) {
 				$order_products[$key]['href']=$this->url->link('product/product', 'product_id=' . $value['product_id'], true);
 				$order_products[$key]['image']=$this->model_tool_image->resize($value['image'],100,100);
 				$order_products[$key]['price']=$this->currency->format($value['price'], $result['currency_code'], $result['currency_value']);
-				$order_products[$key]['options']= $this->model_account_order->getOrderOptions($result['order_id'],$value['order_product_id']);
+				$order_products[$key]['options']= $this->model_account_order->getOrderOptions($value['order_id'],$value['order_product_id']);
 			}
-			
+			// 
 			$data['totals'] = array();
 			$totals = $this->model_account_order->getOrderTotals($result['order_id']);
 			$total=$this->currency->format(0, $result['currency_code'], $result['currency_value']);
@@ -94,7 +94,7 @@ class ControllerAccountOrder extends Controller {
 			);
 			
 		}
-		// 
+		// print_r($data['orders']);exit();
 		// 
 		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 
@@ -370,7 +370,7 @@ class ControllerAccountOrder extends Controller {
 			// Products
 			$data['products'] = array();
 			$products = $this->model_account_order->getOrderProducts($this->request->get['order_id']);
-			//var_dump($products);exit;
+			// print_r($products);exit;
 			foreach ($products as $product) {
 				$option_data = array();
 
@@ -410,6 +410,7 @@ class ControllerAccountOrder extends Controller {
 					'order_image' => $this->model_tool_image->resize($product_info['image'],100,100),
 					'name'     => $product['name'],
 					'model'    => $product['model'],
+					'color'    => $product['color'],
 					'option'   => $option_data,
 					'quantity' => $product['quantity'],
 					'price'    => $this->currency->format($product['price'] , $order_info['currency_code'], $order_info['currency_value']),
@@ -654,6 +655,7 @@ class ControllerAccountOrder extends Controller {
 		}
 			//结束
 		$data['bank_receipt'] =$order_info['bank_receipt'];
+		// print($data['bank_receipt']);exit;
 			$data['continue'] = $this->url->link('account/order', '', true);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
@@ -867,7 +869,7 @@ class ControllerAccountOrder extends Controller {
 	}
 	/**
 	 * 再上传凭证
-	 * @author  dyl  志超
+	 * @author  
 	 */
 	public function repay_receipt(){
 	   if (!$this->customer->isLogged()) {
@@ -884,7 +886,7 @@ class ControllerAccountOrder extends Controller {
 	    //$this->load->model('account/order');
 	    //$order_info = $this->model_account_order->getOrder($order_id);
 
-	    $this->response->redirect($this->url->link('checkout/confirm/view_order'));
+	    $this->response->redirect($this->url->link('checkout/success','order_id='.$order_id));
 	}
 	public function receipt()
 	{

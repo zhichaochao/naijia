@@ -184,7 +184,7 @@ class ControllerProductProduct extends Controller {
                 }
                 // print_r( $data['selfimage']);exit();
             $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id']);
-            // print_r($product_info);exit;
+            // print_r($data['selfhref']);exit;
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
@@ -624,9 +624,8 @@ class ControllerProductProduct extends Controller {
                     'name'         =>$result['name'],
                     'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
                 );
-               
+                // print_r($data['products_related']);exit;
             }
-             // print_r($data['products_related']);exit;
             $data['results_relatotal']=$results_rela[0];
             //产品详情页的FAQ
             // $data['product_faq'] = html_entity_decode($this->model_catalog_product->getInformaintion(7),ENT_QUOTES,'UTF-8');

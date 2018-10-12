@@ -100,7 +100,7 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="reviews2 clearfix">
+		<div class="reviews2 clearfix" style="background: #fff;">
 			<form action="">
 				<div class="pl_text clearfix">
 					<div class="top clearfix">
@@ -123,7 +123,7 @@
 					<p class="num_p"><span>0</span>/1000</p>
 					
 					<div class="file clearfix">
-						<p>Let's show you some pictures.(up to 5)  </p>
+						<p>Let me share some pictures</p>
 						
 						<ol class="file_ol clearfix">
 							
@@ -133,6 +133,20 @@
 								<input class="file_in"  onchange="getphoto(this)" type="file" />
 							</li>
 						</ul>
+					</div>
+					<div class="pl_lunbo clearfix" style="background: #000;">
+						  <!-- Swiper -->
+						  <div class="swiper-container">
+						    <div class="swiper-wrapper">
+						    </div>
+						    <!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						    <!-- Add Arrows -->
+						    <div class="swiper-button-next"></div>
+						    <div class="swiper-button-prev"></div>
+						  </div>
+						  <div class="close"></div>
+						  <div class="fy_zsq"><i class="fy_i1">2</i>/<i class="fy_i2">5</i></div>
 					</div>
 				</div>
 				<div class="sub">
@@ -409,8 +423,29 @@
 			$(".num_p span").text(val.length);
 		})
 		
-		
-		
+		//lunbo
+		var mySwiper = new Swiper('.swiper-container', {
+			freeMode : false,
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+		    },
+	        navigation: {
+	        	nextEl: '.swiper-button-next',
+	        	prevEl: '.swiper-button-prev',
+	      	},
+	      	on: {
+			    slideChangeTransitionStart: function(){
+		    		$(".fy_zsq .fy_i1").text(this.activeIndex+1);
+			    },
+			},
+	    });
+		//lunbo colse
+		$(".pl_lunbo .close").click(function(){
+			$(".pl_lunbo ").hide();
+		})
 		
 	})
 	
@@ -421,7 +456,6 @@
 			$(".file_ul").css("display","block");
 		}
 	}
-	
 	//调取上传框
     function getphoto(node) {
     	if($(".file_ol>li").length<5){
@@ -450,15 +484,49 @@
 	                reader.readAsDataURL(node.files[0]);
 	            }
 	        }
-	        var li_text = '<li><div class="close" onclick="det($(this))"></div><img src="'+imgRUL+'"/></li>'
+	        var li_text = '<li onclick="lunbo($(this))"><div class="close" onclick="det($(this))"></div><img src="'+imgRUL+'"/></li>'
+	        var sw_text = '<div class="swiper-slide"><img src="'+imgRUL+'"/></div>'
 	        $(".file_ol").append(li_text);
+	        $(".pl_lunbo .swiper-wrapper").append(sw_text);
 	        flie_show();
 	    }
-//      $(node).siblings("img").attr("src",imgRUL);
     }
     
     function det(obj){
     	obj.parent().remove();
     	flie_show();
+    }
+    
+    var this_index,this_ul,this_len;
+    function lunbo(obj){
+    	if($(window).width()<=920){
+    		$(".pl_lunbo").show();
+    	}
+    	
+    	 this_index = obj.index();
+		 this_ul = obj.parent();
+		 this_len = this_ul.find("li").length;
+		$(".fy_zsq .fy_i1").text(this_index+1);
+		$(".fy_zsq .fy_i2").text(this_len);
+	    //lunbo
+		var mySwiper = new Swiper('.swiper-container', {
+			freeMode : false,
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+		    },
+	        navigation: {
+	        	nextEl: '.swiper-button-next',
+	        	prevEl: '.swiper-button-prev',
+	      	},
+	      	on: {
+			    slideChangeTransitionStart: function(){
+		    		$(".fy_zsq .fy_i1").text(this.activeIndex+1);
+			    },
+			},
+	    });
+	    $(".pl_lunbo .swiper-pagination-clickable span").eq(this_index).trigger('click');
     }
 </script>

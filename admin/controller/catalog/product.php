@@ -1173,7 +1173,6 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['image'] = '';
 		}
-		// print_r($product_info['image']);exit();
 
 		$this->load->model('tool/image');
 
@@ -1197,7 +1196,7 @@ class ControllerCatalogProduct extends Controller {
 		}
 
 		$data['product_images'] = array();
-// print_r($product_images);exit();
+
 		foreach ($product_images as $product_image) {
 			if (is_file(DIR_IMAGE . $product_image['image'])) {
 				$image = $product_image['image'];
@@ -1213,7 +1212,6 @@ class ControllerCatalogProduct extends Controller {
 				'sort_order' => $product_image['sort_order']
 			);
 		}
-
 
 		// Downloads
 		$this->load->model('catalog/download');

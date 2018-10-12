@@ -420,6 +420,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pro_det .text_rf .slide_text dl dd{font-size: 14px;color: #666;line-height: 28px;}
 	.pro_det .text_rf .slide_text dl dd.dd_s{color: #333;padding: 5px 0;}
 	.pro_det .text_rf .slide_text .details{padding-bottom: 25px;}
+	.pro_det .text_rf .slide_text .details video{display: block;margin-bottom: 20px;}
 	
 	.pro_det .text_rf .pay_ul{padding-bottom: 18px;}
 	.pro_det .text_rf .pay_ul>li{display: inline-block;float: left;height: 40px;line-height: 40px;margin-right: 1.5vw;margin-bottom: 20px;}
@@ -639,9 +640,10 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.right_text .grxx_text .a_edit{width: 2rem;height: 0.44rem;line-height: 0.44rem;display: block;float: right;font-size: 0.2rem;color: #fff;text-align: center;
 	background: #333;margin: 0.3rem 0 0 0;}
 	.right_text .grxx_text .a_edit span{background: url(../img/png/icon_76.png)no-repeat left center;background-size: 0.16rem 0.16rem;display: inline-block;padding-left: 0.25rem;}
-	.right_text .change_a{background: #fff url(../img/png/icon_7.png) no-repeat right 0.3rem center;line-height: 0.5rem;display: block;width: 100%;margin-bottom: 0.6rem;}
+	.right_text .change_a{background: #fff url(../img/png/icon_7.png) no-repeat right 0.3rem center;line-height: 0.5rem;display: block;width: 100%;margin-bottom: 0.2rem;}
 	.right_text .change_a span{max-width: 680px;display: block;margin: auto;font-size: 0.24rem;color: #333;line-height: 0.5rem;
 	background: url(../img/png/icon_77.png) no-repeat left center;background-size: 0.18rem 0.22rem; padding-left: 0.4rem;box-sizing: border-box;}
+	.right_text .change_acc span{background: url(../img/png/icon_77_.png) no-repeat left center;background-size: 0.22rem 0.2rem;margin-bottom: 0.6rem;}
 	/*MY COUPONS*/
 	.coupon {background: #fff;padding: 0 0.2rem;margin-bottom: 0.4rem;}
 	.coupon h1{font-size: 0.24rem;text-align: center;margin: 0.5rem 0 0.3rem 0; }
@@ -658,7 +660,6 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.coupon .coupon_ul>li .p2{font-size: 0.16rem;width: 1.8rem;text-align: center;display: block;height: 0.2rem;line-height: 0.2rem;color: #fff;
 	position: absolute;top: 0.4rem;left: 0.57rem;}
 	.coupon .coupon_ul>li .sp_1{font-size: 0.3rem;color: #fff;font-weight: bold;position: absolute;right: 0;top: 0.2rem;width: 1rem;display: block;text-align: center;}
-	.coupon .coupon_ul>li .sp_1 em{font-size: 0.2rem;color: #fff;}
 	.coupon .coupon_ul>li .sp_2{width: 1rem;display: block;position: absolute;top: 0.54rem;right: 0;text-align: center;}
 	.coupon .coupon_ul>li .sp_2 em{font-size: 10px;-webkit-transform: scale(0.83); display: inline-block;color: #fff;}
 	.coupon .fy_div{max-width: 7.6rem;padding-bottom: 0.9rem;margin: auto;}
@@ -1021,19 +1022,19 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.reviews .pl_ul .img_ul>li{display:block;float: left;width: 1.2rem;height: 1.2rem;margin-right: 0.1rem;cursor: pointer;border: 1px solid transparent}
 	.reviews .pl_ul .img_ul>li img{display: block;}
 	.reviews .pl_ul .img_ul>li.active{border: 1px solid #ff2054;}
-	.reviews .pl_ul .pl_lunbo{clear: both;width: 640px; background: #f5f5f5;margin-top: 15px;padding: 20px 0;position: relative;display: none;}
-	.reviews .pl_ul .pl_lunbo .swiper-slide {height: 360px;text-align: center;line-height: 360px;}
-	.reviews .pl_ul .pl_lunbo .swiper-slide img{display: inline-block;margin: auto;vertical-align: middle;}
-	.reviews .pl_ul .pl_lunbo .swiper-wrapper{cursor:grab;}
-	.reviews .pl_ul .swiper-pagination{display: none;}
-	.reviews .pl_lunbo .swiper-button-prev{width: 0.5rem;height: 0.5rem;transform: rotate(180deg);left: 0;display: none;
+	.pl_lunbo{clear: both;width: 640px; background: #f5f5f5;margin-top: 15px;padding: 20px 0;position: relative;display: none;}
+	.pl_lunbo .swiper-slide {height: 360px;text-align: center;line-height: 360px;}
+	.pl_lunbo .swiper-slide img{display: inline-block;margin: auto;vertical-align: middle;}
+	.pl_lunbo .swiper-wrapper{cursor:grab;}
+	.swiper-pagination{display: none;}
+	.pl_lunbo .swiper-button-prev{width: 0.5rem;height: 0.5rem;transform: rotate(180deg);left: 0;display: none;
 	background: #ddd url(../img/png/lb_lf.png)no-repeat center center;background-size: 0.16rem 0.28rem;}
-	.reviews .pl_lunbo .swiper-button-next{width: 0.5rem;height: 0.5rem;right:0;display: none;
+	.pl_lunbo .swiper-button-next{width: 0.5rem;height: 0.5rem;right:0;display: none;
 	background: #ddd url(../img/png/lb_lf.png)no-repeat center center;background-size: 0.16rem 0.28rem;}
-	.reviews .pl_lunbo .swiper-container:hover .swiper-button-prev,.pl_lunbo .swiper-container:hover .swiper-button-next{display: block;}
-	.reviews .pl_lunbo .close{position: absolute;right: 0;top: 0;width: 0.4rem;height: 0.4rem;cursor: pointer;z-index: 9;
+	.pl_lunbo .swiper-container:hover .swiper-button-prev,.pl_lunbo .swiper-container:hover .swiper-button-next{display: block;}
+	.pl_lunbo .close{position: absolute;right: 0;top: 0;width: 0.4rem;height: 0.4rem;cursor: pointer;z-index: 9;
 	background: #ddd url(../img/png/close3.png) no-repeat center center;background-size: 0.16rem 0.16rem;}
-	.reviews .pl_lunbo .fy_zsq{display: none;}
+	.pl_lunbo .fy_zsq{display: none;}
 	
 	/***********reviews2*********/
 	.reviews2 .pl_text{max-width: 1200px;margin:0.5rem auto;background: #f5f5f5;padding: 0 1rem;}
@@ -1503,6 +1504,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pro_det .text_rf .slide_text dl dt{font-size: 0.2rem;margin-bottom: 0.15rem;font-weight: bold;}
 	.pro_det .text_rf .slide_text dl dd{font-size: 0.2rem;color: #666;line-height: 0.3rem;}
 	.pro_det .text_rf .slide_text dl dd.dd_s{color: #333;padding-top: 0.15rem;padding-bottom: 0.05rem;}
+	.pro_det .text_rf .slide_text .details video{display: block;margin-bottom: 0.3rem;}
 	
 	.pro_det .text_rf .pay_ul{padding-bottom: 0;}
 	.pro_det .text_rf .pay_ul>li{display: inline-block;float: left;line-height: 0.4rem;margin-right: 0.5rem;}
@@ -1715,6 +1717,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	display: block;margin:0 0.2rem 0.2rem 0.2rem;}
 	.right_text .change_a span{display: block;margin: auto;font-size: 0.24rem;color: #333;line-height: 0.8rem;
 	background: url(../img/png/icon_77.png) no-repeat left 0.4rem center;background-size: 0.18rem 0.22rem;padding-left: 0.8rem;box-sizing: border-box;}
+	.right_text .change_acc span{background: url(../img/png/icon_77_.png) no-repeat left 0.42rem center;background-size: 0.22rem 0.2rem;}
 	/*MY COUPONS*/
 	.coupon {padding: 0 0.4rem;margin-bottom: 0.4rem;}
 	.coupon h1{display: none; }
@@ -1730,9 +1733,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	position: absolute;top: 0.4rem;left:1.15rem;}
 	.coupon .coupon_ul>li .p2{font-size: 0.3rem;width: 3.5rem;text-align: center;display: block;height: 0.34rem;line-height: 0.34rem;color: #fff;
 	position: absolute;top: 0.8rem;left: 1.15rem;}
-	.coupon .coupon_ul>li .sp_1{position: absolute;right: 0;top: 0.4rem;width: 2.02rem;display: inline-block;text-align: center;}
-	.coupon .coupon_ul>li .sp_1 span{font-size: 0.6rem;color: #fff;font-weight: bold;line-height: 0.6rem;}
-	.coupon .coupon_ul>li .sp_1 em{font-size: 0.5rem;color: #fff;font-weight: bold;line-height: 0.6rem;}
+	.coupon .coupon_ul>li .sp_1{position: absolute;right: 0;top: 0.4rem;width: 2.02rem;display: inline-block;text-align: center;font-size: 0.6rem;color: #fff;font-weight: bold;line-height: 0.6rem;}
 	.coupon .coupon_ul>li .sp_2{width: 2.02rem;display: block;position: absolute;top: 1.1rem;right: 0;text-align: center;}
 	.coupon .coupon_ul>li .sp_2 em{font-size: 0.16rem; display: inline-block;color: #fff;}
 	
@@ -2085,19 +2086,19 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.reviews .pl_ul .img_ul>li{display:block;float: left;width: 2.2rem;height: 2.2rem;margin-right: 0.15rem;margin-bottom: 0.15rem; border: 1px solid transparent}
 	.reviews .pl_ul .img_ul>li img{display: block;}
 	.reviews .pl_ul .img_ul>li.active{border: 1px solid #ff2054;}
-	.reviews .pl_ul .pl_lunbo{width: 100%;height: 100%; background: rgba(0,0,0,1);position: fixed;top: 0;left: 0; z-index: 999; display: none;}
-	.reviews .pl_ul .pl_lunbo .swiper-container{height: 100%;}
-	.reviews .pl_ul .pl_lunbo .swiper-slide {text-align: center;width: 100%;height: 100%;display: flex;}
-	.reviews .pl_ul .pl_lunbo .swiper-slide img{display:block;margin: auto;max-height: 100%;max-width: 100%;}
-	.reviews .pl_ul .swiper-pagination{display: none;}
-	.reviews .pl_lunbo .swiper-button-prev{width: 0.5rem;height: 0.5rem;transform: rotate(180deg);left: 0;display: none;
+	.pl_lunbo{width: 100%;height: 100%; background: rgba(0,0,0,1);position: fixed;top: 0;left: 0; z-index: 999; display: none;}
+	.pl_lunbo .swiper-container{height: 100%;}
+	.pl_lunbo .swiper-slide {text-align: center;width: 100%;height: 100%;display: flex;}
+	.pl_lunbo .swiper-slide img{display:block;margin: auto;max-height: 100%;max-width: 100%;}
+	.swiper-pagination{display: none;}
+	.pl_lunbo .swiper-button-prev{width: 0.5rem;height: 0.5rem;transform: rotate(180deg);left: 0;display: none;
 	background: #ddd url(../img/png/lb_lf.png)no-repeat center center;background-size: 0.16rem 0.28rem;}
-	.reviews .pl_lunbo .swiper-button-next{width: 0.5rem;height: 0.5rem;right:0;display: none;
+	.pl_lunbo .swiper-button-next{width: 0.5rem;height: 0.5rem;right:0;display: none;
 	background: #ddd url(../img/png/lb_lf.png)no-repeat center center;background-size: 0.16rem 0.28rem;}
-	.reviews .pl_lunbo .close{display: block;width: 0.6rem;height: 0.6rem;position: absolute;right: 0.2rem;top: 0.2rem;z-index: 99;
+	.pl_lunbo .close{display: block;width: 0.6rem;height: 0.6rem;position: absolute;right: 0.2rem;top: 0.2rem;z-index: 99;
     background: url(../img/png/icon_19_.png) no-repeat center center;background-size: 0.28rem 0.28rem;}
-    .reviews .pl_lunbo .fy_zsq{display: inline-block;position: absolute;width: 20%;height: 0.6rem;top: 0.2rem;left: 40%;text-align: center;line-height: 0.6rem;color: #fff;font-size: 0.28rem;}
-	.reviews .pl_lunbo .fy_zsq i{color: #fff;font-size: 0.28rem;}
+    .pl_lunbo .fy_zsq{display: inline-block;position: absolute;width: 20%;height: 0.6rem;top: 0.2rem;left: 40%;text-align: center;line-height: 0.6rem;color: #fff;font-size: 0.28rem;}
+	.pl_lunbo .fy_zsq i{color: #fff;font-size: 0.28rem;}
 	/***********reviews2*********/
 	.reviews2 .pl_text{background: #f5f5f5;padding: 0 0.2rem;}
 	.reviews2 .top{height: 0.96rem;line-height: 0.96rem;text-align: center;position: relative;margin-bottom: 0.05rem;}
@@ -2127,6 +2128,30 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.reviews2 .sub{background: #fff;margin: 0.6rem 0 0.8rem 0;}
 	.reviews2 .sub .sub_btn{background: #dab25e;font-size: 0.28rem;color: #000;text-align: center;width: 6.5rem;
 	height: 0.8rem;line-height: 0.8rem;display: block;margin: auto;border: none;}
+	
+	/***********wig*********/
+	.wig .content{padding: 0;}
+	.wig .top_p{line-height: 0.5rem;text-align: center;background: #333;color: #fff;font-size: 0.22rem;margin-bottom: 0.4rem;}
+	.wig h1.h1{font-size: 0.3rem;text-align: center;line-height: 0.3rem;margin-bottom:0.4rem;}
+	.wig p.p1{font-size: 0.16rem;color: #000;text-align: center;padding: 0 1rem;margin-bottom: 0.4rem;}
+	.wig .context .top>img{width: 100%;margin-bottom: 0.2rem;}
+	.wig .context .top .top_video{width: 100%;display: block;position: relative;margin-bottom: 0.3rem;}
+	.wig .context .top .top_video video{max-height: 100%;}
+	.wig .lb_4pic{padding: 0 0.2rem;}
+	.wig .lb_2pic{padding: 0 0.2rem;}
+	.wig .in_ul2{margin: 0;}
+	.wig .in_ul2.swiper1{margin-bottom: 0.4rem;}
+	.wig .in_ul2 .in_ul2_a h1{font-size: 0.24rem;line-height: 0.24rem;margin-top: 0.2rem;}
+	.wig .in_ul2 .in_ul2_a span{display: inline-block;font-size: 0.24rem;line-height: 0.24rem;margin-top: 0.18rem;}
+	.wig .in_ul2 .in_ul2_a span em{font-size: 0.16rem;line-height: 0.24rem;}
+	.wig .in_ul2 .swiper-button-next,.wig .in_ul2 .swiper-button-prev{margin-top: -0.55rem;}
+	.wig .wig_ul li .lf_img{width: 100%;display: block;margin-bottom: 0.3rem;}
+	.wig .wig_ul li .right{width: 100%;margin-bottom: 0.4rem;}
+	.wig .fot_video{margin-bottom: 0.6rem;position: relative;clear: both;background: #000;overflow: hidden;}
+	.wig .fot_video video{display: block;height: 4.22rem}
+	.bf_img{width: 100%;height: 100%;background: transparent url(../img/png/bf.png) no-repeat center center;background-size: 0.7rem 0.7rem;
+	position: absolute;top: 0;left: 0;z-index: 1;cursor: pointer;}
+	
 	
 	/**********succrss***********/
 	.succrss{background: #f5f5f5;}

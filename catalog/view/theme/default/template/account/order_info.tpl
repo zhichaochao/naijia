@@ -13,29 +13,47 @@
 <?php if($order_status=='Pending'){?>
         <div class="left clearfix">
           <h2><?php echo $order_status; ?></h2>
-          <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
+
+          
+          <?php if($payment_code == 'bank_transfer' ) { ?>
+          <p class="p2">
+            Thanks for your order .<br />
+            · Payment has been completed<br />
+            · It will ready to ship in 1- 2 days.<br />
+            Emails will update to you if your <br />
+            package situation changes.
+          </p>
+          <!-- <span>Order date:2018-09-07</span> -->
+       <!--  </div> -->
+
+        <?php }else{ ?>
+            <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
             <span class="span_r djs_p" title="<?php echo $date_endadd; ?>">
               <span class="int_hour">02</span><i>:</i>
               <span class="int_minute">00</span><i>:</i>
               <span class="int_second">00</span>
             </span>
           </p>
+        <?php }?>
 
         <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
                     &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay;?>" title="Pay"  class="pay_a">Continue too pay</a>
                   <?php } ?>
 
-                  <?php if($bank_receipt) { ?>
+                  <!-- <?php if($bank_receipt) { ?>
                     &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay_receipt;?>" title="Pay"  class="pay_a">Re Submit Receipt</a>
                   <?php }elseif(!($payment_code == 'pp_standard' || $payment_code == 'pp_express')){ ?>
                     &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay_receipt;?>" title="Pay"  class="pay_a">Continues to pay</a>
-                <?php } ?>
+                <?php } ?> -->
 
           <!-- <a class="pay_a" href="###">Continue To Pay</a> -->
 
           <span>Order date:<?php echo $date_added; ?></span>
+          <?php if($order_status == 'Pending-unfilled' ) { ?>
+          <a class="btn_a" href="###">Contact us</a>
+           <?php } ?>
         </div>
-<?php }elseif($order_status=='Completed'){?>
+        <?php }elseif($order_status=='Completed'){?>
         <div class="left clearfix">
           <h2 class="huang"><?php echo $order_status; ?>  </h2>
           <p class="p3">
@@ -47,7 +65,7 @@
           <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a>
           <span>Order date:<?php echo $date_added; ?></span>
         </div>
-<?php }elseif($order_status=='Pending-unfilled'){?>
+          <?php }elseif($order_status=='Pending-unfilled'){?>
           <div class="left clearfix">
           <h2 class="huang"><?php echo $order_status; ?></h2>
           <p class="p2">
@@ -127,6 +145,31 @@
         </dl>
       </div>
 
+      <!-- s上传凭证 -->
+      <?php if($payment_code=='bank_transfer') { ?>
+    <div class="xianxia clearfix">
+        <div class="left clearfix">
+          <span class="span1">Bank Alert</span>
+          <span class="span2">Voucher picture</span>
+          <div class="hui">
+            <div class="img">
+              <img src=""/>
+              <div class="close" onclick="del_img($(this))"></div>
+            </div>
+          </div>
+        </div>
+        <div class="center clearfix">
+          <div class="btn">
+            <div class="file_div">
+              <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+              <a class="btn1" href="###">Re-upload</a>
+            </div>
+            <a class="btn2" href="###">SUBMIT</a>
+          </div>
+          <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
+        </div>
+      </div>
+<?php } ?>
       <div class="bot clearfix">
         <div class="top_span clearfix">
           <span>COMMODITY </span>
@@ -216,13 +259,13 @@
           <p class="p1">Emails will update to you if your package situation changes.</p>
         </div>
 
-<?php }elseif($order_status=='Delivered'){?>
+        <?php }elseif($order_status=='Delivered'){?>
           <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1 class="lv"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Your package has been delivered on <?php echo $date_modified; ?>. </p>
         </div>
-<?php }elseif($order_status=='lnvalid'){?>
+        <?php }elseif($order_status=='lnvalid'){?>
         <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
@@ -230,13 +273,35 @@
           <a class="pay_a" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover to pay</a>
         </div>
 
-<?php }elseif($order_status=='Canceled'){?>
+        <?php }elseif($order_status=='Canceled'){?>
         <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1 class="hei"><i></i> <span><?php echo $order_status; ?></span><p>(<?php echo $date_added; ?>)</p></h1>
         </div>
 
-<?php }?>
+          <?php }?>
+          <?php if($payment_code=='bank_transfer') { ?>
+          <div class="xianxia clearfix">
+          <span class="span1">Bank Alert</span>
+          <span class="span2">Voucher picture</span>
+          <div class="hui">
+            <div class="img">
+              <img src=""/>
+              <div class="close" onclick="del_img($(this))"></div>
+            </div>
+          </div>
+          <div class="center">
+            <div class="btn">
+              <div class="file_div">
+                <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+                <a class="btn1" href="###">Re-upload</a>
+              </div>
+              <a class="btn2" href="###">SUBMIT</a>
+            </div>
+          </div>
+          <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
+        </div>
+        <?php }?>
         
         <div class="pro_order clearfix">
           <h1>Product information</h1>
@@ -320,6 +385,65 @@
     </div>
 
 <?php echo $footer; ?>
+<script>
+  $(function(){
+    
+    //下拉total_p
+      $(".total_p").click(function(){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(this).siblings(".slide_p").stop().slideUp();
+          $(this).siblings("hr").hide();
+        }else{
+          $(this).addClass("active");
+          $(this).siblings(".slide_p").stop().slideDown();
+          $(this).siblings("hr").show();
+        }
+        
+        
+      })
+    
+  })
+  //调取上传框
+    function getphoto(node) {
+        var imgURL = "";
+        try{
+            var file = null;
+            if(node.files && node.files[0] ){
+                file = node.files[0];
+            }else if(node.files && node.files.item(0)) {
+                file = node.files.item(0);
+            }
+            try{
+                imgURL =  file.getAsDataURL();
+            }catch(e){
+                imgRUL = window.URL.createObjectURL(file);
+            }
+        }catch(e){
+            if (node.files && node.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    imgURL = e.target.result;
+                };
+                reader.readAsDataURL(node.files[0]);
+            }
+        }
+        creatImg(imgRUL);
+        return imgURL;
+    }
+ 
+  //上传选中的图片 显示页面
+    function creatImg(imgRUL){
+        $(".hui img").attr("src",imgRUL);
+        $(".hui .close").css("display","block");
+    }
+  
+  //删除选中的图片
+  function del_img(obj){
+    obj.siblings("img").attr("src","");
+     $(".hui .close").css("display","none");
+  }
+</script>
 <script>
 function confirm_order(order_id){
 if(confirm('Are you sure?')){
