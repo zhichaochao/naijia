@@ -1,0 +1,12 @@
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Notice:  Undefined index: name in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-12 6:13:33 - PHP Notice:  Undefined index: value in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
