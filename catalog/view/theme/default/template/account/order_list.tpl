@@ -50,11 +50,12 @@
                 <div class="text">
                   <h1 class="ov_text"><?php echo $product['name']; ?></h1>
                   <?php if ($product['options']) { ?>
+                  <p>color:<?php echo $product['color']; ?> </p>
                     <?php foreach ($product['options'] as $option) { ?>   
                     <!-- <p>Natural black; 12inch <i></br></i> 4*13 frontal cap;</p>   -->
                       <p><?php echo $option['name']; ?>:<?php echo $option['value']; ?></p>    
-                      <!-- <p><?php echo $option['value']; ?> </p> -->
                     <?php } }?>
+
                 </div>
                 <span class="price"><?php echo $product['price']; ?></span>
                 <span class="num">X<?php echo $product['quantity']; ?></span>

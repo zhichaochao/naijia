@@ -44,8 +44,9 @@
 
                   <?php if ($product['option']['selects']) { ?>
                   <?php foreach ($product['option']['selects'] as $option) { ?>
-                 <p class="p2" data='<?php echo $product['option']['quantity']; ?>'><?php echo $option['option_name']; ?>: <?php echo $option['option_value_name']; ?></p>
+                 <p class="p2" data='<?php echo $product['option']['quantity']; ?>'><?php echo $option['option_value_name']; ?></p>
                   <?php } ?>
+                  <p class="p2"><?php echo $product['color']; ?></p>
                   <?php } ?>
                  <?php if (!$product['stock']) { ?>
                   <span class="span1">Lack of stock</span>
@@ -315,7 +316,7 @@ $(document).ready(function(){
       num_val++;
       var stock_quantity=$(th).parent().attr('data');
       // alert(stock_quantity);
-      if (num_val>stock_quantity) {alert('Lack of stock'); return false;}
+      if (num_val<stock_quantity) {alert('Lack of stock'); return false;}
       $(th).siblings(".num_in").val(num_val);
       submit_num(id,num_val);
       

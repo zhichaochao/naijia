@@ -75,7 +75,7 @@ class ModelAccountAddress extends Model {
 				'iso_code_3'     => $iso_code_3,
 				'address_format' => $address_format,
 				'custom_field'   => json_decode($address_query->row['custom_field'], true),
-				'isDefault'      => ($this->customer->getAddressId()==$result['address_id']?1:0)
+				'isDefault'      => ($this->customer->getAddressId()==$address_query->row['address_id']?1:0)
 			);
 
 			return $address_data;

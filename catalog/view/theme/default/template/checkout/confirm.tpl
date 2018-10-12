@@ -37,6 +37,7 @@
                                               <?php  }} ?>
                                         
                                             <p>Quantity:  <?=$product['quantity'];?></p>
+                                            <p>Color:  <?=$product['color'];?></p>
                                             <span> <?=$product['price'];?></span>
                                         </div>
                                     </li>
