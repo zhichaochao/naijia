@@ -18,6 +18,16 @@ class ModelCatalogCategory extends Model {
 
 		return $query->rows;
 	}
+	public function getCategoriess($parent_id = 0) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd ON (c.category_id = cd.category_id) LEFT JOIN " . DB_PREFIX . "category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c.parent_id = '" . (int)$parent_id . "' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "' AND c.category_id != '68' AND c2s.store_id = '" . (int)$this->config->get('config_store_id') . "'  AND c.status = '1' ORDER BY c.sort_order, LCASE(cd.name)");
+
+		return $query->rows;
+	}
+	public function getCategorieses($parent_id = 68) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "category c LEFT JOIN " . DB_PREFIX . "category_description cd ON (c.category_id = cd.category_id) LEFT JOIN " . DB_PREFIX . "category_to_store c2s ON (c.category_id = c2s.category_id) WHERE c.parent_id = '" . (int)$parent_id . "' AND cd.language_id = '" . (int)$this->config->get('config_language_id') . "'  AND c2s.store_id = '" . (int)$this->config->get('config_store_id') . "'  AND c.status = '1' ORDER BY c.sort_order, LCASE(cd.name)");
+
+		return $query->rows;
+	}
 
 	public function getCategoryFilters($category_id) {
 		$implode = array();
@@ -80,10 +90,11 @@ class ModelCatalogCategory extends Model {
      * @author  dyl  783973660@qq.com  2016.9.18
      * @param   Int  $category_id   类别ID
      */
-	public function getCategoryImage($parent_id = 0) {
-		//$sql = ;
-		$query = $this->db->query("SELECT i.category_id,i.m_image,id.name FROM " . DB_PREFIX . "category i LEFT JOIN " . DB_PREFIX . "category_description id ON (i.category_id = id.category_id) WHERE i.parent_id != '" . (int)$parent_id . "'");
-		return $query;
+	public function getCategoryImage() {
+		// $sql ="SELECT i.category_id,i.image,id.name FROM " . DB_PREFIX . "category i LEFT JOIN " . DB_PREFIX . "category_description id ON (i.category_id = id.category_id) " ;
+		$query = $this->db->query("SELECT i.category_id,i.image,id.name FROM " . DB_PREFIX . "category i LEFT JOIN " . DB_PREFIX . "category_description id ON (i.category_id = id.category_id) ");
+		// print_r($sql);exit;
+		return $query->rows;
 	}
 
 

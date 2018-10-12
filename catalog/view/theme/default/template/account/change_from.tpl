@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="in_content clearfix"></div>
     <!--内容-->
-    <div class="order_con clearfix">
+    <div class="order_con change_pass clearfix">
       <div class="or_content clearfix">
           <div class="top_yd clearfix">
             <h1><a class="fh" href="<?php echo $home?>">< BACK</a>Change Password</h1>
@@ -32,29 +32,32 @@
               </label>
              <label class="clearfix" for="">
                 <span class="pl_span">Input validation code</span>
-                <input id="pass_f" onkeyup="this.value=this.value.replace(/\D/g,'')" type="text" name="code" />
+                <input class="in_1" id="pass_f" onkeyup="this.value=this.value.replace(/\D/g,'')" type="text" name="code" placeholder="Input validation code"/>
+                <p class="ts_ps">Verification code error</p>
               <?php if ($error_code) { ?>
                 <p class="ts_ps off"><?php echo $error_code; ?></p>
                 <?  } ?>
               </label>
               <label class="clearfix" for="">
                 <span class="pl_span">New password</span>
-                <input type="password" placeholder="New password"  name="password" />
-                <?php if ($error_password) { ?>
+                <input class="in_2" type="password" placeholder="New password"  name="password" />
+                <p class="ts_ps">Password must be between 4 and 20 characters!</p>
+                <!-- <?php if ($error_password) { ?>
                 <p class="ts_ps off"><?php echo $error_password; ?></p>
-                <?  } ?>
+                <?  } ?> -->
               </label>
               
               <label class="clearfix clear" for="">
                 <span class="pl_span">Confirm Password</span>
-                <input type="password" placeholder="Confirm Password" name="confirm" />
-                  <?php if ($error_confirm) { ?>
+                <input class="in_3" type="password" placeholder="Confirm Password" name="confirm" />
+                <p class="ts_ps">It need to be same as new password!</p>
+                  <!-- <?php if ($error_confirm) { ?>
                 <p class="ts_ps off"><?php echo $error_confirm; ?></p>
-                <?  } ?>
+                <?  } ?> -->
               </label>
               
               <button class="qx_btn" type="reset">Cancel</button>
-              <button class="tj_btn" type="submit">Save</button>
+              <button class="tj_btn" type="submit"  >Save</button>
             </form>
           </div>
         </div>
@@ -64,6 +67,8 @@
 
 <?php echo $footer; ?> 
 <script>
+
+    
 
    function changepwd(){
          var email=$(".email").val();
@@ -88,3 +93,60 @@ alert('<?php echo $success; ?>');
 </script>
 
   <?php } ?>
+
+
+<script type="text/javascript">
+
+  $(function(){
+
+    $("input").focus(function(){
+      $(this).attr("placeholder","");
+      $(this).siblings(".pl_span").css("display","block");
+    })
+    $("input").blur(function(){
+      
+      $(this).attr("placeholder",$(this).siblings(".pl_span").text());
+      $(this).siblings(".pl_span").css("display","none");
+    })
+
+    //验证表单不为空
+    $(".in_1").blur(function(){
+      if($(this).val()!="" && $(this).val().length==6){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_2").blur(function(){
+      if($(this).val()!="" && $(this).val().length>=4){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_3").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length>=4) && ($(this).val()==in_2val)){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+
+     $(".tj_btn").click(function(event){
+    
+      if(($(".in_1").val().length == 6) && ($(".in_2").val().length >= 4) && ( $(".in_3").val().length >= 4 && $(".in_3").val() == $(".in_2").val()) ){
+       
+      }else{
+        event.preventDefault();
+      }
+     })
+
+  })
+  </script>

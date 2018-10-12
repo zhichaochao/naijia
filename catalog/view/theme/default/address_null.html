@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>ADDRESS3</title>
+		<title>ADDRESS NULL</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,18 +100,38 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="address_con clearfix" style="padding: 0.2rem 0.15rem;">
-			<div class="top_yd clearfix">
-				<h1 style="margin: 0; font-weight: normal;"><a class="fh" href="###">< BACK</a> MY ADDRESSES</h1>
-			</div>
-			
-			<div class="add_con clearfix" style="margin-top: 0.2rem">
-				<div class="add_new clearfix">
-					<a href="###">
-						<span><i></i> Add New Address</span>
-					</a>
+		<div class="address_con order_con clearfix" style="padding: 0.2rem 0.15rem;">
+			<div class="or_content address3 clearfix">
+				<div class="top_yd clearfix">
+					<h1 style="margin: 0; font-weight: normal;"><a class="fh" href="###">< BACK</a> MY ADDRESSES</h1>
 				</div>
 				
+				<div class="lf_nav">
+					<img class="tx_img" src="img/png/touxiang.png" alt="" />
+					<h2>Tyler Durden</h2>
+					<p class="p1">+8613286484822</p>
+					
+					<ul>
+						<li><a href="###"><span>My Orders</span><i></i></a></li>
+						<li><a href="###"><span>My Profile</span><i></i></a></li>
+						<li><a href="###"><span>My addresses</span><i></i></a></li>
+						<li><a href="###"><span>My Favorites</span><i></i></a></li>
+						<li class="active"><a href="###"><span>My Coupon</span><i></i></a></li>
+					</ul>
+					
+					<img class="vip_img" src="img/vip.jpg" alt="" />
+				</div>
+				
+				<div class="address_a"> <a href="###">Add new address</a></div>
+				
+				<div class="add_con clearfix" style="margin-top: 0.2rem;background: transparent;">
+					<div class="add_new clearfix">
+						<a href="###">
+							<span><i></i> Add New Address</span>
+						</a>
+					</div>
+					
+				</div>
 			</div>
 		</div>
 		
@@ -364,41 +384,4 @@
 		</div>
 	</body>
 </html>
-<script>
-	$(function(){
-		$("input").focus(function(){
-			$(this).attr("placeholder","");
-			$(this).siblings(".pl_span").css("display","block");
-		})
-		$("input").blur(function(){
-			
-			$(this).attr("placeholder",$(this).siblings(".pl_span").text());
-			$(this).siblings(".pl_span").css("display","none");
-		})
-		
-		//勾选
-		$(".ck_i").click(function(){
-			if($(this).hasClass("active")){
-				$(this).removeClass("active");			
-			}else{
-				$(this).addClass("active");
-			}
-		})
-
-		//编辑地址
-		$(".span1").click(function(){
-			$(this).parents("li").find(".form_text").slideDown();
-			$(this).parents("li").find("hr").removeClass("mr20");
-			$(this).hide();
-			$(this).parents("li").find(".span2").show();
-		})
-		$(".span2").click(function(){
-			$(this).parents("li").find(".form_text").slideUp();
-			$(this).parents("li").find("hr").addClass("mr20");
-			$(this).hide();
-			$(this).parents("li").find(".span1").show();
-		})
-		
-	})
-</script>
 

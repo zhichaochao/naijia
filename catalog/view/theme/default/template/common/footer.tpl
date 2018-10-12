@@ -57,7 +57,7 @@
           </a>
         </li>
         <li>
-          <a href="###">
+          <a href="<?php echo $contac?>">
             <img src="/catalog/view/theme/default/img/png/fot_2.png" alt="" />
             <img class="active" src="/catalog/view/theme/default/img/png/fot_2_.png" alt="" />
             <p>Collection</p>
