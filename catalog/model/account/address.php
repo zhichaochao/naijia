@@ -11,6 +11,9 @@ class ModelAccountAddress extends Model {
 
 		return $address_id;
 	}
+	public function editDefault($address_id){
+		 $this->db->query("UPDATE " . DB_PREFIX . "customer SET address_id = '" . (int)$address_id . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+	}
 
 	public function editAddress($address_id, $data) {
 		$this->db->query("UPDATE " . DB_PREFIX . "address SET firstname = '" . $this->db->escape($data['firstname']) . "', lastname = '" . $this->db->escape($data['lastname']) . "',email = '" . $this->db->escape($data['email']) . "', company = '" . $this->db->escape($data['company']) . "',phone = '" . $this->db->escape($data['phone']) . "', address_1 = '" . $this->db->escape($data['address_1']) . "', address_2 = '" . $this->db->escape($data['address_2']) . "', postcode = '" . $this->db->escape($data['postcode']) . "', city = '" . $this->db->escape($data['city']) . "', zone_id = '" . (int)$data['zone_id'] . "', country_id = '" . (int)$data['country_id'] . "', custom_field = '" . $this->db->escape(isset($data['custom_field']) ? json_encode($data['custom_field']) : '') . "' WHERE address_id  = '" . (int)$address_id . "' AND customer_id = '" . (int)$this->customer->getId() . "'");
@@ -71,7 +74,8 @@ class ModelAccountAddress extends Model {
 				'iso_code_2'     => $iso_code_2,
 				'iso_code_3'     => $iso_code_3,
 				'address_format' => $address_format,
-				'custom_field'   => json_decode($address_query->row['custom_field'], true)
+				'custom_field'   => json_decode($address_query->row['custom_field'], true),
+				'isDefault'      => ($this->customer->getAddressId()==$result['address_id']?1:0)
 			);
 
 			return $address_data;
@@ -129,7 +133,8 @@ class ModelAccountAddress extends Model {
 				'iso_code_2'     => $iso_code_2,
 				'iso_code_3'     => $iso_code_3,
 				'address_format' => $address_format,
-				'custom_field'   => json_decode($result['custom_field'], true)
+				'custom_field'   => json_decode($result['custom_field'], true),
+				'isDefault'      => ($this->customer->getAddressId()==$result['address_id']?1:0)
 
 			);
 		}

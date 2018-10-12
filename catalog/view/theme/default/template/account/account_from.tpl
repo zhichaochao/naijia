@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="in_content clearfix"></div>
     <!--内容-->
-    <div class="order_con clearfix">
+    <div class="order_con change_pass clearfix">
       <div class="or_content clearfix">
           <div class="top_yd clearfix">
             <h1><a class="fh" href="<?php echo $home?>">< BACK</a>PERSONAL INFORMATION</h1>
@@ -24,17 +24,26 @@
             <form method="post" action="<?php echo $edit?>">
               <h2>PERSONAL INFORMATION</h2>
             <!--label的class  true是输入正确的一种显示格式-->
+             <?php if ($error_firstname) { ?>
+             <label class="clearfix " for="">
+              <?  }else{ ?>
               <label class="clearfix true" for="">
+              <?php }?>
                 <span class="pl_span">Frist Name</span>
-                <input type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="Frist Name"   />
+                <input class="in_1" type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="Frist Name"   />
                 <?php if ($error_firstname) { ?>
                 <p class="ts_ps off"><?php echo $error_firstname; ?></p>
                 <?  } ?>
+
               </label>
 
+              <?php if ($error_lastname) { ?>
+             <label class="clearfix " for="">
+              <?  }else{ ?>
               <label class="clearfix true" for="">
+              <?php }?>
                 <span class="pl_span">Last Name</span>
-                <input type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="Last Name"   />
+                <input class="in_2" type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="Last Name"   />
                 <?php if ($error_lastname) { ?>
                 <p class="ts_ps off"><?php echo $error_lastname; ?></p>
                 <?  } ?>
@@ -55,33 +64,50 @@
                 <input type="text" name="email" value="<?php echo $email; ?>"  placeholder="Email"  readonly="readonly" />
               </label>
 
-              <label class="clearfix" for="">
+                 <?php if ($error_telephone) { ?>
+               <label class="clearfix " for="">
+                <?  }else{ ?>
+                <label class="clearfix true" for="">
+                <?php }?>
                 <span class="pl_span">Phone</span>
-                <input type="text" name="telephone" value="<?php echo $telephone; ?>" placeholder="Phone"   />
+                <input class="in_3" type="text" name="telephone" value="<?php echo $telephone; ?>" placeholder="Phone"   />
                 <?php if ($error_telephone) { ?>
                 <p class="ts_ps off"><?php echo $error_telephone; ?></p>
                  <?  } ?>
               </label>
-              
+
+
+              <?php if ($error_whatsapp) { ?>
               <label class="w_50 yd_100 fl clearfix" for="">
+                <?  }else{ ?>
+                <label class="w_50 yd_100 fl clearfix true" for="">
+              <?php }?>
                 <span class="pl_span">Whatsapp</span>
-                <input type="text" name="whatsapp" value="<?php echo $whatsapp; ?>" placeholder="Whatsapp"   />
+                <input class="in_4" type="text" name="whatsapp" value="<?php echo $whatsapp; ?>" placeholder="Whatsapp"   />
                 <?php if ($error_whatsapp) { ?>
                 <p class="ts_ps off"><?php echo $error_whatsapp; ?></p>
                  <?  } ?>
               </label>
-              
-              <label class="w_50 yd_100 fr clearfix" for="">
+
+              <?php if ($error_facebook) { ?>
+              <label class="w_50 yd_100 fl clearfix" for="">
+              <?  }else{ ?>
+              <label class="w_50 yd_100 fl clearfix true" for="">
+              <?php }?>
                 <span class="pl_span">Facebook</span>
-                <input type="text" name="facebook" value="<?php echo $facebook; ?>" placeholder="Facebook"   />
+                <input class="in_5" type="text" name="facebook" value="<?php echo $facebook; ?>" placeholder="Facebook"   />
                  <?php if ($error_facebook) { ?>
                 <p class="ts_ps off"><?php echo $error_facebook; ?></p>
                  <?  } ?>
               </label>
-              
-              <label class="clearfix clear" for="">
+
+              <?php if ($error_instagram) { ?>
+             <label class="clearfix " for="">
+              <?  }else{ ?>
+              <label class="clearfix true" for="">
+              <?php }?>
                 <span class="pl_span">Instagram</span>
-                 <input type="text" name="instagram" value="<?php echo $instagram; ?>" placeholder="Instagram" />
+                 <input class="in_6" type="text" name="instagram" value="<?php echo $instagram; ?>" placeholder="Instagram" />
                  <?php if ($error_instagram) { ?>
                 <p class="ts_ps off"><?php echo $error_instagram; ?></p>
                  <?  } ?>
@@ -97,3 +123,79 @@
     </div>
 
 <?php echo $footer; ?> 
+<script type="text/javascript">
+
+  
+   $(function(){
+    $("input").focus(function(){
+      $(this).attr("placeholder","");
+      $(this).siblings(".pl_span").css("display","block");
+    })
+    $("input").blur(function(){
+      
+      $(this).attr("placeholder",$(this).siblings(".pl_span").text());
+      $(this).siblings(".pl_span").css("display","none");
+    })
+
+
+     $(".in_1").blur(function(){
+      if($(this).val()!="" && $(this).val().length<=32 && $(this).val().length>=1){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_2").blur(function(){
+      if($(this).val()!="" && $(this).val().length<=32 && $(this).val().length>=1){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_3").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_4").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_5").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_6").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+
+   })
+</script>

@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="in_content clearfix"></div>
     <!--内容-->
-    <div class="order_con clearfix">
+    <div class="order_con change_pass clearfix">
       <div class="or_content clearfix">
           <div class="top_yd clearfix">
             <h1><a class="fh" href="<?php echo $home?>">< BACK</a>My Profile</h1>

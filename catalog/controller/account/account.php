@@ -603,9 +603,9 @@ class ControllerAccountAccount extends Controller {
 		}
 
 
-		$this->change();
+		// $this->change();
 
-		// $this->response->redirect($this->url->link('account/account', '', true));
+		$this->response->redirect($this->url->link('account/account', '', true));
 
 	}
 
@@ -684,7 +684,7 @@ class ControllerAccountAccount extends Controller {
 			$this->load->language('mail/forgotten');
 
 			$code = token(40);
-			$yzm=rand(1000,9999);
+			$yzm=rand(100000,999999);
 			$this->model_account_customer->editCode($this->request->post['email'], $code);
 
             //根据邮箱获取该用户 dyl add
@@ -696,7 +696,7 @@ class ControllerAccountAccount extends Controller {
 
             $message  = "Dear ". $customer_data['firstname'] ." ". $customer_data['lastname'] . ",\n\n";
 			$message .= sprintf($this->language->get('text_greeting'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')) . "\n\n";
-			$message .= "Verification Code :".$yzm. "\n\n";
+			$message .= "The 6 bit verification code is :".$yzm. "\n\n";
 			// $message .= $this->url->link('account/reset', 'code=' . $code, true) . "\n\n";
 			$message .= sprintf($this->language->get('text_ip'), $this->request->server['REMOTE_ADDR']) . "\n\n";
 
