@@ -589,7 +589,6 @@ class ControllerProductProduct extends Controller {
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
                     'thumbs'       =>$thumbs,
-                    'hot'     => $producthot['hot'],
                     'date_end'    => $date_ends,
                     //'name'        => $result['name'],
                     'max_name'    => $result['name'],
