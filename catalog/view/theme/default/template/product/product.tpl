@@ -115,7 +115,7 @@
               <?php if ($selects) { ?>
                 <?php foreach ($selects as $select) { ?>  
             
-                  <li class="clearfix">
+                  <li class="clearfix" style="position: relative;">
                     <span class="bt_span slide">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix">
                         <?php $select_option_id=0;?>
@@ -131,7 +131,7 @@
                         <?php } ?>
                            <input type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?=$select_option_id>0? $select_option_id:0; ?>" />
                     </ul>
-                    <?php if( $select['option_id']==1){ ?>
+                    <!-- <?php if( $select['option_id']==1){ ?> -->
                     <p class="size_p">Select Size Guide</p>
                     <div class="size_img">
                       <div class="img">
@@ -139,7 +139,7 @@
                         <img src="catalog/view/theme/default/img/size.jpg" alt="" />
                       </div>
                   </div>
-                  <?php } ?>
+                  <!-- <?php } ?> -->
                   </li>
              
                 <?php }} ?>

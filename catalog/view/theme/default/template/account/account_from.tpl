@@ -92,7 +92,7 @@
               <?php if ($error_facebook) { ?>
               <label class="w_50 yd_100 fl clearfix" for="">
               <?  }else{ ?>
-              <label class="w_50 yd_100 fl clearfix true" for="">
+              <label class="w_50 yd_100 fr clearfix true" for="">
               <?php }?>
                 <span class="pl_span">Facebook</span>
                 <input class="in_5" type="text" name="facebook" value="<?php echo $facebook; ?>" placeholder="Facebook"   />

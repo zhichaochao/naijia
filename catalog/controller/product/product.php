@@ -800,16 +800,21 @@ class ControllerProductProduct extends Controller {
                     $review_img[$key]['img'] = $this->model_tool_image->resize( $row['images'], 118, 118);
                     $review_img[$key]['min_img'] = $this->model_tool_image->resize($row['images'], 286, 380);
                 }
+                $thumbsnot= $this->model_catalog_review->thumbsornot($result['review_id']);
+               $thumbstotal =$this->model_catalog_review->getTotalsThumbs($result['review_id']);
 
                 $data['reviews'][] = array(
-                    //'author'     => $result['author'],
+                    'review_id'     => $result['review_id'],
                     'author'        => substr($result['author'],0,-2).'***',
                     'text'          => nl2br($result['text']),
+                    'thumbs'          =>$result['thumbs'],
                     'rating'        => (int)$result['rating'],
                     //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
                     'date_added'    => date('m/d/Y', strtotime($result['date_added'])),
                     'rating_starts' => $this->ratingStarts($result['rating']),
-                    'images'        => $review_img
+                    'images'        => $review_img,
+                    'thumbstotal'    =>$thumbstotal,
+                    'thumbsnot'    =>$thumbsnot
                 );
             }
             // print_r( $data['reviews']);exit;
@@ -817,9 +822,13 @@ class ControllerProductProduct extends Controller {
         if(isset($_SERVER['HTTP_REFERER'])){
             $data['home'] =$_SERVER['HTTP_REFERER'];
         }
+        // print_r($data['products']);exit;
         // else{
         //     $data['home'] =$this->url->link('common/home');
         // }
+        // dianzan
+        $data['addthumbs'] = $this->url->link('product/product/addthumbs');
+        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
 
         $data['revi'] = $product_info['reviews'];
         $data['rating'] = $product_info['rating'];
@@ -870,7 +879,94 @@ class ControllerProductProduct extends Controller {
         $this->response->setOutput($this->load->view('product/review', $data));
 
     }
+    public function addthumbs() {
+        // $this->load->language('account/wishlist');
 
+        $json = array();
+
+        if (isset($this->request->post['review_id'])) {
+            $review_id = $this->request->post['review_id'];
+        } else {
+            $review_id = 0;
+        }
+
+        $this->load->model('catalog/review');
+
+        $review_info = $this->model_catalog_review->getReview($review_id);
+
+        if ($review_info) {
+            if ($this->customer->isLogged()) {
+                // Edit customers cart
+                $this->load->model('catalog/review');
+
+                $this->model_catalog_review->addThumbs($this->request->post['review_id']);
+
+                $json['success'] = sprintf($this->language->get('text_success'),  $this->url->link('account/wishlist'));
+
+                $json['total'] =  $this->model_catalog_review->getTotalThumbs();
+            } else {
+                // meiyou 
+                // if (!isset($this->session->data['wishlist'])) {
+                //     $this->session->data['wishlist'] = array();
+                // }
+
+                // $this->session->data['wishlist'][] = $this->request->post['product_id'];
+
+                // $this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
+
+                $json['error'] =  $this->url->link('account/login', '', true);
+
+                // $json['error'] = (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
+            }
+        }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
+    public function deletethumbs() {
+        // $this->load->language('account/wishlist');
+
+        $json = array();
+
+        if (isset($this->request->post['review_id'])) {
+            $review_id = $this->request->post['review_id'];
+        } else {
+            $review_id = 0;
+        }
+
+        $this->load->model('catalog/review');
+
+        $review_info = $this->model_catalog_review->getReview($review_id);
+
+        if ($review_info) {
+            if ($this->customer->isLogged()) {
+                // Edit customers cart
+                $this->load->model('catalog/review');
+
+                $this->model_catalog_review->deleteThumbs($this->request->post['review_id']);
+
+                $json['success'] = sprintf($this->language->get('text_success'),  $this->url->link('account/wishlist'));
+
+                $json['total'] =  $this->model_catalog_review->getTotalThumbs();
+            } else {
+                // if (!isset($this->session->data['wishlist'])) {
+                //     $this->session->data['wishlist'] = array();
+                // }
+
+                // $this->session->data['wishlist'][] = $this->request->post['product_id'];
+
+                // $this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
+
+                // $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+
+                // $json['total'] = (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
+                $json['error'] =  $this->url->link('account/login', '', true);
+            }
+        }
+
+        $this->response->addHeader('Content-Type: application/json');
+        $this->response->setOutput(json_encode($json));
+    }
     public function write() {
         $this->load->language('product/product');
 

@@ -57,7 +57,7 @@ class ModelCatalogReview extends Model {
 		// 	$limit = 20;
 		// }
 
-		$query = $this->db->query("SELECT r.review_id, r.author, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC  ");
+		$query = $this->db->query("SELECT r.review_id, r.author, r.thumbs, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC  ");
 
 		return $query->rows;
 	}
@@ -85,5 +85,49 @@ class ModelCatalogReview extends Model {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
 
 		return $query->row['total'];
+	}
+
+	public function getReview($review_id) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review WHERE review_id = '" . (int)$review_id . "'");
+
+		return $query->rows;
+	}
+	public function addThumbs($review_id) {
+		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_review WHERE customer_id = '" . (int)$this->customer->getId() . "' AND review_id = '" . (int)$review_id . "'");
+
+		$this->db->query("INSERT INTO " . DB_PREFIX . "customer_review SET customer_id = '" . (int)$this->customer->getId() . "', review_id = '" . (int)$review_id . "'");
+	}
+	public function deleteThumbs($review_id) {
+		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_review WHERE customer_id = '" . (int)$this->customer->getId() . "' AND review_id = '" . (int)$review_id . "'");
+	}
+	public function getTotalsThumbs($review_id) {
+		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "customer_review WHERE review_id = '" . (int)$review_id . "' ");
+
+		return $query->row['total'];
+	}
+	public function getTotalThumbs() {
+		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "customer_review WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+
+		return $query->row['total'];
+	}
+
+	public function thumbsornot($review_id){
+           $customer_id = $this->customer->isLogged() ? $this->customer->getId() : 0;
+            if( empty($review_id)|| $customer_id==0){
+                return false;
+            }
+           
+            $sql ="select * from ".DB_PREFIX."customer_review   where review_id = '".$review_id."' AND customer_id =". $customer_id;
+            // print_r($sql);exit;
+            $query = $this->db->query($sql);
+            // print_r($query->row)
+           if (empty($query->row)) {
+           	return  false;
+           }else {
+           		return  true;
+           }
+          
+            
+          
 	}
 }

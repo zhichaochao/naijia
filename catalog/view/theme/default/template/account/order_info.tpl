@@ -168,8 +168,8 @@
               <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
               <a class="btn1" href="###">Re-upload</a>
             </div>
-            <!-- <a  href="###" ></a> -->
-            <input type="submit" value="SUBMIT" class="btn2">
+            <a  href="javascript:0;" class="btn2"><input type="submit" value="SUBMIT"></a>
+            
           </div>
           <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
         </div>

@@ -60,8 +60,8 @@
                   <div class="close"></div>
                   <div class="fy_zsq"><i class="fy_i1">2</i>/<i class="fy_i2">5</i></div>
               </div>
-              <div class="zan">
-                <span>10</span>
+              <div class="zan <?=$review['thumbsnot']==1 ?'active':'';?>" onclick="thumbs('<?php echo $review['review_id']; ?>',this);">
+                <span id="thumbsed"><?php echo $review['thumbstotal']; ?></span>
               </div>
             </div>
           </li>
@@ -77,6 +77,43 @@
     </div>
 <?php echo $footer; ?>
 <script type="text/javascript">
+function thumbs(review_id,e) {
+  if ($(e).hasClass('active')) { 
+    $.ajax({
+    url:'<?php echo $deletethumbs ;?>',
+    type:'post',
+    data:{'review_id':review_id},
+    dataType: 'json',
+    success:function(data){
+      if (data.success) {
+        // $('#thumbsed').html(data.total);
+        location.reload(); 
+      }else{
+        window.location.href="/index.php?route=account/login";
+      }
+    }
+   })
+  }else{
+   $.ajax({
+    url:'<?php echo $addthumbs ;?>',
+    type:'post',
+    data:{'review_id':review_id},
+    dataType: 'json',
+    success:function(data){
+      // alert(data);
+      if (data.success) {
+        // $('#thumbsed').html(data.total);
+        location.reload(); 
+      }else{
+         window.location.href="/index.php?route=account/login";
+      }
+    }
+   })
+
+
+ }
+}
+
   $(function(){
     //zan
     $(".zan").click(function(){
