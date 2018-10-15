@@ -417,3 +417,26 @@
 2018-10-12 9:16:36 - PayPal Express debug (Result): "TOKEN=EC%2d9D503457183366619&TIMESTAMP=2018%2d10%2d12T09%3a18%3a32Z&CORRELATIONID=93affb48ee6a0&ACK=Success&VERSION=109%2e0&BUILD=49655030"
 2018-10-15 1:46:24 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 119
 2018-10-15 1:46:28 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 119
+2018-10-15 5:56:23 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 201
+2018-10-15 5:56:23 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 201
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-15 5:59:38 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-15 6:00:50 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104

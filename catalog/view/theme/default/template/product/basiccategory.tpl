@@ -22,7 +22,7 @@
             <!-- Swiper -->
             <div class="swiper-container in_ul2 swiper1">
               <div class="swiper-wrapper">
-              <?php foreach ($products as $product) { ?>
+              <?php foreach ($basicproducts1 as $product) { ?>
 
                 <div class="swiper-slide clearfix">
                     <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
@@ -60,7 +60,7 @@
                 <!-- Swiper -->
                   <div class="swiper-container in_ul2 swiper2">
                     <div class="swiper-wrapper">
-                    <?php foreach ($products as $product) { ?>
+                    <?php foreach ($basicproducts2 as $product) { ?>
 
                       <div class="swiper-slide clearfix">
                           <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
@@ -97,7 +97,7 @@
                   <div class="swiper-container in_ul2 swiper3">
                     <div class="swiper-wrapper">
 
-                      <?php foreach ($products as $product) { ?>
+                      <?php foreach ($basicproducts3 as $product) { ?>
 
                       <div class="swiper-slide clearfix">
                           <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
