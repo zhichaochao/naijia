@@ -579,3 +579,785 @@
 2018-10-15 10:03:28 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
 2018-10-15 10:03:28 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
 2018-10-15 10:03:28 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:27:03 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 1:41:38 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:47:23 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:47:28 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:47:33 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:49:32 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:49:41 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:49:50 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:49:59 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:49:59 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:50:02 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 1:50:03 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\search.php on line 269
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 2:13:56 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 2:14:21 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:03:33 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:19:18 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:29:11 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 3:33:32 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:33:53 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:46:48 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 3:54:13 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 4:00:55 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:45:34 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:46:53 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:47:21 - PayPal Express debug (Call data): {"METHOD":"SetExpressCheckout","MAXAMT":34500,"RETURNURL":"http:\/\/hotnajia.com\/index.php?route=extension\/payment\/pp_express\/checkoutReturn","CANCELURL":"http:\/\/hotnajia.com\/index.php?route=checkout\/checkout","REQCONFIRMSHIPPING":0,"NOSHIPPING":0,"LOCALECODE":"EN","LANDINGPAGE":"Login","HDRIMG":null,"PAYFLOWCOLOR":"","CHANNELTYPE":"Merchant","ALLOWNOTE":"1","PAYMENTREQUEST_0_SHIPTONAME":"wqweqf werwerwe","PAYMENTREQUEST_0_SHIPTOSTREET":"\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u767d\u4e91\u533a\u9ec4\u8fb9\u5317\u8def","PAYMENTREQUEST_0_SHIPTOSTREET2":"\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u767d\u4e91\u533a\u9ec4\u8fb9\u5317\u8def","PAYMENTREQUEST_0_SHIPTOCITY":"\u5e7f\u5dde\u5e02","PAYMENTREQUEST_0_SHIPTOSTATE":"Guangdong","PAYMENTREQUEST_0_SHIPTOZIP":"123456","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"CN","PAYMENTREQUEST_0_SHIPPINGAMT":"","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","L_PAYMENTREQUEST_0_DESC0":"Length:8&quot;, Density:150%, Cap construction:360 Lace Frontal","L_PAYMENTREQUEST_0_NAME0":" Illusion Frontal Bob 10&quot;","L_PAYMENTREQUEST_0_NUMBER0":"IFB10","L_PAYMENTREQUEST_0_AMT0":62.33,"L_PAYMENTREQUEST_0_QTY0":"1","L_PAYMENTREQUEST_0_ITEMURL0":"http:\/\/hotnajia.com\/index.php?route=product\/product&amp;product_id=119","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTUNIT0":"kg","PAYMENTREQUEST_0_ITEMAMT":"62.33","PAYMENTREQUEST_0_AMT":"62.33"}
+2018-10-16 5:47:24 - PayPal Express debug (Result): "TOKEN=EC%2d5J0140622D941903J&TIMESTAMP=2018%2d10%2d16T05%3a49%3a21Z&CORRELATIONID=937f8c99ecee&ACK=Success&VERSION=109%2e0&BUILD=49703166"
+2018-10-16 5:47:59 - PayPal Express debug (Call data): {"METHOD":"SetExpressCheckout","MAXAMT":34500,"RETURNURL":"http:\/\/hotnajia.com\/index.php?route=extension\/payment\/pp_express\/checkoutReturn","CANCELURL":"http:\/\/hotnajia.com\/index.php?route=checkout\/checkout","REQCONFIRMSHIPPING":0,"NOSHIPPING":0,"LOCALECODE":"EN","LANDINGPAGE":"Login","HDRIMG":null,"PAYFLOWCOLOR":"","CHANNELTYPE":"Merchant","ALLOWNOTE":"1","PAYMENTREQUEST_0_SHIPTONAME":"wqweqf werwerwe","PAYMENTREQUEST_0_SHIPTOSTREET":"\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u767d\u4e91\u533a\u9ec4\u8fb9\u5317\u8def","PAYMENTREQUEST_0_SHIPTOSTREET2":"\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u767d\u4e91\u533a\u9ec4\u8fb9\u5317\u8def","PAYMENTREQUEST_0_SHIPTOCITY":"\u5e7f\u5dde\u5e02","PAYMENTREQUEST_0_SHIPTOSTATE":"Guangdong","PAYMENTREQUEST_0_SHIPTOZIP":"123456","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"CN","PAYMENTREQUEST_0_SHIPPINGAMT":"","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","L_PAYMENTREQUEST_0_DESC0":"Length:8&quot;, Density:150%, Cap construction:360 Lace Frontal","L_PAYMENTREQUEST_0_NAME0":" Illusion Frontal Bob 10&quot;","L_PAYMENTREQUEST_0_NUMBER0":"IFB10","L_PAYMENTREQUEST_0_AMT0":62.33,"L_PAYMENTREQUEST_0_QTY0":"1","L_PAYMENTREQUEST_0_ITEMURL0":"http:\/\/hotnajia.com\/index.php?route=product\/product&amp;product_id=119","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTUNIT0":"kg","PAYMENTREQUEST_0_ITEMAMT":"62.33","PAYMENTREQUEST_0_AMT":"62.33"}
+2018-10-16 5:48:01 - PayPal Express debug (Result): "TOKEN=EC%2d7B7306872B219001X&TIMESTAMP=2018%2d10%2d16T05%3a49%3a58Z&CORRELATIONID=4045717e6ae42&ACK=Success&VERSION=109%2e0&BUILD=49703166"
+2018-10-16 5:48:25 - PayPal Express debug (Call data): {"METHOD":"SetExpressCheckout","MAXAMT":34500,"RETURNURL":"http:\/\/hotnajia.com\/index.php?route=extension\/payment\/pp_express\/checkoutReturn","CANCELURL":"http:\/\/hotnajia.com\/index.php?route=checkout\/checkout","REQCONFIRMSHIPPING":0,"NOSHIPPING":0,"LOCALECODE":"EN","LANDINGPAGE":"Login","HDRIMG":null,"PAYFLOWCOLOR":"","CHANNELTYPE":"Merchant","ALLOWNOTE":"1","PAYMENTREQUEST_0_SHIPTONAME":"wqweqf werwerwe","PAYMENTREQUEST_0_SHIPTOSTREET":"\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u767d\u4e91\u533a\u9ec4\u8fb9\u5317\u8def","PAYMENTREQUEST_0_SHIPTOSTREET2":"\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u767d\u4e91\u533a\u9ec4\u8fb9\u5317\u8def","PAYMENTREQUEST_0_SHIPTOCITY":"\u5e7f\u5dde\u5e02","PAYMENTREQUEST_0_SHIPTOSTATE":"Guangdong","PAYMENTREQUEST_0_SHIPTOZIP":"123456","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"CN","PAYMENTREQUEST_0_SHIPPINGAMT":"","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","L_PAYMENTREQUEST_0_DESC0":"Length:8&quot;, Density:150%, Cap construction:360 Lace Frontal","L_PAYMENTREQUEST_0_NAME0":" Illusion Frontal Bob 10&quot;","L_PAYMENTREQUEST_0_NUMBER0":"IFB10","L_PAYMENTREQUEST_0_AMT0":62.33,"L_PAYMENTREQUEST_0_QTY0":"1","L_PAYMENTREQUEST_0_ITEMURL0":"http:\/\/hotnajia.com\/index.php?route=product\/product&amp;product_id=119","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTUNIT0":"kg","PAYMENTREQUEST_0_ITEMAMT":"62.33","PAYMENTREQUEST_0_AMT":"62.33"}
+2018-10-16 5:48:28 - PayPal Express debug (Result): "TOKEN=EC%2d99M02743543145258&TIMESTAMP=2018%2d10%2d16T05%3a50%3a25Z&CORRELATIONID=d74973dada068&ACK=Success&VERSION=109%2e0&BUILD=49703166"
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:49:00 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:51:42 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:52:07 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:31 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 5:53:44 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:54:05 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:55:42 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 5:58:02 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 5:58:17 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:30:38 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:43:55 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 6:44:25 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 6:44:26 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 6:44:27 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 6:45:04 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:45:25 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:54:04 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:55:14 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 6:58:31 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:02:55 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:03:16 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:04:19 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 7:15:52 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:16:18 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:40 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:17:52 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:06 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 7:18:41 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:10 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:46 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:19:52 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:47:02 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:49:43 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:50:48 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:32 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 7:51:38 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:52:11 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:54:22 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 7:59:16 - PHP Warning:  file_get_contents(https://api.paystack.co/transaction/verify/117-5bc59a2695833): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\extension\payment\paystack.php on line 57
+2018-10-16 7:59:16 - PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\extension\payment\paystack.php on line 98
+2018-10-16 7:59:16 - PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\extension\payment\paystack.php on line 101
+2018-10-16 8:01:09 - PHP Warning:  file_get_contents(https://api.paystack.co/transaction/verify/117-5bc59a2695833): failed to open stream: HTTP request failed! HTTP/1.1 400 Bad Request
+ in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\extension\payment\paystack.php on line 57
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 8:13:30 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:15:13 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:05 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 8:16:27 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:16:57 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-16 8:18:15 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:19:49 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:20:58 - PAYSTACK :: CALLBACK DATA: Array
+(
+    [route] => extension/payment/paystack/callback
+    [trxref] => 124-5bc59f42919b3
+)
+
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:21:12 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:07 - PAYSTACK :: CALLBACK DATA: Array
+(
+    [route] => extension/payment/paystack/callback
+    [trxref] => 125-5bc59f791fd63
+)
+
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:20 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:22:43 - PAYSTACK :: CALLBACK DATA: Array
+(
+    [route] => extension/payment/paystack/callback
+    [trxref] => 126-5bc59fbd1b32b
+)
+
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:23:06 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:29:14 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:23 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-16 8:32:32 - PAYSTACK :: CALLBACK DATA: Array
+(
+    [route] => extension/payment/paystack/callback
+    [trxref] => 133-5bc5a21c099eb
+)
+

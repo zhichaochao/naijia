@@ -274,6 +274,7 @@ class ControllerAccountOrder extends Controller {
 // print_r($data['order_status']);exit;
 			$data['order_id'] = $this->request->get['order_id'];
 			$data['date_added'] = date($this->language->get('date_format_short'), strtotime($order_info['date_added']));
+			$data['delivered_date'] = date($this->language->get('date_format_short'), strtotime($order_info['delivered_date']));
 			$data['date_endadd'] =date('Y-m-d h:i:s',strtotime($order_info['date_added'])+7200);
 			$data['date_modified'] = date($this->language->get('date_format_short'), strtotime($order_info['date_modified']));
 // print_r($data['date_endadd'] );exit;

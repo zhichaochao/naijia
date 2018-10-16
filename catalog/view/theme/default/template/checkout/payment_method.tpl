@@ -64,7 +64,7 @@
                                 <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
                                     <div class="pic_img"></div>
                                     <span><?php echo $payment_method['title']; ?></span>
-                                    <em>$</em>
+                                    
                                 </li>
                      
                                 <?php } ?>

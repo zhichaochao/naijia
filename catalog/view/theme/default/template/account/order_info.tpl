@@ -59,7 +59,7 @@
           <p class="p3">
             Pending:<?php echo $date_added; ?> <br />
             <!-- Delivered 2018-08-28<br /> -->
-            Delivered:<?php echo $date_modified; ?><br />
+            Delivered:<?php echo $delivered_date; ?><br />
             Complete:<?php echo $date_modified; ?>
           </p>
           <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a>
@@ -85,7 +85,7 @@
           <h2 class="lv"><?php echo $order_status; ?> </h2>
           <p class="p3">
             Your package has been delivered<br /> 
-            on <?php echo $date_modified; ?>
+            on <?php echo $delivered_date; ?>
           </p>
           <a class="pay_a lv" onclick="javascript:confirm_order('<?php echo $order_id; ?>');">Confirm Receipt</a>
           <span>Order date:<?php echo $date_added; ?></span>
@@ -265,7 +265,7 @@
           <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <ul>
             <li>Pending <span><?php echo $date_added; ?></span></li>
-            <li>Delivered <span><?php echo $date_modified; ?></span></li>
+            <li>Delivered <span><?php echo $delivered_date; ?></span></li>
             <li>Completed <span><?php echo $date_modified; ?></span></li>
           </ul>
           <button class="modal_btn">Review</button>
