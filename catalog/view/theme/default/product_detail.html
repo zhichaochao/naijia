@@ -180,11 +180,11 @@
 								<!-- Swiper -->
 								<div class="swiper-container pro_det_ul2 slide_ul clearfix">
 								    <div class="swiper-wrapper">
-								      	<div class="swiper-slide active"><img src="img/pro_det3.jpg" alt="" /></div>
-								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
-								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
-								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
-								      	<div class="swiper-slide"><img src="img/pro_det3.jpg" alt="" /></div>
+								      	<div class="swiper-slide active"> <a href="###"><img src="img/pro_det3.jpg" alt="" /></a></div>
+								      	<div class="swiper-slide"> <a href="###"><img src="img/pro_det3.jpg" alt="" /></a></div>
+							      		<div class="swiper-slide"> <a href="###"><img src="img/pro_det3.jpg" alt="" /></a></div>
+							      		<div class="swiper-slide"> <a href="###"><img src="img/pro_det3.jpg" alt="" /></a></div>
+							      		<div class="swiper-slide"> <a href="###"><img src="img/pro_det3.jpg" alt="" /></a></div>
 								    </div>
 								</div>
 							</li>
@@ -330,6 +330,10 @@
 								<h2 class="slide_h2">Details <em class="jian"></em></h2>
 								<div class="slide_text">
 									<div class="details">
+										<div class="video" style="position: relative;">
+											<div class="bf_img"></div>
+											<video id="video" poster="img/wig_bf_bg.jpg" width="100%" src="img/myvideo.mp4"></video>
+										</div>
 										<p>Model Length: 24"</p>
 										<p>Fiber: 100% Remy Human Hair</p>
 										<p>Density: Full</p>
@@ -759,6 +763,14 @@ window.onload=function(){
 				
 		   }
 		})
+		//视频播放
+		var video = document.getElementById("video");
+		$(".video .bf_img").click(function(){
+			$(this).css("display","none");
+			document.getElementById("video").play();
+			$(this).siblings("video").attr("controls","controls");
+		});
+		
 		
 		//返回顶部
 		$(".bottom .ft_btn,.bottom .yd_ft_btn").click(function(event){

@@ -2,7 +2,7 @@
  <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $text_testmode; ?></div>
 <?php } ?>
 <form >
-  <script src="https://js.paystack.co/v1/inline.js"></script>
+ 
   <div class="buttons">
     <div class="pull-right">
     <a onclick="payWithPaystack()"  class="a_qd_btn">Continue to pay</a>
@@ -10,7 +10,7 @@
     </div>
   </div>
 </form>
- 
+  <script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
   function payWithPaystack(){
     var handler = PaystackPop.setup({

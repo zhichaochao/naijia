@@ -36,7 +36,7 @@ class ControllerAccountLeft extends Controller {
                 array(
                  
                     'name' => 'My Coupon',
-                    'url' => $this->url->link('account/vip')
+                    'url' => $this->url->link('account/coupon')
                 ),
                 //优惠劵
                 // array(
