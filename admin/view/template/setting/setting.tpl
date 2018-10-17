@@ -65,7 +65,7 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-meta-keyword">热门搜索关键字</label>
+                <label class="col-sm-2 control-label" for="input-meta-keywords">热门搜索关键字</label>
                 <div class="col-sm-10">
                   <textarea name="config_meta_keywords" rows="5" placeholder="<?php echo $entry_meta_keywords; ?>" id="input-meta-keywords" class="form-control"><?php echo $config_meta_keywords; ?></textarea>
                 </div>
