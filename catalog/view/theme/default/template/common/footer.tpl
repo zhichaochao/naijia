@@ -24,8 +24,7 @@
                   <input type="text" name="txtemail" id="txtemails" placeholder="Enter your e-mail"/>
                 </label>
                 <p>
-                  join us and get the exclusive sales, productlanunches, 
-                  wig tips & more directly deliveredto your inbox.
+                  Subscribe to get the exclusive sales, product lanuches, wig tips & latest news. 
                 </p>
                 <button type="submit" onClick="return subscribe();">SUBMIT</button>
               <!-- </form> -->

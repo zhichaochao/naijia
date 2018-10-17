@@ -274,7 +274,7 @@ function cancel_order(url){
 function order_remove(order_id){
 if(confirm('Are you sure?')){
            $.ajax({
-            url: 'index.php?route=account/order/delete',
+            url: '<?php echo $orderdel?>',
             type: 'post',
             data: {order_id:order_id},
             dataType: 'json',
@@ -288,7 +288,7 @@ if(confirm('Are you sure?')){
 function recover_order(order_id){
 if(confirm('Are you sure?')){
            $.ajax({
-            url: 'index.php?route=account/order/recover',
+            url: '<?php echo $orderrecover?>',
             type: 'post',
             data: {order_id:order_id},
             dataType: 'json',
@@ -302,7 +302,7 @@ if(confirm('Are you sure?')){
 function confirm_order(order_id){
 if(confirm('Are you sure?')){
            $.ajax({
-            url: 'index.php?route=account/order/confirm',
+            url: '<?php echo $orderconfirm?>',
             type: 'post',
             data: {order_id:order_id},
             dataType: 'json',

@@ -148,14 +148,10 @@ function wishlist(product_id,e) {
   })
   
   //倒计时
-  function show_time() {
+ function show_time() {
         $(".djs_p").each(function() {
-            var cha = $(this).prop("title");
+            var endtime = $(this).prop("title");
             var time_start = new Date().getTime(); //设定当前时间
-            var  endtime=time_start+cha*1000;
-            cha-=1;
-           $(this).prop("title",cha);
-            time_start+=1000;
             var time_end = new Date(endtime).getTime(); //设定目标时间
             var time_distance = time_end - time_start;
             var timer;

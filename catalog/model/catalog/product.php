@@ -42,6 +42,7 @@ class ModelCatalogProduct extends Model {
 			
 
 				'color'           => $query->row['color'],
+				'hot'           => $query->row['hot'],
 				'points'           => $query->row['points'],
 				'tax_class_id'     => $query->row['tax_class_id'],
 				'date_available'   => $query->row['date_available'],
@@ -1229,6 +1230,27 @@ class ModelCatalogProduct extends Model {
 
 	
 			// print_r("SELECT product_select_id FROM `" . DB_PREFIX . "product_select` WHERE product_id='".(int)$product_id."'".$sql);
+	}
+	public function addSearch($data = array())
+	{
+		$querys=$this->db->query("SELECT * FROM " . DB_PREFIX . "keywords WHERE keywords = '" . $this->db->escape($data['datekey']) . "'  ");
+		// print_r($query);exit;
+		$row=$querys->row;
+		if(!empty($row)){
+			if($row['keywords']==$data['datekey']){
+				$this->db->query("UPDATE " . DB_PREFIX . "keywords SET count = ".($row['count']+1)." WHERE id= '" . $row['id'] . "'  ");
+				$query=$this->db->query("SELECT * FROM " . DB_PREFIX . "keywords WHERE customer_id = '" . (int)$this->customer->getId() . "' AND keywords = '" . $this->db->escape($data['datekey']) . "'  ");
+				$rows=$query->row;
+					if(empty($rows)){
+				$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+					}
+			}else{
+			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+			}
+		}else{
+			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+		}
+		return ;
 	}
 
 }

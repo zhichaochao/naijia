@@ -26,6 +26,10 @@ class ControllerAccountOrder extends Controller {
 		$data['column_date_added'] = $this->language->get('column_date_added');
 		$data['column_action'] = $this->language->get('column_action');
 
+		$data['orderdel'] = $this->url->link('account/order/delete');
+		$data['orderrecover'] = $this->url->link('account/order/recover');
+		$data['orderconfirm'] = $this->url->link('account/order/confirm');
+
 		$data['button_view'] = $this->language->get('button_view');
 		$data['button_continue'] = $this->language->get('button_continue');
 

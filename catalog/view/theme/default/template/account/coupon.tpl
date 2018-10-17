@@ -21,7 +21,7 @@
         
         <div class="right_text clearfix">
           <div class="coupon clearfix">
-            <h1>My Coupon </h1>
+            <h1>My Coupons </h1>
             
             <div class="coupon_text clearfix">
               <ul class="coupon_ul clearfix">

@@ -220,15 +220,14 @@ class ControllerProductSearch extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 			$results = $this->model_catalog_product->getProducts($filter_data);
 
-			// $product_tota = $this->model_catalog_hotproduct->getTotalHotproducts($filter_data);
-			// $resul = $this->model_catalog_hotproduct->getHotproducts($filter_data);
-
-			// $product_total=$product_to+$product_tota;
-			// $results=array_merge_recursive($res,$resul);
-
-			// print_r($results);exit;
-
+			if($results){
+				$datekey = array(
+					'datekey'=>$search
+					);
+				$searchname = $this->model_catalog_product->addSearch($datekey);
+			}
 			foreach ($results as $result) {
+
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				} else {
@@ -262,25 +261,43 @@ class ControllerProductSearch extends Controller {
 			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
  				$producthot = $this->model_catalog_product->getProcatehot($result['product_id']);
 
+ 				if(!empty($result['special'])){
+			    	$specials=$result['special']['special'];
+			    	if ($result['special']['percent']>0) {
+			    		$percents=$result['special']['percent'];
+			    	}else{
+			    		$percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    	}
+			    	
+			    	$date_ends=$result['special']['date_end'];
+			    }else{
+			    	$specials='';
+			    	$percents='';
+			    	$date_ends='';
+			    }
+			    if (isset($res[0]['image'])){
+			    	$tmp=$this->model_tool_image->resize($res[0]['image'],380,380);
+			    }else{
+			    	$tmp=$image;
+			    }
+
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
-					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-					'hot'	  => $producthot['hot'],
-					'ends_date'	  => $result['ends_date'],
-					//'name'        => $result['name'],
+					'thumbs'       =>$tmp,
+					'hot'	  => $result['hot'],
+					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
-					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
-					//  'color_name'  => $color_name,
-                    // 'texture'     => $texture,
+					'specials'	  => $specials,
+					'percent'    => $percents,
+					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
-					'special'     => $result['special']>0? $this->currency->format($result['special'],$this->session->data['currency']) : '',
+					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
-					//'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 					'wishlist'	  =>$wishlist
 				);
@@ -298,6 +315,7 @@ class ControllerProductSearch extends Controller {
 				// 	'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'] . $url)
 				// );
 			}
+			// print_r($data['products']);exit;
 			//在 search.php 中取出历史记录
 			// if (!empty($_COOKIE['ECS']['search'])){
 			// 　　$histroy = explode(',',$_COOKIE['ECS']['search']);

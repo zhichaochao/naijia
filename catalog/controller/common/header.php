@@ -76,6 +76,7 @@ class ControllerCommonHeader extends Controller {
 		$data['account'] = $this->url->link('account/account', '', true);
 		$data['register'] = $this->url->link('account/register', '', true);
 		$data['search_url'] = $this->url->link('product/search');
+		$data['searchdel'] = $this->url->link('common/header/delete');
 
 		$data['category'] = $this->url->link('product/category');
 		$data['hotcategory'] = $this->url->link('product/hotcategory');
@@ -207,7 +208,28 @@ class ControllerCommonHeader extends Controller {
 			}
 		}
 		// print_r(	$this->request->get['path']);;exit();
-
+		// 搜索历史
+		$searchres = $this->model_extension_extension->getSearch();
+		if(!empty($searchres)){
+			foreach ($searchres as $searres) {
+			$data['searchhistory'][] = array(
+						'id'=>$searres['id'],
+						'keywords'=>$searres['keywords']
+				);
+			}
+		}
+		// 热门搜索
+		$hotsearchs = $this->model_extension_extension->getHotsearch();
+		// print_r($hotsearchs);exit;
+		if(!empty($hotsearchs)){
+			foreach ($hotsearchs as $hotsearc) {
+			$data['hotsearched'][] = array(
+						'id'=>$hotsearc['id'],
+						'keywords'=>$hotsearc['keywords']
+				);
+			}
+		}
+// 
 		$data['hothref'] = $this->url->link('product/hotcategory');
 		$data['acchref'] = $this->url->link('product/acccategory');
 		$data['language'] = $this->load->controller('common/language');
@@ -236,5 +258,19 @@ class ControllerCommonHeader extends Controller {
 		}
 // print_r($this->request->get['route']);exit();
 		return $this->load->view('common/header', $data);
+	}
+	public function delete() {
+		$id=$this->request->post['id'];
+		$json = array();
+		// $this->load->model('extension/extension');
+		// $product_info = $this->model_extension_extension->getOrder($order_id);
+		// if ($product_info) {
+			// if ($this->customer->isLogged()) {
+				$this->load->model('extension/extension');
+				$this->model_extension_extension->deleteSearch($id);
+			// }
+		// }
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
 	}
 }

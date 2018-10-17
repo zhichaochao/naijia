@@ -39,9 +39,9 @@
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
-              <?php if($product['hot']==1){?>
+               <?php if($product['specials']){?>
                   <div class="bg_hui">
-                    <p class="djs_p" title="<?php echo $product['ends_date']; ?>">SALE ENDS 
+                    <p class="djs_p" title="<?php echo $product['date_end']; ?>">SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
@@ -53,11 +53,13 @@
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
                   <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
+                     <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
+                      <li class="active"></li>
+                      <?php } ?>
+                      <?php } ?>
                   </ol>
                   <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                 <?php if($product['special']) { ?>

@@ -162,8 +162,7 @@
                        <input type="text" name="txtemail" id="txtemail" placeholder="Enter your e-mail"/>
                       </label>
                       <p>
-                        join us and get the exclusive sales, productlanunches, 
-                        wig tips & more directly deliveredto your inbox.
+                        Subscribe to get the exclusive sales, product lanuches, wig tips & latest news. 
                       </p>
                       <button type="submit" onClick="return subscribe();">SUBMIT</button>
                     <!-- </form> -->
@@ -198,46 +197,31 @@
             <input class="in_text" type="text" placeholder="Search  keyword" name="new_search" />
             <img class="in_close" src="catalog/view/theme/default/img/png/icon_24.png" alt="" />
           </label>
-          
+           <div class="con clearfix">
+            <h1>TRENDING SEARCHES</h1>
+            <ol>
+            <?php if(isset($hotsearched)){?>
+            <?php foreach($hotsearched as $key => $hotsearstory) { ?>
+              <li class="active">
+                <a  onclick="javascript:selsearch('<?php echo $hotsearstory['keywords']; ?>');"><?php echo $hotsearstory['keywords']; ?></a>
+              </li>
+              <?php } ?>
+              <?php } ?>
+            </ol>
+          </div>
           <div class="con clearfix">
             <h1>YOUR RECENT SEARCHES</h1>
             <ul>
+            <?php if(isset($searchhistory)){?>
+            <?php foreach($searchhistory as $key => $searstory) { ?>
               <li>
-                <a href="###">hair</a>
-                <i></i>
+                <a onclick="javascript:selsearch('<?php echo $searstory['keywords']; ?>');"><?php echo $searstory['keywords']; ?></a>
+                <i  onclick="javascript:del('<?php echo $searstory['id']; ?>');"></i>
               </li>
-              <li>
-                <a href="###">funmi hair</a>
-                <i></i>
-              </li>
-              <li>
-                <a href="###">hair</a>
-                <i></i>
-              </li>
-              <li>
-                <a href="###">funmi hair</a>
-                <i></i>
-              </li>
+              <?php } ?>
+              <?php } ?>
             </ul>
           </div>
-          <div class="con clearfix">
-            <h1>TRENDING SEARCHES</h1>
-            <ol>
-              <li class="active">
-                <a href="###">Hot Sales</a>
-              </li>
-              <li>
-                <a href="###">Funmi Hair</a>
-              </li>
-              <li>
-                <a href="###">Lace Frontal</a>
-              </li>
-              <li>
-                <a href="###">360 Frontal</a>
-              </li>
-            </ol>
-          </div>
-          
         </div>
       </div>
     </div>
@@ -254,11 +238,23 @@
                 }
                 location = url;
             });
-
-            // $('#header-search').keydown(function(e){
-            //     if(e.keyCode==13){
-            //         $('.search_li').click();
-            //     }
-            // })
         });
+        function selsearch(value) {
+          // alert(value);die;
+          url = '<?php echo $search_url; ?>';
+                if (value) {
+                    url += '&search=' + encodeURIComponent(value);
+                }
+                location = url;
+        }
+        function del(id){
+                     $.ajax({
+                      url: '<?php echo $searchdel; ?>',
+                      type: 'post',
+                      data: {id:id},
+                      dataType: 'json',
+                      success: function(json) {
+                      }
+                  })   
+          }
     </script>
