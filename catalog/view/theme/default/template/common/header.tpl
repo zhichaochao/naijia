@@ -203,7 +203,8 @@
             <?php if(isset($hotsearched)){?>
             <?php foreach($hotsearched as $key => $hotsearstory) { ?>
               <li class="active">
-                <a  onclick="javascript:selsearch('<?php echo $hotsearstory['keywords']; ?>');"><?php echo $hotsearstory['keywords']; ?></a>
+                <a  onclick="javascript:selsearch('<?php echo $hotsearstory; ?>');"><?php echo $hotsearstory; ?></a>
+                
               </li>
               <?php } ?>
               <?php } ?>

@@ -1924,3 +1924,16 @@
 2018-10-17 9:44:07 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
 2018-10-17 9:45:48 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
 2018-10-17 9:45:48 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-17 11:34:02 - PHP Notice:  Undefined variable: str in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\header.php on line 225
+2018-10-17 11:39:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:39:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:39:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:39:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:39:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:39:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206

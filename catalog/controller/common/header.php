@@ -218,17 +218,13 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
+		// print_r($data['searchhistory']);exit();
 		// 热门搜索
-		$hotsearchs = $this->model_extension_extension->getHotsearch();
-		// print_r($hotsearchs);exit;
-		if(!empty($hotsearchs)){
-			foreach ($hotsearchs as $hotsearc) {
-			$data['hotsearched'][] = array(
-						'id'=>$hotsearc['id'],
-						'keywords'=>$hotsearc['keywords']
-				);
-			}
-		}
+			$str=$this->config->get('config_meta_keywords');
+
+			$data['hotsearched'] =explode(",",$str);
+
+
 // 
 		$data['hothref'] = $this->url->link('product/hotcategory');
 		$data['acchref'] = $this->url->link('product/acccategory');
