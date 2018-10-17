@@ -34,6 +34,7 @@
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
+                  <?php if($product['specials']){?>
                   <div class="bg_hui">
 
                     <p class="djs_p" title="<?php echo $product['date_end']; ?>" >SALE ENDS 
@@ -43,6 +44,7 @@
                       <span class="int_second">00</span>
                     </p>
                   </div>
+                  <?php } ?>
                 </div>
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
@@ -152,7 +154,7 @@ function wishlist(product_id,e) {
             var time_start = new Date().getTime(); //设定当前时间
             var  endtime=time_start+cha*1000;
             cha-=1;
-            $(this).prop("title",cha);
+           $(this).prop("title",cha);
             time_start+=1000;
             var time_end = new Date(endtime).getTime(); //设定目标时间
             var time_distance = time_end - time_start;

@@ -51,6 +51,7 @@ class ModelCatalogHotproduct extends Model {
 			
 
 				'color'           => $query->row['color'],
+				'hot'           => $query->row['hot'],
 				'points'           => $query->row['points'],
 				'tax_class_id'     => $query->row['tax_class_id'],
 				'date_available'   => $query->row['date_available'],
