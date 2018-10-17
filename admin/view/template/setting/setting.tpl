@@ -63,6 +63,14 @@
                   <textarea name="config_meta_keyword" rows="5" placeholder="<?php echo $entry_meta_keyword; ?>" id="input-meta-keyword" class="form-control"><?php echo $config_meta_keyword; ?></textarea>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-keyword">热门搜索关键字</label>
+                <div class="col-sm-10">
+                  <textarea name="config_meta_keywords" rows="5" placeholder="<?php echo $entry_meta_keywords; ?>" id="input-meta-keywords" class="form-control"><?php echo $config_meta_keywords; ?></textarea>
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-theme"><?php echo $entry_theme; ?></label>
                 <div class="col-sm-10">

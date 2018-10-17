@@ -53,6 +53,7 @@ $_['text_autocomplete']    		   	   = '自动完成';
 $_['entry_meta_title']                 = 'Meta 标题';
 $_['entry_meta_description']           = 'Meta Tag 描述';
 $_['entry_meta_keyword']               = 'Meta Tag 关键词';
+$_['entry_meta_keywords']               = '热门搜索关键词';
 $_['entry_layout']                     = '默认布局排版';
 $_['entry_theme']                      = '模板主题';
 $_['entry_name']                       = '商店名称';
