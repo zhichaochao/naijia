@@ -879,6 +879,33 @@ class ControllerProductProduct extends Controller {
         $this->response->setOutput($this->load->view('product/review', $data));
 
     }
+    public function addreview() {
+       
+
+        $this->load->language('product/product');
+
+        $this->load->model('catalog/review');
+
+        $data['text_no_reviews'] = $this->language->get('text_no_reviews');
+
+        
+        if(isset($_SERVER['HTTP_REFERER'])){
+            $data['home'] =$_SERVER['HTTP_REFERER'];
+        }
+        $data['action'] = $this->url->link('product/product/write', true);
+
+        $data['order_id']=$this->request->get['order_id'];
+      // print_r($data['order_id']);exit;
+
+         $data['column_left'] = $this->load->controller('common/column_left');
+            $data['column_right'] = $this->load->controller('common/column_right');
+            $data['content_top'] = $this->load->controller('common/content_top');
+            $data['content_bottom'] = $this->load->controller('common/content_bottom');
+            $data['footer'] = $this->load->controller('common/footer');
+            $data['header'] = $this->load->controller('common/header');
+        $this->response->setOutput($this->load->view('product/addreview', $data));
+
+    }
     public function addthumbs() {
         // $this->load->language('account/wishlist');
 
@@ -968,87 +995,57 @@ class ControllerProductProduct extends Controller {
         $this->response->setOutput(json_encode($json));
     }
     public function write() {
-        $this->load->language('product/product');
-
-
-        if (empty($this->request->post['rating']) || $this->request->post['rating'] < 0 || $this->request->post['rating'] > 5) {
-            //$json['error'] = $this->language->get('error_rating');
-            $this->error['error'] = $this->language->get('error_rating');
-        }
-
-        if ((utf8_strlen($this->request->post['text']) < 25) || (utf8_strlen($this->request->post['text']) > 1000)) {
-            //$json['error'] = $this->language->get('error_text');
-            $this->error['error'] = $this->language->get('error_text');
-        }
-
-        if ((utf8_strlen($this->request->post['name']) < 3) || (utf8_strlen($this->request->post['name']) > 25)) {
-            //$json['error'] = $this->language->get('error_name');
-            $this->error['error'] = $this->language->get('error_name');
-        }
-
+        // $json = array();
+        // $path='';
         //图片上传
         if($_FILES){
-            foreach($_FILES['file']['name'] as $key=>$row){
-                if($_FILES['file']['error'][$key]==4){
+            foreach($_FILES['images']['name'] as $key=>$row){
+                if($_FILES['images']['error'][$key]==4){
                     continue;
                 }
-                if($_FILES['file']['error'][$key]!=0){
+                if($_FILES['images']['error'][$key]!=0){
                     $this->error['error'] = 'Picture format wrong!';
-                }else if(!($_FILES['file']['type'][$key]=='image/gif' || $_FILES['file']['type'][$key]=='image/jpeg' || $_FILES['file']['type'][$key]=='image/pjpeg' || $_FILES['file']['type'][$key]=='image/png')){
+                }else if(!($_FILES['images']['type'][$key]=='image/gif' || $_FILES['images']['type'][$key]=='image/jpeg' || $_FILES['images']['type'][$key]=='image/pjpeg' || $_FILES['images']['type'][$key]=='image/png')){
                     $this->error['error'] = 'Picture format wrong!';
-                }else if($_FILES['file']['size'][$key] > 4194304){   //限制图片大小为4M
-                    $this->error['error'] = 'Picture size can not exceed 4M!';
+                }else if($_FILES['images']['size'][$key] > 4194304){   //限制图片大小为4M
+                    $this->error['error'] = 'Picture size can not exceed 5M!';
                 }
             }
         }
-        //图片上传,end
 
-        // Captcha
-        if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('review', (array)$this->config->get('config_captcha_page'))) {
-            $captcha = $this->load->controller('extension/captcha/' . $this->config->get('config_captcha') . '/validate');
-
-            if ($captcha) {
-                //$json['error'] = $captcha;
-                $this->error['error'] = $captcha;
-            }
-        }
-
-        //if (!isset($json['error'])) {
         if (empty($this->error['error'])) {
-
             //没错后,将图片进行迁移,并记录路径入库
             if($_FILES){
                 $path = array();
-                foreach($_FILES['file']['name'] as $key=>$row){
-                    if($_FILES['file']['error'][$key]==4){
+                foreach($_FILES['images']['name'] as $key=>$row){
+                    if($_FILES['images']['error'][$key]==4){
                         continue;
                     }
-
-                    if($_FILES['file']['error'][$key]==0){
-                        if(($_FILES['file']['type'][$key]=='image/gif' || $_FILES['file']['type'][$key]=='image/jpeg' || $_FILES['file']['type'][$key]=='image/pjpeg' || $_FILES['file']['type'][$key]=='image/png')){
+                    if($_FILES['images']['error'][$key]==0){
+                        if(($_FILES['images']['type'][$key]=='image/gif' || $_FILES['images']['type'][$key]=='image/jpeg' || $_FILES['images']['type'][$key]=='image/pjpeg' || $_FILES['images']['type'][$key]=='image/png')){
                             $extend = pathinfo($row); //获取文件名数组
                             $extend = strtolower($extend["extension"]);                //获取文件的扩展名
                             $filename = time().rand(100,999).".".$extend;              //文件的新名称
-                            $directory = DIR_IMAGE . 'catalog/thimg/review';
-                            $path[] = 'image/catalog/thimg/review/' . $filename;
-                            move_uploaded_file($_FILES['file']['tmp_name'][$key],$directory . '/' . $filename);
+                            $directory = DIR_IMAGE . 'review';
+                            $path[] = 'image/review/' . $filename;
+                            move_uploaded_file($_FILES['images']['tmp_name'][$key],$directory . '/' . $filename);
                         }
                     }
                 }
             }
-
             $this->load->model('catalog/review');
-            $this->model_catalog_review->addReview($this->request->get['product_id'], $this->request->post ,$path);
+             $orderproduct = $this->model_catalog_review->getProductorder($this->request->post['order_id']);
+             foreach ($orderproduct as $key=> $orderprod) {
+                $product_id=$orderprod['product_id'];
 
-            //$json['success'] = $this->language->get('text_success');
-            $this->error['success'] = $this->language->get('text_success');
+                $this->load->model('account/customer');
+                $customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+                $firstname = $customer_info['firstname'];
+                $this->model_catalog_review->addReview($product_id,$this->request->post ,$path,$firstname);
+
+             }
         }
-
-        return $this->error;
-        //}
-
-        //$this->response->addHeader('Content-Type: application/json');
-        //$this->response->setOutput(json_encode($json));
+        $this->response->redirect($this->url->link('account/order', '', true));
     }
 
     public function getRecurringDescription() {

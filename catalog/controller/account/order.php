@@ -274,7 +274,7 @@ class ControllerAccountOrder extends Controller {
 				$data['order_status'] = '';
 			}
 
-			$data['compltedorder']=$_SERVER['REQUEST_URI'];
+			$data['compltedorder']=$this->url->link('product/product/addreview', 'order_id=' . $order_id, true);
 // print_r($data['order_status']);exit;
 			$data['order_id'] = $this->request->get['order_id'];
 			$data['date_added'] = date($this->language->get('date_format_short'), strtotime($order_info['date_added']));

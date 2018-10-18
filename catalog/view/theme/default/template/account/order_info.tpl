@@ -268,7 +268,8 @@
             <li>Delivered <span><?php echo $delivered_date; ?></span></li>
             <li>Completed <span><?php echo $date_modified; ?></span></li>
           </ul>
-          <button class="modal_btn">Review</button>
+          <a class="modal_btn" href="<?php echo $compltedorder; ?>">REVIEW</a>
+          <!-- <button class="modal_btn" >Review</button> -->
         </div>
 
         <?php }elseif($order_status=='Pending-unfilled'){?>
@@ -393,7 +394,7 @@
 
             <?php if($order_status=='Completed' ){?>
               <button class="md_btn w_50">CONTACT US</button>
-              <a class="btn_a1 btn_a" href="###">REVIEW</a>
+              <a class="btn_a1 btn_a" href="<?php echo $compltedorder; ?>">REVIEW</a>
               <p class="ms_p pd_no">Please contact us if you have any problem of your order.</p>
             <?php }?>
 

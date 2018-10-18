@@ -728,6 +728,7 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
+                alert("成功加入购物车");
               $('#cart_count').html(json.total);
                 $(".cart_li").click();
 

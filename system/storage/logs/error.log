@@ -1937,3 +1937,723 @@
 2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
 2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
 2018-10-17 11:45:16 - PHP Warning:  Illegal string offset 'keywords' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 206
+2018-10-18 1:21:02 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 1:25:09 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 1:25:09 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 1:38:05 - PHP Unknown:  Object of class ControllerAccountLogin could not be converted to string in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 56
+2018-10-18 1:38:05 - PHP Notice:  Undefined variable:  in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 56
+2018-10-18 1:38:05 - PHP Notice:  Trying to get property of non-object in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 56
+2018-10-18 1:38:05 - PHP Notice:  Trying to get property of non-object in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 56
+2018-10-18 2:48:12 - PHP Notice:  Undefined variable: success in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\change_from.tpl on line 89
+2018-10-18 2:49:06 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 2:49:06 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 2:49:34 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 2:49:36 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 2:49:36 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:45 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:46 - PHP Notice:  Undefined variable: result in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_form.tpl on line 69
+2018-10-18 2:49:49 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 2:49:49 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 2:55:53 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 2:56:02 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 2:56:02 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 2:56:02 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 2:56:02 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: text_select in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 190
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: zone_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 196
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: text_none in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 203
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: address_cost in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 230
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: message_submit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 243
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: wishlist_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 263
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: cart_remove in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 293
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: cart_total_href in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 310
+2018-10-18 2:56:54 - PHP Notice:  Undefined variable: cart_editnum in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\cart.tpl on line 345
+2018-10-18 6:13:50 - PHP Notice:  Undefined index: file in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1016
+2018-10-18 6:13:50 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1016
+2018-10-18 6:13:50 - PHP Notice:  Undefined index: file in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:13:50 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:13:50 - PHP Notice:  Undefined index: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1066
+2018-10-18 6:13:50 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:13:50 - PHP Notice:  Undefined index: rating in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:14:20 - PHP Notice:  Undefined index: file in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:14:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:14:20 - PHP Notice:  Undefined index: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1066
+2018-10-18 6:14:20 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:14:20 - PHP Notice:  Undefined index: rating in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:14:22 - PHP Notice:  Undefined index: file in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:14:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:14:22 - PHP Notice:  Undefined index: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1066
+2018-10-18 6:14:22 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:14:22 - PHP Notice:  Undefined index: rating in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:14:26 - PHP Notice:  Undefined index: file in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:14:26 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1047
+2018-10-18 6:14:26 - PHP Notice:  Undefined index: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1066
+2018-10-18 6:14:26 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:14:26 - PHP Notice:  Undefined index: rating in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473783.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php6AE9.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473783.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473100.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php6AFA.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473100.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473982.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php6AFB.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473982.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473531.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php6AFC.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473531.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473566.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php6AFD.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843473566.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:17:53 - PHP Notice:  Undefined index: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1066
+2018-10-18 6:17:53 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:17:53 - PHP Notice:  Undefined index: rating in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 4
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554754.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpA8C9.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554754.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554838.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpA8CA.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554838.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554811.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpA8CB.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554811.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554448.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpA8DB.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554448.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554837.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:19:14 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpA8DC.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843554837.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621218.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpAE88.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621218.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621125.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpAE89.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621125.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621424.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpAE8A.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621424.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621295.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpAE8B.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621295.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621848.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:21 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpAE9C.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843621848.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624734.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpB8E9.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624734.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624649.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpB8EA.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624649.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624815.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpB8EB.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624815.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624657.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpB8EC.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624657.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624353.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:24 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpB8FD.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843624353.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625625.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpBDBE.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625625.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625288.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpBDBF.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625288.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625125.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpBDC0.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625125.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625209.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpBDC1.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625209.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625807.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:25 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpBDC2.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843625807.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627701.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpC3CC.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627701.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627792.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpC3CD.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627792.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627644.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpC3CE.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627644.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627143.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpC3CF.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627143.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627329.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:27 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpC3D0.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843627329.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642428.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpFE22.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642428.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642400.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpFE23.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642400.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642593.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpFE24.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642593.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642981.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpFE25.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642981.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642670.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:20:42 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\phpFE26.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843642670.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1059
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721832.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php3241.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721832.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721448.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php3242.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721448.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721281.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php3243.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721281.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721135.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php3254.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721135.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721581.jpg): failed to open stream: No such file or directory in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:22:01 - PHP Warning:  move_uploaded_file(): Unable to move 'C:\Users\Administrator\AppData\Local\Temp\php3255.tmp' to 'D:/phpStudy/PHPTutorial/WWW/hotnajia/image/review/1539843721581.jpg' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1061
+2018-10-18 6:30:04 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1064
+2018-10-18 6:30:06 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1064
+2018-10-18 6:30:18 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1064
+2018-10-18 7:48:59 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1069
+2018-10-18 8:31:26 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\addreview.tpl on line 187
+2018-10-18 8:32:37 - PHP Notice:  Undefined variable: product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\addreview.tpl on line 187
+2018-10-18 8:40:32 - PHP Notice:  Undefined variable: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1045
+2018-10-18 8:40:32 - PHP Notice:  Undefined variable: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1045
+2018-10-18 8:41:24 - PHP Notice:  Undefined variable: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1045
+2018-10-18 8:41:24 - PHP Notice:  Undefined variable: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1045
+2018-10-18 8:53:23 - PHP Notice:  Undefined index: error in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1018
+2018-10-18 8:57:36 - PHP Notice:  Undefined index: error in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1015
+2018-10-18 9:04:45 - PHP Notice:  Undefined index: error in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1015
+2018-10-18 9:48:46 - PHP Notice:  Undefined variable: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1045
+2018-10-18 9:48:46 - PHP Notice:  Undefined variable: path in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1045
+2018-10-18 10:07:53 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:07:53 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:07:53 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:07:53 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:08:00 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:08:00 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:08:00 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:08:00 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:08:51 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 10:08:51 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-18 10:16:25 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:16:25 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:16:25 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:16:25 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:16:30 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:16:30 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:16:30 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:16:30 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:20:40 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:40 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:20:40 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:40 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:20:41 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:41 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:20:41 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:41 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:20:42 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:42 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:20:42 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:42 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:20:43 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:43 - PHP Notice:  Undefined index: hot in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 149
+2018-10-18 10:20:43 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\wishlist.php on line 147
+2018-10-18 10:20:43 - PHP Notice:  Undefined variable: pagination in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\wishlist.tpl on line 61
+2018-10-18 10:25:23 - PHP Warning:  Missing argument 2 for ModelToolImage::resize(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 3
+2018-10-18 10:25:23 - PHP Warning:  Missing argument 3 for ModelToolImage::resize(), called in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 178 and defined in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 3
+2018-10-18 10:25:23 - PHP Notice:  Undefined variable: width in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 11
+2018-10-18 10:25:23 - PHP Notice:  Undefined variable: height in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 11
+2018-10-18 10:25:23 - PHP Notice:  Undefined variable: width in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 32
+2018-10-18 10:25:23 - PHP Notice:  Undefined variable: width in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 34
+2018-10-18 10:25:23 - PHP Notice:  Undefined variable: height in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\tool\image.php on line 34
+2018-10-18 10:25:23 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\image.php on line 105
+2018-10-18 10:25:23 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\image.php on line 113
+2018-10-18 10:25:23 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\image.php on line 116
+2018-10-18 10:25:23 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\image.php on line 118
+2018-10-18 10:27:35 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:27:35 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-18 10:27:46 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:27:46 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-18 10:28:50 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:28:50 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-18 10:28:52 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:28:52 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-18 10:28:54 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:28:54 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-18 10:29:16 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:29:16 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
+2018-10-18 10:29:46 - PHP Warning:  Illegal string offset 'price' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\acccategory.php on line 244
+2018-10-18 10:29:46 - PHP Notice:  Undefined variable: results in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\accecategory.tpl on line 154
