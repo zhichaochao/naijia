@@ -16,6 +16,16 @@
 
           
           <?php if($payment_code == 'bank_transfer' ) { ?>
+          <?php if(empty($bank_receipt)){?>
+          <p class="p2">
+            Thanks for your order .<br />
+            · Payment has been completed<br />
+            · It will ready to ship in 1- 2 days.<br />
+            Emails will update to you if your <br />
+            package situation changes000000.
+          </p>
+
+          <?php }else{ ?>
           <p class="p2">
             Thanks for your order .<br />
             · Payment has been completed<br />
@@ -23,6 +33,13 @@
             Emails will update to you if your <br />
             package situation changes.
           </p>
+
+          <?php }?>
+
+
+
+          
+
           <!-- <span>Order date:2018-09-07</span> -->
        <!--  </div> -->
 
@@ -49,9 +66,7 @@
           <!-- <a class="pay_a" href="###">Continue To Pay</a> -->
 
           <span>Order date:<?php echo $date_added; ?></span>
-         <!--  <?php if($order_status !== 'Pending' ) { ?>
-          <a class="btn_a" href="###">Contact us</a>
-           <?php } ?> -->
+
         </div>
         <?php }elseif($order_status=='Completed'){?>
         <div class="left clearfix">
@@ -62,9 +77,10 @@
             Delivered:<?php echo $delivered_date; ?><br />
             Complete:<?php echo $date_modified; ?>
           </p>
-          <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a>
+          <!-- <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
+          <a class="pay_a huang review_tc" href="javascript:;">REVIEW</a>
           <span>Order date:<?php echo $date_added; ?></span>
-          <a class="btn_a" href="###">Contact us</a>
+          <a class="btn_a contact_tc" href="###">Contact us</a>
         </div>
           <?php }elseif($order_status=='Pending-unfilled'){?>
           <div class="left clearfix">
@@ -77,7 +93,7 @@
             package situation changes.
           </p>
           <span>Order date:<?php echo $date_added; ?></span>
-          <a class="btn_a" href="###">Contact us</a>
+          <a class="btn_a contact_tc" href="###">Contact us</a>
         </div>
 <?php }elseif($order_status=='Delivered'){?>
 
@@ -89,7 +105,7 @@
           </p>
           <a class="pay_a lv" onclick="javascript:confirm_order('<?php echo $order_id; ?>');">Confirm Receipt</a>
           <span>Order date:<?php echo $date_added; ?></span>
-          <a class="btn_a" href="###">Contact us</a>
+          <a class="btn_a contact_tc" href="###">Contact us</a>
         </div>
 
 <?php }elseif($order_status=='lnvalid'){?>
@@ -128,6 +144,7 @@
               <span>Total</span>
               <em><?php echo $total; ?></em>
             </p>
+
           </div>
         </div>
       </div>
@@ -268,7 +285,8 @@
             <li>Delivered <span><?php echo $delivered_date; ?></span></li>
             <li>Completed <span><?php echo $date_modified; ?></span></li>
           </ul>
-          <a class="modal_btn" href="<?php echo $compltedorder; ?>">REVIEW</a>
+          <!-- <a class="modal_btn" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
+          <button class="modal_btn review_tc">Review</button>
           <!-- <button class="modal_btn" >Review</button> -->
         </div>
 
@@ -388,25 +406,27 @@
 
             <?php if($order_status=='Pending' || $order_status=='lnvalid'){?>
               <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
-              <a class="btn_a hong" href="###">CONTINUE TO PAY</a>
+              <a class="btn_a hong" href="<?php echo $repay;?>">CONTINUE TO PAY</a>
             <?php }?>
             <?php }?>
 
             <?php if($order_status=='Completed' ){?>
-              <button class="md_btn w_50">CONTACT US</button>
-              <a class="btn_a1 btn_a" href="<?php echo $compltedorder; ?>">REVIEW</a>
+            <button class="md_btn w_50 contact_tc">CONTACT US</button>
+              <!-- <button class="md_btn w_50">CONTACT US</button> -->
+              <a class="btn_a1 btn_a review_tc" href="###">REVIEW</a>
+              <!-- <a class="btn_a1 btn_a" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
               <p class="ms_p pd_no">Please contact us if you have any problem of your order.</p>
             <?php }?>
 
              <?php if($order_status=='Delivered'){?>
-              <button class="md_btn w_50">CONTACT US</button>
+              <button class="md_btn w_50 contact_tc">CONTACT US</button>
               <a class="btn_a1 btn_a"  onclick="javascript:confirm_order('<?php echo $order_id; ?>');">CONFIRM RECEIPT</a>
               <p class="ms_p pd_no">Your package is on shipping, contact us if you have any problem.</p>
             <?php }?>
 
 
             <?php if($order_status=='Pending-unfilled'){?>
-              <a class="btn_a huang" href="###">CONTACT US</a>
+              <a class="btn_a huang contact_tc" href="###">CONTACT US</a>
               <p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
             <?php }?>
 
@@ -418,6 +438,48 @@
       </div>
       
     </div>
+    <!--评价弹窗-->
+    <div class="review_modal clearfix">
+      <div class="text clearfix">
+        <img src="catalog/view/theme/default/img/pl_modal.jpg"/>
+        <p>Thanks,would you like to sent us a review?</p>
+        
+        <div class="btn">
+          <a class="qd_btn" href="<?php echo $compltedorder; ?>">Yes, why not?</a>
+          <button class="qx_btn">Yes, But later.</button>
+        </div>
+      </div>
+    </div>
+    <!--联系我们弹窗-->
+    <div class="contact_modal clearfix">
+      <div class="text clearfix">
+        <ol class="clearfix">
+          <li>
+            <a href="###">
+              <span class="img"></span>
+              <span class="span_p">E-mail</span>
+            </a>
+          </li>
+          <li>
+            <a href="###">
+              <span class="img"></span>
+              <span class="span_p">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="###">
+              <span class="img"></span>
+              <span class="span_p">Whatsapp</span>
+            </a>
+          </li>
+        </ol>
+        <p>
+          Your order is confirmed and we're getting it ready.
+          Send us a message if you have any question, <br />
+          we will reply you within 24 hours.
+        </p>
+      </div>
+    </div>
 
 <?php echo $footer; ?>
 <script>
@@ -428,19 +490,19 @@ function bitian() {
   $(function(){
     
     //下拉total_p
-      $(".total_p").click(function(){
-        if($(this).hasClass("active")){
-          $(this).removeClass("active");
-          $(this).siblings(".slide_p").stop().slideUp();
-          $(this).siblings("hr").hide();
-        }else{
-          $(this).addClass("active");
-          $(this).siblings(".slide_p").stop().slideDown();
-          $(this).siblings("hr").show();
-        }
+      // $(".total_p").click(function(){
+      //   if($(this).hasClass("active")){
+      //     $(this).removeClass("active");
+      //     $(this).siblings(".slide_p").stop().slideUp();
+      //     $(this).siblings("hr").hide();
+      //   }else{
+      //     $(this).addClass("active");
+      //     $(this).siblings(".slide_p").stop().slideDown();
+      //     $(this).siblings("hr").show();
+      //   }
         
         
-      })
+      // })
     
   })
   //调取上传框
@@ -512,24 +574,24 @@ if(confirm('Are you sure?')){
       
     }
 }
-  $(function(){
+  // $(function(){
     
-    //下拉total_p
-      $(".total_p").click(function(){
-        if($(this).hasClass("active")){
-          $(this).removeClass("active");
-          $(this).siblings(".slide_p").stop().slideUp();
-          $(this).siblings("hr").hide();
-        }else{
-          $(this).addClass("active");
-          $(this).siblings(".slide_p").stop().slideDown();
-          $(this).siblings("hr").show();
-        }
+  //   //下拉total_p
+  //     $(".total_p").click(function(){
+  //       if($(this).hasClass("active")){
+  //         $(this).removeClass("active");
+  //         $(this).siblings(".slide_p").stop().slideUp();
+  //         $(this).siblings("hr").hide();
+  //       }else{
+  //         $(this).addClass("active");
+  //         $(this).siblings(".slide_p").stop().slideDown();
+  //         $(this).siblings("hr").show();
+  //       }
         
         
-      })
+  //     })
     
-  })
+  // })
   
   
   //倒计时
@@ -572,4 +634,54 @@ if(confirm('Are you sure?')){
         timer = setTimeout("show_time()", 1000);
     }
     show_time();
+</script>
+<script>
+  $(function(){
+    //REVIEW
+    $(".review_tc").click(function(){
+      $(".review_modal").fadeIn();
+      $("body").css("overflow","hidden");
+    })
+    $(".review_modal .qx_btn").click(function(){
+      $(".review_modal").fadeOut();
+      $("body").css("overflow","");
+    })
+    $(".review_modal").click(function(e){
+      var close = $('.review_modal .text'); 
+        if(!close.is(e.target) && close.has(e.target).length === 0){
+          $(".review_modal").fadeOut();
+        $("body").css("overflow","");
+      }
+    })
+    
+    //contact
+    $(".contact_tc").click(function(){
+      $(".contact_modal").fadeIn();
+      $("body").css("overflow","hidden");
+    })
+    $(".contact_modal").click(function(e){
+      var close = $('.contact_modal .text'); 
+        if(!close.is(e.target) && close.has(e.target).length === 0){
+          $(".contact_modal").fadeOut();
+        $("body").css("overflow","");
+      }
+    })
+    
+    
+    //下拉total_p
+  $(".total_p").click(function(){
+        if($(this).hasClass("active")){
+          $(this).removeClass("active");
+          $(this).siblings(".slide_p").stop().slideUp();
+          $(this).siblings("hr").hide();
+        }else{
+          $(this).addClass("active");
+          $(this).siblings(".slide_p").stop().slideDown();
+          $(this).siblings("hr").show();
+        }
+        
+        
+      })
+    
+  })
 </script>

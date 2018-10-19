@@ -32,10 +32,6 @@
                     <?php }else{ ?>
                      <span class="price"><?php echo $product['price']; ?></span>
                     <?php } ?>
-                 
-                  <!-- <?php if($product['hot']==2) { ?>
-                  <button class="red_btn"><?php echo $product['percent']; ?>%</button>
-                  <?php } ?> -->
                   <?php if(!empty($product['special'])) { ?>
                   <button class="red_btn">-<?php echo $product['percent']; ?>%</button> <?php } ?>
                 </div>
@@ -62,21 +58,6 @@
             </li>
         <?php }?>
           </ul>
-          <!-- <div class="fy_div"><?php echo  $pagination?>
-            <ul>
-
-              <li><a href="###">< Last</a></li>
-              <li><a href="###">1</a></li>
-              <li><a href="###">2</a></li>
-              <li><a href="###">3</a></li>
-              <li><a href="###">4</a></li>
-              <li class="active"><a href="###">5</a></li>
-              <li><a href="###">6</a></li>
-              <li><a href="###">7</a></li>
-              <li><a href="###">8</a></li>
-              <li><a href="###">Next ></a></li>
-            </ul>
-          </div> -->
         </div>
       </div>
     </div>

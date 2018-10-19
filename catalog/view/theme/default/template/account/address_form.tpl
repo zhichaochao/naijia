@@ -66,11 +66,11 @@
                 <select name="country_id" id="input-shipping-country" class="form-control">
                   <option value=""><?php echo $text_select; ?></option>
                   <?php foreach ($countries as $country) { ?>
-                  <?php if ($country['country_id'] == $result['country_id']) { ?>
+                  <!-- <?php if ($country['country_id'] == $country_id) { ?>
                   <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
-                  <?php } else { ?>
+                  <?php } else { ?> -->
                   <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                  <?php } ?>
+                  <!-- <?php } ?> -->
                   <?php } ?>
                 </select>
                 <?php if ($error_country) { ?>

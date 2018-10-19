@@ -85,25 +85,10 @@
           <?php } ?>
           </ul>
           
-        <!-- <div class="fy_div">
-        <div class="left"><?php echo $pagination; ?></div>
-          <div class="right">
-            <p><?php echo $results; ?></p>
-          </div>
-        </div> -->
+
           <div class="fy_div">
             <ul>
             <?php echo $pagination; ?>
-             <!--  <li><a href="###">< Last</a></li>
-              <li><a href="###">1</a></li>
-              <li><a href="###">2</a></li>
-              <li><a href="###">3</a></li>
-              <li><a href="###">4</a></li>
-              <li class="active"><a href="###">5</a></li>
-              <li><a href="###">6</a></li>
-              <li><a href="###">7</a></li>
-              <li><a href="###">8</a></li>
-              <li><a href="###">Next ></a></li> -->
             </ul>
           </div>
         </div>

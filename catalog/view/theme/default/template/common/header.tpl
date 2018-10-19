@@ -16,7 +16,7 @@
     <!--头部-->
     <div class="big_nav">
       <div class="gg_nav">
-        <p><i></i>BACK TO SCHOOL SALE is rocking, used code "BACKTOSCHOOL" <span class="hs">save 50% off！</span></p>
+        <p><i></i><?php echo $slogan?></p>
       </div>
       <!--pc导航-->
       <div class="nav clearfix">

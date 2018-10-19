@@ -533,7 +533,7 @@ class ControllerProductProduct extends Controller {
            // print_r($this->request->get['hot']);exit;
             
                 // print_r($filter_data);exit;
-            $recommend_products = $this->model_catalog_product->getRecommendProducts(8);
+            $recommend_products = $this->model_catalog_product->getRecommendProducts($this->request->get['product_id'],8);
             // print_r($recommend_products);exit;
             foreach ($recommend_products as $result) {
                 // print_r($result);exit;
@@ -770,13 +770,17 @@ class ControllerProductProduct extends Controller {
 
         $data['text_no_reviews'] = $this->language->get('text_no_reviews');
 
-        $page = isset($this->request->get['page']) ? $this->request->get['page'] : 1;   //当前页页码
-
-        //$limit = 5;
-        // $limit = $this->request->get['pagesize'];   //一页显示多少条
+        if (isset($this->request->get['page'])) {
+                $page = $this->request->get['page'];
+            } else {
+                $page = 1;
+            }
+            if (isset($this->request->get['limit'])) {
+            $limit = (int)$this->request->get['limit'];
+            } else {
+                $limit = 10;
+            }
         $data['reviews'] = array();
-        //$review_total = $this->model_catalog_review->getTotalReviewsByProductId($this->request->get['product_id']);
-        //$results = $this->model_catalog_review->getReviewsByProductId($this->request->get['product_id'], ($page - 1) * $limit, $limit);
 
         $product_id = $this->request->get['product_id'];   //产品id
         $this->load->model('catalog/product');
@@ -786,16 +790,15 @@ class ControllerProductProduct extends Controller {
         if(!empty($product_info)){
 
             $this->load->model('catalog/review');
-            // $productIdArray = $this->model_catalog_review->getTotalReviewsByRelatePro($product_info['relation_product']);
-            // $productIdString = '';
-            // foreach($productIdArray as $k => $v){
-            //     $productIdString .= $v['product_id'].',';
-            // }
-            // $productIdString = mb_substr($productIdString,0,-1,'utf-8');
+
+            $filter_data = array(
+                'start'              => ($page - 1) * $limit,
+                'limit'              => $limit
+            );
 
             $review_total = $this->model_catalog_review->getTotalReviewsByProductId($product_info['product_id']);
-            $results = $this->model_catalog_review->getReviewsByProductId($product_info['product_id']);
-// print_r($results);exit;
+            $results = $this->model_catalog_review->getReviewsByProductId($product_info['product_id'],$filter_data);
+// 
             $this->load->model('tool/image');
             foreach ($results as $result) {
                 $review_img = $this->model_catalog_review->getReviewImg($result['review_id']);
@@ -812,7 +815,7 @@ class ControllerProductProduct extends Controller {
                     'review_id'     => $result['review_id'],
                     'author'        => substr($result['author'],0,-2).'***',
                     'text'          => nl2br($result['text']),
-                    'thumbs'          =>$result['thumbs'],
+                    // 'thumbs'          =>$result['thumbs'],
                     'rating'        => (int)$result['rating'],
                     //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
                     'date_added'    => date('m/d/Y', strtotime($result['date_added'])),
@@ -827,10 +830,7 @@ class ControllerProductProduct extends Controller {
         if(isset($_SERVER['HTTP_REFERER'])){
             $data['home'] =$_SERVER['HTTP_REFERER'];
         }
-        // print_r($data['products']);exit;
-        // else{
-        //     $data['home'] =$this->url->link('common/home');
-        // }
+
         // dianzan
         $data['addthumbs'] = $this->url->link('product/product/addthumbs');
         $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
@@ -840,47 +840,22 @@ class ControllerProductProduct extends Controller {
         $pagination = new Pagination();
         $pagination->total = $review_total;
         $pagination->page = $page;
-        $pagination->limit = 1;
+        $pagination->limit = $limit;
         $pagination->url = $this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'] . '&page={page}');
 
         $data['pagination'] = $pagination->render();
         if (isset($this->request->get['limit'])) {
                 $url .= '&limit=' . $this->request->get['limit'];
             }
-        // $pagination = new Pagination();
-        //     $pagination->total = $review_total;
-        //     $pagination->page = $page;
-        //     $pagination->limit = 1;
-        //     $pagination->url = $this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'] . '&page={page}');
-
-        //     $data['pagination'] = $pagination->render();
-        //     $data['product_total']=$review_total;
-
-        //     // $data['results'] = sprintf($this->language->get('text_pagination'), ($product_total) ? (($page - 1) * $limit) + 1 : 0, ((($page - 1) * $limit) > ($product_total - $limit)) ? $product_total : ((($page - 1) * $limit) + $limit), $product_total, ceil($product_total / $limit));
-
-        //     // http://googlewebmastercentral.blogspot.com/2011/09/pagination-with-relnext-and-relprev.html
-        //     if ($page == 1) {
-        //         $this->document->addLink($this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'], true), 'canonical');
-        //     } elseif ($page == 2) {
-        //         $this->document->addLink($this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'], true), 'prev');
-        //     } else {
-        //         $this->document->addLink($this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'] . '&page='. ($page - 1), true), 'prev');
-        //     }
-// print_r($data['pagination']);exit;
-        // $data['results'] = sprintf($this->language->get('text_pagination'), ($review_total) ? (($page - 1) * 5) + 1 : 0, ((($page - 1) * 5) > ($review_total - 5)) ? $review_total : ((($page - 1) * 5) + 5), $review_total, ceil($review_total / 5));
-        // if(!empty($data['reviews'])){
-        //     $info = array('code'=>1, 'message'=>'Comment Information', 'data'=>$data['reviews'], 'total'=>$review_total);
-        // }else{
-        //     $info = array('code'=>0, 'message'=>'No Comment Information');
-        // }
-        // $reviewsinfo = json_encode($info);
-        // echo $reviewsinfo;
+        $this->document->setTitle($this->language->get('text_errors'));
          $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');
             $data['content_top'] = $this->load->controller('common/content_top');
             $data['content_bottom'] = $this->load->controller('common/content_bottom');
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
+            // $data['heading_title'] = $this->language->get('text_errors');
+
         $this->response->setOutput($this->load->view('product/review', $data));
 
     }
@@ -912,7 +887,6 @@ class ControllerProductProduct extends Controller {
 
     }
     public function addthumbs() {
-        // $this->load->language('account/wishlist');
 
         $json = array();
 
@@ -937,18 +911,8 @@ class ControllerProductProduct extends Controller {
 
                 $json['total'] =  $this->model_catalog_review->getTotalThumbs();
             } else {
-                // meiyou 
-                // if (!isset($this->session->data['wishlist'])) {
-                //     $this->session->data['wishlist'] = array();
-                // }
-
-                // $this->session->data['wishlist'][] = $this->request->post['product_id'];
-
-                // $this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
 
                 $json['error'] =  $this->url->link('account/login', '', true);
-
-                // $json['error'] = (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
             }
         }
 
@@ -956,7 +920,6 @@ class ControllerProductProduct extends Controller {
         $this->response->setOutput(json_encode($json));
     }
     public function deletethumbs() {
-        // $this->load->language('account/wishlist');
 
         $json = array();
 
@@ -981,17 +944,7 @@ class ControllerProductProduct extends Controller {
 
                 $json['total'] =  $this->model_catalog_review->getTotalThumbs();
             } else {
-                // if (!isset($this->session->data['wishlist'])) {
-                //     $this->session->data['wishlist'] = array();
-                // }
-
-                // $this->session->data['wishlist'][] = $this->request->post['product_id'];
-
-                // $this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
-
-                // $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
-
-                // $json['total'] = (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
+               
                 $json['error'] =  $this->url->link('account/login', '', true);
             }
         }
@@ -1032,7 +985,7 @@ class ControllerProductProduct extends Controller {
                             $extend = strtolower($extend["extension"]);                //获取文件的扩展名
                             $filename = time().rand(100,999).".".$extend;              //文件的新名称
                             $directory = DIR_IMAGE . 'review';
-                            $path[] = 'image/review/' . $filename;
+                            $path[] = 'review/' . $filename;
                             move_uploaded_file($_FILES['images']['tmp_name'][$key],$directory . '/' . $filename);
                         }
                     }

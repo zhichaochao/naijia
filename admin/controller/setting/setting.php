@@ -72,6 +72,8 @@ class ControllerSettingSetting extends Controller {
 		$data['entry_meta_description'] = $this->language->get('entry_meta_description');
 		$data['entry_meta_keyword'] = $this->language->get('entry_meta_keyword');
 		$data['entry_meta_keywords'] = $this->language->get('entry_meta_keywords');
+		$data['entry_meta_slogan'] = $this->language->get('entry_meta_slogan');
+		$data['entry_meta_slogans'] = $this->language->get('entry_meta_slogans');
 		$data['entry_theme'] = $this->language->get('entry_theme');
 		$data['entry_layout'] = $this->language->get('entry_layout');
 		$data['entry_country'] = $this->language->get('entry_country');
@@ -411,6 +413,18 @@ class ControllerSettingSetting extends Controller {
 			$data['config_meta_keywords'] = $this->request->post['config_meta_keywords'];
 		} else {
 			$data['config_meta_keywords'] = $this->config->get('config_meta_keywords');
+		}
+
+		if (isset($this->request->post['config_meta_slogan'])) {
+			$data['config_meta_slogan'] = $this->request->post['config_meta_slogan'];
+		} else {
+			$data['config_meta_slogan'] = $this->config->get('config_meta_slogan');
+		}
+
+		if (isset($this->request->post['config_meta_slogans'])) {
+			$data['config_meta_slogans'] = $this->request->post['config_meta_slogans'];
+		} else {
+			$data['config_meta_slogans'] = $this->config->get('config_meta_slogans');
 		}
 
 		if (isset($this->request->post['config_theme'])) {

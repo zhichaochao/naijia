@@ -72,6 +72,20 @@
               </div>
 
               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-slogan">头部标语</label>
+                <div class="col-sm-10">
+                  <textarea name="config_meta_slogan" rows="5" placeholder="<?php echo $entry_meta_slogan; ?>" id="input-meta-slogan" class="form-control"><?php echo $config_meta_slogan; ?></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-slogans">Lace Wigs标语</label>
+                <div class="col-sm-10">
+                  <textarea name="config_meta_slogans" rows="5" placeholder="<?php echo $entry_meta_slogans; ?>" id="input-meta-slogans" class="form-control"><?php echo $config_meta_slogans; ?></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-theme"><?php echo $entry_theme; ?></label>
                 <div class="col-sm-10">
                   <select name="config_theme" id="input-theme" class="form-control">

@@ -223,7 +223,8 @@ class ControllerCommonHeader extends Controller {
 			$str=$this->config->get('config_meta_keywords');
 
 			$data['hotsearched'] =explode(",",$str);
-
+			$data['slogan']=$this->config->get('config_meta_slogan');
+// print_r($slogan);exit;
 
 // 
 		$data['hothref'] = $this->url->link('product/hotcategory');

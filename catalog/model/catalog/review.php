@@ -60,16 +60,12 @@ class ModelCatalogReview extends Model {
 		// }
 	}
 
-	public function getReviewsByProductId($product_id) {
-		// if ($start < 0) {
-		// 	$start = 0;
-		// }
+	public function getReviewsByProductId($product_id,$filter_data) {
 
-		// if ($limit < 1) {
-		// 	$limit = 20;
-		// }
+		$limit='';
+		$limit.=' limit '.$filter_data['start'].','.$filter_data['limit'];
 
-		$query = $this->db->query("SELECT r.review_id, r.author, r.thumbs, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC  ");
+		$query = $this->db->query("SELECT r.review_id, r.author, r.rating, r.text, p.product_id, pd.name, p.price, p.image, r.date_added FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY r.date_added DESC  ".$limit);
 
 		return $query->rows;
 	}

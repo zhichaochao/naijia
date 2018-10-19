@@ -3,7 +3,7 @@
     <!--内容-->
     <div class="wig clearfix">
       <div class="content">
-        <div class="top_p">Save 15% on your order -Use code: LF15*Exclusions Apply</div>
+        <div class="top_p"><?php echo $slogans?></div>
         <h1 class="h1">LACE WIG</h1>
        
         

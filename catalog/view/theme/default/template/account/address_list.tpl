@@ -54,9 +54,6 @@
                   <label class="clearfix true" for="">
                     <span class="pl_span">Frist Name</span>
                     <input class="in_null" type="text" name="firstname" value="<?php echo $result['firstname']; ?>"  />
-                    <!-- <?php if ($error_firstname) { ?>
-                    <p class="ts_ps ">please enter your first name. </p>
-                     <?php } ?> -->
                   </label>
                   <label class="clearfix true" for="">
                     <span class="pl_span">Last Name</span>
