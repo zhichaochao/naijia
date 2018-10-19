@@ -38,14 +38,16 @@
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
-                  <!-- <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/15 10:06:00">SALE ENDS 
+                 <?php if($product['special']){?>
+                  <div class="bg_hui">
+                    <p class="djs_p" title="<?php echo $product['date_end']; ?>">SALE ENDS 
                       <span class="int_day">00</span>:
                       <span class="int_hour">00</span>:
                       <span class="int_minute">00</span>:
-                      <span class="int_second">00</span>
+                      <span class="int_second">00</span>s
                     </p>
-                  </div> -->
+                  </div>
+                  <?php } ?>
                 </div>
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
@@ -68,6 +70,9 @@
                   <!-- <span class="price">₦26K 
                   <em>₦46K </em>
                   </span> -->
+                  <?php if(!empty($product['special'])) { ?>
+                  <span class="red_span">-<?php echo $product['percent']; ?>%</span> <?php } ?>
+
                   <!-- <span class="red_span">-56%</span> -->
                 </div>
                 <em class="red_em">HOT<br />SALE</em>
@@ -78,74 +83,6 @@
               ></div>
             </li>
           <?php } ?>
-           
-           
-         
-        
-
-         <!--    <li>
-              <a href="###">
-                <div class="pic_img">
-                  <img class="top_img lazyLoad" srcs="catalog/view/theme/default/img/pro_1.jpg" data-src="catalog/view/theme/default/img/pro_2.jpg" alt="" class="top_img" />
-                  <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/05 10:06:00">SALE ENDS 
-                      <span class="int_day">00</span>:
-                      <span class="int_hour">00</span>:
-                      <span class="int_minute">00</span>:
-                      <span class="int_second">00</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="text clearfix">
-                  <h2>FUNMI HAIR WIG </h2>
-                  <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class=""></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                  </ol>
-                  <p class="pl_p">9999 reviews</p>
-                  <span class="price">₦26K <em>₦46K </em></span>
-                  <span class="red_span">-56%</span>
-                </div>
-                <em class="red_em active">HOT<br />SALE</em>
-              </a>
-              <div class="sc"></div>
-            </li>
-            <li>
-              <a href="###">
-                <div class="pic_img">
-                  <img class="top_img lazyLoad" srcs="catalog/view/theme/default/img/pro_1.jpg" data-src="catalog/view/theme/default/img/pro_2.jpg" alt="" class="top_img" />
-                  <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/01 10:06:00">SALE ENDS 
-                      <span class="int_day">00</span>:
-                      <span class="int_hour">00</span>:
-                      <span class="int_minute">00</span>:
-                      <span class="int_second">00</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="text clearfix">
-                  <h2>FUNMI HAIR WIG </h2>
-                  <ol class="start_ol">
-                    <li class="active"></li>
-                    <li class="active"></li>
-                    <li class=""></li>
-                    <li class=""></li>
-                    <li class=""></li>
-                  </ol>
-                  <p class="pl_p">9999 reviews</p>
-                  <span class="price">₦26K <em>₦46K </em></span>
-                  <span class="red_span">-56%</span>
-                </div>
-                <em class="red_em">HOT<br />SALE</em>
-              </a>
-              <div class="sc active"></div>
-            </li> -->
-
-           
-           
           </ul>
           
         <!-- <div class="fy_div">

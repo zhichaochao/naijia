@@ -181,7 +181,7 @@ class ControllerProductAcccategory extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
-
+// print_r($results);exit;
 
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -216,32 +216,48 @@ class ControllerProductAcccategory extends Controller {
 			    $res = $this->model_catalog_product->getProductImages($result['product_id']); 
 
  
+			    // if(!empty($result['special'])){
+			    // 	$specials=$result['special']['special'];
+			    // 	if ($result['special']['percent']>0) {
+			    // 		$percents=$result['special']['percent'];
+			    // 	}else{
+			    // 		$percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    // 	}
+			    	
+			    // 	$date_ends=strtotime($result['special']['date_end'])-time();
+			    // }else{
+			    // 	$specials='';
+			    // 	$percents='';
+			    // 	$date_ends='';
+			    // }
 			    if(!empty($result['special'])){
 			    	$specials=$result['special']['special'];
 			    	if ($result['special']['percent']>0) {
-			    		$percents=$result['special']['percent'];
+			    		$perce=$result['special']['percent'];
+			    		$percents=100-$perce;
 			    	}else{
-			    		$percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    		$perce=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    		$percents=100-$perce;
 			    	}
 			    	
-			    	$date_ends=strtotime($result['special']['date_end'])-time();
+			    	$date_ends=$result['special']['date_end'];
 			    }else{
 			    	$specials='';
 			    	$percents='';
 			    	$date_ends='';
 			    }
+
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'thumbs'       =>$this->model_tool_image->resize($res[0]['image'],380,380),
-					'hot'	  => $category_info['hot'],
 					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
-					'price'       => $this->currency->format($result['price']['price'],$this->session->data['currency']),
+					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
@@ -250,6 +266,7 @@ class ControllerProductAcccategory extends Controller {
 					'wishlist'	  =>$wishlist
 				);
 			}
+			// print_r($data['products']);exit;
 			$url = '';
 
 			if (isset($this->request->get['filter'])) {

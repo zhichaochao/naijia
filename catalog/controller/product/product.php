@@ -205,11 +205,14 @@ class ControllerProductProduct extends Controller {
                  if($product_info['special']['percent']>0){
                         $data['min_prices'] =$this->currency->format($product_info['price']*$product_info['special']['percent']/100, $this->session->data['currency']);
                         $data['max_prices'] = $this->currency->format($product_info['max_price']*$product_info['special']['percent']/100, $this->session->data['currency']);
-                               $data['percent'] = $product_info['special']['percent'];
+                               $percent = $product_info['special']['percent'];
+                               $data['percent']=100-$percent;
+
                     }else{
                         $data['min_prices'] = $this->currency->format($product_info['price']-$product_info['special']['price'], $this->session->data['currency']);
                         $data['max_prices'] = $this->currency->format($product_info['max_price']-$product_info['special']['price'], $this->session->data['currency']);
-                               $data['percent'] =round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
+                               $percent =round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
+                               $data['percent']=100-$percent;
                     }              
                 }else{
                     $data['min_prices'] =  '';
@@ -568,9 +571,11 @@ class ControllerProductProduct extends Controller {
                 if(!empty($result['special'])){
                     $specials=$result['special']['special'];
                     if ($result['special']['percent']>0) {
-                        $percents=$result['special']['percent'];
+                        $perce=$result['special']['percent'];
+                        $percents=100-$perce;
                     }else{
-                        $percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+                        $perce=round($result['special']['special']/$result['special']['old_price'],2)*100;
+                        $percents=100-$perce;
                     }
                     
                     $date_ends=strtotime($result['special']['date_end'])-time();
@@ -1378,7 +1383,7 @@ class ControllerProductProduct extends Controller {
                  $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
                      
                   $json=$price;
-                   $json['percent']=round($price['special']/$price['price'],2)*100;
+                   $json['percent']=100-(round($price['special']/$price['price'],2)*100);
                  if ($price['special']>0) {
                       $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
                        $json['html']= '<span>'.$price_s.'</span><del style="color:#999;font-size:18px;font-weight:normal;">'. $price_c.'</del>';

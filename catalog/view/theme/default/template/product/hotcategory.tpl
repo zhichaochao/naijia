@@ -68,7 +68,7 @@
                   <em>₦46K </em>
                   </span> -->
                      <?php if(!empty($product['special'])) { ?>
-                  <span class="red_span"><?php echo $product['percent']; ?>%</span> <?php } ?>
+                  <span class="red_span">-<?php echo $product['percent']; ?>%</span> <?php } ?>
                 </div>
                 <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em> 
               </a>

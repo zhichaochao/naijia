@@ -425,11 +425,24 @@ class ControllerProductCategory extends Controller {
 // 三个子分类结束
 			// print_r($results );exit();
 			foreach ($results as $result) {
-				if ($result['image']) {
+				if ($category_info['hot']==3) {
+
+					if ($result['image']) {
+					$image = $this->model_tool_image->resize($result['image'],800,480);
+				} else {
+					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
+				}
+
+					
+				}else{
+					if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				} else {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				}
+				}
+
+				
 
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					//$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
@@ -471,11 +484,20 @@ class ControllerProductCategory extends Controller {
 			    	$percents='';
 			    	$date_ends='';
 			    }
-			    if (isset($res[0]['image'])){
+			    if ($category_info['hot']==3) {
+			    	if (isset($res[0]['image'])){
+			    	$tmp=$this->model_tool_image->resize($res[0]['image'],800,480);
+			    }else{
+			    	$tmp=$image;
+			    }
+			    }else{
+			    	if (isset($res[0]['image'])){
 			    	$tmp=$this->model_tool_image->resize($res[0]['image'],380,380);
 			    }else{
 			    	$tmp=$image;
 			    }
+			    }
+			    
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,

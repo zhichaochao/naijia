@@ -271,9 +271,11 @@ class ControllerProductHotcategory extends Controller {
 				if(!empty($result['special'])){
 			    	$specials=$result['special']['special'];
 			    	if ($result['special']['percent']>0) {
-			    		$percents=$result['special']['percent'];
+			    		$perce=$result['special']['percent'];
+			    		$percents=100-$perce;
 			    	}else{
-			    		$percents=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    		$perce=round($result['special']['special']/$result['special']['old_price'],2)*100;
+			    		$percents=100-$perce;
 			    	}
 			    	
 			    	$date_ends=$result['special']['date_end'];

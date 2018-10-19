@@ -87,9 +87,9 @@ $url = '';
 // print_r($product_total);exit;
 		foreach ($results as $result) {
 			$product_info = $this->model_catalog_product->getProduct($result['product_id']);
-			// 
-			$product_infohot= $this->model_catalog_product->getProcatehot($result['product_id']);
 			// print_r($product_info);exit;
+			$product_infohot= $this->model_catalog_product->getProcatehot($result['product_id']);
+			
 			$res = $this->model_catalog_product->getProductImages($result['product_id']); 
 			if ($product_info) {
 				if ($product_info['image']) {
@@ -118,15 +118,17 @@ $url = '';
 					$special = false;
 				}
 
-				if(!empty($product_info['special'])){
+			 		if(!empty($product_info['special'])){
 			    	$specials=$product_info['special']['special'];
 			    	if ($product_info['special']['percent']>0) {
-			    		$percents=$product_info['special']['percent'];
+			    		$perce=$product_info['special']['percent'];
+						$percents=100-$perce;
 			    	}else{
-			    		$percents=round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
+			    		$perce=round($product_info['special']['special']/$product_info['special']['old_price'],2)*100;
+			    		$percents=100-$perce;
 			    	}
 			    	
-			    	$date_ends=strtotime($product_info['special']['date_end'])-time();
+			    	$date_ends=$product_info['special']['date_end'];
 			    }else{
 			    	$specials='';
 			    	$percents='';
@@ -144,9 +146,9 @@ $url = '';
 					'date_end'	  => $date_ends,
 					'percent'    => $percents,
 					'stock'      => $stock,
-					'price'      => $this->currency->format($product_info['price']['price'],$this->session->data['currency']),
+					'price'      => $this->currency->format($product_info['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
-					'hot'    => $product_infohot['hot'],
+					'hot'    => $product_info['hot'],
 					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
 					'remove'     => $this->url->link('account/wishlist', 'remove=' . $product_info['product_id'])
 				);
