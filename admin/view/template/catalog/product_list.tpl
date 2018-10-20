@@ -37,23 +37,45 @@
                 <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
                 <input type="text" name="filter_name" value="<?php echo $filter_name; ?>" placeholder="<?php echo $entry_name; ?>" id="input-name" class="form-control" />
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="control-label" for="input-model"><?php echo $entry_model; ?></label>
                 <input type="text" name="filter_model" value="<?php echo $filter_model; ?>" placeholder="<?php echo $entry_model; ?>" id="input-model" class="form-control" />
-              </div>
+              </div> -->
             </div>
             <div class="col-sm-4">
-              <div class="form-group">
+            <div class="form-group">
+            <label class="control-label" for="input-status">分类</label>
+             <select name="category_id" class="form-control" >
+            <option value="0">选择分类</option>
+            <?php foreach ($categories as $category_1) { ?>
+    
+            <option value="<?php echo $category_1['category_id']; ?>"><?php echo $category_1['name']; ?></option>
+        
+            <?php foreach ($category_1['children'] as $category_2) { ?>
+
+            <option value="<?php echo $category_2['category_id']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $category_2['name']; ?></option>
+ 
+            <?php foreach ($category_2['children'] as $category_3) { ?>
+
+            <option value="<?php echo $category_3['category_id']; ?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $category_3['name']; ?></option>
+
+            <?php } ?>
+            <?php } ?>
+            <?php } ?>
+          </select>
+            </div>
+
+             <!--  <div class="form-group">
                 <label class="control-label" for="input-price"><?php echo $entry_price; ?></label>
                 <input type="text" name="filter_price" value="<?php echo $filter_price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
-              </div>
-              <div class="form-group">
+              </div> -->
+             <!--  <div class="form-group">
                 <label class="control-label" for="input-quantity"><?php echo $entry_quantity; ?></label>
                 <input type="text" name="filter_quantity" value="<?php echo $filter_quantity; ?>" placeholder="<?php echo $entry_quantity; ?>" id="input-quantity" class="form-control" />
-              </div>
+              </div> -->
             </div>
             <div class="col-sm-4">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <select name="filter_status" id="input-status" class="form-control">
                   <option value="*"></option>
@@ -68,8 +90,8 @@
                   <option value="0"><?php echo $text_disabled; ?></option>
                   <?php } ?>
                 </select>
-              </div>
-              <div class="form-group">
+              </div> -->
+             <!--  <div class="form-group">
                 <label class="control-label" for="input-image"><?php echo $entry_image; ?></label>
                 <select name="filter_image" id="input-image" class="form-control">
                   <option value="*"></option>
@@ -84,7 +106,14 @@
                   <option value="0"><?php echo $text_disabled; ?></option>
                   <?php } ?>
                 </select>
+              </div> -->
+               <div class="form-group">
+                <label class="control-label" for="input-price"><?php echo $entry_price; ?></label>
+                <input type="text" name="filter_price" value="<?php echo $filter_price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
               </div>
+
+              
+
               <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-filter"></i> <?php echo $button_filter; ?></button>
             </div>
           </div>
@@ -183,11 +212,11 @@ $('#button-filter').on('click', function() {
 		url += '&filter_name=' + encodeURIComponent(filter_name);
 	}
 
-	var filter_model = $('input[name=\'filter_model\']').val();
+	// var filter_model = $('input[name=\'filter_model\']').val();
 
-	if (filter_model) {
-		url += '&filter_model=' + encodeURIComponent(filter_model);
-	}
+	// if (filter_model) {
+	// 	url += '&filter_model=' + encodeURIComponent(filter_model);
+	// }
 
 	var filter_price = $('input[name=\'filter_price\']').val();
 
@@ -195,23 +224,29 @@ $('#button-filter').on('click', function() {
 		url += '&filter_price=' + encodeURIComponent(filter_price);
 	}
 
-	var filter_quantity = $('input[name=\'filter_quantity\']').val();
+	// var filter_quantity = $('input[name=\'filter_quantity\']').val();
 
-	if (filter_quantity) {
-		url += '&filter_quantity=' + encodeURIComponent(filter_quantity);
-	}
+	// if (filter_quantity) {
+	// 	url += '&filter_quantity=' + encodeURIComponent(filter_quantity);
+	// }
 
-	var filter_status = $('select[name=\'filter_status\']').val();
+	// var filter_status = $('select[name=\'filter_status\']').val();
 
-	if (filter_status != '*') {
-		url += '&filter_status=' + encodeURIComponent(filter_status);
-	}
+	// if (filter_status != '*') {
+	// 	url += '&filter_status=' + encodeURIComponent(filter_status);
+	// }
 
-  var filter_image = $('select[name=\'filter_image\']').val();
+    var category_id = $('select[name=\'category_id\']').val();
 
-  if (filter_image != '*') {
-    url += '&filter_image=' + encodeURIComponent(filter_image);
+  if (category_id != '*') {
+    url += '&category_id=' + encodeURIComponent(category_id);
   }
+
+  // var filter_image = $('select[name=\'filter_image\']').val();
+
+  // if (filter_image != '*') {
+  //   url += '&filter_image=' + encodeURIComponent(filter_image);
+  // }
 
 	location = url;
 });

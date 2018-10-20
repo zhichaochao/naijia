@@ -255,6 +255,12 @@ class ControllerCatalogProduct extends Controller {
 			$filter_status = null;
 		}
 
+		if (isset($this->request->get['category_id'])) {
+			$category_id = $this->request->get['category_id'];
+		} else {
+			$category_id = null;
+		}
+
 		if (isset($this->request->get['filter_image'])) {
 			$filter_image = $this->request->get['filter_image'];
 		} else {
@@ -297,6 +303,9 @@ class ControllerCatalogProduct extends Controller {
 			$url .= '&filter_quantity=' . $this->request->get['filter_quantity'];
 		}
 
+		if (isset($this->request->get['category_id'])) {
+			$url .= '&category_id=' . $this->request->get['category_id'];
+		}
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
 		}
@@ -341,13 +350,14 @@ class ControllerCatalogProduct extends Controller {
 			'filter_price'	  => $filter_price,
 			'filter_quantity' => $filter_quantity,
 			'filter_status'   => $filter_status,
+			'filter_category_id'   => $category_id,
 			'filter_image'    => $filter_image,
 			'sort'            => $sort,
 			'order'           => $order,
 			'start'           => ($page - 1) * $this->config->get('config_limit_admin'),
 			'limit'           => $this->config->get('config_limit_admin')
 		);
-
+// print_r($filter_data);exit;
 		$this->load->model('tool/image');
 
 		$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
@@ -425,6 +435,44 @@ class ControllerCatalogProduct extends Controller {
 
 		$data['token'] = $this->session->data['token'];
 
+
+
+		$data['categories'] = array();
+
+		$categories_1 = $this->model_catalog_product->getCategories(0);
+
+		foreach ($categories_1 as $category_1) {
+			$level_2_data = array();
+
+			$categories_2 = $this->model_catalog_product->getCategories($category_1['category_id']);
+
+			foreach ($categories_2 as $category_2) {
+				$level_3_data = array();
+
+				$categories_3 = $this->model_catalog_product->getCategories($category_2['category_id']);
+
+				foreach ($categories_3 as $category_3) {
+					$level_3_data[] = array(
+						'category_id' => $category_3['category_id'],
+						'name'        => $category_3['name'],
+					);
+				}
+
+				$level_2_data[] = array(
+					'category_id' => $category_2['category_id'],
+					'name'        => $category_2['name'],
+					'children'    => $level_3_data
+				);
+			}
+
+			$data['categories'][] = array(
+				'category_id' => $category_1['category_id'],
+				'name'        => $category_1['name'],
+				'children'    => $level_2_data
+			);
+		}
+
+
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
 		} else {
@@ -465,6 +513,10 @@ class ControllerCatalogProduct extends Controller {
 
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
+		}
+
+		if (isset($this->request->get['category_id'])) {
+			$url .= '&category_id=' . $this->request->get['category_id'];
 		}
 
 		if (isset($this->request->get['filter_image'])) {
@@ -508,6 +560,10 @@ class ControllerCatalogProduct extends Controller {
 
 		if (isset($this->request->get['filter_status'])) {
 			$url .= '&filter_status=' . $this->request->get['filter_status'];
+		}
+
+		if (isset($this->request->get['category_id'])) {
+			$url .= '&category_id=' . $this->request->get['category_id'];
 		}
 
 		if (isset($this->request->get['filter_image'])) {
