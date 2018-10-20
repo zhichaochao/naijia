@@ -72,6 +72,19 @@
           </div>
           
         </div>
+
+        <!-- STA 空页面-->
+       <!--  <div class="right_text clearfix">
+          <div class="null clearfix">
+            <div class="text clearfix">
+              <img src="img/png/null_1.png"/>
+              <p>You haven`t get any coupons</p>
+              <a href="###">Receive coupons&nbsp;&nbsp;></a>
+            </div>
+          </div>
+          
+        </div> -->
+        <!-- END -->
       
       </div>
       

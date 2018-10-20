@@ -9,8 +9,9 @@
           <div class="swiper-container">
               <div class="swiper-wrapper">
                   <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image1; ?>' data-mimage='<?php echo $ydimage1; ?>'  /></div>
-                  <div class="swiper-slide">
-                    <video src="<?php echo $video; ?>" width="100%" controls="controls"></video>
+                  <div class="swiper-slide" style="cursor: pointer;position: relative;">
+                    <div class="bf_img" ></div>
+                    <video id="my_video" src="<?php echo $video; ?>" width="100%"></video>
                   </div>
                   <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div>
               </div>
@@ -129,13 +130,33 @@ function wishlist(product_id,e) {
 }
   $(function(){
 
+  //ban輪播
     var swiper = new Swiper('.swiper-container', {
       autoplay: true,
-      loop: true,
+      loop : true,
         pagination: {
           el: '.swiper-pagination',
+          clickable :true,
         },
       });
+    //鼠标覆盖停止自动切换
+      swiper.el.onmouseover = function(){
+        swiper.autoplay.stop();
+      }
+      swiper.el.onmouseout = function(){
+        swiper.autoplay.start();
+      }
+      
+    var myvideo = document.getElementById("my_video");
+        $(".bf_img").click(function(){
+          myvideo.play();
+          $(".bf_img").hide()
+          $("#my_video").attr("controls","controls");
+        })
+    myvideo.addEventListener('pause',function(){  
+      $(".bf_img").show()
+        $('#my_video').removeAttr("controls");
+    })
 
     $(".sortby").hover(function(){
       $(this).find("ul").stop().slideDown();

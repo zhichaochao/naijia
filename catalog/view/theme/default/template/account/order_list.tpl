@@ -21,7 +21,7 @@
         
         <div class="right_text">
           
-          
+          <?php if ($orders) { ?>
           <div class="or_nav">
             <ol class="ornav_ol clearfix">
               <li class="active"><a href="###">Pending</a></li>
@@ -33,7 +33,7 @@
           </div>
           
           <ul class="or_ul">
-            <?php if ($orders) { ?>
+            
             <?php foreach ($orders as $order) { ?>
             <li class="clearfix">
               <p class="p1 clearfix">
@@ -251,11 +251,14 @@
             </li> -->
             <?php } ?>
             <?php } else { ?>
-          <div class="m_account clearfix">
-          
-          <img src="/catalog/view/theme/default/img/png/order.png"/>
-          <p> You have placed no orders</p>
-          <a class="a_btn" href="<?php echo $goshopping?>">GO SHOPPING &nbsp;&nbsp;&nbsp;></a>
+        <div class="right_text clearfix">
+          <div class="null clearfix">
+            <div class="text clearfix">
+              <img src="catalog/view/theme/default/img/png/null_3.png"/>
+              <p>You haven`t placed any orders ~</p>
+              <a href="<?php echo $goshopping;?>">GO SHOPPING&nbsp;&nbsp;></a>
+            </div>
+          </div>
           
         </div>
           <?php } ?>

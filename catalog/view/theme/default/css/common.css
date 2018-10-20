@@ -186,11 +186,10 @@ background: url(../img/png/icon_23.png) no-repeat;background-size: 100%;}
 	.ss_modal .text label .in_text{line-height: 64px;font-size: 24px;color: #333;width: 60%;display: block;float: left;font-size: 24px;}
 	.ss_modal .text label img.in_close{position: absolute;width: 19px;height: 19px;right: 0;top: 23px;cursor: pointer;}
 	.ss_modal .con h1{font-size: 16px;color: #333;font-weight: normal;margin: 50px 0 40px 0;}
+	.ss_modal .con h1 i.del{display: block;width: 0.24rem;height: 0.24rem;float: right;cursor: pointer;}
+	.ss_modal .con h1 i.del svg{width: 0.24rem;height: 0.24rem;}
 	.ss_modal .con ul li{display: inline-block;float: left;margin:0 55px 20px 0;}
 	.ss_modal .con ul li a{display: inline-block;float: left;font-size: 16px;line-height: 40px;padding: 0 36px;border-radius: 50px;background: #eee;cursor: pointer;}
-	.ss_modal .con ul li i{width: 19px;height: 19px;display: block;float: left;background: url(../img/png/icon_24.png) no-repeat;background-size: 100%; margin: 11px 0 0 5px;cursor: pointer;}
-	.ss_modal .con ul li i:hover,
-	.ss_modal .con ul li i.active{background: url(../img/png/icon_24_.png) no-repeat;}
 	.ss_modal .con ol li{display: inline-block;float: left;margin:0 40px 20px 0;}
 	.ss_modal .con ol li a{font-size: 16px;font-weight: bold;line-height: 40px;padding: 0 36px;display: inline-block;}
 	.ss_modal .con ol li a:hover,

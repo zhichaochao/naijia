@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>MY COUPONS</title>
+		<title>SHOPCART</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,128 +100,15 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="order_con clearfix">
-			<div class="or_content clearfix">
-					<div class="top_yd clearfix">
-						<h1><a class="fh" href="###">< BACK</a>My Coupons</h1>
-					</div>
-					
-				<div class="lf_nav">
-					<img class="tx_img" src="img/png/touxiang.png" alt="" />
-					<h2>Tyler Durden</h2>
-					<p class="p1">+8613286484822</p>
-					
-					<ul>
-						<li><a href="###"><span>My Orders</span><i></i></a></li>
-						<li><a href="###"><span>My Profile</span><i></i></a></li>
-						<li><a href="###"><span>My addresses</span><i></i></a></li>
-						<li><a href="###"><span>My Favorites</span><i></i></a></li>
-						<li class="active"><a href="###"><span>My Coupon</span><i></i></a></li>
-					</ul>
-					
-					<img class="vip_img" src="img/vip.jpg" alt="" />
-				</div>
+		
+		<div class="error_con shop clearfix">
+			<div class="text clearfix">
+				<img src="img/png/404_.png" alt="" />
 				
-				<div class="right_text clearfix">
-					<div class="coupon clearfix">
-						<h1>My Coupons </h1>
-						
-						<div class="coupon_text clearfix">
-							<ul class="coupon_ul clearfix">
-								<li>
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li>
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li>
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li>
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li class="failed">
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li class="failed">
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li class="failed">
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								<li class="failed">
-									<a href="###">
-										<p class="p1">The full court is  ₦500</p>
-										<p class="p2"> minus  ₦35.</p>
-										<span class="sp_1">500₦</span>
-										<span class="sp_2"><em>Full court discount</em></span>
-										<p class="time">Expiration date:2018-9-26</p>
-									</a>
-								</li>
-								
-							</ul>
-							
-						</div>
-						<div class="fy_div">
-							<ul>
-								<li><a href="###">< Last</a></li>
-								<li class="active"><a href="###">1</a></li>
-								<li><a href="###">2</a></li>
-								<li><a href="###">3</a></li>
-								<li><a href="###">Next ></a></li>
-							</ul>
-						</div>
-					</div>
-					
-				</div>
-			
+				<p>Your shopping bag is empty ~</p>
+				<a href="###">GO SHOPPING&nbsp;&nbsp;></a>
 			</div>
-			
 		</div>
-		
-		
 		
 		
 		<!--pc底部-->
@@ -473,64 +360,5 @@
 		</div>
 	</body>
 </html>
-<script>
-	$(function(){
-		//删除订单
-		$(".order_con .bot .det").click(function(){
-			$(this).parents("li").remove();
-		})
-		
-		$("input").focus(function(){
-			$(this).attr("placeholder","");
-			$(this).siblings(".pl_span").css("display","block");
-		})
-		$("input").blur(function(){
-			
-			$(this).attr("placeholder",$(this).siblings(".pl_span").text());
-			$(this).siblings(".pl_span").css("display","none");
-		})
-		
-	})
-	
-	
-	//倒计时
-	function show_time() {
-        $(".djs_p").each(function() {
-            var endtime = $(this).prop("title");
-            var time_start = new Date().getTime(); //设定当前时间
-            var time_end = new Date(endtime).getTime(); //设定目标时间
-            var time_distance = time_end - time_start;
-            var timer;
-            if (time_distance >= 0) {
-                var int_day = Math.floor(time_distance / 86400000)
-                time_distance -= int_day * 86400000;
-                var int_hour = Math.floor(time_distance / 3600000)
-                time_distance -= int_hour * 3600000;
-                var int_minute = Math.floor(time_distance / 60000)
-                time_distance -= int_minute * 60000;
-                var int_second = Math.floor(time_distance / 1000)
-                if (int_day < 10) {
-                    int_day = "0" + int_day;
-                }
-                if (int_hour < 10) {
-                    int_hour = "0" + int_hour;
-                }
-                if (int_minute < 10) {
-                    int_minute = "0" + int_minute;
-                }
-                if (int_second < 10) {
-                    int_second = "0" + int_second;
-                }
-                $(this).find(".int_day").text(int_day);
-                $(this).find(".int_hour").text(int_hour);
-                $(this).find(".int_minute").text(int_minute);
-                $(this).find(".int_second").text(int_second);
-            }else{
-                clearInterval(timer);
-                $(this).css("display","none");
-            }
-        })
-        timer = setTimeout("show_time()", 1000);
-    }
-    show_time();
-</script>
+
+

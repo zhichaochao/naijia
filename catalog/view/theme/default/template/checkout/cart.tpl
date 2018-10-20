@@ -2,7 +2,7 @@
 
     <div class="in_content clearfix"></div>
     <!--内容-->
-    <?php if(isset($products)){?>
+    <?php if(!empty($products)){?>
 
     <div class="shop_con clearfix">
       <div class="top_yd clearfix">
@@ -162,15 +162,19 @@
       </div>
     </div>  
      <?php }else{?>
-    <div class="shop_con clearfix">
-      <div class="top_yd clearfix">
-        <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY SHOPPING BAG</h1>
+     <div class="error_con shop clearfix">
+      <div class="text clearfix">
+        <img src="catalog/view/theme/default/img/404_.png" alt="" />
+        
+        <p>Your shopping bag is empty ~</p>
+        <a href="<?php echo $shopping;?>">GO SHOPPING&nbsp;&nbsp;></a>
       </div>
-      <h2>The shopping cart is empty.</h2>
-       </div>  
+    </div>
+
     <?php }?>
     
 <?php echo $footer; ?>
+<?php if(!empty($products)){?>
  <link rel="stylesheet" href="/catalog/view/theme/default/js/select2/css/select2.css" />
         <script type="text/javascript" src="/catalog/view/theme/default/js/select2/js/select2.js" ></script>
 <script type="text/javascript"><!--
@@ -424,3 +428,4 @@ $(document).ready(function(){
 
   })
 </script>
+<?php }?>

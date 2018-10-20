@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <!--内容-->
     <div class="in_content clearfix"></div>
-    
+    <?php if(!empty($products)){?>
     <div class="list_wish clearfix">
       <div class="top_yd clearfix">
         <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY WISH LIST <span ><em id="total"><?php echo $product_total; ?></em> Items</span></h1>
@@ -60,8 +60,18 @@
           </ul>
         </div>
       </div>
+
     </div>
-    
+     <?php }else{?>
+     <div class="error_con shop clearfix">
+      <div class="text clearfix">
+        <img src="catalog/view/theme/default/img/404_.png" alt="" />
+        
+        <p>Your wishlist bag is empty ~</p>
+        <a href="<?php echo $shopping;?>">GO WISHLIST&nbsp;&nbsp;></a>
+      </div>
+    </div>
+     <?php }?>
 <?php echo $footer; ?>
 
 <script>

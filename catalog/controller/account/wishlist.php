@@ -70,7 +70,7 @@ $url = '';
 		$data['button_continue'] = $this->language->get('button_continue');
 		$data['button_cart'] = $this->language->get('button_cart');
 		$data['button_remove'] = $this->language->get('button_remove');
-
+		$data['shopping'] =$this->url->link('product/hotcategory', '', true);
 		if (isset($this->session->data['success'])) {
 			$data['success'] = $this->session->data['success'];
 
