@@ -169,6 +169,7 @@ class ControllerCommonHeader extends Controller {
 		$data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 		// Menu
 		$this->load->model('catalog/category');
+		
 
 		$this->load->model('catalog/product');
 

@@ -1126,7 +1126,8 @@ class ModelCatalogProduct extends Model {
     }
     public function getRecommendProducts($product_id,$limit=20){
     	$sql = "SELECT c.category_id  From " . DB_PREFIX . "category c WHERE  c.category_id= (SELECT category_id From " . DB_PREFIX . "product_to_category where product_id= '".$product_id."' limit 1)";
-	 	$querys =($this->db->query($sql))->rows ;
+    	$qus=$this->db->query($sql);
+	 	$querys =$qus->rows ;
 	 	foreach ($querys as $key => $value) {
 		$sql = "select distinct p.product_id from " . DB_PREFIX . "product p
 			    left join " . DB_PREFIX . "product_to_category ptc on p.product_id = ptc.product_id
