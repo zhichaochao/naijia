@@ -166,7 +166,7 @@
                   <?php if (!isset($logins)) { ?>
                 <a class="shop_a" href="<?php echo $login; ?>">Please Login First</a>
                   <?php }elseif($quantity>0){ ?>
-                <a class="shop_a" id="button-cart" >Add To Shopping Bag</a>
+                <a class="shop_a" id="button-cart" href="javascript:;"  >Add To Shopping Bag</a>
                   <?php }else{?>
                   <a class="shop_a">Lack of stock</a>
                   <?php } ?>
@@ -195,7 +195,7 @@
                   <div class="pl_div">
                     <p class="p1 clearfix">
                       <span><?php echo $review['author']?></span>
-                      <em>Length: 16 & 16 & 18</em>
+                      <em><?php echo $review['length']?> & <?php echo $review['style']?></em>
                     </p>
                     <ol class="start_ol">
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
@@ -680,6 +680,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
+        tips('Cancel the collection');
         $('#wishlist_count').html(data.total);
       }
                // location.reload(); 
@@ -695,6 +696,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
+        tips('Collection Success');
         $('#wishlist_count').html(data.total);
       }
                // location.reload(); 
@@ -728,7 +730,8 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
-                alert("成功加入购物车");
+                tips('Successful shopping cart');
+                // alert("成功加入购物车");
               $('#cart_count').html(json.total);
                 $(".cart_li").click();
 

@@ -101,6 +101,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
+         tips('Cancel the collection');
         $('#wishlist_count').html(data.total);
       }
     }
@@ -115,6 +116,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
+         tips('Collection Success');
         $('#wishlist_count').html(data.total);
       }
     }

@@ -1,1 +1,234 @@
 2018-10-19 8:19:06 - PHP Notice:  Undefined variable: error_firstname in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\address_list.tpl on line 57
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:43:55 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:47:04 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-20 7:57:47 - PHP Notice:  Undefined index: order_product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 999
+2018-10-20 7:59:22 - PHP Notice:  Undefined index: order_product_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1000
+2018-10-20 8:06:30 - PHP Notice:  Undefined variable: product in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:06:30 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:07:46 - PHP Notice:  Undefined variable: product in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:07:46 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:07:47 - PHP Notice:  Undefined variable: product in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:07:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:07:50 - PHP Notice:  Undefined variable: product in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:07:50 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1002
+2018-10-20 8:08:57 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:08:57 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:08:57 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:08:57 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:08:57 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:08:57 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:08:59 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:08:59 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:08:59 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:08:59 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:08:59 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:08:59 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:01 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:09:01 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:01 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:09:01 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:01 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:09:01 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:22 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:09:22 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:22 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:09:22 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:22 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1004
+2018-10-20 8:09:22 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1005
+2018-10-20 8:09:43 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:09:43 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:09:43 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:09:43 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:09:43 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:09:43 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:08 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:08 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:08 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:08 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:08 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:08 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:10 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:10 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:10 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:10 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:10 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:10 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:11 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:11 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:11 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:11 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:10:11 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:10:11 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:09 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1011
+2018-10-20 8:11:09 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1011
+2018-10-20 8:11:09 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1012
+2018-10-20 8:11:09 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1012
+2018-10-20 8:11:11 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1011
+2018-10-20 8:11:11 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1011
+2018-10-20 8:11:11 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1012
+2018-10-20 8:11:11 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1012
+2018-10-20 8:11:12 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1011
+2018-10-20 8:11:12 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1011
+2018-10-20 8:11:12 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1012
+2018-10-20 8:11:12 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1012
+2018-10-20 8:11:18 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:18 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:18 - PHP Notice:  Undefined variable: options in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:18 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:23 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:23 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:23 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:23 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:23 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:23 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:49 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:49 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:49 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:49 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:49 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:49 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:52 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:52 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:52 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:52 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:52 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:52 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:56 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:56 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:56 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:56 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:11:56 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:11:56 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:29 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:29 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:29 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:29 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:29 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:29 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:30 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:30 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:30 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:30 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:30 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:30 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:31 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:31 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:31 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:31 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:12:31 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:12:31 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:02 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:02 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:02 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:02 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:10 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:10 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:10 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:10 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:14 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:14 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:14 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:14 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:14 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:14 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:22 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:22 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:22 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:22 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:14:22 - PHP Notice:  Undefined variable: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1006
+2018-10-20 8:14:22 - PHP Notice:  Undefined variable: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1007
+2018-10-20 8:15:21 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1013
+2018-10-20 8:17:57 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:17:57 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:17:57 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:18:04 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:19:07 - PHP Notice:  Undefined offset: 1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:23:13 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:23:13 - PHP Notice:  Undefined offset: 2 in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:23:20 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:23:20 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:23:20 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:36:23 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:36:23 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 8:36:23 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1009
+2018-10-20 9:14:12 - PHP Notice:  Undefined variable: k in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1015
+2018-10-20 9:14:12 - PHP Notice:  Undefined variable: k in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1015
+2018-10-20 9:14:12 - PHP Notice:  Undefined variable: k in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1015
+2018-10-20 9:52:44 - PHP Notice:  Array to string conversion in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 7
+2018-10-20 10:12:28 - PHP Notice:  Undefined variable: arr in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1021
+2018-10-20 10:34:36 - PHP Notice:  Undefined variable: orderoptioned in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\catalog\review.php on line 9
+2018-10-20 10:36:03 - PHP Notice:  Undefined index: order_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 996
+2018-10-20 10:36:03 - PHP Notice:  Undefined index: order_id in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 998
+2018-10-20 10:36:03 - PHP Notice:  Undefined variable: date in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1013
+2018-10-20 10:36:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1013
+2018-10-20 10:36:03 - PHP Notice:  Undefined variable: orderoptions in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\product.php on line 1019
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:22:35 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'name' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 1:59:18 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104

@@ -20,6 +20,50 @@ var fun = function (doc, win) {
 fun(document, window);
 
 $(function(){
+	var DivScroll = function( layerNode ){
+		//如果没有这个元素的话，那么将不再执行下去
+		if ( !document.querySelector( layerNode ) ) return ;
+		this.popupLayer = document.querySelector( layerNode ) ;
+		this.startX = 0 ;
+		this.startY = 0 ;
+		this.popupLayer.addEventListener('touchstart', function (e) {
+		this.startX = e.changedTouches[0].pageX;
+		this.startY = e.changedTouches[0].pageY;
+		}, false);
+		// 仿innerScroll方法
+		this.popupLayer.addEventListener('touchmove', function (e) {
+		e.stopPropagation();
+		var deltaX = e.changedTouches[0].pageX - this.startX;
+		var deltaY = e.changedTouches[0].pageY - this.startY;
+		// 只能纵向滚
+		if(Math.abs(deltaY) < Math.abs(deltaX)){
+		e.preventDefault();
+		return false;
+		}
+		if( this.offsetHeight + this.scrollTop >= this.scrollHeight){
+		if(deltaY < 0) {
+		e.preventDefault();
+		return false;
+		}
+		}
+		if(this.scrollTop === 0){
+		if(deltaY > 0) {
+		e.preventDefault();
+		return false;
+		}
+		}
+		// return false;
+		},false);
+		}
+		//调用
+		var divScroll = new DivScroll('.khpj_midal .text');
+		var divScroll2 = new DivScroll('.ss_modal .text');
+		var divScroll2 = new DivScroll('.con_modal');
+		var divScroll2 = new DivScroll('.con_modal .context');
+		
+		
+	
+	
 	//获取焦点隐藏textarea的提示文本
 	$("textarea").focus(function(){
 		$(this).attr("placeholder","");
@@ -116,6 +160,31 @@ $(function(){
     	}
 	});
 	
+//	打开contact	的弹窗
+	$(".ol_ydfot .contact").click(function(){
+		$(".con_modal").fadeIn();
+		$("body").css("overflow","hidden");
+	})
+	//	关闭contact	的弹窗
+	$(".con_modal").click(function(e){
+		var close = $('.con_modal .text,.con_modal .context'); 
+	   	if(!close.is(e.target) && close.has(e.target).length === 0){
+	   		$(".con_modal").fadeOut();
+			$("body").css("overflow","");
+		}
+	})
+	
+//	打开contact的email的弹窗
+	$(".con_modal .con_email").click(function(){
+		$(".con_modal .context").fadeIn();
+	})
+	
+	//关闭contact的email的弹窗
+	$(".con_modal .context .close").click(function(){
+		$(this).parent().fadeOut();
+	})
+	
+	
 //	头部移动导航开关
 var kg_off=0;
 	$(".yd_nav .yd_navul>li.kg_li").click(function(event){
@@ -194,8 +263,9 @@ $(".nav .bot .search,.yd_nav .yd_navul>li.ss_li").click(function(){
 	$(".ss_modal .bg_f").animate({top:"0%"});
 	$("body").css("overflow","hidden");
 })
-$(".ss_modal .con ul li i").click(function(){
-	$(this).parents("li").remove();
+
+$(".ss_modal i.del").click(function(){
+	$(this).parents("h1").siblings(".ls_ul").remove();
 })
 
 $(".ss_modal .text label img.in_close").click(function(){
@@ -272,3 +342,19 @@ lazyLoad.init();
 
 })
 
+/**弹窗提示**/
+function tips(tips_text){
+	var text =
+			'<div class="popup_tips clearfix">'
+				+'<div class="text clearfix">'
+					+'<div class="top clearfix">'
+						+'<span></span>'
+					+'</div>'
+					+'<p>'+tips_text+'</p>'
+				+'</div>'
+			+'</div>'
+	$("body").append(text);
+	setTimeout(function(){
+		$(".popup_tips").fadeOut();
+	},2000);
+}

@@ -33,7 +33,13 @@
               </ol>
             </div>
             <div class="right clearfix">
-              <span class="span1">Length: 16 & 16 & 18</span>
+             <?php  if(!empty($review['length'])){ ?>
+               <span class="span1"><?php echo $review['length']; ?> & <?php echo $review['style']; ?></span>
+             <?php  }else{ ?>
+               <span class="span1"></span>
+             <?php  } ?>
+             
+
               <span class="span2"><?php echo $review['date_added']; ?></span>
               <p class="p1 clearfix">
               <?php echo $review['text']?>

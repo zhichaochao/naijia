@@ -236,6 +236,8 @@ class ControllerProductProduct extends Controller {
                     //'author'     => $result['author'],
                     'author'        => substr($result['author'],0,-2).'***',
                     'text'          => nl2br($result['text']),
+                    'length'          => nl2br($result['length']),
+                    'style'          => nl2br($result['style']),
                     'rating'        => (int)$result['rating'],
                     //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
                     'date_added'    => date('m/d/Y', strtotime($result['date_added'])),
@@ -815,6 +817,8 @@ class ControllerProductProduct extends Controller {
                     'review_id'     => $result['review_id'],
                     'author'        => substr($result['author'],0,-2).'***',
                     'text'          => nl2br($result['text']),
+                    'length'          => nl2br($result['length']),
+                    'style'          => nl2br($result['style']),
                     // 'thumbs'          =>$result['thumbs'],
                     'rating'        => (int)$result['rating'],
                     //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
@@ -992,16 +996,45 @@ class ControllerProductProduct extends Controller {
                 }
             }
             $this->load->model('catalog/review');
+            $this->load->model('account/order');
              $orderproduct = $this->model_catalog_review->getProductorder($this->request->post['order_id']);
-             foreach ($orderproduct as $key=> $orderprod) {
-                $product_id=$orderprod['product_id'];
+             $order_products = $this->model_account_order->getOrderProducts($this->request->post['order_id']); 
+            foreach ($orderproduct as $key=> $orderprod) {       
+                      foreach ($order_products as $key=> $orderpro) {
+                          $order_options[$key]['options']= $this->model_account_order->getOrderOptions($this->request->post['order_id'],$orderpro['order_product_id']);
+                               foreach ($order_options[$key]['options'] as $key=> $options) { 
+                                               
+                           $date['orderoption'][]=array(
 
-                $this->load->model('account/customer');
-                $customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
-                $firstname = $customer_info['firstname'];
-                $this->model_catalog_review->addReview($product_id,$this->request->post ,$path,$firstname);
+                                  'name' =>$options['name'],
+                              'value' =>$options['value'],
+                              );
+                            }
+                           foreach ($date['orderoption'] as $key => $value) {
+                          // $orderoptions= print_r($value['value'].';');
+                         $arr[$key] = $value['value'];
+                        }
+                            
+                     }
+                 $product_id=$orderprod['product_id'];
+                 $this->load->model('account/customer');
+                 $customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+                 $firstname = $customer_info['firstname'];
+                            // print_r($firstname);exit;
+                 $this->model_catalog_review->addReview($product_id,$this->request->post ,$path,$firstname,$arr);
+                 }
+             
+             // print_r($arr);exit;
+             // $arrs[$key]['option']=$arr;
 
-             }
+            // $orderoptionss= substr($orderoptions, 0, -1);
+            // $o=$arr[0];
+            //  $a=$arr[1];
+            //  $c=$arr[2];
+            // print_r($c);exit;
+
+
+             
         }
         $this->response->redirect($this->url->link('account/order', '', true));
     }
