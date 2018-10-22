@@ -232,3 +232,17 @@
 2018-10-22 1:59:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
 2018-10-22 1:59:18 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
 2018-10-22 1:59:18 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-22 6:31:09 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 195
+2018-10-22 6:31:09 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 196
+2018-10-22 6:31:09 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 710
+2018-10-22 6:31:09 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 719
+2018-10-22 6:31:09 - PHP Warning:  Division by zero in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 719
+2018-10-22 6:31:09 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 728
+2018-10-22 6:31:09 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 734
+2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 195
+2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 196
+2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 710
+2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 719
+2018-10-22 6:31:10 - PHP Warning:  Division by zero in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 719
+2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 728
+2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 734
