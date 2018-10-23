@@ -246,3 +246,4 @@
 2018-10-22 6:31:10 - PHP Warning:  Division by zero in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 719
 2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 728
 2018-10-22 6:31:10 - PHP Notice:  Undefined variable: limit in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\product\category.php on line 734
+2018-10-23 6:11:11 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/lagosstore/lagosstore.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23

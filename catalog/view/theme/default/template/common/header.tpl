@@ -62,9 +62,9 @@
                 </ol>
               </li>
 
-              <li><a href="###">Lagos Store</a></li>
+              <li><a href="<?php echo $lagosstore;?>">Lagos Store</a></li>
 
-              <li><a href="###">About Us</a></li>
+              <li><a href="<?php echo $aboutus;?>">About Us</a></li>
 
             </ul>
             

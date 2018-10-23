@@ -230,6 +230,8 @@ class ControllerCommonHeader extends Controller {
 // 
 		$data['hothref'] = $this->url->link('product/hotcategory');
 		$data['acchref'] = $this->url->link('product/acccategory');
+		$data['aboutus'] = $this->url->link('information/company');
+		$data['lagosstore'] = $this->url->link('information/lagosstore');
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['mcurrency'] = $this->load->controller('common/mcurrency');

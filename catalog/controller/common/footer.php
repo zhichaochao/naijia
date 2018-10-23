@@ -52,20 +52,20 @@ class ControllerCommonFooter extends Controller {
 				'child'=>array(
 						0=>array(
 							'title'=>'Return Policy',
-						'url'=>$this->url->link('information/information','information_id=1'),
+						'url'=>$this->url->link('information/returnpolicy'),
 							),
 						1=>array(
 							'title'=>'Shipping & Handling',
-							'url'=>$this->url->link('information/information','information_id=9'),
+							'url'=>$this->url->link('information/shipping'),
 							),
 						2=>array(
 							'title'=>'Terms & Conditions',
-							'url'=>$this->url->link('information/information','information_id=3'),
+							'url'=>$this->url->link('information/trems'),
 
 							),
 						3=>array(
 							'title'=>'VIP Policy',
-							'url'=>$this->url->link('information/information','information_id=4'),
+							'url'=>$this->url->link('information/information'),
 							),
 					),
 				),
@@ -75,7 +75,7 @@ class ControllerCommonFooter extends Controller {
 				'child'=>array(
 						0=>array(
 							'title'=>'FAQs',
-							'url'=>$this->url->link('account/account'),
+							'url'=>$this->url->link('information/faqs'),
 							),
 						1=>array(
 							'title'=>'Tutorials',
@@ -83,7 +83,7 @@ class ControllerCommonFooter extends Controller {
 							),
 						2=>array(
 							'title'=>'Feedback',
-							'url'=>$this->url->link('account/wishlist'),
+							'url'=>$this->url->link('information/feedback'),
 
 							),
 					),

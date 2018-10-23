@@ -164,7 +164,7 @@
      <?php }else{?>
      <div class="error_con shop clearfix">
       <div class="text clearfix">
-        <img src="catalog/view/theme/default/img/404_.png" alt="" />
+        <img src="catalog/view/theme/default/img/png/404_.png" alt="" />
         
         <p>Your shopping bag is empty ~</p>
         <a href="<?php echo $shopping;?>">GO SHOPPING&nbsp;&nbsp;></a>
