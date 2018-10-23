@@ -182,6 +182,16 @@
       $(".pl_lunbo .swiper-pagination-clickable span").eq(this_index).trigger('click');
     }
 </script>
+<!-- <?php if ($success) { ?>
+  <script type="text/javascript">
+    alert('<?php echo $success; ?>');
+  </script>
+  <?php } ?>
+  <?php if ($error_warning) { ?>
+  <script type="text/javascript">
+    alert('<?php echo $error_warning; ?>');
+  </script>
+  <?php } ?> -->
 <!-- <script type="text/javascript">
     $('#button-cart').on('click', function() {
             $.ajax({

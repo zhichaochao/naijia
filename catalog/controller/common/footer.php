@@ -83,7 +83,7 @@ class ControllerCommonFooter extends Controller {
 							),
 						2=>array(
 							'title'=>'Feedback',
-							'url'=>$this->url->link('information/feedback'),
+							'url'=>$this->url->link('information/help'),
 
 							),
 					),
