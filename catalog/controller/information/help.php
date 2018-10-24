@@ -62,10 +62,12 @@ class ControllerInformationHelp extends Controller {
             // $data['telephone'] = $this->customer->getTelephone();
             $data['firstname'] = $customer_info['firstname'];
             $data['email'] = $customer_info['email'];
-            $data['telephone'] = (!empty($customerResult['country_id'])) ? $customerResult['country_id'] : '';
+            $data['telephone'] = (!empty($customerResult['telephone'])) ? $customerResult['telephone'] : '';
             $data['enquiry'] = $this->request->post['enquiry'];
-		// print_r($data);exit;
+
             $result = $this->model_setting_feedback->addFeedback($data);
+
+            	// print_r($result);exit;
             if($result){
                $this->session->data['success'] = 'We have received your message, thank you for your advice';
 
@@ -101,10 +103,10 @@ class ControllerInformationHelp extends Controller {
                $html_data['factime'] = '';
                $html_data['whatsapp'] = '';
 
-               /*$message  = $this->language->get('text_website') . ' ' . html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8') . "\n\n";
+               $message  = $this->language->get('text_website') . ' ' . html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8') . "\n\n";
 		       $message .= 'Full Name: ' . $data['user_name'] . "\n\n";
 		       $message .= $this->language->get('text_email') . ' '  .  $this->customer->getEmail() . "\n\n";
-		       $message .= 'Inquiry Content: '  .  $this->request->post['enquiry'] . "\n\n";*/
+		       $message .= 'Inquiry Content: '  .  $this->request->post['enquiry'] . "\n\n";
 
                $mail = new Mail();
                $mail->protocol = $this->config->get('config_mail_protocol');
@@ -121,7 +123,7 @@ class ControllerInformationHelp extends Controller {
                //$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
                $mail->setSubject('Hot Beauty Hair Contact Us Inquiry');                                                //邮件标题
                $mail->setHtml($this->load->view('mail/contact_us_email',$html_data));
-               //$mail->setText($message);
+               $mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
                $mail->send();
 
             }else{
