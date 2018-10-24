@@ -67,7 +67,7 @@
       <div class="text clearfix">
         <img src="catalog/view/theme/default/img/png/404_.png" alt="" />
         
-        <p>Your wishlist bag is empty ~</p>
+        <p>Comment page is empty.</p>
         <a href="<?php echo $shopping;?>">GO WISHLIST&nbsp;&nbsp;></a>
       </div>
     </div>

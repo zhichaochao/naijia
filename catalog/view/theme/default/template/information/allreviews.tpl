@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<?php if($allreviews){?>
 <div class="in_content clearfix"></div>
     <div class="reviews3 clearfix">
       <div class=" clearfix">
@@ -107,6 +108,18 @@
       </div>
     </div>
     <?php  } ?>
+
+    <?php }else{?>
+    <div class="error_con shop clearfix">
+      <div class="text clearfix">
+        <img src="catalog/view/theme/default/img/png/404_.png" alt="" />
+        
+        <p>Your wishlist bag is empty ~</p>
+        <a href="<?php echo $shopping;?>">GO WISHLIST&nbsp;&nbsp;></a>
+      </div>
+    </div>
+    <?php  } ?>
+
 
 <?php echo $footer; ?>
 <script>

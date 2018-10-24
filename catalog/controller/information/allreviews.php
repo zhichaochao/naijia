@@ -13,6 +13,7 @@ class ControllerInformationAllreviews extends Controller {
 		$this->load->language('information/contact');
 		$this->document->setTitle('SHOWS');
 
+		$data['shopping'] =$this->url->link('product/hotcategory', '', true);
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
