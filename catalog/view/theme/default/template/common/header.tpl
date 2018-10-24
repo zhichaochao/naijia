@@ -24,7 +24,8 @@
           <div class="content">
             <?=$currency;?>
            
-            <a class="logo" href="<?=$home;?>">
+            <!-- <a class="logo" href="<?=$home;?>"> -->
+            <a class="logo" href="<?=$homes;?>">
               <img src="<?=$logo;?>"/>
             </a>
           </div>

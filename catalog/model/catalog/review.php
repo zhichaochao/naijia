@@ -4,9 +4,9 @@ class ModelCatalogReview extends Model {
 		// print_r($arr);exit;
 // print_r("INSERT INTO " . DB_PREFIX . "review SET author = '" . $firstname . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', rating = '" . (int)$data['rating'] . "',attribute = '" . $arr[0]. "',length = '" . $arr[1]. "',style = '" . $arr[2]. "', date_added = NOW()");exit;
 			if(isset($arr[2])){	
-			$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $firstname . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', rating = '" . (int)$data['rating'] . "',attribute = '" . $arr[1]. "',length = '" . $arr[0]. "',style = '" . $arr[2]. "', date_added = NOW()");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $firstname . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', order_id = '" . $this->db->escape($data['order_id']) . "', rating = '" . (int)$data['rating'] . "',attribute = '" . $arr[1]. "',length = '" . $arr[0]. "',style = '" . $arr[2]. "', date_added = NOW()");
 				}else{
-					$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $firstname . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', text = '" . $this->db->escape($data['text']) . "', rating = '" . (int)$data['rating'] . "',attribute = '',length = '" . $arr[0]. "',style = '" . $arr[1]. "', date_added = NOW()");
+					$this->db->query("INSERT INTO " . DB_PREFIX . "review SET author = '" . $firstname . "', customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', order_id = '" . $this->db->escape($data['order_id']) . "', text = '" . $this->db->escape($data['text']) . "', rating = '" . (int)$data['rating'] . "',attribute = '',length = '" . $arr[0]. "',style = '" . $arr[1]. "', date_added = NOW()");
 
 				}
 			$review_id = $this->db->getLastId();
@@ -93,6 +93,11 @@ class ModelCatalogReview extends Model {
 
 		return $query->rows;
 	}
+	public function getReviewImgs($review_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review_image WHERE review_id = '" . (int)$review_id . "'limit 3");
+
+		return $query->rows;
+	}
 
 	public function getTotalReviewsByProductId($product_id) {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "review r LEFT JOIN " . DB_PREFIX . "product p ON (r.product_id = p.product_id) LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE p.product_id = '" . (int)$product_id . "' AND p.date_available <= NOW() AND p.status = '1' AND r.status = '1' AND pd.language_id = '" . (int)$this->config->get('config_language_id') . "'");
@@ -146,6 +151,12 @@ class ModelCatalogReview extends Model {
 	public function getProductorder($order_id) {
         $query = $this->db->query("SELECT product_id FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_id . "'");
 // print_r($query->rows);exit;
+		return $query->rows;
+	}
+
+	public function getAllreviews() {
+
+        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review group by  order_id ");
 		return $query->rows;
 	}
 }
