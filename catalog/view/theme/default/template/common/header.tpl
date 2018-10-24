@@ -58,7 +58,7 @@
                 <a href="###">Hair Care</a>
                 <ol class="nav_ol">
                   <li><a href="<?php echo $acchref;?>">Accessories</a></li>
-                  <li><a href="###">Blog</a></li>
+                  <li><a href="<?php echo $blog;?>">Blog</a></li>
                 </ol>
               </li>
 

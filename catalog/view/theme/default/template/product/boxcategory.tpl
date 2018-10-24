@@ -1,4 +1,10 @@
 <?php echo $header; ?>
+<input type="hidden" name="allpage" value='<?=$allpage;?>' id='allpage'/>
+<input type="hidden" name="page" value='1' id='page'/>
+<input type="hidden" name="category_id" value='<?=$category_id;?>' id='category_id'/>
+<input type="hidden" name="sort" value='<?=$sort;?>' id='sort'/>
+<input type="hidden" name="order" value='<?=$order;?>' id='order'/>
+<input type="hidden" name="limit" value='<?=$limit;?>' id='limit'/>
 
 <!--内容-->
     <div class="in_content clearfix"></div>
@@ -39,7 +45,7 @@
       
       <div class="pro_text">
         <div class="content">
-          <ul class="pro_ul clearfix">
+          <ul class="pro_ul clearfix prolist">
          
           
           
@@ -95,6 +101,109 @@
     </div>
 
 <?php echo $footer; ?>
+<script>
+    function loadmore(obj){
+      var allpage=$('#allpage').val();
+      var page=$('#page').val();
+      var sort=$('#sort').val();
+      var category_id=$('#category_id').val();
+      var limit=$('#limit').val();
+      var win =$(window).width();
+        if(win<920){
+             var scrollTop = $(obj).scrollTop();
+            var scrollHeight = $(document).height();
+            var windowHeight = $(obj).height();
+            if (allpage>page) {
+             if (scrollHeight-scrollTop - windowHeight<=250 ) {
+              page++;
+              $('#page').val(page);
+               $.ajax({
+                          url: 'index.php?route=product/category/loadpage&page='+page+'&sort='+sort+'&category_id='+category_id+'&limit='+limit ,
+                          dataType: 'json',
+                          success: function(data) {
+                            // alert(data);
+                            var result="";
+                            console.log( data.products );
+                            for (var i =0; i < data.products.length ; i++) {
+                            var addwinst="wishlist('"+data.products[i].product_id+"'";
+
+
+
+
+                            // 
+
+
+                            result+='<li>'
+                           +'<a href="'+data.products[i].href+'">'
+                              +'<div class="pic_img">'
+                                +'<img  class="top_img lazyLoad" srcs="'+data.products[i].thumb+'" data-src="'+data.products[i].thumbs+'"  class="top_img" />'
+                             result+='</div>'
+                            + '<div class="text clearfix">'
+                               + '<h2>'+data.products[i].name
+                             +' </h2>'
+                               +'<ol class="start_ol">'
+                                  for ($i = 1; $i <= 5; $i++) { 
+                                     if (data.products[i].rating < $i) {
+                                    result+= '<li class=""></li>'
+                                     } else { 
+                                    result+='<li class="active"></li>'
+                                     } 
+                                   } 
+                                result+= '</ol>'
+                               +'<p class="pl_p">'+data.products[i].reviews +'reviews'
+                              + '</p>'
+
+                               if(!empty(data.products[i].special)) { 
+
+                                  result+= '<span class="price">'+data.products[i].special
+                                  + '<em>'+data.products[i].price+'</em></span>'
+
+                                 }else{ 
+
+                                  result+= '<span class="price">'+data.products[i].price+'</span>'
+                                 } 
+
+                                   if(!empty(data.products[i].special)) { 
+                                result+='<span class="red_span">-'+data.products[i].percent+'%</span>'
+                                  } 
+                                  result+= '<span class="yd_btna" href="'+data.products[i].href+'">SHOW</span>'
+                                    +'</div>'
+
+                              // if (data.products[i].hot==1) {
+                              //       result+='<em class="red_em active">HOT<br />SALE</em>' 
+                              //      }else{
+                              //       result+='<em class="red_em ">HOT<br />SALE</em>' 
+                              //      }
+
+                             
+                            result+='</a>'
+
+                            if (data.products[i].wishlist==1) {
+                                    result+='<div class="sc active" onclick="'+addwinst+',this);">'
+                                   }else{
+                                    result+='<div class="sc" onclick="'+addwinst+',this);" >';
+                              }
+                            result+='</div>'
+                          +'</li>';
+                                   }
+                                  // console.log(result);
+                                  // alert(11);
+                           $('.prolist').append('adsfdfsasdf');
+                          }
+                       })
+                      } 
+                    }
+                    // else if(!$(".pro_text ").hasClass('over')){
+                    //   $(".pro_text ").addClass('over')
+                    //    $(".pro_text ").append("<p>加载完成</p>");
+                    // }
+                }
+              }
+    //页面滚动执行事件
+    $(window).scroll(function (){
+        loadmore($(this));
+    });
+</script>
 <script>
 function wishlist(product_id,e) {
   if ($(e).hasClass('active')) {
