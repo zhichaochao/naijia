@@ -4,15 +4,11 @@
             <div class="banner">
                 <div class="swiper-container" id="swiper1">
                     <div class="swiper-wrapper" style="cursor:-webkit-grab;">
+                             <?php if($banners){ foreach ($banners as $banner) { ?>
                         <div class="swiper-slide ban_img">
-                            <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/banner1.jpg' data-mimage='catalog/view/theme/default/img/yd_banner1.jpg'  />
+                            <img class="changeimage lazyLoad" data-image='<?=$banner["image"]?>' data-mimage='<?=$banner["m_image"]?>'  />
                         </div>
-                        <div class="swiper-slide ban_img">
-                            <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/banner1.jpg' data-mimage='catalog/view/theme/default/img/yd_banner1.jpg'  />
-                        </div>
-                        <div class="swiper-slide ban_img">
-                            <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/banner1.jpg' data-mimage='catalog/view/theme/default/img/yd_banner1.jpg'  />
-                        </div>
+                          <?php }} ?>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -25,26 +21,13 @@
         <div class="intext1 clearfix">
             <div class="content">
                 <ul class="in_ul1">
+                           <?php if($fours){ foreach ($fours as $banner) { ?>
                     <li>
-                        <a href="###">
-                            <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul1.jpg"/>
-                        </a>
+                       <?php if($banner["link"]) {?> <a href="<?=$banner["link"]?>">  <?php } ?>
+                            <img class="lazyLoad" src="<?=$banner["image"]?>" srcs="<?=$banner["image"]?>"/>
+                          <?php if($banner["link"]) {?></a><?php } ?>
                     </li>
-                    <li>
-                        <a href="###">
-                            <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul2.jpg"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="###">
-                            <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul3.jpg"/>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="###">
-                            <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul4.jpg"/>
-                        </a>
-                    </li>
+                     <?php } } ?>
                 </ul>
                 
                 <div class="text1">
@@ -58,150 +41,27 @@
                     <!-- Swiper -->
                       <div class="swiper-container in_ul2">
                         <div class="swiper-wrapper">
+                               <?php if($hots){ foreach ($hots as $hot) { ?>
                           <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
+                            <a class="in_ul2_a clearfix" href="<?=$hot['href'];?>">
                                 <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
+                                    <img class="lazyLoad" src="" srcs="<?=$hot['thumb'];?>" data-src="<?=$hot['thumbs'];?>"/>
                                 </div>
                                 <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
+                                    <h1><?=$hot['name'];?></h1>
+                                    <p class="ov_text"><?=$hot['description'];?></p>
+                                   <?php if($hot['special']){?> <span><?=$hot['special'];?> <em><?=$hot['price'];?></em></span><?php }else{?>
+                                   <span><?=$hot['price'];?> </span><?php }?>
                                 </div>
                             </a>
                           </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
-                          <div class="swiper-slide clearfix">
-                            <a class="in_ul2_a clearfix" href="###">
-                                <div class="pic_img">
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul5.jpg" data-src="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </div>
-                                <div class="text">
-                                    <h1>FUNMI HAIR WIG </h1>
-                                    <p class="ov_text">Raw super double drawn bob Raw super double Raw super double drawn bob Raw super double</p>
-                                    <span>₦26K <em>₦46K</em></span>
-                                </div>
-                            </a>
-                          </div>
+                          <?php } } ?>
+                         
+                         
+                          
+                        
+                         
+                      
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -225,7 +85,7 @@
                     <ul class="in_ul3 clearfix">
                         <li class="clearfix">
                             <div class="con clearfix">
-                                <a class="img_a" href="###">
+                                <a class="img_a" >
                                     <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/>
                                 </a>
                                 <div class="text">
@@ -249,13 +109,13 @@
                                         <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
                                         <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
                                     </ul>
-                                    <a href="###" class="a_btn">Shop now<em>></em></a>
+                                    <a  class="a_btn">Shop now<em>></em></a>
                                 </div>
                             </div>
                         </li>
                         <li class="clearfix">
                             <div class="con clearfix">
-                                <a class="img_a" href="###">
+                                <a class="img_a" >
                                     <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/>
                                 </a>
                                 <div class="text">
@@ -279,12 +139,12 @@
                                         <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
                                         <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
                                     </ul>
-                                    <a href="###" class="a_btn">Shop now<em>></em></a>
+                                    <a  class="a_btn">Shop now<em>></em></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
-                    <a class="pro_more" href="###">
+                    <a class="pro_more" >
                         <button>VIEW All REVIEWS</button>
                     </a>
                 </div>
@@ -298,7 +158,7 @@
                     </div>
                     
                     <div class="bot_map">
-                        <img class="changeimage lazyLoad" srcs="catalog/view/theme/default/img/in_ul7.jpg" />
+                        <img class="changeimage lazyLoad" srcs="<?=isset($store['image'])?$store['image']:'catalog/view/theme/default/img/in_ul7.jpg';?>" />
                         <div class="map">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.4091024856534!2d3.5845518!3d6.4697496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb377a4c7304ee86!2sCynergy+Suites+Royale!5e0!3m2!1sen!2snl!4v1536026538820" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>

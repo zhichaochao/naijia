@@ -373,3 +373,15 @@
 2018-10-23 10:07:00 - PHP Notice:  Undefined index: email in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\information\help.php on line 63
 2018-10-23 10:07:00 - PHP Notice:  Undefined index: telephone in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\information\help.php on line 64
 2018-10-23 10:17:21 - PHP Notice:  Error: Could not load template D:/phpStudy/PHPTutorial/WWW/hotnajia/catalog/view/theme/default/template/mail/contact_us_email.tpl! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\template\php.php on line 23
+2018-10-24 3:14:14 - PHP Notice:  Undefined variable: banner_id in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 14
+2018-10-24 3:32:49 - PHP Notice:  Undefined index: m_thumb in D:\phpStudy\WWW\naijia\admin\view\template\design\banner_form.tpl on line 83
+2018-10-24 3:32:49 - PHP Notice:  Undefined index: m_image in D:\phpStudy\WWW\naijia\admin\view\template\design\banner_form.tpl on line 84
+2018-10-24 3:32:49 - PHP Notice:  Undefined index: m_thumb in D:\phpStudy\WWW\naijia\admin\view\template\design\banner_form.tpl on line 83
+2018-10-24 3:32:49 - PHP Notice:  Undefined index: m_image in D:\phpStudy\WWW\naijia\admin\view\template\design\banner_form.tpl on line 84
+2018-10-24 6:03:37 - PHP Notice:  Undefined variable: order in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 36
+2018-10-24 6:03:37 - PHP Notice:  Undefined variable: limit in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 38
+2018-10-24 6:08:22 - PHP Notice:  Undefined variable: order in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 36
+2018-10-24 6:28:48 - PHP Notice:  Undefined variable: tmp in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 72
+2018-10-24 6:28:48 - PHP Notice:  Undefined variable: tmp in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 72
+2018-10-24 6:28:48 - PHP Notice:  Undefined variable: tmp in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 72
+2018-10-24 6:28:48 - PHP Notice:  Undefined variable: tmp in D:\phpStudy\WWW\naijia\catalog\controller\common\home.php on line 72

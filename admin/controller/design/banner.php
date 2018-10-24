@@ -378,12 +378,21 @@ class ControllerDesignBanner extends Controller {
 					$image = '';
 					$thumb = 'no_image.png';
 				}
+				if (is_file(DIR_IMAGE . $banner_image['m_image'])) {
+					$m_image = $banner_image['m_image'];
+					$m_thumb = $banner_image['m_image'];
+				} else {
+					$m_image = '';
+					$m_thumb = 'no_image.png';
+				}
 				
 				$data['banner_images'][$key][] = array(
 					'title'      => $banner_image['title'],
 					'link'       => $banner_image['link'],
 					'image'      => $image,
 					'thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
+					'm_image'      => $m_image,
+					'm_thumb'      => $this->model_tool_image->resize($m_thumb, 100, 100),
 					'sort_order' => $banner_image['sort_order']
 				);
 			}
