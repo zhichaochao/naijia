@@ -144,7 +144,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a class="pro_more" >
+                    <a class="pro_more" href="<?php echo $homes?>">
                         <button>VIEW All REVIEWS</button>
                     </a>
                 </div>

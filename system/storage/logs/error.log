@@ -631,3 +631,6 @@
 2018-10-24 10:53:16 - PHP Notice:  Undefined index: img in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\information\allreviews.php on line 60
 2018-10-24 10:54:57 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\information\allreviews.php on line 56
 2018-10-24 10:54:58 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\information\allreviews.php on line 56
+2018-10-24 11:54:37 - PHP Notice:  Undefined index: m_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 18
+2018-10-24 11:54:37 - PHP Notice:  Undefined index: m_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 18
+2018-10-24 11:54:37 - PHP Notice:  Undefined index: m_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 25
