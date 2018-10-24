@@ -19,6 +19,11 @@ class ControllerInformationFaqs extends Controller {
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
 		);
+
+		$str=$this->config->get('config_video');
+		// 
+			$data['video1']=HTTP_SERVER.'image/video/home/'.$str;
+
 			$data['continue'] = $this->url->link('common/home');
 
 			$data['column_left'] = $this->load->controller('common/column_left');

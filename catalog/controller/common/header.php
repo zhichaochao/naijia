@@ -95,6 +95,7 @@ class ControllerCommonHeader extends Controller {
 		$data['informations'] = array(
 			0 =>array(
 				'title'=>'COMPANY',
+				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
 				'child'=>array(
 						0=>array(
 							'title'=>'About Us',
@@ -113,40 +114,38 @@ class ControllerCommonHeader extends Controller {
 							'title'=>'What App',
 							'url'=>$this->url->link('information/profile'),
 							),
-
-
 					),
 				),
 			1=>array(
 				'title'=>'POLOCIES',
+				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
 				'child'=>array(
 						0=>array(
 							'title'=>'Return Policy',
-						'url'=>$this->url->link('information/information','information_id=1'),
+						'url'=>$this->url->link('information/returnpolicy'),
 							),
 						1=>array(
 							'title'=>'Shipping & Handling',
-							'url'=>$this->url->link('information/information','information_id=9'),
+							'url'=>$this->url->link('information/shipping'),
 							),
 						2=>array(
 							'title'=>'Terms & Conditions',
-							'url'=>$this->url->link('information/information','information_id=3'),
+							'url'=>$this->url->link('information/trems'),
 
 							),
 						3=>array(
 							'title'=>'VIP Policy',
-							'url'=>$this->url->link('information/information','information_id=4'),
+							'url'=>$this->url->link('information/information'),
 							),
-
-
 					),
 				),
 			2=>array(
 				'title'=>'POLOCIES',
+				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
 				'child'=>array(
 						0=>array(
 							'title'=>'FAQs',
-							'url'=>$this->url->link('account/account'),
+							'url'=>$this->url->link('information/faqs'),
 							),
 						1=>array(
 							'title'=>'Tutorials',
@@ -154,16 +153,11 @@ class ControllerCommonHeader extends Controller {
 							),
 						2=>array(
 							'title'=>'Feedback',
-							'url'=>$this->url->link('account/wishlist'),
+							'url'=>$this->url->link('information/help'),
 
 							),
-
-
 					),
-
-
 				),
-
 		 );
 		//购物车数量
 		$data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
@@ -230,6 +224,7 @@ class ControllerCommonHeader extends Controller {
 // 
 		$data['hothref'] = $this->url->link('product/hotcategory');
 		$data['acchref'] = $this->url->link('product/acccategory');
+		$data['blog'] = $this->url->link('information/profile');
 		$data['aboutus'] = $this->url->link('information/company');
 		$data['lagosstore'] = $this->url->link('information/lagosstore');
 		$data['language'] = $this->load->controller('common/language');

@@ -58,7 +58,7 @@
                 <a href="###">Hair Care</a>
                 <ol class="nav_ol">
                   <li><a href="<?php echo $acchref;?>">Accessories</a></li>
-                  <li><a href="###">Blog</a></li>
+                  <li><a href="<?php echo $blog;?>">Blog</a></li>
                 </ol>
               </li>
 
@@ -132,9 +132,9 @@
                 <li><a href="###">Blogs</a></li>
               </ol> 
             </li>
-            <li><a href="###">Lagos Store <i></i></a></li>
-            <li><a href="###">About Us <i></i></a></li>
-            <li><a href="###">Wish List <i></i></a></li>
+            <li><a href="<?php echo $lagosstore;?>">Lagos Store <i></i></a></li>
+            <li><a href="<?php echo $aboutus;?>">About Us <i></i></a></li>
+            <li><a href="<?=$wishlist;?>">Wish List <i></i></a></li>
           </ul>
         </div>
         

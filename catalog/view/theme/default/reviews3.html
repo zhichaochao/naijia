@@ -233,7 +233,6 @@
 									<ul class="clearfix">
 										<li><img class="lazyLoad" src="" srcs="img/in_ul6.jpg"/></li>
 										<li><img class="lazyLoad" src="" srcs="img/in_ul6.jpg"/></li>
-										<li><img class="lazyLoad" src="" srcs="img/in_ul6.jpg"/></li>
 									</ul>
 									<a href="###" class="a_btn">Shop now<em>></em></a>
 								</div>
@@ -261,8 +260,6 @@
 										20, & 22 and it’s very long and 2 and it’s very long and 
 									</p>
 									<ul class="clearfix">
-										<li><img class="lazyLoad" src="" srcs="img/in_ul6.jpg"/></li>
-										<li><img class="lazyLoad" src="" srcs="img/in_ul6.jpg"/></li>
 										<li><img class="lazyLoad" src="" srcs="img/in_ul6.jpg"/></li>
 									</ul>
 									<a href="###" class="a_btn">Shop now<em>></em></a>
@@ -883,27 +880,23 @@
 	
 	$(function(){
 		
-	
-		
-		//2产品小图点击换大图
-//		$(".in_ul3 ul>li>img").click(function(){
-//			var src = $(this).attr("src");
-//			$(this).parents(".con").find(".img_a>img").attr("src",src);
-//		});
 		//评论弹窗
 		$(".in_ul3 .con").click(function(){
-			$(".khpj_midal").fadeIn();
-			$("body").css("overflow","hidden");
-			var swiper = new Swiper('.pl_lb', {
-		      pagination: {
-		        el: '.swiper-pagination',
-		        type: 'fraction',
-		      },
-		      navigation: {
-		        nextEl: '.swiper-button-next',
-		        prevEl: '.swiper-button-prev',
-		      },
-		    });
+			if(!$(this).hasClass("img_null")){
+				$(".khpj_midal").fadeIn();
+				$("body").css("overflow","hidden");
+				var swiper = new Swiper('.pl_lb', {
+			      pagination: {
+			        el: '.swiper-pagination',
+			        type: 'fraction',
+			      },
+			      navigation: {
+			        nextEl: '.swiper-button-next',
+			        prevEl: '.swiper-button-prev',
+			      },
+			    });
+			}
+		    
 		});	
 		$(".khpj_midal .close").click(function(){
 			$(".khpj_midal").fadeOut();
@@ -922,3 +915,8 @@
 	
 </script>
 
+<style type="text/css">
+.swiper-button-disabled{
+	display:none;
+}
+</style>

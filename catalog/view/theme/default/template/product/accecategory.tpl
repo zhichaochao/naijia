@@ -118,9 +118,9 @@
               $('#page').val(page);
                $.ajax({
                           url: 'index.php?route=product/acccategory/loadpage&page='+page+'&sort='+sort+'&category_id='+category_id+'&limit='+limit ,
-                          // dataType: 'json',
+                          dataType: 'json',
                           success: function(data) {
-                            alert(data);
+                            // alert(data);
                             var result="";
                             console.log( data.products );
                             for (var i =0; i < data.products.length ; i++) {

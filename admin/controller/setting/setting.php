@@ -70,6 +70,7 @@ class ControllerSettingSetting extends Controller {
 		$data['entry_location'] = $this->language->get('entry_location');
 		$data['entry_meta_title'] = $this->language->get('entry_meta_title');
 		$data['entry_meta_description'] = $this->language->get('entry_meta_description');
+		$data['entry_meta_descriptions'] = "FAQs视频名称";
 		$data['entry_meta_keyword'] = $this->language->get('entry_meta_keyword');
 		$data['entry_meta_keywords'] = $this->language->get('entry_meta_keywords');
 		$data['entry_meta_slogan'] = $this->language->get('entry_meta_slogan');
@@ -401,6 +402,11 @@ class ControllerSettingSetting extends Controller {
 			$data['config_meta_description'] = $this->request->post['config_meta_description'];
 		} else {
 			$data['config_meta_description'] = $this->config->get('config_meta_description');
+		}
+		if (isset($this->request->post['config_video'])) {
+			$data['config_video'] = $this->request->post['config_video'];
+		} else {
+			$data['config_video'] = $this->config->get('config_video');
 		}
 
 		if (isset($this->request->post['config_meta_keyword'])) {

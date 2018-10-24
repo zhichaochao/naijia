@@ -662,8 +662,10 @@ window.onload=function(){
 		$(".wish_btn").click(function(){
 			if($(this).hasClass("active")){
 				$(this).removeClass("active");
+				tips('取消收藏');
 			}else{
 				$(this).addClass("active");
+				tips('收藏成功');
 			}
 		})
 		

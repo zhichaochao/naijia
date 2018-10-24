@@ -430,6 +430,37 @@ class ControllerAccountAccount extends Controller {
 			$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 		}
 
+		 $this->load->language('account/edit');
+        $this->load->model('account/customer');
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validatepwd()) {
+// print_r($this->request->post);exit;
+		  $resuast= $this->model_account_customer->editCustomerUK($this->request->post);
+		  if($resuast){
+		  	 $this->session->data['success'] = 'success';
+		  	 
+		  	 // $this->session->data['success'] = $this->language->get('text_success');
+		  }
+		  
+
+		   // Add to activity log
+		   if($this->config->get('config_customer_activity')){
+			  $this->load->model('account/activity');
+
+			  $activity_data = array(
+				 'customer_id' => $this->customer->getId(),
+				 'name'        => $this->customer->getFirstName() . ' ' . $this->customer->getLastName()
+			  );
+
+			  $this->model_account_activity->addActivity('edit', $activity_data);
+		   }
+		   $this->response->redirect($this->url->link('account/logout'));
+
+		}
+
+
+		// $this->change();
+
 		if (isset($this->error['code'])) {
 			$data['error_code'] = $this->error['code'];
 		} else {
@@ -502,7 +533,7 @@ class ControllerAccountAccount extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 
 		$data['action'] = $this->url->link('account/account/changemail', '', true);
-		$data['actions'] = $this->url->link('account/account/changepwd', '', true);
+		$data['actions'] = $this->url->link('account/account/change', '', true);
 
 		// if ($data['success']) {
 		// 	$this->response->redirect($this->url->link('account/account', '', true));
@@ -585,8 +616,13 @@ class ControllerAccountAccount extends Controller {
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validatepwd()) {
 // print_r($this->request->post);exit;
-		   $this->model_account_customer->editCustomerUK($this->request->post);
-		   $this->session->data['success'] = $this->language->get('text_success');
+		  $resuast= $this->model_account_customer->editCustomerUK($this->request->post);
+		  if($resuast){
+		  	 $this->session->data['success'] = 'success';
+		  	 $this->response->redirect($this->url->link('account/logout'));
+		  	 // $this->session->data['success'] = $this->language->get('text_success');
+		  }
+		  
 
 		   // Add to activity log
 		   if($this->config->get('config_customer_activity')){
@@ -603,9 +639,9 @@ class ControllerAccountAccount extends Controller {
 		}
 
 
-		$this->change();
+		// $this->change();
 
-		// $this->response->redirect($this->url->link('account/account', '', true));
+		
 
 	}
 

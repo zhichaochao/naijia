@@ -41,6 +41,18 @@ class ControllerAccountLogout extends Controller {
 			'href' => $this->url->link('account/logout', '', true)
 		);
 
+		if (isset($this->request->post['email'])) {
+			$data['email'] = $this->request->post['email'];
+		} else {
+			$data['email'] = '';
+		}
+
+		if (isset($this->request->post['password'])) {
+			$data['password'] = $this->request->post['password'];
+		} else {
+			$data['password'] = '';
+		}
+
 		$data['heading_title'] = $this->language->get('heading_title');
 
 		$data['text_message'] = $this->language->get('text_message');
@@ -49,6 +61,16 @@ class ControllerAccountLogout extends Controller {
 
 		$data['continue'] = $this->url->link('common/home');
 
+		$data['redirect'] = '';
+
+		$data['action'] = $this->url->link('account/login', '', true);
+		//$data['registers'] = $this->url->link('account/register', '', true);
+		$data['register'] = $this->url->link('account/login/register_save', '', true);
+		$data['forgotten'] = $this->url->link('account/forgotten', '', true);
+
+		$data['entry_email'] = "E-Mail Address";
+		$data['entry_password'] = "PassWord";
+
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
@@ -56,6 +78,6 @@ class ControllerAccountLogout extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
-		$this->response->setOutput($this->load->view('common/success', $data));
+		$this->response->setOutput($this->load->view('account/login', $data));
 	}
 }
