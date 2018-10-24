@@ -52,6 +52,12 @@
                 </div>
               </div>
               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-descriptions">FAQs视频</label>
+                <div class="col-sm-10">
+                  <textarea name="config_video" rows="5" placeholder="<?php echo $entry_meta_descriptions; ?>" id="input-meta-descriptions" class="form-control"><?php echo $config_video; ?></textarea>
+                </div>
+              </div>
+              <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-meta-description"><?php echo $entry_meta_description; ?></label>
                 <div class="col-sm-10">
                   <textarea name="config_meta_description" rows="5" placeholder="<?php echo $entry_meta_description; ?>" id="input-meta-description" class="form-control"><?php echo $config_meta_description; ?></textarea>

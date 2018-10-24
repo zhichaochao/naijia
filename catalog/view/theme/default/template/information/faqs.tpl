@@ -6,9 +6,9 @@
         
         <ul class="f_ul1">
           <li>
-            <h3>1.HOW TO DISTINGUISH HUMAN HAIR WIGS AND SYNTHETIC WIGS（VIDEO）</h3>
+           <h3>1.HOW TO DISTINGUISH HUMAN HAIR WIGS AND SYNTHETIC WIGS<br />（VIDEO）<img class="f_img active" src="catalog/view/theme/default/img/png/icon_7.png"  /></h3>
             <div class="s_text">
-              <video controls="controls" src="img/myvideo.mp4"></video>
+              <video controls="controls" src="<?php echo $video1?>"></video>
               <h5>Burn test</h5>
               <table border="" cellspacing="" cellpadding="">
                 <tr>
@@ -113,7 +113,7 @@
             </div>
           </li>
           <li>
-            <h3>2.HOW TO PLACE ORDER AND GET THE HAIR?</h3>
+           <h3>2.HOW TO PLACE ORDER AND GET THE HAIR?<img class="f_img" src="catalog/view/theme/default/img/png/icon_7.png"  /></h3>
             <div class="s_text">
               <p>
                 1) Add the products you want to THE CART.<br />
@@ -126,7 +126,7 @@
           </li>
           
           <li>
-            <h3>3.WHAT IS YOUR REFUND & RETURN POLICY?</h3>
+            <h3>3.WHAT IS YOUR REFUND & RETURN POLICY?<img class="f_img" src="catalog/view/theme/default/img/png/icon_7.png"  /></h3>
             <div class="s_text">
               <h4 style="margin-top: 0;">We gladly accept returns and exchanges</h4>
               <p>Contact us within: 5 days of delivery</p>
@@ -146,7 +146,7 @@
           </li>
           
           <li>
-            <h3>4.WHAT TYPR OF HAIR CARE PRODUCTS SHOULD I USE?</h3>
+            <h3>4.WHAT TYPR OF HAIR CARE PRODUCTS SHOULD I USE?<img class="f_img" src="catalog/view/theme/default/img/png/icon_7.png"  /></h3>
             <div class="s_text">
               <p>
                 Treat this hair just as if it was your own hair.<br />
@@ -160,7 +160,7 @@
           </li>
           
           <li>
-            <h3>5.WHY ARE MY HAIR EXTENSIONS GETTING TANGLED?</h3>
+            <h3>5.WHY ARE MY HAIR EXTENSIONS GETTING TANGLED?<img class="f_img" src="catalog/view/theme/default/img/png/icon_7.png"  /></h3>
             <div class="s_text">
               <p>
                 It could be caused by dry hair. Please make sure to wash & condition your 
@@ -172,7 +172,7 @@
           </li>
           
           <li>
-            <h3>6.CAN THE HAIR BE STRAIGHT / CURLED / DYED / COLORED? </h3>
+            <h3>6.CAN THE HAIR BE STRAIGHT / CURLED / DYED / COLORED? <img class="f_img" src="catalog/view/theme/default/img/png/icon_7.png"  /></h3>
             <div class="s_text" style="border-bottom: 1px solid #e8e8e8;">
               <p>
                 Yes. you could use hair straightener or hair curler to style the virgin hair . 
@@ -190,18 +190,18 @@
 <?php echo $footer; ?>
 <script>
   $(function(){
-    $(".fot_text2 .f_ul1 li h3").click(function(){
+    $(".fot_text4 .f_ul1 li h3").click(function(){
       var img = $(this).find(".f_img");
       if(img.hasClass("active")){
         img.removeClass("active");  
         $(this).siblings(".s_text").slideUp();
       }else{
-        $(".fot_text2 .s_text").slideUp();
-        $(".fot_text2 .f_ul1 .f_img").removeClass("active");
+        $(".fot_text4 .s_text").slideUp();
+        $(".fot_text4 .f_ul1 .f_img").removeClass("active");
         img.addClass("active");
         $(this).siblings(".s_text").slideDown();
       }
       
     })
   })
-</script> 
+</script>

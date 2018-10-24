@@ -99,6 +99,15 @@ header{position:fixed;top:0;left:0;width:100%;background: #fff;z-index:10;height
 }
 .content{max-width: 1640px;margin: auto;}
 .ov_text{text-overflow: ellipsis;overflow: hidden;white-space: nowrap;width: 100%;}
+@media only screen and (min-width: 1px) and (max-width: 920px) {
+	.yd_hide{display: none !important;}
+	.yd__show{display: block !important;}
+}
+@media only screen and (min-width: 921px){
+	.pc_hide{display: none !important;}
+	.pc_show{display: block !important;}
+}
+
 a.step{background: #333;color: #fff;border-radius: 5px;margin-top: 20px;display: inline-block;padding: 5px;}
 .share_l{max-width: 400px !important;}
 
