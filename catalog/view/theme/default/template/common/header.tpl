@@ -132,9 +132,9 @@
                 <li><a href="###">Blogs</a></li>
               </ol> 
             </li>
-            <li><a href="###">Lagos Store <i></i></a></li>
-            <li><a href="###">About Us <i></i></a></li>
-            <li><a href="###">Wish List <i></i></a></li>
+            <li><a href="<?php echo $lagosstore;?>">Lagos Store <i></i></a></li>
+            <li><a href="<?php echo $aboutus;?>">About Us <i></i></a></li>
+            <li><a href="<?=$wishlist;?>">Wish List <i></i></a></li>
           </ul>
         </div>
         
