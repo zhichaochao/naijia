@@ -48,29 +48,46 @@
     </div>
     <div class="yd_footer2">
       <ol class="ol_ydfot clearfix">
-        <li class="active">
-          <a href="###">
-            <img src="/catalog/view/theme/default/img/png/fot_1.png" alt="" />
-            <img class="active" src="/catalog/view/theme/default/img/png/fot_1_.png" alt="" />
-            <p>Home</p>
-          </a>
-        </li>
-        <li>
+       <?php if($sername =='/'){ ?>   
+            <li class="active">
+                  <a href="<?php echo $home?>">
+                    <img src="/catalog/view/theme/default/img/png/fot_1.png" alt="" />
+                    <img class="active" src="/catalog/view/theme/default/img/png/fot_1_.png" alt="" />
+                    <p>Home</p>
+                  </a>
+                </li>
+       <?php }else{ ?>
+       <li class="<?=strpos($thispage,'common' ) !== false ?'active':'';?>">
+                  <a href="<?php echo $home?>">
+                    <img src="/catalog/view/theme/default/img/png/fot_1.png" alt="" />
+                    <img class="active" src="/catalog/view/theme/default/img/png/fot_1_.png" alt="" />
+                    <p>Home</p>
+                  </a>
+                </li>
+
+        <?php }?>
+
+        
+
+
+        <li class="<?=strpos($thispage,'product' ) !== false ?'active':'';?>">
           <a href="<?php echo $contac?>">
             <img src="/catalog/view/theme/default/img/png/fot_2.png" alt="" />
             <img class="active" src="/catalog/view/theme/default/img/png/fot_2_.png" alt="" />
             <p>Collection</p>
           </a>
         </li>
+
         <li>
-          <a class="contact" href="javascript:0;">
+          <a class="contact" href="javascript:;">
             <img src="/catalog/view/theme/default/img/png/fot_3.png" alt="" />
             <img class="active" src="/catalog/view/theme/default/img/png/fot_3_.png" alt="" />
             <p>Contact</p>
           </a>
         </li>
-        <li>
-          <a href="###">
+
+        <li  class="<?=strpos($thispage,'information' ) !== false ?'active':'';?>">
+          <a href="<?php echo $me?>">
             <img src="/catalog/view/theme/default/img/png/fot_4.png" alt="" />
             <img class="active" src="/catalog/view/theme/default/img/png/fot_4_.png" alt="" />
             <p>Me</p>

@@ -716,3 +716,7 @@
 2018-10-25 5:49:21 - PHP Notice:  Undefined variable: business_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 18
 2018-10-25 5:51:59 - PHP Notice:  Undefined variable: country_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 17
 2018-10-25 5:51:59 - PHP Notice:  Undefined variable: business_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 18
+2018-10-25 6:57:02 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 73
+2018-10-25 6:57:08 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 73
+2018-10-25 6:57:14 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 60
+2018-10-25 6:57:14 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 73

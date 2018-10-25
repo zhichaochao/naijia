@@ -52,6 +52,12 @@ class ControllerAccountCoupon extends Controller {
 		} else {
 			$data['telephone'] = '';
 		}
+		if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+		}else{
+			$data['home'] =$this->url->link('account/account');
+		}
+		// print_r($data['home']);exit();
 		$data['add'] = $this->url->link('account/address/add', '', true);
 		$data['back'] = $this->url->link('account/account', '', true);
 

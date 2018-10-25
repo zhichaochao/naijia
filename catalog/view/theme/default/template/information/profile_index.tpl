@@ -4,7 +4,7 @@
 		<div class="wig3 clearfix">
 			<div class="wig_con clearfix">
 				<div class="top_yd pc_hide clearfix">
-					<h1><a class="fh" href="###">< BACK</a> Hair Care</h1>
+					<h1><a class="fh" href="javascript:;">< BACK</a> Hair Care</h1>
 				</div>
 				
 				<h1 class="top_h1 yd_hide clearfix">Hair Care</h1>
@@ -15,7 +15,7 @@
 				
 				<ul class="wig3_ul clearfix">
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<div class="bf_img"></div>
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
@@ -33,7 +33,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -50,7 +50,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<div class="bf_img"></div>
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
@@ -68,7 +68,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -85,7 +85,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -102,7 +102,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -119,7 +119,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -136,7 +136,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -153,7 +153,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="###">
+						<a href="javascript:;">
 							<div class="pic_img clearfix">
 								<img src="catalog/view/theme/default/img/wig6.jpg"/>
 							</div>
@@ -171,7 +171,7 @@
 					</li>
 				</ul>
 				
-				<a class="more_a" href="###">VIEW MORE +</a>
+				<a class="more_a" href="javascript:;">VIEW MORE +</a>
 			</div>
 		</div>
 		
