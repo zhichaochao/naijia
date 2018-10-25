@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="intext2 clearfix">
-            <?php if($allreviews){?>
+            <?php if(isset($allreviews)){?>
                 <div class="content">
                     <ul class="in_ul3 clearfix">
                       <?php foreach ($allreviews as $review) { ?>
