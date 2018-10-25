@@ -387,15 +387,15 @@ class ModelCatalogProduct extends Model {
 		}
 
 		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
+			// if ($data['start'] < 0) {
+			// 	$data['start'] = 0;
+			// }
 
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
+			// if ($data['limit'] < 1) {
+			// 	$data['limit'] = 20;
+			// }
 
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+			// $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
 		}
 // print_r($sql);exit;
 		$product_data = array();
@@ -535,17 +535,17 @@ class ModelCatalogProduct extends Model {
 			$sql .= " ASC, LCASE(pd.name) ASC";
 		}
 
-		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
+		// if (isset($data['start']) || isset($data['limit'])) {
+			// if ($data['start'] < 0) {
+			// 	$data['start'] = 0;
+			// }
 
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
+			// if ($data['limit'] < 1) {
+			// 	$data['limit'] = 20;
+			// }
 
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-		}
+			// $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+		// }
 // print_r($sql);exit;
 		$product_data = array();
 
@@ -684,17 +684,17 @@ class ModelCatalogProduct extends Model {
 			$sql .= " ASC, LCASE(pd.name) ASC";
 		}
 
-		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
+		// if (isset($data['start']) || isset($data['limit'])) {
+		// 	if ($data['start'] < 0) {
+		// 		$data['start'] = 0;
+		// 	}
 
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
+		// 	if ($data['limit'] < 1) {
+		// 		$data['limit'] = 20;
+		// 	}
 
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-		}
+		// 	$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+		// }
 // print_r($sql);exit;
 		$product_data = array();
 

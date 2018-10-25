@@ -200,12 +200,20 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 			// basic 三个子分类
+			$filter_datas = array(
+				'filter_category_id' => $category_info['category_id'],
+				'filter_sub_category' => true,       //dyl add
+				'filter_filter'      => $filter,
+				// 'hot'      => $category_info['hot'],
+				'sort'               => $sort,
+				'order'              => $order
+			);
 
-			$basicresults1 = $this->model_catalog_product->getBasicProducts($filter_data);
-			$basicresults2 = $this->model_catalog_product->getBasicProductss($filter_data);
-			$basicresults3 = $this->model_catalog_product->getBasiccProductss($filter_data);
+			$basicresults1 = $this->model_catalog_product->getBasicProducts($filter_datas);
+			$basicresults2 = $this->model_catalog_product->getBasicProductss($filter_datas);
+			$basicresults3 = $this->model_catalog_product->getBasiccProductss($filter_datas);
 			// $basicresults1 = $this->model_catalog_product->getBasicProducts($filter_data);
-// print_r($basicresults3);exit;
+// print_r($basicresults2);exit;
 			foreach ($basicresults1 as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
@@ -256,7 +264,7 @@ class ControllerProductCategory extends Controller {
 			    if (isset($res[0]['image'])){
 			    	$tmp=$this->model_tool_image->resize($res[0]['image'],380,380);
 			    }else{
-			    	$tmp=$image;
+			    	$tmp=$this->model_tool_image->resize('no_image.png', 380, 380);
 			    }
 				$data['basicproducts1'][] = array(
 					'product_id'  => $result['product_id'],
@@ -278,6 +286,7 @@ class ControllerProductCategory extends Controller {
 					'wishlist'	  =>$wishlist
 				);
 			}
+			// print_r($data['basicproducts1']);exit;
 			foreach ($basicresults2 as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
@@ -490,13 +499,13 @@ class ControllerProductCategory extends Controller {
 			    	if (isset($res[0]['image'])){
 			    	$tmp=$this->model_tool_image->resize($res[0]['image'],800,480);
 			    }else{
-			    	$tmp=$image;
+			    	$tmp=$this->model_tool_image->resize('no_image.png', 800, 480);
 			    }
 			    }else{
 			    	if (isset($res[0]['image'])){
 			    	$tmp=$this->model_tool_image->resize($res[0]['image'],380,380);
 			    }else{
-			    	$tmp=$image;
+			    	$tmp=$this->model_tool_image->resize('no_image.png', 380, 380);
 			    }
 			    }
 			    

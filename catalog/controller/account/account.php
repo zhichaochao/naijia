@@ -467,6 +467,12 @@ class ControllerAccountAccount extends Controller {
 			$data['error_code'] = '';
 		}
 
+		if (isset($this->error['yzm'])) {
+			$data['error_yzm'] = $this->error['yzm'];
+		} else {
+			$data['error_yzm'] = '';
+		}
+
 		if (isset($this->error['password'])) {
 			$data['error_password'] = $this->error['password'];
 		} else {
@@ -479,26 +485,11 @@ class ControllerAccountAccount extends Controller {
 			$data['error_confirm'] = '';
 		}
 
-		// if (isset($this->error['success'])) {
-		// 	$data['success'] = $this->error['success'];
-		// } else {
-			
-		// 	$data['success'] = '';
-		// }
-// print($data['success'] );exit;
-		
-
-
-
-
 		if (isset($this->request->post['email'])) {
-			$data['emails'] =$this->session->data['emails']=$this->request->post['email'];
-		} elseif (!empty($customer_info)) {
-			$data['emails'] =$this->session->data['emails']=$customer_info['email'];
+			$data['emails'] = $this->request->post['email'];
 		} else {
-			$data['emails'] = '';
+			$data['emails'] = $this->customer->getEmail();
 		}
-		// print_r($data['emails']);
 
 		if (isset($this->request->post['firstname'])) {
 			$data['firstname'] = $this->request->post['firstname'];
@@ -514,7 +505,7 @@ class ControllerAccountAccount extends Controller {
 		} elseif (!empty($customer_info)) {
 			$data['telephone'] = $customer_info['telephone'];
 		} else {
-			$data['telephone'] = '';
+			$data['telephone'] = $this->customer->getTelephone();
 		}
 		if(isset($_SERVER['HTTP_REFERER'])){
 			$data['home'] =$_SERVER['HTTP_REFERER'];
@@ -651,6 +642,12 @@ class ControllerAccountAccount extends Controller {
      * @author   dyl  783973660@qq.com  2016.9.28
      */
 	protected function validatepwd(){
+
+		if(!isset($this->session->data['yzm'])){
+           //$this->error['confirm'] = 'Confirm password cannot be empty!';
+         $this->error['yzm'] = 'Please get the verification code first.';
+           return false;
+		}
 
 		if($this->request->post['code'] != $this->session->data['yzm'] || $this->request->post['code']==''){
            //$this->error['confirm'] = 'Confirm password cannot be empty!';

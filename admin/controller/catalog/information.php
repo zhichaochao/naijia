@@ -370,7 +370,7 @@ class ControllerCatalogInformation extends Controller {
 		} else {
 			$data['information_description'] = array();
 		}
-
+         
 		$this->load->model('setting/store');
 
 		$data['stores'] = $this->model_setting_store->getStores();
@@ -390,6 +390,15 @@ class ControllerCatalogInformation extends Controller {
 		} else {
 			$data['keyword'] = '';
 		}
+		// $information_description=$data['information_description'];
+		// print_r($information_description['image']);exit;
+		// if (isset($this->request->post['image'])) {
+		// 	$data['image'] = $this->request->post['image'];
+		// } elseif (!empty($information_description)) {
+		// 	$data['image'] = $information_description['image'];
+		// } else {
+		// 	$data['image'] = '';
+		// }
 
 		if (isset($this->request->post['bottom'])) {
 			$data['bottom'] = $this->request->post['bottom'];
@@ -422,6 +431,21 @@ class ControllerCatalogInformation extends Controller {
 		} else {
 			$data['information_layout'] = array();
 		}
+
+
+		// $this->load->model('tool/image');	
+		// if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
+		// 	$data['thumb'] = $this->model_tool_image->resize($this->request->post['image'], 100, 100);
+		// } elseif (!empty($information_description) && is_file(DIR_IMAGE . $information_description['image'])) {
+		// 	$data['thumb'] = $this->model_tool_image->resize($information_description['image'], 100, 100);
+		// } else {
+		// 	$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		// }
+
+
+
+		// $data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+
 
 		$this->load->model('design/layout');
 
