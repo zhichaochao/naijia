@@ -222,8 +222,10 @@ class ControllerProductSearch extends Controller {
 
 			if($results){
 				$datekey = array(
-					'datekey'=>$search
+					'datekey'=>$search,
+					'ip'=>$this->request->server['REMOTE_ADDR']
 					);
+				// print_r($datekey);exit;
 				$searchname = $this->model_catalog_product->addSearch($datekey);
 			}
 			foreach ($results as $result) {

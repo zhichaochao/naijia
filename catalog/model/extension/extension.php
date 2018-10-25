@@ -5,13 +5,14 @@ class ModelExtensionExtension extends Model {
 
 		return $query->rows;
 	}
-	function getSearch() {
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "keywords k WHERE customer_id = '" . (int)$this->customer->getId() . "'ORDER BY k.id DESC ");
+	function getSearch($ip) {
+		// print_r("SELECT * FROM " . DB_PREFIX . "keywords k WHERE customer_id = '" . (int)$this->customer->getId() . "'AND ip = '" .$ip. "'ORDER BY k.id DESC ");exit;
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "keywords k WHERE customer_id = '" . (int)$this->customer->getId() . "'AND ip = '" .$ip. "'ORDER BY k.id DESC ");
 // print_r($query);exit;
 		return $query->rows;
 	}
-	public function deleteSearch($id) {
-		$query=$this->db->query("DELETE FROM `" . DB_PREFIX . "keywords` WHERE id = '" . $id. "'");	
+	public function deleteSearch($id,$ip) {
+		$query=$this->db->query("DELETE FROM `" . DB_PREFIX . "keywords` WHERE customer_id = '" . $id. "' AND ip = '" .$ip. "'");	
 		return $query;
 	}
 	function getHotsearch() {

@@ -720,3 +720,8 @@
 2018-10-25 6:57:08 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 73
 2018-10-25 6:57:14 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 60
 2018-10-25 6:57:14 - PHP Notice:  Undefined variable: thispage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 73
+2018-10-25 7:57:09 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-10-25 7:57:09 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-10-25 8:01:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 226
+2018-10-25 9:09:48 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-10-25 9:09:48 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13

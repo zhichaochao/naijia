@@ -1247,13 +1247,13 @@ class ModelCatalogProduct extends Model {
 				$query=$this->db->query("SELECT * FROM " . DB_PREFIX . "keywords WHERE customer_id = '" . (int)$this->customer->getId() . "' AND keywords = '" . $this->db->escape($data['datekey']) . "'  ");
 				$rows=$query->row;
 					if(empty($rows)){
-				$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "', ip = '" . $this->db->escape($data['ip']) . "'");
 					}
 			}else{
-			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "', ip = '" . $this->db->escape($data['ip']) . "'");
 			}
 		}else{
-			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "', ip = '" . $this->db->escape($data['ip']) . "'");
 		}
 		return ;
 	}
