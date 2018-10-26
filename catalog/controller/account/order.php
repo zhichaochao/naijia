@@ -179,7 +179,7 @@ class ControllerAccountOrder extends Controller {
 	
 
 		$order_info = $this->model_account_order->getOrder($order_id);
-		print_r($order_info);exit();
+		// print_r($order_info);exit();
 
 		if ($order_info) {
 			$this->document->setTitle($this->language->get('text_order'));
