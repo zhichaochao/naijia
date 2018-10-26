@@ -1,7 +1,7 @@
 <?php
 class ControllerApiCustomer extends Controller {
 	public function index() {
-		// print_r($this->request->post);exit();
+		// print_r($this->session->data);exit();
 		$this->load->language('api/customer');
 
 		// Delete past customer in case there is an error
@@ -10,9 +10,9 @@ class ControllerApiCustomer extends Controller {
 		$json = array();
 		// print_r($this->session->data['api_id']);exit();
 
-		// if (!isset($this->session->data['api_id'])) {
-		// 	$json['error']['warning'] = $this->language->get('error_permission');
-		// } else {
+		if (!isset($this->session->data['api_id'])) {
+			$json['error']['warning'] = $this->language->get('error_permission');
+		} else {
 			// Add keys for missing post vars
 			$keys = array(
 				'customer_id',
@@ -91,7 +91,7 @@ class ControllerApiCustomer extends Controller {
 
 				$json['success'] = $this->language->get('text_success');
 			}
-		// }
+		}
 
 		if (isset($this->request->server['HTTP_ORIGIN'])) {
 			$this->response->addHeader('Access-Control-Allow-Origin: ' . $this->request->server['HTTP_ORIGIN']);

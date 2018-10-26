@@ -738,6 +738,7 @@ class ControllerSaleOrder extends Controller {
 		$this->load->model('user/api');
 
 		$api_info = $this->model_user_api->getApi($this->config->get('config_api_id'));
+		// print_r($this->config->get('config_api_id'));exit();
 
 		if ($api_info) {
 			
