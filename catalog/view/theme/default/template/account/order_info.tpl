@@ -108,7 +108,18 @@
           <a class="btn_a contact_tc" href="###">Contact us</a>
         </div>
 
-<?php }elseif($order_status=='lnvalid'){?>
+<?php }elseif($order_status=='Voided'){?>
+     <?php if($payment_code == 'paystack') { ?>
+     <div class="left clearfix">
+          <h2 class="hong"><?php echo $order_status; ?> </h2>
+          <p class="p1">
+            Fail to complete payment or upload 
+            bank alert in time.
+          </p>
+          <span>Order date:<?php echo $date_added; ?></span>
+        </div>
+
+     <?php }else{ ?>
         <div class="left clearfix">
           <h2 class="hong"><?php echo $order_status; ?> </h2>
           <p class="p1">
@@ -118,6 +129,9 @@
           <a class="pay_a hong" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover To Pay</a>
           <span>Order date:<?php echo $date_added; ?></span>
         </div>
+     <?php }?>
+
+        
 
 <?php }elseif($order_status=='Canceled'){?>
         <div class="left clearfix">
@@ -307,13 +321,28 @@
           <h1 class="lv"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Your package has been delivered on <?php echo $date_modified; ?>. </p>
         </div>
-        <?php }elseif($order_status=='lnvalid'){?>
-        <div class="zt_top clearfix">
+        <?php }elseif($order_status=='Voided'){?>
+
+         <?php if($payment_code == 'paystack') { ?>
+
+          <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Fail to complete payment or <i><br /></i>  upload bank alert in time.</p>
+          <!-- <a class="pay_a" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover to pay</a> -->
+        </div>
+
+         <?php }else{?>
+         <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Fail to complete payment or <i><br /></i>  upload bank alert in time.</p>
           <a class="pay_a" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover to pay</a>
         </div>
+
+         <?php }?>
+
+        
 
         <?php }elseif($order_status=='Canceled'){?>
         <div class="zt_top clearfix">
