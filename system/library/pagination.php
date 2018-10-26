@@ -5,8 +5,8 @@ class Pagination {
 	public $limit = 20;
 	public $num_links = 8;
 	public $url = '';
-	public $text_first = '|&lt;';
-	public $text_last = '&gt;|';
+	public $text_first = '&lt; Last';
+	public $text_last = 'Next &gt;';
 	public $text_next = '&gt;';
 	public $text_prev = '&lt;';
 
@@ -30,7 +30,7 @@ class Pagination {
 
 		$this->url = str_replace('%7Bpage%7D', '{page}', $this->url);
 
-		$output = '<ul class="pagination">';
+		$output = '<div class="fy_div"> <ul>';
 
 		if ($page > 1) {
 			$output .= '<li><a href="' . str_replace(array('&amp;page={page}', '&page={page}'), '', $this->url) . '">' . $this->text_first . '</a></li>';
@@ -63,7 +63,7 @@ class Pagination {
 
 			for ($i = $start; $i <= $end; $i++) {
 				if ($page == $i) {
-					$output .= '<li class="active"><span>' . $i . '</span></li>';
+					$output .= '<li class="active">' . $i . '</li>';
 				} else {
 					if ($i === 1) {
 					$output .= '<li><a href="' . str_replace(array('&amp;page={page}', '&page={page}'), '', $this->url) . '">' . $i . '</a></li>';
@@ -79,7 +79,7 @@ class Pagination {
 			$output .= '<li><a href="' . str_replace('{page}', $num_pages, $this->url) . '">' . $this->text_last . '</a></li>';
 		}
 
-		$output .= '</ul>';
+		$output .= '</ul></div>';
 
 		if ($num_pages > 1) {
 			return $output;

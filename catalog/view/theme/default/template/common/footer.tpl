@@ -98,10 +98,10 @@
     
     
     <!--返回顶部-->
-    <!-- <div class="xf_right">
-      <div class="vip"><a href="###"><span>VIP</span></a></div>
-    </div> -->
-    
+    <a href="###"><div class="xf_right">
+      <div class="vip"><span>VIP</span></div>
+    </div>
+    </a>
     
     
    
