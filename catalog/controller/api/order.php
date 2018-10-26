@@ -4,10 +4,11 @@ class ControllerApiOrder extends Controller {
 		$this->load->language('api/order');
 
 		$json = array();
+		// print_r(1);exit();
 
-		if (!isset($this->session->data['api_id'])) {
-			$json['error'] = $this->language->get('error_permission');
-		} else {
+		// if (!isset($this->session->data['api_id'])) {
+		// 	$json['error'] = $this->language->get('error_permission');
+		// } else {
 			// Customer
 			if (!isset($this->session->data['customer'])) {
 				$json['error'] = $this->language->get('error_customer');
@@ -355,7 +356,7 @@ class ControllerApiOrder extends Controller {
 				// clear cart since the order has already been successfully stored.
 				//$this->cart->clear();
 			}
-		}
+		// }
 
 		if (isset($this->request->server['HTTP_ORIGIN'])) {
 			$this->response->addHeader('Access-Control-Allow-Origin: ' . $this->request->server['HTTP_ORIGIN']);
@@ -373,9 +374,9 @@ class ControllerApiOrder extends Controller {
 
 		$json = array();
 
-		if (!isset($this->session->data['api_id'])) {
-			$json['error'] = $this->language->get('error_permission');
-		} else {
+		// if (!isset($this->session->data['api_id'])) {
+		// 	$json['error'] = $this->language->get('error_permission');
+		// } else {
 			$this->load->model('checkout/order');
 
 			if (isset($this->request->get['order_id'])) {
@@ -699,7 +700,7 @@ class ControllerApiOrder extends Controller {
 			} else {
 				$json['error'] = $this->language->get('error_not_found');
 			}
-		}
+		// }
 
 		if (isset($this->request->server['HTTP_ORIGIN'])) {
 			$this->response->addHeader('Access-Control-Allow-Origin: ' . $this->request->server['HTTP_ORIGIN']);

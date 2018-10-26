@@ -150,9 +150,9 @@ class ControllerApiCart extends Controller {
 
 		$json = array();
 
-		if (!isset($this->session->data['api_id'])) {
-			$json['error']['warning'] = $this->language->get('error_permission');
-		} else {
+		// if (!isset($this->session->data['api_id'])) {
+		// 	$json['error']['warning'] = $this->language->get('error_permission');
+		// } else {
 			// Stock
 			if (!$this->cart->hasStock() && (!$this->config->get('config_stock_checkout') || $this->config->get('config_stock_warning'))) {
 				$json['error']['stock'] = $this->language->get('error_stock');
@@ -272,7 +272,7 @@ class ControllerApiCart extends Controller {
 					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
 				);
 			}
-		}
+		// }
 
 		if (isset($this->request->server['HTTP_ORIGIN'])) {
 			$this->response->addHeader('Access-Control-Allow-Origin: ' . $this->request->server['HTTP_ORIGIN']);
