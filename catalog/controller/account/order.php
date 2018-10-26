@@ -179,7 +179,7 @@ class ControllerAccountOrder extends Controller {
 	
 
 		$order_info = $this->model_account_order->getOrder($order_id);
-		// print_r($order_info);exit();
+		print_r($order_info);exit();
 
 		if ($order_info) {
 			$this->document->setTitle($this->language->get('text_order'));
@@ -962,7 +962,7 @@ class ControllerAccountOrder extends Controller {
           // case 14: $orderStatus='Expired'; break;
           case 14: $orderStatus='Delivered'; break;
           case 15: $orderStatus='Processed'; break;
-          case 16: $orderStatus='Voided'; break;
+          case 16: $orderStatus='lnvalid'; break;
 	   }
        return $orderStatus;
 	}

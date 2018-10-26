@@ -108,7 +108,7 @@
           <a class="btn_a contact_tc" href="###">Contact us</a>
         </div>
 
-<?php }elseif($order_status=='Voided'){?>
+<?php }elseif($order_status=='lnvalid'){?>
      <?php if($payment_code == 'paystack') { ?>
      <div class="left clearfix">
           <h2 class="hong"><?php echo $order_status; ?> </h2>
@@ -321,7 +321,7 @@
           <h1 class="lv"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Your package has been delivered on <?php echo $date_modified; ?>. </p>
         </div>
-        <?php }elseif($order_status=='Voided'){?>
+        <?php }elseif($order_status=='lnvalid'){?>
 
          <?php if($payment_code == 'paystack') { ?>
 
