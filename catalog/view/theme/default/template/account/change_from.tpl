@@ -37,6 +37,9 @@
               <?php if ($error_code) { ?>
                 <p class="ts_ps off"><?php echo $error_code; ?></p>
                 <?  } ?>
+                <?php if ($error_yzm) { ?>
+                <p class="ts_ps off"><?php echo $error_yzm; ?></p>
+                <?  } ?>
               </label>
               <label class="clearfix" for="">
                 <span class="pl_span">New password</span>

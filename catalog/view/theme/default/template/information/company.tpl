@@ -72,13 +72,18 @@
       <div class="content">
         <div class="bot clearfix">
           <div class="left">
-            <form action="">
+            <form action="<?php echo $action; ?>" method="post" >
               <h3>SEND AMESSAGE</h3>
-              <input type="text" placeholder="NAME*" />
-              <input type="text" placeholder="EMAIL*" />
-              <input type="text" placeholder="PHONE" />
+              <input type="text" value="<?=$firstname;?>" name="firstname" placeholder="NAME*" />
+              <input type="text" value="<?=$email;?>" name="email" placeholder="EMAIL*" />
+              <input type="text" value="<?=$telephone;?>" name="telephone" placeholder="PHONE" />
               <p>MESSAGE*</p>
-              <textarea></textarea>
+              <textarea name="enquiry"></textarea>
+              <?php if ($error_enquiry) { ?>
+          <div class="text-danger" >
+          <?php echo $error_enquiry; ?>
+          </div>
+          <?php } ?>
               <button type="submit">SUBMIT</button>
             </form>
           </div>
@@ -107,3 +112,13 @@
       </div>
     </div>
 <?php echo $footer; ?>
+<?php if ($success) { ?>
+  <script type="text/javascript">
+    tips('<?php echo $success; ?>');
+  </script>
+  <?php } ?>
+  <?php if ($error_warning) { ?>
+  <script type="text/javascript">
+    tips('<?php echo $error_warning; ?>');
+  </script>
+  <?php } ?>

@@ -71,6 +71,7 @@ class ControllerCommonHeader extends Controller {
 		$data['text_all'] = $this->language->get('text_all');
 
 		$data['home'] = $this->url->link('common/home');
+		
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
 		$data['logged'] = $this->customer->isLogged();
 		$data['account'] = $this->url->link('account/account', '', true);
@@ -204,7 +205,11 @@ class ControllerCommonHeader extends Controller {
 		}
 		// print_r(	$this->request->get['path']);;exit();
 		// 搜索历史
-		$searchres = $this->model_extension_extension->getSearch();
+		// if($this->customer->isLogged()){
+		$ip=$this->request->server['REMOTE_ADDR'];
+		// print_r($ip);exit;
+		$searchres = $this->model_extension_extension->getSearch($ip);
+		// print_r($searchres);exit;
 		if(!empty($searchres)){
 			foreach ($searchres as $searres) {
 			$data['searchhistory'][] = array(
@@ -213,7 +218,10 @@ class ControllerCommonHeader extends Controller {
 				);
 			}
 		}
-		// print_r($data['searchhistory']);exit();
+		$data['customer_id']=$this->customer->getId();
+	// }
+
+		// print_r($data['customer_id']);exit();
 		// 热门搜索
 			$str=$this->config->get('config_meta_keywords');
 
@@ -256,13 +264,14 @@ class ControllerCommonHeader extends Controller {
 	}
 	public function delete() {
 		$id=$this->request->post['id'];
+		$ip=$this->request->server['REMOTE_ADDR'];
 		$json = array();
 		// $this->load->model('extension/extension');
 		// $product_info = $this->model_extension_extension->getOrder($order_id);
 		// if ($product_info) {
 			// if ($this->customer->isLogged()) {
 				$this->load->model('extension/extension');
-				$this->model_extension_extension->deleteSearch($id);
+				$this->model_extension_extension->deleteSearch($id,$ip);
 			// }
 		// }
 		$this->response->addHeader('Content-Type: application/json');

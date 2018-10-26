@@ -103,6 +103,51 @@ class ControllerCommonHome extends Controller {
 			}
 			// print_r($hots);exit();
 			$data['hots']=$hots;
+			// 
+			$this->load->model('catalog/review');
+
+
+            // $review_total = $this->model_catalog_review->getTotalReviewsByProductId($product_info['product_id']);
+            $results = $this->model_catalog_review->getreviews();
+            // print_r($results);exit;
+            $this->load->model('tool/image');
+            foreach ($results as $result) {
+                $review_img = $this->model_catalog_review->getReviewImgs($result['review_id']);
+// print_r($review_img);exit;
+             foreach($review_img as $key=>$row){
+                    //$review_img[$key]['img'] = HTTP_SERVER.$row['path'];
+                    $review_img[$key]['img'] = $this->model_tool_image->resize( $row['images'], 112, 112);
+                    $review_img[$key]['min_img'] = $this->model_tool_image->resize($row['images'], 400, 400);
+                    // $review_img[$key]['big_img'] = $this->model_tool_image->resize($row['images'], 600, 600);
+                }
+                $thumbsnot= $this->model_catalog_review->thumbsornot($result['review_id']);
+               $thumbstotal =$this->model_catalog_review->getTotalsThumbs($result['review_id']);
+
+               if (isset($row)) {
+                  $thumbs=$this->model_tool_image->resize($row['images'],400,400);
+                }else{
+                    $thumbs= '';
+                }
+                $data['allreviews'][] = array(
+                    'review_id'     => $result['review_id'],
+                    'href'     =>$this->url->link('product/product','product_id='.$result['product_id']),
+                    'author'        => substr($result['author'],0,-2).'***',
+                    'text'          => nl2br($result['text']),
+                    'thumbs'          =>$thumbs,
+                    'length'          => nl2br($result['length']),
+                    'style'          => nl2br($result['style']),
+                    // 'thumbs'          =>$result['thumbs'],
+                    'rating'        => (int)$result['rating'],
+                    //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
+                    'date_added'    => date('m/d/Y', strtotime($result['date_added'])),
+                    'rating_starts' => $this->ratingStarts($result['rating']),
+                    'images'        => $review_img,
+                    'thumbstotal'    =>$thumbstotal,
+                    'thumbsnot'    =>$thumbsnot
+                );
+            }
+            // print_r($data['allreviews']);exit;
+			// 
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
@@ -112,7 +157,22 @@ class ControllerCommonHome extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
+		$data['homes'] = $this->url->link('information/allreviews');
 
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
+	protected function ratingStarts($rating){
+        $retingStarts = '';
+        $starts = ' Star';
+
+        switch($rating){
+            case 1: $retingStarts = 'One'.$starts; break;
+            case 2: $retingStarts = 'Two'.$starts; break;
+            case 3: $retingStarts = 'Three'.$starts; break;
+            case 4: $retingStarts = 'Four'.$starts; break;
+            case 5: $retingStarts = 'Five'.$starts; break;
+        }
+
+        return $retingStarts;
+    }
 }

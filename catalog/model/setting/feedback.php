@@ -10,7 +10,6 @@ class ModelSettingFeedback extends Model {
         $sql = "insert into " . DB_PREFIX . "feedback SET
         		name = '" . $this->db->escape($data['user_name']) . "',
                 email = '" . $this->db->escape($data['email']) . "',
-                country_id = " . (int)$data['country_id'] . ",
                 phone = '" . $this->db->escape($data['telephone']) . "',
                 comment = '" . $this->db->escape($data['enquiry']) . "',
                 submitTime = NOW()";

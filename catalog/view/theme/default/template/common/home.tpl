@@ -81,73 +81,48 @@
                 </div>
             </div>
             <div class="intext2 clearfix">
+            <?php if(isset($allreviews)){?>
                 <div class="content">
                     <ul class="in_ul3 clearfix">
+                      <?php foreach ($allreviews as $review) { ?>
                         <li class="clearfix">
                             <div class="con clearfix">
                                 <a class="img_a" >
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/>
+                                    <img class="lazyLoad" src="" srcs="<?php echo $review['thumbs']?>"/>
                                 </a>
                                 <div class="text">
-                                    <h2>Aberdeen</h2>
+                                    <h2><?php echo $review['author']?></h2>
                                     <ol>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
+                                        <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                          <?php if ($review['rating'] < $i) { ?>
+                                              <li class=""></li>
+                                            <?php } else { ?>
+                                              <li class="active"></li>
+                                          <?php } ?>
+                                       <?php } ?>
                                     </ol>
-                                    <h3>FUNMI HAIR WIG </h3>
+                                    <h3><?php echo $review['style']?> </h3>
                                     <p>
-                                        This hair is soooo soft . I️m in love . I got 18, long and 
-                                        20, & 22 and it’s very long and 2 and it’s very long and 
-                                        This hair is soooo soft . I️m in love . I got 18, long and 
-                                        20, & 22 and it’s very long and 2 and it’s very long and 
+                                        <?php echo $review['text']?>
                                     </p>
-                                    <ul class="clearfix">
-                                        <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
-                                        <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
-                                        <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
-                                    </ul>
-                                    <a  class="a_btn">Shop now<em>></em></a>
+                                     <?php if($review['images']){?>
+                                      <ul class="clearfix">
+                                      <?php foreach ($review['images'] as $k=> $review_images) { ?>
+                                      <li><img class="lazyLoad" src="" srcs="<?php echo $review_images['img']?>"/></li>
+                                      <?php } ?>
+                                      </ul>
+                                      <?php } ?>
+                                    <a  class="a_btn" href="<?php echo $review['href']?>">Shop now<em>></em></a>
                                 </div>
                             </div>
                         </li>
-                        <li class="clearfix">
-                            <div class="con clearfix">
-                                <a class="img_a" >
-                                    <img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/>
-                                </a>
-                                <div class="text">
-                                    <h2>Aberdeen</h2>
-                                    <ol>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ol>
-                                    <h3>FUNMI HAIR WIG </h3>
-                                    <p>
-                                        This hair is soooo soft . I️m in love . I got 18, long and 
-                                        20, & 22 and it’s very long and 2 and it’s very long and 
-                                        This hair is soooo soft . I️m in love . I got 18, long and 
-                                        20, & 22 and it’s very long and 2 and it’s very long and 
-                                    </p>
-                                    <ul class="clearfix">
-                                        <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
-                                        <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
-                                        <li><img class="lazyLoad" src="" srcs="catalog/view/theme/default/img/in_ul6.jpg"/></li>
-                                    </ul>
-                                    <a  class="a_btn">Shop now<em>></em></a>
-                                </div>
-                            </div>
-                        </li>
+                        <?php  } ?>
                     </ul>
-                    <a class="pro_more" >
+                    <a class="pro_more" href="<?php echo $homes?>">
                         <button>VIEW All REVIEWS</button>
                     </a>
                 </div>
+                <?php  } ?>
             </div>
             
             <div class="intext3 clearfix">

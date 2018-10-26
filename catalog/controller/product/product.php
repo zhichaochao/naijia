@@ -367,7 +367,7 @@ class ControllerProductProduct extends Controller {
                   
                     'image'=> $this->model_tool_image->resize($product_info['image'], 800, 800),  //小图
                   
-                    'thumb2'=> $this->model_tool_image->resize($product_info['image'], 320, 320)
+                    'thumb2'=> $this->model_tool_image->resize($product_info['image'], 750, 750)
                 );
             // print_r($product_info);exit();
             $results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
@@ -378,7 +378,7 @@ class ControllerProductProduct extends Controller {
                   
                     'image'=> $this->model_tool_image->resize($result['image'], 800, 800),  //小图
                   
-                    'thumb2'=> $this->model_tool_image->resize($result['image'], 320, 320)
+                    'thumb2'=> $this->model_tool_image->resize($result['image'], 750, 750)
                 );
             }
 // print_r($data['images']);exit;

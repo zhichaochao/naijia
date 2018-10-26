@@ -142,6 +142,11 @@ class ModelCatalogInformation extends Model {
 				'description'      => $result['description'],
 				'meta_title'       => $result['meta_title'],
 				'meta_description' => $result['meta_description'],
+				// 'image'			   => $result['image'],
+				// 'ydimage' 		   => $result['ydimage'],
+				// 'm_image'          => $result['m_image'],
+				// 'ydm_image'        => $result['ydm_image'],
+				// 'video'            => $result['video'],
 				'meta_keyword'     => $result['meta_keyword']
 			);
 		}

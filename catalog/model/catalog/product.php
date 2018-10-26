@@ -387,15 +387,15 @@ class ModelCatalogProduct extends Model {
 		}
 
 		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
+			// if ($data['start'] < 0) {
+			// 	$data['start'] = 0;
+			// }
 
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
+			// if ($data['limit'] < 1) {
+			// 	$data['limit'] = 20;
+			// }
 
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+			// $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
 		}
 // print_r($sql);exit;
 		$product_data = array();
@@ -535,17 +535,17 @@ class ModelCatalogProduct extends Model {
 			$sql .= " ASC, LCASE(pd.name) ASC";
 		}
 
-		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
+		// if (isset($data['start']) || isset($data['limit'])) {
+			// if ($data['start'] < 0) {
+			// 	$data['start'] = 0;
+			// }
 
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
+			// if ($data['limit'] < 1) {
+			// 	$data['limit'] = 20;
+			// }
 
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-		}
+			// $sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+		// }
 // print_r($sql);exit;
 		$product_data = array();
 
@@ -684,17 +684,17 @@ class ModelCatalogProduct extends Model {
 			$sql .= " ASC, LCASE(pd.name) ASC";
 		}
 
-		if (isset($data['start']) || isset($data['limit'])) {
-			if ($data['start'] < 0) {
-				$data['start'] = 0;
-			}
+		// if (isset($data['start']) || isset($data['limit'])) {
+		// 	if ($data['start'] < 0) {
+		// 		$data['start'] = 0;
+		// 	}
 
-			if ($data['limit'] < 1) {
-				$data['limit'] = 20;
-			}
+		// 	if ($data['limit'] < 1) {
+		// 		$data['limit'] = 20;
+		// 	}
 
-			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
-		}
+		// 	$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+		// }
 // print_r($sql);exit;
 		$product_data = array();
 
@@ -1247,13 +1247,13 @@ class ModelCatalogProduct extends Model {
 				$query=$this->db->query("SELECT * FROM " . DB_PREFIX . "keywords WHERE customer_id = '" . (int)$this->customer->getId() . "' AND keywords = '" . $this->db->escape($data['datekey']) . "'  ");
 				$rows=$query->row;
 					if(empty($rows)){
-				$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "', ip = '" . $this->db->escape($data['ip']) . "'");
 					}
 			}else{
-			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "', ip = '" . $this->db->escape($data['ip']) . "'");
 			}
 		}else{
-			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "keywords SET customer_id = '" . (int)$this->customer->getId() . "', keywords = '" . $this->db->escape($data['datekey']) . "', ip = '" . $this->db->escape($data['ip']) . "'");
 		}
 		return ;
 	}
