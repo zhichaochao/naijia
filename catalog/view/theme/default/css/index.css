@@ -1142,7 +1142,18 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.wig2 .top_yd{display: none;}
 	.wig2 .top{padding-top: 0.6rem;}
 	.wig2 .top h1{font-size: 0.4rem;line-height: 0.4rem;margin-bottom: 0.6rem;text-align: center;}
-	.wig2 .top img{display: block;float: left;margin-right: 1rem;}
+	.wig2 .top .img_lb{float: left;position: relative;width: 7.8rem;margin-right: 1rem;}
+	.wig2 .top img{display: block;}
+	.img_lb .swiper-pagination{display: block;bottom: 0.1rem;left: 50%;margin-left: -37.5px;}
+	.img_lb .swiper-pagination span{margin: 0 5px;}
+	.img_lb .swiper-pagination-bullet{width: 15px;height: 15px;background: #ddd;}
+	.img_lb .swiper-pagination-bullet-active{background: #dab25e;}
+	.img_lb .swiper-button-next,.img_lb .swiper-button-prev{width: 60px;height: 60px;top: 50%; margin-top: -30px;background-color: rgba(238,238,238,.5);}
+	.img_lb .swiper-button-prev,.img_lb .swiper-container-rtl .swiper-button-next{left: 0;}
+	.img_lb .swiper-button-next,.img_lb .swiper-container-rtl .swiper-button-prev{right:0;}
+	.img_lb .swiper-button-prev,.img_lb .swiper-container-rtl .swiper-button-next{background:rgba(238,238,238,.8) url(../img/png/icon_7.png) no-repeat center;transform: rotate(180deg);}
+	.img_lb .swiper-button-next,.img_lb .swiper-container-rtl .swiper-button-prev{background:rgba(238,238,238,.8) url(../img/png/icon_7.png) no-repeat center;}
+	
 	.wig2 .top .right{float: left;display: inline-block;margin-top: -12px;max-width: 5rem;}
 	.wig2 .top .right h2{font-size: 0.3rem;line-height: 0.5rem;font-weight: normal;margin-bottom: 0.6rem;}
 	.wig2 .top .right p{font-size: 0.24rem;color: #666;display: inline-block;line-height: 0.4rem;}
@@ -1189,10 +1200,12 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.yy_modal .form_text{width: 84%;margin: auto;}
 	.yy_modal .left label {width: 45%;display: block;float: left;margin: 0 2.5%;}
 	.yy_modal .left label span{font-size: 0.26rem;color: #fff;padding-bottom: 0.2rem;display: block;}
-	.yy_modal .left label input{font-size: 0.22rem;color: #333;height: 0.5rem;line-height: 0.5rem;width: 100%;border: none;padding: 0 0.2rem;
-	 -webkit-appearance: none;background: #fff url(../img/png/icon_95.png) no-repeat right center/0.5rem;cursor: pointer;}
-	.yy_modal .left label select{font-size: 0.22rem;color: #333;height: 0.5rem;line-height: 0.5rem;width: 100%;border: none;padding: 0 0.2rem;
-	 -webkit-appearance: none;margin-bottom: 0.2rem;background: #fff url(../img/png/icon_96.png) no-repeat right center/0.5rem;cursor: pointer;}
+	.yy_modal .left label input{font-size: 0.22rem;color: #333;height: 0.5rem;line-height: 0.5rem;width: 100%;border: none;padding: 0 0.2rem 0 0.5rem;
+	  -webkit-appearance: none !important; -moz-appearance: none !important; 
+	 background: #fff url(../img/png/icon_95.png) no-repeat right center/0.5rem;cursor: pointer;}
+	.yy_modal .left label select{font-size: 0.22rem;color: #333;height: 0.5rem;line-height: 0.5rem;width: 100%;border: none;padding: 0 0.2rem 0 0.5rem;
+	 -webkit-appearance: none !important; -moz-appearance: none !important; 
+	 margin-bottom: 0.2rem;background: #fff url(../img/png/icon_96.png) no-repeat right center/0.5rem;cursor: pointer;}
 	.yy_modal .add_btn{border: none;background: transparent;color: #dab25e;font-size: 0.2rem;display: inline-block;float: right;border-bottom: 1px solid #dab25e;}
 	.yy_modal .tj_btn{border: none;background: #dab25e;color: #fff;font-size: 0.24rem;border-radius: 0.05rem;display: block;margin: auto;
 	width: 3rem;height: 0.5rem;position: absolute;bottom: 0.3rem;left: 50%;margin-left: -1.5rem;}
@@ -2396,7 +2409,14 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.wig2{ margin: auto;background: #f5f5f5;padding: 0 0.15rem;}
 	.wig2 .top{max-width: 7.2rem;margin: auto;}
 	.wig2 .top h1{display: none;}
-	.wig2 .top img{display: block;margin-bottom: 0.3rem;}
+	.wig2 .top .img_lb{float: left;position: relative;width:100%;margin-bottom: 0.3rem;}
+	.wig2 .top img{display: block;}
+	.img_lb .swiper-pagination{display: block;bottom: 0.1rem;left: 50%;margin-left: -30px;	}
+	.img_lb .swiper-pagination span{margin: 0 5px;}
+	.img_lb .swiper-pagination-bullet{width: 10px;height: 10px;background: #ddd;}
+	.img_lb .swiper-pagination-bullet-active{background: #dab25e;}
+	.img_lb .swiper-button-next,.img_lb .swiper-button-prev{display: none;}
+	
 	.wig2 .top .right h2{font-size: 0.26rem;line-height: 0.4rem;font-weight: normal;margin-bottom: 0.2rem;}
 	.wig2 .top .right p{font-size: 0.26rem;color: #666;display: inline-block;line-height: 0.5rem;position: relative;}
 	.wig2 .top .right p.p1{padding-left: 2.27rem;}
@@ -2421,9 +2441,11 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.yy_modal .left label {width: 45%;display: block;float: left;margin: 0 2.5%;}
 	.yy_modal .left label span{font-size: 0.24rem;color: #fff;padding-bottom: 0.2rem;display: block;}
 	.yy_modal .left label input{font-size: 0.22rem;color: #333;height: 0.5rem;line-height: 0.5rem;width: 100%;border: none;padding: 0 0.2rem;
-	 -webkit-appearance: none;background: #fff url(../img/png/icon_95.png) no-repeat right center/0.5rem;cursor: pointer;}
+	 -webkit-appearance: none !important; -moz-appearance: none !important; 
+	background: #fff url(../img/png/icon_95.png) no-repeat right center/0.5rem;cursor: pointer;}
 	.yy_modal .left label select{font-size: 0.22rem;color: #333;height: 0.5rem;line-height: 0.5rem;width: 100%;border: none;padding: 0 0.2rem;
-	 -webkit-appearance: none;margin-bottom: 0.2rem;background: #fff url(../img/png/icon_96.png) no-repeat right center/0.5rem;cursor: pointer;}
+	 -webkit-appearance: none !important; -moz-appearance: none !important; 
+	margin-bottom: 0.2rem;background: #fff url(../img/png/icon_96.png) no-repeat right center/0.5rem;cursor: pointer;}
 	.yy_modal .add_btn{border: none;background: transparent;color: #dab25e;font-size: 0.2rem;display: inline-block;float: right;border-bottom: 1px solid #dab25e;}
 	.yy_modal .tj_btn{border: none;background: #dab25e;color: #fff;font-size: 0.26rem;border-radius: 0.05rem;display: block;margin: auto;
 	width: 3rem;height: 0.6rem;position: absolute;bottom: 0.4rem;left: 50%;margin-left: -1.5rem;}

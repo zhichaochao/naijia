@@ -4,12 +4,29 @@
     <div class="wig2 clearfix">
       
       <div class="top_yd clearfix">
-        <h1><a class="fh" href="<?php echo $home?>">< BACK</a> MY ORDERG</h1>
+        <h1><a class="fh" href="###">< BACK</a> Lagos Store</h1>
       </div>
       
       <div class="top clearfix">
         <h1>Lagos Store</h1>
-        <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
+        <div class="img_lb clearfix">
+          <div class="swiper-container" id="swiper1">
+              <div class="swiper-wrapper" style="cursor:-webkit-grab;">
+                  <div class="swiper-slide ban_img">
+                    <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
+                  </div>
+                <div class="swiper-slide ban_img">
+                  <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
+                </div>
+                <div class="swiper-slide ban_img">
+                  <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
+                </div>
+              </div>
+          </div>
+          <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         
         <div class="right">
           <h2>
@@ -26,7 +43,7 @@
              <br />MONDAY - SATURDAY <br />10AM - 6PM
           </p> 
           
-          <a href="javascript:;">MAKE AN APPOINTMENT</a>
+          <button class="yy_tc">MAKE AN APPOINTMENT</button>
         </div>
       </div>
       
@@ -37,4 +54,88 @@
         </div>
       </div>
     </div>
+
+<!--预约弹窗--> 
+    <div class="yy_modal clearfix">
+      <div class="text clearfix">
+        <div class="close"></div>
+        <h1>REQUEST AN APPOINTMENT</h1>
+        <div class="right clearfix"></div>
+        <div class="left clearfix">
+          <form action="">
+            <h2>Request a New Appointment</h2>
+            <div class="form_text clearfix">
+              <label for="">
+                <span>DATE</span>
+                <input type="text"  />
+              </label>
+              <label for="">
+                <span>SERVICE</span>
+                <div class="select">
+                  <select name="">
+                    <option value="">Select Service</option>
+                    <option value="">Select Service2</option>
+                    <option value="">Select Service3</option>
+                    <option value="">Select Service4</option>
+                  </select>
+                </div>
+                <button class="add_btn" type="button">+ add another service</button>
+              </label>
+            </div>
+            <button class="tj_btn">Make an appointment</button>
+          </form>
+        </div>
+        <p class="bot_p">QUESTIONS? CALL 02072318833</p>
+      </div>
+    </div>
+
+
+
+
+
+
 <?php echo $footer; ?>
+<script type="text/javascript">
+  $(function(){
+    //banner轮播
+    var swiper1 = new Swiper('#swiper1', {
+      loop:true,
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+    });
+    
+    $(".add_btn").click(function(){
+      let fw_text = 
+        '<select name="">'
+          +'<option value="">Select Service</option>'
+          +'<option value="">Select Service2</option>'
+          +'<option value="">Select Service3</option>'
+          +'<option value="">Select Service4</option>'
+        +'</select>';
+      if($(".select select").length<=2){
+        $(".select").append(fw_text);
+        if($(".select select").length==3){
+          $(".add_btn").hide();
+        }
+      }
+    })
+    
+//    预约弹窗
+    $(".yy_tc").click(function(){
+      $(".yy_modal").fadeIn();
+      $("body").css("overflow","hidden");
+    })
+    
+//    关闭预约弹窗
+    $(".yy_modal .close").click(function(){
+      $(".yy_modal").fadeOut();
+      $("body").css("overflow","");
+    })
+  })
+</script>

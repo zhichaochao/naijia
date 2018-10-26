@@ -45,6 +45,7 @@ class ControllerProductAllcategory extends Controller {
 					'href'     => $this->url->link('product/category', 'path=' . $category['category_id'])
 				);
 				}
+				// print_r($data['categories']);exit;
 				foreach ($categoriees as $category) {
 						$children_data = array();
 
