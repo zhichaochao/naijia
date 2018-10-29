@@ -22,6 +22,10 @@ class ControllerCommonFooter extends Controller {
 
 		$this->load->model('catalog/information');
 
+		$facebook= $this->config->get('config_facebook');
+		$instagram = $this->config->get('config_instagram');
+		$whatsapp = $this->config->get('config_telephone');
+
 		$data['informations'] = array(
 			0 =>array(
 				'title'=>'COMPANY',
@@ -33,16 +37,16 @@ class ControllerCommonFooter extends Controller {
 							),
 						1=>array(
 							'title'=>'Instagram',
-							'url'=>$this->url->link('information/information','information_id=2'),
+							'url'=>('http://www.instagram.com/'.$instagram),
 							),
 						2=>array(
 							'title'=>'Facebook',
-							'url'=>$this->url->link('information/information','information_id=5'),
+							'url'=>('http://www.facebook.com/'.$facebook),
 
 							),
 						3=>array(
 							'title'=>'What App',
-							'url'=>$this->url->link('information/profile'),
+							'url'=>('http://api.whatsapp.com/send?phone='.$whatsapp),
 							),
 					),
 				),

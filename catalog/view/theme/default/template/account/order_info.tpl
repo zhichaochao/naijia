@@ -484,19 +484,19 @@
       <div class="text clearfix">
         <ol class="clearfix">
           <li>
-            <a href="###">
+            <a href="mailto:<?php echo $email; ?>">
               <span class="img"></span>
               <span class="span_p">E-mail</span>
             </a>
           </li>
           <li>
-            <a href="###">
+            <a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>">
               <span class="img"></span>
               <span class="span_p">Facebook</span>
             </a>
           </li>
           <li>
-            <a href="###">
+            <a target="_blank"  href="http://api.whatsapp.com/send?phone=<?=$whatsapp;?>">
               <span class="img"></span>
               <span class="span_p">Whatsapp</span>
             </a>

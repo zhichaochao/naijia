@@ -79,10 +79,10 @@
                 <a href="<?=$shopping_cart;?>"><span id='cart_count'><?=$text_cart_items;?></span></a>
               </li>
               <li class="fb_li">
-                <a href="###"></a>
+                <a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"></a>
               </li>
               <li class="tb_li">
-                <a href="###"></a>
+                <a target="_blank"  href="http://www.instagram.com/<?=$instagram;?>"></a>
               </li>
             </ol>
             

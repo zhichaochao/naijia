@@ -173,6 +173,27 @@
                   <?php } ?>
                 </div>
               </div>
+
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_facebook; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_facebook" value="<?php echo $config_facebook; ?>" placeholder="<?php echo $entry_facebook; ?>" id="input-telephone" class="form-control" />
+                  <!-- <?php if ($error_telephone) { ?>
+                  <div class="text-danger"><?php echo $error_telephone; ?></div>
+                  <?php } ?> -->
+                </div>
+              </div>
+
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone"><?php echo $entry_instagram; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_instagram" value="<?php echo $config_instagram; ?>" placeholder="<?php echo $entry_instagram; ?>" id="input-telephone" class="form-control" />
+                  <!-- <?php if ($error_telephone) { ?>
+                  <div class="text-danger"><?php echo $error_telephone; ?></div>
+                  <?php } ?> -->
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
                 <div class="col-sm-10">

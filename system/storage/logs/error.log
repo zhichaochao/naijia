@@ -754,3 +754,11 @@
 2018-10-26 6:29:06 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
 2018-10-26 6:29:06 - PHP Notice:  Undefined index: name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
 2018-10-26 6:29:06 - PHP Notice:  Undefined index: value in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 104
+2018-10-26 8:28:21 - PHP Notice:  Undefined variable: success in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\change_from.tpl on line 92
+2018-10-29 1:34:25 - PHP Notice:  Use of undefined constant facebook - assumed 'facebook' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\footer.php on line 32
+2018-10-29 1:34:25 - PHP Notice:  Undefined variable: facebook in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\footer.php on line 40
+2018-10-29 1:34:32 - PHP Notice:  Use of undefined constant facebook - assumed 'facebook' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\footer.php on line 32
+2018-10-29 1:34:32 - PHP Notice:  Undefined variable: facebook in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\footer.php on line 40
+2018-10-29 1:34:51 - PHP Notice:  Undefined variable: facebook in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\footer.php on line 40
+2018-10-29 2:00:53 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-10-29 2:00:53 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13

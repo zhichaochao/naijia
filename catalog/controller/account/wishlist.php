@@ -167,6 +167,11 @@ $url = '';
 			$data['home'] =$this->url->link('common/home');
 		}
 		$data['product_total'] =$product_total;
+
+
+		$data['facebook'] = $this->config->get('config_facebook');
+		$data['whatsapp'] = $this->config->get('config_telephone');
+		$data['email'] = $this->config->get('config_email');
 // print_r($data['home']);exit;
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');

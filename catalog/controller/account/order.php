@@ -219,6 +219,10 @@ class ControllerAccountOrder extends Controller {
 			$data['button_return'] = $this->language->get('button_return');
 			$data['button_continue'] = $this->language->get('button_continue');
 
+			$data['facebook'] = $this->config->get('config_facebook');
+			$data['whatsapp'] = $this->config->get('config_telephone');
+			$data['email'] = $this->config->get('config_email');
+
 			if (isset($this->session->data['error'])) {
 				$data['error_warning'] = $this->session->data['error'];
 

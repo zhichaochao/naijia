@@ -315,8 +315,8 @@
                 <h2 class="slide_h2">Share <em class="jian"></em></h2>
                 <div class="slide_text">
                   <ul class="pay_ul share_img clearfix">
-                    <li><a href="###"><img src="catalog/view/theme/default/img/png/icon_35_.png"/></a></li>
-                    <li><a href="###"><img src="catalog/view/theme/default/img/png/icon_34_.png"/></a></li>
+                    <li><a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"><img src="catalog/view/theme/default/img/png/icon_35_.png"/></a></li>
+                    <li><a target="_blank"  href="http://www.instagram.com/<?=$instagram;?>"><img src="catalog/view/theme/default/img/png/icon_34_.png"/></a></li>
                   </ul>
                 </div>
               </li>

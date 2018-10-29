@@ -673,6 +673,10 @@ class ControllerProductProduct extends Controller {
             }else{
                 $data['ends_dates']="";
             }
+
+
+            $data['facebook'] = $this->config->get('config_facebook');
+         $data['instagram'] = $this->config->get('config_instagram');
               
             $data['column_left'] = $this->load->controller('common/column_left');
             $data['column_right'] = $this->load->controller('common/column_right');

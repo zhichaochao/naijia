@@ -34,6 +34,8 @@ class ControllerCommonHeader extends Controller {
 		$data['scripts'] = $this->document->getScripts();
 		$data['lang'] = $this->language->get('code');
 		$data['direction'] = $this->language->get('direction');
+		$data['facebook'] = $this->config->get('config_facebook');
+		$data['instagram'] = $this->config->get('config_instagram');
 
 		$data['name'] = $this->config->get('config_name');
 
