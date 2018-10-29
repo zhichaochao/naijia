@@ -74,12 +74,15 @@ class ControllerCheckoutPaymentAddress extends Controller {
 
 	public function save() {
 		$this->load->language('checkout/checkout');
+		// print_r($this->request->post);exit();
 
 		$json = array();
 
 		// Validate if customer is logged in.
 		if (!$this->customer->isLogged()) {
-			$json['redirect'] = $this->url->link('checkout/checkout', '', true);
+				$this->session->data['redirect']= $this->url->link('checkout/checkout', '', true);
+			
+				$this->response->redirect($this->url->link('account/login'));
 		}
 
 		// Validate cart has products and has stock.

@@ -8,6 +8,12 @@ class ControllerCheckoutCheckout extends Controller {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
 		// print_r($this->session->data['cart_ids']);exit();
+		if (!$this->customer->isLogged()) {
+			$this->session->data['redirect']= $this->url->link('checkout/checkout', '', true);
+	
+				$this->response->redirect($this->url->link('account/login'));
+		}
+		// print_r($this->customer->isLogged());exit();
 
 		// Validate minimum quantity requirements.
 		$products = $this->cart->getProducts();
