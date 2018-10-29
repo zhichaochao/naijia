@@ -59,15 +59,24 @@
                           <input type="hidden" value="<?= $code;?>" name="payment_method" id='payment_method' />
                             <input type="hidden" name="agree" value="1" />
                             <ol class="pay_ol clearfix">  
-                             <?php foreach ($payment_methods as $payment_method) { ?>
+                                <?php if($currency=='NGN'){ ?>
+                             <?php foreach ($payment_methods as $payment_method) { if($payment_method['code']!='pp_express'){?>
+                          
+                                <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
+                                    <div class="pic_img"></div>
+                                    <span><?php echo $payment_method['title']; ?></span>
+                                    <em>₦</em>
+                                </li>
+                     
+                                <?php }}}else{?>
+                            <?php foreach ($payment_methods as $payment_method) {if($payment_method['code']=='pp_express'){ ?>
                           
                                 <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
                                     <div class="pic_img"></div>
                                     <span><?php echo $payment_method['title']; ?></span>
                                     <em>$</em>
                                 </li>
-                     
-                                <?php } ?>
+                              <?php }}} ?>
                                 <?php } ?>
                             </ol>
                         </div>

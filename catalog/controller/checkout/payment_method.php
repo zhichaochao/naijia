@@ -199,6 +199,8 @@ class ControllerCheckoutPaymentMethod extends Controller {
 		} else {
 			$data['agree'] = '';
 		}
+		$data['currency']= $this->session->data['currency'];
+		// print_r($data['payment_methods']);exit();
 
 		$this->response->setOutput($this->load->view('checkout/payment_method', $data));
 	}
