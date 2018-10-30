@@ -153,7 +153,7 @@
                                +'<p class="pl_p">'+data.products[i].reviews +'reviews'
                                +'</p>'
 
-                               if(!empty(data.products[i].special)) { 
+                               if(data.products[i].special) { 
 
                                   result+= '<span class="price">'+data.products[i].special
                                  +'<em>'+data.products[i].price+'</em></span>'
@@ -163,7 +163,7 @@
                                   result+= '<span class="price">'+data.products[i].price+'</span>'
                                  } 
 
-                                   if(!empty(data.products[i].special)) { 
+                                   if(data.products[i].special) { 
                                 result+='<span class="red_span">-'+data.products[i].percent+'%</span>'
                                   } 
                               result+='</div>'

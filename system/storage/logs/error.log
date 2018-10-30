@@ -1182,3 +1182,17 @@
 2018-10-29 6:43:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 113
 2018-10-29 6:43:18 - PHP Notice:  Undefined index: name in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 113
 2018-10-29 6:43:18 - PHP Notice:  Undefined index: value in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 113
+2018-10-30 2:04:00 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:04:23 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:05:47 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:06:15 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:06:22 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:06:28 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:06:40 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:09:48 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:10:02 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:10:24 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:10:44 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:11:42 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:12:01 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-10-30 2:12:12 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
