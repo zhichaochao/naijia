@@ -19,7 +19,7 @@
                     <div class="bf_img" ></div>
                     <video id="my_video" src="<?php echo $video; ?>" width="100%"></video>
                   </div>
-                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div>
+                  <!-- <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div> -->
               </div>
                <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -29,7 +29,7 @@
       
       <div class="content">
         <div class="top_f clearfix">
-          <h1>One Weaves Box One Look</h1>
+          <!-- <h1>One Weaves Box One Look</h1> -->
           <p><?php echo $product_total; ?> items found</p>
           <div class="sortby">
             <p>Sort by : <img src="catalog/view/theme/default/img/png/icon_26.png  " alt="" /></p>

@@ -16,7 +16,7 @@
                             <div class="store_address">
                                 <h1>Store Address</h1>
                                 <span>Lagos Store</br >
-                                    30 Mobolaji Bank Anthony Way, Maryland 000012, Lagos, Nigeria
+                                   alausa.obafemi awolowo way. ikeja Lagos，Nigeria
                                 </span>
                             </div>
                          
