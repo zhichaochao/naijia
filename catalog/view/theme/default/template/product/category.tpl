@@ -40,14 +40,7 @@
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
-                  <!-- <div class="bg_hui">
-                    <p class="djs_p" title="2018/09/15 10:06:00">SALE ENDS 
-                      <span class="int_day">00</span>:
-                      <span class="int_hour">00</span>:
-                      <span class="int_minute">00</span>:
-                      <span class="int_second">00</span>
-                    </p>
-                  </div> -->
+             
                 </div>
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
@@ -67,10 +60,6 @@
                   <?php }else{ ?>
                      <span class="price"><?php echo $product['price']; ?></span>
                   <?php } ?>
-                  <!-- <span class="price">₦26K 
-                  <em>₦46K </em>
-                  </span> -->
-                  <!-- <span class="red_span">-56%</span> -->
                 </div>
                 <em class="red_em">HOT<br />SALE</em>
               </a>
@@ -85,16 +74,6 @@
           <div class="fy_div">
             <ul>
             <?php echo $pagination; ?>
-             <!--  <li><a href="###">< Last</a></li>
-              <li><a href="###">1</a></li>
-              <li><a href="###">2</a></li>
-              <li><a href="###">3</a></li>
-              <li><a href="###">4</a></li>
-              <li class="active"><a href="###">5</a></li>
-              <li><a href="###">6</a></li>
-              <li><a href="###">7</a></li>
-              <li><a href="###">8</a></li>
-              <li><a href="###">Next ></a></li> -->
             </ul>
           </div>
         </div>

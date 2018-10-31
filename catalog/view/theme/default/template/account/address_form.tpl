@@ -27,30 +27,24 @@
             <form action="<?php echo $action; ?>" method="post" >
               <label class="clearfix " for="">
                 <span class="pl_span">Frist Name</span>
-                <!-- <input type="text" value="Frist Name" /> -->
                 <input class="in_1" type="text" name="firstname" value="<?php echo $firstname; ?>" placeholder="<?php echo $entry_firstname; ?>" id="input-firstname" class="form-control" />
                 <?php if ($error_firstname) { ?>
                 <p class="ts_ps off"><?php echo $error_firstname; ?></p>
-              <!-- <div class="text-danger"><?php echo $error_firstname; ?></div> -->
               <?php } ?>
                 
               </label>
               <label class="clearfix" for="">
                 <span class="pl_span">Last Name</span>
-                <!-- <input type="text" placeholder="Last Name" /> -->
                 <input class="in_2" type="text" name="lastname" value="<?php echo $lastname; ?>" placeholder="<?php echo $entry_lastname; ?>" id="input-lastname" class="form-control" />
                 <?php if ($error_lastname) { ?>
-              <!-- <div class="text-danger"><?php echo $error_lastname; ?></div> -->
               <p class="ts_ps off"><?php echo $error_lastname; ?></p>
               <?php } ?>
               </label>
               <label class="clearfix" for="">
                 <span class="pl_span">Address</span>
-                <!-- <input type="text" placeholder="Address" /> -->
                  <input  class="in_3" type="text" name="address_1" value="<?php echo $address_1; ?>" placeholder="<?php echo $entry_address_1; ?>" id="input-address-1" class="form-control" />
                  <?php if ($error_address_1) { ?>
                  <p class="ts_ps off"><?php echo $error_address_1; ?></p>
-              <!-- <div class="text-danger"><?php echo $error_address_1; ?></div> -->
               <?php } ?>
                 
               </label>
@@ -58,7 +52,6 @@
                 <span class="pl_span"></span>
                 <!-- <input type="text" placeholder="" /> -->
                 <input  type="text" name="address_2" value="<?php echo $address_2; ?>" placeholder="<?php echo $entry_address_2; ?>" id="input-address-2" class="form-control" />
-                <!-- <p class="ts_ps">please enter your first name. </p> -->
               </label>
               
               <label class="w_50 fl clearfix" for="">
@@ -66,16 +59,11 @@
                 <select name="country_id" id="input-shipping-country" class="form-control">
                   <option value=""><?php echo $text_select; ?></option>
                   <?php foreach ($countries as $country) { ?>
-                  <!-- <?php if ($country['country_id'] == $country_id) { ?>
-                  <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
-                  <?php } else { ?> -->
                   <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
-                  <!-- <?php } ?> -->
                   <?php } ?>
                 </select>
                 <?php if ($error_country) { ?>
                 <p class="ts_ps off"><?php echo $error_country; ?></p>
-              <!-- <div class="text-danger"></div> -->
               <?php } ?>
                 <!--  -->
               </label>
@@ -85,24 +73,19 @@
               </select>
               <?php if ($error_zone) { ?>
               <p class="ts_ps off"><?php echo $error_zone; ?></p>
-              <!-- <div class="text-danger"><?php echo $error_zone; ?></div> -->
               <?php } ?>
-                <!--  -->
               </label>
               
               <label class="w_50 fl clearfix" for="">
                 <span class="pl_span">City</span>
-                <!-- <input type="text" placeholder="City" /> -->
                  <input class="in_4"  type="text" name="city"  placeholder="<?php echo $entry_city; ?>" id="input-city" class="form-control" />
                  <?php if ($error_city) { ?>
                   <p class="ts_ps off"><?php echo $error_city; ?></p>
-              <!-- <div class="text-danger"><?php echo $error_city; ?></div> -->
               <?php } ?>
               </label>
               
               <label class="w_50 fr clearfix" for="">
                 <span class="pl_span">Zip Code</span>
-                <!-- <input type="text" placeholder="Zip Code" /> -->
                 <input class="in_5"  type="text" name="postcode"  placeholder="<?php echo $entry_postcode; ?>" id="input-postcode" class="form-control" />
                 <?php if ($error_postcode) { ?>
                  <p class="ts_ps off"><?php echo $error_postcode; ?></p>
@@ -112,12 +95,9 @@
               
               <label class="clearfix clear" for="">
                 <span class="pl_span">Phone</span>
-                <!-- <input type="text" placeholder="Phone" /> -->
                 <input class="in_6"  type="text" name="phone" placeholder="phone" id="input-postcode" class="form-control" />
                 <?php if ($error_telephone) { ?>
-                 <!-- <p class="ts_ps">please enter your first name. </p> -->
                  <p class="ts_ps off"><?php echo $error_telephone; ?></p>
-              <!-- <div class="text-danger"><?php echo $error_postcode; ?></div> -->
               <?php } ?>
                
               </label>

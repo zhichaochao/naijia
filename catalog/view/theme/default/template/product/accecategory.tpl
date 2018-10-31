@@ -21,10 +21,6 @@
           <div class="sortby">
             <p>Sort by : <img src="catalog/view/theme/default/img/png/icon_26.png  " alt="" /></p>
             <ul class="clearfix">
-             <!--  <li><a href="###">Best selling</a></li>
-              <li><a href="###">Newest</a></li>
-              <li><a href="###">Lowest price</a></li>
-              <li><a href="###">Highest price</a></li> -->
               <li><a href="<?php echo $sort_sort_rating?>">Best selling</a></li>
             <li><a href="<?php echo $sort_sort_add?>">Newest</a></li>
             <li><a href="<?php echo $sort_sort_order?>">Lowest price</a></li>

@@ -614,24 +614,6 @@ if(confirm('Are you sure?')){
       
     }
 }
-  // $(function(){
-    
-  //   //下拉total_p
-  //     $(".total_p").click(function(){
-  //       if($(this).hasClass("active")){
-  //         $(this).removeClass("active");
-  //         $(this).siblings(".slide_p").stop().slideUp();
-  //         $(this).siblings("hr").hide();
-  //       }else{
-  //         $(this).addClass("active");
-  //         $(this).siblings(".slide_p").stop().slideDown();
-  //         $(this).siblings("hr").show();
-  //       }
-        
-        
-  //     })
-    
-  // })
   
   
   //倒计时

@@ -45,18 +45,12 @@
                 <span class="pl_span">New password</span>
                 <input class="in_2" type="password" placeholder="New password"  name="password" />
                 <p class="ts_ps">Password must be between 4 and 20 characters!</p>
-                <!-- <?php if ($error_password) { ?>
-                <p class="ts_ps off"><?php echo $error_password; ?></p>
-                <?  } ?> -->
               </label>
               
               <label class="clearfix clear" for="">
                 <span class="pl_span">Confirm Password</span>
                 <input class="in_3" type="password" placeholder="Confirm Password" name="confirm" />
                 <p class="ts_ps">It need to be same as new password!</p>
-                  <!-- <?php if ($error_confirm) { ?>
-                <p class="ts_ps off"><?php echo $error_confirm; ?></p>
-                <?  } ?> -->
               </label>
               
               <button class="qx_btn" type="reset">Cancel</button>
