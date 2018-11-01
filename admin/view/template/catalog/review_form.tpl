@@ -25,6 +25,14 @@
       </div>
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-review" class="form-horizontal">
+         <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-general" data-toggle="tab">评论</a></li>
+            <li><a href="#tab-image" data-toggle="tab">图片</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-general">
+
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-author"><?php echo $entry_author; ?></label>
             <div class="col-sm-10">
@@ -131,6 +139,51 @@
               </select>
             </div>
           </div>
+ </div>
+
+<div class="tab-pane" id="tab-image">
+              <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left">图像</td>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="table-responsive">
+                <table id="images" class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left">附加图片</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $image_row = 0; ?>
+                    <?php foreach ($review_images as $product_image) { ?>
+                    <tr id="image-row<?php echo $image_row; ?>">
+                      <td class="text-left"><a href="" id="thumb-image<?php echo $image_row; ?>" data-toggle="image" class="img-thumbnail"><img src="<?php echo $product_image['thumb']; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a><input type="hidden" name="product_image[<?php echo $image_row; ?>][image]" value="<?php echo $product_image['image']; ?>" id="input-image<?php echo $image_row; ?>" /></td>
+                      <td class="text-left"><button type="button" onclick="$('#image-row<?php echo $image_row; ?>').remove();" data-toggle="tooltip" title="移除" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                    </tr>
+                    <?php $image_row++; ?>
+                    <?php } ?>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td class="text-left"><button type="button" onclick="addImage();" data-toggle="tooltip" title="添加照片" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
         </form>
       </div>
     </div>
@@ -163,4 +216,19 @@ $('input[name=\'product\']').autocomplete({
 	}	
 });
 //--></script></div>
+
 <?php echo $footer; ?>
+  <script type="text/javascript"><!--
+var image_row = <?php echo $image_row; ?>;
+
+function addImage() {
+  html  = '<tr id="image-row' + image_row + '">';
+  html += '  <td class="text-left"><a href="" id="thumb-image' + image_row + '"data-toggle="image" class="img-thumbnail"><img src="<?php echo $placeholder; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a><input type="hidden" name="product_image[' + image_row + '][image]" value="" id="input-image' + image_row + '" /></td>';
+  html += '  <td class="text-left"><button type="button" onclick="$(\'#image-row' + image_row  + '\').remove();" data-toggle="tooltip" title="移除" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+  html += '</tr>';
+
+  $('#images tbody').append(html);
+
+  image_row++;
+}
+//--></script>

@@ -39,7 +39,9 @@ class ControllerInformationAllreviews extends Controller {
 
 
             // $review_total = $this->model_catalog_review->getTotalReviewsByProductId($product_info['product_id']);
-            $results = $this->model_catalog_review->getAllreviews();
+            $results1 = $this->model_catalog_review->getAllreviews();
+             $results2 = $this->model_catalog_review->getAllreviewsed();
+            $results = array_merge($results1, $results2);
             // print_r($results);exit;
             $this->load->model('tool/image');
             foreach ($results as $result) {

@@ -12,15 +12,15 @@
         <div class="img_lb clearfix">
           <div class="swiper-container" id="swiper1">
               <div class="swiper-wrapper" style="cursor:-webkit-grab;">
-
-        <?php foreach ($servers as $server) { ?>
-               <?php foreach ($server['images'] as $k=> $server_images) { ?>
-                <div class="swiper-slide ban_img">
-                    <img class="changeimage lazyLoad" data-image='<?php echo $server_images["img"]?>' data-mimage='<?php echo $server_images["min_img"]?>'  />
-                  </div>
-                  <?php } ?>
-            <?php } ?>
-                 
+              <?php if($servers){?>
+                 <?php foreach ($servers as $server) { ?>
+                    <?php foreach ($server['images'] as $k=> $server_images) { ?>
+                      <div class="swiper-slide ban_img">
+                          <img class="changeimage lazyLoad" data-image='<?php echo $server_images["img"]?>' data-mimage='<?php echo $server_images["min_img"]?>'  />
+                        </div>
+                    <?php } ?>
+              <?php } ?>
+            <?php } ?>  
 
               
 
@@ -76,11 +76,13 @@
                 <span>SERVICE</span>
                 <div class="select">
                   <select name="">
+                   <?php if($serverser){?>
                   <?php foreach ($serverser as $server) { ?>
                   <?php foreach ($server['servers'] as $k=> $serverr) { ?>
                     <option value="<?php echo $serverr['servers']?>"><?php echo $serverr["servers"]?></option>
                     <?php } ?>
-                <?php } ?>
+                  <?php } ?>
+                  <?php } ?>
                   </select>
                 </div>
                 <button class="add_btn" type="button">+ add another service</button>

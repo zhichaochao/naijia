@@ -82,7 +82,11 @@
             <img src="catalog/view/theme/default/img/pro_2.jpg" alt="" />
             <div class="text_p">
               <p>Wholesale Order N14k 2x6 Kim K Lace  Closure 12 Inch</p>
-              <span>Length: <?php echo $review['length']?> & <?php echo $review['style']?></span>
+            <?php if($review['length']){?>
+            <span>Length: <?php echo $review['length']?> & <?php echo $review['style']?></span>
+            <?php }?>
+              
+
               <a href="<?php echo $review['href']?>">SHOP NOW</a>
             </div>
           </div>

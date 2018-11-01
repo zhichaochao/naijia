@@ -159,6 +159,11 @@ class ModelCatalogReview extends Model {
         $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review group by  order_id ");
 		return $query->rows;
 	}
+	public function getAllreviewsed() {
+
+        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review WHERE order_id = '0'");
+		return $query->rows;
+	}
 
 	public function getreviews() {
 

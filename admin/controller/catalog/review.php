@@ -68,6 +68,7 @@ class ControllerCatalogReview extends Controller {
 		$this->load->model('catalog/review');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+			// print_r($this->request->post);exit;
 			$this->model_catalog_review->editReview($this->request->get['review_id'], $this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -507,10 +508,13 @@ class ControllerCatalogReview extends Controller {
 
 		$data['cancel'] = $this->url->link('catalog/review', 'token=' . $this->session->data['token'] . $url, true);
 
+		$this->load->model('tool/image');
+		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+
 		if (isset($this->request->get['review_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
 			$review_info = $this->model_catalog_review->getReview($this->request->get['review_id']);
 		}
-
+// print_r($review_info);exit;
 		$data['token'] = $this->session->data['token'];
 
 		$this->load->model('catalog/product');
@@ -538,6 +542,55 @@ class ControllerCatalogReview extends Controller {
 		} else {
 			$data['author'] = '';
 		}
+
+		if (isset($this->request->post['review_image'])) {
+			$product_images = $this->request->post['review_image'];
+		} elseif (isset($this->request->get['review_id'])) {
+			$review_images = $this->model_catalog_review->getReviewImages($this->request->get['review_id']);
+		} else {
+			$review_images = array();
+		}
+// print_r($data['review_images']);exit;
+		$data['review_images'] = array();
+
+		foreach ($review_images as $review_image) {
+			if (is_file(DIR_IMAGE . $review_image['images'])) {
+				$image = $review_image['images'];
+				$thumb = $review_image['images'];
+			} else {
+				$image = '';
+				$thumb = 'no_image.png';
+			}
+
+			$data['review_images'][] = array(
+				'image'      => $image,
+				'thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
+			);
+		}
+// print_r($data['review_images']);exit;
+		if (isset($this->request->post['review_image'])) {
+			$data['image'] = $this->request->post['review_image'];
+		} elseif (!empty($review_images)) {
+			$data['image'] ='';
+		} else {
+			$data['image'] = '';
+		}
+
+		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
+			$data['thumb'] = $this->model_tool_image->resize($this->request->post['image'], 100, 100);
+		} elseif (!empty($review_images)) {
+			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		} else {
+			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		// if (isset($this->request->post['banner1'])) {
+		// 	$data['banner1'] = $this->request->post['banner1'];
+		// } elseif (!empty($category_info)) {
+		// 	$data['banner1'] = $review_info['banner1'];
+		// } else {
+		// 	$data['banner1'] = '';
+		// }
 
 		if (isset($this->request->post['text'])) {
 			$data['text'] = $this->request->post['text'];
