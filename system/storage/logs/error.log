@@ -1182,3 +1182,7 @@
 2018-10-29 6:43:18 - PHP Warning:  Illegal string offset 'value' in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 113
 2018-10-29 6:43:18 - PHP Notice:  Undefined index: name in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 113
 2018-10-29 6:43:18 - PHP Notice:  Undefined index: value in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\payment_method.tpl on line 113
+2018-10-31 6:43:54 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\WWW\naijia\catalog\controller\product\acccategory.php on line 255
+2018-11-01 6:49:14 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\WWW\naijia\catalog\controller\product\acccategory.php on line 255
+2018-11-01 7:15:56 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\WWW\naijia\catalog\controller\product\acccategory.php on line 255
+2018-11-01 7:16:04 - PHP Notice:  Undefined offset: 0 in D:\phpStudy\WWW\naijia\catalog\controller\product\acccategory.php on line 255

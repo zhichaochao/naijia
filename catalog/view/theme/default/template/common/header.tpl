@@ -237,6 +237,13 @@
     </div>
  <script>
         $(document).ready(function() {
+              $('.ss_modal').keydown(function(e){
+                if(e.keyCode==13){
+                    $('.search_li').click();
+                }
+            })
+
+
             /* Search */
             $('.search_li ').click(function() {
               

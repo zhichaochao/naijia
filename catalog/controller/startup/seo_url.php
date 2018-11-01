@@ -65,7 +65,70 @@ class ControllerStartupSeoUrl extends Controller {
 		}
 	}
 
-	public function rewrite($link) {
+	// public function rewrite($link) {
+	// 	$url_info = parse_url(str_replace('&amp;', '&', $link));
+
+	// 	$url = '';
+
+	// 	$data = array();
+
+	// 	parse_str($url_info['query'], $data);
+
+	// 	print_r( $data);
+
+	// 	foreach ($data as $key => $value) {
+	// 		// print_r($value);
+	// 		if (isset($data['route'])) {
+	// 			if (($data['route'] == 'product/product' && $key == 'product_id') || (($data['route'] == 'product/manufacturer/info' || $data['route'] == 'product/product') && $key == 'manufacturer_id') || ($data['route'] == 'information/information' && $key == 'information_id')) {
+	// 				$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE `query` = '" . $this->db->escape($key . '=' . (int)$value) . "'");
+
+	// 				if ($query->num_rows && $query->row['keyword']) {
+	// 					$url .= '/' . $query->row['keyword'];
+
+	// 					unset($data[$key]);
+	// 				}
+	// 			} elseif ($key == 'path') {
+	// 				$categories = explode('_', $value);
+
+	// 				foreach ($categories as $category) {
+	// 					$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE `query` = 'category_id=" . (int)$category . "'");
+
+	// 					if ($query->num_rows && $query->row['keyword']) {
+	// 						$url .= '/' . $query->row['keyword'];
+	// 					} else {
+	// 						$url = '';
+
+	// 						break;
+	// 					}
+	// 				}
+
+	// 				unset($data[$key]);
+	// 			}
+	// 		}
+	// 	}
+	// 	print_r($url);
+
+	// 	if ($url) {
+	// 		unset($data['route']);
+
+	// 		$query = '';
+
+	// 		if ($data) {
+	// 			foreach ($data as $key => $value) {
+	// 				$query .= '&' . rawurlencode((string)$key) . '=' . rawurlencode((is_array($value) ? http_build_query($value) : (string)$value));
+	// 			}
+
+	// 			if ($query) {
+	// 				$query = '?' . str_replace('&', '&amp;', trim($query, '&'));
+	// 			}
+	// 		}
+
+	// 		return $url_info['scheme'] . '://' . $url_info['host'] . (isset($url_info['port']) ? ':' . $url_info['port'] : '') . str_replace('/index.php', '', $url_info['path']) . $url . $query;
+	// 	} else {
+	// 		return $link;
+	// 	}
+	// }
+		public function rewrite($link) {
 		$url_info = parse_url(str_replace('&amp;', '&', $link));
 
 		$url = '';
@@ -73,6 +136,13 @@ class ControllerStartupSeoUrl extends Controller {
 		$data = array();
 
 		parse_str($url_info['query'], $data);
+
+		//dyl add(以下链接不生成伪静态url)
+		$url_array = array('product/category','product/product',
+                           'product/special','product/manufacturer',
+                           'product/compare','affiliate/account',
+                           'common/currency/currency','common/language/language'
+                           );
 
 		foreach ($data as $key => $value) {
 			if (isset($data['route'])) {
@@ -84,22 +154,39 @@ class ControllerStartupSeoUrl extends Controller {
 
 						unset($data[$key]);
 					}
-				} elseif ($key == 'path') {
+				}else if ($key == 'path') {
 					$categories = explode('_', $value);
 
 					foreach ($categories as $category) {
 						$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE `query` = 'category_id=" . (int)$category . "'");
 
 						if ($query->num_rows && $query->row['keyword']) {
-							$url .= '/' . $query->row['keyword'];
+							$url = '/' . $query->row['keyword'];
 						} else {
 							$url = '';
 
-							break;
+						
 						}
 					}
 
 					unset($data[$key]);
+				}
+				//有开启伪静态,且不为以上链接,且不包含-
+				else if($this->config->get('config_seo_url') && !in_array($data['route'],$url_array) && !stripos($data['route'],'-')){
+
+                    //对个别链接进行添加或者读取操作 dyl add
+			        $this->load->model('tool/seo_url');
+			        $result = $this->model_tool_seo_url->getSeourl($data['route']);
+			        if($result){
+		           	   $url = '/'.$result['keyword'];
+		            }else{
+		           	   $insert_result = $this->model_tool_seo_url->addSeourl($data['route']);
+		           	   if($insert_result){
+		                  $result = $this->model_tool_seo_url->getSeourl($data['route']);
+		                  $url = '/'.$result['keyword'];
+		           	   }
+		            }
+
 				}
 			}
 		}

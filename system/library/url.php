@@ -29,6 +29,7 @@ class Url {
 		}
 		
 		foreach ($this->rewrite as $rewrite) {
+			// print_r(1);exit();
 			$url = $rewrite->rewrite($url);
 		}
 		

@@ -163,9 +163,11 @@
 
               
               <li>
-                  <?php if (!isset($logins)) { ?>
+               <!--    <?php if (!isset($logins)) { ?>
                 <a class="shop_a" href="<?php echo $login; ?>">Please Login First</a>
-                  <?php }elseif($quantity>0){ ?>
+                  <?php }?> -->
+
+                  <?php if($quantity>0){ ?>
                 <a class="shop_a" id="button-cart" href="javascript:;"  >Add To Shopping Bag</a>
                   <?php }else{?>
                   <a class="shop_a">Lack of stock</a>

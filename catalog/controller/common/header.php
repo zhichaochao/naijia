@@ -1,6 +1,7 @@
 <?php
 class ControllerCommonHeader extends Controller {
 	public function index() {
+		// print_r($this->url->link('product/hotcategory'));exit();
 		// Analytics
 		$this->load->model('extension/extension');
 
