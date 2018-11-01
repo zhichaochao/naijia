@@ -70,7 +70,7 @@
                     <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                   </div>
                   <p class="yd_textp">
-                    <?php echo $product['description']; ?>
+                    <?php echo $product['meta_description']; ?>
                   </p>                  
                   <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>

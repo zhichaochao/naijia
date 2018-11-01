@@ -36,11 +36,11 @@ class ControllerProductAcccategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			// $limit = (int)$this->request->get['limit'];
-			$limit = 1;
+			$limit = (int)$this->request->get['limit'];
+			// $limit = 1;
 		} else {
-			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
-			$limit = 1;
+			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			// $limit = 1;
 		}
 
 		$data['breadcrumbs'] = array();
@@ -589,11 +589,11 @@ class ControllerProductAcccategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			// $limit = (int)$this->request->get['limit'];
-			$limit = 1;
+			$limit = (int)$this->request->get['limit'];
+			// $limit = 1;
 		} else {
-			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
-			$limit = 1;
+			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			// $limit = 1;
 		}
 
 		$data['breadcrumbs'] = array();
