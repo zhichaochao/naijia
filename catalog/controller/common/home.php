@@ -107,7 +107,6 @@ class ControllerCommonHome extends Controller {
 			$this->load->model('catalog/review');
 
 
-            // $review_total = $this->model_catalog_review->getTotalReviewsByProductId($product_info['product_id']);
             $results = $this->model_catalog_review->getreviews();
             // print_r($results);exit;
             $this->load->model('tool/image');
