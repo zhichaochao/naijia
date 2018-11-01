@@ -108,7 +108,7 @@
                                      <?php if($review['images']){?>
                                       <ul class="clearfix">
                                       <?php foreach ($review['images'] as $k=> $review_images) { ?>
-                                      <li><img class="lazyLoad" src="" srcs="<?php echo $review_images['img']?>"/></li>
+                                      <li><img class="lazyLoad" src="" srcs="<?php echo $review_images['min_img']?>"/></li>
                                       <?php } ?>
                                       </ul>
                                       <?php } ?>

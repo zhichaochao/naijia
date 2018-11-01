@@ -165,4 +165,14 @@ class ModelCatalogReview extends Model {
         $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review group by  order_id limit 2");
 		return $query->rows;
 	}
+	public function getAllserver() {
+
+        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "storelagos  limit 3");
+		return $query->rows;
+	}
+	public function getServer() {
+		$query = $this->db->query("SELECT servers FROM " . DB_PREFIX . "storelagos ");
+
+		return $query->rows;
+	}
 }
