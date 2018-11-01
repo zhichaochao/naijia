@@ -182,38 +182,3 @@
       $(".pl_lunbo .swiper-pagination-clickable span").eq(this_index).trigger('click');
     }
 </script>
-<!-- <?php if ($success) { ?>
-  <script type="text/javascript">
-    alert('<?php echo $success; ?>');
-  </script>
-  <?php } ?>
-  <?php if ($error_warning) { ?>
-  <script type="text/javascript">
-    alert('<?php echo $error_warning; ?>');
-  </script>
-  <?php } ?> -->
-<!-- <script type="text/javascript">
-    $('#button-cart').on('click', function() {
-            $.ajax({
-            url: '<?php echo $action?>',
-            type: 'post',
-             dataType: 'json',
-            data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
-           
-     
-            success: function(json) {
-              if (json.success) {
-                alert(json.success);
-             }else{
-              alert(json.error);
-             }
-              },
-              error: function(xhr, ajaxOptions, thrownError) {
-                  alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-              }
-            });
-
-
-        
-    });
-</script> -->

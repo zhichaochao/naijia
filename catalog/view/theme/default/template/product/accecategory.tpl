@@ -21,10 +21,6 @@
           <div class="sortby">
             <p>Sort by : <img src="catalog/view/theme/default/img/png/icon_26.png  " alt="" /></p>
             <ul class="clearfix">
-             <!--  <li><a href="###">Best selling</a></li>
-              <li><a href="###">Newest</a></li>
-              <li><a href="###">Lowest price</a></li>
-              <li><a href="###">Highest price</a></li> -->
               <li><a href="<?php echo $sort_sort_rating?>">Best selling</a></li>
             <li><a href="<?php echo $sort_sort_add?>">Newest</a></li>
             <li><a href="<?php echo $sort_sort_order?>">Lowest price</a></li>
@@ -161,7 +157,7 @@
                                +'<p class="pl_p">'+data.products[i].reviews +'reviews'
                               + '</p>'
 
-                               if(!empty(data.products[i].special)) { 
+                               if(data.products[i].special) { 
 
                                   result+= '<span class="price">'+data.products[i].special
                                   + '<em>'+data.products[i].price+'</em></span>'
@@ -171,7 +167,7 @@
                                   result+= '<span class="price">'+data.products[i].price+'</span>'
                                  } 
 
-                                   if(!empty(data.products[i].special)) { 
+                                   if(data.products[i].special) { 
                                 result+='<span class="red_span">-'+data.products[i].percent+'%</span>'
                                   } 
                               result+='</div>'
@@ -195,7 +191,7 @@
                                    }
                                   // console.log(result);
                                   // alert(11);
-                           $('.prolist').append('adsfdfsasdf');
+                           $('.prolist').append(result);
                           }
                        })
                       } 

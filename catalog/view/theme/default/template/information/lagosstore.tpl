@@ -12,15 +12,18 @@
         <div class="img_lb clearfix">
           <div class="swiper-container" id="swiper1">
               <div class="swiper-wrapper" style="cursor:-webkit-grab;">
-                  <div class="swiper-slide ban_img">
-                    <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
-                  </div>
-                <div class="swiper-slide ban_img">
-                  <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
-                </div>
-                <div class="swiper-slide ban_img">
-                  <img class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/wig5.jpg' data-mimage='catalog/view/theme/default/img/yd_wig5.jpg'  />
-                </div>
+              <?php if($servers){?>
+                 <?php foreach ($servers as $server) { ?>
+                    <?php foreach ($server['images'] as $k=> $server_images) { ?>
+                      <div class="swiper-slide ban_img">
+                          <img class="changeimage lazyLoad" data-image='<?php echo $server_images["img"]?>' data-mimage='<?php echo $server_images["min_img"]?>'  />
+                        </div>
+                    <?php } ?>
+              <?php } ?>
+            <?php } ?>  
+
+              
+
               </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -65,18 +68,21 @@
           <form action="">
             <h2>Request a New Appointment</h2>
             <div class="form_text clearfix">
-              <label for="">
+              <label for="" class="datetime">
                 <span>DATE</span>
-                <input type="text"  />
+                <input type="text" data-date-format="YYYY-MM-DD HH:mm:ss"  />
               </label>
               <label for="">
                 <span>SERVICE</span>
                 <div class="select">
                   <select name="">
-                    <option value="">Select Service</option>
-                    <option value="">Select Service2</option>
-                    <option value="">Select Service3</option>
-                    <option value="">Select Service4</option>
+                   <?php if($serverser){?>
+                  <?php foreach ($serverser as $server) { ?>
+                  <?php foreach ($server['servers'] as $k=> $serverr) { ?>
+                    <option value="<?php echo $serverr['servers']?>"><?php echo $serverr["servers"]?></option>
+                    <?php } ?>
+                  <?php } ?>
+                  <?php } ?>
                   </select>
                 </div>
                 <button class="add_btn" type="button">+ add another service</button>
@@ -113,10 +119,9 @@
     $(".add_btn").click(function(){
       let fw_text = 
         '<select name="">'
-          +'<option value="">Select Service</option>'
-          +'<option value="">Select Service2</option>'
-          +'<option value="">Select Service3</option>'
-          +'<option value="">Select Service4</option>'
+        <?php foreach ($server['servers'] as $k=> $serverr) { ?>
+          +'<option value="<?php echo $serverr['servers']?>"><?php echo $serverr["servers"]?></option>'
+          <?php } ?>
         +'</select>';
       if($(".select select").length<=2){
         $(".select").append(fw_text);

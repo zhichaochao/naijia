@@ -36,11 +36,11 @@ class ControllerProductCategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			// $limit = (int)$this->request->get['limit'];
-			$limit = 1;
+			$limit = (int)$this->request->get['limit'];
+			// $limit = 1;
 		} else {
-			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
-			$limit = 1;
+			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			// $limit = 1;
 		}
 
 		$data['breadcrumbs'] = array();
@@ -275,7 +275,7 @@ class ControllerProductCategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -348,7 +348,7 @@ class ControllerProductCategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -421,7 +421,7 @@ class ControllerProductCategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -519,6 +519,7 @@ class ControllerProductCategory extends Controller {
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
 					'name'        => $result['name'],
+					'meta_description'        => $result['meta_description'],
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -718,7 +719,7 @@ class ControllerProductCategory extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('product/category',$url . '&page={page}');
+			$pagination->url = $this->url->link('product/category','path=' . $category_info['category_id'] . '&page={page}');
 
 			$data['pagination'] = $pagination->render();
 			
@@ -743,7 +744,7 @@ class ControllerProductCategory extends Controller {
 			$data['order'] = $order;
 			$data['limit'] = $limit;
 			$data['category_id'] = $category_info['category_id'];
-// print_r($data['category_id']);exit;
+// print_r($data['allpage']);exit;
 			$data['continue'] = $this->url->link('common/home');
 
 
@@ -873,11 +874,11 @@ class ControllerProductCategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			// $limit = (int)$this->request->get['limit'];
-			$limit = 1;
+			$limit = (int)$this->request->get['limit'];
+			// $limit = 1;
 		} else {
-			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
-			$limit = 1;
+			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			// $limit = 1;
 		}
 
 		$data['breadcrumbs'] = array();
@@ -1104,7 +1105,7 @@ class ControllerProductCategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -1176,7 +1177,7 @@ class ControllerProductCategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -1249,7 +1250,7 @@ class ControllerProductCategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,30).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -1546,7 +1547,7 @@ class ControllerProductCategory extends Controller {
 			$pagination->total = $product_total;
 			$pagination->page = $page;
 			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('product/category',$url . '&page={page}');
+			$pagination->url = $this->url->link('product/category','path=' . $category_info['category_id'] . '&page={page}');
 
 			$data['pagination'] = $pagination->render();
 			

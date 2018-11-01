@@ -77,29 +77,7 @@
        alert('Please choose address and payment method.');
     }
     $(function(){
-//         $("input").focus(function(){
-//             $(this).attr("placeholder","");
-//             $(this).siblings(".pl_span").css("display","block");
-//         })
-//         $("input").blur(function(){
-            
-//             $(this).attr("placeholder",$(this).siblings(".pl_span").text());
-//             $(this).siblings(".pl_span").css("display","none");
-//         })
-        
-// //      地址选择
-//         $(".add_ol>li .li_label").click(function(){
-//             $(this).parent().addClass("active").siblings("li").removeClass("active");
-//         })
-//         //删除地址
-//         $(".add_ol .det").click(function(){
-//             $(this).parent().remove();
-//         })
-        
-//      支付方式选择
-        // $(".pay_ol>li").click(function(){
-        //     $(this).addClass("active").siblings("li").removeClass("active");
-        // })
+
         
      
         

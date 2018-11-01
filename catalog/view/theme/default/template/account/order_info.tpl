@@ -162,6 +162,16 @@
           </div>
         </div>
       </div>
+      <?php if($shippingorpick == 'pick' ) { ?>
+      <div class="address clearfix">
+        <dl class="clearfix">
+          <dt style="width: 1.4rem;">Pickup Address:</dt>
+          <dd>alausa.obafemi awolowo way. ikeja
+            Lagos，Nigeria</dd>
+        </dl>
+      </div>
+      
+      <?php }else{?>
       <div class="address clearfix">
         <dl class="clearfix">
           <dt>Name:</dt>
@@ -176,6 +186,7 @@
           <dd><?php echo $shipping_telephones; ?></dd>
         </dl>
       </div>
+      <?php }?>
 
       <!-- s上传凭证 -->
       <?php if($payment_code=='bank_transfer') { ?>
@@ -603,24 +614,6 @@ if(confirm('Are you sure?')){
       
     }
 }
-  // $(function(){
-    
-  //   //下拉total_p
-  //     $(".total_p").click(function(){
-  //       if($(this).hasClass("active")){
-  //         $(this).removeClass("active");
-  //         $(this).siblings(".slide_p").stop().slideUp();
-  //         $(this).siblings("hr").hide();
-  //       }else{
-  //         $(this).addClass("active");
-  //         $(this).siblings(".slide_p").stop().slideDown();
-  //         $(this).siblings("hr").show();
-  //       }
-        
-        
-  //     })
-    
-  // })
   
   
   //倒计时

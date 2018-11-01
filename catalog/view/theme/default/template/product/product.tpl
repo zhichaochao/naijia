@@ -248,7 +248,7 @@
                   </ol>
                 </h2>
                 <div class="slide_text">
-                  <div class="pl_div">
+                  <div class="pl_div hide">
                   <!-- <p class="no_review"> This product hasn't any review yet</p> -->
                   </div>
                   <?php }?>

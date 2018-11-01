@@ -97,6 +97,7 @@ class ModelAccountOrder extends Model {
 				'date_added'              => $order_query->row['date_added'],
 				'delivered_date'              => $order_query->row['delivered_date'],
 				'order_number'                => $order_query->row['order_number'], 
+				'shippingorpick'                => $order_query->row['shippingorpick'], 
 				'ip'                      => $order_query->row['ip'],
 				'bank_receipt'            => $order_query->row['bank_receipt']
 			);

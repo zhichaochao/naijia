@@ -139,7 +139,7 @@
           </li>
           <li class="clearfix <?=$shippingorpick=='shipping'?'':'active';?>">
             <p class="pick_1">Lagos Store</p>
-            <p class="pick_2">30 Mobolaji Bank Anthony Way, Maryland 000012, Lagos,  Nigeria</p>
+            <p class="pick_2">alausa.obafemi awolowo way. ikeja Lagos，Nigeria</p>
           </li>
         </ul>
         

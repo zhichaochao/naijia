@@ -19,7 +19,7 @@
                     <div class="bf_img" ></div>
                     <video id="my_video" src="<?php echo $video; ?>" width="100%"></video>
                   </div>
-                  <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div>
+                  <!-- <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div> -->
               </div>
                <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -29,7 +29,7 @@
       
       <div class="content">
         <div class="top_f clearfix">
-          <h1>One Weaves Box One Look</h1>
+          <!-- <h1>One Weaves Box One Look</h1> -->
           <p><?php echo $product_total; ?> items found</p>
           <div class="sortby">
             <p>Sort by : <img src="catalog/view/theme/default/img/png/icon_26.png  " alt="" /></p>
@@ -70,7 +70,7 @@
                     <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
                   </div>
                   <p class="yd_textp">
-                    <?php echo $product['description']; ?>
+                    <?php echo $product['meta_description']; ?>
                   </p>                  
                   <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
@@ -153,7 +153,7 @@
                                +'<p class="pl_p">'+data.products[i].reviews +'reviews'
                               + '</p>'
 
-                               if(!empty(data.products[i].special)) { 
+                               if(data.products[i].special) { 
 
                                   result+= '<span class="price">'+data.products[i].special
                                   + '<em>'+data.products[i].price+'</em></span>'
@@ -163,7 +163,7 @@
                                   result+= '<span class="price">'+data.products[i].price+'</span>'
                                  } 
 
-                                   if(!empty(data.products[i].special)) { 
+                                   if(data.products[i].special) { 
                                 result+='<span class="red_span">-'+data.products[i].percent+'%</span>'
                                   } 
                                   result+= '<span class="yd_btna" href="'+data.products[i].href+'">SHOW</span>'
@@ -188,7 +188,7 @@
                                    }
                                   // console.log(result);
                                   // alert(11);
-                           $('.prolist').append('adsfdfsasdf');
+                           $('.prolist').append(result);
                           }
                        })
                       } 

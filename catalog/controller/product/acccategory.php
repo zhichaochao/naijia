@@ -36,11 +36,11 @@ class ControllerProductAcccategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			// $limit = (int)$this->request->get['limit'];
-			$limit = 1;
+			$limit = (int)$this->request->get['limit'];
+			// $limit = 1;
 		} else {
-			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
-			$limit = 1;
+			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			// $limit = 1;
 		}
 
 		$data['breadcrumbs'] = array();
@@ -257,7 +257,7 @@ class ControllerProductAcccategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
@@ -589,11 +589,11 @@ class ControllerProductAcccategory extends Controller {
 		}
 
 		if (isset($this->request->get['limit'])) {
-			// $limit = (int)$this->request->get['limit'];
-			$limit = 1;
+			$limit = (int)$this->request->get['limit'];
+			// $limit = 1;
 		} else {
-			// $limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
-			$limit = 1;
+			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+			// $limit = 1;
 		}
 
 		$data['breadcrumbs'] = array();
@@ -810,7 +810,7 @@ class ControllerProductAcccategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => utf8_substr(strip_tags($result['name']),0,40).'...',
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',

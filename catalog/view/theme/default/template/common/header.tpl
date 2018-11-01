@@ -129,7 +129,7 @@
               <p class="nav_p">Hair Care<i></i></p>
               <ol class="yd_nav_ol">
                 <li><a href="<?php echo $acchref;?>">Accessories</a></li>
-                <li><a href="###">Blogs</a></li>
+                <li><a href="<?php echo $blog;?>">Blog</a></li>
               </ol> 
             </li>
             <li><a href="<?php echo $lagosstore;?>">Lagos Store <i></i></a></li>
