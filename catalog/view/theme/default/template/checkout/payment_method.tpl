@@ -91,36 +91,9 @@
                                 <p><?=$product['name'];?> <span class="num">x<?=$product['quantity'];?></span></p>
                               <?php } ?>
                                 <hr />
-                                <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
-                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-                                <?php }} ?>
+                               
                                 </div>
-                                <div class="slide clear clearfix">
-                                    <div class="total clearfix">
-                                        <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
-                                         <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-                                      <?php }else{?>
-                                        <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-                                         <?php  }} ?>
-                                    </div>
-                                    <ul class="check_ul clearfix">
-                                         <?php foreach ($products as $product) { ?>
-                                    <li class="clearfix">
-                                        <div class="pic_img"><img src="<?=$product['image'];?>"/></div>
-                                        <div class="text">
-                                            <h2><?=$product['name'];?></h2>
-                                             <?php foreach ($product['option'] as $option) { ?>
-                                            <p><?=$option['name'];?>: <?=$option['value'];?></p>
-                                              <?php  } ?>
-                                        
-                                            <p>Quantity:  <?=$product['quantity'];?></p>
-                                            <span> <?=$product['price'];?></span>
-                                        </div>
-                                    </li>
-                                     <?php  } ?>
-                                    </ul>
-                                    
-                                </div>
+                            
                                 <div class="a_btn">
                                     <a onclick="pay();" class="a_qd_btn">Continue to pay</a>
                                 </div>

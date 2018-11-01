@@ -235,7 +235,18 @@ class ControllerCheckoutCart extends Controller {
 
 			$data['countries'] = $this->model_localisation_country->getCountries();
 			$data['shippingorpick']=isset($this->session->data['shippingorpick'])?$this->session->data['shippingorpick']:'shipping';
-			$data['country_id']=isset($this->session->data['shipping_address']['country_id'])?$this->session->data['shipping_address']['country_id']:'';
+
+
+
+			if ($this->customer->isLogged()) {
+				$data['country_id']=isset($this->session->data['shipping_address']['country_id'])?$this->session->data['shipping_address']['country_id']:'';
+			}else{
+				$data['country_id']='156';
+			}
+
+			
+
+			// print_r($data['country_id']);exit;
 			$data['zone_id']=isset($this->session->data['shipping_address']['zone_id'])?$this->session->data['shipping_address']['zone_id']:'';
 
 			$data['cart_ids'] = explode(',',$this->session->data['cart_ids']);

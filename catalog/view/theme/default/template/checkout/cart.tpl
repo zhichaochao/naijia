@@ -15,7 +15,7 @@
         <div class="qx">
           <label for="" class="qx_label">
             <input class="check_input" type="checkbox">
-            <i class="check_i"></i>
+            <i class="check_i active"></i>
             <span>ALL</span>
             
             <em class="em4">Total Prices</em>
@@ -122,6 +122,7 @@
                                         <?php if ($country['country_id'] == $country_id) { ?>
                                         <option value="<?php echo $country['country_id']; ?>" selected="selected"><?php echo $country['name']; ?></option>
                                         <?php } else { ?>
+                                        
                                         <option value="<?php echo $country['country_id']; ?>"><?php echo $country['name']; ?></option>
                                         <?php } ?>
                                         <?php } ?>
