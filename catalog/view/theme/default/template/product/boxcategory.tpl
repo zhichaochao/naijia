@@ -21,8 +21,10 @@
                   </div>
                   <!-- <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div> -->
               </div>
+              <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
                <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
            </div>
         </div>
       </div>
@@ -243,20 +245,23 @@ function wishlist(product_id,e) {
 
   //ban輪播
     var swiper = new Swiper('.swiper-container', {
-      autoplay: true,
       loop : true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable :true,
-        },
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+        // pagination: {
+        //   el: '.swiper-pagination',
+        //   clickable :true,
+        // },
       });
     //鼠标覆盖停止自动切换
-      swiper.el.onmouseover = function(){
-        swiper.autoplay.stop();
-      }
-      swiper.el.onmouseout = function(){
-        swiper.autoplay.start();
-      }
+      // swiper.el.onmouseover = function(){
+      //   swiper.autoplay.stop();
+      // }
+      // swiper.el.onmouseout = function(){
+      //   swiper.autoplay.start();
+      // }
       
     var myvideo = document.getElementById("my_video");
         $(".bf_img").click(function(){

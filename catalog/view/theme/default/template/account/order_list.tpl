@@ -155,4 +155,13 @@ if(confirm('Are you sure?')){
     }
 }
 </script>
+<script>
+    window.onload = function(){
+      var lf_height = $(".lf_nav").height();
+    $(".null").height(lf_height);
+    var null_w = $(".null>.text").width();
+    var null_h = $(".null>.text").height();
+    $(".null>.text").css("margin-left",-null_w/2+"px").css("margin-top",-null_h/2+"px");
+    }
+</script>
 <?php echo $footer; ?>

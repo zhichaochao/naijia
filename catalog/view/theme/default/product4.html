@@ -105,14 +105,15 @@
 					<div class="swiper-container">
 					    <div class="swiper-wrapper">
 					      	<div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='img/pro_ban3.jpg' data-mimage='img/yd_pro_ban3.jpg'  /></div>
-					      	<div class="swiper-slide" style="cursor: pointer;position: relative;">
+					      	<div class="swiper-slide" style="cursor: pointer;position: relative;display: block;">
 					      		<div class="bf_img" ></div>
 				      			<video id="my_video" src="img/myvideo.mp4" width="100%"></video>
 					      	</div>
-					      	<div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='img/pro_ban3.jpg' data-mimage='img/yd_pro_ban3.jpg'  /></div>
 					    </div>
+					    <div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
 				       <!-- Add Pagination -->
-						<div class="swiper-pagination"></div>
+						<!--<div class="swiper-pagination"></div>-->
 					 </div>
 				</div>
 			</div>
@@ -377,20 +378,23 @@
         
 		//ban輪播
 		var swiper = new Swiper('.swiper-container', {
-			autoplay: true,
 			loop : true,
-	      pagination: {
-	        el: '.swiper-pagination',
-	        clickable :true,
-	      },
+			navigation: {
+			    nextEl: '.swiper-button-next',
+			    prevEl: '.swiper-button-prev',
+			},
+//	      pagination: {
+//	        el: '.swiper-pagination',
+//	        clickable :true,
+//	      },
 	    });
 		//鼠标覆盖停止自动切换
-			swiper.el.onmouseover = function(){
-			  swiper.autoplay.stop();
-			}
-			swiper.el.onmouseout = function(){
-			  swiper.autoplay.start();
-			}
+//			swiper.el.onmouseover = function(){
+//			  swiper.autoplay.stop();
+//			}
+//			swiper.el.onmouseout = function(){
+//			  swiper.autoplay.start();
+//			}
 			
 		var myvideo = document.getElementById("my_video");
         $(".bf_img").click(function(){

@@ -77,7 +77,7 @@
        <!--  <div class="right_text clearfix">
           <div class="null clearfix">
             <div class="text clearfix">
-              <img src="img/png/null_1.png"/>
+              <img src="catalog/view/theme/default/img/png/null_1.png"/>
               <p>You haven`t get any coupons</p>
               <a href="###">Receive coupons&nbsp;&nbsp;></a>
             </div>
@@ -91,3 +91,12 @@
     </div>
 
 <?php echo $footer; ?>
+<script>
+    window.onload = function(){
+      var lf_height = $(".lf_nav").height();
+    $(".null").height(lf_height);
+    var null_w = $(".null>.text").width();
+    var null_h = $(".null>.text").height();
+    $(".null>.text").css("margin-left",-null_w/2+"px").css("margin-top",-null_h/2+"px");
+    }
+</script>

@@ -296,6 +296,11 @@ $(".ss_modal .text label img.in_close").click(function(){
           })
         }
 	})
+	$("img.lazyLoad ").each(function(){
+		$(this).attr("src","/image/yjz.png");  
+	})
+	
+	
 var lazyLoad = (function(){
 	var clock;
 	function init(){
@@ -311,9 +316,11 @@ var lazyLoad = (function(){
 	}
 	function checkShow(){
 		$("img.lazyLoad ").each(function(){
+			
 			var this_img =$(this);
 			if(this_img.attr('isLoaded')){
         		return;
+        		
       		}
 			if(shouldShow(this_img)){
 				showImg(this_img);

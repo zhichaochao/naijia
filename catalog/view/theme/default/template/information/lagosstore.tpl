@@ -70,7 +70,7 @@
             <div class="form_text clearfix">
               <label for="" class="datetime">
                 <span>DATE</span>
-                <input type="text" data-date-format="YYYY-MM-DD HH:mm:ss"  />
+                <input type="text" class="time" />
               </label>
               <label for="">
                 <span>SERVICE</span>
@@ -101,6 +101,8 @@
 
 
 <?php echo $footer; ?>
+<link rel="stylesheet" href="catalog/view/theme/default/css/time.css" />
+<script type="text/javascript" src="catalog/view/theme/default/js/time.js" ></script>
 <script type="text/javascript">
   $(function(){
     //banner轮播
@@ -142,5 +144,29 @@
       $(".yy_modal").fadeOut();
       $("body").css("overflow","");
     })
+
+    
+    //時間插件
+    function getNow(s) {
+        return s < 10 ? '0' + s: s;
+    }
+    let myDate = new Date();
+    let year=myDate.getFullYear();
+    let month=myDate.getMonth()+1;
+    let day=myDate.getDate(); 
+    let now=year+'-'+getNow(month)+"-"+getNow(day);
+    window.onload =function(){
+      $(".time").attr("value",now);
+    }
+    $(".time").on("click",function(e){
+      e.stopPropagation();
+      $(this).lqdatetimepicker({
+        css : 'datetime-day',
+        dateType : 'D',
+        selectback : function(){
+        }
+      });
+  
+    });
   })
 </script>
