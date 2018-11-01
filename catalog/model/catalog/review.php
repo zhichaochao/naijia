@@ -156,7 +156,7 @@ class ModelCatalogReview extends Model {
 
 	public function getAllreviews() {
 
-        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review group by  order_id ");
+        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review WHERE order_id != '0' group by  order_id ");
 		return $query->rows;
 	}
 	public function getAllreviewsed() {
@@ -167,7 +167,7 @@ class ModelCatalogReview extends Model {
 
 	public function getreviews() {
 
-        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review group by  order_id limit 2");
+        $query = $this->db->query("SELECT * FROM   " . DB_PREFIX . "review WHERE order_id = '0' limit 2");
 		return $query->rows;
 	}
 	public function getAllserver() {
