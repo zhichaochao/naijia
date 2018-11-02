@@ -1,3 +1,4 @@
 2018-11-01 9:50:34 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-01 9:50:34 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 132018-11-01 11:32:55 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-01 11:32:55 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-02 8:42:10 - PHP Notice:  Undefined index: totals in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\checkout\total.php on line 53
