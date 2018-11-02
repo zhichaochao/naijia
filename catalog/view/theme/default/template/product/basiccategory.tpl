@@ -5,6 +5,11 @@
       <div class="content">
         <div class="top_p"><?php echo $slogans?></div>
         <h1 class="h1">LACE WIG</h1>
+        <p class="p1">
+          There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be installed without or with glee. 
+          Hand-knotted base with adjustable clips, painstakingly crafted with raw virgin hair.
+          These flawless pieces add unbeatable density and beauty to transform your look.
+        </p>
        
         
         <div class="context">
