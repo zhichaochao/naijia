@@ -117,7 +117,7 @@ class ControllerCommonHome extends Controller {
                     //$review_img[$key]['img'] = HTTP_SERVER.$row['path'];
                     $review_img[$key]['img'] = $this->model_tool_image->resize( $row['images'], 112, 112);
                     $review_img[$key]['min_img'] = $this->model_tool_image->resize($row['images'], 400, 400);
-                    // $review_img[$key]['big_img'] = $this->model_tool_image->resize($row['images'], 600, 600);
+                    $review_img[$key]['big_img'] = $this->model_tool_image->resize($row['images'], 600, 600);
                 }
                 $thumbsnot= $this->model_catalog_review->thumbsornot($result['review_id']);
                $thumbstotal =$this->model_catalog_review->getTotalsThumbs($result['review_id']);

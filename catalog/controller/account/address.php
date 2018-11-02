@@ -588,6 +588,12 @@ class ControllerAccountAddress extends Controller {
 			$data['default'] = false;
 		}
 
+		if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+		}else{
+			$data['home'] =$this->url->link('account/address');
+		}
+
 		$data['back'] = $this->url->link('account/address', '', true);
 
 		$data['column_left'] = $this->load->controller('common/column_left');

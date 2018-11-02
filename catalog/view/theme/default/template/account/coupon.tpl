@@ -19,7 +19,7 @@
           <img class="vip_img" src="catalog/view/theme/default/img/vip.jpg" alt="" />
         </div>
         
-        <div class="right_text clearfix">
+        <!-- <div class="right_text clearfix">
           <div class="coupon clearfix">
             <h1>My Coupons </h1>
             
@@ -71,19 +71,19 @@
             </div>
           </div>
           
-        </div>
+        </div> -->
 
         <!-- STA 空页面-->
-       <!--  <div class="right_text clearfix">
+        <div class="right_text clearfix">
           <div class="null clearfix">
             <div class="text clearfix">
               <img src="catalog/view/theme/default/img/png/null_1.png"/>
               <p>You haven`t get any coupons</p>
-              <a href="###">Receive coupons&nbsp;&nbsp;></a>
+              <a href="javascript:;">Receive coupons&nbsp;&nbsp;></a>
             </div>
           </div>
           
-        </div> -->
+        </div>
         <!-- END -->
       
       </div>

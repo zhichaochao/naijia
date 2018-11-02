@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <div class="in_content clearfix"></div>
     <!--内容-->
-    <div class="address_con order_con clearfix" style="padding: 0.2rem 0.15rem;">
+    <div class="address_con order_con clearfix" style="padding: 0.2rem;">
       <div class="or_content address3 clearfix">
         <div class="top_yd clearfix">
           <h1 style="margin: 0; font-weight: normal;"><a class="fh" href="<?php echo  $home?>">< BACK</a> MY ADDRESSES</h1>
@@ -21,7 +21,7 @@
         
         <div class="address_a"> <a href="<?php echo $add; ?>">Add new address</a></div>
        <?php if($addresses){?> 
-        <div class="add_con clearfix" style="margin-top: 0.2rem">
+        <div class="add_con clearfix" style="margin-top: 0.2rem;padding:0;background:transparent;">
           <ol class="address_ol clearfix">
           <?php foreach ($addresses as $result) { ?>
             <li>
@@ -46,7 +46,7 @@
                 </div>
               </div>
             
-              <div class="form_text clearfix" style="background: #fff;padding: 0.4rem 0.35rem;">
+              <div class="form_text clearfix" style="background: #fff;padding: 0.4rem 0.55rem;">
                 <form action="<?php echo $action; ?>" method="post">
                 <input type="hidden" name="address_id" value="<?php echo $result['address_id']; ?>">
 

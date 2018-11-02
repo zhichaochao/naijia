@@ -19,6 +19,19 @@
         
         <!--内容-->
         <div class="intext1 clearfix">
+              <div class="in_coupon clearfix">
+                <ul class="clearfix">
+                    <li>
+                      <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
+                    </li>
+                    <li>
+                      <img src="catalog/view/theme/default/img/coupin_2.jpg" alt="" />         
+                    </li>
+                    <li>
+                      <img src="catalog/view/theme/default/img/coupin_3.jpg" alt="" />         
+                    </li>
+                </ul>
+            </div>
             <div class="content">
                 <ul class="in_ul1">
                            <?php if($fours){ foreach ($fours as $banner) { ?>
@@ -142,4 +155,65 @@
             </div>
             
         </div>
+
+        <!--客户评价弹窗-->
+   <?php foreach ($allreviews as $review) { ?>
+    <!--客户评价弹窗-->
+    <div class="khpj_midal clearfix">
+      <div class="text clearfix">
+        <div class="close"></div>
+        <div class="left clearfix">
+          <div class="swiper-container pl_lb">
+            
+              <div class="swiper-wrapper">
+              <?php foreach ($review['images'] as $k=> $review_images) { ?>
+              <div class="swiper-slide"><img src="<?php echo $review_images['big_img']?>"/></div>
+                  <?php } ?>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="right clearfix">
+          <div class="name clearfix">
+            <img src="catalog/view/theme/default/img/png/touxiang2.png"/>
+            <span><?php echo $review['author']?></span>
+          </div>
+          <div class="pro clearfix">
+            <img src="catalog/view/theme/default/img/pro_2.jpg" alt="" />
+            <div class="text_p">
+              <p>Wholesale Order N14k 2x6 Kim K Lace  Closure 12 Inch</p>
+            <?php if($review['length']){?>
+            <span>Length: <?php echo $review['length']?> & <?php echo $review['style']?></span>
+            <?php }?>
+              
+
+              <a href="<?php echo $review['href']?>">SHOP NOW</a>
+            </div>
+          </div>
+          <div class="pinlun clearfix">
+            <ol class="start_ol">
+              <?php for ($i = 1; $i <= 5; $i++) { ?>
+                  <?php if ($review['rating'] < $i) { ?>
+                      <li class=""></li>
+                    <?php } else { ?>
+                      <li class="active"></li>
+                  <?php } ?>
+               <?php } ?>
+            </ol>
+            <span><?php echo $review['date_added']?></span>
+            <p>
+             <?php echo $review['text']?>
+            </p>
+            <div class="zan <?=$review['thumbsnot']==1 ?'active':'';?>" onclick="thumbs('<?php echo $review['review_id']; ?>',this);">
+              <span id="thumbsed"><?php echo $review['thumbstotal']?></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <?php  } ?>
 <?php echo $footer; ?>
