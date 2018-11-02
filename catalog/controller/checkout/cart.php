@@ -523,6 +523,7 @@ class ControllerCheckoutCart extends Controller {
 						$unit_price = $this->tax->calculate($tmp, $value['tax_class_id'], $this->config->get('config_tax'));
 					
 						$json['total'] = $this->currency->format($unit_price, $this->session->data['currency']);
+						$json['totals'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 					}
 					
 				}

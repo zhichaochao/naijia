@@ -352,6 +352,8 @@ $(document).ready(function(){
         type:'POST',
         data:{id:id,num:num},
         success: function(json) {
+          tips('Successful shopping cart');
+          $('#cart_count').html(json.totals);
           $('#total_'+json['id']).html(json['total']);
           get_total();
          }
