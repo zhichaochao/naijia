@@ -69,7 +69,7 @@ class ControllerCommonFooter extends Controller {
 							),
 						3=>array(
 							'title'=>'VIP Policy',
-							'url'=>$this->url->link('information/information'),
+							'url'=>$this->url->link('information/vip'),
 							),
 					),
 				),

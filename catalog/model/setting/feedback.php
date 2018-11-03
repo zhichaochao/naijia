@@ -37,4 +37,17 @@ class ModelSettingFeedback extends Model {
 
 	}
 
+	public function addStore($data = array()) {
+		// print_r($data);exit;
+        $sql = "insert into " . DB_PREFIX . "store SET
+                email = '" . $this->db->escape($data['email']) . "',
+                url = '" . $this->db->escape($data['url']) . "',
+                time = '" . $this->db->escape($data['time']) . "',
+                content = '" . $this->db->escape($data['content']) . "'";
+
+		$result = $this->db->query($sql);
+
+		return $result;
+	}
+
 }

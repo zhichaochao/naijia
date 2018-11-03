@@ -331,13 +331,16 @@ $(document).ready(function(){
       num_val++;
       var stock_quantity=$(th).parent().attr('data');
       // alert(stock_quantity);
-      if (num_val<stock_quantity) {alert('Lack of stock'); return false;}
+      // if (num_val<=stock_quantity) {alert('Lack of stock'); return false;}
       $(th).siblings(".num_in").val(num_val);
       submit_num(id,num_val);
       
  }
  function cart_sub(id,th) {
   var num_val = $(th).siblings(".num_in").val();
+  var stock_quantity=$(th).parent().attr('data');
+  // alert(num_val);die;
+  if (num_val<=stock_quantity) {tips('Lack of stock','gantan'); return false;}
       if(num_val>1){
         num_val--;
         $(th).siblings(".num_in").val(num_val);
@@ -352,7 +355,7 @@ $(document).ready(function(){
         type:'POST',
         data:{id:id,num:num},
         success: function(json) {
-          tips('Successful shopping cart');
+          tips('Shopping Cart Modification');
           $('#cart_count').html(json.totals);
           $('#total_'+json['id']).html(json['total']);
           get_total();

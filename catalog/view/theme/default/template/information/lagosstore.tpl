@@ -45,8 +45,11 @@
             <span>BUSINESS HOURS:</span>
              <br />MONDAY - SATURDAY <br />10AM - 6PM
           </p> 
-          
+          <?php if (!isset($logins)) { ?>
+          <a href="<?php echo $login; ?>"><button class="yy_tcs">Appointment after login</button></a>
+          <?php }else{ ?>
           <button class="yy_tc">MAKE AN APPOINTMENT</button>
+          <?php }?>
         </div>
       </div>
       
@@ -65,17 +68,17 @@
         <h1>REQUEST AN APPOINTMENT</h1>
         <div class="right clearfix"></div>
         <div class="left clearfix">
-          <form action="">
+          <form action="<?php echo $action?>" method="post">
             <h2>Request a New Appointment</h2>
             <div class="form_text clearfix">
               <label for="" class="datetime">
                 <span>DATE</span>
-                <input type="text" class="time" />
+                <input type="text" class="time" name="time"/>
               </label>
               <label for="">
                 <span>SERVICE</span>
                 <div class="select">
-                  <select name="">
+                  <select name="posTypeSelect[]" id="posTypeSelect">
                    <?php if($serverser){?>
                   <?php foreach ($serverser as $server) { ?>
                   <?php foreach ($server['servers'] as $k=> $serverr) { ?>
@@ -88,7 +91,7 @@
                 <button class="add_btn" type="button">+ add another service</button>
               </label>
             </div>
-            <button class="tj_btn">Make an appointment</button>
+            <button class="tj_btn"   >Make an appointment</button>
           </form>
         </div>
         <p class="bot_p">QUESTIONS? CALL 02072318833</p>
@@ -120,7 +123,7 @@
     
     $(".add_btn").click(function(){
       let fw_text = 
-        '<select name="">'
+        '<select name="posTypeSelect[]" id="posTypeSelect">'
         <?php foreach ($server['servers'] as $k=> $serverr) { ?>
           +'<option value="<?php echo $serverr['servers']?>"><?php echo $serverr["servers"]?></option>'
           <?php } ?>
@@ -170,3 +173,30 @@
     });
   })
 </script>
+ <script language="javascript">
+ <!--
+  
+ function SelectAll(Objname) {
+  ObjID    = document.getElementById(Objname);
+  if (ObjID != -1) {
+   for (i=0; i<ObjID.length; i++)
+   
+   ObjID.options[i].selected = true;
+  }
+ }
+ 
+ // function CheckInput() {
+ 
+ //  SelectAll("posTypeSelect");
+ // }
+  </script>
+  <?php if ($success) { ?>
+  <script type="text/javascript">
+    tips('<?php echo $success; ?>');
+  </script>
+  <?php } ?>
+  <?php if ($error_warning) { ?>
+  <script type="text/javascript">
+    tips('<?php echo $error_warning; ?>','gantan');
+  </script>
+  <?php } ?>
