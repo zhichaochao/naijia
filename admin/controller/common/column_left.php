@@ -350,6 +350,22 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);	
 			}
+			//预约
+			if ($this->user->hasPermission('access', 'customer/service')) {		
+				$customer[] = array(
+					'name'	   => $this->language->get('text_service'),
+					'href'     => $this->url->link('customer/service', 'token=' . $this->session->data['token'], true),
+					'children' => array()		
+				);	
+			}
+
+			if ($this->user->hasPermission('access', 'customer/manageservice')) {		
+				$customer[] = array(
+					'name'	   => $this->language->get('text_manageservice'),
+					'href'     => $this->url->link('customer/manageservice', 'token=' . $this->session->data['token'], true),
+					'children' => array()		
+				);	
+			}
 			
 			if ($customer) {
 				$data['menus'][] = array(

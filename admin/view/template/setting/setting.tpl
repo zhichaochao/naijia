@@ -194,6 +194,16 @@
                 </div>
               </div>
 
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">预约邮箱</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_serviceemail" value="<?php echo $config_serviceemail; ?>" placeholder="<?php echo $entry_serviceemail; ?>" id="input-telephone" class="form-control" />
+                  <!-- <?php if ($error_telephone) { ?>
+                  <div class="text-danger"><?php echo $error_telephone; ?></div>
+                  <?php } ?> -->
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-fax"><?php echo $entry_fax; ?></label>
                 <div class="col-sm-10">

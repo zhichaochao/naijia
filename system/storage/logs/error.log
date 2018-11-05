@@ -12,3 +12,118 @@
 2018-11-05 1:52:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 160
 2018-11-05 1:52:39 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 160
 2018-11-05 1:52:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 160
+2018-11-05 5:43:56 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:44:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:45:21 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:45:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:46:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:46:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:48:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:48:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:48:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:49:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:49:45 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:50:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:51:27 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:51:28 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:52:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:52:24 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:53:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:53:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:53:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:53:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 5:54:14 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\engine\loader.php on line 53
+2018-11-05 6:08:20 - PHP Notice:  Undefined index: status in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\service_list.tpl on line 68
+2018-11-05 6:08:20 - PHP Notice:  Undefined index: status in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\service_list.tpl on line 68
+2018-11-05 6:08:20 - PHP Notice:  Undefined index: status in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\service_list.tpl on line 68
+2018-11-05 6:55:49 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 264
+2018-11-05 8:32:58 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:32:58 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:32:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:32:58 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:32:58 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:32:58 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:33:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:33:00 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:00 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:33:00 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:33:00 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:33:06 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:33:06 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:06 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:33:06 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:33:06 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:33:15 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:33:15 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:15 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:15 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:33:15 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:33:15 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:33:35 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:33:35 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:35 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:33:35 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:33:35 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:33:59 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:33:59 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:33:59 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:33:59 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:33:59 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:35:06 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:35:06 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:35:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:35:06 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:35:06 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:35:06 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:35:10 - PHP Notice:  Undefined index: manageservice_description in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\customer\manageservice.php on line 397
+2018-11-05 8:35:10 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\controller\customer\manageservice.php on line 397
+2018-11-05 8:37:41 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:37:41 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:37:41 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:37:41 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:37:41 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:37:41 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:37:47 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:37:47 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:37:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:37:47 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:37:47 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:37:47 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:37:55 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:37:55 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:37:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:37:55 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:37:55 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:37:55 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:38:31 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:38:31 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:38:31 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:38:31 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:38:31 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:38:31 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:38:44 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:38:44 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:38:44 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:38:44 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:38:44 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:38:44 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:39:10 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:39:10 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:39:10 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:39:10 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:39:10 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:39:10 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:40:42 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:40:42 - PHP Notice:  Undefined variable: languages in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:40:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 46
+2018-11-05 8:40:42 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 60
+2018-11-05 8:40:42 - PHP Notice:  Undefined variable: approval in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 69
+2018-11-05 8:40:42 - PHP Notice:  Undefined variable: sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 82
+2018-11-05 8:42:12 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\manageservice_form.tpl on line 41
+2018-11-05 8:48:25 - PHP Notice:  Undefined variable: entry_serviceemail in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\setting\setting.tpl on line 200
+2018-11-05 8:48:37 - PHP Notice:  Undefined variable: entry_serviceemail in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\setting\setting.tpl on line 200
+2018-11-05 8:49:04 - PHP Notice:  Undefined variable: entry_serviceemail in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\setting\setting.tpl on line 200

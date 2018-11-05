@@ -520,6 +520,12 @@ class ControllerSettingSetting extends Controller {
 			$data['config_instagram'] = $this->config->get('config_instagram');
 		}
 
+		if (isset($this->request->post['config_serviceemail'])) {
+			$data['config_serviceemail'] = $this->request->post['config_serviceemail'];
+		} else {
+			$data['config_serviceemail'] = $this->config->get('config_serviceemail');
+		}
+
 		if (isset($this->request->post['config_fax'])) {
 			$data['config_fax'] = $this->request->post['config_fax'];
 		} else {
