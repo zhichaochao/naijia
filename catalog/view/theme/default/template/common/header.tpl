@@ -10,6 +10,14 @@
     <script type="text/javascript" src="/catalog/view/theme/default/js/jquery.min.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/common.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/swiper.js" ></script>
+    <script type="text/javascript">
+      $(function () {
+        $('#checkout_btn').click(function () {
+          location.href='<?=$shopping_cart;?>';
+          
+        })
+      })
+    </script>
     <title><?=$title?></title>
   </head>
   <body>
@@ -96,7 +104,7 @@
           <li class="logo_li"><a href="<?=$home;?>"></a></li>
           <li class="ss_li"></li>
            <?=$mcurrency;?>
-          <li class="gw_li"></li>
+          <li class="gw_li" id="checkout_btn"></li>
         </ul>
       </div>
 

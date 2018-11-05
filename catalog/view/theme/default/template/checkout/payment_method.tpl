@@ -84,7 +84,7 @@
                     <li class="active pc_no">
                         
                         <div class="form_text">
-                            <div class="check_order  clearfix" class="confirm">
+                            <div class="check_order  clearfix confirm" >
                                 <h1>Order Details</h1>
                                 <div class="slides clear clearfix">
                                 <?php foreach ($products as $product) { ?>

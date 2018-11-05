@@ -4,7 +4,7 @@
             <p><?php echo $total['title']; ?> <span><?php echo $total['text']; ?></span></p>
             <?php } ?>
 
-              <p>Total Products <span>₦216K</span></p>
+              <!-- <p>Total Products <span>₦216K</span></p>
               <p>Total Points <span>-₦0K</span></p>
               <p>Total Shipping <span>₦0K</span></p>
               <p><i class="xl_i">Coupon:Summer Sale <em></em></i> <span>-₦5K</span></p>
@@ -17,7 +17,7 @@
                   <span>Summer Sale 1</span>
                   <em>-₦3K</em>
                 </li>
-              </ul>
+              </ul> -->
             </div>
             
             <p class="total_p clearfix">
