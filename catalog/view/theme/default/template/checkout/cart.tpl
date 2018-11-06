@@ -38,7 +38,7 @@
               </label>
 
               <a class="text" href="<?php echo $product['href']; ?>">
-                <img class="img1 lazyLoad" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
+                <img class="img1 lazyLoad" srcs="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" />
                 <span class="text_p">
                
 
@@ -355,7 +355,7 @@ $(document).ready(function(){
         type:'POST',
         data:{id:id,num:num},
         success: function(json) {
-          tips('Shopping Cart Modification');
+          // tips('Shopping Cart Modification');
           $('#cart_count').html(json.totals);
           $('#total_'+json['id']).html(json['total']);
           get_total();

@@ -116,8 +116,8 @@
                 <?php foreach ($selects as $select) { ?>  
             
                   <li class="clearfix" style="position: relative;">
-                    <span class="bt_span slide">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
-                    <ul class="pro_det_ul3 slide_ul clearfix">
+                    <span class="bt_span slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
+                    <ul class="pro_det_ul3 slide_ul clearfix" style="display: none;">
                         <?php $select_option_id=0;?>
                         <?php foreach ($select['selects'] as $k=> $option_value) { ?>
                         <?php if($option_value['main']){$select_option_id=$option_value['option_value_id'];} ?>
@@ -403,6 +403,7 @@ window.onload=function(){
       $(this).addClass("active").siblings(".swiper-slide").removeClass("active");
     })
     //length选择
+    // $(".pro_det_ul3").siblings(".bt_span").find("em").text($(".pro_det_ul3>li").eq(0).find("span").text());
     $(".pro_det_ul3>li>span").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());
