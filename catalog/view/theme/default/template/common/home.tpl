@@ -172,7 +172,7 @@
                                       <?php } ?>
                                       </ul>
                                       <?php } ?>
-                                    <a  class="a_btn" href="<?php echo $review['href']?>">Shop now<em>></em></a>
+                                    <a  class="a_btn" onclick="event.stopPropagation()" href="<?php echo $review['href']?>">Shop now<em>></em></a>
                                 </div>
                             </div>
                         </li>
