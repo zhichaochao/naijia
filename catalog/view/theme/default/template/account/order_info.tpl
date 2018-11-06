@@ -19,10 +19,10 @@
           <?php if(empty($bank_receipt)){?>
           <p class="p2">
             Thanks for your order .<br />
-            · Payment has been completed<br />
-            · It will ready to ship in 1- 2 days.<br />
+            ·Please complete payment as soon as possible.<br />
+            · It will then be shipped within 1 to 2 days.<br />
             Emails will update to you if your <br />
-            package situation changes000000.
+            package situation changes.
           </p>
 
           <?php }else{ ?>
@@ -45,7 +45,7 @@
 
         <?php }else{ ?>
             <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
-            <span class="span_r djs_p" title="<?php echo $date_endadd; ?>">
+            <span class="span_r djs_p" title="<?php echo $date_endadd?>">
               <span class="int_hour">02</span><i>:</i>
               <span class="int_minute">00</span><i>:</i>
               <span class="int_second">00</span>
@@ -55,6 +55,10 @@
 
         <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
                     &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay;?>" title="Pay"  class="pay_a">Continue too pay</a>
+                  <?php } ?>
+
+                  <?php if($payment_code == 'paystack') { ?>
+                    &nbsp;&nbsp;<a data-toggle="tooltip" href="<?php echo $repay;?>" title="Pay"  class="pay_a">Continue to pay</a>
                   <?php } ?>
 
                   <!-- <?php if($bank_receipt) { ?>
@@ -448,6 +452,9 @@
               <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
               <a class="btn_a hong" href="<?php echo $repay;?>">CONTINUE TO PAY</a>
             <?php }?>
+            <?php if($payment_code == 'paystack') { ?>
+                    <a href="<?php echo $repay;?>"   class="btn_a hong" >CONTINUE TO PAY</a>
+                  <?php } ?>
             <?php }?>
 
             <?php if($order_status=='Completed' ){?>
