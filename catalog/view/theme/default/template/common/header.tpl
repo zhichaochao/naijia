@@ -119,10 +119,10 @@
             <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
             <?php foreach($categories as $key => $category) { ?>
             <li >
-              <p class="nav_p active"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?></a> <i></i></p>
+              <p class="nav_p active"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?></a></p>
                     
                     <?php if( $category['children']){ ?>
-                 <ol class="yd_nav_ol" style="display: block;">
+                 <ol class="yd_nav_ol li_i" style="display: block;">
                        <?php foreach($category['children'] as $k => $child) { ?>
                       <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
                       <?php } ?>

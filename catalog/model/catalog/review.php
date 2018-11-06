@@ -120,7 +120,7 @@ class ModelCatalogReview extends Model {
 	}
 	public function getTotalsThumbs($review_id) {
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "customer_review WHERE review_id = '" . (int)$review_id . "' ");
-
+// print_r($query->row['total']);exit;
 		return $query->row['total'];
 	}
 	public function getTotalThumbs() {

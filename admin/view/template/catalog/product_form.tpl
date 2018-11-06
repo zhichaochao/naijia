@@ -335,6 +335,12 @@
                   <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
                 </div>
               </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-sort-order">热销<?php echo $entry_sort_order; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="sort_orders" value="<?php echo $sort_orders; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-orders" class="form-control" />
+                </div>
+              </div>
             </div>
             <div class="tab-pane" id="tab-links">
               <div class="form-group">

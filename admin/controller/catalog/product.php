@@ -20,6 +20,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
+
 			$this->model_catalog_product->addProduct($this->request->post);
 
 			$this->session->data['success'] = $this->language->get('text_success');
@@ -998,6 +999,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['sort_order'] = $product_info['sort_order'];
 		} else {
 			$data['sort_order'] = 1;
+		}
+
+		if (isset($this->request->post['sort_orders'])) {
+			$data['sort_orders'] = $this->request->post['sort_orders'];
+		} elseif (!empty($product_info)) {
+			$data['sort_orders'] = $product_info['sort_orders'];
+		} else {
+			$data['sort_orders'] = '';
 		}
 
 		$this->load->model('localisation/stock_status');

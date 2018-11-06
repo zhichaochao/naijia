@@ -188,6 +188,28 @@
         $(this).addClass("active");
       }
     })
+
+    //优惠券
+    $(".in_coupon").click(function(){
+      if($(window).width()>920){
+        location.href = '';
+      }else{
+        $("body").css("overflow","hidden");
+        $(".in_coupon_tc").animate({top:"0"});
+      }
+    });
+    $(".in_coupon_tc .close").click(function(){
+      $("body").css("overflow","");
+      $(".in_coupon_tc").animate({top:"100%"});
+    })
+    
+    $(".yhj_ol>li").click(function(){
+      if(!$(this).hasClass("active")){
+        $(this).addClass("active");
+        tips("Successful collection","")
+        $(this).find(".yh_btn").text("Coupon Added");
+      }
+    })
     
     
     

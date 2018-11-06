@@ -311,7 +311,7 @@ class ModelCatalogHotproduct extends Model {
 			'p.quantity',
 			'p.price',
 			'rating',
-			'p.sort_order',
+			'p.sort_orders',
 			'p.date_added'
 		);
 
@@ -324,7 +324,7 @@ class ModelCatalogHotproduct extends Model {
 				$sql .= " ORDER BY " . $data['sort'];
 			}
 		} else {
-			$sql .= " ORDER BY p.sort_order";
+			$sql .= " ORDER BY p.sort_orders";
 		}
 
 		if (isset($data['order']) && ($data['order'] == 'DESC')) {

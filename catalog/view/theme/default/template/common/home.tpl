@@ -19,7 +19,51 @@
         
         <!--内容-->
         <div class="intext1 clearfix">
-              <div class="in_coupon clearfix">
+
+        <div class="in_coupon clearfix">
+        <div class="coupon_pic">
+          <img  class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/coupon_bg.jpg' data-mimage='catalog/view/theme/default/img/yd_coupon_bg.jpg'/>
+        </div>
+        
+        <ul class="clearfix">
+          <li>
+            <div class="box clearfix">
+              <div class="text">  
+                <p class="p1"><span>-</span><i>₦</i>2K</p>
+                <p class="p2">FIRST ORDER</p>
+                <button type="button">CLICK&nbsp;&nbsp;> </button>
+              </div>
+              <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
+              
+            </div>
+          </li>
+          <li>
+            <div class="box clearfix">
+              <div class="text">  
+                <p class="p1">15%OFF</p>
+                <p class="p2">Halloween Discount </p>
+                <button type="button">CLICK&nbsp;&nbsp;> </button>
+              </div>
+              <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
+            </div>
+          </li>
+          <li>
+            <div class="box clearfix">
+              <div class="text">  
+                <p class="p1"><span>-</span><i>₦</i>5K</p>
+                <p class="p2">The Second Wig</p>
+                <button type="button">CLICK&nbsp;&nbsp;> </button>
+              </div>
+              <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
+            </div>
+          </li>
+        </ul>
+      
+      </div>
+
+
+
+             <!--  <div class="in_coupon clearfix">
                 <ul class="clearfix">
                     <li>
                       <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
@@ -31,7 +75,10 @@
                       <img src="catalog/view/theme/default/img/coupin_3.jpg" alt="" />         
                     </li>
                 </ul>
-            </div>
+            </div> -->
+
+
+
             <div class="content">
                 <ul class="in_ul1">
                            <?php if($fours){ foreach ($fours as $banner) { ?>
@@ -209,11 +256,107 @@
              <?php echo $review['text']?>
             </p>
             <div class="zan <?=$review['thumbsnot']==1 ?'active':'';?>" onclick="thumbs('<?php echo $review['review_id']; ?>',this);">
-              <span id="thumbsed"><?php echo $review['thumbstotal']?></span>
+              <span id="thumbsed" class="zansss"><?php echo $review['thumbstotal']?></span>
             </div>
           </div>
         </div>
       </div>
     </div>
     <?php  } ?>
+
+    <!--优惠卷弹窗-->
+    <div class="in_coupon_tc clearfix">
+      <div class="text clearfix">
+        <div class="con clearfix">
+          <h1>Discounts&Coupons</h1>
+          <div class="close"></div>
+          <h2>COUPON</h2>
+          <ol class="yhj_ol clearfix">
+            <li class="active">
+              <h3>$5</h3>
+              <p>Spend US $500.00, Get US $5 off</p>
+              <span>Expires:2018/11/30</span>
+              <button class="yh_btn" type="button">Coupon Added</button>
+            </li>
+            <li>
+              <h3>15%OFF</h3>
+              <p>Spend US $500.00, Get US $5 off</p>
+              <span>Expires:2018/11/30</span>
+              <button class="yh_btn" type="button">Get It Now</button>
+            </li>
+            <li>
+              <h3>-$5</h3>
+              <p>Spend US $500.00, Get US $5 off</p>
+              <span>Expires:2018/11/30</span>
+              <button class="yh_btn" type="button">Get It Now</button>
+            </li>
+            <li>
+              <h3>$5</h3>
+              <p>Spend US $500.00, Get US $5 off</p>
+              <span>Expires:2018/11/30</span>
+              <button class="yh_btn" type="button">Get It Now</button>
+            </li>
+            <li>
+              <h3>$5</h3>
+              <p>Spend US $500.00, Get US $5 off</p>
+              <span>Expires:2018/11/30</span>
+              <button class="yh_btn" type="button">Get It Now</button>
+            </li>
+            <li>
+              <h3>$5</h3>
+              <p>Spend US $500.00, Get US $5 off</p>
+              <span>Expires:2018/11/30</span>
+              <button class="yh_btn" type="button">Get It Now</button>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
 <?php echo $footer; ?>
+<script>
+function thumbs(review_id,e) {
+  if ($(e).hasClass('active')) { 
+    $.ajax({
+    url:'<?php echo $deletethumbs ;?>',
+    type:'post',
+    data:{'review_id':review_id},
+    dataType: 'json',
+    success:function(data){
+      // alert(data);
+      if (data.success) {
+        // alert(data.total);
+        // $('#thumbsed').html(data.total);
+        // let a = data.total;
+        //    alert(data.total)
+        $('.zansss').text(data.total);
+        // location.reload(); 
+      }else{
+        window.location.href="/index.php?route=account/login";
+      }
+    }
+   })
+  }else{
+   $.ajax({
+    url:'<?php echo $addthumbs ;?>',
+    type:'post',
+    data:{'review_id':review_id},
+    dataType: 'json',
+    success:function(data){
+      // alert(data);
+      if (data.success) {
+        // alert(data.total);
+        // $('#thumbsed').html(data.total);
+         // let a = data.total;
+         // alert(a)
+        $('.zansss').text(data.total);
+        // location.reload(); 
+      }else{
+         window.location.href="/index.php?route=account/login";
+      }
+    }
+   })
+
+
+ }
+}
+</script>

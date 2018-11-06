@@ -151,6 +151,9 @@ class ControllerCommonHome extends Controller {
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
+		 // dianzan
+        $data['addthumbs'] = $this->url->link('product/product/addthumbs');
+        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
 
 		
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');

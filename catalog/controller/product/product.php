@@ -116,7 +116,7 @@ class ControllerProductProduct extends Controller {
 
         $product_info = $this->model_catalog_product->getProduct($product_id);
         $producthot = $this->model_catalog_product->getProcatehot($product_id);
-
+// print_r($producthot);exit;
         if ($product_info) {
             $url = '';
 
@@ -361,7 +361,10 @@ class ControllerProductProduct extends Controller {
             }
 
             $data['images'] = array();
-             $data['images'][] = array(
+            if($producthot){
+                $data['hot'] = $producthot['hot'];
+                if($data['hot']!=3){
+                 $data['images'][] = array(
                 
                     'thumb' => $this->model_tool_image->resize($product_info['image'], 540, 540),  //小图
                   
@@ -369,6 +372,23 @@ class ControllerProductProduct extends Controller {
                   
                     'thumb2'=> $this->model_tool_image->resize($product_info['image'], 750, 750)
                 );
+                }
+
+            }else{
+                $data['images'][] = array(
+                
+                    'thumb' => $this->model_tool_image->resize($product_info['image'], 540, 540),  //小图
+                  
+                    'image'=> $this->model_tool_image->resize($product_info['image'], 800, 800),  //小图
+                  
+                    'thumb2'=> $this->model_tool_image->resize($product_info['image'], 750, 750)
+                );
+            }
+
+            
+      
+            
+
             // print_r($product_info);exit();
             $results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
             foreach ($results as $result) {
@@ -917,7 +937,8 @@ class ControllerProductProduct extends Controller {
 
                 $json['success'] = sprintf($this->language->get('text_success'),  $this->url->link('account/wishlist'));
 
-                $json['total'] =  $this->model_catalog_review->getTotalThumbs();
+                $json['total'] =  $this->model_catalog_review->getTotalsThumbs($this->request->post['review_id']);
+                // print_r($json['total']);
             } else {
 
                 $json['error'] =  $this->url->link('account/login', '', true);
@@ -950,7 +971,7 @@ class ControllerProductProduct extends Controller {
 
                 $json['success'] = sprintf($this->language->get('text_success'),  $this->url->link('account/wishlist'));
 
-                $json['total'] =  $this->model_catalog_review->getTotalThumbs();
+                $json['total'] =  $this->model_catalog_review->getTotalsThumbs($this->request->post['review_id']);
             } else {
                
                 $json['error'] =  $this->url->link('account/login', '', true);
