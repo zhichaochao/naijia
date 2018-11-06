@@ -26,6 +26,8 @@ background: url(../img/png/icon.png) no-repeat center center ;background-size: 0
 
 .intext1 .in_ul1{margin: 0 -20px;}
 .intext1 .in_ul1>li{display: block;float: left;width: 50%;padding:0 20px 40px 20px;}
+.intext1 .in_ul1>li a{display: block;}
+.intext1 .in_ul1>li a img{display: block;}
 .in_ul2 { width: 100%; height: 100%;margin-bottom: 40px;}
 .in_ul2 .swiper-slide {text-align: center;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;
 	-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;
@@ -50,7 +52,7 @@ background: url(../img/png/icon.png) no-repeat center center ;background-size: 0
 .in_ul3>li a.img_a img{display: block;}
 .in_ul3>li .text {display: block;float: right;width: 42.5%;margin-right: 2.5%;text-align: left;}
 .in_ul3>li .text h2{font-family: Cambria;color: #222;font-size: 1.04vw;margin-bottom: 0.78vw;}
-.in_ul3>li .text h3{font-size: 1.04vw;margin-bottom: 0.93vw;line-height: 1.04vw; font-weight: normal;}
+.in_ul3>li .text h3{font-size: 1.04vw;margin-bottom: 0.93vw;line-height: 1.04vw; font-weight: normal;min-height: 1.04vw;}
 .in_ul3>li .text ol{display: inline-block;margin-bottom: 1.04vw;}
 .in_ul3>li .text ol>li{width: 18px;height: 18px;display: inline-block;background: url(../img/png/icon_8_.png) no-repeat;background-size: 100%;}
 .in_ul3>li .text ol>li.active{background: url(../img/png/icon_8.png) no-repeat;background-size: 100%;}
@@ -158,6 +160,11 @@ border-right-width: 0; width: 10px;height: 5px;-webkit-transform: rotate(-50deg)
 .login .pc_div .xy_div p{font-size: 14px;padding-left: 29px;height: 17px;line-height: 17px;}
 .login .pc_div .xy_div p a{font-size: 14px;color: #3e90ff;}
 .login .pc_div .dl_p{display: none;}
+/***yk_login***/
+.yk_login .pc_div h1{text-align: center;}
+.yk_login .left{width: 100% !important;}
+.yk_login .pc_div .text{margin: auto;}
+
 
 /***忘记密码***/
 .forgot{width: 500px;display: block;margin:60px auto 100px auto;height: 600px;border: 1px solid #e2e2e2;}
@@ -292,9 +299,10 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 @media only screen and (min-width: 921px) and (max-width: 1920px) {
 	.loading{padding-top:1rem;}
 	
-	.in_coupon{background: url(../img/coupon_bg.jpg) no-repeat center/100% 3.77rem;height: 3.77rem;
-	 text-align: center;max-width: 1640px;margin:0 auto 0.4rem auto;padding: 0 0.2rem;overflow: hidden; }	
-	.in_coupon>ul{display: inline-block;max-width: 1529px;width: 100%;height: 2rem;margin:0.98rem -2.23vw 0 -2.23vw;}
+	.in_coupon{height: 3.77rem;text-align: center;max-width: 1720px;margin:0 auto 0.4rem auto;position: relative;padding: 0 0.4rem;}	
+	.in_coupon .coupon_pic{position: absolute;top: 0;left: 0;padding: 0 0.4rem;}
+	.in_coupon .coupon_pic img{display: block;height: 3.77rem;width: 100%;}
+	.in_coupon>ul{display: inline-block;max-width: 1529px;width: 100%;height: 2rem;margin:0.88rem -2.23vw 0 -2.23vw;}
 	.in_coupon>ul>li{display: inline-block;float: left;width: 33.3%;padding: 0 2.23vw;}
 	.in_coupon>ul>li .box{position: relative;text-align: center;}
 	.in_coupon>ul>li img{display: block;height: 2rem;}
@@ -306,7 +314,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.in_coupon>ul>li .text button{width: 1.6rem;height: 0.4rem;border: 1px solid #bd8a40;box-sizing: border-box;background: transparent;color: #bd8a40;
 	font-size: 0.2rem;line-height: 0.4rem;position: absolute;bottom: 0.25rem;left: 50%;margin-left: -0.8rem; }
 	@media only screen and (min-width: 921px) and (max-width: 1280px) {
-		.in_coupon{background: url(../img/coupon_bg.jpg) no-repeat center/100% 3rem;height: 3rem;}
+		.in_coupon{height: 3rem;}
+		.in_coupon .coupon_pic img{display: block;height: 3rem;width: 100%;}
 		.in_coupon>ul{height: 1.8rem;margin:0.6rem -2.23vw 0 -2.23vw;}
 		.in_coupon>ul>li .text{height: 1.8rem}
 		.in_coupon>ul>li img{height: 1.8rem;}
@@ -358,6 +367,9 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	background: url(../img/png/icon_61.png) no-repeat left center;background-size: 0.23rem 0.2rem;}
 	.khpj_midal .pinlun .zan.active{border: 1px solid #ff8400;}
 	.khpj_midal .pinlun .zan.active span{color: #ff8400;background: url(../img/png/icon_61_.png) no-repeat left center;background-size: 0.23rem 0.2rem;}
+	
+	/*******in_coupon_tc********/
+	.in_coupon_tc{display: none;}
 	
 	/************pro_det***************/
 	.pro_det{padding-top: 20px;}
@@ -569,7 +581,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_con .shop_type_ol>li.active .ck_i{background: url(../img/png/icon_40_.png) no-repeat center;background-size: 0.24rem;}
 	.shop_con .shop_type_ol li{width: 50%;float: left;position: relative;}
 	.shop_con .shop_type_ol li .sjx_em{display: none;background: #aaa;width: 0.25rem;height: 0.25rem;box-sizing: border-box;
-	border-bottom:0.17rem solid transparent;border-right:0.17rem solid transparent;transform: rotate(45deg);position: absolute;bottom: -0.09rem;left:15%;}
+	border-bottom:0.17rem solid transparent;border-right:0.17rem solid transparent;transform: rotate(45deg);position: absolute;bottom: -0.13rem;left:15%;}
 	.shop_con .shop_type_ol li.active .sjx_em{display: block;}
 	.shop_con .shop_type_ol li.active .sjx_em:before{content: "";display: block;background: #f5f5f5;width: 0.25rem;height: 0.25rem;box-sizing: border-box;
 	border-bottom:0.17rem solid transparent;border-right:0.17rem solid transparent;position: relative;top: 1px;left: 1px;}
@@ -593,7 +605,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	padding: 0.4rem 0.2rem 0.3rem 0.6rem;}
 	.shop_con .shop_type_ul p.pick_2{background: url(../img/png/icon_39.png) no-repeat left 0.24rem top;background-size: 0.22rem 0.28rem;font-size: 0.2rem;
 	padding: 0rem 0.2rem 0rem 0.6rem;min-height: 0.3rem;}
-	.shop_con .total{background: #fff;padding:0.4rem 0.3rem 0 0.3rem;margin-bottom: 0.4rem;}
+	.shop_con .total{background: #fff;padding:0.4rem 0.3rem 0 0.3rem;margin-bottom: 0.8rem;}
 	.shop_con .total p{font-size: 0.2rem;line-height: 0.55rem;}
 	.shop_con .total p span{display: inline-block;float: right;}
 	.shop_con .total p .xl_i{cursor: pointer;}
@@ -631,11 +643,11 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.order_con .or_content .lf_nav h2{text-align: center;font-size: 0.2rem;margin-bottom: 0.15rem;}
 	.order_con .or_content .lf_nav p.p1{font-size: 0.16rem;color: #999;text-align: center;margin-bottom: 0.3rem;}
 	.order_con .or_content .lf_nav ul{border-top: 1px solid #f5f5f5;}
-	.order_con .or_content .lf_nav ul li{line-height: 0.64rem;padding: 0 0.2rem 0 0.6rem;border-bottom: 1px solid #f5f5f5;cursor: pointer;}
+	.order_con .or_content .lf_nav ul li{line-height: 0.64rem;border-bottom: 1px solid #f5f5f5;cursor: pointer;}
 	.order_con .or_content .lf_nav ul li:hover{box-shadow: 0 3px 4px -3px rgba(6,6,6,.2);}
 	.order_con .or_content .lf_nav ul li.active{font-weight: bold;}
 	.order_con .or_content .lf_nav ul li:active{border-top: 2px solid #dab25e;}
-	.order_con .or_content .lf_nav ul li a{font-size: 0.18rem;color: #333}
+	.order_con .or_content .lf_nav ul li a{font-size: 0.18rem;color: #333;display: block;padding: 0 0.2rem 0 0.6rem;}
 	.order_con .or_content .lf_nav ul li a i{display: inline-block;width: 0.1rem;height: 0.64rem;float: right;
 	background: url(../img/png/icon_7.png)no-repeat center center;background-size: 0.07rem 0.135rem;}
 	.order_con .or_content .lf_nav ul li:nth-child(1){background: url(../img/png/icon_49.png) no-repeat left 0.2rem center;}
@@ -939,6 +951,9 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.address_con .bt_ul h1{font-size: 0.24rem;font-weight: normal;display: inline-block;line-height: 0.6rem;}
 	.address_con .bt_ul span.yuan{width: 0.3rem;height: 0.3rem;display: inline-block;border-radius: 50%;background: #000;text-align: center;
 	line-height: 0.3rem;color: #fff;font-size: 0.24rem;margin-right: 0.12rem;}
+	.address_con .bt_ul>li .yk_p{display: block;height: 0.3rem;line-height: 0.3rem;font-size: 0.24rem;text-align: center;clear: both;}
+	.address_con .bt_ul>li .yk_p a{color: #3e90ff;}
+	.address_con .bt_ul>li .yk_p a:hover{text-decoration: underline;}
 	.address_con .form_text{padding-bottom: 0.5rem;display: none;padding-top: 0.1rem;}
 	.address_con .bt_ul>li.active .form_text{display: block;}
 	.address_con .form_text label{display: block;margin-bottom: 20px;position: relative;float: left;width: 100%;}
@@ -1451,6 +1466,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.intext1 .content{padding: 0rem 0.2rem 0 0.2rem;}
 	.intext1 .in_ul1{margin: 0;padding-top: 0.6rem;}
 	.intext1 .in_ul1>li{width: 100%;margin-bottom: 0.4rem;padding: 0;}
+	.intext1 .in_ul1>li a{display: block;}
 	.text_bt{padding: 0.6rem 0 0.4rem 0;}
 	.text_bt img{width: 1.25rem;height: 0.32rem;}
 	.text_bt p i{width: 0.11rem;height: 0.11rem;background-size: 0.11rem 0.11rem;}
@@ -1476,6 +1492,22 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.text_bt h1{font-size: 0.4rem;}
 	.intext3 .bot_map>img{display: block;float: left;width: 100%;height: auto;}
 	.intext3 .bot_map .map{float: left;width:100%;height: 3.7rem;}
+	
+	.in_coupon{height: 2rem;text-align: center;margin: 0.6rem auto 0 auto;position: relative;padding: 0 0.2rem;}	
+	.in_coupon .coupon_pic{position: absolute;top: 0;left: 0%;padding: 0 0.2rem;}
+	.in_coupon .coupon_pic img{display: block;height: 2rem;width: 100%;}
+	.in_coupon>ul{display: inline-block;width: 7.1rem; width: 100%;height: 1.3rem;margin:0.37rem -0.075rem 0 -0.075rem;}
+	.in_coupon>ul>li{display: inline-block;float: left;width: 33.3%;padding: 0 0.075rem;}
+	.in_coupon>ul>li .box{position: relative;text-align: center;}
+	.in_coupon>ul>li img{display: block;height: 1.3rem;}
+	.in_coupon>ul>li .text{position: absolute;top: 0;left: 0;width: 100%;text-align: center;line-height: inherit;height: 1.3rem;}
+	.in_coupon>ul>li p.p1{font-size: 0.4rem;line-height: 0.4rem;display: inline-block;padding-top: 0.2rem;}
+	.in_coupon>ul>li p.p1 span{font-size: 0.24rem;line-height: 0.4rem;display: inline-block;float: left;margin-right: 0.05rem;position: relative;top: 0.05rem;}
+	.in_coupon>ul>li p.p1 i{font-size: 0.24rem;line-height: 0.4rem;display: inline-block;float: left;position: relative;top: 0.06rem;}
+	.in_coupon>ul>li p.p2{font-size: 0.18rem;line-height: 0.18rem;display:block;padding-top: 0.05rem;}
+	.in_coupon>ul>li .text button{width: 1rem;height: 0.3rem;border: 1px solid #bd8a40;box-sizing: border-box;background: #bd8a40;color: #fff;
+	font-size: 0.16rem;line-height: 0.3rem;position: absolute;bottom: 0rem;left: 50%;margin-left: -0.5rem; }
+	
 	/**index khpj_midal**/
 	.khpj_midal{width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 999;background: rgba(0,0,0,.5);display: none;}
 	.khpj_midal .text{margin: auto;position: relative;top: 0%;max-height: 100%;overflow-y: auto;}
@@ -1512,7 +1544,23 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.khpj_midal .pinlun .zan.active{border: 1px solid #ff8400;}
 	.khpj_midal .pinlun .zan.active span{color: #ff8400;background: url(../img/png/icon_61_.png) no-repeat left center;background-size: 0.28rem 0.26rem;}
 	
-	
+	/*******in_coupon_tc********/
+	.in_coupon_tc{position: fixed;width: 100%;height: 100%;left: 0;top: 100%;background: rgba(0,0,0,.5);z-index: 99;padding: 0; }
+	.in_coupon_tc .text{width: 100%;height: 100%;background: #fff;}
+	.in_coupon_tc .text .con{position: relative;padding: 0 0.5rem;}
+	.in_coupon_tc .text .close{width: 0.6rem;height: 0.6rem;display: block;position: absolute;right: 0.25rem;top: 0.35rem;
+	background: url(../img/png/close6.png) no-repeat center/0.3rem;}
+	.in_coupon_tc .text h1{font-size: 0.3rem;color: #333;text-align: center;display: block;line-height: 0.3rem;font-weight: normal;margin: 0.5rem auto 0.8rem auto;}
+	.in_coupon_tc .text h2{font-size: 0.26rem;color: #333;line-height: 0.3rem;padding-left: 0.73rem;margin-bottom: 0.3rem;
+	background: url(../img/png/icon_97.png) no-repeat left center/0.53rem 0.29rem;}
+	.in_coupon_tc .yhj_ol{padding-bottom: 0.2rem;overflow-y: auto;height: 9rem;}
+	.in_coupon_tc .yhj_ol>li{border: 1px solid #dab25e;border-radius: 0.1rem;padding: 0 0.3rem;position: relative;margin-bottom: 0.2rem;}
+	.in_coupon_tc .yhj_ol>li h3{font-size: 0.44rem;display: inline-block;padding-right: 2.8rem;line-height: 0.45rem;margin-top: 0.35rem;}
+	.in_coupon_tc .yhj_ol>li p{font-size: 0.24rem;color: #666;line-break: 0.3rem;margin-top: 0.35rem;display: block;}
+	.in_coupon_tc .yhj_ol>li span{font-size: 0.24rem;color: #999;line-break: 0.3rem;margin: 0.14rem 0 0.18rem 0;display: block;}
+	.in_coupon_tc .yhj_ol>li .yh_btn{position: absolute;top: 0.3rem;right: 0.3rem;width: 2.4rem;height: 0.6rem;border-radius: 0.5rem;
+	background: #dab25e;color: #fff;font-size: 0.26rem;font-weight: bold;border: none;}
+	.in_coupon_tc .yhj_ol>li.active .yh_btn{color: #b5b5b5;background: #f5f5f5;}
 	
 	/***login***/
 	.login{background: #f5f5f5;}
@@ -1531,6 +1579,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.login .pc_div .dl_p a{border-bottom: 1px solid #333;margin-left: 0.05rem;}
 	.login .pc_div .text .wjmm_a{float: right;color: #333;border-bottom: 1px solid #333;margin-bottom: 1.8rem;font-size: 14px;}
 	.login .pc_div .zc{display: none;}
+	/***yk_login***/
+	.yk_login .dl_btn{margin-bottom: 0.8rem;}
 	
 	/***忘记密码***/
 	.yd_forgot{background: #f5f5f5;}
@@ -2232,6 +2282,9 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	/********address_con************/
 	.address_con{background: #f5f5f5;padding: 0.2rem 0.15rem 0.6rem 0.15rem;}
 	.address_con .bt_ul>li{line-height: 0.6rem;margin-bottom: 0.2rem;background: #fff;padding: 0 0.35rem;}
+	.address_con .bt_ul>li .yk_p{display: block;height: 0.3rem;line-height: 0.3rem;font-size: 0.24rem;text-align: center;clear: both;}
+	.address_con .bt_ul>li .yk_p a{color: #3e90ff;}
+	.address_con .bt_ul>li .yk_p a:hover{text-decoration: underline;}
 	.address_con .bt_ul>li.active{padding-top: 0.2rem;}
 	.address_con .bt_ul h1{font-size: 0.24rem;font-weight: normal;display: inline-block;}
 	.address_con .bt_ul span.yuan{width: 0.3rem;height: 0.3rem;display: inline-block;border-radius: 50%;background: #000;text-align: center;

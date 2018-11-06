@@ -58,9 +58,8 @@ $(function(){
 		//调用
 		var divScroll = new DivScroll('.khpj_midal .text');
 		var divScroll2 = new DivScroll('.ss_modal .text');
-		var divScroll2 = new DivScroll('.con_modal');
-		var divScroll2 = new DivScroll('.con_modal .context');
-		
+		var divScroll3 = new DivScroll('.con_modal');
+		var divScroll4 = new DivScroll('.text .con');
 		
 	
 	
@@ -297,7 +296,7 @@ $(".ss_modal .text label img.in_close").click(function(){
         }
 	})
 	$("img.lazyLoad ").each(function(){
-		$(this).attr("src","/image/yjz.png");  
+		$(this).attr("src","/image/yjz.jpg");  
 	})
 	
 	

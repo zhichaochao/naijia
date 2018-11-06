@@ -120,21 +120,46 @@
 		</div>
 		
 		<!--内容-->
-		
-		
 		<div class="intext1 clearfix">
 			<div class="in_coupon clearfix">
+				<div class="coupon_pic">
+					<img  class="changeimage lazyLoad" data-image='img/coupon_bg.jpg' data-mimage='img/yd_coupon_bg.jpg'/>
+				</div>
+				
 				<ul class="clearfix">
 					<li>
-						<img src="img/coupin_1.jpg" alt="" />					
+						<div class="box clearfix">
+							<div class="text">	
+								<p class="p1"><span>-</span><i>₦</i>2K</p>
+								<p class="p2">FIRST ORDER</p>
+								<button type="button">CLICK&nbsp;&nbsp;> </button>
+							</div>
+							<img src="img/coupin_1.jpg" alt="" />					
+							
+						</div>
 					</li>
 					<li>
-						<img src="img/coupin_2.jpg" alt="" />					
+						<div class="box clearfix">
+							<div class="text">	
+								<p class="p1">15%OFF</p>
+								<p class="p2">Halloween Discount </p>
+								<button type="button">CLICK&nbsp;&nbsp;> </button>
+							</div>
+							<img src="img/coupin_1.jpg" alt="" />					
+						</div>
 					</li>
 					<li>
-						<img src="img/coupin_3.jpg" alt="" />					
+						<div class="box clearfix">
+							<div class="text">	
+								<p class="p1"><span>-</span><i>₦</i>5K</p>
+								<p class="p2">The Second Wig</p>
+								<button type="button">CLICK&nbsp;&nbsp;> </button>
+							</div>
+							<img src="img/coupin_1.jpg" alt="" />					
+						</div>
 					</li>
 				</ul>
+			
 			</div>
 			
 			<div class="content">
@@ -793,7 +818,57 @@
 				</div>
 			</div>
 		</div>
-	
+		
+		
+		<!--优惠卷弹窗-->
+		<div class="in_coupon_tc clearfix">
+			<div class="text clearfix">
+				<div class="con clearfix">
+					<h1>Discounts&Coupons</h1>
+					<div class="close"></div>
+					<h2>COUPON</h2>
+					<ol class="yhj_ol clearfix">
+						<li class="active">
+							<h3>$5</h3>
+							<p>Spend US $500.00, Get US $5 off</p>
+							<span>Expires:2018/11/30</span>
+							<button class="yh_btn" type="button">Coupon Added</button>
+						</li>
+						<li>
+							<h3>15%OFF</h3>
+							<p>Spend US $500.00, Get US $5 off</p>
+							<span>Expires:2018/11/30</span>
+							<button class="yh_btn" type="button">Get It Now</button>
+						</li>
+						<li>
+							<h3>-$5</h3>
+							<p>Spend US $500.00, Get US $5 off</p>
+							<span>Expires:2018/11/30</span>
+							<button class="yh_btn" type="button">Get It Now</button>
+						</li>
+						<li>
+							<h3>$5</h3>
+							<p>Spend US $500.00, Get US $5 off</p>
+							<span>Expires:2018/11/30</span>
+							<button class="yh_btn" type="button">Get It Now</button>
+						</li>
+						<li>
+							<h3>$5</h3>
+							<p>Spend US $500.00, Get US $5 off</p>
+							<span>Expires:2018/11/30</span>
+							<button class="yh_btn" type="button">Get It Now</button>
+						</li>
+						<li>
+							<h3>$5</h3>
+							<p>Spend US $500.00, Get US $5 off</p>
+							<span>Expires:2018/11/30</span>
+							<button class="yh_btn" type="button">Get It Now</button>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		
 	</body>
 </html>
 
@@ -875,6 +950,29 @@
 				$(this).removeClass("active");
 			}else{
 				$(this).addClass("active");
+			}
+		})
+		
+		
+		//优惠券
+		$(".in_coupon").click(function(){
+			if($(window).width()>920){
+				location.href = 'http://www.baidu.com';
+			}else{
+				$("body").css("overflow","hidden");
+				$(".in_coupon_tc").animate({top:"0"});
+			}
+		});
+		$(".in_coupon_tc .close").click(function(){
+			$("body").css("overflow","");
+			$(".in_coupon_tc").animate({top:"100%"});
+		})
+		
+		$(".yhj_ol>li").click(function(){
+			if(!$(this).hasClass("active")){
+				$(this).addClass("active");
+				tips("Successful collection","")
+				$(this).find(".yh_btn").text("Coupon Added");
 			}
 		})
 	})
