@@ -683,7 +683,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
-        tips('Cancel the collection');
+        // tips('Cancel the collection');
         $('#wishlist_count').html(data.total);
       }
                // location.reload(); 
@@ -699,7 +699,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
-        tips('Collection Success');
+        // tips('Collection Success');
         $('#wishlist_count').html(data.total);
       }
                // location.reload(); 
@@ -733,7 +733,7 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
-                tips('Successful shopping cart');
+                // tips('Successful shopping cart');
                 // alert("成功加入购物车");
               $('#cart_count').html(json.total);
                 $(".cart_li").click();
