@@ -88,7 +88,7 @@
                       <em class="sub"><i></i></em>
                     </div>
                   </span>
-                  <p class="ts_p">This hair need  3-7 customize process days</p>
+                  <p class="ts_p"><?=$tips;?></p>
                 </div>
               </li>
 

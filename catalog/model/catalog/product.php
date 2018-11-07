@@ -42,6 +42,7 @@ class ModelCatalogProduct extends Model {
 			
 
 				'color'           => $query->row['color'],
+				'tips'           => $query->row['tips'],
 				'hot'           => $query->row['hot'],
 				'points'           => $query->row['points'],
 				'tax_class_id'     => $query->row['tax_class_id'],
@@ -1192,7 +1193,7 @@ class ModelCatalogProduct extends Model {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_description od  on od.option_id=psv.option_id  WHERE psv.product_id = '" . (int)$product_id . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY  psv.option_id ");
 		$return=array();
 		foreach ($query->rows as $key => $value) {
-			$que = $this->db->query("SELECT distinct(psv.option_value_id),psv.main,psv.remark, od.* FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_value_description od  on od.option_value_id=psv.option_value_id  WHERE psv.product_id = '" . (int)$product_id . "' AND psv.option_id = '" . (int)$value['option_id'] . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ");
+			$que = $this->db->query("SELECT distinct(psv.option_value_id),psv.main,psv.remark, od.* FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_value_description od  on od.option_value_id=psv.option_value_id LEFT JOIN " . DB_PREFIX . "option_value ov on od.option_value_id=ov.option_value_id    WHERE psv.product_id = '" . (int)$product_id . "' AND psv.option_id = '" . (int)$value['option_id'] . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' GROUP BY  ov.sort_order");
 			// print_r("SELECT distinct(psv.option_value_id), od.* FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_value_description od  on od.option_value_id=psv.option_value_id  WHERE psv.product_id = '" . (int)$product_id . "' AND psv.option_id = '" . (int)$value['option_id'] . "' AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ");
 			  $value['selects']=$que->rows;
 			$return[]=$value;

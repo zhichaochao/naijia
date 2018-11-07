@@ -838,6 +838,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['color'] = '';
 		}
 
+		if (isset($this->request->post['tips'])) {
+			$data['tips'] = $this->request->post['tips'];
+		} elseif (!empty($product_info)) {
+			$data['tips'] = $product_info['tips'];
+		} else {
+			$data['tips'] = '';
+		}
+
 		if (isset($this->request->post['sku'])) {
 			$data['sku'] = $this->request->post['sku'];
 		} elseif (!empty($product_info)) {
