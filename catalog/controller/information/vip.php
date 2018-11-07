@@ -10,6 +10,10 @@ class ControllerInformationVip extends Controller {
 
 	public function index()
 	{
+		// if (!$this->customer->isLogged()) {
+		// 	$this->session->data['redirect'] = $this->url->link('information/vip', '', true);
+		// 	$this->response->redirect($this->url->link('account/login', '', true));
+		// }
 		$this->load->language('information/contact');
 		$this->document->setTitle('VIP');
 
@@ -19,7 +23,7 @@ class ControllerInformationVip extends Controller {
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
 		);
-
+		$data['register'] = $this->url->link('account/login/register_save', '', true);
 		// $str=$this->config->get('config_video');
 		// // 
 		// 	$data['video1']=HTTP_SERVER.'image/video/home/'.$str;

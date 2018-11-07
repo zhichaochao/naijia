@@ -169,7 +169,7 @@ background: url(../img/png/icon_23.png) no-repeat;background-size: 100%;}
 .yd_nav_modal .top_nav ul>li>p.nav_p.active>i{background: url(../img/png/icon_23_.png) no-repeat;background-size: 100%;transform: rotate(180deg);}
 .yd_nav_modal .top_nav .yd_nav_ol{padding: 0.2rem 0;display: none;}
 .yd_nav_modal .top_nav .yd_nav_ol>li{line-height: 0.6rem;}
-.yd_nav_modal .top_nav .yd_nav_ol>li>a{color: #fff;font-size: 0.2rem;display: block;}
+.yd_nav_modal .top_nav .yd_nav_ol>li>a{color: #fff;font-size: 0.2rem;display: block;line-height: 0.6rem;}
 .yd_nav_modal .top_nav .yd_nav_ol>li>a>span{color: #ff2054;font-size: 0.16rem;}
 
 .yd_nav_modal .bot_fot{background: #292929;padding: 0 0.4rem;}
@@ -297,6 +297,7 @@ position: absolute;top: 50%;left: 50%;margin-top: -0.16rem;margin-left: -0.16rem
 .yd_nav .yd_navul>li.kg_li{background: url(../img/png/icon_19.png) no-repeat center center;width: 17%;transition: .5s;background-size: 0.24rem 0.22rem;}
 .yd_nav .yd_navul>li.kg_li.active{background: url(../img/png/icon_19_.png) no-repeat center center;background-size: 0.24rem 0.22rem;}
 .yd_nav .yd_navul>li.logo_li{background: url(../img/png/logo.png) no-repeat center center;width: 24%;background-size: 70%;}
+.yd_nav .yd_navul>li.logo_li a{width: 100%;height: 100%;display: block;}
 .yd_nav .yd_navul>li.ss_li{background: url(../img/png/icon_1.png) no-repeat center center;width: 17%;background-size: 0.24rem;}
 .yd_nav .yd_navul>li.mn_li{width: 25%;text-align: center;line-height:1.1rem;}
 .yd_nav .yd_navul>li.gw_li{background: url(../img/png/icon_4.png) no-repeat center center;width: 17%;border-right: 0;background-size: 0.23rem 0.24rem;}

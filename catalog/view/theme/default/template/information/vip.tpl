@@ -7,10 +7,10 @@
         <div class="bnr clearfix">
           <img class="changeimage lazyLoad"  data-image="catalog/view/theme/default/img/vip1.jpg" data-mimage="catalog/view/theme/default/img/yd_vip1.jpg" alt="" />
         </div>
-        <div class="form_div clearfix">
+        <div class="form_div clearfix" id="register-form-div">
           <div class="form_text clearfix">
 
-            <form>
+            <!-- <form > -->
               <h2>JOIN VIP MEMBER</h2>
               <!--label的class  true是输入正确的一种显示格式-->
               <label class="clearfix " for="">
@@ -54,10 +54,26 @@
                 <span class="pl_span">Email</span>
                  <input class="in_6" type="text" name="email" value=""   placeholder="Email" id="input-email" class="form-control"/>
                 <!-- <input type="text" placeholder="Email" /> -->
-                <p class="ts_ps">please enter your  email. </p>
+                <p class="ts_ps" id="erroremail" >please enter your  email. </p>
               </label>
-              <button class="tj_btn" type="submit">SUBMIT</button>
-            </form>
+
+              <label class="clearfix" for="">
+                <span class="pl_span">Password</span>
+                <input class="in_7" type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control"/>
+                <!-- <input type="text" placeholder="Email" /> -->
+                <p class="ts_ps" id="errorpassword" >please enter your  password. </p>
+              </label>
+
+              <label class="clearfix" for="">
+                <span class="pl_span">ConfirmPassword</span>
+               <input class="in_8" type="password" name="confirm" id="input-confirm" placeholder="Confirm Password" class="form-control"/>
+                <!-- <input type="text" placeholder="Email" /> -->
+                <p class="ts_ps" id="errorconfirm" >please enter your  password. </p>
+              </label>
+
+               <input  type="hidden" name="agree" value="1"/>
+              <button class="tj_btn" type="submit" id="button-register">SUBMIT</button>
+            <!-- </form> -->
 
           </div>
           <div class="r_text clearfix">
@@ -121,7 +137,7 @@
      })
      $(".in_3").blur(function(){
       var in_2val = $(".in_2").val();
-      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=3){
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=1){
          $(this).siblings(".ts_ps").removeClass("off"); 
          $(this).parent().addClass("true");
       }else{
@@ -159,6 +175,86 @@
           $(this).siblings(".ts_ps").addClass("off");
       }
      })
+     $(".in_7").blur(function(){
+     
+      if(($(this).val()!="") && ($(this).val().length<=20) && $(this).val().length>=4){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+           $(this).siblings(".ts_ps").text("Password must be between 4 and 20 characters!");
+      }
+
+      $(".in_8").val("");
+        $(".in_8").parent().removeClass("true");
+     })
+
+     $(".in_8").blur(function(){
+      var in_7val = $(".in_7").val();
+      if(($(this).val()!="") && ($(this).val().length>=4) && ($(this).val()==in_7val)){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+          $(this).siblings(".ts_ps").text("The passwords you entered are not consistent. Please re-enter them");
+      }
+     })
 
    })
+
+  $(document).delegate('#button-register', 'click', function() {
+  // console.log($('#register-form-div input'));
+    // $(".zzc_li").css("display","block");
+    //  $("div").addClass("hidden");
+      $.ajax({
+        url: '<?php echo $register;?>',
+        type: 'post',
+        data: $('#register-form-div input'),
+        dataType: 'json',
+      
+        success: function(json) {
+          if (json['redirect']) {
+            location = json['redirect']; 
+            
+            } else if (json['error']) {
+          
+         if (json['redirect']) {
+            if(json['error']['agree']){
+               $('#agree').show().html( json['error']['agree'] );
+              }
+                
+            if(json['error']['firstname']){
+               $('#errorfirstname').show().html( json['error']['firstname'] );
+              }
+            if(json['error']['lastname']){
+               $('#errorlastname').show().html( json['error']['lastname'] );
+              }
+              if(json['error']['email']){
+               $('#erroremail').show().html( json['error']['email'] );
+              } 
+              if(json['error']['password']){
+                 // $("#errorpassword").addClass("off");
+                 $('#erroremail').show().html( json['error']['password'] );
+              }
+              if(json['error']['confirm']){
+                 $("#errorconfirm").addClass("off");
+               $('#errorconfirm').show().html( json['error']['confirm'] );
+              }
+            } else{
+               if(json['error']['warning']){
+               $('#erroremail').show().html( json['error']['warning'] );
+              }
+              //  $(".zzc_li").css("display","none");
+              // $("div").removeClass("hidden");
+            }   
+                
+            } 
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+           alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
+});
 </script>

@@ -47,6 +47,7 @@ class ControllerAccountVip extends Controller {
 			$data['next_level'] = $this->language->get('no_such_level');
 		}
 		
+		
 		//用户等级
 		$this->load->model('account/customer_group');
 		$customer_group_info = $this->model_account_customer_group->getCustomerGroup($this->customer->getGroupId());
@@ -58,6 +59,7 @@ class ControllerAccountVip extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
+		$data['register'] = $this->url->link('account/login/register_save');
 		
 		$this->response->setOutput($this->load->view('account/vip', $data));
 	}

@@ -112,8 +112,10 @@ $(function(){
 //	头部导航二级菜单
 	$(".nav_ul>li").hover(function(){
 		$(this).find("ol").stop().slideDown();
+		$(this).find("ol").css("display","inline-block");
 	},function(){
 		$(this).find("ol").stop().slideUp();
+		$(this).find("ol").css("display","none");
 	})
 	
 //	底部下拉
@@ -352,7 +354,7 @@ lazyLoad.init();
 })
 
 /**弹窗提示**/
-function tips(tips_text,img,time){
+function tips(tips_text,img){
 	if(img==""){
 		img='mr'
 	}

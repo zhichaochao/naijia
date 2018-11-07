@@ -188,3 +188,31 @@
 2018-11-07 6:53:24 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHome::$error has no effect in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 275
 2018-11-07 6:53:24 - PHP Notice:  Error: E-Mail sender required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 73
 2018-11-07 7:02:26 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHome::$error has no effect in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 275
+2018-11-07 7:15:07 - PHP Notice:  Use of undefined constant vip - assumed 'vip' in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\footer.tpl on line 101
+2018-11-07 7:25:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 7:25:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 8:01:57 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:03:15 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:06:09 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:07:23 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:07:59 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:09:52 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:10:26 - PHP Notice:  Undefined variable: register in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\information\vip.tpl on line 170
+2018-11-07 8:12:46 - PHP Notice:  Undefined index: password in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 249
+2018-11-07 8:12:46 - PHP Notice:  Undefined index: confirm in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 253
+2018-11-07 8:12:46 - PHP Notice:  Undefined index: password in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 253
+2018-11-07 8:13:17 - PHP Notice:  Undefined index: password in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 249
+2018-11-07 8:13:17 - PHP Notice:  Undefined index: confirm in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 253
+2018-11-07 8:13:17 - PHP Notice:  Undefined index: password in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 253
+2018-11-07 8:25:22 - PHP Notice:  Undefined index: confirm in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 253
+2018-11-07 9:10:26 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 9:10:26 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 9:11:55 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ý¡ï¿½  in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 177
+2018-11-07 9:11:55 - PHP Warning:  fsockopen(): unable to connect to email-smtp.us-east-1.amazonaws.com:25 (php_network_getaddresses: getaddrinfo failed: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½Ý¡ï¿½ ) in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 177
+2018-11-07 9:11:55 - PHP Notice:  Error: php_network_getaddresses: getaddrinfo failed: ÇëÇóµÄÃû³ÆÓÐÐ§£¬µ«ÊÇÕÒ²»µ½ÇëÇóµÄÀàÐÍµÄÊý¾Ý¡£  (0) in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 181
+2018-11-07 9:42:53 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-07 9:42:58 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-07 9:54:24 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 9:54:24 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 9:56:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 9:56:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
