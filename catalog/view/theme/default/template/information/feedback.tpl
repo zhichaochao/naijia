@@ -32,11 +32,11 @@
 <?php echo $footer; ?>
 <?php if ($success) { ?>
   <script type="text/javascript">
-    tips('<?php echo $success; ?>');
+    tips('<?php echo $success; ?>','');
   </script>
   <?php } ?>
   <?php if ($error_warning) { ?>
   <script type="text/javascript">
-    tips('<?php echo $error_warning; ?>');
+    tips('<?php echo $error_warning; ?>','');
   </script>
   <?php } ?>

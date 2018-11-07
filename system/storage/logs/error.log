@@ -161,3 +161,30 @@
 2018-11-06 7:19:26 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-06 7:20:02 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-06 7:20:02 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 5:51:39 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 5:51:39 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 5:53:19 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 5:53:22 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 5:53:23 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:02:29 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:02:33 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:02:34 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:02:37 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:02:39 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:02:39 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 6:02:39 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 6:02:41 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:04:24 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:04:28 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:04:32 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:09:22 - PHP Notice:  Undefined variable: action in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 283
+2018-11-07 6:19:39 - PHP Notice:  Undefined index: user_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\model\setting\feedback.php on line 11
+2018-11-07 6:32:57 - PHP Notice:  Undefined variable: from_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 12
+2018-11-07 6:32:57 - PHP Notice:  Undefined variable: country_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 17
+2018-11-07 6:32:57 - PHP Notice:  Undefined variable: business_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 18
+2018-11-07 6:36:42 - PHP Notice:  Undefined variable: from_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 12
+2018-11-07 6:36:42 - PHP Notice:  Undefined variable: country_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 17
+2018-11-07 6:36:42 - PHP Notice:  Undefined variable: business_name in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\mail\contact_us_email.tpl on line 18
+2018-11-07 6:53:24 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHome::$error has no effect in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 275
+2018-11-07 6:53:24 - PHP Notice:  Error: E-Mail sender required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 73
+2018-11-07 7:02:26 - PHP Notice:  Indirect modification of overloaded property ControllerCommonHome::$error has no effect in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\common\home.php on line 275

@@ -101,6 +101,10 @@ class ControllerCommonHeader extends Controller {
 		$instagram = $this->config->get('config_instagram');
 		$whatsapp = $this->config->get('config_telephone');
 
+		$data['facebook']=$facebook;
+		$data['instagram']=$instagram;
+		$data['whatsapp']=$whatsapp;
+
 		$data['informations'] = array(
 			0 =>array(
 				'title'=>'COMPANY',
@@ -237,7 +241,34 @@ class ControllerCommonHeader extends Controller {
 			$data['slogan']=$this->config->get('config_meta_slogan');
 // print_r($slogan);exit;
 
-// 
+		$this->load->model('account/customer');
+$data['action'] = $this->url->link('common/home');
+		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+		// print_r($customer_info);exit;
+		if (!empty($customer_info)) {
+			$data['telephone'] = $customer_info['telephone'];
+		} else {
+			$data['telephone'] = '';
+		}
+		if (!empty($customer_info)) {
+			$data['firstname'] = $customer_info['firstname'];
+		} else {
+			$data['firstname'] = '';
+		}
+		if (!empty($customer_info)) {
+			$data['email'] = $customer_info['email'];
+		} else {
+			$data['email'] = '';
+		}	
+		// $data['user_name'] = $this->customer->getFirstName().' '.$this->customer->getLastName();
+  //       if($data['user_name'] == ' ') $data['user_name'] = $this->customer->getEmail();
+
+		
+
+
+
+
+
 		$data['hothref'] = $this->url->link('product/hotcategory');
 		$data['acchref'] = $this->url->link('product/acccategory');
 		$data['blog'] = $this->url->link('information/profile');
@@ -268,6 +299,7 @@ class ControllerCommonHeader extends Controller {
 			$data['class'] = 'common-home';
 		}
 // print_r($this->request->get['route']);exit();
+
 		return $this->load->view('common/header', $data);
 	}
 	public function delete() {
@@ -285,4 +317,8 @@ class ControllerCommonHeader extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+	// public function helpbok()
+	// {
+	
+	// }
 }

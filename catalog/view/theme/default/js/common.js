@@ -213,6 +213,9 @@ var kg_off=0;
 	   }
 	})
 	
+	$(".yd_nav_ol.li_i").siblings(".nav_p").append("<i></i>")
+	$(".yd_nav_ol.li_i").siblings(".nav_p").find("a i").remove();
+	
 	
 	$(".yd_nav_modal .top_nav .nav_p").click(function(){
 		if($(this).hasClass("active")){
@@ -349,11 +352,14 @@ lazyLoad.init();
 })
 
 /**弹窗提示**/
-function tips(tips_text){
+function tips(tips_text,img,time){
+	if(img==""){
+		img='mr'
+	}
 	var text =
 			'<div class="popup_tips clearfix">'
 				+'<div class="text clearfix">'
-					+'<div class="top clearfix">'
+					+'<div class="top '+img+' clearfix">'
 						+'<span></span>'
 					+'</div>'
 					+'<p>'+tips_text+'</p>'
@@ -364,3 +370,4 @@ function tips(tips_text){
 		$(".popup_tips").fadeOut();
 	},2000);
 }
+

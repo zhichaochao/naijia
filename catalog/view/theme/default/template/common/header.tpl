@@ -243,6 +243,52 @@
         </div>
       </div>
     </div>
+
+    <!--contact弹窗-->
+    <div class="con_modal clearfix">
+      <div class="text">
+        <h1>CONTACT US</h1>
+        <ol class="con_ol">
+          <li>
+            <a class="con_email" href="javascript:;">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_86.png"/>
+              <p class="con_p">E-mail</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://api.whatsapp.com/send?phone=<?php echo $whatsapp?>">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_87.png"/>
+              <p class="con_p">WhatsApp</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.instagram.com/<?php echo $instagram?>">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_88.png"/>
+              <p class="con_p">Instagram</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.facebook.com/<?php echo $facebook?>">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_89.png"/>
+              <p class="con_p">Facebook</p>
+            </a>
+          </li>
+        </ol>
+      </div>
+      
+      <div class="context">
+        <div class="close"></div>
+        <h1>contact us</h1>
+        <p>Thank you for your message, we will contact you within 24 hours.</p>
+        <form action="<?php echo $action; ?>" method="post" class="dash-help-form">
+          <input type="text" name="user_name" value="<?=$firstname;?>" placeholder="Firstname" />
+          <input type="text" class="in_1" name="email" value="<?=$email;?>" placeholder="Your Email" />
+          <input type="text" name="telephone" value="<?=$telephone;?>" placeholder="Your Phone" />
+          <textarea  class="in_2" placeholder="Message" name="enquiry"></textarea>
+          <button type="submit" class="tj_btn">Send Message</button>
+        </form>
+      </div>
+    </div>
  <script>
         $(document).ready(function() {
               $('.ss_modal').keydown(function(e){
@@ -283,4 +329,13 @@
                       }
                   })   
           }
+
+          $(".tj_btn").click(function(event){
+    
+      if(($(".in_1").val().length >= 4) && ($(".in_2").val().length >= 4)  ){
+       
+      }else{
+        event.preventDefault();
+      }
+     })
     </script>

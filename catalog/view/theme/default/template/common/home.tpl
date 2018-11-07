@@ -360,3 +360,14 @@ function thumbs(review_id,e) {
  }
 }
 </script>
+
+<?php if ($success) { ?>
+  <script type="text/javascript">
+    tips('<?php echo $success; ?>','');
+  </script>
+  <?php } ?>
+  <?php if ($error_warning) { ?>
+  <script type="text/javascript">
+    tips('<?php echo $error_warning; ?>','gantan');
+  </script>
+  <?php } ?>

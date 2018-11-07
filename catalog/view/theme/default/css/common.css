@@ -160,6 +160,9 @@ background: #ff0000;border-radius: 50%;width: 0.2rem;height: 0.2rem;text-align: 
 .yd_nav_modal .top_nav ul>li>a{line-height: 0.98rem;color: #fff;font-size: 0.24rem;display: block;}
 .yd_nav_modal .top_nav ul>li>a>i{display: block;width: 0.12rem;height: 0.2rem;position: absolute;right: 0; top: 50%;margin-top: -0.1rem;
 background: url(../img/png/icon_11.png) no-repeat;background-size: 100%;}
+.yd_nav_modal .top_nav ul>li .nav_p>a{line-height: 0.98rem;color: #fff;font-size: 0.24rem;display: block;}
+.yd_nav_modal .top_nav ul>li .nav_p>a>i{display: block;width: 0.12rem;height: 0.2rem;position: absolute;right: 0; top: 50%;margin-top: -0.1rem;
+background: url(../img/png/icon_11.png) no-repeat;background-size: 100%;}
 .yd_nav_modal .top_nav ul>li>p.nav_p{line-height: 0.98rem;color: #fff;font-size: 0.24rem;display: block;border-bottom: 1px solid #666;position: relative;}
 .yd_nav_modal .top_nav ul>li>p.nav_p>i{display: block;width: 0.24rem;height: 0.24rem;position: absolute;right: 0; top: 50%;margin-top: -0.12rem;transition: .5s;
 background: url(../img/png/icon_23.png) no-repeat;background-size: 100%;}
@@ -185,14 +188,27 @@ background: url(../img/png/icon_23.png) no-repeat;background-size: 100%;}
 .yd_nav_modal .fot_p{font-size: 0.18rem !important;margin: 0 !important;padding: 0.3rem 0 !important;}
 
 /**弹窗提示**/
-.popup_tips{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: transparent;z-index: 999;}
+/*.popup_tips{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: transparent;z-index: 999;}
 .popup_tips .text{width: 2.2rem;min-height: 1rem;display: inline-block;background: rgba(0,0,0,.8);text-align: center;
 position: absolute;top: 50%;left: 50%;margin-left: -1.1rem; border-radius: 5px;padding: 0.2rem 0;}
 .popup_tips .text .top{height: 0.6rem;position: relative;}
 .popup_tips .text .top span{width: 0.12rem;height: 2px;background: #ff0000;display: block;
 position: absolute;top: 50%;left: 50%;margin-top: -1px;margin-left: -0.06rem;transform: rotate(225deg);}
 .popup_tips .text .top span:before{content: "";display: block;height: 0.2rem;width: 2px;background: #ff0000;}
+.popup_tips .text p{font-size: 0.2rem;color: #fff;padding: 0 0.2rem ;box-sizing: border-box;}*/
+
+/**弹窗提示**/
+.popup_tips{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: transparent;z-index: 999;}
+.popup_tips .text{width: 2.2rem;min-height: 1rem;display: inline-block;background: rgba(0,0,0,.8);text-align: center;
+position: absolute;top: 40%;left: 50%;margin-left: -1.1rem; border-radius: 5px;padding: 0.2rem 0;}
+.popup_tips .text .top{height: 0.6rem;position: relative;}
+.popup_tips .text .top.mr span{width: 0.12rem;height: 2px;background: #ff0000;display: block;
+position: absolute;top: 50%;left: 50%;margin-top: -1px;margin-left: -0.06rem;transform: rotate(225deg);}
+.popup_tips .text .top.mr span:before{content: "";display: block;height: 0.2rem;width: 2px;background: #ff0000;}
+.popup_tips .text .top.gantan span{width: 0.32rem;height: 0.32rem;display: block;background: url(../img/png/gantan.png) no-repeat center/0.32rem;
+position: absolute;top: 50%;left: 50%;margin-top: -0.16rem;margin-left: -0.16rem;}
 .popup_tips .text p{font-size: 0.2rem;color: #fff;padding: 0 0.2rem ;box-sizing: border-box;}
+
 	
 @media only screen and (min-width: 921px) {
 	/***搜索弹窗***/
@@ -276,7 +292,7 @@ position: absolute;top: 50%;left: 50%;margin-top: -1px;margin-left: -0.06rem;tra
 
 
 /**yd头部**/
-.yd_nav{background: url(../img/nav_bg.jpg) no-repeat;height: 1.1rem;display: none;}
+.yd_nav{background: url(../img/nav_bg.jpg) no-repeat;background-size: cover; height: 1.1rem;display: none;}
 .yd_nav .yd_navul>li{display: inline-block;float: left;height: 1.1rem;border-right: 2px solid rgba(255,255,255,.2);}
 .yd_nav .yd_navul>li.kg_li{background: url(../img/png/icon_19.png) no-repeat center center;width: 17%;transition: .5s;background-size: 0.24rem 0.22rem;}
 .yd_nav .yd_navul>li.kg_li.active{background: url(../img/png/icon_19_.png) no-repeat center center;background-size: 0.24rem 0.22rem;}

@@ -191,10 +191,10 @@
 							
 							<!--默认不选择-->
 							<li class="clearfix">
-								<span class="bt_span slide">Select Length : <em></em> <i></i><p class="ts_ps">Please select Length</p></span>
+								<span class="bt_span slide active">Select Length : <em></em> <i></i><p class="ts_ps">Please select Length</p></span>
 								
-								<ul class="pro_det_ul3 slide_ul clearfix">
-									<li><span>12″</span></li>
+								<ul class="pro_det_ul3 slide_ul clearfix" style="display: none;">
+									<li class="active"><span>12″</span></li>
 									<li><span>14″</span></li>
 									<li><span>16″</span></li>
 									<li><span>18″</span></li>
@@ -647,6 +647,7 @@ window.onload=function(){
 			$(this).addClass("active").siblings(".swiper-slide").removeClass("active");
 		})
 		//length选择
+		$(".pro_det_ul3").siblings(".bt_span").find("em").text($(".pro_det_ul3>li").eq(0).find("span").text());
 		$(".pro_det_ul3>li>span").click(function(){
 			$(this).parents("li").addClass("active").siblings("li").removeClass("active");
 			$(this).parents("li").find(".slide>em").text($(this).text());
@@ -659,15 +660,15 @@ window.onload=function(){
 		})
 		
 		//Wish List添加收藏
-		$(".wish_btn").click(function(){
-			if($(this).hasClass("active")){
-				$(this).removeClass("active");
-				tips('取消收藏');
-			}else{
-				$(this).addClass("active");
-				tips('收藏成功');
-			}
-		})
+//		$(".wish_btn").click(function(){
+//			if($(this).hasClass("active")){
+//				$(this).removeClass("active");
+//				tips('取消收藏');
+//			}else{
+//				$(this).addClass("active");
+//				tips('收藏成功');
+//			}
+//		})
 		
 		//下拉收起
 		$(".slide").click(function(){
