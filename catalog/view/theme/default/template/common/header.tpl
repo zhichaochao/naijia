@@ -119,8 +119,8 @@
             <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
             <?php foreach($categories as $key => $category) { ?>
             <li >
-              <p class="nav_p active"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
-                    
+              <p class="nav_p active li_p1"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
+              <p class="nav_p active li_p2"><?php echo $category['name'];?><i></i></p>     
                     <?php if( $category['children']){ ?>
                  <ol class="yd_nav_ol li_i" style="display: block;">
                        <?php foreach($category['children'] as $k => $child) { ?>
@@ -145,52 +145,7 @@
             <li><a href="<?=$wishlist;?>">Wish List <i></i></a></li>
           </ul>
         </div>
-        
-        <!-- <div class="bot_fot footer">
-            <div class="top clearfix">
-              <ul class="fot_ul1 clearfix">
-            yd左侧底部
-              <?php foreach($informations as $key => $information) { ?>
-              <li>
-                <h1><?php echo $information['title']; ?> <i></i></h1>
-                <ol class="fot_ol">
-                <?php foreach($information['child'] as $subkey=>$subval) { ?> 
-                  <li><a href="<?php echo $subval['url']; ?>"><?php echo $subval['title']; ?></a></li>
-                <?php } ?>
-                </ol>
-              </li>
-            <?php } ?>
 
-                <li>
-                  <h1>SING UP OUR NEWSLETTER! <i></i></h1>
-                  <div class="text fot_ol">
-                    <form >
-                      <label for="">
-                        <i></i>
-                       <input type="text" name="txtemail" id="txtemail" placeholder="Enter your e-mail"/>
-                      </label>
-                      <p>
-                        Subscribe to get the exclusive sales, product lanuches, wig tips & latest news. 
-                      </p>
-                      <button type="submit" onClick="return subscribe();">SUBMIT</button>
-                    <!-- </form> -->
-             <!--      </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="bot clearfix">
-              <ul class="fot_ul2 clearfix">
-                <li><img src="/catalog/view/theme/default/img/png/fot1.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot2.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot3.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot4.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot5.png"/></li>
-              </ul>
-            </div>
-      
-            <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair. Powered by Shopify</p>
-        </div> --> 
       </div>
     </div>
      <!--pc搜索弹窗-->
