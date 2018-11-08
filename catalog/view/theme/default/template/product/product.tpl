@@ -271,8 +271,8 @@
                 <div class="slide_text">
                   <dl>
                     <dt>Shipping</dt>
-                    <dd>Ready to ship in 1-3 Days</dd>
-                    <dd>From Lagos Get the shipping cost</dd>
+                    <!-- <dd>Ready to ship in 1-3 Days</dd> -->
+                    <dd>From Lagos Ready to ship in 1-3 days .</dd>
                   </dl>
                   <dl>
                     <dt>Return Policy</dt>
