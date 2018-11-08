@@ -72,7 +72,7 @@
           <span>Order date:<?php echo $date_added; ?></span>
 
         </div>
-        <?php }elseif($order_status=='Completed'){?>
+        <?php }elseif($order_status=='Complete'){?>
         <div class="left clearfix">
           <h2 class="huang"><?php echo $order_status; ?>  </h2>
           <p class="p3">
@@ -211,10 +211,10 @@
         <div class="center clearfix">
           <div class="btn">
             <div class="file_div">
-              <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+              <input type="file" name="uploadPicture" id="file" value="<?php echo $bank_receipt;?>" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
               <a class="btn1" href="###">Re-upload</a>
             </div>
-            <a  href="javascript:0;" class="btn2"><input type="submit" value="SUBMIT"></a>
+            <a  href="javascript:;" class="btn2"><input type="submit" value="SUBMIT"></a>
             
           </div>
           <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
@@ -234,7 +234,7 @@
          <?php foreach ($products as $product) { ?>
           <li class="clearfix">
             <div>
-              <a href="###">
+              <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img src="<?php echo $product['order_image']; ?>" alt="" />
                 </div>
@@ -262,7 +262,7 @@
           <?php } ?>
         </ul>
       </div>
-      <?php if($order_status=='Completed'){?>
+      <?php if($order_status=='Complete'){?>
       <p class="ms_p">Please contact us if you have any problem of your order.</p>
       <?php } ?>
     </div>
@@ -304,7 +304,7 @@
         <!--  -->
         
 
-        <?php }elseif($order_status=='Completed'){?>
+        <?php }elseif($order_status=='Complete'){?>
 
         <div class="zt_top clearfix">
           <em class="line_h"></em>
@@ -402,7 +402,7 @@
 
           <div class="xianxia clearfix">
 
-          <form  action="<?=$upload_receipt;?>" method="post"  enctype="multipart/form-data"  onsubmit="return bitian();">
+          <form  action="<?=$upload_receipt;?>" method="post"  enctype="multipart/form-data"  >
           <input type="hidden" value="<?php echo $order_id; ?>" name="order_id">
           <span class="span1">Bank Alert</span>
           <span class="span2">Voucher picture</span>
@@ -415,11 +415,11 @@
           <div class="center">
             <div class="btn">
               <div class="file_div">
-                <input type="file" name="uploadPicture" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
-                <a class="btn1" href="###">Re-upload</a>
+                <input type="file" name="uploadPicture" id="file" value="<?php echo $bank_receipt;?>" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+                <a class="btn1" href="">Re-upload</a>
               </div>
               <!-- <a  href="###"></a> -->
-              <input type="submit" value="SUBMIT" class="btn2">
+              <input type="submit" value="SUBMIT2">
             </div>
           </div>
           <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
@@ -457,23 +457,23 @@
                   <?php } ?>
             <?php }?>
 
-            <?php if($order_status=='Completed' ){?>
+            <?php if($order_status=='Complete' ){?>
             <button class="md_btn w_50 contact_tc">CONTACT US</button>
               <!-- <button class="md_btn w_50">CONTACT US</button> -->
-              <a class="btn_a1 btn_a review_tc" href="###">REVIEW</a>
+              <a class="btn_a1 btn_a review_tc" href="javascript:;">REVIEW</a>
               <!-- <a class="btn_a1 btn_a" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
               <p class="ms_p pd_no">Please contact us if you have any problem of your order.</p>
             <?php }?>
 
              <?php if($order_status=='Delivered'){?>
               <button class="md_btn w_50 contact_tc">CONTACT US</button>
-              <a class="btn_a1 btn_a"  onclick="javascript:confirm_order('<?php echo $order_id; ?>');">CONFIRM RECEIPT</a>
+              <em class="btn_a1 btn_a"  onclick="javascript:confirm_order('<?php echo $order_id; ?>');">CONFIRM RECEIPT</em>
               <p class="ms_p pd_no">Your package is on shipping, contact us if you have any problem.</p>
             <?php }?>
 
 
             <?php if($order_status=='Pending-unfilled'){?>
-              <a class="btn_a huang contact_tc" href="###">CONTACT US</a>
+              <a class="btn_a huang contact_tc" href="javascript:;">CONTACT US</a>
               <p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
             <?php }?>
 
@@ -594,7 +594,9 @@ function bitian() {
 </script>
 <script>
 function confirm_order(order_id){
+  alert(111);die;
 if(confirm('Are you sure?')){
+
            $.ajax({
             url: 'index.php?route=account/order/confirm',
             type: 'post',

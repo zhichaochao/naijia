@@ -43,7 +43,7 @@
               </p>
               <?php if ($order['products']) { ?>
                 <?php foreach ($order['products'] as $product) { ?>
-              <a class="or_a clearfix" href="<?=$product['href'];?>">
+              <a class="or_a clearfix" href="<?=$order['view'];?>">
                 <div class="pic_img">
                   <img src="<?php echo $product['image']; ?>"/>
                 </div>
@@ -81,8 +81,9 @@
                 <?php } ?>
 
 
-
-                <a class="bot_a" href="<?php echo $order['view']; ?>">Review</a>
+              <?php if($order['status'] == 'Complete'){ ?>
+                <a class="bot_a" href="<?php echo $order['compltedorder']; ?>">Review</a>
+                  <?php } ?>
               </div>
             </li>
 
@@ -134,7 +135,8 @@ if(confirm('Are you sure?')){
             data: {order_id:order_id},
             dataType: 'json',
             success: function(json) {
-               location.reload();
+              window.location.href='<?php echo $view?>'+'&order_id='+(json.order_id);
+               // location.reload();
             }
         })
       

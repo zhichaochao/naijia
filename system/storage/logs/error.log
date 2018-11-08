@@ -216,3 +216,8 @@
 2018-11-07 9:54:24 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-07 9:56:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-07 9:56:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 1:58:44 - PHP Notice:  Undefined index: view in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_list.tpl on line 46
+2018-11-08 1:58:44 - PHP Notice:  Undefined index: view in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_list.tpl on line 46
+2018-11-08 1:58:44 - PHP Notice:  Undefined index: view in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_list.tpl on line 46
+2018-11-08 2:09:03 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 2:09:03 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
