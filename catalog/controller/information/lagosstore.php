@@ -83,7 +83,7 @@ class ControllerInformationLagosstore extends Controller {
 				  // 发送邮件
 
 				  if($result){
-               $this->session->data['success'] = 'Booking success';
+               $this->session->data['success'] = 'The appointment has been sent to your e-mail. Please check or cancel by the e-mail. Thanks!';
 
                //发送邮件
                $this->load->language('mail/customer');

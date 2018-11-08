@@ -44,7 +44,7 @@
         </ul>
       </div>
       
-      <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair. Powered by Shopify</p>
+      <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair.</p>
     </div>
     <div class="yd_footer2">
       <ol class="ol_ydfot clearfix">

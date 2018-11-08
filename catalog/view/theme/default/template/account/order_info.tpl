@@ -68,7 +68,7 @@
                 <?php } ?> -->
 
           <!-- <a class="pay_a" href="###">Continue To Pay</a> -->
-
+           <span class="pay_m ">Pay method:<em style="color: red;"><?php echo $payment_method; ?></em></span>
           <span>Order date:<?php echo $date_added; ?></span>
 
         </div>
@@ -283,6 +283,7 @@
           <p class="p1">· Payment has been completed.</p>
           <p class="p1">· It will ready to ship in 1- 2 days.</p>
           <p class="p1">Emails will update to you if your package situation changes.</p>
+          <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
         </div>
           <!-- <span>Order date:2018-09-07</span> -->
        <!--  </div> -->
@@ -299,6 +300,7 @@
               <span class="int_second">00</span>
             </span>
           </p>
+          <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
         </div>
         <?php }?>
         <!--  -->

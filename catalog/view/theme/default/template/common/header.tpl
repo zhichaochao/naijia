@@ -146,10 +146,10 @@
           </ul>
         </div>
         
-        <div class="bot_fot footer">
+        <!-- <div class="bot_fot footer">
             <div class="top clearfix">
               <ul class="fot_ul1 clearfix">
-            <!-- yd左侧底部 -->
+            yd左侧底部
               <?php foreach($informations as $key => $information) { ?>
               <li>
                 <h1><?php echo $information['title']; ?> <i></i></h1>
@@ -164,7 +164,7 @@
                 <li>
                   <h1>SING UP OUR NEWSLETTER! <i></i></h1>
                   <div class="text fot_ol">
-                    <!-- <form > -->
+                    <form >
                       <label for="">
                         <i></i>
                        <input type="text" name="txtemail" id="txtemail" placeholder="Enter your e-mail"/>
@@ -174,7 +174,7 @@
                       </p>
                       <button type="submit" onClick="return subscribe();">SUBMIT</button>
                     <!-- </form> -->
-                  </div>
+             <!--      </div>
                 </li>
               </ul>
             </div>
@@ -190,7 +190,7 @@
             </div>
       
             <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair. Powered by Shopify</p>
-        </div>
+        </div> --> 
       </div>
     </div>
      <!--pc搜索弹窗-->
@@ -220,21 +220,12 @@
           </div>
           <div class="con clearfix">
             <h1>YOUR RECENT SEARCHES
-            <i class="del" onclick="javascript:del('<?php echo $customer_id; ?>');">
-                <svg t="1539766974948" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5269" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32">
-                  <path d="M793.6 998.4H220.16c-51.2 0-97.28-40.96-97.28-97.28V261.12c0-15.36 10.24-25.6 25.6-25.6s25.6 10.24 25.6 25.6v645.12c0 25.6 20.48 46.08 46.08 46.08h573.44c25.6 0 46.08-20.48 46.08-46.08v-563.2c0-15.36 10.24-25.6 25.6-25.6s25.6 10.24 25.6 25.6v563.2c0 46.08-46.08 92.16-97.28 92.16z" p-id="5270" fill="#999999"></path>
-                  <path d="M51.2 266.24c-10.24 0-20.48-10.24-25.6-25.6 0-15.36 10.24-25.6 25.6-25.6l916.48-81.92c15.36 0 25.6 10.24 25.6 25.6s-10.24 25.6-25.6 25.6L51.2 266.24c5.12 0 0 0 0 0z" p-id="5271" fill="#999999"></path>
-                  <path d="M343.04 230.4c-10.24 0-20.48-10.24-25.6-25.6l-5.12-76.8C307.2 87.04 337.92 51.2 378.88 46.08l225.28-20.48c20.48 0 40.96 5.12 56.32 15.36 15.36 10.24 25.6 30.72 25.6 51.2l5.12 81.92c0 15.36-10.24 25.6-25.6 25.6s-25.6-10.24-25.6-25.6l-5.12-81.92c0-10.24-10.24-20.48-25.6-20.48l-225.28 25.6c-5.12 0-10.24 5.12-15.36 10.24-5.12 0-5.12 10.24-5.12 15.36L368.64 204.8c0 10.24-10.24 25.6-25.6 25.6 5.12 0 0 0 0 0zM435.2 768c-15.36 0-25.6-15.36-25.6-30.72V399.36c0-15.36 10.24-40.96 25.6-40.96s25.6 25.6 25.6 35.84v337.92c0 15.36-10.24 35.84-25.6 35.84zM588.8 768c-15.36 0-25.6-15.36-25.6-30.72V465.92c0-15.36 10.24-25.6 25.6-25.6s25.6 10.24 25.6 25.6v271.36c0 15.36-10.24 30.72-25.6 30.72z" p-id="5272" fill="#999999"></path>
-                </svg>  
-              </i>
-
             </h1>
             <ul>
             <?php if(isset($searchhistory)){?>
             <?php foreach($searchhistory as $key => $searstory) { ?>
               <li id="count">
                 <a onclick="javascript:selsearch('<?php echo $searstory['keywords']; ?>');"><?php echo $searstory['keywords']; ?></a>
-                <!-- <i  onclick="javascript:del('<?php echo $searstory['id']; ?>');"></i> -->
               </li>
               <?php } ?>
               <?php } ?>

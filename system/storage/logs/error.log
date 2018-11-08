@@ -221,3 +221,438 @@
 2018-11-08 1:58:44 - PHP Notice:  Undefined index: view in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\order_list.tpl on line 46
 2018-11-08 2:09:03 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-08 2:09:03 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 3:27:09 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:27:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:29:16 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:29:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:29:41 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:29:41 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:29:58 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:29:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:30:35 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:30:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:36 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:41 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:41 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:43 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:43 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 3:31:43 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 3:31:45 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:45 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:47 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:49 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:31:49 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:32:15 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:32:15 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:09 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:13 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:16 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:18 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:20 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:38:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:52:09 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 3:52:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:36:25 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:36:25 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:12 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:15 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:15 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:19 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:19 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:24 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:24 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:26 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:26 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:31 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:31 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:38 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:38 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:40 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:40 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:44 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:44 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:49 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:49 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:59 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:39:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:40:02 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:40:02 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:40:04 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:40:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:40:11 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:40:11 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:47:08 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:47:08 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:47:09 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:47:09 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:15 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:15 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:18 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:22 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:22 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:22 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 5:48:22 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-08 5:48:27 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:27 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:30 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:30 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:33 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:48:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:50:45 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:50:45 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:03 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:08 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:08 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:16 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:47 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:51:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:53:43 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:53:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:54:28 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:54:28 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:54:33 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:54:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:55:04 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:55:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:55:13 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:55:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:57:35 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:57:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:58:43 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:58:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:59:06 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:59:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:59:37 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:59:37 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:59:56 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 5:59:56 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:00:25 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:00:25 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:00:55 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:00:55 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:01:11 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:01:11 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:01:38 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:01:38 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:03:33 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:03:33 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:03:38 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:03:38 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:04:42 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:04:42 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:05:29 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:05:29 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:26:48 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:26:48 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: tab_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 35
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: entry_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 663
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: entry_additional_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 678
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 679
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:34:39 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:34:39 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: entry_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 663
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: entry_additional_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 678
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 679
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:35:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:35:00 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: entry_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 663
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: entry_additional_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 678
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 679
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:36:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:36:18 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: entry_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 663
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: entry_additional_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 678
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 679
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:37:10 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:37:10 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: entry_additional_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 678
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 679
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:37:29 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:37:29 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: entry_additional_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 678
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 679
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:38:20 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:38:20 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:39:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: button_image_add in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 697
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:39:03 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:39:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:39:23 - PHP Notice:  Undefined variable: entry_sort_order in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1235
+2018-11-08 6:40:24 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:40:24 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:40:24 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:40:24 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:40:24 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:40:24 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:40:24 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 1234
+2018-11-08 6:43:04 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:43:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 6:43:35 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:43:35 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:43:35 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:43:35 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:43:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:45:29 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:45:29 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:45:29 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:45:29 - PHP Notice:  Undefined variable: product_images in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:45:29 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 685
+2018-11-08 6:59:07 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:59:07 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:59:07 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:59:26 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:59:26 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 6:59:26 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:13 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:13 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:13 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:13 - PHP Notice:  Undefined index: message in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 688
+2018-11-08 7:02:13 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:02:27 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:27 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:27 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:27 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:02:27 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:02:27 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:02:34 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:34 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:34 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:02:34 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:02:34 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:02:34 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:05:32 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:05:32 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:05:32 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:05:32 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:32 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:32 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:05:43 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:05:43 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:05:43 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:05:43 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:43 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:43 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:05:43 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:43 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:43 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:05:43 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:43 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:05:43 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:00 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:00 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:00 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:00 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:00 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:00 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:00 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:00 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:00 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:07 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:07 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:07 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:07 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:07 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:07 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:07 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:07 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:07 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:18 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:18 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:18 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:18 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:18 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:18 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:18 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:18 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:18 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:22 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:22 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:22 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:28 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:28 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:28 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:07:28 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:28 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:28 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:28 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:28 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:28 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:07:28 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:28 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:07:28 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:08:17 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:17 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:17 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:17 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:17 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:17 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:08:17 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:17 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:17 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:08:17 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:17 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:17 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:08:21 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:21 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:21 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:29 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:29 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:29 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:29 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:29 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:29 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:08:42 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:42 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:42 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:42 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:42 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:42 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:08:57 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:57 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:57 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:08:57 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:57 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:08:57 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:09:12 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:09:12 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:09:12 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:09:12 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:09:12 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:09:12 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:09:12 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:09:12 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:09:12 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:10:30 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:10:30 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:10:30 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:10:30 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:10:30 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:10:30 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:10:30 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:10:30 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:10:30 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:10:30 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:10:30 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:10:30 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:11:59 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:11:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:14:34 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:14:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:14:35 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:14:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:15:59 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:15:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:20:51 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:20:51 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:20:51 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:20:51 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:51 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:51 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:20:51 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:51 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:51 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:20:51 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:51 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:51 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:20:59 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:20:59 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:20:59 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:20:59 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:59 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:59 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:20:59 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:59 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:59 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:20:59 - PHP Notice:  Undefined index: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:59 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 690
+2018-11-08 7:20:59 - PHP Notice:  Undefined index: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 692
+2018-11-08 7:21:03 - PHP Notice:  Undefined variable: thumb in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:21:03 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:21:03 - PHP Notice:  Undefined variable: image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\customer\customer_form.tpl on line 669
+2018-11-08 7:52:45 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:52:45 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:54:03 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:54:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:54:30 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:54:30 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:55:36 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:55:36 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:56:21 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:56:21 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:57:04 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:57:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:57:18 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:57:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:58:15 - PHP Notice:  Undefined variable: informations in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153
+2018-11-08 7:58:15 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\common\header.tpl on line 153

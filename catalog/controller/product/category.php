@@ -519,7 +519,7 @@ class ControllerProductCategory extends Controller {
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
 					'name'        => $result['name'],
-					'meta_description'        => $result['meta_description'],
+					'meta_description'        =>utf8_substr(strip_tags($result['meta_description']),0,125).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',

@@ -105,73 +105,73 @@ class ControllerCommonHeader extends Controller {
 		$data['instagram']=$instagram;
 		$data['whatsapp']=$whatsapp;
 
-		$data['informations'] = array(
-			0 =>array(
-				'title'=>'COMPANY',
-				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
-				'child'=>array(
-						0=>array(
-							'title'=>'About Us',
-							'url'=>$this->url->link('information/company'),
-							),
-						1=>array(
-							'title'=>'Instagram',
-							'url'=>('http://www.instagram.com/'.$instagram),
-							),
-						2=>array(
-							'title'=>'Facebook',
-							'url'=>('http://www.facebook.com/'.$facebook),
+		// $data['informations'] = array(
+		// 	0 =>array(
+		// 		'title'=>'COMPANY',
+		// 		'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
+		// 		'child'=>array(
+		// 				0=>array(
+		// 					'title'=>'About Us',
+		// 					'url'=>$this->url->link('information/company'),
+		// 					),
+		// 				1=>array(
+		// 					'title'=>'Instagram',
+		// 					'url'=>('http://www.instagram.com/'.$instagram),
+		// 					),
+		// 				2=>array(
+		// 					'title'=>'Facebook',
+		// 					'url'=>('http://www.facebook.com/'.$facebook),
 
-							),
-						3=>array(
-							'title'=>'What App',
-							'url'=>('http://api.whatsapp.com/send?phone='.$whatsapp),
-							),
-					),
-				),
-			1=>array(
-				'title'=>'POLOCIES',
-				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
-				'child'=>array(
-						0=>array(
-							'title'=>'Return Policy',
-						'url'=>$this->url->link('information/returnpolicy'),
-							),
-						1=>array(
-							'title'=>'Shipping & Handling',
-							'url'=>$this->url->link('information/shipping'),
-							),
-						2=>array(
-							'title'=>'Terms & Conditions',
-							'url'=>$this->url->link('information/trems'),
+		// 					),
+		// 				3=>array(
+		// 					'title'=>'What App',
+		// 					'url'=>('http://api.whatsapp.com/send?phone='.$whatsapp),
+		// 					),
+		// 			),
+		// 		),
+		// 	1=>array(
+		// 		'title'=>'POLOCIES',
+		// 		'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
+		// 		'child'=>array(
+		// 				0=>array(
+		// 					'title'=>'Return Policy',
+		// 				'url'=>$this->url->link('information/returnpolicy'),
+		// 					),
+		// 				1=>array(
+		// 					'title'=>'Shipping & Handling',
+		// 					'url'=>$this->url->link('information/shipping'),
+		// 					),
+		// 				2=>array(
+		// 					'title'=>'Terms & Conditions',
+		// 					'url'=>$this->url->link('information/trems'),
 
-							),
-						3=>array(
-							'title'=>'VIP Policy',
-							'url'=>$this->url->link('information/information'),
-							),
-					),
-				),
-			2=>array(
-				'title'=>'POLOCIES',
-				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
-				'child'=>array(
-						0=>array(
-							'title'=>'FAQs',
-							'url'=>$this->url->link('information/faqs'),
-							),
-						1=>array(
-							'title'=>'Tutorials',
-							'url'=>$this->url->link('information/profile'),
-							),
-						2=>array(
-							'title'=>'Feedback',
-							'url'=>$this->url->link('information/help'),
+		// 					),
+		// 				3=>array(
+		// 					'title'=>'VIP Policy',
+		// 					'url'=>$this->url->link('information/information'),
+		// 					),
+		// 			),
+		// 		),
+		// 	2=>array(
+		// 		'title'=>'POLOCIES',
+		// 		'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
+		// 		'child'=>array(
+		// 				0=>array(
+		// 					'title'=>'FAQs',
+		// 					'url'=>$this->url->link('information/faqs'),
+		// 					),
+		// 				1=>array(
+		// 					'title'=>'Tutorials',
+		// 					'url'=>$this->url->link('information/profile'),
+		// 					),
+		// 				2=>array(
+		// 					'title'=>'Feedback',
+		// 					'url'=>$this->url->link('information/help'),
 
-							),
-					),
-				),
-		 );
+		// 					),
+		// 			),
+		// 		),
+		//  );
 		//购物车数量
 		$data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 		// Menu
