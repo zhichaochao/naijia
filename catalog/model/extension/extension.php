@@ -5,9 +5,9 @@ class ModelExtensionExtension extends Model {
 
 		return $query->rows;
 	}
-	function getSearch($ip) {
+	function getSearch() {
 		// print_r("SELECT * FROM " . DB_PREFIX . "keywords k WHERE customer_id = '" . (int)$this->customer->getId() . "'AND ip = '" .$ip. "'ORDER BY k.id DESC ");exit;
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "keywords k WHERE customer_id = '" . (int)$this->customer->getId() . "'AND ip = '" .$ip. "'ORDER BY k.id DESC LIMIT 6");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "keywords k WHERE customer_id = '" . (int)$this->customer->getId() . "'ORDER BY k.id DESC LIMIT 6");
 // print_r($query);exit;
 		return $query->rows;
 	}

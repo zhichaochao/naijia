@@ -75,7 +75,7 @@
         type:"post",
         success:function(data){
         if (data.successs) {
-         tips(data.success);
+         tips(data.success,'',500);
           }
         }
       });
@@ -86,7 +86,7 @@
 <?php if ($success) { ?>
 
     <script type="text/javascript">
-tips('<?php echo $success; ?>');
+tips('<?php echo $success; ?>','',500);
 </script>
 
   <?php } ?>

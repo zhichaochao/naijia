@@ -37,6 +37,11 @@ class ControllerInformationLagosstore extends Controller {
 		} else {
 			$data['email'] = '';
 		}
+		if (!empty($customer_info)) {
+			$data['telephone'] = $customer_info['telephone'];
+		} else {
+			$data['telephone'] = '';
+		}
 		//用户名
         $data['user_name'] = $this->customer->getFirstName().' '.$this->customer->getLastName();
         if($data['user_name'] == ' ') $data['user_name'] = $this->customer->getEmail();

@@ -157,7 +157,7 @@
                     <input type="text" class="num_in" value="1" class="quantity"/>
                     <span class="span_add"><em class="add"></em></span>
                   </div>
-                  <p class="ts_p">This hair need  3-7 customize process days</p>
+                  <p class="ts_p"><?=$tips;?></p>
                 </div>
               </li>
 

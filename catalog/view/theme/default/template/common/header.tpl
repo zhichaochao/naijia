@@ -104,7 +104,7 @@
           <li class="logo_li"><a href="<?=$home;?>"></a></li>
           <li class="ss_li"></li>
            <?=$mcurrency;?>
-          <li class="gw_li" id="checkout_btn"></li>
+          <li class="gw_li" id="checkout_btn"><span id='cart_count'><?=$text_cart_items;?></span></li>
         </ul>
       </div>
 

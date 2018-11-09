@@ -18,6 +18,7 @@ class ModelCustomerService extends Model {
 		$sort_data = array(
 			'r.store_id',
 			'r.email',
+			'r.telephone',
 			'r.subtime'
 		);
 		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {

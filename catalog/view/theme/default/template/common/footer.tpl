@@ -206,7 +206,7 @@
     $(".yhj_ol>li").click(function(){
       if(!$(this).hasClass("active")){
         $(this).addClass("active");
-        tips("Successful collection","")
+        tips("Successful collection","",500)
         $(this).find(".yh_btn").text("Coupon Added");
       }
     })

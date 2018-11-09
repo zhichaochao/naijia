@@ -340,7 +340,7 @@ $(document).ready(function(){
   var num_val = $(th).siblings(".num_in").val();
   var stock_quantity=$(th).parent().attr('data');
   // alert(num_val);die;
-  if (num_val<=stock_quantity) {tips('Lack of stock','gantan'); return false;}
+  if (num_val<=stock_quantity) {tips('Error：Limited Quantity','gantan',500); return false;}
       if(num_val>1){
         num_val--;
         $(th).siblings(".num_in").val(num_val);

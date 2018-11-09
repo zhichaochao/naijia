@@ -354,7 +354,7 @@ lazyLoad.init();
 })
 
 /**弹窗提示**/
-function tips(tips_text,img){
+function tips(tips_text,img,time){
 	if(img==""){
 		img='mr'
 	}
@@ -370,6 +370,6 @@ function tips(tips_text,img){
 	$("body").append(text);
 	setTimeout(function(){
 		$(".popup_tips").fadeOut();
-	},2000);
+	},time);
 }
 

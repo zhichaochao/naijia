@@ -220,7 +220,7 @@ class ControllerCommonHeader extends Controller {
 		// if($this->customer->isLogged()){
 		$ip=$this->request->server['REMOTE_ADDR'];
 		// print_r($ip);exit;
-		$searchres = $this->model_extension_extension->getSearch($ip);
+		$searchres = $this->model_extension_extension->getSearch();
 		// print_r($searchres);exit;
 		if(!empty($searchres)){
 			foreach ($searchres as $searres) {
