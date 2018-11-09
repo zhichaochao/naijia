@@ -174,7 +174,9 @@
                   <?php } ?>
                 <button class="wish_btn <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);">
                   <span><i></i> Add To Wish List</span>
+                  <span class="active"><i></i> Saved</span>
                 </button>
+
               </li>
               
               <!--默认展开评价-->
