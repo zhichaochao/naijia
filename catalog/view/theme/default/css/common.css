@@ -164,7 +164,7 @@ background: url(../img/png/icon_11.png) no-repeat;background-size: 100%;}
 .yd_nav_modal .top_nav ul>li .nav_p>a>i{display: block;width: 0.12rem;height: 0.2rem;position: absolute;right: 0; top: 50%;margin-top: -0.1rem;
 background: url(../img/png/icon_11.png) no-repeat;background-size: 100%;}
 .yd_nav_modal .top_nav ul>li>p.nav_p{line-height: 0.98rem;color: #fff;font-size: 0.24rem;display: block;border-bottom: 1px solid #666;position: relative;}
-.yd_nav_modal .top_nav ul>li>p.nav_p.li_2{display: none;}
+.yd_nav_modal .top_nav ul>li>p.nav_p.li_p2{display: none;}
 .yd_nav_modal .top_nav ul>li>p.nav_p>i{display: block;width: 0.24rem;height: 0.24rem;position: absolute;right: 0; top: 50%;margin-top: -0.12rem;transition: .5s;
 background: url(../img/png/icon_23.png) no-repeat;background-size: 100%;}
 .yd_nav_modal .top_nav ul>li>p.nav_p.active>i{background: url(../img/png/icon_23_.png) no-repeat;background-size: 100%;transform: rotate(180deg);}
