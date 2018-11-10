@@ -11,15 +11,15 @@
       <div class="content">
         <div class="top_f clearfix">
           <div class="search_result">
-            <!-- <form action=""> -->
+            <form method="post" action="<?=$search_url;?>">
               <label class="clearfix" for="" id="content">
                 <span class="ss_img">
-                  <input type="button" id="button-search"/> 
+                  <input type="submit" id="button-search"/> 
                 </span>
                 <input type="text" name="search" value="<?php echo $search; ?>" placeholder="<?php echo $text_keyword; ?>" id="input-search" class="in_text" />
                 <!-- <input class="in_text" type="text" placeholder="" value="hair" /> -->
               </label>
-            <!-- </form> -->
+            </form>
           </div>
           <p><?php echo $product_total; ?> items found</p>
           <div class="sortby">
@@ -135,36 +135,36 @@
    
 
 <script type="text/javascript"><!--
-$('#button-search').bind('click', function() {
-  // alert(11);
-	url = 'index.php?route=product/search';
+// $('#button-search').bind('click', function() {
+//   // alert(11);
+// 	url = 'index.php?route=product/search';
 
-	var search = $('#content input[name=\'search\']').prop('value');
+// 	var search = $('#content input[name=\'search\']').prop('value');
 
-	if (search) {
-		url += '&search=' + encodeURIComponent(search);
-	}
+// 	if (search) {
+// 		url += '&search=' + encodeURIComponent(search);
+// 	}
 
-	var category_id = $('#content select[name=\'category_id\']').prop('value');
+// 	var category_id = $('#content select[name=\'category_id\']').prop('value');
 
-	if (category_id > 0) {
-		url += '&category_id=' + encodeURIComponent(category_id);
-	}
+// 	if (category_id > 0) {
+// 		url += '&category_id=' + encodeURIComponent(category_id);
+// 	}
 
-	var sub_category = $('#content input[name=\'sub_category\']:checked').prop('value');
+// 	var sub_category = $('#content input[name=\'sub_category\']:checked').prop('value');
 
-	if (sub_category) {
-		url += '&sub_category=true';
-	}
+// 	if (sub_category) {
+// 		url += '&sub_category=true';
+// 	}
 
-	var filter_description = $('#content input[name=\'description\']:checked').prop('value');
+// 	var filter_description = $('#content input[name=\'description\']:checked').prop('value');
 
-	if (filter_description) {
-		url += '&description=true';
-	}
+// 	if (filter_description) {
+// 		url += '&description=true';
+// 	}
 
-	location = url;
-});
+// 	location = url;
+// });
 
 $('#content input[name=\'search\']').bind('keydown', function(e) {
 	if (e.keyCode == 13) {

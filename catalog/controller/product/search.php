@@ -1,6 +1,7 @@
 <?php
 class ControllerProductSearch extends Controller {
 	public function index() {
+
 		$this->load->language('product/search');
 
 		$this->load->model('catalog/category');
@@ -11,7 +12,12 @@ class ControllerProductSearch extends Controller {
 		$this->load->model('tool/image');
 
 		if (isset($this->request->get['search'])) {
-			$search = $this->request->get['search'];
+			$this->request->post['search'] =$this->encrypt($this->request->get['search']);
+		} 
+		// print_r($this->request->post);exit();
+
+		if (isset($this->request->post['search'])) {
+			$search = $this->request->post['search'];
 		} else {
 			$search = '';
 		}
@@ -544,6 +550,7 @@ class ControllerProductSearch extends Controller {
 				$this->model_account_search->addSearch($search_data);
 			}
 		}
+		// print_r($search);exit();
 
 		$data['search'] = $search;
 		$data['description'] = $description;
@@ -553,6 +560,7 @@ class ControllerProductSearch extends Controller {
 		$data['sort'] = $sort;
 		$data['order'] = $order;
 		$data['limit'] = $limit;
+			$data['search_url'] = $this->url->link('product/search');
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
@@ -1120,4 +1128,11 @@ class ControllerProductSearch extends Controller {
 		$this->response->setOutput(json_encode($data));
 		
 	}
+	 
+			function encrypt($string){   
+    
+        return str_replace('html1html',' ',$string);   
+		} 
+
+
 }

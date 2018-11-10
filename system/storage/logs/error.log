@@ -469,3 +469,53 @@
 2018-11-10 7:03:09 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 81
 2018-11-10 7:03:29 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 82
 2018-11-10 7:03:42 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 86
+2018-11-10 7:41:15 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 7:41:31 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 7:41:36 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 7:42:11 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 7:42:12 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 7:42:15 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 7:46:08 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:02:11 - PHP Notice:  Undefined variable: mdKey in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 332
+2018-11-10 8:06:11 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:11 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:11 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:13 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:13 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:27 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:27 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:27 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:27 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:27 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:27 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:28 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:29 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:30 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:30 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:30 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:30 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:30 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:31 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:32 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:32 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:32 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:32 - PHP Notice:  Uninitialized string offset: 62 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:06:32 - PHP Notice:  Uninitialized string offset: 63 in D:\phpStudy\WWW\naijia\catalog\controller\common\header.php on line 339
+2018-11-10 8:16:47 - PHP Warning:  Missing argument 2 for ControllerProductSearch::encrypt(), called in D:\phpStudy\WWW\naijia\catalog\controller\product\search.php on line 15 and defined in D:\phpStudy\WWW\naijia\catalog\controller\product\search.php on line 1132
+2018-11-10 8:22:52 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 8:23:03 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 8:31:10 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-10 8:31:19 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2

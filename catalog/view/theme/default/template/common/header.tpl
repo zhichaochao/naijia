@@ -46,28 +46,32 @@
               <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
                 <a href="<?php echo $hothref;?>">Hot Sales</a>
               </li>
-        <?php foreach($categories as $key => $category) { ?>
-        <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
-                <a href="<?php echo $category['href'];?>"><?php echo $category['name'];?></a>
-                <?php if( $category['children']){ ?>
-                <ol class="nav_ol">
-                   <?php foreach($category['children'] as $k => $child) { ?>
-                  <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
-                  <?php } ?>
-                </ol>
-                <?php } ?>
-              </li>
+              <?php foreach($categories as $key => $category) { ?>
+              <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
+                      <a  <?php if(!$category['children']){ ?>href="<?php echo $category['href'];?>"   <?php } ?>><?php echo $category['name'];?></a>
+                      <?php if( $category['children']){ ?>
+                      <div style="position: absolute;min-width: 600px;left: 0;">
+                      <ol class="nav_ol">
+                         <?php foreach($category['children'] as $k => $child) { ?>
+                        <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
+                        <?php } ?>
+                      </ol>
+                    </div>
+                      <?php } ?>
+                    </li>
 
-        <?php } ?>
+              <?php } ?>
 
 
 
               <li >
-                <a href="<?php echo $acchref;?>">Hair Care</a>
+                <a >Hair Care</a>
+                  <div style="position: absolute;min-width: 600px;left: 0;">
                 <ol class="nav_ol">
                   <li><a href="<?php echo $acchref;?>">Accessories</a></li>
                   <li><a href="<?php echo $blog;?>">Blog</a></li>
                 </ol>
+              </div>
               </li>
 
               <li><a href="<?php echo $lagosstore;?>">Lagos Store</a></li>
@@ -153,20 +157,23 @@
       <div class="bg_f clearfix">
         <div class="text clearfix">
           <div class="close"><img src="/catalog/view/theme/default/img/png/close.png" alt="" /></div>
+          <form method="post" action="<?=$search_url;?>" >
           <label class="clearfix" for="">
+
             <span class="ss_img">
               <input type="submit" class="search_li" /> 
             </span>
-            <input class="in_text" type="text" placeholder="Search  keyword" name="new_search" />
+            <input class="in_text" type="text" placeholder="Search  keyword" name="search" />
             <img class="in_close" src="catalog/view/theme/default/img/png/icon_24.png" alt="" />
           </label>
+        </form>
            <div class="con clearfix">
             <h1>TRENDING SEARCHES</h1>
             <ol>
             <?php if(isset($hotsearched)){?>
             <?php foreach($hotsearched as $key => $hotsearstory) { ?>
               <li class="active">
-                <a  onclick="javascript:selsearch('<?php echo $hotsearstory; ?>');"><?php echo $hotsearstory; ?></a>
+                <a  onclick="javascript:selsearch('<?php echo $hotsearstory['url']; ?>');"><?php echo $hotsearstory['content']; ?></a>
                 
               </li>
               <?php } ?>
@@ -180,7 +187,7 @@
             <?php if(isset($searchhistory)){?>
             <?php foreach($searchhistory as $key => $searstory) { ?>
               <li id="count">
-                <a onclick="javascript:selsearch('<?php echo $searstory['keywords']; ?>');"><?php echo $searstory['keywords']; ?></a>
+                <a onclick="javascript:selsearch('<?php echo $searstory['url']; ?>');"><?php echo $searstory['keywords']; ?></a>
               </li>
               <?php } ?>
               <?php } ?>
@@ -245,16 +252,16 @@
 
 
             /* Search */
-            $('.search_li ').click(function() {
+            // $('.search_li ').click(function() {
               
-                url = '<?php echo $search_url; ?>';
-                var value = $("input[name='new_search']").val();
+            //     url = '<?php echo $search_url; ?>';
+            //     var value = $("input[name='new_search']").val();
 
-                if (value) {
-                    url += '&search=' + encodeURIComponent(value);
-                }
-                location = url;
-            });
+            //     if (value) {
+            //         url += '&search=' + encodeURIComponent(value);
+            //     }
+            //     location = url;
+            // });
         });
         function selsearch(value) {
           // alert(value);die;

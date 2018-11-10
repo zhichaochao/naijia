@@ -226,7 +226,8 @@ class ControllerCommonHeader extends Controller {
 			foreach ($searchres as $searres) {
 			$data['searchhistory'][] = array(
 						'id'=>$searres['id'],
-						'keywords'=>$searres['keywords']
+						'keywords'=>$searres['keywords'],
+						'url'=>$this->encrypt($searres['keywords'])
 				);
 			}
 		}
@@ -237,9 +238,15 @@ class ControllerCommonHeader extends Controller {
 		// 热门搜索
 			$str=$this->config->get('config_meta_keywords');
 
-			$data['hotsearched'] =explode(",",$str);
+			$hotsearched =explode(",",$str);
+			$data['hotsearched']=array();
+			foreach ($hotsearched as $key => $value) {
+				$data['hotsearched'][$key]['content']=  $value;   
+				$data['hotsearched'][$key]['url']= $this->encrypt($value);   
+			}
+			
 			$data['slogan']=$this->config->get('config_meta_slogan');
-// print_r($slogan);exit;
+// print_r($data['hotsearched']);exit;
 
 		$this->load->model('account/customer');
 $data['action'] = $this->url->link('common/home');
@@ -317,8 +324,11 @@ $data['action'] = $this->url->link('common/home');
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
-	// public function helpbok()
-	// {
-	
-	// }
-}
+	//加密函数  
+	function encrypt($string){   
+    
+        return str_replace(' ','html1html',$string);   
+    }  
+ 
+
+}  
