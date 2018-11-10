@@ -88,7 +88,7 @@
                       <em class="sub"><i></i></em>
                     </div>
                   </span>
-                  <p class="ts_p">This hair need  3-7 customize process days</p>
+                  <p class="ts_p"><?=$tips;?></p>
                 </div>
               </li>
 
@@ -157,7 +157,7 @@
                     <input type="text" class="num_in" value="1" class="quantity"/>
                     <span class="span_add"><em class="add"></em></span>
                   </div>
-                  <p class="ts_p">This hair need  3-7 customize process days</p>
+                  <p class="ts_p"><?=$tips;?></p>
                 </div>
               </li>
 
@@ -174,7 +174,9 @@
                   <?php } ?>
                 <button class="wish_btn <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);">
                   <span><i></i> Add To Wish List</span>
+                  <span class="active"><i></i> Saved</span>
                 </button>
+
               </li>
               
               <!--默认展开评价-->
@@ -271,8 +273,8 @@
                 <div class="slide_text">
                   <dl>
                     <dt>Shipping</dt>
-                    <dd>Ready to ship in 1-3 Days</dd>
-                    <dd>From Lagos Get the shipping cost</dd>
+                    <!-- <dd>Ready to ship in 1-3 Days</dd> -->
+                    <dd>From Lagos Ready to ship in 1-3 days .</dd>
                   </dl>
                   <dl>
                     <dt>Return Policy</dt>
@@ -683,7 +685,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
-        tips('Cancel the collection');
+        // tips('Cancel the collection');
         $('#wishlist_count').html(data.total);
       }
                // location.reload(); 
@@ -699,7 +701,7 @@ function wishlist(product_id,e) {
     dataType: 'json',
     success:function(data){
       if (data.success) {
-        tips('Collection Success');
+        // tips('Collection Success');
         $('#wishlist_count').html(data.total);
       }
                // location.reload(); 
@@ -733,7 +735,7 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
-                tips('Successful shopping cart');
+                // tips('Successful shopping cart');
                 // alert("成功加入购物车");
               $('#cart_count').html(json.total);
                 $(".cart_li").click();

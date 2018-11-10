@@ -120,6 +120,14 @@
                  
                 </div>
               </div>
+              <!--  -->
+              <div class="form-group ">
+                <label class="col-sm-2 control-label" for="input-color">提示</label>
+                <div class="col-sm-10">
+                  <input type="text" name="tips" value="<?php echo $tips; ?>" placeholder="提示" id="input-tips" class="form-control" />
+                 
+                </div>
+              </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-tax-class"><?php echo $entry_tax_class; ?></label>
                 <div class="col-sm-10">

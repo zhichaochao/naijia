@@ -40,6 +40,7 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_product; ?>"><?php echo $column_product; ?></a>
                     <?php } ?></td>
+                    <td class="text-left" style="color:#1e91cf;">手机号</td>
                      <td class="text-left" style="color:#1e91cf;">预约内容</td>
 
                     <td class="text-left"><?php if ($sort == 'r.time') { ?>
@@ -62,6 +63,7 @@
                     <input type="checkbox" name="selected[]" value="<?php echo $service['store_id']; ?>" />
                     <?php } ?></td>
                   <td class="text-left"><?php echo $service['email']; ?></td>
+                   <td class="text-left"><?php echo $service['telephone']; ?></td>
                   <td class="text-left"><?php echo $service['content']; ?></td>
                   <td class="text-left">
                  <?php if(empty($service["time"])){ echo "";}else{echo date("Y-m-d",strtotime($service['time'])) ;}?>

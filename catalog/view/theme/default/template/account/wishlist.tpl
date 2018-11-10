@@ -52,7 +52,7 @@
                     <?php if($product['quantity']<1){?>
                     <a class="add_a" href="javascript:void(0);" onclick="return false;">Out Of Stock</a>
                     <?php }else{?>
-                    <a class="add_a" href="<?php echo $product['href']; ?>">Add To Bag</a>
+                    <a class="add_a" href="<?php echo $product['href']; ?>">SHOP</a>
                     <?php }?>
               </div>
             </li>

@@ -44,7 +44,7 @@
         </ul>
       </div>
       
-      <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair. Powered by Shopify</p>
+      <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair.</p>
     </div>
     <div class="yd_footer2">
       <ol class="ol_ydfot clearfix">
@@ -98,7 +98,7 @@
     
     
     <!--返回顶部-->
-    <a href="###"><div class="xf_right">
+    <a href="<?php echo $vip?>"><div class="xf_right">
       <div class="vip"><span>VIP</span></div>
     </div>
     </a>
@@ -206,7 +206,7 @@
     $(".yhj_ol>li").click(function(){
       if(!$(this).hasClass("active")){
         $(this).addClass("active");
-        tips("Successful collection","")
+        tips("Successful collection","",500)
         $(this).find(".yh_btn").text("Coupon Added");
       }
     })

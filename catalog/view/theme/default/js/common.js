@@ -112,8 +112,10 @@ $(function(){
 //	头部导航二级菜单
 	$(".nav_ul>li").hover(function(){
 		$(this).find("ol").stop().slideDown();
+		$(this).find("ol").css("display","inline-block");
 	},function(){
 		$(this).find("ol").stop().slideUp();
+		$(this).find("ol").css("display","none");
 	})
 	
 //	底部下拉
@@ -213,6 +215,9 @@ var kg_off=0;
 	   }
 	})
 	
+	$(".yd_nav_ol.li_i").siblings(".li_p1").css("display","none");
+	$(".yd_nav_ol.li_i").siblings(".li_p2").css("display","block");
+	
 	
 	$(".yd_nav_modal .top_nav .nav_p").click(function(){
 		if($(this).hasClass("active")){
@@ -263,9 +268,9 @@ $(".nav .bot .search,.yd_nav .yd_navul>li.ss_li").click(function(){
 	$("body").css("overflow","hidden");
 })
 
-$(".ss_modal i.del").click(function(){
-	$(this).parents("h1").siblings(".ls_ul").remove();
-})
+//$(".ss_modal i.del").click(function(){
+//	$(this).parents("h1").siblings(".ls_ul").remove();
+//})
 
 $(".ss_modal .text label img.in_close").click(function(){
 	$(this).siblings("input").val("");
@@ -349,11 +354,14 @@ lazyLoad.init();
 })
 
 /**弹窗提示**/
-function tips(tips_text){
+function tips(tips_text,img,time){
+	if(img==""){
+		img='mr'
+	}
 	var text =
 			'<div class="popup_tips clearfix">'
 				+'<div class="text clearfix">'
-					+'<div class="top clearfix">'
+					+'<div class="top '+img+' clearfix">'
 						+'<span></span>'
 					+'</div>'
 					+'<p>'+tips_text+'</p>'
@@ -362,5 +370,6 @@ function tips(tips_text){
 	$("body").append(text);
 	setTimeout(function(){
 		$(".popup_tips").fadeOut();
-	},2000);
+	},time);
 }
+

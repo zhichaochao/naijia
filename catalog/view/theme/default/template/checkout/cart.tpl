@@ -78,7 +78,7 @@
                 <span class="add_span" onclick="cart_add(<?php echo $product['cart_id']; ?>,this);"><em class="add" ></em></span>
               </div>
               <span class="price_zj" id="total_<?php echo $product['cart_id']; ?>"><?php echo $product['total']; ?></span>
-              <button class="save <?=$product['wish']==1?'active':'';?>" onclick="cart_wishlist('<?php echo $product['cart_id']; ?>' ,'<?php echo $product['product_id']; ?>' ,this);"><img src="/catalog/view/theme/default/img/png/icon_36.png"/> Save for later</button>
+              <button class="save " onclick="cart_wishlist('<?php echo $product['cart_id']; ?>' ,'<?php echo $product['product_id']; ?>' ,this);"><img src="/catalog/view/theme/default/img/png/icon_36.png"/> Save for later</button>
             </div>
             <?php if($product['date_end']){ ?>
             <p class="time clear clearfix">This product is on  Sales，that ends in <?=$product['date_end'];?></p>
@@ -340,7 +340,7 @@ $(document).ready(function(){
   var num_val = $(th).siblings(".num_in").val();
   var stock_quantity=$(th).parent().attr('data');
   // alert(num_val);die;
-  if (num_val<=stock_quantity) {tips('Lack of stock','gantan'); return false;}
+  if (num_val<=stock_quantity) {tips('Error：Limited Quantity','gantan',500); return false;}
       if(num_val>1){
         num_val--;
         $(th).siblings(".num_in").val(num_val);

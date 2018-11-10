@@ -1002,6 +1002,33 @@ class ControllerCustomerCustomer extends Controller {
 			$data['address_id'] = '';
 		}
 
+		// Images
+		if (isset($this->request->post['customer_message'])) {
+			$customer_messages = $this->request->post['customer_message'];
+		} elseif (isset($this->request->get['customer_id'])) {
+			$customer_messages = $this->model_customer_customer->getCustomerMessages($this->request->get['customer_id']);
+		} else {
+			$customer_messages = array();
+		}
+// print_r($customer_messages);exit;
+		$data['customer_messages'] = array();
+
+		foreach ($customer_messages as $customer_message) {
+			// if (is_file(DIR_IMAGE . $customer_message['image'])) {
+			// 	$image = $customer_message['image'];
+			// 	$thumb = $customer_message['image'];
+			// } else {
+			// 	$image = '';
+			// 	$thumb = 'no_image.png';
+			// }
+
+			$data['customer_messages'][] = array(
+				'message'      => $customer_message['message'],
+				// 'thumb'      => $customer_message['sort_order'],
+				'sort_order' => $customer_message['sort_order']
+			);
+		}
+
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');

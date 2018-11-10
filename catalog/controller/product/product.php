@@ -189,6 +189,7 @@ class ControllerProductProduct extends Controller {
             $data['rating'] = $product_info['rating'];
             $data['quantity'] = $product_info['quantity'];
             $data['color'] = $product_info['color'];
+            $data['tips'] = $product_info['tips'];
             // $data['hot'] = $producthot['hot'];
             // print_r($product_info);exit();
             

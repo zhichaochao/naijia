@@ -16,6 +16,12 @@ class ModelCustomerCustomer extends Model {
 				}
 			}
 		}
+
+		if (isset($data['customer_message'])) {
+			foreach ($data['customer_message'] as $customer_message) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "customer_message SET customer_id = '" . (int)$customer_id . "', message = '" . $this->db->escape($customer_message['message']) . "', sort_order = '" . (int)$customer_message['sort_order'] . "'");
+			}
+		}
 		
 		return $customer_id;
 	}
@@ -48,6 +54,15 @@ class ModelCustomerCustomer extends Model {
 				}
 			}
 		}
+		// liuyan
+		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_message WHERE customer_id = '" . (int)$customer_id . "'");
+
+		if (isset($data['customer_message'])) {
+			foreach ($data['customer_message'] as $customer_message) {
+				$this->db->query("INSERT INTO " . DB_PREFIX . "customer_message SET customer_id = '" . (int)$customer_id . "', message = '" . $this->db->escape($customer_message['message']) . "', sort_order = '" . (int)$customer_message['sort_order'] . "'");
+			}
+		}
+
 	}
 
 	public function editToken($customer_id, $token) {
@@ -58,6 +73,7 @@ class ModelCustomerCustomer extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int)$customer_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_activity WHERE customer_id = '" . (int)$customer_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_reward WHERE customer_id = '" . (int)$customer_id . "'");
+		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_message WHERE customer_id = '" . (int)$customer_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_transaction WHERE customer_id = '" . (int)$customer_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "customer_ip WHERE customer_id = '" . (int)$customer_id . "'");
 		$this->db->query("DELETE FROM " . DB_PREFIX . "address WHERE customer_id = '" . (int)$customer_id . "'");
@@ -277,6 +293,12 @@ class ModelCustomerCustomer extends Model {
 		}
 
 		return $address_data;
+	}
+
+	public function getCustomerMessages($customer_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_message WHERE customer_id = '" . (int)$customer_id . "' ORDER BY sort_order ASC");
+
+		return $query->rows;
 	}
 
 	public function getTotalCustomers($data = array()) {

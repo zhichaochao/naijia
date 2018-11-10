@@ -32,6 +32,7 @@
             <li><a href="#tab-transaction" data-toggle="tab"><?php echo $tab_transaction; ?></a></li>
             <li><a href="#tab-reward" data-toggle="tab"><?php echo $tab_reward; ?></a></li>
             <li><a href="#tab-ip" data-toggle="tab"><?php echo $tab_ip; ?></a></li>
+            <li><a href="#tab-image" data-toggle="tab">留言</a></li>
             <?php } ?>
           </ul>
           <div class="tab-content">
@@ -652,6 +653,65 @@
             <div class="tab-pane" id="tab-ip">
               <div id="ip"></div>
             </div>
+
+            <!-- liuyan -->
+            <div class="tab-pane" id="tab-image">
+              <!-- <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left">tux </td>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    <tr>
+                      <td class="text-left"><a href="" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a><input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" /></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div> -->
+              <div class="table-responsive">
+                <table id="images" class="table table-striped table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <td class="text-left">附加留言</td>
+                      <td class="text-right">排序</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php $image_row = 0; ?>
+                    <?php foreach ($customer_messages as $customer_message) { ?>
+                    <tr id="image-row<?php echo $image_row; ?>">
+                      <td class="text-left">
+                      <input type="text" name="customer_message[<?php echo $image_row; ?>][message]" value="<?php echo $customer_message['message']; ?>" placeholder="留言" class="form-control" />
+                      <!-- <a href="" id="thumb-image<?php echo $image_row; ?>" data-toggle="image" class="img-thumbnail">
+                      <img src="<?php echo $customer_message['thumb']; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" />
+                      </a> -->
+                     <!--  <input type="hidden" name="customer_message[<?php echo $image_row; ?>][image]" value="<?php echo $customer_message['image']; ?>" id="input-image<?php echo $image_row; ?>" /> -->
+                      </td>
+
+
+                      <td class="text-right">
+                      <input type="text" name="customer_message[<?php echo $image_row; ?>][sort_order]" value="<?php echo $customer_message['sort_order']; ?>" placeholder="排序" class="form-control" />
+                      </td>
+                      <td class="text-left"><button type="button" onclick="$('#image-row<?php echo $image_row; ?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
+                    </tr>
+                    <?php $image_row++; ?>
+                    <?php } ?>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td colspan="2"></td>
+                      <td class="text-left"><button type="button" onclick="addImage();" data-toggle="tooltip" title="添加留言" class="btn btn-primary"><i class="fa fa-plus-circle"></i></button></td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+
+
           </div>
         </form>
       </div>
@@ -1175,5 +1235,22 @@ $('#tab-customer .form-group[data-sort]').detach().each(function() {
 	}
 });
 <?php } ?>
-//--></script></div>
+//--></script>
+  <script type="text/javascript"><!--
+var image_row = <?php echo $image_row; ?>;
+
+function addImage() {
+  html  = '<tr id="image-row' + image_row + '">';
+  html += '  <td class="text-right"><input type="text" name="customer_message[' + image_row + '][message]" value="" placeholder="留言" class="form-control" /></td>';
+  html += '  <td class="text-right"><input type="text" name="customer_message[' + image_row + '][sort_order]" value="" placeholder="排序" class="form-control" /></td>';
+  html += '  <td class="text-left"><button type="button" onclick="$(\'#image-row' + image_row  + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
+  html += '</tr>';
+
+  $('#images tbody').append(html);
+
+  image_row++;
+}
+//--></script>
+
+</div>
 <?php echo $footer; ?>

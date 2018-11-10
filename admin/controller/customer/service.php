@@ -183,6 +183,7 @@ class ControllerCustomerService extends Controller {
 		foreach ($results as $result) {
 			$data['services'][] = array(
 				'store_id'  => $result['store_id'],
+				'telephone'     => $result['telephone'],
 				'email'     => $result['email'],
 				'content'     => $result['content'],
 				'status'     => $result['status'],

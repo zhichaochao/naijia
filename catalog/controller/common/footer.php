@@ -117,7 +117,7 @@ class ControllerCommonFooter extends Controller {
 		$data['order'] = $this->url->link('account/order', '', true);
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
 		$data['newsletter'] = $this->url->link('account/newsletter', '', true);
-
+		$data['vip'] = $this->url->link('information/vip');
 
 
 		$data['home'] = $this->url->link('common/home', '', true);

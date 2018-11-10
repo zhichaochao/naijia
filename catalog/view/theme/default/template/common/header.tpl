@@ -104,7 +104,7 @@
           <li class="logo_li"><a href="<?=$home;?>"></a></li>
           <li class="ss_li"></li>
            <?=$mcurrency;?>
-          <li class="gw_li" id="checkout_btn"></li>
+          <li class="gw_li" id="checkout_btn"><span id='cart_count'><?=$text_cart_items;?></span></li>
         </ul>
       </div>
 
@@ -119,8 +119,8 @@
             <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
             <?php foreach($categories as $key => $category) { ?>
             <li >
-              <p class="nav_p active"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
-                    
+              <p class="nav_p active li_p1"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
+              <p class="nav_p active li_p2"><?php echo $category['name'];?><i></i></p>     
                     <?php if( $category['children']){ ?>
                  <ol class="yd_nav_ol li_i" style="display: block;">
                        <?php foreach($category['children'] as $k => $child) { ?>
@@ -145,52 +145,7 @@
             <li><a href="<?=$wishlist;?>">Wish List <i></i></a></li>
           </ul>
         </div>
-        
-        <div class="bot_fot footer">
-            <div class="top clearfix">
-              <ul class="fot_ul1 clearfix">
-            <!-- yd左侧底部 -->
-              <?php foreach($informations as $key => $information) { ?>
-              <li>
-                <h1><?php echo $information['title']; ?> <i></i></h1>
-                <ol class="fot_ol">
-                <?php foreach($information['child'] as $subkey=>$subval) { ?> 
-                  <li><a href="<?php echo $subval['url']; ?>"><?php echo $subval['title']; ?></a></li>
-                <?php } ?>
-                </ol>
-              </li>
-            <?php } ?>
 
-                <li>
-                  <h1>SING UP OUR NEWSLETTER! <i></i></h1>
-                  <div class="text fot_ol">
-                    <!-- <form > -->
-                      <label for="">
-                        <i></i>
-                       <input type="text" name="txtemail" id="txtemail" placeholder="Enter your e-mail"/>
-                      </label>
-                      <p>
-                        Subscribe to get the exclusive sales, product lanuches, wig tips & latest news. 
-                      </p>
-                      <button type="submit" onClick="return subscribe();">SUBMIT</button>
-                    <!-- </form> -->
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div class="bot clearfix">
-              <ul class="fot_ul2 clearfix">
-                <li><img src="/catalog/view/theme/default/img/png/fot1.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot2.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot3.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot4.png"/></li>
-                <li><img src="/catalog/view/theme/default/img/png/fot5.png"/></li>
-              </ul>
-            </div>
-      
-            <p class="fot_p">Copyright © <?php echo (($Y = intval(date('Y'))) > 2017) ? "$Y" : '';?>, naijabeautyhair. Powered by Shopify</p>
-        </div>
       </div>
     </div>
      <!--pc搜索弹窗-->
@@ -220,27 +175,64 @@
           </div>
           <div class="con clearfix">
             <h1>YOUR RECENT SEARCHES
-            <i class="del" onclick="javascript:del('<?php echo $customer_id; ?>');">
-                <svg t="1539766974948" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5269" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32">
-                  <path d="M793.6 998.4H220.16c-51.2 0-97.28-40.96-97.28-97.28V261.12c0-15.36 10.24-25.6 25.6-25.6s25.6 10.24 25.6 25.6v645.12c0 25.6 20.48 46.08 46.08 46.08h573.44c25.6 0 46.08-20.48 46.08-46.08v-563.2c0-15.36 10.24-25.6 25.6-25.6s25.6 10.24 25.6 25.6v563.2c0 46.08-46.08 92.16-97.28 92.16z" p-id="5270" fill="#999999"></path>
-                  <path d="M51.2 266.24c-10.24 0-20.48-10.24-25.6-25.6 0-15.36 10.24-25.6 25.6-25.6l916.48-81.92c15.36 0 25.6 10.24 25.6 25.6s-10.24 25.6-25.6 25.6L51.2 266.24c5.12 0 0 0 0 0z" p-id="5271" fill="#999999"></path>
-                  <path d="M343.04 230.4c-10.24 0-20.48-10.24-25.6-25.6l-5.12-76.8C307.2 87.04 337.92 51.2 378.88 46.08l225.28-20.48c20.48 0 40.96 5.12 56.32 15.36 15.36 10.24 25.6 30.72 25.6 51.2l5.12 81.92c0 15.36-10.24 25.6-25.6 25.6s-25.6-10.24-25.6-25.6l-5.12-81.92c0-10.24-10.24-20.48-25.6-20.48l-225.28 25.6c-5.12 0-10.24 5.12-15.36 10.24-5.12 0-5.12 10.24-5.12 15.36L368.64 204.8c0 10.24-10.24 25.6-25.6 25.6 5.12 0 0 0 0 0zM435.2 768c-15.36 0-25.6-15.36-25.6-30.72V399.36c0-15.36 10.24-40.96 25.6-40.96s25.6 25.6 25.6 35.84v337.92c0 15.36-10.24 35.84-25.6 35.84zM588.8 768c-15.36 0-25.6-15.36-25.6-30.72V465.92c0-15.36 10.24-25.6 25.6-25.6s25.6 10.24 25.6 25.6v271.36c0 15.36-10.24 30.72-25.6 30.72z" p-id="5272" fill="#999999"></path>
-                </svg>  
-              </i>
-
             </h1>
             <ul>
             <?php if(isset($searchhistory)){?>
             <?php foreach($searchhistory as $key => $searstory) { ?>
               <li id="count">
                 <a onclick="javascript:selsearch('<?php echo $searstory['keywords']; ?>');"><?php echo $searstory['keywords']; ?></a>
-                <!-- <i  onclick="javascript:del('<?php echo $searstory['id']; ?>');"></i> -->
               </li>
               <?php } ?>
               <?php } ?>
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!--contact弹窗-->
+    <div class="con_modal clearfix">
+      <div class="text">
+        <h1>CONTACT US</h1>
+        <ol class="con_ol">
+          <li>
+            <a class="con_email" href="javascript:;">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_86.png"/>
+              <p class="con_p">E-mail</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://api.whatsapp.com/send?phone=<?php echo $whatsapp?>">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_87.png"/>
+              <p class="con_p">WhatsApp</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.instagram.com/<?php echo $instagram?>">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_88.png"/>
+              <p class="con_p">Instagram</p>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.facebook.com/<?php echo $facebook?>">
+              <img class="con_img" src="catalog/view/theme/default/img/png/icon_89.png"/>
+              <p class="con_p">Facebook</p>
+            </a>
+          </li>
+        </ol>
+      </div>
+      
+      <div class="context">
+        <div class="close"></div>
+        <h1>contact us</h1>
+        <p>Thank you for your message, we will contact you within 24 hours.</p>
+        <form action="<?php echo $action; ?>" method="post" class="dash-help-form">
+          <input type="text" name="user_name" value="<?=$firstname;?>" placeholder="Firstname" />
+          <input type="text" class="in_1" name="email" value="<?=$email;?>" placeholder="Your Email" />
+          <input type="text" name="telephone" value="<?=$telephone;?>" placeholder="Your Phone" />
+          <textarea  class="in_2" placeholder="Message" name="enquiry"></textarea>
+          <button type="submit" class="tj_btn">Send Message</button>
+        </form>
       </div>
     </div>
  <script>
@@ -283,4 +275,13 @@
                       }
                   })   
           }
+
+          $(".tj_btn").click(function(event){
+    
+      if(($(".in_1").val().length >= 4) && ($(".in_2").val().length >= 4)  ){
+       
+      }else{
+        event.preventDefault();
+      }
+     })
     </script>

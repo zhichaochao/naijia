@@ -101,73 +101,77 @@ class ControllerCommonHeader extends Controller {
 		$instagram = $this->config->get('config_instagram');
 		$whatsapp = $this->config->get('config_telephone');
 
-		$data['informations'] = array(
-			0 =>array(
-				'title'=>'COMPANY',
-				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
-				'child'=>array(
-						0=>array(
-							'title'=>'About Us',
-							'url'=>$this->url->link('information/company'),
-							),
-						1=>array(
-							'title'=>'Instagram',
-							'url'=>('http://www.instagram.com/'.$instagram),
-							),
-						2=>array(
-							'title'=>'Facebook',
-							'url'=>('http://www.facebook.com/'.$facebook),
+		$data['facebook']=$facebook;
+		$data['instagram']=$instagram;
+		$data['whatsapp']=$whatsapp;
 
-							),
-						3=>array(
-							'title'=>'What App',
-							'url'=>('http://api.whatsapp.com/send?phone='.$whatsapp),
-							),
-					),
-				),
-			1=>array(
-				'title'=>'POLOCIES',
-				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
-				'child'=>array(
-						0=>array(
-							'title'=>'Return Policy',
-						'url'=>$this->url->link('information/returnpolicy'),
-							),
-						1=>array(
-							'title'=>'Shipping & Handling',
-							'url'=>$this->url->link('information/shipping'),
-							),
-						2=>array(
-							'title'=>'Terms & Conditions',
-							'url'=>$this->url->link('information/trems'),
+		// $data['informations'] = array(
+		// 	0 =>array(
+		// 		'title'=>'COMPANY',
+		// 		'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
+		// 		'child'=>array(
+		// 				0=>array(
+		// 					'title'=>'About Us',
+		// 					'url'=>$this->url->link('information/company'),
+		// 					),
+		// 				1=>array(
+		// 					'title'=>'Instagram',
+		// 					'url'=>('http://www.instagram.com/'.$instagram),
+		// 					),
+		// 				2=>array(
+		// 					'title'=>'Facebook',
+		// 					'url'=>('http://www.facebook.com/'.$facebook),
 
-							),
-						3=>array(
-							'title'=>'VIP Policy',
-							'url'=>$this->url->link('information/information'),
-							),
-					),
-				),
-			2=>array(
-				'title'=>'POLOCIES',
-				'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
-				'child'=>array(
-						0=>array(
-							'title'=>'FAQs',
-							'url'=>$this->url->link('information/faqs'),
-							),
-						1=>array(
-							'title'=>'Tutorials',
-							'url'=>$this->url->link('information/profile'),
-							),
-						2=>array(
-							'title'=>'Feedback',
-							'url'=>$this->url->link('information/help'),
+		// 					),
+		// 				3=>array(
+		// 					'title'=>'What App',
+		// 					'url'=>('http://api.whatsapp.com/send?phone='.$whatsapp),
+		// 					),
+		// 			),
+		// 		),
+		// 	1=>array(
+		// 		'title'=>'POLOCIES',
+		// 		'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
+		// 		'child'=>array(
+		// 				0=>array(
+		// 					'title'=>'Return Policy',
+		// 				'url'=>$this->url->link('information/returnpolicy'),
+		// 					),
+		// 				1=>array(
+		// 					'title'=>'Shipping & Handling',
+		// 					'url'=>$this->url->link('information/shipping'),
+		// 					),
+		// 				2=>array(
+		// 					'title'=>'Terms & Conditions',
+		// 					'url'=>$this->url->link('information/trems'),
 
-							),
-					),
-				),
-		 );
+		// 					),
+		// 				3=>array(
+		// 					'title'=>'VIP Policy',
+		// 					'url'=>$this->url->link('information/information'),
+		// 					),
+		// 			),
+		// 		),
+		// 	2=>array(
+		// 		'title'=>'POLOCIES',
+		// 		'image'=>'/catalog/view/theme/default/img/png/icon_11.png',
+		// 		'child'=>array(
+		// 				0=>array(
+		// 					'title'=>'FAQs',
+		// 					'url'=>$this->url->link('information/faqs'),
+		// 					),
+		// 				1=>array(
+		// 					'title'=>'Tutorials',
+		// 					'url'=>$this->url->link('information/profile'),
+		// 					),
+		// 				2=>array(
+		// 					'title'=>'Feedback',
+		// 					'url'=>$this->url->link('information/help'),
+
+		// 					),
+		// 			),
+		// 		),
+		//  );
 		//购物车数量
 		$data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 		// Menu
@@ -216,7 +220,7 @@ class ControllerCommonHeader extends Controller {
 		// if($this->customer->isLogged()){
 		$ip=$this->request->server['REMOTE_ADDR'];
 		// print_r($ip);exit;
-		$searchres = $this->model_extension_extension->getSearch($ip);
+		$searchres = $this->model_extension_extension->getSearch();
 		// print_r($searchres);exit;
 		if(!empty($searchres)){
 			foreach ($searchres as $searres) {
@@ -237,7 +241,34 @@ class ControllerCommonHeader extends Controller {
 			$data['slogan']=$this->config->get('config_meta_slogan');
 // print_r($slogan);exit;
 
-// 
+		$this->load->model('account/customer');
+$data['action'] = $this->url->link('common/home');
+		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+		// print_r($customer_info);exit;
+		if (!empty($customer_info)) {
+			$data['telephone'] = $customer_info['telephone'];
+		} else {
+			$data['telephone'] = '';
+		}
+		if (!empty($customer_info)) {
+			$data['firstname'] = $customer_info['firstname'];
+		} else {
+			$data['firstname'] = '';
+		}
+		if (!empty($customer_info)) {
+			$data['email'] = $customer_info['email'];
+		} else {
+			$data['email'] = '';
+		}	
+		// $data['user_name'] = $this->customer->getFirstName().' '.$this->customer->getLastName();
+  //       if($data['user_name'] == ' ') $data['user_name'] = $this->customer->getEmail();
+
+		
+
+
+
+
+
 		$data['hothref'] = $this->url->link('product/hotcategory');
 		$data['acchref'] = $this->url->link('product/acccategory');
 		$data['blog'] = $this->url->link('information/profile');
@@ -268,6 +299,7 @@ class ControllerCommonHeader extends Controller {
 			$data['class'] = 'common-home';
 		}
 // print_r($this->request->get['route']);exit();
+
 		return $this->load->view('common/header', $data);
 	}
 	public function delete() {
@@ -285,4 +317,8 @@ class ControllerCommonHeader extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+	// public function helpbok()
+	// {
+	
+	// }
 }

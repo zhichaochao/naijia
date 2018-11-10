@@ -60,6 +60,12 @@
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?> </h2>
                   <div class="pl_div">
+                  <?php if(!empty($product['special'])) { ?>
+                     <span class="price"><?php echo $product['special']; ?>
+                     <em><?php echo $product['price']; ?></em></span>
+                  <?php }else{ ?>
+                     <span class="price"><?php echo $product['price']; ?></span>
+                  <?php } ?>
                     <ol class="start_ol">
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
                       <?php if ($product['rating'] < $i) { ?>
@@ -74,12 +80,7 @@
                   <p class="yd_textp">
                     <?php echo $product['meta_description']; ?>
                   </p>                  
-                  <?php if(!empty($product['special'])) { ?>
-                     <span class="price"><?php echo $product['special']; ?>
-                     <em><?php echo $product['price']; ?></em></span>
-                  <?php }else{ ?>
-                     <span class="price"><?php echo $product['price']; ?></span>
-                  <?php } ?>
+                  
 
                   <span class="yd_btna" href="<?php echo $product['href']; ?>">SHOW</span>
                 </div>

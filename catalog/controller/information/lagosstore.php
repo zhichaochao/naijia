@@ -37,6 +37,11 @@ class ControllerInformationLagosstore extends Controller {
 		} else {
 			$data['email'] = '';
 		}
+		if (!empty($customer_info)) {
+			$data['telephone'] = $customer_info['telephone'];
+		} else {
+			$data['telephone'] = '';
+		}
 		//用户名
         $data['user_name'] = $this->customer->getFirstName().' '.$this->customer->getLastName();
         if($data['user_name'] == ' ') $data['user_name'] = $this->customer->getEmail();
@@ -83,7 +88,7 @@ class ControllerInformationLagosstore extends Controller {
 				  // 发送邮件
 
 				  if($result){
-               $this->session->data['success'] = 'Booking success';
+               $this->session->data['success'] = 'The appointment has been sent to your e-mail. Please check or cancel by the e-mail. Thanks!';
 
                //发送邮件
                $this->load->language('mail/customer');

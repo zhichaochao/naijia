@@ -93,11 +93,13 @@ class ControllerAccountOrder extends Controller {
 				'view'       => $this->url->link('account/order/info', 'order_id=' . $result['order_id'], true),
 				'cancel_href' => $this->url->link('account/order/cancel', 'order_id=' . $result['order_id'], true),
 				'repay'	      => $this->url->link('account/order/repay', 'order_id=' . $result['order_id'], true),
+				'compltedorder'=>$this->url->link('product/product/addreview', 'order_id=' .$result['order_id'], true),
 			
 				'shipping_total'  	=> $shipping_total
 			);
 			
 		}
+		$data['view'] = $this->url->link('account/order/info');
 		// print_r($data['orders']);exit();
 		// 
 		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
@@ -427,6 +429,7 @@ class ControllerAccountOrder extends Controller {
 					'total'    => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value']),
 		
 					'reorder'  => $reorder,
+					'href'     =>$this->url->link('product/product', 'product_id=' . $product['product_id'], true),
 				
 					'return'   => $this->url->link('account/return/add', 'order_id=' . $order_info['order_id'] . '&product_id=' . $product['product_id'], true)
 				);
@@ -955,7 +958,7 @@ class ControllerAccountOrder extends Controller {
 	   	  case 1:  $orderStatus='Pending'; break;
 	   	  case 2:  $orderStatus='lnvalid'; break;
 	   	  case 3:  $orderStatus='Shipped'; break;
-	   	  case 5:  $orderStatus='Completed'; break;
+	   	  case 5:  $orderStatus='Complete'; break;
 	   	  // case 5:  $orderStatus='Pending-unfilled'; break;
           case 7:  $orderStatus='Canceled'; break;
 	   	  case 8:  $orderStatus='Pending-unfilled'; break;
@@ -997,6 +1000,7 @@ class ControllerAccountOrder extends Controller {
 				$this->model_account_order->recoverorder($order_id);
 			}
 		}
+		$json['order_id']=$order_id;
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}

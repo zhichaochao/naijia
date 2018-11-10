@@ -38,8 +38,8 @@
           </h2>
           <p class="p1">
             <span>SHOP ADDRESS:</span>
-            A lane in huangbian vllage district guangzhouguangdong province
-             <br style="display: block;" /> 510000  China
+           Alausa.obafemi awolowo way. ikeja Lagos, Nigeria
+             <!-- <br style="display: block;" /> 510000  China -->
           </p>
           <p class="p2">
             <span>BUSINESS HOURS:</span>
@@ -192,11 +192,11 @@
   </script>
   <?php if ($success) { ?>
   <script type="text/javascript">
-    tips('<?php echo $success; ?>');
+    tips('<?php echo $success; ?>','',500);
   </script>
   <?php } ?>
   <?php if ($error_warning) { ?>
   <script type="text/javascript">
-    tips('<?php echo $error_warning; ?>','gantan');
+    tips('<?php echo $error_warning; ?>','gantan',500);
   </script>
   <?php } ?>
