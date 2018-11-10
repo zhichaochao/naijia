@@ -98,6 +98,40 @@ class ControllerCheckoutRegister extends Controller {
 
 		$data['shipping_required'] = $this->cart->hasShipping();
 
+					$products = $this->cart->getProducts();
+
+		$this->load->model('tool/image');
+		foreach ($products as $key=> $product) {
+			$product_total = 0;
+			$products[$key]['image']=$this->model_tool_image->resize($product['image'], 200,200);
+			$products[$key]['total']=$this->currency->format($products[$key]['total'], $this->session->data['currency']);
+			$products[$key]['price']=$this->currency->format($products[$key]['price'], $this->session->data['currency']);
+
+			foreach ($products as $product_2) {
+				if ($product_2['product_id'] == $product['product_id']) {
+					$product_total += $product_2['quantity'];
+				}
+			}
+
+			if ($product['minimum'] > $product_total) {
+				$this->response->redirect($this->url->link('checkout/cart'));
+			}
+		}
+		$this->document->setTitle('register');
+		// $data['title']='guest';
+		$data['action']=$this->url->link('checkout/register/save');
+		$data['login']=$this->url->link('account/login','&checkout=1');
+		// print_r(	$data['login']);exit();
+
+		$data['totals']=$this->load->controller('checkout/total');
+		$data['products']=$products;
+		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['column_right'] = $this->load->controller('common/column_right');
+		$data['content_top'] = $this->load->controller('common/content_top');
+		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		$data['footer'] = $this->load->controller('common/footer');
+		$data['header'] = $this->load->controller('common/header');
+
 		$this->response->setOutput($this->load->view('checkout/register', $data));
 	}
 
@@ -134,7 +168,6 @@ class ControllerCheckoutRegister extends Controller {
 				break;
 			}
 		}
-
 		if (!$json) {
 			$this->load->model('account/customer');
 
@@ -154,9 +187,9 @@ class ControllerCheckoutRegister extends Controller {
 				$json['error']['warning'] = $this->language->get('error_exists');
 			}
 
-			if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
-				$json['error']['telephone'] = $this->language->get('error_telephone');
-			}
+			// if ((utf8_strlen($this->request->post['telephone']) < 3) || (utf8_strlen($this->request->post['telephone']) > 32)) {
+			// 	$json['error']['telephone'] = $this->language->get('error_telephone');
+			// }
 
 			if ((utf8_strlen(trim($this->request->post['address_1'])) < 3) || (utf8_strlen(trim($this->request->post['address_1'])) > 128)) {
 				$json['error']['address_1'] = $this->language->get('error_address_1');
@@ -229,9 +262,12 @@ class ControllerCheckoutRegister extends Controller {
 				}
 			}
 		}
+			// print_r($json);
 
 		if (!$json) {
+
 			$customer_id = $this->model_account_customer->addCustomer($this->request->post);
+
 
 			// Clear any previous login attempts for unregistered accounts.
 			$this->model_account_customer->deleteLoginAttempts($this->request->post['email']);
@@ -241,18 +277,24 @@ class ControllerCheckoutRegister extends Controller {
 			$this->load->model('account/customer_group');
 
 			$customer_group_info = $this->model_account_customer_group->getCustomerGroup($customer_group_id);
+			// print_r($customer_group_info);
+				// print_r($json);
 
-			if ($customer_group_info && !$customer_group_info['approval']) {
+			if ($customer_group_info) {
 				$this->customer->login($this->request->post['email'], $this->request->post['password']);
 
-				// Default Payment Address
+
+				// // Default Payment Address
 				$this->load->model('account/address');
+				// // print_r($this->customer->getAddressId());exit();
+					$address_id = $this->model_account_address->addAddress($this->request->post);
 
 				$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
+				// print_r($this->session->data['payment_address'] );exit();
 
-				if (!empty($this->request->post['shipping_address'])) {
+			
 					$this->session->data['shipping_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
-				}
+			
 			} else {
 				$json['redirect'] = $this->url->link('account/success');
 			}
@@ -275,6 +317,10 @@ class ControllerCheckoutRegister extends Controller {
 				$this->model_account_activity->addActivity('register', $activity_data);
 			}
 		}
+		if (!$json) {
+			$json['redirect']=$this->url->link('checkout/checkout');
+		}
+		 // print_r(($this->session->data) );exit();
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));

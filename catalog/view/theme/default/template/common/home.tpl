@@ -371,3 +371,41 @@ function thumbs(review_id,e) {
     tips('<?php echo $error_warning; ?>','gantan',500);
   </script>
   <?php } ?>
+  <script type="text/javascript">
+    $(function () {
+       $(".in_ul3 .con").click(function(){
+      var index=$(this).parent().index();
+      // alert(index);
+      // $('.pl_lb').removeClass('show');
+      // $('.pl_lb').eq(index).addClass('show');
+      if(!$(this).hasClass("img_null")){
+        $(".khpj_midal").eq(index).fadeIn();
+
+        $("body").css("overflow","hidden");
+        var swiper = new Swiper('.pl_lb', {
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'fraction',
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+      }
+        
+    }); 
+    $(".khpj_midal .close").click(function(){
+      $(".khpj_midal").fadeOut();
+      $("body").css("overflow","");
+    });
+    //zan
+    $(".zan").click(function(){
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+      }else{
+        $(this).addClass("active");
+      }
+    })
+    })
+  </script>

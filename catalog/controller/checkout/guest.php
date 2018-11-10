@@ -6,6 +6,8 @@ class ControllerCheckoutGuest extends Controller {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
 
+	// $data['heading_title'] = '22';
+$this->document->setTitle('guest');
 		$data['text_select'] = $this->language->get('text_select');
 		$data['text_none'] = $this->language->get('text_none');
 		$data['text_your_details'] = $this->language->get('text_your_details');
@@ -195,7 +197,7 @@ class ControllerCheckoutGuest extends Controller {
 				$this->response->redirect($this->url->link('checkout/cart'));
 			}
 		}
-		$data['title']='guest';
+		// $data['title']='guest';
 		$data['action']=$this->url->link('checkout/guest/save');
 
 		$data['totals']=$this->load->controller('checkout/total');
@@ -309,7 +311,7 @@ class ControllerCheckoutGuest extends Controller {
 			$this->session->data['guest']['lastname'] = $this->request->post['lastname'];
 			$this->session->data['guest']['email'] = $this->request->post['email'];
 			$this->session->data['guest']['telephone'] = $this->request->post['telephone'];
-			$this->session->data['guest']['fax'] = $this->request->post['fax'];
+			// $this->session->data['guest']['fax'] = $this->request->post['fax'];
 
 			if (isset($this->request->post['custom_field']['account'])) {
 				$this->session->data['guest']['custom_field'] = $this->request->post['custom_field']['account'];
@@ -319,7 +321,7 @@ class ControllerCheckoutGuest extends Controller {
 
 			$this->session->data['payment_address']['firstname'] = $this->request->post['firstname'];
 			$this->session->data['payment_address']['lastname'] = $this->request->post['lastname'];
-			$this->session->data['payment_address']['company'] = $this->request->post['company'];
+			// $this->session->data['payment_address']['company'] = $this->request->post['company'];
 			$this->session->data['payment_address']['address_1'] = $this->request->post['address_1'];
 			$this->session->data['payment_address']['address_2'] = $this->request->post['address_2'];
 			$this->session->data['payment_address']['postcode'] = $this->request->post['postcode'];
@@ -370,7 +372,7 @@ class ControllerCheckoutGuest extends Controller {
 			if ($this->session->data['guest']['shipping_address']) {
 				$this->session->data['shipping_address']['firstname'] = $this->request->post['firstname'];
 				$this->session->data['shipping_address']['lastname'] = $this->request->post['lastname'];
-				$this->session->data['shipping_address']['company'] = $this->request->post['company'];
+				// $this->session->data['shipping_address']['company'] = $this->request->post['company'];
 				$this->session->data['shipping_address']['address_1'] = $this->request->post['address_1'];
 				$this->session->data['shipping_address']['address_2'] = $this->request->post['address_2'];
 				$this->session->data['shipping_address']['postcode'] = $this->request->post['postcode'];
@@ -409,6 +411,9 @@ class ControllerCheckoutGuest extends Controller {
 			unset($this->session->data['shipping_methods']);
 			unset($this->session->data['payment_method']);
 			unset($this->session->data['payment_methods']);
+		}
+		if (!$json) {
+			$json['redirect']=$this->url->link('checkout/checkout');
 		}
 
 		$this->response->addHeader('Content-Type: application/json');

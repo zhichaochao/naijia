@@ -4,13 +4,14 @@ class ControllerCheckoutCheckout extends Controller {
 		// print_r($this->session->data['payment_method']);exit();
 		// Validate cart has products and has stock.
 		// print_r($this->cart->hasStock());exit();
+			// print_r(($this->customer) );exit();
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))||(!isset($this->session->data['cart_ids'])||!$this->session->data['cart_ids']) ) {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
-		// print_r($this->session->data['cart_ids']);exit();
+	
 		if (!$this->customer->isLogged()) {
 			$this->session->data['redirect']= $this->url->link('checkout/checkout', '', true);
-				$this->response->redirect($this->url->link('checkout/guest'));
+				$this->response->redirect($this->url->link('checkout/register'));
 		}
 		// print_r($this->customer->isLogged());exit();
 

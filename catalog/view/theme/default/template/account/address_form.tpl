@@ -69,7 +69,7 @@
               </label>
               <label class="w_50 fr clearfix" for="">
                 <span class="pl_span">State</span>
-                <select name="zone_id" id="input-zone" class="form-control">
+                <select name="zone_id" id="input-shipping-zone-0" class="form-control">
               </select>
               <?php if ($error_zone) { ?>
               <p class="ts_ps off"><?php echo $error_zone; ?></p>

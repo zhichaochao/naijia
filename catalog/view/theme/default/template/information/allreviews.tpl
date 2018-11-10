@@ -168,8 +168,13 @@ function thumbs(review_id,e) {
     
     //评论弹窗
     $(".in_ul3 .con").click(function(){
+      var index=$(this).parent().index();
+      // alert(index);
+      // $('.pl_lb').removeClass('show');
+      // $('.pl_lb').eq(index).addClass('show');
       if(!$(this).hasClass("img_null")){
-        $(".khpj_midal").fadeIn();
+        $(".khpj_midal").eq(index).fadeIn();
+
         $("body").css("overflow","hidden");
         var swiper = new Swiper('.pl_lb', {
             pagination: {
@@ -188,7 +193,7 @@ function thumbs(review_id,e) {
       $(".khpj_midal").fadeOut();
       $("body").css("overflow","");
     });
-    //zan
+   //zan
     $(".zan").click(function(){
       if($(this).hasClass("active")){
         $(this).removeClass("active");

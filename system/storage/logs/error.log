@@ -275,3 +275,197 @@
 2018-11-10 2:38:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
 2018-11-10 2:38:32 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
 2018-11-10 2:38:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:40:06 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:40:06 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:40:07 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:40:07 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:40:07 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:40:07 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:40:07 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:40:07 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:41:22 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:41:22 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:41:23 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:41:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:41:23 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:41:23 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:41:25 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:41:26 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:41:26 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:41:33 - PHP Notice:  Undefined index: tips in D:\phpStudy\WWW\naijia\catalog\model\catalog\product.php on line 45
+2018-11-10 2:41:45 - PHP Notice:  Undefined index: telephone in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 246
+2018-11-10 2:41:59 - PHP Notice:  Undefined index: telephone in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 246
+2018-11-10 2:47:36 - PHP Notice:  Undefined variable: entry_serviceemail in D:\phpStudy\WWW\naijia\admin\view\template\setting\setting.tpl on line 200
+2018-11-10 2:49:38 - PHP Notice:  Undefined index: fax in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 312
+2018-11-10 2:49:38 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 322
+2018-11-10 2:49:38 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 373
+2018-11-10 2:49:45 - PHP Notice:  Undefined index: fax in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 312
+2018-11-10 2:49:45 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 322
+2018-11-10 2:49:45 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 373
+2018-11-10 2:50:44 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 322
+2018-11-10 2:50:44 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 373
+2018-11-10 2:51:09 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 373
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: header in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 1
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: action in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 6
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: email in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 15
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: firstname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 39
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: lastname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 44
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: address_1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 49
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: address_2 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 54
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: city in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 81
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: telephone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 93
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: products in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 119
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 119
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: totals in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 123
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 123
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: totals in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 130
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 130
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: products in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 142
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 142
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: products in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 176
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 176
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: totals in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 180
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 180
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: totals in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 187
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 187
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: products in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 199
+2018-11-10 3:09:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 199
+2018-11-10 3:09:13 - PHP Notice:  Undefined variable: footer in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 299
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: products in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 104
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: email in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 15
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: firstname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 39
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: lastname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 44
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: address_1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 49
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: address_2 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 54
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: city in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 81
+2018-11-10 3:09:34 - PHP Notice:  Undefined variable: telephone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 93
+2018-11-10 3:09:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 119
+2018-11-10 3:09:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 142
+2018-11-10 3:09:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 176
+2018-11-10 3:09:34 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 199
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: email in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 15
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: firstname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 39
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: lastname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 44
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: address_1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 49
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: address_2 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 54
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: city in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 81
+2018-11-10 3:10:18 - PHP Notice:  Undefined variable: telephone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 93
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: email in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 15
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: firstname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 39
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: lastname in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 44
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: address_1 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 49
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: address_2 in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 54
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: city in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 81
+2018-11-10 3:10:47 - PHP Notice:  Undefined variable: telephone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\register.tpl on line 93
+2018-11-10 3:11:47 - PHP Notice:  Error: Could not load template D:/phpStudy/WWW/naijia/catalog/view/theme/default/template/checkout/registerbei.tpl! in D:\phpStudy\WWW\naijia\system\library\template\php.php on line 23
+2018-11-10 3:11:59 - PHP Notice:  Error: Could not load template D:/phpStudy/WWW/naijia/catalog/view/theme/default/template/checkout/registerbei.tpl! in D:\phpStudy\WWW\naijia\system\library\template\php.php on line 23
+2018-11-10 3:16:17 - PHP Notice:  Undefined index: password in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 217
+2018-11-10 3:16:17 - PHP Notice:  Undefined index: confirm in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 221
+2018-11-10 3:16:17 - PHP Notice:  Undefined index: password in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 221
+2018-11-10 3:16:33 - PHP Notice:  Undefined index: password in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 217
+2018-11-10 3:16:33 - PHP Notice:  Undefined index: confirm in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 221
+2018-11-10 3:16:33 - PHP Notice:  Undefined index: password in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 221
+2018-11-10 3:16:48 - PHP Notice:  Undefined index: password in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 217
+2018-11-10 3:16:48 - PHP Notice:  Undefined index: confirm in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 221
+2018-11-10 3:16:48 - PHP Notice:  Undefined index: password in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 221
+2018-11-10 3:23:15 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:23:15 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:26:40 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:26:40 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:30:24 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:30:24 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:31:01 - PHP Notice:  Undefined index: phone in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 4
+2018-11-10 3:31:01 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 4
+2018-11-10 3:34:35 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:34:35 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:35:04 - PHP Notice:  Undefined index: telephone in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 189
+2018-11-10 3:35:49 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 4
+2018-11-10 3:37:34 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:37:34 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:38:35 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:38:35 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:40:42 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:40:42 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:42:43 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:42:43 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:44:15 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:44:15 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:46:39 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:46:39 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:50:43 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 3:51:53 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 3:51:53 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:02:18 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:02:18 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:03:09 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:13 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:14 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:14 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:14 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:14 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:15 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:15 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:15 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:15 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:16 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:03:38 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:03:38 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:04:45 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:05:12 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\checkout.php on line 7
+2018-11-10 4:05:14 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 317
+2018-11-10 4:05:20 - PHP Notice:  Undefined index: cart_ids in D:\phpStudy\WWW\naijia\catalog\controller\checkout\register.php on line 317
+2018-11-10 4:26:11 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:26:11 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:31:49 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:31:49 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:36:22 - PHP Warning:  fsockopen(): php_network_getaddresses: getaddrinfo failed: ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  in D:\phpStudy\WWW\naijia\system\library\mail.php on line 177
+2018-11-10 4:36:22 - PHP Warning:  fsockopen(): unable to connect to email-smtp.us-east-1.amazonaws.com:25 (php_network_getaddresses: getaddrinfo failed: ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ) in D:\phpStudy\WWW\naijia\system\library\mail.php on line 177
+2018-11-10 4:36:22 - PHP Notice:  Error: php_network_getaddresses: getaddrinfo failed: ²»ÖªµÀÕâÑùµÄÖ÷»ú¡£  (0) in D:\phpStudy\WWW\naijia\system\library\mail.php on line 181
+2018-11-10 4:39:16 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:39:16 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 4:44:10 - PHP Notice:  Undefined variable: text_checkout in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\login.tpl on line 4
+2018-11-10 4:44:10 - PHP Notice:  Undefined variable: account in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\login.tpl on line 7
+2018-11-10 4:44:10 - PHP Notice:  Undefined variable: checkout_guest in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\login.tpl on line 14
+2018-11-10 4:44:10 - PHP Notice:  Undefined variable: text_loading in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\login.tpl on line 26
+2018-11-10 4:44:10 - PHP Notice:  Undefined variable: text_loading in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\login.tpl on line 39
+2018-11-10 5:35:58 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:35:58 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:37:00 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:37:00 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:42:47 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:42:47 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:43:56 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:43:56 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:49:56 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:49:56 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:53:50 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:53:50 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:55:13 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:55:13 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:59:53 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 5:59:53 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:06:57 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:06:57 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:08:29 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:08:29 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:11:13 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:11:13 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:15:06 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:15:06 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-10 6:41:18 - PHP Notice:  Array to string conversion in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\address_list.tpl on line 76
+2018-11-10 6:41:18 - PHP Notice:  Undefined variable: Array in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\address_list.tpl on line 76
+2018-11-10 6:48:50 - PHP Notice:  Undefined index: address_id in D:\phpStudy\WWW\naijia\catalog\controller\account\account.php on line 686
+2018-11-10 6:49:54 - PHP Notice:  Undefined index: email in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 4
+2018-11-10 6:49:54 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 4
+2018-11-10 6:50:09 - PHP Notice:  Undefined index: email in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 19
+2018-11-10 6:50:09 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 19
+2018-11-10 6:50:09 - PHP Notice:  Undefined index: address_id in D:\phpStudy\WWW\naijia\catalog\controller\account\address.php on line 81
+2018-11-10 6:50:09 - PHP Notice:  Undefined index: address_id in D:\phpStudy\WWW\naijia\catalog\controller\account\address.php on line 90
+2018-11-10 6:54:37 - PHP Notice:  Undefined index: email in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 19
+2018-11-10 6:54:37 - PHP Notice:  Undefined index: company in D:\phpStudy\WWW\naijia\catalog\model\account\address.php on line 19
+2018-11-10 6:54:37 - PHP Notice:  Undefined index: address_id in D:\phpStudy\WWW\naijia\catalog\controller\account\address.php on line 81
+2018-11-10 7:02:44 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 55
+2018-11-10 7:02:59 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 76
+2018-11-10 7:03:09 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 81
+2018-11-10 7:03:29 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 82
+2018-11-10 7:03:42 - PHP Notice:  Undefined variable: success in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\account\change_from.tpl on line 86

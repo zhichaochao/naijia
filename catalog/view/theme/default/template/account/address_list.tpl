@@ -73,7 +73,7 @@
                   
                   <label class="w_50 fl clearfix" for="">
                     <span class="pl_span">Country</span>
-                    <select name="country_id" id="input-shipping-country" class="form-control">
+                    <select name="country_id" id="input-shipping-country" class="form-control" data-address_id='<?=$result["address_id"];?>'>
                   <option value=""><?php echo $text_select; ?></option>
                   <?php foreach ($countries as $country) { ?>
                   <?php if ($country['country_id'] == $result['country_id']) { ?>
@@ -89,7 +89,7 @@
                     <span class="pl_span">State</span>
                     <!-- <?php echo $result['zone_id']; ?> -->
                      <input type="hidden" class="input-shipping-zone" value="<?php echo $result['zone_id']; ?>">
-                    <select name="zone_id" id="input-shipping-zone" class="form-control">
+                    <select name="zone_id" id="input-shipping-zone-<?=$result['address_id'];?>" class="form-control">
                   </select>
                   <!-- <input type="hidden" > -->
                     <p class="ts_ps">please enter your first name. </p>
@@ -203,11 +203,12 @@ function default_address(address_id){
 
 
 $('select[name=\'country_id\']').on('change', function() {
-  var aaa=$(".input-shipping-zone").val();
-      aaa=603;
-      console.log(aaa)
+  // var aaa=$(".input-shipping-zone").val();
+  //     aaa=603;
+  //     console.log(aaa);
+
   $.ajax({
-    url: 'index.php?route=account/account/country&country_id=' + this.value,
+    url: 'index.php?route=account/account/country&country_id=' + this.value+'&address_id=' + $(this).attr('data-address_id'),
     dataType: 'json',
     beforeSend: function() {
       $('select[name=\'country_id\']').after(' <i class="fa fa-circle-o-notch fa-spin"></i>');
@@ -223,7 +224,7 @@ $('select[name=\'country_id\']').on('change', function() {
         for (i = 0; i < json['zone'].length; i++) {
           html += '<option value="' + json['zone'][i]['zone_id'] + '"';
 
-          if (json['zone'][i]['zone_id'] == aaa) { 
+          if (json['zone'][i]['zone_id'] == json['zone_id']) { 
             html += ' selected="selected"';
             }
 
@@ -233,7 +234,7 @@ $('select[name=\'country_id\']').on('change', function() {
         html += '<option value="0" selected="selected"><?php echo $text_none; ?></option>';
       }
 
-      $('select[name=\'zone_id\']').html(html);
+      $('#input-shipping-zone-'+json['address_id']).html(html);
     },
     error: function(xhr, ajaxOptions, thrownError) {
       alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

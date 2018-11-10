@@ -681,7 +681,13 @@ class ControllerAccountAccount extends Controller {
 
 		$this->load->model('localisation/country');
 
+		$this->load->model('account/address');
 		$country_info = $this->model_localisation_country->getCountry($this->request->get['country_id']);
+		if (isset($this->request->get['address_id'])) {
+			$address= $this->model_account_address->getAddress($this->request->get['address_id']);
+		}
+	
+		// print_r($address);exit();
 
 		if ($country_info) {
 			$this->load->model('localisation/zone');
@@ -694,7 +700,9 @@ class ControllerAccountAccount extends Controller {
 				'address_format'    => $country_info['address_format'],
 				'postcode_required' => $country_info['postcode_required'],
 				'zone'              => $this->model_localisation_zone->getZonesByCountryId($this->request->get['country_id']),
-				'status'            => $country_info['status']
+				'status'            => $country_info['status'],
+				'zone_id'			=>isset($address['zone_id'])?$address['zone_id']:0,	
+				'address_id'			=>isset($address['address_id'])?$address['address_id']:0,	
 			);
 		}
 

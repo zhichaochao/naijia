@@ -79,7 +79,7 @@
                 <label class="w_50 fl clearfix" for="input-payment-city">
                   <span class="pl_span">City</span>
                   <input type="text"  name="city" value="<?php echo $city; ?>" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" />
-                  <p class="ts_ps">please enter your first name. </p>
+                  <p class="ts_ps">please enter your city. </p>
                 </label>
                 
                 <label class="w_50 fr clearfix" for="">
@@ -90,7 +90,7 @@
                 
                 <label class="clearfix clear" for="">
                   <span class="pl_span">Phone</span>
-                  <input type="text" name="phone" value="<?php echo $phone ?>" placeholder="Phone" id="input-payment-phone" />
+                  <input type="text" name="telephone" value="<?php echo $telephone ?>" placeholder="Phone" id="input-payment-telephone" />
                   <p class="ts_ps">please enter your phone . </p>
                 </label>
                 

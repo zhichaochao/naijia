@@ -60,14 +60,17 @@ class ControllerAccountLogin extends Controller {
 			// Default Shipping Address
 			$this->load->model('account/address');
 
-			if ($this->config->get('config_tax_customer') == 'payment') {
+			// if ($this->config->get('config_tax_customer') == 'payment') {
 				$this->session->data['payment_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
-			}
+			// }
 
-			if ($this->config->get('config_tax_customer') == 'shipping') {
+			// if ($this->config->get('config_tax_customer') == 'shipping') {
 				$this->session->data['shipping_address'] = $this->model_account_address->getAddress($this->customer->getAddressId());
-			}
 
+			// }
+				// print_r($this->customer->getAddressId());
+				 // print_r($this->session->data);exit();
+// 
 			// Wishlist
 			if (isset($this->session->data['wishlist']) && is_array($this->session->data['wishlist'])) {
 				$this->load->model('account/wishlist');
@@ -97,8 +100,7 @@ class ControllerAccountLogin extends Controller {
 				$this->response->redirect($this->url->link('account/dashboard', '', true));
 			
 			}else{
-				// print_r(2222);exit;
-				
+			
 				$this->response->redirect(str_replace('&amp;', '&', $this->request->post['redirect']));
 			}
 		}
@@ -186,8 +188,15 @@ class ControllerAccountLogin extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
+		// print_r($this->session->data);exit();
+			if (isset($this->request->get['checkout'])) {
+
+			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
+			$this->response->setOutput($this->load->view('checkout/login', $data));
+		}else{
 
 		$this->response->setOutput($this->load->view('account/login', $data));
+		}
 	}
 
 	protected function validate() {
