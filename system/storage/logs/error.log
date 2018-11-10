@@ -161,3 +161,117 @@
 2018-11-06 7:19:26 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-06 7:20:02 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-06 7:20:02 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-07 6:03:12 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:03:12 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:03:14 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:03:14 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:39:59 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:39:59 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:00 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:00 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:00 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:04 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:04 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:04 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:16 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 6:40:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 7:18:15 - PHP Notice:  Undefined variable: header in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 1
+2018-11-07 7:18:15 - PHP Notice:  Undefined variable: footer in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 504
+2018-11-07 7:50:35 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 7:50:35 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 7:51:40 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 7:51:40 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:47:17 - PHP Notice:  Undefined variable: products in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 171
+2018-11-07 8:47:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 179
+2018-11-07 8:47:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 202
+2018-11-07 8:47:18 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:47:18 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:48:01 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:48:01 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:03 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:03 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:03 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:06 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:06 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:06 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:19 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-07 8:55:19 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:12:43 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:12:43 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:12:44 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:12:44 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:56 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:56 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:58 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:58 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:58 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:14:58 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:01 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:01 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:03 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:03 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:03 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:03 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:05 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:05 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:05 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 1:15:05 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:10 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:10 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:10 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:10 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:10 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:10 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:16 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:16 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:28 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 3:08:28 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:13 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:13 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:13 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:13 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:16 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:16 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:16 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:32 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 8:33:36 - PHP Notice:  Undefined variable: phone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 92
+2018-11-08 8:33:36 - PHP Notice:  Undefined variable: entry_phone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 92
+2018-11-08 8:39:31 - PHP Notice:  Undefined variable: entry_phone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 93
+2018-11-08 8:39:41 - PHP Notice:  Undefined variable: entry_phone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 93
+2018-11-08 8:40:02 - PHP Notice:  Undefined variable: entry_phone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 93
+2018-11-08 8:40:30 - PHP Notice:  Undefined variable: entry_phone in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\guest.tpl on line 93
+2018-11-08 9:12:01 - PHP Notice:  Undefined index: telephone in D:\phpStudy\WWW\naijia\catalog\controller\checkout\guest.php on line 246
+2018-11-08 9:23:27 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 9:23:27 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 9:23:27 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 9:23:27 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 9:23:29 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-08 9:23:29 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:17 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:17 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:17 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:31 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:31 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:32 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:32 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:32 - PHP Notice:  Undefined variable: allreviews in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207
+2018-11-10 2:38:32 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\common\home.tpl on line 207

@@ -2,6 +2,9 @@
 class ControllerCheckoutGuest extends Controller {
 	public function index() {
 		$this->load->language('checkout/checkout');
+			if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))||(!isset($this->session->data['cart_ids'])||!$this->session->data['cart_ids']) ) {
+			$this->response->redirect($this->url->link('checkout/cart'));
+		}
 
 		$data['text_select'] = $this->language->get('text_select');
 		$data['text_none'] = $this->language->get('text_none');
@@ -110,6 +113,12 @@ class ControllerCheckoutGuest extends Controller {
 			$data['city'] = '';
 		}
 
+		if (isset($this->session->data['payment_address']['phone'])) {
+			$data['phone'] = $this->session->data['payment_address']['phone'];
+		} else {
+			$data['phone'] = '';
+		}
+
 		if (isset($this->session->data['payment_address']['country_id'])) {
 			$data['country_id'] = $this->session->data['payment_address']['country_id'];
 		} elseif (isset($this->session->data['shipping_address']['country_id'])) {
@@ -167,6 +176,36 @@ class ControllerCheckoutGuest extends Controller {
 		} else {
 			$data['captcha'] = '';
 		}
+				$products = $this->cart->getProducts();
+
+		$this->load->model('tool/image');
+		foreach ($products as $key=> $product) {
+			$product_total = 0;
+			$products[$key]['image']=$this->model_tool_image->resize($product['image'], 200,200);
+			$products[$key]['total']=$this->currency->format($products[$key]['total'], $this->session->data['currency']);
+			$products[$key]['price']=$this->currency->format($products[$key]['price'], $this->session->data['currency']);
+
+			foreach ($products as $product_2) {
+				if ($product_2['product_id'] == $product['product_id']) {
+					$product_total += $product_2['quantity'];
+				}
+			}
+
+			if ($product['minimum'] > $product_total) {
+				$this->response->redirect($this->url->link('checkout/cart'));
+			}
+		}
+		$data['title']='guest';
+		$data['action']=$this->url->link('checkout/guest/save');
+
+		$data['totals']=$this->load->controller('checkout/total');
+		$data['products']=$products;
+		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['column_right'] = $this->load->controller('common/column_right');
+		$data['content_top'] = $this->load->controller('common/content_top');
+		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		$data['footer'] = $this->load->controller('common/footer');
+		$data['header'] = $this->load->controller('common/header');
 
 		$this->response->setOutput($this->load->view('checkout/guest', $data));
 	}

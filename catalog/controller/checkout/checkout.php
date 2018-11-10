@@ -10,8 +10,7 @@ class ControllerCheckoutCheckout extends Controller {
 		// print_r($this->session->data['cart_ids']);exit();
 		if (!$this->customer->isLogged()) {
 			$this->session->data['redirect']= $this->url->link('checkout/checkout', '', true);
-	
-				$this->response->redirect($this->url->link('account/login'));
+				$this->response->redirect($this->url->link('checkout/guest'));
 		}
 		// print_r($this->customer->isLogged());exit();
 
