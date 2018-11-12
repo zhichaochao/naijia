@@ -275,6 +275,7 @@ class ControllerCatalogInformation extends Controller {
 		$data['entry_keyword'] = $this->language->get('entry_keyword');
 		$data['entry_store'] = $this->language->get('entry_store');
 		$data['entry_bottom'] = $this->language->get('entry_bottom');
+		$data['entry_parent'] = '父类';
 		$data['entry_sort_order'] = $this->language->get('entry_sort_order');
 		$data['entry_status'] = $this->language->get('entry_status');
 		$data['entry_layout'] = $this->language->get('entry_layout');
@@ -288,6 +289,7 @@ class ControllerCatalogInformation extends Controller {
 		$data['tab_general'] = $this->language->get('tab_general');
 		$data['tab_data'] = $this->language->get('tab_data');
 		$data['tab_design'] = $this->language->get('tab_design');
+
 
 		if (isset($this->error['warning'])) {
 			$data['error_warning'] = $this->error['warning'];
@@ -390,15 +392,7 @@ class ControllerCatalogInformation extends Controller {
 		} else {
 			$data['keyword'] = '';
 		}
-		// $information_description=$data['information_description'];
-		// print_r($information_description['image']);exit;
-		// if (isset($this->request->post['image'])) {
-		// 	$data['image'] = $this->request->post['image'];
-		// } elseif (!empty($information_description)) {
-		// 	$data['image'] = $information_description['image'];
-		// } else {
-		// 	$data['image'] = '';
-		// }
+
 
 		if (isset($this->request->post['bottom'])) {
 			$data['bottom'] = $this->request->post['bottom'];
@@ -414,6 +408,31 @@ class ControllerCatalogInformation extends Controller {
 			$data['status'] = $information_info['status'];
 		} else {
 			$data['status'] = true;
+		}
+
+// print_r($information_info);exit;
+		if (isset($this->request->post['image'])) {
+			$data['image'] = $this->request->post['image'];
+		} elseif (!empty($information_info)) {
+			$data['image'] = $information_info['image'];
+		} else {
+			$data['image'] = '';
+		}
+
+		if (isset($this->request->post['video'])) {
+			$data['video'] = $this->request->post['video'];
+		} elseif (!empty($information_info)) {
+			$data['video'] = $information_info['video'];
+		} else {
+			$data['video'] = '';
+		}
+
+		if(isset($this->request->post['parent_id'])){
+			$data['parent_id'] = $this->request->post['parent_id'];
+		}elseif (!empty($information_info)){
+			$data['parent_id'] = $information_info['parent_id'];
+		}else{
+			$data['parent_id'] = '';
 		}
 
 		if (isset($this->request->post['sort_order'])) {
@@ -432,15 +451,25 @@ class ControllerCatalogInformation extends Controller {
 			$data['information_layout'] = array();
 		}
 
+			$this->load->model('tool/image');
 
-		// $this->load->model('tool/image');	
-		// if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
-		// 	$data['thumb'] = $this->model_tool_image->resize($this->request->post['image'], 100, 100);
-		// } elseif (!empty($information_description) && is_file(DIR_IMAGE . $information_description['image'])) {
-		// 	$data['thumb'] = $this->model_tool_image->resize($information_description['image'], 100, 100);
-		// } else {
-		// 	$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
-		// }
+		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
+			$data['thumb'] = $this->model_tool_image->resize($this->request->post['image'], 100, 100);
+		} elseif (!empty($information_info) && is_file(DIR_IMAGE . $information_info['image'])) {
+			$data['thumb'] = $this->model_tool_image->resize($information_info['image'], 100, 100);
+		} else {
+			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->get['information_id'])) {
+			$data['information_id'] = $this->request->get['information_id'];
+		} else {
+			$data['information_id'] = '';
+		}
+
+
+		$data['parents'] = $this->model_catalog_information->getParents();
+// print_r($data['parents']);exit;
 
 
 

@@ -127,12 +127,14 @@ class ControllerCommonHome extends Controller {
                 }else{
                     $thumbs= '';
                 }
+               $product_info = $this->model_catalog_product->getProduct($result['product_id']);
                 $data['allreviews'][] = array(
                     'review_id'     => $result['review_id'],
                     'href'     =>$this->url->link('product/product','product_id='.$result['product_id']),
                     'author'        => substr($result['author'],0,-2).'***',
                     'text'          => nl2br($result['text']),
                     'thumbs'          =>$thumbs,
+                    'prothumbs'          =>$this->model_tool_image->resize($product_info['image'],400,400),
                     'length'          => nl2br($result['length']),
                     'style'          => nl2br($result['style']),
                     // 'thumbs'          =>$result['thumbs'],

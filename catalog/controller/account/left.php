@@ -22,7 +22,7 @@ class ControllerAccountLeft extends Controller {
                 array(
                  
                  
-                    'name' => 'My addresses',
+                    'name' => 'My Addresses',
                     'url' => $this->url->link('account/address')
                 ),
                 //我的心愿单

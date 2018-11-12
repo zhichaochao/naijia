@@ -116,7 +116,7 @@
                 <?php foreach ($selects as $select) { ?>  
             
                   <li class="clearfix" style="position: relative;">
-                    <span class="bt_span slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
+                    <span class="bt_span <?=$select['main']==0 ?'off':'';?>  slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix" style="display: none;">
                         <?php $select_option_id=0;?>
                         <?php foreach ($select['selects'] as $k=> $option_value) { ?>
@@ -430,6 +430,15 @@ window.onload=function(){
         $(this).addClass("active");
       }
     })
+    //默认隐藏显示
+    $(".bt_span").each(function(){
+      if($(this).hasClass("off")){
+        $(this).siblings("ul").slideDown();
+      }else{
+        $(this).siblings("ul").slideUp();
+      }
+    })
+    
     
     //下拉收起
     $(".slide").click(function(){

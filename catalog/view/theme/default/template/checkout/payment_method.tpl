@@ -63,7 +63,15 @@
                              <?php foreach ($payment_methods as $payment_method) { if($payment_method['code']!='pp_express'){?>
                           
                                 <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
-                                    <div class="pic_img"></div>
+                                <?php if($payment_method['code']=='paystack'){ ?>
+                                <div class="pic_img pay1"></div>
+                                <?php }else{ ?>
+                                <?php if($payment_method['code']=='pp_express'){ ?>
+                                <div class="pic_img pay2"></div>
+                                <?php }else{?>
+                                 <div class="pic_img pay3"></div>
+                                 <?php } ?>
+                                  <?php } ?>
                                     <span><?php echo $payment_method['title']; ?></span>
                                     <em>₦</em>
                                 </li>
@@ -72,7 +80,16 @@
                             <?php foreach ($payment_methods as $payment_method) {if($payment_method['code']=='pp_express'){ ?>
                           
                                 <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
-                                    <div class="pic_img"></div>
+                                 <?php if($payment_method['code']=='paystack'){ ?>
+                                <div class="pic_img pay1"></div>
+                                <?php }else{ ?>
+                                <?php if($payment_method['code']=='pp_express'){ ?>
+                                <div class="pic_img pay2"></div>
+                                <?php }else{?>
+                                 <div class="pic_img pay3"></div>
+                                 <?php } ?>
+                                  <?php } ?>
+                                    <!-- <div class="pic_img ccc"></div> -->
                                     <span><?php echo $payment_method['title']; ?></span>
                                     <em>$</em>
                                 </li>
