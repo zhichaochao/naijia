@@ -720,6 +720,7 @@ function wishlist(product_id,e) {
       $("#form-product li").each(function(){
         if ($(this).find('input').val() < 1) {all=0;
           $(this).find(".ts_ps").addClass("off");
+          $(this).find('.slide_ul').show();
         }
                    
       });
