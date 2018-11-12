@@ -24,7 +24,7 @@
 							</dl>
 							<dl>
 								<dt>Question about this order?</dt>
-								<dd><a href="###">Contact us (Whatsapp)</a></dd>
+								<dd><a href="http://api.whatsapp.com/send?phone=<?=$whatsapp;?>">Contact us (Whatsapp)</a></dd>
 							</dl>
 						</div>
 						

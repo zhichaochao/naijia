@@ -646,7 +646,7 @@ class ModelCheckoutOrder extends Model {
 				$mail->setText($text);
 				// print_r($mail);exit();
 				if($order_info['email']){
-				 $mail->send();
+				 // $mail->send();
 				}
 	
 				// Admin Alert Mail
@@ -736,7 +736,7 @@ class ModelCheckoutOrder extends Model {
 					$mail->setHtml($this->load->view('mail/order', $data));
 					$mail->setText($text);
 					if ($this->config->get('config_email')) {
-						$mail->send();
+						// $mail->send();
 					}
 					
 					
@@ -747,7 +747,7 @@ class ModelCheckoutOrder extends Model {
 					foreach ($emails as $email) {
 						if ($email && filter_var($email, FILTER_VALIDATE_EMAIL)) {
 							$mail->setTo($email);
-							$mail->send();
+							// $mail->send();
 						}
 					}
 				}
@@ -798,7 +798,7 @@ class ModelCheckoutOrder extends Model {
 				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
 				$mail->setText($message);
 					// print_r($mail);exit();
-				$mail->send();
+				// $mail->send();
 			}
 		}
 	}

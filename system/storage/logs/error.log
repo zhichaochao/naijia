@@ -519,3 +519,11 @@
 2018-11-10 8:23:03 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
 2018-11-10 8:31:10 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
 2018-11-10 8:31:19 - PHP Notice:  Undefined variable: allpage in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\product\search.tpl on line 2
+2018-11-12 7:31:30 - PHP Notice:  Error: DATA not accepted from server! in D:\phpStudy\WWW\naijia\system\library\mail.php on line 444
+2018-11-12 7:33:56 - PHP Notice:  Undefined variable: order_number in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\success.tpl on line 9
+2018-11-12 7:33:56 - PHP Notice:  Undefined variable: totals in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\success.tpl on line 11
+2018-11-12 7:33:56 - PHP Warning:  Invalid argument supplied for foreach() in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\success.tpl on line 11
+2018-11-12 7:33:56 - PHP Notice:  Undefined variable: bank in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\success.tpl on line 25
+2018-11-12 7:33:56 - PHP Notice:  Undefined variable: upload_receipt in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\success.tpl on line 37
+2018-11-12 7:33:56 - PHP Notice:  Undefined variable: order_id in D:\phpStudy\WWW\naijia\catalog\view\theme\default\template\checkout\success.tpl on line 50
+2018-11-12 7:41:32 - PHP Warning:  date() expects at least 1 parameter, 0 given in D:\phpStudy\WWW\naijia\catalog\controller\checkout\success.php on line 46

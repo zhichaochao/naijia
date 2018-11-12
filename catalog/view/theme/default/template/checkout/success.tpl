@@ -62,6 +62,10 @@
 <script>
   function bitian() {
     // alert($('#file').val());return false;
+       var time_start = new Date().getTime(); //设定当前时间
+         var endtime = $(this).prop("title");
+         if (time_start>endtime) {alert("Over Time");return false;}
+
     if (!$('#file').val()) {alert("Can't be empty");return false;}
   }
     //调取上传框
@@ -121,7 +125,7 @@
 
 
             var time_start = new Date().getTime(); //设定当前时间
-            var time_end = time_start+60000*30; //设定目标时间
+            var time_end = time_start+(<?=$lest_time;?>*1000); //设定目标时间
             var time_distance = time_end - time_start;
              $(this).attr("title",time_end);
              }

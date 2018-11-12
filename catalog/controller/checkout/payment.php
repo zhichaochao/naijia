@@ -22,6 +22,8 @@ class ControllerCheckoutPayment extends Controller {
 
 		$this->load->model('checkout/order');
 		// print_r($_FILES);exit();
+		
+
 
 		if(!empty($_FILES['img']['name'])){
 
@@ -33,13 +35,13 @@ class ControllerCheckoutPayment extends Controller {
 			}
 
 		}
-		$this->load->model('account/order');
-		$order_info=$this->model_account_order->getOrder($this->request->post['order_id']);
 
+
+		$data['whatsapp']=$this->config->get('config_telephone');
 		$data['order_number']=$order_info['order_number'];
 		$data['continue']=$this->url->link('common/home');
 		$data['view_order']=$this->url->link('account/order/info','&order_id='.$this->request->post['order_id']);
-
+		unset($this->session->data['order_id']);
 		$data['header'] = $this->load->controller('common/header');
 		$data['footer'] = $this->load->controller('common/footer');
 		$this->response->setOutput($this->load->view('checkout/payment_success', $data));
