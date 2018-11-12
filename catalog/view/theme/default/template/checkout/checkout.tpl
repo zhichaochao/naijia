@@ -13,10 +13,10 @@
             
                 <div class="fixed clearfix">
                     <div class="fixed_text clearfix">
-                        <div class="in_content clearfix"></div>
+                        <!-- <div class="in_content clearfix"></div> -->
                         <div class="check_order yd_no clearfix confirm"  >
-                            <h1 class="slide_h1">Order Details <em></em></h1>
-                            <div class="slides clear clearfix">
+                            <h1 class="slide_h1 active">Order Details <em></em></h1>
+                            <div class="slides active clear clearfix">
                              <?php foreach ($products as $product) { ?>
                                 <p><?=$product['name'];?> <span class="num">x<?=$product['quantity'];?></span></p>
                               <?php } ?>
@@ -27,18 +27,7 @@
                                       <?php }} ?>
                             </div>
                             <div class="slide clear clearfix">
-                                <div class="total clearfix">
-                                      <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
-
-                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-                                      <?php }else{?>
-
-
-                                <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-
-                                <?php  }} ?>
-                                   
-                                </div>
+                                
                                 <ul class="check_ul clearfix">
                                        <?php foreach ($products as $product) { ?>
                                     <li class="clearfix">
@@ -58,6 +47,19 @@
                                     </li>
                                      <?php  } ?>
                                 </ul>
+
+                                <div class="total clearfix">
+                                      <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+
+                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                                      <?php }else{?>
+
+
+                                <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+
+                                <?php  }} ?>
+                                   
+                                </div>
                             </div>
                             <div class="a_btn">
                                 <a onclick="pay();"  class="a_qd_btn">Continue to pay</a>

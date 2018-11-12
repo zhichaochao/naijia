@@ -230,7 +230,7 @@
             <span><?php echo $review['author']?></span>
           </div>
           <div class="pro clearfix">
-            <img src="<?php echo $review['thumbs']?>" alt="" />
+            <img src="<?php echo $review['prothumbs']?>" alt="" />
             <div class="text_p">
               <p>Wholesale Order N14k 2x6 Kim K Lace  Closure 12 Inch</p>
             <?php if($review['length']){?>

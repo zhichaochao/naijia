@@ -153,6 +153,32 @@
                   </div>
                 </div>
               </div>
+
+              <!-- 父类下拉框 -->
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-parent"><?php echo $entry_parent; ?></label>
+                <div class="col-sm-10">
+                  <select name="parent_id" id="input-parent" class="form-control">
+                    <option value="0">---Top Level---</option>
+                    <?php if($parents) { ?>
+                      <?php foreach($parents as $parent) { ?>
+                        <option 
+                          <?php if($parent['information_id'] == $information_id) { ?>
+                             style="display:none;"
+                          <?php } ?>
+                          value="<?php echo $parent['information_id']; ?>" 
+                          <?php if($parent['information_id'] == $parent_id) { ?>
+                            selected="selected"
+                          <?php } ?> >
+                          <?php echo $parent['title']; ?>
+                        </option>
+                      <?php } ?>
+                    <?php } ?>
+                    
+                  </select>
+                </div>
+              </div>
+              
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <div class="col-sm-10">
@@ -165,6 +191,18 @@
                     <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
                     <?php } ?>
                   </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">照片</label>
+                <div class="col-sm-10"><a href="" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" />
+                </div>
+              </div>
+               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-sort-order">视频</label>
+                <div class="col-sm-10">
+                  <input type="text" name="video" value="<?php echo $video; ?>" placeholder="" id="input-sort-orders" class="form-control" />
                 </div>
               </div>
               <div class="form-group">
