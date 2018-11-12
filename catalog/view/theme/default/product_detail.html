@@ -237,9 +237,12 @@
 
 							
 							<li>
-								<a class="shop_a" href="javascript:;" onclick="tips('加入成功')">Add To Shopping Bag</a>
+								<button class="shop_btn"><span><i><em>54</em></i> <p>Check Out</p></span></button>
+								<button class="shop_a">Add To Shopping Bag</button>
 								<button class="wish_btn">
 									<span><i></i> Add To Wish List</span>
+									<span class="active"><i></i> Saved</span>
+									
 								</button>
 							</li>
 							
@@ -660,15 +663,18 @@ window.onload=function(){
 		})
 		
 		//Wish List添加收藏
-//		$(".wish_btn").click(function(){
-//			if($(this).hasClass("active")){
-//				$(this).removeClass("active");
-//				tips('取消收藏');
-//			}else{
-//				$(this).addClass("active");
-//				tips('收藏成功');
-//			}
-//		})
+		$(".wish_btn").click(function(){
+			if($(this).hasClass("active")){
+				$(this).removeClass("active");
+				
+//				$(this).find("span").html("<i></i> Add To Wish List");
+			}else{
+				$(this).addClass("active");
+				
+//				$(this).find("span").html("<i></i> Saved");
+				
+			}
+		})
 		
 		//下拉收起
 		$(".slide").click(function(){
@@ -866,6 +872,14 @@ window.onload=function(){
            $("body").css("overflow","");
       }
     })
+	
+	$(".shop_a").click(function(){
+		if(!$(this).hasClass("active")){
+			$(this).addClass("active");
+			$(this).siblings(".shop_btn").addClass("active");
+		}
+	})
+	
 	
 	
 }

@@ -112,15 +112,13 @@
 					    </div>
 					    <div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
-				       <!-- Add Pagination -->
-						<!--<div class="swiper-pagination"></div>-->
 					 </div>
 				</div>
 			</div>
 			
 			<div class="content">
 				<div class="top_f clearfix">
-					<h1>One Weaves Box One Look</h1>
+					<!--<h1>One Weaves Box One Look</h1>-->
 					<p>219 items found</p>
 					<div class="sortby">
 						<p>Sort by : <img src="img/png/icon_26.png	" alt="" /></p>
@@ -145,6 +143,7 @@
 								<div class="text clearfix">
 									<h2>FUNMI HAIR WIG </h2>
 									<div class="pl_div">
+										<span class="price">₦26K <!--<em>₦46K </em>--></span>
 										<ol class="start_ol">
 											<li></li>
 											<li></li>
@@ -159,7 +158,7 @@
 										the most creative though of hair fashion to Nigeria. N.B Hair not only focus 
 										avant-garde hair design, but also striking 
 									</p>									
-									<span class="price">₦26K <em>₦46K </em></span>
+									
 									<span class="yd_btna" href="###">SHOW</span>
 								</div>
 							</a>
@@ -173,6 +172,7 @@
 								<div class="text clearfix">
 									<h2>FUNMI HAIR WIG </h2>
 									<div class="pl_div">
+										<span class="price">₦26K <!--<em>₦46K </em>--></span>
 										<ol class="start_ol">
 											<li class="active"></li>
 											<li class="active"></li>
@@ -187,7 +187,6 @@
 										the most creative though of hair fashion to Nigeria. N.B Hair not only focus 
 										avant-garde hair design, but also striking 
 									</p>									
-									<span class="price">₦26K <em>₦46K </em></span>
 									<span class="yd_btna" href="###">SHOW</span>
 								</div>
 							</a>
@@ -201,6 +200,7 @@
 								<div class="text clearfix">
 									<h2>FUNMI HAIR WIG </h2>
 									<div class="pl_div">
+										<span class="price">₦26K <!--<em>₦46K </em>--></span>
 										<ol class="start_ol">
 											<li class="active"></li>
 											<li class="active"></li>
@@ -215,7 +215,6 @@
 										the most creative though of hair fashion to Nigeria. N.B Hair not only focus 
 										avant-garde hair design, but also striking 
 									</p>									
-									<span class="price">₦26K <em>₦46K </em></span>
 									<span class="yd_btna" href="###">SHOW</span>
 								</div>
 							</a>
@@ -229,6 +228,7 @@
 								<div class="text clearfix">
 									<h2>FUNMI HAIR WIG </h2>
 									<div class="pl_div">
+										<span class="price">₦26K <!--<em>₦46K </em>--></span>
 										<ol class="start_ol">
 											<li class="active"></li>
 											<li class="active"></li>
@@ -243,7 +243,6 @@
 										the most creative though of hair fashion to Nigeria. N.B Hair not only focus 
 										avant-garde hair design, but also striking 
 									</p>									
-									<span class="price">₦26K <em>₦46K </em></span>
 									<span class="yd_btna" href="###">SHOW</span>
 								</div>
 							</a>
@@ -378,41 +377,59 @@
         
 		//ban輪播
 		var swiper = new Swiper('.swiper-container', {
-			loop : true,
 			navigation: {
 			    nextEl: '.swiper-button-next',
 			    prevEl: '.swiper-button-prev',
 			},
-//	      pagination: {
-//	        el: '.swiper-pagination',
-//	        clickable :true,
-//	      },
-	    });
-		//鼠标覆盖停止自动切换
-//			swiper.el.onmouseover = function(){
-//			  swiper.autoplay.stop();
-//			}
-//			swiper.el.onmouseout = function(){
-//			  swiper.autoplay.start();
-//			}
 			
+			on: {
+			    slideChange: function () {
+			      myvideo.play();
+			      if(this.activeIndex == 0){
+			      	$(".swiper-button-prev").hide();
+			      	$(".swiper-button-next").show();
+			      }else if(this.activeIndex == 1){
+			      	$(".swiper-button-next").hide();
+			      	$(".swiper-button-prev").show();
+			      }
+			    },
+			  },
+	    });
 		var myvideo = document.getElementById("my_video");
-        $(".bf_img").click(function(){
+        $(".pro_ban .bf_img").click(function(){
         	myvideo.play();
-        	$(".bf_img").hide()
+        	$(this).hide()
         	$("#my_video").attr("controls","controls");
         })
 		myvideo.addEventListener('pause',function(){  
-			$(".bf_img").show()
+			$(".pro_ban .bf_img").show()
 		    $('#my_video').removeAttr("controls");
 		})
         
 		
-		$(".sortby").hover(function(){
-			$(this).find("ul").stop().slideDown();
-		},function(){
-			$(this).find("ul").stop().slideUp();
-		})
+		if($(window).width()>920){
+			$(".sortby").hover(function(){
+				$(this).addClass("active");
+				$(this).find("p img").css("transition",".5s");
+				$(this).find("ul").stop().slideDown();
+			},function(){
+				$(this).removeClass("active");
+				$(this).find("ul").stop().slideUp();
+				$(this).find("p img").css("transition",".5s");
+			})
+		}else{
+			$(".sortby>p").click(function(){
+				if($(this).parent().hasClass("active")){
+					$(this).parent().removeClass("active");
+					$(this).siblings("ul").stop().slideUp();
+					$(this).find("img").css("transition",".5s");
+				}else{
+					$(this).parent().addClass("active");
+					$(this).find("img").css("transition",".5s");
+					$(this).siblings("ul").stop().slideDown();
+				}
+			})
+		}
 		
 		//收藏
 		$(".sc").click(function(){

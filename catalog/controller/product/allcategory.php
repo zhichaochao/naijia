@@ -59,6 +59,11 @@ class ControllerProductAllcategory extends Controller {
 							'href'     => $this->url->link('product/category', 'path='  . $category['parent_id'] . '_' . $category['category_id'])
 						);
 				}
+				if(isset($_SERVER['HTTP_REFERER'])){
+			$data['home'] =$_SERVER['HTTP_REFERER'];
+			}else{
+				$data['home'] =$this->url->link('common/home');
+			}
 			// print_r($data['categoriess']);exit;
 			$data['continue'] = $this->url->link('common/home');
 			$data['column_left'] = $this->load->controller('common/column_left');
