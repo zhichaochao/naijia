@@ -97,6 +97,7 @@ class ModelAccountOrder extends Model {
 				'date_modified'           => $order_query->row['date_modified'],
 				'date_added'              => $order_query->row['date_added'],
 				'delivered_date'              => $order_query->row['delivered_date'],
+				'confirm_date'              => $order_query->row['confirm_date'],
 				'order_number'                => $order_query->row['order_number'], 
 				'shippingorpick'                => $order_query->row['shippingorpick'], 
 				'ip'                      => $order_query->row['ip'],
@@ -139,12 +140,18 @@ class ModelAccountOrder extends Model {
 	public function deleteWishlist($order_id) {
 		$this->db->query("UPDATE " . DB_PREFIX ."order SET del = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
 	}
+//恢复订单
 	public function recoverorder($order_id) {
 		// print_r("UPDATE " . DB_PREFIX ."order SET order_status_id = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");exit;
-		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '1',date_modified = NOW() WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
 	}
+	//确认收货
 	public function confirmorder($order_id) {
-		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '5',date_modified = NOW() WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '5',confirm_date = NOW() WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+	}
+	//取消订单
+	public function lnvalidorder($order_id) {
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '16' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
 	}
 	public function changeStatus($order_id,$order_status_id){
 	    $sql = "update `".DB_PREFIX."order` set order_status_id = '".$order_status_id."' where order_id = '".$order_id."'";

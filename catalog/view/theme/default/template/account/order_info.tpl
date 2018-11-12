@@ -17,12 +17,12 @@
           
           <?php if($payment_code == 'bank_transfer' ) { ?>
           <?php if(empty($bank_receipt)){?>
-          <p class="p2">
-            Thanks for your order .<br />
-            ·Please complete payment as soon as possible.<br />
-            · It will then be shipped within 1 to 2 days.<br />
-            Emails will update to you if your <br />
-            package situation changes.
+          <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
+            <span class="span_r djs_p" title="">
+              <span class="int_hour">00</span><i>:</i>
+              <span class="int_minute">00</span><i>:</i>
+              <span class="int_second">00</span>
+            </span>
           </p>
 
           <?php }else{ ?>
@@ -45,8 +45,8 @@
 
         <?php }else{ ?>
             <p class="p1">Please finish payment or upload<br /> the bank alert.Or it will be<br /> invalid in 
-            <span class="span_r djs_p" title="<?php echo $date_endadd?>">
-              <span class="int_hour">02</span><i>:</i>
+            <span class="span_r djs_p" title="">
+              <span class="int_hour">00</span><i>:</i>
               <span class="int_minute">00</span><i>:</i>
               <span class="int_second">00</span>
             </span>
@@ -294,8 +294,8 @@
           <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Please finish payment or upload the bank alert.</p>
           <p class="p1">Or it will be invalid in 
-            <span class="span_r djs_p" title="<?php echo $date_endadd; ?>">
-              <span class="int_hour">02</span><i>:</i>
+            <span class="span_r djs_p" title="">
+              <span class="int_hour">00</span><i>:</i>
               <span class="int_minute">00</span><i>:</i>
               <span class="int_second">00</span>
             </span>
@@ -631,9 +631,19 @@ if(confirm('Are you sure?')){
   function show_time() {
         $(".djs_p").each(function() {
             var endtime = $(this).prop("title");
-            var time_start = new Date().getTime(); //设定当前时间
-            var time_end = new Date(endtime).getTime(); //设定目标时间
+            if (endtime>0) {
+               var time_start = new Date().getTime(); //设定当前时间
+            var time_end =endtime; //设定目标时间
             var time_distance = time_end - time_start;
+
+            }else{
+
+
+            var time_start = new Date().getTime(); //设定当前时间
+            var time_end = time_start+(<?=$lest_time;?>*1000); //设定目标时间
+            var time_distance = time_end - time_start;
+             $(this).attr("title",time_end);
+             }
             var timer;
             if (time_distance >= 0) {
                 var int_day = Math.floor(time_distance / 86400000)
@@ -661,6 +671,8 @@ if(confirm('Are you sure?')){
                 $(this).find(".int_second").text(int_second);
             }else{
                 clearInterval(timer);
+                // alert(11);
+                // window.location.href('/index.php?route=account/order');
                 $(this).css("display","none");
             }
         })

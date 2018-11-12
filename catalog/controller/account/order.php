@@ -178,7 +178,7 @@ class ControllerAccountOrder extends Controller {
 			}else{
 				unset($this->session->orderaddress);
 			}
-	
+		$data['back']=$this->url->link('account/order', true);
 
 		$order_info = $this->model_account_order->getOrder($order_id);
 		// print_r($order_info);exit();
@@ -285,9 +285,22 @@ class ControllerAccountOrder extends Controller {
 			$data['order_id'] = $this->request->get['order_id'];
 			$data['date_added'] = date($this->language->get('date_format_short'), strtotime($order_info['date_added']));
 			$data['delivered_date'] = date($this->language->get('date_format_short'), strtotime($order_info['delivered_date']));
-			$data['date_endadd'] =date('Y-m-d h:i:s',strtotime($order_info['date_added'])+7200);
-			$data['date_modified'] = date($this->language->get('date_format_short'), strtotime($order_info['date_modified']));
-// print_r($data['date_endadd'] );exit;
+			// $data['date_endadd'] =date('Y-m-d h:i:s',strtotime($order_info['date_added'])+7200);
+			$data['date_modified'] = date($this->language->get('date_format_short'), strtotime($order_info['confirm_date']));
+
+			$data['add_time']=strtotime($order_info['date_modified']);
+			$data['now_time']=strtotime($order_info['now']);
+			$data['lest_time']=$data['add_time']+60*30-$data['now_time'];
+
+			$add_time=strtotime($order_info['date_modified']);
+    		$now_time=strtotime($order_info['now']);
+			  if ($now_time>$add_time+60*30) {
+      				$this->load->model('account/order');
+				$this->model_account_order->lnvalidorder($this->request->get['order_id']);
+      
+   			 }
+
+// print_r($data['lest_time']);exit;
 // 			if ($order_info['payment_address_format']) {
 // 				$format = $order_info['payment_address_format'];
 // 			} else {
