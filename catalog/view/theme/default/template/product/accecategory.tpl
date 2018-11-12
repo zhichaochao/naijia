@@ -243,12 +243,34 @@ function wishlist(product_id,e) {
  }
 }
   $(function(){
-    $(".sortby").hover(function(){
-      $(this).find("ul").stop().slideDown();
-    },function(){
-      $(this).find("ul").stop().slideUp();
-    })
-    
+    // $(".sortby").hover(function(){
+    //   $(this).find("ul").stop().slideDown();
+    // },function(){
+    //   $(this).find("ul").stop().slideUp();
+    // })
+    if($(window).width()>920){
+      $(".sortby").hover(function(){
+        $(this).addClass("active");
+        $(this).find("p img").css("transition",".5s");
+        $(this).find("ul").stop().slideDown();
+      },function(){
+        $(this).removeClass("active");
+        $(this).find("ul").stop().slideUp();
+        $(this).find("p img").css("transition",".5s");
+      })
+    }else{
+      $(".sortby>p").click(function(){
+        if($(this).parent().hasClass("active")){
+          $(this).parent().removeClass("active");
+          $(this).siblings("ul").stop().slideUp();
+          $(this).find("img").css("transition",".5s");
+        }else{
+          $(this).parent().addClass("active");
+          $(this).find("img").css("transition",".5s");
+          $(this).siblings("ul").stop().slideDown();
+        }
+      })
+    }
     //收藏
     $(".sc").click(function(){
       if($(this).hasClass("active")){

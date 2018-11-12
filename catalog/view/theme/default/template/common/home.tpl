@@ -268,7 +268,9 @@
     <div class="in_coupon_tc clearfix">
       <div class="text clearfix">
         <div class="con clearfix">
-          <h1>Discounts&Coupons</h1>
+          <h1>Discounts&Coupons</br>
+          <p class="bt_p" > Can be used in shoping bag directly</p>
+          </h1>
           <div class="close"></div>
           <h2>COUPON</h2>
           <ol class="yhj_ol clearfix">

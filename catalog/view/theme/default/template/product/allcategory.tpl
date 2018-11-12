@@ -2,6 +2,9 @@
 <div class="in_content clearfix"></div>
     <!--内容-->
     <div class="classification clearfix">
+      <div class="top_yd clearfix">
+          <h1><a class="fh" href="<?php echo $home?>">&lt BACK</a></h1>
+      </div>
       <ul class="clearfix">
 
       <?php foreach($categories as $key => $category) { ?>
