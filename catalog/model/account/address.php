@@ -147,4 +147,10 @@ class ModelAccountAddress extends Model {
 
 		return $query->row['total'];
 	}
+
+	public function getCustomerMessage() {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_message WHERE customer_id = '" . (int)$this->customer->getId() . "' ORDER BY sort_order ASC");
+
+		return $query->rows;
+	}
 }

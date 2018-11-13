@@ -41,6 +41,16 @@
                 My Coupons 
               </a>
             </li>
+             <li>
+              <a href="<?php echo $message?>">
+                My Message
+              </a>
+            </li>
+            <!--  <li>
+              <a href="javascript:;">
+                My Reservation
+              </a>
+            </li> -->
           </ul>
           <img src="catalog/view/theme/default/img/vip.jpg"/>
         </div>

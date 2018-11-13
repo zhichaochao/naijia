@@ -656,21 +656,6 @@
 
             <!-- liuyan -->
             <div class="tab-pane" id="tab-image">
-              <!-- <div class="table-responsive">
-                <table class="table table-striped table-bordered table-hover">
-                  <thead>
-                    <tr>
-                      <td class="text-left">tux </td>
-                    </tr>
-                  </thead>
-                  
-                  <tbody>
-                    <tr>
-                      <td class="text-left"><a href="" id="thumb-image" data-toggle="image" class="img-thumbnail"><img src="<?php echo $thumb; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a><input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" /></td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div> -->
               <div class="table-responsive">
                 <table id="images" class="table table-striped table-bordered table-hover">
                   <thead>
@@ -686,10 +671,6 @@
                     <tr id="image-row<?php echo $image_row; ?>">
                       <td class="text-left">
                       <input type="text" name="customer_message[<?php echo $image_row; ?>][message]" value="<?php echo $customer_message['message']; ?>" placeholder="留言" class="form-control" />
-                      <!-- <a href="" id="thumb-image<?php echo $image_row; ?>" data-toggle="image" class="img-thumbnail">
-                      <img src="<?php echo $customer_message['thumb']; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" />
-                      </a> -->
-                     <!--  <input type="hidden" name="customer_message[<?php echo $image_row; ?>][image]" value="<?php echo $customer_message['image']; ?>" id="input-image<?php echo $image_row; ?>" /> -->
                       </td>
 
 

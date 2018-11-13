@@ -45,6 +45,7 @@ class ControllerInformationPersonal extends Controller {
 
 			$data['address'] = $this->url->link('account/address', '', true);
 			$data['profile'] = $this->url->link('account/account', '', true);
+			$data['message'] = $this->url->link('account/message', '', true);
 			$data['coupon'] = $this->url->link('account/coupon', '', true);
 
 			$data['column_left'] = $this->load->controller('common/column_left');

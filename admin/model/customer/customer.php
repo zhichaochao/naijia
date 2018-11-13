@@ -19,7 +19,7 @@ class ModelCustomerCustomer extends Model {
 
 		if (isset($data['customer_message'])) {
 			foreach ($data['customer_message'] as $customer_message) {
-				$this->db->query("INSERT INTO " . DB_PREFIX . "customer_message SET customer_id = '" . (int)$customer_id . "', message = '" . $this->db->escape($customer_message['message']) . "', sort_order = '" . (int)$customer_message['sort_order'] . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "customer_message SET customer_id = '" . (int)$customer_id . "', message = '" . $this->db->escape($customer_message['message']) . "', date_added = NOW(), sort_order = '" . (int)$customer_message['sort_order'] . "'");
 			}
 		}
 		
@@ -59,7 +59,7 @@ class ModelCustomerCustomer extends Model {
 
 		if (isset($data['customer_message'])) {
 			foreach ($data['customer_message'] as $customer_message) {
-				$this->db->query("INSERT INTO " . DB_PREFIX . "customer_message SET customer_id = '" . (int)$customer_id . "', message = '" . $this->db->escape($customer_message['message']) . "', sort_order = '" . (int)$customer_message['sort_order'] . "'");
+				$this->db->query("INSERT INTO " . DB_PREFIX . "customer_message SET customer_id = '" . (int)$customer_id . "', message = '" . $this->db->escape($customer_message['message']) . "', date_added = NOW(), sort_order = '" . (int)$customer_message['sort_order'] . "'");
 			}
 		}
 

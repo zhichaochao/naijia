@@ -79,7 +79,7 @@
             <div class="text clearfix">
               <img src="catalog/view/theme/default/img/png/null_1.png"/>
               <p>You haven`t get any coupons</p>
-              <a href="javascript:;">Receive coupons&nbsp;&nbsp;></a>
+              <a href="javascript:;" onclick="ling()">Receive coupons&nbsp;&nbsp;></a>
             </div>
           </div>
           
@@ -92,6 +92,9 @@
 
 <?php echo $footer; ?>
 <script>
+function ling() {
+tips('Not Opened For The Time Being ','gantan',500);
+}
     window.onload = function(){
       var lf_height = $(".lf_nav").height();
     $(".null").height(lf_height);
