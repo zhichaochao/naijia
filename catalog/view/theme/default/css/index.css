@@ -1102,8 +1102,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.check_order .check_ul li:last-child{margin-bottom: 0;}
 	.check_order .check_ul .pic_img{width: 1.2rem;height: 1.2rem;float: left;}
 	.check_order .check_ul .pic_img img{display: block;}
-	.check_order .check_ul .text{float: left;padding: 0 0.2rem;}
-	.check_order .check_ul .text h2{font-size: 0.14rem;font-weight: normal;line-height: 0.14rem;margin-bottom: 0.05rem;}
+	.check_order .check_ul .text{float: left;padding: 0 0.2rem;max-width: 2.2rem;}
+	.check_order .check_ul .text h2{font-size: 0.14rem;font-weight: normal;line-height: 0.14rem;margin-bottom: 0.05rem;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 	.check_order .check_ul .text p{color: #666;font-size: 0.12rem;line-height: 0.2rem;}
 	.check_order .check_ul .text span{font-size: 0.16rem;color: #333;display: block;float: left;margin-top: 0.05rem;}
 	.check_order .total{border: 1px solid #ddd;background: #fff8f5;padding: 0.2rem;}
@@ -1495,6 +1495,22 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.vip_con .form_text{max-width: 6.8rem;float: left;width: 48%;}
 	.vip_con .r_text{max-width: 6.1rem;float: right;width: 48%;}
 	.vip_con .r_text p{font-size: 0.2rem;color: #0e0f0f;line-height: 0.6rem;display: inline-block;vertical-align: middle;}
+	.vip_modal{position: fixed;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,.7);top: 0;left: 0;}
+	.vip_modal .text{max-width: 1000px;width: 80%;max-height: 6rem;position: absolute;top: 50%;left: 50%;background: #fff;position: relative; }	
+	.vip_modal .text .lf_img{width: 50%;float: left;}
+	.vip_modal .text .right{background: #fff url(../img/vip_5.png) no-repeat left 0.3rem top/2.08vw auto;text-align: center;width: 50%;float: left;}
+	.vip_modal .text .right img{display: block;margin:0.8rem auto 0.6rem auto;}
+	.vip_modal .text .right span{font-size: 0.22rem;display:block;line-height: 0.4rem;}
+	.vip_modal .text .right p{font-size: 0.22rem;display: inline-block;line-height: 0.4rem;padding: 0 0.2rem;}
+	.vip_modal .text .right .btn{width: 50%;position: absolute;bottom: 0.7rem;}
+	.vip_modal .text .right .vip_a{width: 2.2rem;height: 0.5rem;text-align: center;line-height: 0.5rem;color: #fff;background: #333;display: inline-block;font-size: 0.22rem;}
+	@media only screen and (min-width: 921px) and (max-width: 1140px) {
+		.vip_modal .text .right img{display: block;margin:6.24vw auto;width: 12vw;}
+		.vip_modal .text .right span{font-size: 1.64vw;line-height: 3.15vw;}
+		.vip_modal .text .right p{font-size: 1.64vw;line-height: 3.125vw;}
+		
+	}
+	
 	
 	/*******my_center******/
 	.my_center{background: #f5f5f5;}
@@ -2625,6 +2641,19 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pro_ban .swiper-button-next,.pro_ban .swiper-container-rtl .swiper-button-prev{right: 0;}
 	.pro_ban .swiper-button-next,.pro_ban .swiper-container-rtl .swiper-button-prev{background:rgba(238,238,238,.5) url(../img/png/icon_7.png) no-repeat center;}
 	.pro_ban .swiper-button-prev,.pro_ban  .swiper-container-rtl .swiper-button-next{background:rgba(238,238,238,.5) url(../img/png/icon_7.png) no-repeat center;transform: rotate(180deg);}
+	.top_lb .swiper-button-next,.top_lb .swiper-button-prev{width: 0.6rem;height: 0.6rem;top: 50%; margin-top: -0.75rem;background-color: rgba(238,238,238,.5);}
+	.top_lb .swiper-button-prev,.top_lb .swiper-container-rtl .swiper-button-next{left: 0;}
+	.top_lb .swiper-button-next,.top_lb .swiper-container-rtl .swiper-button-prev{right: 0;}
+	.top_lb .swiper-button-next,.top_lb .swiper-container-rtl .swiper-button-prev{background:rgba(238,238,238,.5) url(../img/png/icon_7.png) no-repeat center;}
+	.top_lb .swiper-button-prev,.top_lb  .swiper-container-rtl .swiper-button-next{background:rgba(238,238,238,.5) url(../img/png/icon_7.png) no-repeat center;transform: rotate(180deg);}
+	
+	.wig .top_lb{margin-bottom: 0.4rem;}
+	.wig .top_lb img{display: block;}
+	.wig .top_lb .text {text-align: center;display: none;}
+	.wig .top_lb .swiper-slide-active .text{display: block;}
+	.wig .top_lb .text h1{font-size: 0.24rem;font-weight: normal;color: #333;margin: 0.3rem 0 0.1rem 0;text-overflow: ellipsis;overflow: hidden;white-space: nowrap; }
+	.wig .top_lb .text span{font-size: 0.24rem;color: #333;margin: 0; }
+	.wig .top_lb .text span em{font-size: 0.16rem;color: #aaa;margin: 0;text-decoration: line-through; }
 	
 	
 	.wig .lb_4pic{padding: 0 0.2rem;}

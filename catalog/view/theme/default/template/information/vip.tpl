@@ -32,7 +32,11 @@
 
               <label class="w_50 fl clearfix" for="">
                 <span class="pl_span">Gender</span>
-                <input  class="in_3" type="text" name="gender" value=""   placeholder="Gender" id="input-gender" class="form-control"/>
+                <!-- <input  class="in_3" type="text" name="gender" value=""   placeholder="Gender" id="input-gender" class="form-control"/> -->
+                  <select name="gender" class="in_3" id="input-gender">
+                  <option value="female">female</option>
+                  <option value="male">male</option>
+                </select>
                 <!-- <input type="text" placeholder="Gender" /> -->
                 <p class="ts_ps">please enter your  gender. </p>
               </label>
@@ -40,7 +44,8 @@
 
               <label class="w_50 fr clearfix" for="">
                 <span class="pl_span">Birthday</span>
-                <input  class="in_4" type="text" name="birthday" value=""   placeholder="Birthday" id="input-birthday" class="form-control"/>
+                <input class="time" type="text" name="birthday"  placeholder="Birthday" />
+                <!-- <input  class="in_4" type="text" name="birthday" value=""   placeholder="Birthday" id="input-birthday" class="form-control"/> -->
                 <!-- <input type="text" placeholder="Birthday" /> -->
                 <p class="ts_ps">please enter your  birthday. </p>
               </label>
@@ -95,6 +100,8 @@
     </div>
     
 <?php echo $footer; ?>
+<link rel="stylesheet" href="catalog/view/theme/default/css/time.css" />
+<script type="text/javascript" src="catalog/view/theme/default/js/time.js" ></script>
 <script type="text/javascript">
   window.onload =function(){
     if($(window).width()>920){
@@ -102,6 +109,30 @@
       $(".r_text").height(lf_len);
       $(".r_text").css("line-height","4.9rem");
     }
+
+
+      //時間插件
+    function getNow(s) {
+        return s < 10 ? '0' + s: s;
+    }
+    let myDate = new Date();
+    let year=myDate.getFullYear();
+    let month=myDate.getMonth()+1;
+    let day=myDate.getDate(); 
+    let now=year+'-'+getNow(month)+"-"+getNow(day);
+    window.onload =function(){
+      $(".time").attr("value",now);
+    }
+    $(".time").on("click",function(e){
+      e.stopPropagation();
+      $(this).lqdatetimepicker({
+        css : 'datetime-day',
+        dateType : 'D',
+        selectback : function(){
+        }
+      });
+  
+    });
   }
 
 

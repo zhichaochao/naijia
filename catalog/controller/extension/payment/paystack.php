@@ -100,10 +100,10 @@ class ControllerExtensionPaymentPaystack extends Controller
                     $redir_url = $this->url->link('checkout/success');
                 } else if (array_key_exists('data', $ps_api_response) && array_key_exists('status', $ps_api_response['data']) && ($ps_api_response['data']['status'] === 'failure')) {
                     $order_status_id = $this->config->get('paystack_declined_status_id');
-                    $redir_url = $this->url->link('checkout/checkout', '', 'SSL');
+                    $redir_url = $this->url->link('account/order', '', 'SSL');
                 } else {
                     $order_status_id = $this->config->get('paystack_error_status_id');
-                    $redir_url = $this->url->link('checkout/checkout', '', 'SSL');
+                    $redir_url = $this->url->link('account/order', '', 'SSL');
                 }
 
                 $this->model_checkout_order->addOrderHistory($order_id, $order_status_id);

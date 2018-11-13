@@ -4,27 +4,62 @@
     <div class="wig clearfix">
       <div class="content">
         <div class="top_p"><?php echo $slogans?></div>
-        <h1 class="h1">LACE WIG</h1>
-        <p class="p1">
-          There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be installed without or with glee. 
-          Hand-knotted base with adjustable clips, painstakingly crafted with raw virgin hair.
-          These flawless pieces add unbeatable density and beauty to transform your look.
-        </p>
-       
+        <h1 class="h1">Basic Lace Wig</h1>
         
         <div class="context">
-          <div class="top clearfix">
-            <img class="lazyLoad" src="" srcs="<?php echo $banner1; ?>"/>
-            <div class="top_video">
-              <div class="bf_img"></div>
-              <video id="top_video" src="<?php echo $video2; ?>" width="100%"></video>           
-            </div>
-            
+          <!--pc-->
+          <div class="top yd_hide clearfix">
             <!-- Swiper -->
-            <div class="swiper-container in_ul2 swiper1">
-              <div class="swiper-wrapper">
-              <?php foreach ($basicproducts1 as $product) { ?>
-
+            <div class="lb_4pic clearfix">
+              <div class="swiper-container in_ul2 swiper1">
+                  <div class="swiper-wrapper">
+                  
+                  <?php foreach ($basicproducts1 as $product) { ?>
+                     <div class="swiper-slide clearfix">
+                          <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
+                            <div class="pic_img">
+                              <img src="<?php echo $product['thumb']; ?>" />
+                            </div>
+                            <div class="text">
+                              <h1><?php echo $product['name']; ?></h1>
+                              <?php if(!empty($product['special'])) { ?>
+                              <span><?php echo $product['special']; ?><em><?php echo $product['price']; ?></em></span>
+                               <?php }else{ ?>
+                               <span><?php echo $product['price']; ?></span>
+                               <?php } ?>
+                              
+                            </div>
+                          </a>
+                      </div>
+                    <?php } ?>
+                  </div> 
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+               </div>
+            </div>     
+          </div>
+            
+          <!--移动-->
+          <div class="pc_hide clearfix">
+            <div class="pro_ban clearfix">
+              <div class="content">
+                <div class="swiper-container swiper3">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $banner1; ?>' data-mimage='<?php echo $banner1; ?>'  /></div>
+                        <div class="swiper-slide" style="cursor: pointer;position: relative;display: block;">
+                          <div class="bf_img" ></div>
+                          <video id="my_video" src="<?php echo $video2; ?>" width="100%"></video>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                 </div>
+              </div>
+            </div>
+            <div class="top_lb clearfix">
+              <div class="swiper-container swiper2">
+                  <div class="swiper-wrapper">
+                  <?php foreach ($basicproducts1 as $product) { ?>
                 <div class="swiper-slide clearfix">
                     <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
                       <div class="pic_img">
@@ -32,102 +67,71 @@
                       </div>
                       <div class="text">
                         <h1><?php echo $product['name']; ?></h1>
-
                         <?php if(!empty($product['special'])) { ?>
-                     <span class="price"><?php echo $product['special']; ?>
-                     <em><?php echo $product['price']; ?></em></span>
-                  <?php }else{ ?>
-                     <span><?php echo $product['price']; ?></span>
-                  <?php } ?>
+                              <span><?php echo $product['special']; ?><em><?php echo $product['price']; ?></em></span>
+                               <?php }else{ ?>
+                               <span><?php echo $product['price']; ?></span>
+                               <?php } ?>
                       </div>
                     </a>
                 </div>
                <?php } ?>
-              </div>
-              <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- Add Arrows -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+               </div>
             </div>
-        
-            
           </div>
-          
           <ul class="wig_ul clearfix">
             <li class="clearfix">
-              <img class="lf_img" src="<?php echo $banner2; ?>" alt="" />
-              <div class="right">
-                <!-- Swiper -->
-                  <div class="swiper-container in_ul2 swiper2">
-                    <div class="swiper-wrapper">
-                    <?php foreach ($basicproducts2 as $product) { ?>
-
-                      <div class="swiper-slide clearfix">
-                          <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
-                            <div class="pic_img">
-                              <img class="lazyLoad" src="" srcs="<?php echo $product['thumb']; ?>" />
-                            </div>
-                            <div class="text">
-                              <h1><?php echo $product['name']; ?></h1>
-
-                              <?php if($product['special']) { ?>
-                           <span class="price"><?php echo $product['special']; ?>
-                           <em><?php echo $product['price']; ?></em></span>
-                        <?php }else{ ?>
-                           <span><?php echo $product['price']; ?></span>
-                        <?php } ?>
-                            </div>
-                          </a>
-                      </div>
-                     <?php } ?>
-                     
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
+              <div class="bt">
+                <h1>Lace Closure Frontal</h1>
+                <p>Natural & Glueless & Realistic Wig </p>
               </div>
+              <ol class="wig_ol clearfix">
+            <?php foreach ($basicproducts2 as $product) { ?>
+                <li>
+                  <a href="<?php echo $product['href']; ?>">
+                    <img src="<?php echo $product['thumb']; ?>" alt="" />
+                    <div class="text">
+                      <p><?php echo $product['name']; ?></p>
+
+                      <?php if($product['special']) { ?>
+                      <span><?php echo $product['special']; ?> <em><?php echo $product['price']; ?></em></span>
+                       <?php }else{ ?>
+                       <span><?php echo $product['price']; ?></span>
+                        <?php } ?>
+                    </div>
+                  </a>
+                </li>
+                     <?php } ?>
+              </ol>
             </li>
             <li class="clearfix">
-              <img class="lf_img" src="<?php echo $banner3; ?>" alt="" />
-              <div class="right">
-                <!-- Swiper -->
-                  <div class="swiper-container in_ul2 swiper3">
-                    <div class="swiper-wrapper">
-
-                      <?php foreach ($basicproducts3 as $product) { ?>
-
-                      <div class="swiper-slide clearfix">
-                          <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
-                            <div class="pic_img">
-                              <img class="lazyLoad" src="" srcs="<?php echo $product['thumb']; ?>" />
-                            </div>
-                            <div class="text">
-                              <h1><?php echo $product['name']; ?></h1>
-
-                              <?php if($product['special']) { ?>
-                           <span class="price"><?php echo $product['special']; ?>
-                           <em><?php echo $product['price']; ?></em></span>
-                        <?php }else{ ?>
-                           <span><?php echo $product['price']; ?></span>
-                        <?php } ?>
-                            </div>
-                          </a>
-                      </div>
-                     <?php } ?>
-
-                      
-                    </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
+              <div class="bt">
+                <h1>Luxury Hand-Make Wigs</h1>
+                <p>Natural & Glueless & Realistic Wig </p>
               </div>
+              
+              <ol class="wig_ol clearfix">
+                  <?php foreach ($basicproducts3 as $product) { ?>
+                <li>
+                  <a href="<?php echo $product['href']; ?>">
+                    <img src="<?php echo $product['thumb']; ?>" alt="" />
+                    <div class="text">
+                      <p><?php echo $product['name']; ?></p>
+                      
+                       <?php if($product['special']) { ?>
+                      <span><?php echo $product['special']; ?> <em><?php echo $product['price']; ?></em></span>
+
+                       <?php }else{ ?>
+                       <span><?php echo $product['price']; ?></span>
+                        <?php } ?>
+                    </div>
+                  </a>
+                </li>
+                 <?php } ?>
+              </ol>
             </li>
           </ul>
           
@@ -140,7 +144,9 @@
         <video id="fot_video" src="<?php echo $video1; ?>" width="100%"></video>
       </div>
     </div>
+
 <?php echo $footer; ?>
+
 <script>
 function wishlist(product_id,e) {
   if ($(e).hasClass('active')) {
@@ -202,52 +208,42 @@ function wishlist(product_id,e) {
     })
   })
   
-  //倒计时
-  // function show_time() {
-  //       $(".djs_p").each(function() {
-  //           var endtime = $(this).prop("title");
-  //           var time_start = new Date().getTime(); //设定当前时间
-  //           var time_end = new Date(endtime).getTime(); //设定目标时间
-  //           var time_distance = time_end - time_start;
-  //           var timer;
-  //           if (time_distance >= 0) {
-  //               var int_day = Math.floor(time_distance / 86400000)
-  //               time_distance -= int_day * 86400000;
-  //               var int_hour = Math.floor(time_distance / 3600000)
-  //               time_distance -= int_hour * 3600000;
-  //               var int_minute = Math.floor(time_distance / 60000)
-  //               time_distance -= int_minute * 60000;
-  //               var int_second = Math.floor(time_distance / 1000)
-  //               if (int_day < 10) {
-  //                   int_day = "0" + int_day;
-  //               }
-  //               if (int_hour < 10) {
-  //                   int_hour = "0" + int_hour;
-  //               }
-  //               if (int_minute < 10) {
-  //                   int_minute = "0" + int_minute;
-  //               }
-  //               if (int_second < 10) {
-  //                   int_second = "0" + int_second;
-  //               }
-  //               $(this).find(".int_day").text(int_day);
-  //               $(this).find(".int_hour").text(int_hour);
-  //               $(this).find(".int_minute").text(int_minute);
-  //               $(this).find(".int_second").text(int_second);
-  //           }else{
-  //               clearInterval(timer);
-  //               $(this).parent(".bg_hui").css("display","none");
-  //           }
-  //       })
-  //       timer = setTimeout("show_time()", 1000);
-  //   }
-  //   show_time();
-
 
 
 </script>
- <script>
+<script>
   $(function(){
+    //ban輪播 img+video
+    var myvideo = document.getElementById("my_video");
+        $(".pro_ban .bf_img").click(function(){
+          myvideo.play();
+          $(this).hide()
+          $("#my_video").attr("controls","controls");
+        })
+    myvideo.addEventListener('pause',function(){  
+      $(".bf_img").show()
+        $('#my_video').removeAttr("controls");
+    })
+    var swiper3 = new Swiper('.swiper3', {
+      navigation: {
+          nextEl: '.swiper3 .swiper-button-next',
+          prevEl: '.swiper3 .swiper-button-prev',
+      },
+      on: {
+          slideChange: function () {
+            myvideo.pause();
+            if(this.activeIndex == 0){
+              $(".pro_ban .swiper-button-prev").hide();
+              $(".pro_ban .swiper-button-next").show();
+            }else if(this.activeIndex == 1){
+              $(".pro_ban .swiper-button-next").hide();
+              $(".pro_ban .swiper-button-prev").show();
+            }
+          },
+        },
+      });
+    
+    
 //    顶部视频播放
     var top_video = document.getElementById("top_video");
     $(".top_video .bf_img").click(function(){
@@ -256,6 +252,9 @@ function wishlist(product_id,e) {
       $(this).siblings("video").attr("controls","controls");
     });
 //    底部视频播放
+    if($(window).innerWidth()<=750){
+      $(".fot_video video").attr("poster","img/wig_bf_bg.jpg");
+    }
     var fot_video = document.getElementById("fot_video");
     $(".fot_video .bf_img").click(function(){
       $(this).css("display","none");
@@ -263,55 +262,38 @@ function wishlist(product_id,e) {
       $(this).siblings("video").attr("controls","controls");
     });
     
-    //4产品轮播
-    var li_w=4;
-      var win_w = $(window).innerWidth();
-      if(win_w>920){
-        li_w=4;
-        mr_w=30;
-      }else{
-        li_w=2;
-        mr_w="3%";
-      }
-    var swiper1 = new Swiper('.swiper1', {
-          slidesPerView: li_w,
-          spaceBetween: mr_w ,
-          slidesPerGroup: li_w,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-    });
-    
-    var swiper2 = new Swiper('.swiper2', {
-          slidesPerView: 2,
-          spaceBetween: mr_w ,
-          slidesPerGroup: 2,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          initialSlide:2,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-    });
-    var swiper3 = new Swiper('.swiper3', {
-          slidesPerView: 2,
-          spaceBetween: mr_w ,
-          slidesPerGroup: 2,
-          loop: true,
-          loopFillGroupWithBlank: true,
-          initialSlide:0,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-    });
     
   })
+  
   window.onload =function(){
     $(".top_video").height($(".top_video").siblings("img").height());
+    
+    
+    var swiper10 = new Swiper('.swiper1', {
+          loop:true,
+          slidesPerView: 4,
+          spaceBetween: 30 ,
+           observer:true,
+           observeParents:true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+    });
+  
+
+    var swiper2 = new Swiper('.swiper2', {
+      loop:true,
+      initialSlide :1,
+      slidesPerView: 2,
+          centeredSlides: true,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }, 
+          
+    });
   }
 </script>
+

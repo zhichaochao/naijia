@@ -27,7 +27,7 @@ $.fn.lqdatetimepicker = function (options) {
                     selected : (new Date()).getMonth()+1  //月份初始
                 },
                 'Y' : {
-                    begin : (new Date()).getFullYear(), //年份开始
+                    begin : (new Date()).getFullYear()-80, //年份开始
                     end : (new Date()).getFullYear()+1, //年份结束
                     selected : (new Date()).getFullYear() //年份初始
                 }

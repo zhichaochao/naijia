@@ -245,16 +245,36 @@ function wishlist(product_id,e) {
   $(function(){
 
   //ban輪播
+    // var swiper = new Swiper('.swiper-container', {
+    //   loop : true,
+    //   navigation: {
+    //       nextEl: '.swiper-button-next',
+    //       prevEl: '.swiper-button-prev',
+    //   },
+    //     // pagination: {
+    //     //   el: '.swiper-pagination',
+    //     //   clickable :true,
+    //     // },
+    //   });
+
     var swiper = new Swiper('.swiper-container', {
-      loop : true,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
-        // pagination: {
-        //   el: '.swiper-pagination',
-        //   clickable :true,
-        // },
+      
+      on: {
+          slideChange: function () {
+            myvideo.pause();
+            if(this.activeIndex == 0){
+              $(".swiper-button-prev").hide();
+              $(".swiper-button-next").show();
+            }else if(this.activeIndex == 1){
+              $(".swiper-button-next").hide();
+              $(".swiper-button-prev").show();
+            }
+          },
+        },
       });
     //鼠标覆盖停止自动切换
       // swiper.el.onmouseover = function(){

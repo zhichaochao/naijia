@@ -666,13 +666,17 @@ window.onload=function(){
 		$(".wish_btn").click(function(){
 			if($(this).hasClass("active")){
 				$(this).removeClass("active");
-				
-//				$(this).find("span").html("<i></i> Add To Wish List");
 			}else{
 				$(this).addClass("active");
-				
-//				$(this).find("span").html("<i></i> Saved");
-				
+			}
+		})
+		
+		//默认隐藏显示
+		$(".bt_span").each(function(){
+			if($(this).hasClass("off")){
+				$(this).siblings("ul").slideDown();
+			}else{
+				$(this).siblings("ul").slideUp();
 			}
 		})
 		

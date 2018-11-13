@@ -135,7 +135,7 @@
         li_w=2;
         mr_w="3%";
       }
-    var swiper2 = new Swiper('.in_ul2', {
+    var swiper2 = new Swiper('.in_ul1 .in_ul2', {
           slidesPerView: li_w,
           spaceBetween: mr_w ,
           slidesPerGroup: li_w,

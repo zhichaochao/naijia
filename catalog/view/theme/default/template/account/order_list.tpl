@@ -39,7 +39,7 @@
               <p class="p1 clearfix">
                 <span class="span1"><?php echo $order['status']; ?></span>
                 <span class="span2">(<?php echo $order['date_added']; ?>)</span>
-                 <?php if ($order['status']=='Pending') { ?>
+                 <?php if ($order['payment_code']=='bank_transfer' && $order['status']=='Pending' && $order['bank_receipt']=='' ) { ?>
 
                 <span class="djs_p" title="<?php echo $order['lest_time']; ?>">
                   <em>Invalid in</em>

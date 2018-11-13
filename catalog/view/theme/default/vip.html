@@ -123,12 +123,16 @@
 							</label>
 							<label class="w_50 fl clearfix" for="">
 								<span class="pl_span">Gender</span>
-								<input type="text" placeholder="Gender" />
+								<!--<input type="text" placeholder="Gender" />-->
+								<select name="">
+									<option value="">nan</option>
+									<option value="">nv</option>
+								</select>
 								<p class="ts_ps">please enter your first name. </p>
 							</label>
 							<label class="w_50 fr clearfix" for="">
 								<span class="pl_span">Birthday</span>
-								<input type="text" placeholder="Birthday" />
+								<input class="time" type="text" placeholder="Birthday" />
 								<p class="ts_ps">please enter your first name. </p>
 							</label>
 							<label class="clearfix" for="">
@@ -410,15 +414,86 @@
 				</div>
 			</div>
 		</div>
+	
+		<!--vip弹窗-->
+		<div class="vip_modal clearfix">
+			<div class="text clearfix">
+				<div class="close"></div>
+				<img class="changeimage lazyLoad lf_img"  data-image="img/vip4.jpg" data-mimage="img/yd_vip4.jpg" alt="" />
+				<div class="right clearfix">
+					<img src="img/vip_6.png"/>
+					<span>Congratulation!</span>
+					<p>
+						You have now became our VIP member.<br />
+						₦2000 points has store to your account.
+					</p>
+					<div class="btn">
+						<a class="vip_a" href="###">Continute to shop</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	
 	</body>
 </html>
+<link rel="stylesheet" href="css/time.css" />
+<script type="text/javascript" src="js/time.js" ></script>
 <script type="text/javascript">
 	window.onload =function(){
 		if($(window).width()>920){
 			let lf_len = $(".form_text").height();
 			$(".r_text").height(lf_len);
-			$(".r_text").css("line-height","4.9rem");
+			$(".r_text").css("line-height",lf_len+"px");
 		}
+		
+	
+	//表单提交
+	$(".tj_btn").click(function(e){
+		
+		$(".vip_modal").fadeIn();
+		$("body").css("overflow","hidden");
+		let	vip_w = $(".vip_modal .text").width();
+		let	vip_h = $(".vip_modal .text").height();
+		$(".vip_modal .text").css("margin-left",-vip_w/2+"px").css("margin-top",-vip_h/2+"px");
+		e.preventDefault();
+	})
+	
+	$(".vip_modal").click(function(e){
+		var close = $('.vip_modal .text'); 
+	   	if(!close.is(e.target) && close.has(e.target).length === 0){
+	   		$(".vip_modal").fadeOut();
+			$("body").css("overflow","");
+		}
+	})
+	$(".vip_modal .close").click(function(){
+		$(this).parents(".vip_modal").fadeOut();
+		$("body").css("overflow","");
+	})
+	
+	//時間插件
+		function getNow(s) {
+	   		return s < 10 ? '0' + s: s;
+		}
+		let myDate = new Date();
+		let year=myDate.getFullYear();
+		let month=myDate.getMonth()+1;
+		let day=myDate.getDate(); 
+		let now=year+'-'+getNow(month)+"-"+getNow(day);
+		window.onload =function(){
+			$(".time").attr("value",now);
+		}
+		$(".time").on("click",function(e){
+			e.stopPropagation();
+			$(this).lqdatetimepicker({
+				css : 'datetime-day',
+				dateType : 'D',
+				selectback : function(){
+				}
+			});
+	
+		});
+		
 	}
 </script>
 

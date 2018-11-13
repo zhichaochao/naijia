@@ -100,6 +100,7 @@ class ControllerAccountOrder extends Controller {
 				'lest_time'   => date("Y-m-d H:i:s",strtotime($result['date_modified'])+60*30),
 			
 				'status'     => $result['status'],
+				'bank_receipt'     => $result['bank_receipt'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 		
 				'qty'        => $product_num,
