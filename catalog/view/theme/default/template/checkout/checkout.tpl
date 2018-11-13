@@ -61,9 +61,9 @@
                                    
                                 </div>
                             </div>
-                            <div class="a_btn">
+                            <!-- <div class="a_btn">
                                 <a onclick="pay();"  class="a_qd_btn">Continue to pay</a>
-                            </div>
+                            </div> -->
                         </div>
                     
                     </div>

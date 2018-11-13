@@ -163,6 +163,13 @@
 
               
               <li>
+                    <button class="shop_btn" id="checkout_btns"><span><i ><em class="shop_ac"><?=$text_cart_items;?></em></i> <p>Check Out</p></span></button>
+                      <!-- <button class="shop_a">Add To Shopping Bag</button> -->
+                     <!--  <button class="wish_btn">
+                        <span><i></i> Add To Wish List</span>
+                        <span class="active"><i></i> Saved</span>
+                        
+                      </button> -->
                <!--    <?php if (!isset($logins)) { ?>
                 <a class="shop_a" href="<?php echo $login; ?>">Please Login First</a>
                   <?php }?> -->
@@ -375,6 +382,10 @@
 <script>
 window.onload=function(){
   $(function(){
+     $('#checkout_btns').click(function () {
+          location.href='<?=$shopping_cart;?>';
+          
+        })
     //动态改变头部红色广告条的宽度
     if($(window).width()>920){
       var p_win = 100/parseInt($(".time>p").length);
@@ -438,6 +449,13 @@ window.onload=function(){
         $(this).siblings("ul").slideUp();
       }
     })
+
+    $(".shop_a").click(function(){
+    if(!$(this).hasClass("active")){
+      $(this).addClass("active");
+      $(this).siblings(".shop_btn").addClass("active");
+    }
+  })
     
     
     //下拉收起
@@ -748,6 +766,7 @@ function wishlist(product_id,e) {
                 // tips('Successful shopping cart');
                 // alert("成功加入购物车");
               $('#cart_count').html(json.total);
+              $('.shop_ac').html(json.total);
                 $(".cart_li").click();
 
                 

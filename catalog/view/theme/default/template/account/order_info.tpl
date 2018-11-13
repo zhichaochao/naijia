@@ -84,7 +84,7 @@
           <!-- <a class="pay_a huang" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
           <a class="pay_a huang review_tc" href="javascript:;">REVIEW</a>
           <span>Order date:<?php echo $date_added; ?></span>
-          <a class="btn_a contact_tc" href="###">Contact us</a>
+          <a class="btn_a contact_tc" href="">Contact us</a>
         </div>
           <?php }elseif($order_status=='Pending-unfilled'){?>
           <div class="left clearfix">
@@ -97,7 +97,7 @@
             package situation changes.
           </p>
           <span>Order date:<?php echo $date_added; ?></span>
-          <a class="btn_a contact_tc" href="###">Contact us</a>
+          <a class="btn_a contact_tc" href="">Contact us</a>
         </div>
 <?php }elseif($order_status=='Delivered'){?>
 
@@ -109,7 +109,7 @@
           </p>
           <a class="pay_a lv" onclick="javascript:confirm_order('<?php echo $order_id; ?>');">Confirm Receipt</a>
           <span>Order date:<?php echo $date_added; ?></span>
-          <a class="btn_a contact_tc" href="###">Contact us</a>
+          <a class="btn_a contact_tc" href="">Contact us</a>
         </div>
 
 <?php }elseif($order_status=='lnvalid'){?>
@@ -276,7 +276,41 @@
         <?php if($order_status=='Pending'){?>
         <?php if($payment_code == 'bank_transfer' ) { ?>
 
+         <?php if(empty($bank_receipt)){?>
          <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Please finish payment or upload the bank alert.</p>
+          <p class="p1">Or it will be invalid in 
+            <span class="span_r djs_p" title="">
+              <span class="int_hour">00</span><i>:</i>
+              <span class="int_minute">00</span><i>:</i>
+              <span class="int_second">00</span>
+            </span>
+          </p>
+          <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
+        </div>
+
+          <?php }else{ ?>
+          <div class="zt_top clearfix">
+          <em class="line_h"></em>
+          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
+          <p class="p1">Thanks for your order .</p>
+          <p class="p1">· Payment has been completed.</p>
+          <p class="p1">· It will ready to ship in 1- 2 days.</p>
+          <p class="p1">Emails will update to you if your package situation changes.</p>
+        </div>
+         <!--  <p class="p2">
+            Thanks for your order .<br />
+            · Payment has been completed<br />
+            · It will ready to ship in 1- 2 days.<br />
+            Emails will update to you if your <br />
+            package situation changes.
+          </p> -->
+
+          <?php }?>
+
+         <!-- <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
           <p class="p1">Thanks for your order .</p>
@@ -284,7 +318,7 @@
           <p class="p1">· It will ready to ship in 1- 2 days.</p>
           <p class="p1">Emails will update to you if your package situation changes.</p>
           <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
-        </div>
+        </div> -->
           <!-- <span>Order date:2018-09-07</span> -->
        <!--  </div> -->
 
@@ -336,7 +370,7 @@
           <div class="zt_top clearfix">
           <em class="line_h"></em>
           <h1 class="lv"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Your package has been delivered on <?php echo $date_modified; ?>. </p>
+          <p class="p1">Your package has been delivered on <?php echo $delivered_date; ?>. </p>
         </div>
         <?php }elseif($order_status=='lnvalid'){?>
 
@@ -596,7 +630,7 @@ function bitian() {
 </script>
 <script>
 function confirm_order(order_id){
-  alert(111);die;
+  alert(1111);die;
 if(confirm('Are you sure?')){
 
            $.ajax({
@@ -672,7 +706,7 @@ if(confirm('Are you sure?')){
             }else{
                 clearInterval(timer);
                 // alert(11);
-                // window.location.href('/index.php?route=account/order');
+                window.location.href('/index.php?route=account/order');
                 $(this).css("display","none");
             }
         })

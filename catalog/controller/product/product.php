@@ -283,6 +283,9 @@ class ControllerProductProduct extends Controller {
 
             $data['review_tpl'] = $this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id']);
 
+            //购物车数量
+        $data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
+
             $this->load->model('catalog/review');
 
             $data['tab_description'] = $this->language->get('tab_description');

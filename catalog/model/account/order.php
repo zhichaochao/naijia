@@ -143,7 +143,7 @@ class ModelAccountOrder extends Model {
 //恢复订单
 	public function recoverorder($order_id) {
 		// print_r("UPDATE " . DB_PREFIX ."order SET order_status_id = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");exit;
-		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '1',date_modified = NOW() WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
+		$this->db->query("UPDATE " . DB_PREFIX ."order SET order_status_id = '1',date_modified = NOW(),bank_receipt = '' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
 	}
 	//确认收货
 	public function confirmorder($order_id) {
