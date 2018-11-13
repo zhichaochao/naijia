@@ -265,7 +265,7 @@
     <?php  } ?>
 
     <!--优惠卷弹窗-->
-    <div class="in_coupon_tc clearfix">
+<!--     <div class="in_coupon_tc clearfix">
       <div class="text clearfix">
         <div class="con clearfix">
           <h1>Discounts&Coupons</br>
@@ -313,7 +313,7 @@
           </ol>
         </div>
       </div>
-    </div>
+    </div> -->
 <?php echo $footer; ?>
 <script>
 function thumbs(review_id,e) {

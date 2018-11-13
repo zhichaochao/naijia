@@ -69,7 +69,8 @@
                   <div style="position: absolute;min-width: 600px;left: 0;">
                 <ol class="nav_ol">
                   <li><a href="<?php echo $acchref;?>">Accessories</a></li>
-                  <li><a href="<?php echo $blog;?>">Blog</a></li>
+                  <!-- <li><a href="<?php echo $blog;?>">Blog</a></li> -->
+                  <li><a href="javascript:;">Blog</a></li>
                 </ol>
               </div>
               </li>

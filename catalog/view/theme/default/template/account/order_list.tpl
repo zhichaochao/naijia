@@ -39,7 +39,19 @@
               <p class="p1 clearfix">
                 <span class="span1"><?php echo $order['status']; ?></span>
                 <span class="span2">(<?php echo $order['date_added']; ?>)</span>
-                <span class="span3">Order Number:<?php echo $order['order_number']; ?></span>
+                 <?php if ($order['status']=='Pending') { ?>
+
+                <span class="djs_p" title="<?php echo $order['lest_time']; ?>">
+                  <em>Invalid in</em>
+                  <span class="int_hour">00</span><i>:</i>
+                  <span class="int_minute">00</span><i>:</i>
+                  <span class="int_second">00</span>
+                </span>
+                 <?php }else{?>
+ <span class="span3">Order Number:<?php echo $order['order_number']; ?></span>
+                 <?php }?>
+
+               
               </p>
               <?php if ($order['products']) { ?>
                 <?php foreach ($order['products'] as $product) { ?>
@@ -158,6 +170,46 @@ if(confirm('Are you sure?')){
 }
 </script>
 <script>
+//倒计时
+  function show_time() {
+        $(".djs_p").each(function() {
+            var endtime = $(this).prop("title");
+            var time_start = new Date().getTime(); //设定当前时间
+            var time_end = new Date(endtime).getTime(); //设定目标时间
+            var time_distance = time_end - time_start;
+            var timer;
+            if (time_distance >= 0) {
+                var int_day = Math.floor(time_distance / 86400000)
+                time_distance -= int_day * 86400000;
+                var int_hour = Math.floor(time_distance / 3600000)
+                time_distance -= int_hour * 3600000;
+                var int_minute = Math.floor(time_distance / 60000)
+                time_distance -= int_minute * 60000;
+                var int_second = Math.floor(time_distance / 1000)
+                if (int_day < 10) {
+                    int_day = "0" + int_day;
+                }
+                if (int_hour < 10) {
+                    int_hour = "0" + int_hour;
+                }
+                if (int_minute < 10) {
+                    int_minute = "0" + int_minute;
+                }
+                if (int_second < 10) {
+                    int_second = "0" + int_second;
+                }
+                $(this).find(".int_day").text(int_day);
+                $(this).find(".int_hour").text(int_hour);
+                $(this).find(".int_minute").text(int_minute);
+                $(this).find(".int_second").text(int_second);
+            }else{
+                clearInterval(timer);
+                $(this).css("display","none");
+            }
+        })
+        timer = setTimeout("show_time()", 1000);
+    }
+    show_time();
     window.onload = function(){
       var lf_height = $(".lf_nav").height();
     $(".null").height(lf_height);

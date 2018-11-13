@@ -265,6 +265,9 @@
       <?php if($order_status=='Complete'){?>
       <p class="ms_p">Please contact us if you have any problem of your order.</p>
       <?php } ?>
+      <?php if($order_status=='Delivered'){?>
+      <p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
+      <?php } ?>
     </div>
     <!--移动端-->
     <div class="ordet_con clearfix">

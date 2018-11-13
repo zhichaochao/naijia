@@ -167,7 +167,7 @@
     //优惠券
     $(".in_coupon").click(function(){
       if($(window).width()>920){
-        location.href = '';
+        location.href = 'javascript:;';
       }else{
         $("body").css("overflow","hidden");
         $(".in_coupon_tc").animate({top:"0"});

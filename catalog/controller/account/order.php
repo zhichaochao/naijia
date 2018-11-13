@@ -79,10 +79,25 @@ class ControllerAccountOrder extends Controller {
 					$shipping_total=$this->currency->format($value['value'], $result['currency_code'], $result['currency_value']);
 				}
 			}
+			// $data['add_time']=strtotime($order_info['date_modified']);
+			
+			// $data['lest_time']=$data['add_time']+60*30-$data['now_time'];
+
+			// $add_time=strtotime($order_info['date_modified']);
+   //  		$now_time=strtotime($order_info['now']);
+			//   if ($now_time>$add_time+60*30) {
+   //    				$this->load->model('account/order');
+			// 	$this->model_account_order->lnvalidorder($this->request->get['order_id']);
+      
+   // 			 }
+			// $now_time=strtotime('now');
+			// print_r($now_time);exit;
 			$data['orders'][] = array(
 				'order_id'   => $result['order_id'],
 				'products'   => $order_products,
 				'order_number'   => $result['order_number'],
+				// 'lest_time'   => date("Y-m-d H:i:s",strtotime($result['date_modified'])+60*30-$now_time),
+				'lest_time'   => date("Y-m-d H:i:s",strtotime($result['date_modified'])+60*30),
 			
 				'status'     => $result['status'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
@@ -291,7 +306,7 @@ class ControllerAccountOrder extends Controller {
 			$data['add_time']=strtotime($order_info['date_modified']);
 			$data['now_time']=strtotime($order_info['now']);
 			$data['lest_time']=$data['add_time']+60*30-$data['now_time'];
-
+// print_r($data['now_time']);exit;
 			$add_time=strtotime($order_info['date_modified']);
     		$now_time=strtotime($order_info['now']);
 			  if ($now_time>$add_time+60*30) {

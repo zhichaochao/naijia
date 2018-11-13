@@ -10,7 +10,7 @@
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/swiper.js" ></script>
-		<title>PERSONAL CENTER</title>
+		<title>MY MESSAGE</title>
 	</head>
 	<body>
 		<!--头部-->
@@ -100,61 +100,77 @@
 		
 		<div class="in_content clearfix"></div>
 		<!--内容-->
-		
-		<div class="my_center clearfix">
-			<div class="text clearfix">
-				<div class="top clearfix">
-					<img src="img/png/touxiang_.png"/>
-					<p>Tyler Durden</p>
-					<span>+8613286484822</span>
-					<ol class="clearfix">
-						<li>
-							<a href="###">
-								<em></em>
-								<span>My Orders</span>
-							</a>
-						</li>
-						<li>
-							<a href="###">
-								<em></em>
-								<span>My Addresses</span>
-							</a>
-						</li>
-						<li>
-							<a href="###">
-								<em></em>
-								<span>My Profile</span>  
-							</a>
-						</li>
-					</ol>
-				</div>
-				<div class="bot clearfix">
-					<ul class="clearfix">
-						<li>
-							<a href="###">
-								My Wishlist 
-							</a>
-						</li>
-						<li>
-							<a href="###">
-								My Coupons 
-							</a>
-						</li>
-						<li>
-							<a href="###">
-								My Message 
-							</a>
-						</li>
-						<li>
-							<a href="###">
-								My Reservation 
-							</a>
-						</li>
+		<div class="order_con clearfix">
+			<div class="or_content clearfix">
+					<div class="top_yd clearfix">
+						<h1><a class="fh" href="###">< BACK</a>My Message</h1>
+					</div>
+					
+				<div class="lf_nav">
+					<img class="tx_img" src="img/png/touxiang.png" alt="" />
+					<h2>Tyler Durden</h2>
+					<p class="p1">+8613286484822</p>
+					
+					<ul>
+						<li><a href="###"><span>My Orders</span><i></i></a></li>
+						<li><a href="###"><span>My Profile</span><i></i></a></li>
+						<li><a href="###"><span>My Addresses</span><i></i></a></li>
+						<li><a href="###"><span>My Favorites</span><i></i></a></li>
+						<li><a href="###"><span>My Coupon</span><i></i></a></li>
+						<li class="active"><a href="###"><span>My Message</span><i></i></a></li>
+						<li><a href="###"><span>My Reservation</span><i></i></a></li>
 					</ul>
-					<!--<img src="img/vip.jpg"/>-->
+					
+					<img class="vip_img" src="img/vip.jpg" alt="" />
 				</div>
 				
+				<div class="right_text  clearfix">
+					<div class="my_message clearfix">
+						<h1 class="yd_hide">MY  MESSAGE</h1>
+						<ul>
+							<li>
+								<p class="p1"><span>Guest service</span>  <em>(09/11/2018)</em></p>
+								<p class="p2">
+									Helps develop their brain. But as it turns out, dads don’t speak baby talk as much momsand that 
+									needs to change. Now, we challenge dads to become fluent baby talkers through Talk for Dads. 
+									It´s a fun and easy tool to highlight avery important issue", says Diana Amini, Global Manager,
+									H&M Foundation.helps develop their brain. But as it turns out,dads don’t 
+								</p>
+							</li>
+							<li>
+								<p class="p1"><span>Guest service</span>  <em>(09/11/2018)</em></p>
+								<p class="p2">
+									Helps develop their brain. But as it turns out, dads don’t speak baby talk as much momsand that 
+									needs to change. Now, we challenge dads to become fluent baby talkers through Talk for Dads. 
+									It´s a fun and easy tool to highlight avery important issue", says Diana Amini, Global Manager,
+									H&M Foundation.helps develop their brain. But as it turns out,dads don’t 
+								</p>
+							</li>
+							<li>
+								<p class="p1"><span>Guest service</span>  <em>(09/11/2018)</em></p>
+								<p class="p2">
+									Helps develop their brain. But as it turns out, dads don’t speak baby talk as much momsand that 
+									needs to change. Now, we challenge dads to become fluent baby talkers through Talk for Dads. 
+									It´s a fun and easy tool to highlight avery important issue", says Diana Amini, Global Manager,
+									H&M Foundation.helps develop their brain. But as it turns out,dads don’t 
+								</p>
+							</li>
+							<li>
+								<p class="p1"><span>Guest service</span>  <em>(09/11/2018)</em></p>
+								<p class="p2">
+									Helps develop their brain. But as it turns out, dads don’t speak baby talk as much momsand that 
+									needs to change. Now, we challenge dads to become fluent baby talkers through Talk for Dads. 
+									It´s a fun and easy tool to highlight avery important issue", says Diana Amini, Global Manager,
+									H&M Foundation.helps develop their brain. But as it turns out,dads don’t 
+								</p>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+			
 			</div>
+			
 		</div>
 		
 		
@@ -407,5 +423,12 @@
 		</div>
 	</body>
 </html>
-
-
+<script>
+    window.onload = function(){
+    	var lf_height = $(".lf_nav").height();
+		$(".null").height(lf_height);
+		var null_w = $(".null>.text").width();
+		var null_h = $(".null>.text").height();
+		$(".null>.text").css("margin-left",-null_w/2+"px").css("margin-top",-null_h/2+"px");
+    }
+</script>

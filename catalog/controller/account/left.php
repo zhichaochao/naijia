@@ -38,6 +38,11 @@ class ControllerAccountLeft extends Controller {
                     'name' => 'My Coupon',
                     'url' => $this->url->link('account/coupon')
                 ),
+                 array(
+                 
+                    'name' => 'My Message',
+                    'url' => $this->url->link('account/message')
+                ),
                 //优惠劵
                 // array(
             
