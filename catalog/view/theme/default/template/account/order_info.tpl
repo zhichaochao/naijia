@@ -154,7 +154,7 @@
               <p>Total Points <span><?php echo $subtotals; ?></span></p>
               <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
 
-              <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p>
+              <!-- <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p> -->
 
             </div>
             <hr />
@@ -481,7 +481,7 @@
               <p>Total Products <span><?php echo $subtotals; ?></span></p>
               <p>Total Points <span><?php echo $subtotals; ?></span></p>
               <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
-              <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p>
+              <!-- <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p> -->
             </div>
 
             

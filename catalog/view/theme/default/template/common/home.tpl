@@ -85,7 +85,7 @@
                     </div>
                     
                     <!-- Swiper -->
-                      <div class="swiper-container in_ul2">
+                      <div class="swiper-container in_ul2 index_pro">
                         <div class="swiper-wrapper">
                                <?php if($hots){ foreach ($hots as $hot) { ?>
                           <div class="swiper-slide clearfix">
