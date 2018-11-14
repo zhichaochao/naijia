@@ -85,7 +85,7 @@
                 <a class="bot_a a1" href="<?php echo $order['repay'];?>">Continue To Pay</a>
                 <?php } ?>
 
-                <?php if($order['status'] == 'Canceled' || $order['status'] == 'lnvalid' ){ ?>
+                <?php if($order['status'] == 'Canceled' || $order['status'] == 'lnvalid' && $order['payment_code'] !== 'paystack' ){ ?>
                 <a class="bot_a a1"  onclick="javascript:recover_order('<?php echo $order['order_id']; ?>');">Recover Order</a>
                 <?php } ?>
                  <?php if($order['status'] == 'Delivered'){ ?>
@@ -121,12 +121,13 @@
     </div>
     <script>
 function cancel_order(url){
-  if(confirm('Are You Sure?')){
+  // alert(1111);die;
+  // if(confirm('Are You Sure?')){
     location.href=url;
-  }
+  // }
 }
 function order_remove(order_id){
-if(confirm('Are you sure?')){
+// if(confirm('Are you sure?')){
            $.ajax({
             url: '<?php echo $orderdel?>',
             type: 'post',
@@ -137,10 +138,11 @@ if(confirm('Are you sure?')){
             }
         })
       
-    }
+    // }
 }
 function recover_order(order_id){
-if(confirm('Are you sure?')){
+  // alert(1111);die;
+// if(confirm('Are you sure?')){
            $.ajax({
             url: '<?php echo $orderrecover?>',
             type: 'post',
@@ -152,10 +154,10 @@ if(confirm('Are you sure?')){
             }
         })
       
-    }
+    // }
 }
 function confirm_order(order_id){
-if(confirm('Are you sure?')){
+// if(confirm('Are you sure?')){
            $.ajax({
             url: '<?php echo $orderconfirm?>',
             type: 'post',
@@ -166,7 +168,7 @@ if(confirm('Are you sure?')){
             }
         })
       
-    }
+    // }
 }
 </script>
 <script>

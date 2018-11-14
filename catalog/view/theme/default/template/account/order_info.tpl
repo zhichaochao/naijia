@@ -491,9 +491,6 @@
               <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
               <a class="btn_a hong" href="<?php echo $repay;?>">CONTINUE TO PAY</a>
             <?php }?>
-            <?php if($payment_code == 'paystack') { ?>
-                    <a href="<?php echo $repay;?>"   class="btn_a hong" >CONTINUE TO PAY</a>
-                  <?php } ?>
             <?php }?>
 
             <?php if($order_status=='Complete' ){?>
@@ -633,8 +630,8 @@ function bitian() {
 </script>
 <script>
 function confirm_order(order_id){
-  alert(1111);die;
-if(confirm('Are you sure?')){
+  // alert(1111);die;
+// if(confirm('Are you sure?')){
 
            $.ajax({
             url: 'index.php?route=account/order/confirm',
@@ -646,10 +643,10 @@ if(confirm('Are you sure?')){
             }
         })
       
-    }
+    // }
 }
 function recover_order(order_id){
-if(confirm('Are you sure?')){
+// if(confirm('Are you sure?')){
            $.ajax({
             url: 'index.php?route=account/order/recover',
             type: 'post',
@@ -660,7 +657,7 @@ if(confirm('Are you sure?')){
             }
         })
       
-    }
+    // }
 }
   
   
@@ -708,9 +705,8 @@ if(confirm('Are you sure?')){
                 $(this).find(".int_second").text(int_second);
             }else{
                 clearInterval(timer);
-                // alert(11);
-                window.location.href('/index.php?route=account/order');
                 $(this).css("display","none");
+              window.location.href="/index.php?route=account/order";
             }
         })
         timer = setTimeout("show_time()", 1000);

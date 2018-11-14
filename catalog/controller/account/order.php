@@ -310,11 +310,14 @@ class ControllerAccountOrder extends Controller {
 // print_r($data['now_time']);exit;
 			$add_time=strtotime($order_info['date_modified']);
     		$now_time=strtotime($order_info['now']);
-			  if ($now_time>$add_time+60*30) {
-      				$this->load->model('account/order');
-				$this->model_account_order->lnvalidorder($this->request->get['order_id']);
-      
-   			 }
+    		if($data['order_status']=='Pending'&&$data['payment_code']=='bank_transfer'){
+				if ($now_time>$add_time+60*30) {
+				      				$this->load->model('account/order');
+								$this->model_account_order->lnvalidorder($this->request->get['order_id']);
+				      
+				   			 }
+    		}
+			  
 
 // print_r($data['lest_time']);exit;
 // 			if ($order_info['payment_address_format']) {

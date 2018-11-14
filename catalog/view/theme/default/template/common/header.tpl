@@ -69,8 +69,9 @@
                   <div style="position: absolute;min-width: 600px;left: 0;">
                 <ol class="nav_ol">
                   <li><a href="<?php echo $acchref;?>">Accessories</a></li>
+                  <!-- 暂时隐藏 -->
                   <!-- <li><a href="<?php echo $blog;?>">Blog</a></li> -->
-                  <li><a href="javascript:;">Blog</a></li>
+                  <!-- <li><a href="javascript:;">Blog</a></li> -->
                 </ol>
               </div>
               </li>
@@ -142,7 +143,8 @@
               <p class="nav_p">Hair Care<i></i></p>
               <ol class="yd_nav_ol">
                 <li><a href="<?php echo $acchref;?>">Accessories</a></li>
-                <li><a href="<?php echo $blog;?>">Blog</a></li>
+                <!-- 暂时隐藏 -->
+                <!-- <li><a href="<?php echo $blog;?>">Blog</a></li> -->
               </ol> 
             </li>
             <li><a href="<?php echo $lagosstore;?>">Lagos Store <i></i></a></li>

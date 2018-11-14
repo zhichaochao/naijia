@@ -19,8 +19,8 @@
         
         <!--内容-->
         <div class="intext1 clearfix">
-
-        <div class="in_coupon clearfix">
+<!-- 优惠券 -->
+    <!--     <div class="in_coupon clearfix">
         <div class="coupon_pic">
           <img  class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/coupon_bg.jpg' data-mimage='catalog/view/theme/default/img/yd_coupon_bg.jpg'/>
         </div>
@@ -59,23 +59,9 @@
           </li>
         </ul>
       
-      </div>
+      </div> -->
 
 
-
-             <!--  <div class="in_coupon clearfix">
-                <ul class="clearfix">
-                    <li>
-                      <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
-                    </li>
-                    <li>
-                      <img src="catalog/view/theme/default/img/coupin_2.jpg" alt="" />         
-                    </li>
-                    <li>
-                      <img src="catalog/view/theme/default/img/coupin_3.jpg" alt="" />         
-                    </li>
-                </ul>
-            </div> -->
 
 
 
@@ -195,7 +181,7 @@
                     <div class="bot_map">
                         <img class="changeimage lazyLoad" srcs="<?=isset($store['image'])?$store['image']:'catalog/view/theme/default/img/in_ul7.jpg';?>" />
                         <div class="map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3964.4091024856534!2d3.5845518!3d6.4697496!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbb377a4c7304ee86!2sCynergy+Suites+Royale!5e0!3m2!1sen!2snl!4v1536026538820" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.316086472699!2d3.347673814511896!3d6.607588724013885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b922901de32d3%3A0x6f07f7e89944cc0d!2zT2JhZmVtaSBBd29sb3dvIFdheSwgSWtlamEsIOWwvOaXpeWIqeS6mg!5e0!3m2!1szh-CN!2sus!4v1542100335451" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
