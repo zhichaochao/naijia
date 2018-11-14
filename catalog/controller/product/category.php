@@ -130,6 +130,22 @@ class ControllerProductCategory extends Controller {
 			$data['button_grid'] = $this->language->get('button_grid');
 
 
+			if ($this->request->server['HTTPS']) {
+			$data['image1']=HTTPS_SERVER.'image/'.$category_info['image1'];
+			$data['ydimage1']=HTTPS_SERVER.'image/'.$category_info['ydimage1'];
+			$data['image2']=HTTPS_SERVER.'image/'.$category_info['image2'];
+			$data['ydimage2']=HTTPS_SERVER.'image/'.$category_info['ydimage2'];
+			$data['video']=HTTPS_SERVER.'image/video/home/'.$category_info['video'];
+			$data['video1']=HTTPS_SERVER.'image/video/home/'.$category_info['video1'];
+			$data['video2']=HTTPS_SERVER.'image/video/home/'.$category_info['video2'];
+
+			$data['banner1']=HTTPS_SERVER.'image/'.$category_info['banner1'];
+			$data['ydbanner1']=HTTPS_SERVER.'image/'.$category_info['ydbanner1'];
+			$data['banner2']=HTTPS_SERVER.'image/'.$category_info['banner2'];
+			$data['ydbanner2']=HTTPS_SERVER.'image/'.$category_info['ydbanner2'];
+			$data['banner3']=HTTPS_SERVER.'image/'.$category_info['banner3'];
+			$data['ydbanner3']=HTTPS_SERVER.'image/'.$category_info['ydbanner3'];
+		}else{
 			$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
 			$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
 			$data['image2']=HTTP_SERVER.'image/'.$category_info['image2'];
@@ -144,6 +160,8 @@ class ControllerProductCategory extends Controller {
 			$data['ydbanner2']=HTTP_SERVER.'image/'.$category_info['ydbanner2'];
 			$data['banner3']=HTTP_SERVER.'image/'.$category_info['banner3'];
 			$data['ydbanner3']=HTTP_SERVER.'image/'.$category_info['ydbanner3'];
+
+		}
 
 			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
 			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);

@@ -22,7 +22,12 @@ class ControllerInformationFaqs extends Controller {
 
 		$str=$this->config->get('config_video');
 		// 
-			$data['video1']=HTTP_SERVER.'image/video/home/'.$str;
+		if ($this->request->server['HTTPS']) {
+				$data['video1']=HTTPS_SERVER.'image/video/home/'.$str;
+		}else{
+				$data['video1']=HTTP_SERVER.'image/video/home/'.$str;
+		}
+		
 
 			$data['continue'] = $this->url->link('common/home');
 
