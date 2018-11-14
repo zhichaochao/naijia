@@ -76,7 +76,7 @@
 <script>
 
     function pay() {
-       alert('Please choose address and payment method.');
+       tips('Please choose address and payment method.','gantan',1000);
     }
     $(function(){
 

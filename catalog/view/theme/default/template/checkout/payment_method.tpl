@@ -104,16 +104,58 @@
                             <div class="check_order  clearfix confirm" >
                                 <h1>Order Details</h1>
                                 <div class="slides clear clearfix">
+                                    <?php foreach ($products as $product) { ?>
+                                <p><?=$product['name'];?> <span class="num">x<?=$product['quantity'];?></span></p>
+                              <?php } ?>
+                                <hr />
+                                </div>
+                                <!-- <div class="slide clear clearfix">
+
+                                <div class="total clearfix">
+                                      <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+
+                                <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                                      <?php }else{?>
+
+
+                                <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+
+                                <?php  }} ?>
+                                   
+                                </div>
+                                    <ul class="check_ul clearfix">
+                                        <?php foreach ($products as $product) { ?>
+                                    <li class="clearfix">
+                                        <div class="pic_img"><img src="<?=$product['image'];?>"/></div>
+                                        <div class="text">
+                                            <h2><?=$product['name'];?></h2>
+                                            <?php if($product['option']['selects']){?>
+                                             <?php foreach ($product['option']['selects'] as $option) { ?>
+                                            <p><?=$option['option_name'];?>: <?=$option['option_value_name'];?></p>
+                                              <?php  }} ?>
+
+                                        
+                                            <p>Quantity:  <?=$product['quantity'];?></p>
+                                            <p>Color:  <?=$product['color'];?></p>
+                                            <span> <?=$product['price'];?></span>
+                                        </div>
+                                    </li>
+                                     <?php  } ?>
+                                    </ul>
+                                    
+                                </div> -->
+
+                             <!--    <div class="slides clear clearfix">
                                 <?php foreach ($products as $product) { ?>
                                 <p><?=$product['name'];?> <span class="num">x<?=$product['quantity'];?></span></p>
                               <?php } ?>
                                 <hr />
                                
-                                </div>
+                                </div> -->
                             
-                                <div class="a_btn">
+                                <!-- <div class="a_btn">
                                     <a onclick="pay();" class="a_qd_btn">Continue to pay</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </li>
@@ -123,6 +165,21 @@
         get_total();
     }
  $(function(){
+    // pc右侧下拉
+        $(".slide_h1").click(function(){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+                
+//              $(this).siblings(".slides").show();
+//              $(this).siblings(".slide").stop().slideUp();
+                $(this).siblings(".slides").stop().slideDown();
+                $(this).siblings(".slide").hide();
+            }else{
+                $(this).addClass("active");
+                $(this).siblings(".slides").hide();
+                $(this).siblings(".slide").stop().slideDown();
+            }
+        })
     $(".pay_ol>li").click(function(){
         var payment_method=$(this).attr('data');
 
@@ -151,19 +208,19 @@
                 })
 
         })    
-           if($(window).width()<=920){
-            $(window).scroll(function(){
-                var div_top =parseInt($(".check_order").offset().top) ;
-                var sc_top = $(window).scrollTop();
-                if(sc_top < div_top-200){
-                    $(".address_con .a_btn").removeClass("active");
-                    $(".address_con .a_btn").css("position","fixed").css("padding","0.2rem 0.5rem");
-                }else{
-                    $(".address_con .a_btn").addClass("active");
-                    $(".address_con .a_btn").css("position","inherit").css("padding","0");
-                }
-            })
-        } 
+        //    if($(window).width()<=920){
+        //     $(window).scroll(function(){
+        //         var div_top =parseInt($(".check_order").offset().top) ;
+        //         var sc_top = $(window).scrollTop();
+        //         if(sc_top < div_top-200){
+        //             // $(".address_con .a_btn").removeClass("active");
+        //             // $(".address_con .a_btn").css("position","fixed").css("padding","0.2rem 0.5rem");
+        //         }else{
+        //             // $(".address_con .a_btn").addClass("active");
+        //             // $(".address_con .a_btn").css("position","inherit").css("padding","0");
+        //         }
+        //     })
+        // } 
  })
  function get_total() {
        $.ajax({

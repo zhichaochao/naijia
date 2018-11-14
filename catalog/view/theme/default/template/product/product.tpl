@@ -450,12 +450,9 @@ window.onload=function(){
       }
     })
 
-    $(".shop_a").click(function(){
-    if(!$(this).hasClass("active")){
-      $(this).addClass("active");
-      $(this).siblings(".shop_btn").addClass("active");
-    }
-  })
+  //   $(".shop_a").click(function(){
+      
+  // })
     
     
     //下拉收起
@@ -767,6 +764,10 @@ function wishlist(product_id,e) {
                 // alert("成功加入购物车");
               $('#cart_count').html(json.total);
               $('.shop_ac').html(json.total);
+              if(!$(".shop_a").hasClass("active")){
+              $(".shop_a").addClass("active");
+              $(".shop_a").siblings(".shop_btn").addClass("active");
+            }
                 $(".cart_li").click();
 
                 

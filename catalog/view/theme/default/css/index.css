@@ -151,7 +151,16 @@ width: 100%;height: 2.6vw;line-height: 2.6vw;text-align: center;font-size: 0.83v
 .login .pc_div .text label input:focus{border: 1px solid #ff2054;}
 .login .pc_div .text .wjmm_a{float: right;color: #333;border-bottom: 1px solid #333;margin-bottom: 40px;}
 .login .pc_div .text .wjmm_a:hover{color: #999;border-bottom: 1px solid #666;}
-.login .pc_div .text .btn{width: 100%;height: 50px;background: #dab25e;font-size: 16px;border: 1px solid #dab25e;}
+.login .pc_div .text .btn{width: 100%;height: 0.5rem;background: #dab25e;font-size: 0.16rem;border: 1px solid #dab25e;}
+.login .pc_div .text span.or{height: 0.5rem;line-height: 0.5rem;text-align: center;display: block;font-size: 0.14rem;color: #666;}
+.login .pc_div .text .fb_btn{width: 100%;height: 0.5rem;line-height: 0.5rem; background: #eee;font-size: 0.16rem;border: 1px solid transparent;color: #999;}
+.login .pc_div .text .fb_btn span{display: inline-block;line-height: 0.24rem;}
+.login .pc_div .text .fb_btn span em{display: inline-block;position: relative;top: 0.01rem;}
+.login .pc_div .text .fb_btn span i{width: 0.24rem;height: 0.24rem;display: inline-block;float: left;margin-right: 0.2rem;
+background: url(../img/png/icon_100.png) no-repeat center/0.24rem;}
+.login .pc_div .text .fb_btn:hover{background: #3c5a99;color: #fff;}
+.login .pc_div .text .fb_btn:hover span i{width: 0.24rem;height: 0.24rem;display: inline-block;background: url(../img/png/icon_100_.png) no-repeat center/0.24rem;}
+
 .login  .xy_div {position: relative;margin-bottom: 30px;}
 .login .xy_div input{position: absolute;width: 16px;height: 16px;top: 0;left: 0;z-index: 2;opacity: 0;cursor: pointer;margin: 0;}
 .login .xy_div span{width:16px;height:16px;border-radius:2px;position: absolute;border:1px solid #bbb;z-index: 1;}
@@ -589,6 +598,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul>li .p1{font-size: 0.24rem;display: inline-block;padding: 0.1rem 0 0.2rem 0;color: #333;float: left;}
 	.shop_ul>li .p2{font-size: 0.16rem;display: block;padding: 0rem 0 0.05rem 0;color: #888;}
 	.shop_ul>li .span1{font-size: 0.2rem;color: #dab25e;display: inline-block;position: absolute;left: 0;bottom: 0.6rem;}
+	.shop_ul>li .span2{font-size: 0.16rem;color: #ff2054;display: inline-block;position: absolute;left: 0;bottom: 0.6rem;}
+	
 	.shop_ul>li .price{position: absolute;top: 0.82rem;left: 84%;font-size: 0.16rem;color: #666;text-decoration: line-through;width: 1.2rem;text-align: center;}
 	.shop_ul>li .prices{position: absolute;top: 0.6rem;left: 84%;font-size: 0.16rem;color: #ff2054;width: 1.2rem;text-align: center;}
 	.shop_ul>li .prices.hei{color: #333;}
@@ -602,6 +613,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul .bot .num_label{width: 1.2rem; height: 0.4rem;border: 1px solid #ddd;display: block;float: left;box-sizing: content-box;
 	position: absolute;top: 0.77rem;right: 20%; }
 	.shop_ul .bot .num_label span{display: inline-block;width: 0.4rem;height: 0.4rem;float: left;cursor: pointer;position: relative;}
+	.shop_ul .bot .num_label .sub_spans{opacity: .5;}
+	.shop_ul .bot .num_label .add_spans{opacity: .5;}
 	.shop_ul .bot .num_label span em.sub{width: 0.14rem;height: 0.02rem;display: block;background: #333;
 	position: absolute;top: 50%;left: 50%;margin-top: -0.01rem;margin-left: -0.07rem;}
 	.shop_ul .bot .num_label span em.add{width: 0.14rem;height: 0.02rem;display: block;background: #333;
@@ -617,6 +630,10 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul .bot .price_zj{width:1.36rem;text-align: center;font-size: 0.16rem;position: absolute;top: 0.88rem;right: 4.5%;}
 	.shop_ul .time{font-size: 0.14rem;color: #FF2054;position: absolute;bottom: 0.25rem;left: 2.8rem;padding-left: 0.28rem;height: 0.26rem;line-height: 0.26rem;
 	background: url(../img/png/icon_37.png) no-repeat left center;background-size: 0.2rem 0.2rem;}
+	.shop_ul .gift{font-size: 0.14rem;color: #FF2054;position: absolute;bottom: 0;left: 0;padding-left: 0.28rem;height: 0.26rem;line-height: 0.26rem;
+	background: url(../img/png/icon_37_.png) no-repeat left top 0.02rem;background-size: 0.2rem 0.19rem;font-size: 0.18rem;}
+	.shop_ul .gift_li{background: #fff url(../img/png/gift.png) no-repeat right 0.36rem bottom/1.81rem 1.09rem;}
+	
 	.shop_con .shop_type_ol {background: #fff;padding-top: 0.25rem;}
 	.shop_con .shop_type_ol .li_label{display: inline-block;position: relative;margin-bottom: 0.1rem;cursor: pointer;}
 	.shop_con .shop_type_ol .li_label span{font-size: 0.24rem;display: inline-block;float: left;line-height: 0.5rem;}
@@ -1246,13 +1263,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.wig .in_ul2 .in_ul2_a h1{font-size: 18px;margin-top: 16px;}
 	.wig .in_ul2 .in_ul2_a span{margin: 10px 0 0 0;display: inline-block;line-height: 20px;}
 	.wig .in_ul2 .in_ul2_a span em{font-size: 16px;}
-	
 	.wig .wig_ul{overflow: hidden;}
 	.wig .wig_ul>li{padding-bottom: 0.6rem;}
-	/*.wig .wig_ul>li .lf_img{width: 49.5%;float: left;display: block;}
-	.wig .wig_ul>li .right{width: 49.5%;float: right;}
-	.wig .wig_ul>li:nth-last-of-type(odd) .lf_img{float: right;}
-	.wig .wig_ul>li:nth-last-of-type(odd) .right{float: left;}*/
 	.wig .wig_ul>li .bt{background: #333;margin-bottom: 0.6rem;}
 	.wig .wig_ul>li .bt h1{font-size: 0.4rem;text-align: center;color: #fff;font-weight: normal;padding: 0.2rem 0 0.1rem 0;}
 	.wig .wig_ul>li .bt p{font-size: 0.2rem;text-align: center;color: #fff;padding-bottom: 0.22rem;}
@@ -1266,7 +1278,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.wig .wig_ol>li .text{text-align: center;padding-top: 0.2rem;}
 	.wig .wig_ol>li .text p{font-size: 0.18rem;line-height: 0.2rem;}
 	.wig .wig_ol>li .text span{font-size: 0.2rem;line-height: 0.22rem;padding-top: 0.05rem;display: inline-block;}
-	
+	.wig .wig_ol>li .text span em{font-size: 0.16rem;text-decoration: line-through;color: #999;}
 	.wig .fot_video{margin:0.2rem 0 0.5rem 0;position: relative;clear: both;}
 	.bf_img{width: 100%;height: 100%;background: transparent url(../img/png/bf.png) no-repeat center/0.7rem;
 	position: absolute;top: 0;left: 0;z-index: 1;cursor: pointer;}
@@ -1487,7 +1499,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	
 	/***********vip*********/
 	.vip_con{background: #0e0f0f;}
-	.vip_con>.text{max-width: 1680px;padding:  0 0.2rem;margin: auto;}
+	.vip_con>.text{max-width: 1680px;padding:  0 0.2rem;margin: auto;position: relative;}
 	.vip_con>.text .bnr img{display: block;box-shadow: 0 20px 16px 10px rgba(0,0,0,.1);position: relative;top: 0;left: 0;}
 	.vip_con>.text .img {margin-bottom: 0.3rem;}
 	.vip_con>.text .img img{display: block;margin-bottom: 0.5rem;}
@@ -1495,8 +1507,10 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.vip_con .form_text{max-width: 6.8rem;float: left;width: 48%;}
 	.vip_con .r_text{max-width: 6.1rem;float: right;width: 48%;}
 	.vip_con .r_text p{font-size: 0.2rem;color: #0e0f0f;line-height: 0.6rem;display: inline-block;vertical-align: middle;}
-	.vip_modal{position: fixed;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,.7);top: 0;left: 0;}
-	.vip_modal .text{max-width: 1000px;width: 80%;max-height: 6rem;position: absolute;top: 50%;left: 50%;background: #fff;position: relative; }	
+	.vip_modal{position: fixed;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,.7);top: 0;left: 0;display: none;}
+	.vip_modal .text{max-width: 1000px;width: 80%;max-height: 6rem;position: absolute;top: 50%;left: 50%;background: #fff;}	
+	.vip_modal .text .close{background: url(../img/png/close5.png) no-repeat center/0.24rem;
+	position: absolute;top: 0;right: 0;display: block;width: 0.6rem;height: 0.6rem;cursor: pointer;}
 	.vip_modal .text .lf_img{width: 50%;float: left;}
 	.vip_modal .text .right{background: #fff url(../img/vip_5.png) no-repeat left 0.3rem top/2.08vw auto;text-align: center;width: 50%;float: left;}
 	.vip_modal .text .right img{display: block;margin:0.8rem auto 0.6rem auto;}
@@ -1674,7 +1688,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.login .pc_div{margin: 0;padding: 0rem 0.3rem 0.5rem 0.3rem;}
 	.login .pc_div .left{width: 100%;}
 	.login .pc_div .right{width: 100%;border: none;}
-	.login .pc_div .text{background: #fff;width: 6.5rem;margin:0.6rem auto 1rem auto;padding: 0 0.25rem;box-shadow: 0 0 10px 1px rgba(42,42,42,.1);float: none !important;}
+	.login .pc_div .text{background: #fff;width: 6.5rem;margin:0.6rem auto 0.4rem auto;padding: 0 0.25rem;box-shadow: 0 0 10px 1px rgba(42,42,42,.1);float: none !important;}
 	.login .pc_div .text h1{font-size: 0.3rem;line-height: 0.4rem;margin: 0.4rem 0;text-align: center;font-weight: normal;}
 	.login .pc_div .text label{width: 100%;margin-bottom: 20px;display: block;}
 	.login .pc_div .text label input{height: 50px;line-height: 50px;border: 1px solid #e2e2e2;padding: 0 20px 0 50px;font-size: 14px;}
@@ -1688,6 +1702,11 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.login .pc_div .zc{display: none;}
 	/***yk_login***/
 	.yk_login .dl_btn{margin-bottom: 0.8rem;}
+	.login .yd_btn{margin: 0 0.2rem;}
+	.login .yd_fb_btn{width: 100%;height:50px;line-height: 50px; background: #3c5a99;font-size: 14px;border: 1px solid transparent;color: #fff;}
+	.login .yd_fb_btn span{display: inline-block;height: 0.24rem;line-height: 0.24rem;}
+	.login .yd_fb_btn span i{width: 0.24rem;height: 0.24rem;display: inline-block;float: left;margin-right: 0.2rem;
+	background: url(../img/png/icon_100_.png) no-repeat center/0.24rem;}
 	
 	/***忘记密码***/
 	.yd_forgot{background: #f5f5f5;}
@@ -2030,6 +2049,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul>li .p1{font-size: 0.24rem;display:block;width: 100%; padding: 0.1rem 0 0.2rem 0;color: #333;float: left;}
 	.shop_ul>li .p2{font-size: 0.2rem;display: inline-block;padding: 0rem 0 0.1rem 0;color: #888;float: left;margin-right: 0.1rem;}
 	.shop_ul>li .span1{font-size: 0.2rem;color: #dab25e;display: inline-block;position: absolute;left: 0;bottom: 0;}
+	.shop_ul>li .span2{font-size: 0.2rem;color: #ff2054;display: inline-block;position: absolute;left: 0;bottom: 0;}
 	.shop_ul>li .price{position: absolute;bottom: 0.35rem;right: 0.2rem;font-size: 0.20rem;color: #666;text-decoration: line-through;}
 	.shop_ul>li .prices{position: absolute;bottom: 0rem;right: 0.2rem;font-size: 0.28rem;color: #ff2054;}
 	.shop_ul>li .prices.hei{color: #333;}
@@ -2042,6 +2062,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul .bot{padding:0.2rem 0.2rem 0 0.7rem;}
 	.shop_ul .bot .num_label{width: 1.85rem;height: 0.6rem;border: 1px solid #ddd;display: block;float: left;box-sizing: content-box;}
 	.shop_ul .bot .num_label span{display: inline-block;width: 0.6rem;height: 0.6rem;float: left;cursor: pointer;position: relative;}
+	.shop_ul .bot .num_label .sub_spans{opacity: .5;}
+	.shop_ul .bot .num_label .add_spans{opacity: .5;}
 	.shop_ul .bot .num_label span em.sub{width: 0.22rem;height: 0.02rem;display: block;background: #333;
 	position: absolute;top: 50%;left: 50%;margin-top: -0.01rem;margin-left: -0.11rem;}
 	.shop_ul .bot .num_label span em.add{width: 0.22rem;height: 0.02rem;display: block;background: #333;
@@ -2057,6 +2079,11 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul .bot .price_zj{display: none;}
 	.shop_ul .time{font-size: 0.2rem;color: #FF2054;background: url(../img/png/icon_37.png) no-repeat left 0.7rem bottom;
 	background-size: 0.24rem 0.24rem; padding:  0.28rem 0 0 0.35rem;padding-left: 1rem;}
+	.shop_ul .gift_li{background:#fff url(../img/png/gift.png) no-repeat right 0.2rem bottom/1.81rem 1.09rem;}
+	.shop_ul .gift{font-size: 0.2rem;color: #FF2054;background: url(../img/png/icon_37_.png) no-repeat left 0rem bottom 0.03rem/0.2rem 0.19rem;
+	position: absolute;bottom: 0;padding-left: 0.35rem;}
+	.shop_ul .p_span2{font-size: 0.2rem;color: #FF2054;padding:  0.28rem 0 0 0.7rem;}
+	
 	.shop_con .shop_type_ol {background: #fff;padding-top: 0.25rem;}
 	.shop_con .shop_type_ol .li_label{display: inline-block;position: relative;margin-bottom: 0.1rem;}
 	.shop_con .shop_type_ol .li_label span{font-size: 0.24rem;display: inline-block;float: left;line-height: 0.68rem;}
@@ -2879,7 +2906,6 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	
 	/***********vip*********/
 	.vip_con{background: #0e0f0f;}
-	
 	.vip_con>.text{padding:0 0.2rem;margin: auto;}
 	.vip_con>.text .bnr img{display: block;box-shadow: 0 20px 16px 10px rgba(0,0,0,.1);position: relative;top: 0;left: 0;}
 	.vip_con>.text .img {margin-bottom: 0.4rem;}
@@ -2888,7 +2914,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.vip_con .form_text{width: 100%;max-width: 6rem;margin: auto;}
 	.vip_con .form_text h2{display: block;font-size: 0.24rem;text-align: center;font-weight: normal;margin-bottom: 0.45rem;}
 	.vip_con .form_text label{margin-bottom: 0.3rem;}
-	.vip_con .form_text label input{height: inherit;line-height: 0.7rem;font-size: 0.22rem;;}
+	.vip_con .form_text label select{height: 0.7rem;line-height: 0.7rem; font-size: 0.22rem;background: #fff url(../img/png/select_.png) no-repeat right center/0.7rem 0.7rem;}
+	.vip_con .form_text label input{height: inherit;line-height: 0.7rem;font-size: 0.22rem;}
 	.vip_con .form_text label input::-webkit-input-placeholder{/* WebKit browsers*/color:#999;font-size: 0.22rem;}
 	.vip_con .form_text label input:-moz-placeholder{/* Mozilla Firefox 4 to 18*/color:#999;font-size: 0.22rem;}
 	.vip_con .form_text label input::-moz-placeholder{/* Mozilla Firefox 19+*/color:#999;font-size: 0.22rem;}
@@ -2896,9 +2923,20 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.vip_con .form_text label .pl_span{font-size: 0.18rem;}
 	.vip_con .form_text label>p.ts_ps{font-size: 0.18rem;}
 	.vip_con .form_text .tj_btn{font-size: 0.28rem;line-height: 0.7rem;height: 0.7rem;margin: 0.5rem 0 0 0;}
-	
 	.vip_con .r_text{width: 100%;max-width: 6rem;margin: 0 auto 0.2rem auto;}
 	.vip_con .r_text p{font-size: 0.2rem;color: #0e0f0f;line-height: 0.5rem;display: inline-block;}
+	
+	.vip_modal{position: fixed;width: 100%;height: 100%;z-index: 999;background: rgba(0,0,0,.7);top: 0;left: 0;display: none;}
+	.vip_modal .text{max-width: 1000px;width: 6.6rem;position: absolute;top: 50%;left: 50%;background: #fff;}	
+	.vip_modal .text .close{background: url(../img/png/close5.png) no-repeat center/0.18rem;
+	position: absolute;top: 0;right: 0;display: block;width: 0.6rem;height: 0.6rem;cursor: pointer;}
+	.vip_modal .text .lf_img{width: 50%;float: left;}
+	.vip_modal .text .right{background: #fff url(../img/vip_5.png) no-repeat left 0.2rem top/0.33rem 0.98rem;text-align: center;width: 50%;float: left;}
+	.vip_modal .text .right img{display: block;margin:0.6rem auto 0.6rem auto;width: 1.55rem;}
+	.vip_modal .text .right span{font-size: 0.16rem;display:block;line-height: 0.28rem;}
+	.vip_modal .text .right p{font-size: 0.16rem;display: inline-block;line-height: 0.28rem;padding: 0 0.2rem;}
+	.vip_modal .text .right .btn{width: 50%;position: absolute;bottom: 0.5rem;}
+	.vip_modal .text .right .vip_a{width: 2rem;height: 0.4rem;text-align: center;line-height: 0.4rem;color: #fff;background: #333;display: inline-block;font-size: 0.22rem;}
 	
 	/*******my_center******/
 	.my_center{background: #f5f5f5;}

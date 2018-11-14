@@ -60,6 +60,8 @@ $(function(){
 		var divScroll2 = new DivScroll('.ss_modal .text');
 		var divScroll3 = new DivScroll('.con_modal');
 		var divScroll4 = new DivScroll('.text .con');
+		var divScroll5 = new DivScroll('.vip_modal .text');
+		
 		
 	
 	
@@ -368,6 +370,8 @@ function tips(tips_text,img,time){
 				+'</div>'
 			+'</div>'
 	$("body").append(text);
+	let tips_w = $(".popup_tips .text").width();
+	$(".popup_tips .text").css("margin-left",-tips_w/2+"px");
 	setTimeout(function(){
 		$(".popup_tips").fadeOut();
 	},time);
