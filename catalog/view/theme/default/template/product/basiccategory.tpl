@@ -9,6 +9,11 @@
         <div class="context">
           <!--pc-->
           <div class="top yd_hide clearfix">
+          <img class="lazyLoad" src="" srcs="<?php echo $banner1; ?>"/>
+            <div class="top_video">
+              <div class="bf_img"></div>
+              <video id="top_video" poster="" src="<?php echo $video2; ?>" width="100%"></video>           
+            </div>
             <!-- Swiper -->
             <div class="lb_4pic clearfix">
               <div class="swiper-container in_ul2 swiper1">
