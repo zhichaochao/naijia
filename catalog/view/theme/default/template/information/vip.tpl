@@ -31,11 +31,11 @@
 
 
               <label class="w_50 fl clearfix" for="">
-                <span class="pl_span">Gender</span>
+               <!--  <span class="pl_span">Gender</span> -->
                 <!-- <input  class="in_3" type="text" name="gender" value=""   placeholder="Gender" id="input-gender" class="form-control"/> -->
-                  <select name="gender" class="in_3" id="input-gender">
-                  <option value="female">female</option>
-                  <option value="male">male</option>
+                  <select name="genders" class="in_3" id="input-gender" style="color: #333 !important;">
+                  <option value="female" >female</option>
+                  <option value="male" >male</option>
                 </select>
                 <!-- <input type="text" placeholder="Gender" /> -->
                 <p class="ts_ps">please enter your  gender. </p>
@@ -44,7 +44,7 @@
 
               <label class="w_50 fr clearfix" for="">
                 <span class="pl_span">Birthday</span>
-                <input class="time" type="text" name="birthday"  placeholder="Birthday" />
+                <input class="time in_4" id="input-birthday" type="text" name="birthday"  placeholder="Birthday" />
                 <!-- <input  class="in_4" type="text" name="birthday" value=""   placeholder="Birthday" id="input-birthday" class="form-control"/> -->
                 <!-- <input type="text" placeholder="Birthday" /> -->
                 <p class="ts_ps">please enter your  birthday. </p>
@@ -64,14 +64,14 @@
 
               <label class="clearfix" for="">
                 <span class="pl_span">Password</span>
-                <input class="in_7" type="password" name="password" value="" placeholder="Password" id="input-password" class="form-control"/>
+                <input class="in_7" type="password" name="password" value="" placeholder="Password" id="input-passwords" class="form-control"/>
                 <!-- <input type="text" placeholder="Email" /> -->
                 <p class="ts_ps" id="errorpassword" >please enter your  password. </p>
               </label>
 
               <label class="clearfix" for="">
                 <span class="pl_span">ConfirmPassword</span>
-               <input class="in_8" type="password" name="confirm" id="input-confirm" placeholder="Confirm Password" class="form-control"/>
+               <input class="in_8" type="password" name="confirm" id="input-confirms" placeholder="Confirm Password" class="form-control"/>
                 <!-- <input type="text" placeholder="Email" /> -->
                 <p class="ts_ps" id="errorconfirm" >please enter your  password. </p>
               </label>
@@ -95,6 +95,25 @@
         <div class="img clearfix">
           <img class="changeimage lazyLoad"  data-image="catalog/view/theme/default/img/vip2.jpg" data-mimage="catalog/view/theme/default/img/yd_vip2.jpg" alt="" />
           <img class="changeimage lazyLoad"  data-image="catalog/view/theme/default/img/vip3.jpg" data-mimage="catalog/view/theme/default/img/yd_vip3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!--vip弹窗-->
+    <div class="vip_modal clearfix">
+      <div class="text clearfix">
+        <div class="close"></div>
+        <img class="changeimage lazyLoad lf_img"  data-image="catalog/view/theme/default/img/vip4.jpg" data-mimage="catalog/view/theme/default/img/yd_vip4.jpg" alt="" />
+        <div class="right clearfix">
+          <img src="catalog/view/theme/default/img/vip_6.png"/>
+          <span>Congratulation!</span>
+          <p>
+            You have now became our VIP member.<br />
+            ₦2000 points has store to your account.
+          </p>
+          <div class="btn">
+            <a class="vip_a" href="<?php echo $back?>">Continute to shop</a>
+          </div>
         </div>
       </div>
     </div>
@@ -123,23 +142,31 @@
     window.onload =function(){
       $(".time").attr("value",now);
     }
-    $(".time").on("click",function(e){
-      e.stopPropagation();
-      $(this).lqdatetimepicker({
+    $(".time").focus(function(e){
+         $(".time").attr("placeholder","");
+         $(".time").siblings(".pl_span").css("display","block");
+
+        e.stopPropagation();
+        $(this).lqdatetimepicker({
         css : 'datetime-day',
         dateType : 'D',
         selectback : function(){
         }
       });
-  
-    });
+
+
+
+    })
+    
   }
 
 
   $(function(){
-    $("input").focus(function(){
+    $("input").focus(function(e){
+        
       $(this).attr("placeholder","");
       $(this).siblings(".pl_span").css("display","block");
+      
     })
     $("input").blur(function(){
       
@@ -176,9 +203,9 @@
           $(this).siblings(".ts_ps").addClass("off");
       }
      })
-     $(".in_4").blur(function(){
-      var in_2val = $(".in_2").val();
-      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+     $(".in_4").change(function(){
+      
+      if($(this).val()!=""){
          $(this).siblings(".ts_ps").removeClass("off"); 
          $(this).parent().addClass("true");
       }else{
@@ -198,14 +225,45 @@
      })
      $(".in_6").blur(function(){
       var in_2val = $(".in_2").val();
-      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+      var text=$(this).val();
+      var re=/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2 ){
          $(this).siblings(".ts_ps").removeClass("off"); 
          $(this).parent().addClass("true");
       }else{
           $(this).parent().removeClass("true");
           $(this).siblings(".ts_ps").addClass("off");
       }
+
+      if(!re.test(text)){
+        
+          $(this).siblings(".ts_ps").addClass("off"); 
+          $(this).parent().removeClass("true");
+           $(this).siblings(".ts_ps").text("The email address you entered is incorrect");
+      }
+
+      if(text==""){
+        
+          $(this).siblings(".ts_ps").addClass("off"); 
+          $(this).parent().removeClass("true");
+           $(this).siblings(".ts_ps").text("please enter your  email. ");
+      }
+
      })
+
+    //  $(".in_6").change(function(){
+
+      
+      
+    //   if(){
+    //     $(this).siblings(".ts_ps").addClass("off");
+    //     $(this).siblings(".ts_ps").text("The email address you entered is incorrect");
+    //   }else{
+    //     $(this).siblings(".ts_ps").removeClass("off");
+    //   }
+    // })
+
      $(".in_7").blur(function(){
      
       if(($(this).val()!="") && ($(this).val().length<=20) && $(this).val().length>=4){
@@ -235,19 +293,79 @@
 
    })
 
-  $(document).delegate('#button-register', 'click', function() {
-  // console.log($('#register-form-div input'));
+  $(document).delegate('#button-register', 'click', function(e) {
+    if($(".time").val()==""){
+      
+      $(".time").siblings(".ts_ps").addClass("off"); 
+      e.preventDefault();  
+     return loop = 0;
+    }else{
+      $(".time").siblings(".ts_ps").removeClass("off");
+    }
+    var loop = 1;
+   
+    $('#register-form-div input').each(function(){
+      if($(this).val()==""){
+        $(this).siblings(".ts_ps").addClass("off");
+        $(this).siblings(".ts_ps").text("不能为空");
+        e.preventDefault();  
+         return loop = 0;
+      }
+    })
+
+    $('#register-form-div .ts_ps').each(function(){
+      if($(this).hasClass("off")){
+        $(this).siblings(".ts_ps").addClass("off");
+        e.preventDefault();  
+       return loop = 0;
+      }
+
+    })
+
+    if(loop==0){
+       e.preventDefault();  
+       return false;
+    }
+  // console.log($('#register-form-div input select'));
     // $(".zzc_li").css("display","block");
     //  $("div").addClass("hidden");
+
+
+
       $.ajax({
         url: '<?php echo $register;?>',
         type: 'post',
-        data: $('#register-form-div input'),
+        data: $('#register-form-div input[type=\'text\'], #register-form-div input[type=\'hidden\'], #register-form-div input[type=\'password\'], #register-form-div input[type=\'radio\']:checked, #register-form-div input[type=\'checkbox\']:checked, #register-form-div select, #register-form-div textarea'),
         dataType: 'json',
       
         success: function(json) {
           if (json['redirect']) {
-            location = json['redirect']; 
+            // location = json['redirect']; 
+
+
+            //表单提交
+            // $(".tj_btn").click(function(e){
+              
+              $(".vip_modal").fadeIn();
+              $("body").css("overflow","hidden");
+              let vip_w = $(".vip_modal .text").width();
+              let vip_h = $(".vip_modal .text").height();
+              $(".vip_modal .text").css("margin-left",-vip_w/2+"px").css("margin-top",-vip_h/2+"px");
+              e.preventDefault();
+            // })
+            
+            $(".vip_modal").click(function(e){
+              var close = $('.vip_modal .text'); 
+                if(!close.is(e.target) && close.has(e.target).length === 0){
+                  $(".vip_modal").fadeOut();
+                $("body").css("overflow","");
+              }
+            })
+            $(".vip_modal .close").click(function(){
+              $(this).parents(".vip_modal").fadeOut();
+              $("body").css("overflow","");
+            })
+  
             
             } else if (json['error']) {
           
@@ -289,3 +407,15 @@
     });
 });
 </script>
+<style type="text/css">
+@media (max-width: 920px) {
+  .lq-datetimepick{
+    margin-left: -2.5rem;
+  }
+  .datetime-arr{
+    left: auto;
+    right:0.25rem;
+  }
+}
+  
+</style>

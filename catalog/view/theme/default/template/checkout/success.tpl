@@ -157,6 +157,7 @@
             }else{
                 clearInterval(timer);
                 $(this).css("display","none");
+              window.location.href="<?php echo $back ?>";
             }
         })
         timer = setTimeout("show_time()", 1000);

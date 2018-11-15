@@ -112,6 +112,7 @@ class ControllerCheckoutSuccess extends Controller {
 		$data['button_continue'] = $this->language->get('button_continue');
 
 		$data['continue'] = $this->url->link('common/home');
+		$data['back'] = $this->url->link('account/order');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');

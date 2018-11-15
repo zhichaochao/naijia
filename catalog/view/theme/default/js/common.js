@@ -71,26 +71,26 @@ $(function(){
 	})
 	
 	//select颜色
-	$("select").each(function(){
-		let a = $(this).find("option:selected").text();
-		let b = $(this).find("option").eq(0).text();
-		if(a==b){
-			$(this).css("color","#999");
-		}else{
-			$(this).css("color","#333");
-		}
-	})
+	// $("select").each(function(){
+	// 	let a = $(this).find("option:selected").text();
+	// 	let b = $(this).find("option").eq(0).text();
+	// 	if(a==b){
+	// 		$(this).css("color","#999");
+	// 	}else{
+	// 		$(this).css("color","#333");
+	// 	}
+	// })
 	
 	
-	$("select").change(function(){
-	    let a = $(this).find("option:selected").text();
-		let b = $(this).find("option").eq(0).text();
-		if(a==b){
-			$(this).css("color","#999");
-		}else{
-			$(this).css("color","#333");
-		}
-    });
+	// $("select").change(function(){
+	//     let a = $(this).find("option:selected").text();
+	// 	let b = $(this).find("option").eq(0).text();
+	// 	if(a==b){
+	// 		$(this).css("color","#999");
+	// 	}else{
+	// 		$(this).css("color","#333");
+	// 	}
+ //    });
 	
 	 var win = $(window).width();
 	//返回顶部

@@ -23,7 +23,7 @@
                      <div class="swiper-slide clearfix">
                           <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
                             <div class="pic_img">
-                              <img src="<?php echo $product['thumb']; ?>" />
+                              <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                             </div>
                             <div class="text">
                               <h1><?php echo $product['name']; ?></h1>
@@ -50,7 +50,7 @@
               <div class="content">
                 <div class="swiper-container swiper3">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $banner1; ?>' data-mimage='<?php echo $banner1; ?>'  /></div>
+                        <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $banner1; ?>' data-mimage='<?php echo $ydbanner1; ?>'  /></div>
                         <div class="swiper-slide" style="cursor: pointer;position: relative;display: block;">
                           <div class="bf_img" ></div>
                           <video id="my_video" src="<?php echo $video2; ?>" width="100%"></video>
@@ -68,7 +68,7 @@
                 <div class="swiper-slide clearfix">
                     <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
                       <div class="pic_img">
-                        <img class="lazyLoad" src="" srcs="<?php echo $product['thumb']; ?>" />
+                        <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                       </div>
                       <div class="text">
                         <h1><?php echo $product['name']; ?></h1>
@@ -90,14 +90,14 @@
           <ul class="wig_ul clearfix">
             <li class="clearfix">
               <div class="bt">
-                <h1>Lace Closure Frontal</h1>
+                <h1>Whole/Full Lace Wig</h1>
                 <p>Natural & Glueless & Realistic Wig </p>
               </div>
               <ol class="wig_ol clearfix">
             <?php foreach ($basicproducts2 as $product) { ?>
                 <li>
                   <a href="<?php echo $product['href']; ?>">
-                    <img src="<?php echo $product['thumb']; ?>" alt="" />
+                   <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                     <div class="text">
                       <p><?php echo $product['name']; ?></p>
 
@@ -114,7 +114,7 @@
             </li>
             <li class="clearfix">
               <div class="bt">
-                <h1>Luxury Hand-Make Wigs</h1>
+                <h1>Lace Front Wig</h1>
                 <p>Natural & Glueless & Realistic Wig </p>
               </div>
               
@@ -122,7 +122,7 @@
                   <?php foreach ($basicproducts3 as $product) { ?>
                 <li>
                   <a href="<?php echo $product['href']; ?>">
-                    <img src="<?php echo $product['thumb']; ?>" alt="" />
+                   <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                     <div class="text">
                       <p><?php echo $product['name']; ?></p>
                       
@@ -145,8 +145,9 @@
       </div>
       
       <div class="fot_video clearfix">
-        <div class="bf_img"></div>
-        <video id="fot_video" src="<?php echo $video1; ?>" width="100%"></video>
+       <!--  <div class="bf_img"></div>
+        <video id="fot_video" src="<?php echo $video1; ?>" width="100%"></video> -->
+        <img class="ban_img changeimage lazyLoad" data-image='<?php echo $banner2; ?>' data-mimage='<?php echo $ydbanner2; ?>'  />
       </div>
     </div>
 
@@ -211,6 +212,14 @@ function wishlist(product_id,e) {
       var src = $(this).attr("srcs");
       $(this).attr("src",src);
     })
+
+    $(".product .pro_text .pro_ul>li .top_img").hover(function(){
+      var src = $(this).attr("data-src");
+      $(this).attr("src",src);
+    },function(){
+      var src = $(this).attr("srcs");
+      $(this).attr("src",src);
+    })
   })
   
 
@@ -257,15 +266,15 @@ function wishlist(product_id,e) {
       $(this).siblings("video").attr("controls","controls");
     });
 //    底部视频播放
-    if($(window).innerWidth()<=750){
-      $(".fot_video video").attr("poster","img/wig_bf_bg.jpg");
-    }
-    var fot_video = document.getElementById("fot_video");
-    $(".fot_video .bf_img").click(function(){
-      $(this).css("display","none");
-      document.getElementById("fot_video").play();
-      $(this).siblings("video").attr("controls","controls");
-    });
+    // if($(window).innerWidth()<=750){
+    //   $(".fot_video video").attr("poster","img/wig_bf_bg.jpg");
+    // }
+    // var fot_video = document.getElementById("fot_video");
+    // $(".fot_video .bf_img").click(function(){
+    //   $(this).css("display","none");
+    //   document.getElementById("fot_video").play();
+    //   $(this).siblings("video").attr("controls","controls");
+    // });
     
     
   })

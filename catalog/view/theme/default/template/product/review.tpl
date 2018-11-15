@@ -95,7 +95,7 @@ function thumbs(review_id,e) {
         // $('#thumbsed').html(data.total);
         location.reload(); 
       }else{
-        window.location.href="/index.php?route=account/login";
+        window.location.href="<?php echo $login?>";
       }
     }
    })
@@ -111,7 +111,7 @@ function thumbs(review_id,e) {
         // $('#thumbsed').html(data.total);
         location.reload(); 
       }else{
-         window.location.href="/index.php?route=account/login";
+         window.location.href="<?php echo $login?>";
       }
     }
    })

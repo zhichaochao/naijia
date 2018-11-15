@@ -634,7 +634,7 @@ function confirm_order(order_id){
 // if(confirm('Are you sure?')){
 
            $.ajax({
-            url: 'index.php?route=account/order/confirm',
+            url: '<?php echo $orderconfirm?>',
             type: 'post',
             data: {order_id:order_id},
             dataType: 'json',
@@ -648,7 +648,7 @@ function confirm_order(order_id){
 function recover_order(order_id){
 // if(confirm('Are you sure?')){
            $.ajax({
-            url: 'index.php?route=account/order/recover',
+            url: '<?php echo $orderrecover?>',
             type: 'post',
             data: {order_id:order_id},
             dataType: 'json',
@@ -706,7 +706,7 @@ function recover_order(order_id){
             }else{
                 clearInterval(timer);
                 $(this).css("display","none");
-              window.location.href="/index.php?route=account/order";
+              window.location.href="<?php echo $back ?>";
             }
         })
         timer = setTimeout("show_time()", 1000);

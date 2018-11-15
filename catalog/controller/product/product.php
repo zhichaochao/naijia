@@ -866,6 +866,7 @@ class ControllerProductProduct extends Controller {
         // dianzan
         $data['addthumbs'] = $this->url->link('product/product/addthumbs');
         $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
+        $data['login'] = $this->url->link('account/login');
 
         $data['revi'] = $product_info['reviews'];
         $data['rating'] = $product_info['rating'];

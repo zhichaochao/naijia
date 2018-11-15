@@ -241,6 +241,10 @@ class ControllerAccountOrder extends Controller {
 			$data['whatsapp'] = $this->config->get('config_telephone');
 			$data['email'] = $this->config->get('config_email');
 
+
+			$data['orderrecover'] = $this->url->link('account/order/recover');
+			$data['orderconfirm'] = $this->url->link('account/order/confirm');
+
 			if (isset($this->session->data['error'])) {
 				$data['error_warning'] = $this->session->data['error'];
 

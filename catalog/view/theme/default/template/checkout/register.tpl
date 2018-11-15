@@ -305,3 +305,57 @@ $('#collapse-payment-address select[name=\'country_id\']').on('change', function
 $('#collapse-payment-address select[name=\'country_id\']').trigger('change');
 //--></script>
 <?php echo $footer; ?>
+<script>
+  $(function(){
+    $("input").focus(function(){
+      $(this).attr("placeholder","");
+      $(this).siblings(".pl_span").css("display","block");
+    })
+    $("input").blur(function(){
+      
+      $(this).attr("placeholder",$(this).siblings(".pl_span").text());
+      $(this).siblings(".pl_span").css("display","none");
+    })
+    
+//    地址选择
+    $(".add_ol>li .li_label").click(function(){
+      $(this).parent().addClass("active").siblings("li").removeClass("active");
+    })
+    //删除地址
+    $(".add_ol .det").click(function(){
+      $(this).parent().remove();
+    })
+    
+//    支付方式选择
+    $(".pay_ol>li").click(function(){
+      $(this).addClass("active").siblings("li").removeClass("active");
+    })
+    
+    //支付弹窗
+    $(".slides").click(function(){
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).siblings(".slide").stop().slideUp();
+      }else{
+        $(this).addClass("active");
+        $(this).siblings(".slide").stop().slideDown();
+      }
+    })
+    
+//    pc右侧下拉
+    $(".slide_h1").click(function(){
+      if($(this).hasClass("active")){
+        $(this).removeClass("active");
+        $(this).siblings(".slides").stop().fadeIn();
+        $(this).siblings(".slide").hide();
+      }else{
+        $(this).addClass("active");
+        $(this).siblings(".slides").hide();
+        $(this).siblings(".slide").stop().fadeIn();
+      }
+    })
+    
+    
+    
+  })
+</script>

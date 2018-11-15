@@ -163,7 +163,7 @@
 
               
               <li>
-                    <button class="shop_btn" id="checkout_btns"><span><i ><em class="shop_ac"><?=$text_cart_items;?></em></i> <p>Check Out</p></span></button>
+                   
                       <!-- <button class="shop_a">Add To Shopping Bag</button> -->
                      <!--  <button class="wish_btn">
                         <span><i></i> Add To Wish List</span>
@@ -179,6 +179,7 @@
                   <?php }else{?>
                   <a class="shop_a">Lack of stock</a>
                   <?php } ?>
+                 <button class="shop_btn" id="checkout_btns"><span><i ><em class="shop_ac"><?=$text_cart_items;?></em></i> <p>Check Out</p></span></button>
                 <button class="wish_btn <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);">
                   <span><i></i> Add To Wish List</span>
                   <span class="active"><i></i> Saved</span>
@@ -417,6 +418,16 @@ window.onload=function(){
     })
     //length选择
     // $(".pro_det_ul3").siblings(".bt_span").find("em").text($(".pro_det_ul3>li").eq(0).find("span").text());
+    $(".pro_det_ul3>li").each(function(){
+      if($(this).hasClass("active")){
+        
+        $(this).parent().siblings(".bt_span").find("em").text($(this).find("span").text());
+      }
+    })
+
+
+
+
     $(".pro_det_ul3>li>span").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
       $(this).parents("li").find(".slide>em").text($(this).text());

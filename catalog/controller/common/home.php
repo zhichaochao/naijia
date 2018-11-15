@@ -241,6 +241,7 @@ class ControllerCommonHome extends Controller {
 		 // dianzan
         $data['addthumbs'] = $this->url->link('product/product/addthumbs');
         $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
+        $data['login'] = $this->url->link('account/login');
 
 		
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');

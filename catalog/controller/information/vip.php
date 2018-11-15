@@ -29,6 +29,7 @@ class ControllerInformationVip extends Controller {
 		// 	$data['video1']=HTTP_SERVER.'image/video/home/'.$str;
 
 			$data['continue'] = $this->url->link('common/home');
+			$data['back'] = $this->url->link('product/category');
 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
