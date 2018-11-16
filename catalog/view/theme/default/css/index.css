@@ -594,12 +594,19 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul>li .top{position: relative;width:62%;float: left;}
 	.shop_ul>li .dx_label{width: 0.6rem;height: 2rem; display: block;float: left;position: relative;}
 	.shop_ul>li a.text{display: block;float: left;}
-	.shop_ul>li .text_p{float: left;position: relative;height: 2rem;overflow: hidden;}
+	.shop_ul>li .text_p{float: left;position: relative;height: 2rem;overflow: hidden;max-width: 3.2rem;}
 	.shop_ul>li .img1{display: block;float: left;margin-right: 0.2rem;width: 2rem;height: 2rem;}
-	.shop_ul>li .p1{font-size: 0.24rem;display: inline-block;padding: 0.1rem 0 0.2rem 0;color: #333;float: left;}
-	.shop_ul>li .p2{font-size: 0.16rem;display: block;padding: 0rem 0 0.05rem 0;color: #888;}
-	.shop_ul>li .span1{font-size: 0.2rem;color: #dab25e;display: inline-block;position: absolute;left: 0;bottom: 0.6rem;}
-	.shop_ul>li .span2{font-size: 0.16rem;color: #ff2054;display: inline-block;position: absolute;left: 0;bottom: 0.6rem;}
+	.shop_ul>li .p1{font-size: 0.24rem;margin: 0.1rem 0 0.2rem 0;color: #333;float: left;line-height: 0.28rem;max-height: 0.56rem;
+	display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden; }
+	@media only screen and (min-width: 1040px) and (max-width: 1140px) {
+		.shop_ul>li .text_p{max-width: 2.5rem;}
+	}
+	@media only screen and (min-width: 921px) and (max-width: 1039px) {
+		.shop_ul>li .text_p{max-width: 2rem;}
+	}
+	.shop_ul>li .p2{font-size: 0.16rem;display: block;padding: 0rem 0 0.05rem 0;color: #888;clear: both;}
+	.shop_ul>li .span1{font-size: 0.2rem;color: #dab25e;display: inline-block;position: absolute;left: 0;bottom: 0.4rem;}
+	.shop_ul>li .span2{font-size: 0.16rem;color: #ff2054;display: inline-block;position: absolute;left: 0;bottom: 0.4rem;}
 	
 	.shop_ul>li .price{position: absolute;top: 0.82rem;left: 84%;font-size: 0.16rem;color: #666;text-decoration: line-through;width: 1.2rem;text-align: center;}
 	.shop_ul>li .prices{position: absolute;top: 0.6rem;left: 84%;font-size: 0.16rem;color: #ff2054;width: 1.2rem;text-align: center;}
@@ -2050,7 +2057,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.shop_ul>li a.text{width: 5rem;display: block;float: left;}
 	.shop_ul>li .text_p{float: left;width: 2.8rem;position: relative;height: 1.85rem;overflow: hidden;}
 	.shop_ul>li .img1{display: block;float: left;margin-right: 0.2rem;width: 1.85rem;height: 1.85rem;}
-	.shop_ul>li .p1{font-size: 0.24rem;display:block;width: 100%; padding: 0.1rem 0 0.2rem 0;color: #333;float: left;}
+	.shop_ul>li .p1{font-size: 0.24rem;display:block;width: 100%; margin: 0.1rem 0 0.2rem 0;color: #333;float: left;line-height: 0.28rem;max-height: 0.56rem;
+	display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
 	.shop_ul>li .p2{font-size: 0.2rem;display: inline-block;padding: 0rem 0 0.1rem 0;color: #888;float: left;margin-right: 0.1rem;}
 	.shop_ul>li .span1{font-size: 0.2rem;color: #dab25e;display: inline-block;position: absolute;left: 0;bottom: 0;}
 	.shop_ul>li .span2{font-size: 0.2rem;color: #ff2054;display: inline-block;position: absolute;left: 0;bottom: 0;}
