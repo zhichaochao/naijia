@@ -687,3 +687,9 @@
 2018-11-15 10:06:41 - PHP Notice:  Undefined index: password in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\account\login.php on line 262
 2018-11-15 10:13:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
 2018-11-15 10:13:54 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-16 1:38:08 - PHP Notice:  Undefined index: priority in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\model\catalog\product.php on line 264
+2018-11-16 1:45:52 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-16 1:45:52 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-16 2:00:19 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-16 2:00:19 - PHP Notice:  Undefined variable: error_warning in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\login.tpl on line 13
+2018-11-16 2:08:26 - PHP Notice:  Undefined variable: success in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\view\theme\default\template\account\change_from.tpl on line 86

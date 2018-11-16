@@ -66,7 +66,7 @@
 
                  <?php if ($error_telephone) { ?>
                <label class="clearfix " for="">
-                <?pgp  }else{ ?>
+                <?php  }else{ ?>
                 <label class="clearfix true" for="">
                 <?php }?>
                 <span class="pl_span">Phone</span>

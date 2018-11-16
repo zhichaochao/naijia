@@ -23,7 +23,7 @@
                      <div class="swiper-slide clearfix">
                           <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
                             <div class="pic_img">
-                              <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
+                              <img class="top_img lazyLoad" src="" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                             </div>
                             <div class="text">
                               <h1><?php echo $product['name']; ?></h1>
@@ -68,7 +68,7 @@
                 <div class="swiper-slide clearfix">
                     <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
                       <div class="pic_img">
-                        <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
+                        <img class="top_img lazyLoad" src="" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                       </div>
                       <div class="text">
                         <h1><?php echo $product['name']; ?></h1>
@@ -97,7 +97,7 @@
             <?php foreach ($basicproducts2 as $product) { ?>
                 <li>
                   <a href="<?php echo $product['href']; ?>">
-                   <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
+                   <img class="top_img lazyLoad" src=""  srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                     <div class="text">
                       <p><?php echo $product['name']; ?></p>
 
@@ -114,7 +114,7 @@
             </li>
             <li class="clearfix">
               <div class="bt">
-                <h1>Lace Front Wig</h1>
+                <h1>Lace Front Wigs</h1>
                 <p>Natural & Glueless & Realistic Wig </p>
               </div>
               
@@ -122,7 +122,7 @@
                   <?php foreach ($basicproducts3 as $product) { ?>
                 <li>
                   <a href="<?php echo $product['href']; ?>">
-                   <img class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
+                   <img class="top_img lazyLoad" src=""  srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
                     <div class="text">
                       <p><?php echo $product['name']; ?></p>
                       
@@ -206,6 +206,15 @@ function wishlist(product_id,e) {
     
     //产品鼠标经过换图
     $(".product .pro_text .pro_ul>li .top_img").hover(function(){
+      var src = $(this).attr("data-src");
+      $(this).attr("src",src);
+    },function(){
+      var src = $(this).attr("srcs");
+      $(this).attr("src",src);
+    })
+
+        //产品鼠标经过换图
+    $(" .wig_ol>li .top_img").hover(function(){
       var src = $(this).attr("data-src");
       $(this).attr("src",src);
     },function(){

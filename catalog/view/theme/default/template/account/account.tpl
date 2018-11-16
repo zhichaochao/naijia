@@ -77,6 +77,7 @@
           </div>
         
           <a class="change_a" href="<?php echo $editchange ?>"><span>Change Password</span></a>
+          <a class="change_a change_acc" href="<?php echo $logout?>"><span>CHANGE THE ACCOUNT</span></a>
         
         </div>
       </div>

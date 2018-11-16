@@ -26,7 +26,7 @@
           </p>
 
           <?php }else{ ?>
-          <p class="p2">
+          <p class="p2" style="margin-top: 0;padding-top: 0.1rem;">
             Thanks for your order .<br />
             · Payment has been completed<br />
             · It will ready to ship in 1- 2 days.<br />

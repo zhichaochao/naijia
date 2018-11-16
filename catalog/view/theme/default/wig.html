@@ -111,7 +111,7 @@
 						<img class="lazyLoad" src="" srcs="img/wig1.jpg"/>
 						<div class="top_video">
 							<div class="bf_img"></div>
-							<video id="top_video" poster="" src="img/myvideo.mp4" width="100%"></video>						
+							<video id="top_video" poster="img/wig_bf_bg.jpg" src="img/myvideo.mp4" width="100%"></video>						
 						</div>
 						
 						<!-- Swiper -->
@@ -129,17 +129,6 @@
 								      		</div>
 								      	</a>
 								    </div>
-								    <!-- <div class="swiper-slide clearfix">
-								      	<a class="in_ul2_a clearfix" href="###">
-								      		<div class="pic_img">
-									      		<img src="img/wig2.jpg" />
-								      		</div>
-								      		<div class="text">
-								      			<h1>FUNMI HAIR WIG </h1>
-								      			<span>₦26K <em>₦46K</em></span>
-								      		</div>
-								      	</a>
-								    </div>
 								    <div class="swiper-slide clearfix">
 								      	<a class="in_ul2_a clearfix" href="###">
 								      		<div class="pic_img">
@@ -172,7 +161,18 @@
 								      			<span>₦26K <em>₦46K</em></span>
 								      		</div>
 								      	</a>
-								    </div> -->
+								    </div>
+								    <div class="swiper-slide clearfix">
+								      	<a class="in_ul2_a clearfix" href="###">
+								      		<div class="pic_img">
+									      		<img src="img/wig2.jpg" />
+								      		</div>
+								      		<div class="text">
+								      			<h1>FUNMI HAIR WIG </h1>
+								      			<span>₦26K <em>₦46K</em></span>
+								      		</div>
+								      	</a>
+								    </div>
 							    </div>
 							    <!-- Add Pagination -->
 							    <!--<div class="swiper-pagination"></div>-->
@@ -358,9 +358,13 @@
 			</div>
 			
 			<div class="fot_video clearfix">
-				<div class="bf_img"></div>
-				<video id="fot_video" src="img/myvideo.mp4" width="100%"></video>
+				<!--<div class="bf_img"></div>-->
+				<!--<video id="fot_video" src="img/myvideo.mp4" width="100%"></video>-->
+				<img src="img/banner1.jpg" alt="" />
 			</div>
+			
+			
+			
 		</div>
 		
 		<!--pc底部-->
@@ -653,15 +657,15 @@
 			$(this).siblings("video").attr("controls","controls");
 		});
 //		底部视频播放
-		if($(window).innerWidth()<=750){
-			$(".fot_video video").attr("poster","img/wig_bf_bg.jpg");
-		}
-		var fot_video = document.getElementById("fot_video");
-		$(".fot_video .bf_img").click(function(){
-			$(this).css("display","none");
-			document.getElementById("fot_video").play();
-			$(this).siblings("video").attr("controls","controls");
-		});
+//		if($(window).innerWidth()<=750){
+//			$(".fot_video video").attr("poster","img/wig_bf_bg.jpg");
+//		}
+//		var fot_video = document.getElementById("fot_video");
+//		$(".fot_video .bf_img").click(function(){
+//			$(this).css("display","none");
+//			document.getElementById("fot_video").play();
+//			$(this).siblings("video").attr("controls","controls");
+//		});
 		
 		
 	})
@@ -689,7 +693,13 @@
 		        nextEl: '.swiper-button-next',
 		        prevEl: '.swiper-button-prev',
 		      },
-//			
+//			centeredSlides: true,
+//			spaceBetween : 50,
+//			slidesPerView: 2,
+//			pagination: {
+//				el: '.swiper-container2 .swiper-pagination',
+//			},
+//		});  
 		      
 		      
 		});

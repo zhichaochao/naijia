@@ -59,10 +59,10 @@ class ControllerAccountLeft extends Controller {
                 // ),
 
               //logout
-                array(
-                    'name' => 'Logout',
-                    'url' => $this->url->link('account/logout')
-                ),
+                // array(
+                //     'name' => 'Logout',
+                //     'url' => $this->url->link('account/logout')
+                // ),
             )
         );
 

@@ -98,14 +98,18 @@
             </dl>
             <dl>
               <dt>ADDRESS</dt>
-              <dd>Lagos, Nigeria</dd>
-              <dd><span>( <a href="###">Check on the Map</a> )</span></dd>
-              <em class="em_s"></em>
+              <dd>
+                Alausa.obafemi awolowo way. Ikeja, 
+                Lagos, Nigeria <a class="pc_hide" target="_Blank" href="https://www.google.com/maps?ll=6.607583,3.349862&z=16&t=m&hl=zh-CN&gl=US&mapclient=embed&q=Obafemi+Awolowo+Way+Lagos+%E5%B0%BC%E6%97%A5%E5%88%A9%E4%BA%9A">( Check on the Map )</a>
+              </dd>
+              <dd class="yd_hide"><span>( <a  target="_Blank" href="https://www.google.com/maps?ll=6.607583,3.349862&z=16&t=m&hl=zh-CN&gl=US&mapclient=embed&q=Obafemi+Awolowo+Way+Lagos+%E5%B0%BC%E6%97%A5%E5%88%A9%E4%BA%9A">Check on the Map</a> )</span></dd>
+              <em class="em_s yd_hide"></em>
             </dl>
-            <dl>
+            <dl class="yd_hide">
               <dt>CONNECT</dt>
               <dd class="it clearfix"><i></i>Instagram</dd>
-              <dd class="fb clearfix"><i></i>facebook</dd>
+              <dd class="fb clearfix"><i></i>Facebook</dd>
+              <dd class="wh clearfix"><i></i>Whatsapp</dd>
             </dl>
           </div>
         </div>

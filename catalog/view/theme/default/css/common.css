@@ -282,8 +282,8 @@ position: absolute;top: 50%;left: 50%;margin-top: -0.16rem;margin-left: -0.16rem
 .yd_nav .yd_navul>li.mn_li em{color: #fff;font-size: 0.16rem;}
 .yd_nav .yd_navul>li.mn_li p{display: inline-block;vertical-align:middle;}
 .yd_nav .yd_navul>li.gw_li{background: url(../img/png/icon_4.png) no-repeat center center;width: 17%;border-right: 0;background-size: 0.23rem 0.24rem;position: relative;}
-.yd_nav .yd_navul>li.gw_li>span{color: #fff;background: #FF2054;text-align: center;line-height: 0.2rem;width: 0.2rem;height: 0.2rem;display: block;
-position: absolute;top: 0.35rem;right: 0.4rem;}
+.yd_nav .yd_navul>li.gw_li>span{color: #fff;background: #FF2054;text-align: center;height: 0.2rem;width: 0.2rem;line-height: 0.2rem;display: block;
+position: absolute;top: 0.35rem;right: 0.4rem;border-radius: 50%;}
 
 .in_content{margin-top: 155px;}
 

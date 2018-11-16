@@ -231,6 +231,7 @@ class ControllerAccountAccount extends Controller {
 		$data['edit'] = $this->url->link('account/account/edit', '', true);
 
 		$data['editchange'] = $this->url->link('account/account/change', '', true);
+		$data['logout'] = $this->url->link('account/logout');
 //print_r($data);exit();
 		$this->response->setOutput($this->load->view('account/account', $data));
 	}

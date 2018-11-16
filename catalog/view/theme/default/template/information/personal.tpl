@@ -52,7 +52,7 @@
               </a>
             </li> -->
           </ul>
-          <img src="catalog/view/theme/default/img/vip.jpg"/>
+          <!-- <img src="catalog/view/theme/default/img/vip.jpg"/> -->
         </div>
         
       </div>
