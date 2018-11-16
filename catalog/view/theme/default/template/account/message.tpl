@@ -40,12 +40,11 @@
           </div>
         </div>
         <?php }else{?>
-                <div class="right_text clearfix">
+        <div class="right_text clearfix">
           <div class="null clearfix">
             <div class="text clearfix">
-              <img src="catalog/view/theme/default/img/png/null_1.png"/>
-              <p>You haven`t get any message</p>
-              <!-- <a href="javascript:;">Receive coupons&nbsp;&nbsp;></a> -->
+              <img src="catalog/view/theme/default/img/png/404s.png"/>
+              <p>Your message board is empty ~</p>
             </div>
           </div>
           
