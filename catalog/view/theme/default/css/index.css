@@ -875,7 +875,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pc_ordet_con .bt p{font-size: 0.16rem;padding-bottom: 0.08rem;}
 	.pc_ordet_con .top{position: relative;padding-left: 3.5rem;border: 1px solid #bfbfbf;border-left: 0;}
 	.pc_ordet_con .top .left{position: absolute;top: 0;left: 0;height: 100%;width: 3.5rem;border-left: 8px solid #dab25e;}
-	.pc_ordet_con .top .left h2{font-size: 0.42rem;color: #ff2054;text-align: center;margin-top: 0.7rem;}
+	.pc_ordet_con .top .left h2{font-size: 0.42rem;color: #ff2054;text-align: center;margin-top: 0.5rem;}
 	.pc_ordet_con .top .left h2.huang{color: #dab25e;font-size: 0.36rem;}
 	.pc_ordet_con .top .left h2.lv{color: #80c269;}
 	.pc_ordet_con .top .left h2.hei{color: #333;margin: 0.6rem auto 0 auto;line-height: 0.42rem;}
@@ -885,7 +885,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pc_ordet_con .top .left p.p3{padding:0.1rem 0.27rem 0 0.27rem;}
 	.pc_ordet_con .top .left .span_r{color: #ff2054;}
 	.pc_ordet_con .top .left a.pay_a{display: block;width: 1.8rem;height: 0.5rem;border: 1px solid #ff2054;color: #ff2054;font-size: 0.2rem;font-weight: bold;
-	margin: 0.4rem auto 0 auto;line-height: 0.5rem;text-align: center;}
+	margin: 0.05rem auto 0 auto;line-height: 0.5rem;text-align: center;}
 	.pc_ordet_con .top .left a.pay_a.lv{color: #80c269;border: 1px solid #80c269;}
 	.pc_ordet_con .top .left a.pay_a.huang{color: #dab25e;border: 1px solid #dab25e;}
 	.pc_ordet_con .top .left a.pay_a.hong{margin: 0.24rem auto 0 auto;}

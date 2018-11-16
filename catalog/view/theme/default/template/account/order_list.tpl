@@ -21,19 +21,19 @@
         
         <div class="right_text">
           
-          <?php if ($orders) { ?>
+          
           <div class="or_nav">
             <ol class="ornav_ol clearfix">
-              <li class="active"><a href="###">Pending</a></li>
-              <li><a href="###">Unfilled</a></li>
-              <li><a href="###">Delivered</a></li>
-              <li><a href="###">Complete</a></li>
-              <li><a href="###">Invalid</a></li>
+              <li class="<?=$status==1 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=1">Pending</a></li>
+              <li class="<?=$status==8 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=8">Unfilled</a></li>
+              <li class="<?=$status==14 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=14">Delivered</a></li>
+              <li class="<?=$status==5 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=5">Complete</a></li>
+              <li class="<?=$status==16 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=16">Invalid</a></li>
             </ol>
           </div>
           
           <ul class="or_ul">
-            
+            <?php if ($orders) { ?>
             <?php foreach ($orders as $order) { ?>
             <li class="clearfix">
               <p class="p1 clearfix">
@@ -41,7 +41,7 @@
                 <span class="span2">(<?php echo $order['date_added']; ?>)</span>
                  <?php if ($order['payment_code']=='bank_transfer' && $order['status']=='Pending' && $order['bank_receipt']=='' ) { ?>
 
-                <span class="djs_p" title="<?php echo $order['lest_time']; ?>">
+                <span class="djs_p" title="" data='<?php echo $order["lest_time"]; ?>'>
                   <em>Invalid in</em>
                   <span class="int_hour">00</span><i>:</i>
                   <span class="int_minute">00</span><i>:</i>
@@ -120,6 +120,105 @@
       
     </div>
     <script>
+  // function sortorder(status) {
+  //   // alert(status);
+  //   $.ajax({
+  //           url: '<?php echo $sortorders?>',
+  //           type: 'post',
+  //           data: {status:status},
+  //           dataType: 'json',
+  //           success: function(data) {
+  //             // alert(data);
+  //             // location.reload();
+  //             var result="";
+  //                 console.log( data.orders );
+  //                 if(data.orders){
+  //                   for (var i =0; i < data.orders.length ; i++) {
+  //                  var addremove="order_remove('"+data.orders[i].order_id+"'";
+
+  //                  var addcancel="cancel_order('"+data.orders[i].cancel_href+"'";
+
+  //                  var addrecover="recover_order('"+data.orders[i].order_id+"'";
+
+  //                  var addconfirm="confirm_order('"+data.orders[i].order_id+"'";
+
+  //                  result+='<li class="clearfix">' 
+  //                        +'<p class="p1 clearfix">'
+  //                         + '<span class="span1">data.orders[i].status'
+  //                         +'</span>'
+  //                         +'<span class="span2">(data.orders[i].date_added)</span>'
+  //                if (data.orders[i].payment_code=='bank_transfer' && data.orders[i].status=='Pending' && data.orders[i].bank_receipt=='' ) { 
+  //                  result+='<span class="djs_p" title="" data="data.orders[i].lest_time">' 
+  //                    + '<em>Invalid in</em>'
+  //                    + '<span class="int_hour">00</span><i>:</i>'
+  //                     +'<span class="int_minute">00</span><i>:</i>'
+  //                    +'<span class="int_second">00</span>'
+  //                   +'</span>'
+  //                }else{
+  //              result+='<span class="span3">Order Number:data.orders[i].order_number</span>'
+  //                }
+  //             result+='</p>'
+  //              for (var r =0; r < data.orders.products.length ; r++) {
+  //               // foreach ($order['products'] as $product) {
+  //             result+='<a class="or_a clearfix" href="data.orders[i].view">'
+  //               +'<div class="pic_img">'
+  //                +'<img src="data.orders.products[r].image"/>'
+  //               +'</div>'
+  //               +'<div class="text">'
+  //                +' <h1 class="ov_text">data.orders.products[r].name</h1>'
+  //                +'<p>color:data.orders.products[r].color </p>' 
+
+  //                for (var o =0; o < data.orders.products.options.length ; o++) {
+  //                    result+=' <p>data.orders.products.options[o].name:data.orders.products.options[o].value</p> '   
+  //                 }
+  //              result+='</div>' 
+  //                  +'<span class="price">data.orders.products[r].price</span>' 
+  //                   +'<span class="num">Xdata.orders.products[r].quantity</span>'
+  //                   +' </a>'
+  //              }
+
+  //             result+='<p class="p2 clearfix">'
+  //              +' Total: <span>data.orders[i].total</span>'
+  //               +'</p>'
+  //             +'<div class="bot">'
+  //              +'<div class="det active" onclick="'+addremove+',this);"></div>' 
+
+  //               if(data.orders[i].status== 'Pending'){ 
+  //              result+=' <a class="bot_a a2" href="data.orders[i].cancel_href" onclick="'+addcancel+',this);">Cancel</a>'
+  //               } 
+  //              if(data.orders[i].payment_code== 'pp_standard' || data.orders[i].payment_code== 'pp_express') { 
+  //               result+=' <a class="bot_a a1" href="data.orders[i].repay">Continue To Pay</a>'
+  //               } 
+
+  //               if(data.orders[i].status == 'Canceled' || data.orders[i].status == 'lnvalid' && data.orders[i].payment_code !== 'paystack' ){ 
+  //               result+='<a class="bot_a a1"  onclick="'+addrecover+',this);">Recover Order</a>'
+  //               } 
+  //                if(data.orders[i].status == 'Delivered'){ 
+  //               result+=' <a class="bot_a" onclick="'+addconfirm+',this);">Confirm Receipt</a>'
+  //              } 
+  //             if(data.orders[i].status == 'Complete'){
+  //              result+=' <a class="bot_a" href="data.orders[i].compltedorder">Review</a>'
+  //              } 
+
+  //             result+=' </div>'
+  //           +'</li>'     
+  //                  }
+  //               }else{
+  //                   result+='<div class="right_text clearfix">'
+  //                   +'<div class="null clearfix">'
+  //                     +'<div class="text clearfix">'
+  //                     +'<img src="catalog/view/theme/default/img/png/null_3.png"/>'  
+  //                       +'<p>You haven`t placed any orders ~</p>'
+  //                       +'<a href="data.goshopping">GO SHOPPING&nbsp;&nbsp;></a>'
+  //                     +'</div>'
+  //                   +'</div>'
+                    
+  //                +'</div>' 
+  //                 }
+  //                  $('.prolist').append(result);
+  //           }
+  //       })
+  // }
 function cancel_order(url){
   // alert(1111);die;
   // if(confirm('Are You Sure?')){
@@ -175,10 +274,22 @@ function confirm_order(order_id){
 //倒计时
   function show_time() {
         $(".djs_p").each(function() {
+
+
             var endtime = $(this).prop("title");
+
             var time_start = new Date().getTime(); //设定当前时间
-            var time_end = new Date(endtime).getTime(); //设定目标时间
+            if (endtime>0) {
+               var time_end = endtime; //设定目标时间
             var time_distance = time_end - time_start;
+
+            }else{
+             var time_distance=$(this).attr("data")*1000;
+               time_end=time_start+time_distance;
+                $(this).attr("title",time_end);
+               
+            }
+          
             var timer;
             if (time_distance >= 0) {
                 var int_day = Math.floor(time_distance / 86400000)

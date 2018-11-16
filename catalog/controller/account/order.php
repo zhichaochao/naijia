@@ -29,6 +29,7 @@ class ControllerAccountOrder extends Controller {
 		$data['orderdel'] = $this->url->link('account/order/delete');
 		$data['orderrecover'] = $this->url->link('account/order/recover');
 		$data['orderconfirm'] = $this->url->link('account/order/confirm');
+		$data['sortorders'] = $this->url->link('account/order');
 
 		$data['button_view'] = $this->language->get('button_view');
 		$data['button_continue'] = $this->language->get('button_continue');
@@ -53,7 +54,20 @@ class ControllerAccountOrder extends Controller {
 		$this->load->model('account/customer');
 
 		$order_total = $this->model_account_order->getTotalOrders();
-		$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit);
+
+		if (($this->request->server['REQUEST_METHOD'] == 'GET')) {
+
+			if(isset($this->request->get['status'])){
+				$status=$this->request->get['status'];
+			}else{
+				$status=1;
+			}
+		}else{
+			$status=1;
+		}
+		$data['status'] =$status;
+// print_r($data['status']);exit;
+		$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit,$status);
 		// print_r($results);exit;
 		foreach ($results as $result) {
 			//$product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);
@@ -92,12 +106,14 @@ class ControllerAccountOrder extends Controller {
    // 			 }
 			// $now_time=strtotime('now');
 			// print_r($now_time);exit;
+			// prin
+			// print_r($result);exit();
 			$data['orders'][] = array(
 				'order_id'   => $result['order_id'],
 				'products'   => $order_products,
 				'order_number'   => $result['order_number'],
 				// 'lest_time'   => date("Y-m-d H:i:s",strtotime($result['date_modified'])+60*30-$now_time),
-				'lest_time'   => date("Y-m-d H:i:s",strtotime($result['date_modified'])+60*30),
+				'lest_time'   => strtotime($result['date_modified'])+60*30-strtotime($result['now']),
 			
 				'status'     => $result['status'],
 				'bank_receipt'     => $result['bank_receipt'],
@@ -284,9 +300,10 @@ class ControllerAccountOrder extends Controller {
 			$data['home'] =$_SERVER['HTTP_REFERER'];
 		}else{
 			$data['home'] =$this->url->link('common/home');
-		}
+		}	
+			$status=$order_info['order_status_id'];
 			$limit=10;
-			$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit);
+			$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit,$status);
 			// print_r($results);exit;
 			$data['payment_code']=$order_info['payment_code'];
 			// print_r($data['payment_code']);exit;
