@@ -43,6 +43,11 @@
                   <button>
                     <span>Share <img src="catalog/view/theme/default/img/png/icon_26.png"/></span>
                   </button>
+                  <ol class="clearfix">
+                    <li><a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"></a></li>
+                    <li><a target="_blank"  href="http://api.whatsapp.com/send?phone=<?=$whatsapp;?>"></a></li>
+                    <li><a href="mailto:<?php echo $email; ?>"></a></li>
+                  </ol>
                   <ul class="clearfix">
                     <li><a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"></a></li>
                     <li><a target="_blank"  href="http://api.whatsapp.com/send?phone=<?=$whatsapp;?>"></a></li>

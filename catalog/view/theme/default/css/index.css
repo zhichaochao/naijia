@@ -1733,7 +1733,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	/***product***/
 	.product{background: #f5f5f5;padding: 0.4rem 0;}
 	.product .content{padding: 0 0.15rem;}
-	.product .top_f{background: #fff;line-height: 0.6rem;height: 0.6rem; margin: 0.28rem 0 0.2rem 0;padding: 0 0 0 0.25rem;}
+	.product .top_f{background: #fff;line-height: 0.6rem; margin: 0.28rem 0 0.2rem 0;padding: 0 0 0 0.25rem;}
 	.product .top_f p{font-size: 0.18rem;height: 0.6rem;line-height: 0.6rem; display: inline-block;}
 	.product .top_f .sortby{float: right;position: relative;width: 1.6rem;cursor: pointer;}
 	.product .top_f .sortby img{display: inline-block; transform: rotate(180deg);position: relative;top: -2px;left: 2px;}
@@ -2443,7 +2443,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.list_wish .bot .share ol{display: none;background: #fff;border: 1px solid #dab25e;width: 0.7rem;position: absolute;bottom: -0.1rem;left: 0.46rem;}
 	.list_wish .bot .share ul{display: none;}
 	.list_wish .bot .share ol>li{height: 0.6rem;display: block;}
-	.list_wish .bot .share ol>li a{display: block;}
+	.list_wish .bot .share ol>li a{display: block;height: 100%;}
 	.list_wish .bot .share ol>li:nth-child(1){background: url(../img/png/icon_46.png) no-repeat center center;background-size: 0.32rem 0.32rem;border-bottom: 1px solid #dab25e;}
 	.list_wish .bot .share ol>li:nth-child(2){background: url(../img/png/icon_47.png) no-repeat center center;background-size: 0.32rem 0.32rem;border-bottom: 1px solid #dab25e;}
 	.list_wish .bot .share ol>li:nth-child(3){background: url(../img/png/icon_48.png) no-repeat center center;background-size: 0.32rem 0.32rem;}

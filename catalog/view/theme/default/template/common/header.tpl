@@ -159,7 +159,7 @@
     <div class="ss_modal">
       <div class="bg_f clearfix">
         <div class="text clearfix">
-          <div class="close"><img src="/catalog/view/theme/default/img/png/close.png" alt="" /></div>
+          <div class="close"><img src="/catalog/view/theme/default/img/png/close5.png" alt="" /></div>
           <form method="post" action="<?=$search_url;?>" >
           <label class="clearfix" for="">
 
