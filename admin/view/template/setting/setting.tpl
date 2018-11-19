@@ -165,6 +165,13 @@
                 </div>
               </div>
               <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-reward">注册奖励积分</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_reward" value="<?php echo $config_reward; ?>" placeholder="<?php echo $entry_reward; ?>" id="input-email" class="form-control" />
+              
+                </div>
+              </div>
+              <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-telephone">Whatsapp</label>
                 <div class="col-sm-10">
                   <input type="text" name="config_telephone" value="<?php echo $config_telephone; ?>" placeholder="<?php echo $entry_telephone; ?>" id="input-telephone" class="form-control" />

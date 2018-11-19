@@ -264,6 +264,7 @@ class ModelAccountCustomer extends Model {
 	}
 
 
+
    /**
 	* 用户中心account模块,修改用户的信息
 	* @author  dyl 783973660@qq.com 2016.9.26

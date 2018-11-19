@@ -278,7 +278,11 @@ class ControllerAccountLogin extends Controller {
 			}
 		}
 		if(!$json){
-			$this->model_account_customer->addCustomer($this->request->post);
+		$customer_id=	$this->model_account_customer->addCustomer($this->request->post);
+				// 注册送积分
+			$this->load->model('account/reward');
+	 		$this->model_account_reward->addReward($customer_id,'Registration Award',$this->config->get('config_reward'));
+
 
 			// Clear any previous login attempts for unregistered accounts.
 			$this->model_account_customer->deleteLoginAttempts($this->request->post['email']);

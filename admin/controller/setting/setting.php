@@ -62,6 +62,7 @@ class ControllerSettingSetting extends Controller {
 		$data['entry_address'] = $this->language->get('entry_address');
 		$data['entry_geocode'] = $this->language->get('entry_geocode');
 		$data['entry_email'] = $this->language->get('entry_email');
+		$data['entry_reward'] = '注册奖励积分';
 		$data['entry_telephone'] = $this->language->get('entry_telephone');
 		$data['entry_facebook'] ='Face账号';
 		$data['entry_instagram'] ='instagram';
@@ -500,6 +501,11 @@ class ControllerSettingSetting extends Controller {
 			$data['config_email'] = $this->request->post['config_email'];
 		} else {
 			$data['config_email'] = $this->config->get('config_email');
+		}
+		if (isset($this->request->post['config_reward'])) {
+			$data['config_reward'] = $this->request->post['config_reward'];
+		} else {
+			$data['config_reward'] = $this->config->get('config_reward');
 		}
 
 		if (isset($this->request->post['config_telephone'])) {

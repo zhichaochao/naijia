@@ -127,6 +127,10 @@ class ControllerExtensionModulePPLogin extends Controller {
 				);
 
 				$customer_id = $this->model_account_customer->addCustomer($data);
+					// 注册送积分
+			$this->load->model('account/reward');
+	 		$this->model_account_reward->addReward($customer_id,'Registration Award',$this->config->get('config_reward'));
+
 
 				$this->model_extension_module_pp_login->log('Customer ID date_added: ' . $customer_id);
 

@@ -18,7 +18,13 @@ class ControllerAccountRegister extends Controller {
 		$this->load->model('account/customer');
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
+			// print_r(2);
 			$customer_id = $this->model_account_customer->addCustomer($this->request->post);
+
+
+			// 注册积分
+			$this->load->model('account/reward');
+	 		$this->model_account_reward->addReward($customer_id,'Registration Award',$this->config->get('config_reward'));
 
 			// Clear any previous login attempts for unregistered accounts.
 			$this->model_account_customer->deleteLoginAttempts($this->request->post['email']);
@@ -472,4 +478,6 @@ class ControllerAccountRegister extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+	// 
+
 }
