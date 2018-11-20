@@ -40,6 +40,7 @@
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
                   <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
+                   <?php if($product['sort_orders']==1){?>
                   <?php if($product['specials']){?>
                   <div class="bg_hui">
 
@@ -50,6 +51,7 @@
                       <span class="int_second">00</span>
                     </p>
                   </div>
+                  <?php } ?>
                   <?php } ?>
                 </div>
                 <div class="text clearfix">

@@ -551,8 +551,9 @@
                       <!-- <td class="text-right"><?php echo $entry_priority; ?></td> -->
                       <td class="text-right"><?php echo $entry_price; ?>(正常价减去下边的价格)</td>
                       <td class="text-right"><?php echo $entry_percent; ?>（正常价的比例）（优先）<br/>0代表不使用百分比</td>
-                      <td class="text-left"><?php echo $entry_date_start; ?></td>
-                      <td class="text-left"><?php echo $entry_date_end; ?></td>
+                      <td class="text-left"><?php echo $entry_date_start; ?><span style="color: red;">必填项*</span></td>
+                      <td class="text-left"><?php echo $entry_date_end; ?><span style="color: red;">必填项*</span></td>
+                      <td class="text-left">是否显示<span style="color: red;">(1 为显示)</span></td>
                       <td></td>
                     </tr>
                   </thead>
@@ -590,6 +591,7 @@
 
                       </div>
                       </td>
+                       <td class="text-right"><input type="text" name="product_special[<?php echo $special_row; ?>][sort_orders]" value="<?php echo $product_special['sort_orders']; ?>" placeholder="" class="form-control" /></td>
                       <td class="text-left"><button type="button" onclick="$('#special-row<?php echo $special_row; ?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
                     </tr>
                     <?php $special_row++; ?>
@@ -885,6 +887,7 @@ function addSpecial() {
 
 	// html += '  <td class="text-left" style="width: 20%;"><div class="input-group datetime"><input type="text" name="product_special[' + special_row + '][date_end]" value="" placeholder="<?php echo $entry_date_end; ?>" data-date-format="YYYY-MM-DD HH:mm:ss" class="form-control" /><span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button></span></div></td>';
 html +='<td class="text-left" style="width: 20%;"><div class="input-group datetime"><input type="text" name="product_special[' + special_row + '][date_end]" value="" placeholder="<?php echo $entry_date_end; ?>" data-date-format="YYYY-MM-DD HH:mm:ss"  class="form-control" /><span class="input-group-btn"><button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button> </span></div></td>';
+  html += '  <td class="text-right"><input type="text" name="product_special[' + special_row + '][sort_orders]" value="0" placeholder="" class="form-control" /></td>';
 
 	html += '  <td class="text-left"><button type="button" onclick="$(\'#special-row' + special_row + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
 	html += '</tr>';

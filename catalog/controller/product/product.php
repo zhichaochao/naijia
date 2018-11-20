@@ -116,7 +116,7 @@ class ControllerProductProduct extends Controller {
 
         $product_info = $this->model_catalog_product->getProduct($product_id);
         $producthot = $this->model_catalog_product->getProcatehot($product_id);
-// print_r($producthot);exit;
+// print_r($product_info);exit;
         if ($product_info) {
             $url = '';
 
@@ -616,6 +616,7 @@ class ControllerProductProduct extends Controller {
                     $thumbs= $image;
                 }
                 $data['sspecial']=$product_info['special'];
+                // print_r( $data['sspecial']);exit;
                 $data['products_like'][] = array(
                     'product_id'  => $result['product_id'],
                     'thumb'       => $image,
@@ -693,11 +694,15 @@ class ControllerProductProduct extends Controller {
             //购物车链接
             $data['shopping_cart'] = $this->url->link('checkout/cart');
             if($product_info['special']){
-                $data['ends_dates'] = strtotime($product_info['special']['date_end'])-time();
+                $data['ends_dates'] = strtotime($product_info['special']['date_end'])-strtotime($product_info['now']);
+
+                $data['sort_orders']=$product_info['special']['sort_orders'];
             }else{
                 $data['ends_dates']="";
+                $data['sort_orders']="";
             }
 
+// print_r($data['sort_orders']);exit;
 
             $data['facebook'] = $this->config->get('config_facebook');
          $data['instagram'] = $this->config->get('config_instagram');
