@@ -113,7 +113,7 @@
         <ul class="shop_type_ul clearfix" id="shop_type_ul">
           <li class="<?=$shippingorpick=='shipping'?'active':'';?> clearfix">
             <label for="country_id">
-              <span>Country*</span>
+              <span>Country</span>
               
               <div class="select clearfix">
                 <select id="country_id" name="country_id">
@@ -130,7 +130,7 @@
               </div>
             </label>
             <label for="zone_id">
-              <span>City*</span>
+              <span>City</span>
               <select name="zone_id" id='zone_id' onchange ="get_address_cost();">
                
               </select>
