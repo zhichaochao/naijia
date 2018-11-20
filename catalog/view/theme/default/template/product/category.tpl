@@ -61,7 +61,7 @@
                      <span class="price"><?php echo $product['price']; ?></span>
                   <?php } ?>
                 </div>
-                <em class="red_em">HOT<br />SALE</em>
+                   <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
               </a>
               <!-- 收藏 -->
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"

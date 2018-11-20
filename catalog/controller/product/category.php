@@ -537,6 +537,7 @@ class ControllerProductCategory extends Controller {
 					'hot'	  => $category_info['hot'],
 					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
+					'hotsort'	  => $result['hot'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
 					'name'        => $result['name'],

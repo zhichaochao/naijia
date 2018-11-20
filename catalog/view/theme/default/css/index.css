@@ -1867,9 +1867,9 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	
 	/***********pro_det***********/
 	.pro_det .img_lf {width: 100%;}
-	.pro_det .img_lf .time{background: #ff2054;text-align: center;padding:  0.1rem 0;}
-	.pro_det .img_lf .time p{color: #fff;display:block;width: 100%;font-size: 0.2rem;padding: 0 0.2rem;box-sizing: border-box;line-height: 0.4rem;}
-	.pro_det .img_lf .time p span{font-size: 0.18rem;padding: 0.05rem;border: 1px solid #fff;margin-right: 0.03rem;}
+	.pro_det .img_lf .time{background: #ff2054;text-align: center;padding:  0.15rem 0;}
+	.pro_det .img_lf .time p{color: #fff;display:block;width: 100%;font-size: 0.24rem;padding: 0 0.2rem;box-sizing: border-box;line-height: 0.4rem;}
+	.pro_det .img_lf .time p span{font-size: 0.24rem;padding: 0.05rem;font-weight: bold; border: 1px solid #fff;margin-right: 0.03rem;}
 	.pro_det .img_lf .img_ul{display: none;}
 	.pro_det .img_lf .pro_ban{display: block ;position: relative;text-align: center;margin: 0 0 0.6rem 0;}
 	.pro_ban .swiper-pagination{position: inherit;display: inline-block;margin-top: 0.4rem;bottom: 0 !important;}
