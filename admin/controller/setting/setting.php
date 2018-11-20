@@ -63,6 +63,7 @@ class ControllerSettingSetting extends Controller {
 		$data['entry_geocode'] = $this->language->get('entry_geocode');
 		$data['entry_email'] = $this->language->get('entry_email');
 		$data['entry_reward'] = '注册奖励积分';
+		$data['entry_reward_limit'] = '积分一次使用上限';
 		$data['entry_telephone'] = $this->language->get('entry_telephone');
 		$data['entry_facebook'] ='Face账号';
 		$data['entry_instagram'] ='instagram';
@@ -506,6 +507,12 @@ class ControllerSettingSetting extends Controller {
 			$data['config_reward'] = $this->request->post['config_reward'];
 		} else {
 			$data['config_reward'] = $this->config->get('config_reward');
+		}
+
+		if (isset($this->request->post['config_reward_limit'])) {
+			$data['config_reward_limit'] = $this->request->post['config_reward_limit'];
+		} else {
+			$data['config_reward_limit'] = $this->config->get('config_reward_limit');
 		}
 
 		if (isset($this->request->post['config_telephone'])) {

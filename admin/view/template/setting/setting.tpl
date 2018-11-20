@@ -165,9 +165,16 @@
                 </div>
               </div>
               <div class="form-group required">
-                <label class="col-sm-2 control-label" for="input-reward">注册奖励积分</label>
+                <label class="col-sm-2 control-label" for="input-reward"><?php echo $entry_reward; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="config_reward" value="<?php echo $config_reward; ?>" placeholder="<?php echo $entry_reward; ?>" id="input-email" class="form-control" />
+                  <input type="text" name="config_reward" value="<?php echo $config_reward; ?>" placeholder="<?php echo $entry_reward; ?>" id="input-reward" class="form-control" />
+              
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-reward_limit"><?php echo $entry_reward_limit; ?></label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_reward_limit" value="<?php echo $config_reward_limit; ?>" placeholder="<?php echo $entry_reward_limit; ?>" id="input-reward0limit" class="form-control" />
               
                 </div>
               </div>

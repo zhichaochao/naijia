@@ -19,6 +19,7 @@ class ControllerCheckoutTotal extends Controller {
 			$sort_order = array();
 
 			$results = $this->model_extension_extension->getExtensions('total');
+			// print_r($results );exit();
 
 			foreach ($results as $key => $value) {
 				$sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
@@ -34,6 +35,7 @@ class ControllerCheckoutTotal extends Controller {
 					$this->{'model_extension_total_' . $result['code']}->getTotal($total_data);
 				}
 			}
+			// print_r($this->session->data['reward']);
 
 			$sort_order = array();
 
@@ -50,6 +52,7 @@ class ControllerCheckoutTotal extends Controller {
 					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
 				);
 			}
+			// print_r($data);
 
 			return $data;
 
