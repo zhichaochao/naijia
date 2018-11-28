@@ -231,7 +231,7 @@ class ControllerProductCategory extends Controller {
 			$basicresults2 = $this->model_catalog_product->getBasicProductss($filter_datas);
 			$basicresults3 = $this->model_catalog_product->getBasiccProductss($filter_datas);
 			// $basicresults1 = $this->model_catalog_product->getBasicProducts($filter_data);
-// print_r($basicresults1);exit;
+// print_r($basicresults2);exit;
 			foreach ($basicresults1 as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
@@ -291,7 +291,6 @@ class ControllerProductCategory extends Controller {
 					'hot'	  => $category_info['hot'],
 					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
-					'hotsort'	  => $result['hot'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
@@ -366,7 +365,6 @@ class ControllerProductCategory extends Controller {
 					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
-					'hotsort'	  => $result['hot'],
 					'percent'    => $percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
@@ -438,7 +436,6 @@ class ControllerProductCategory extends Controller {
 					'thumbs'       =>$tmp,
 					'hot'	  => $category_info['hot'],
 					'date_end'	  => $date_ends,
-					'hotsort'	  => $result['hot'],
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
@@ -537,7 +534,6 @@ class ControllerProductCategory extends Controller {
 					'hot'	  => $category_info['hot'],
 					'date_end'	  => $date_ends,
 					'max_name'	  => $result['name'],
-					'hotsort'	  => $result['hot'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
 					'name'        => $result['name'],

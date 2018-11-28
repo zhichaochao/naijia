@@ -12,10 +12,10 @@
       <div class="contents clearfix">
         <div class="img_lf">
           <div class="big_lf clearfix">
-        <?php if($sort_orders==1){?>
+
           <?php if($sspecial){?>
             <div class="top time" title="<?php echo $ends_dates; ?>" >
-              <!-- <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p> -->
+              <p>Save 15% on your order - Use code: NAIJABEAUTY Apply</p>
               <p>Sales end in 
                 <span class="int_day">00</span>:
                 <span class="int_hour">00</span>:
@@ -23,7 +23,6 @@
                 <span class="int_second">00</span>
               </p>
             </div>
-          <?php }?>
           <?php }?>
 
             <!--pc左边大图-->

@@ -34,7 +34,6 @@
                                <?php } ?>
                               
                             </div>
-                             <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
                           </a>
                       </div>
                     <?php } ?>
@@ -108,8 +107,7 @@
                        <span><?php echo $product['price']; ?></span>
                         <?php } ?>
                     </div>
-                         
-                  </a><em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
+                  </a>
                 </li>
                      <?php } ?>
               </ol>
@@ -135,8 +133,7 @@
                        <span><?php echo $product['price']; ?></span>
                         <?php } ?>
                     </div>
-                    
-                  </a><em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
+                  </a>
                 </li>
                  <?php } ?>
               </ol>

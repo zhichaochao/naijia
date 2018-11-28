@@ -722,3 +722,6 @@
 2018-11-19 9:45:28 - PHP Notice:  Undefined variable: order_info in D:\phpStudy\WWW\naijia\catalog\controller\checkout\payment.php on line 41
 2018-11-19 10:07:20 - PHP Notice:  Undefined variable: order_info in D:\phpStudy\WWW\naijia\catalog\controller\checkout\payment.php on line 41
 2018-11-19 10:22:52 - PHP Notice:  Undefined variable: entry_serviceemail in D:\phpStudy\WWW\naijia\admin\view\template\setting\setting.tpl on line 214
+2018-11-23 2:35:44 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-11-23 2:37:29 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-11-23 2:37:32 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
