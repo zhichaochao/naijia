@@ -18,23 +18,7 @@
         })
       })
     </script>
-    <!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2045058382446116');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2045058382446116&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
+  
 
     <title><?=$title?></title>
   </head>
@@ -62,7 +46,7 @@
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
               <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
-                <a href="<?php echo $hothref;?>">Hot Sales</a>
+                <a href="<?php echo $hothref;?>">Christmas Sales</a>
               </li>
               <?php foreach($categories as $key => $category) { ?>
               <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
@@ -140,7 +124,7 @@
         <div class="top_nav">
           <ul>
             <li><a href="<?=$home;?>">Home <i></i></a></li>
-            <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
+            <li><a href="<?php echo $hothref;?>">Christmas Sales<i></i></a></li>
             <?php foreach($categories as $key => $category) { ?>
             <li >
               <p class="nav_p active li_p1"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>

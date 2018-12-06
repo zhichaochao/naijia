@@ -1,0 +1,115 @@
+[33mde5c02992fc4f38f2208e55d744f975dc22c28a6[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m 代码
+[33m8aa11a9cd75145b3df0e654f11c67921afbad1b8[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m0cc08a80f5cf6133b026beb372e8926ed6699d4e[m 修改
+[33m07a41bc995811005bcf415f3432428a3dd1b06ca[m 更新线上到本地
+[33md17daea4c55c712feb38c05ec3630d2783a601fd[m 添加上传凭证
+[33m0ce3c6bdbd4ec47aaaf3ca310b8fd62e42a1c7e7[m 屏蔽掉注册发邮箱
+[33me5a020b3cf4e6394f59e73fb9c754c1424368e28[m 修改手机号
+[33mcbc4178b618661d75e099e08f5aafc5cc9364040[m 修改hotsale
+[33m38cd8984745106b2d4a711cb451cd049ac236d80[m 修改logo
+[33m8b874a983e648ea34ac1fc6d514cf8bb7b524b03[m 修改logo
+[33md05617bfcdc2ef15cca0464f1c147cd55684c741[m 添加hotsale
+[33me2bb7b074e759766f76125f5c0af090e36d77a4d[m 修改倒计时
+[33mfdabda6699ffd4a9642ca9d65c4f2c86d3f6e615[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m5ad15c6a4b8fb8fd60e4ab7b09ef1078138c018c[m 积分使用上限
+[33m457340cab37dc65eabb0a1dca3d8d13d291fbe4b[m 更换图片
+[33m6dacc0fcc61f5e77ff8e6cfe48c62aa9a8093236[m 去掉星号
+[33m36673efa44e00be8c218c6288bd9c3d075ff2c47[m 注册送积分
+[33m317d232880b35359537656526bf4e900670cc1ef[m 修改心愿移动
+[33m8feb7cf4ebadbc6ee8c74b39ed5f27338aeaacb8[m 更新css
+[33md8fb7af3f6306c7d6857cc2b922447dea0d6b7d2[m 修改
+[33maa67223ddc777b269c3fc9df4e63be4fb776d690[m 修改留言空页面
+[33m1420f6df932300a4f1eb9feba65bafac5b7d136d[m 修改页面  样式
+[33mb63ac2b102a0ffea65f6457c12d6aaeedd1ce963[m 修改
+[33me2eafd380fe4a2158dc46671b860ccc6493e565a[m 修改
+[33mf1c5467c8bb894f7e24c08d4dc01b7efd80c4992[m 修改首页产品轮播
+[33mfc7029ce27cdd36f673444e15d0f7d0976a837ae[m 修改 支付
+[33me226c6e9a96805e581ccf2ed20f4092f42c2d747[m 订单修改 地图
+[33mc5616c47d25a51004b3b21915df50e20aa09be2a[m https
+[33mc2bab8997e2319da33f9e80690e904d4765da0eb[m 配置https
+[33md6c9178b5a15a20b3a397403fad9a974be62eacc[m 修改  支付  css
+[33m3059fce58938dd2e6380f8ee24c038c794ca1714[m 留言模块 后台留言修改
+[33mcf3256b01ee393a44612333086e2f3d9d8f91f2b[m 订单修改 页面修改
+[33m21da341ecab4b80b5e52434951f40a5212acae20[m 订单详情修改 产品详情修改 详情修改
+[33m786116833db15140ea02e81dbad394ed4d3af62c[m 修改
+[33m4f03569eac2a26c18929cf531b776f0e7a1b1839[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33ma958018d015d1dbaae39ab16652a200c0e13dcde[m 提示选择
+[33m14993625a7a62a1201a60d3408d2ca9aa0199010[m 后台博客模块 前台部分页面修改
+[33m55e85c5c5df3982c03f9f4a57f4394cdef6ad347[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m8dae199c157adb715e5c51bd95597deefed84624[m 倒计时
+[33m34f6b35797a3cd907481d4ecde0d172fde303883[m 更新css
+[33m9bd1fcf04c6c295cfc4c05f2c3ba11aab29eeaf0[m 文档修改  后台paystack支付
+[33m64268087c4137bdd8825b6ff4489dbe35b4fd3dd[m 搜索
+[33mccefeb026d451b4e38b253ff4be99efec2c54c20[m 三个问题
+[33mb24afaa8da2d5f35cbf588c30ba63ca8cb31cc60[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m628eddf47a331d780a51eb929a10985d0ba541a3[m guest
+[33m77c91f7200529a5f17423feede12844977314ecb[m 修改
+[33m3ee61852b7ad09e271d0e3d7310cf37c19447dc6[m 修改
+[33m2285beeea1be4c10edfab6a521ab48dde9c4be18[m 修改tips提示 预约
+[33m2f2b7a90ea3f95b5908a78a0da146ca844b6e49b[m 更新css
+[33m293c5b70dfd97b0d7a567c8bd14d64c0832646fa[m 更新 css
+[33mb609f670e81d72db417fab5f7081f618154bffd5[m 移动导航
+[33m0358225c3ec55d72647cf174cc50b5c3a10a42b9[m 搜索修改 后台添加留言模块 部分页面修改
+[33m6bdda0942bee16f98c22f27d0534b702a54b24c9[m 订单详情修改
+[33m57fc06098748a90595739cbfdb5f7878c761312f[m vip修改
+[33md684f3e1ec73a7ab90aa96f85b515475d5991944[m 底部联系
+[33ma92643918f8f80d58c6e96680d93855ff5f54df3[m 去掉提示
+[33m0ea8321a80be4aab8cb327850f28d514b7774d0d[m 属性排序 商品添加提示
+[33m42b93b06f8b0c8ca612a328026f5c8ee2333a82a[m 去掉提示
+[33m181ab700f83cf3e9c542dbafdb9b723dce1607e2[m 评价点击跳转
+[33m52165db3f67a17cb6ed915dbcf9d7804fe75209b[m 后台热销排序 box页面
+[33m058dab5724c7b2d7259873b85d02e33429297f52[m 更新css
+[33m817feedecd9aaa4a800eec52c4f9c2fbbdac7f2f[m 报错修改
+[33m8bbe2c1460fa6b705b137b3b264e1687af96d8cb[m 修改
+[33m4ca29f76085632cf005767f857e5106e4d2adc9b[m 后台增加 预约管理模块
+[33m4ad7b5b3501364e01e9e84e02299b7a94257762e[m 头部
+[33mac76f139bac5097df4aad273886d0522cac560b0[m 修改
+[33m45d98dcde5dda79b5de3dcf423cb8102296864a4[m 预约 评论 vip 页面
+[33m35ded95f1e0a049937e554cff56990f719d89b36[m 购物车数量
+[33mb10bfc51fb3339ae460231f9bd995995d1b987e3[m whaspp修改
+[33m388a171cee11b0bb9ad1e9f8dfec77d685e3d4c6[m 首页 修改
+[33mcbee7c1c989752734c1a4f6f9fde1a28e7a79a5e[m 修改basic页面
+[33m6c05571b371b1bff1d4247456ed0bab6764a1c07[m 地址默认
+[33ma527f86a6eee2a2eca4aabc31726933576fdf305[m 更新css
+[33m84be279ff2c3350151f0e2088fa2d4a0cfe149a8[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m8fa5195e981a7467253f07e07c6014ef211e8356[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33mc9e771681638040dd49adf7c6529d80bd1539a8d[m 伪静态
+[33ma043ad825b2900eabd451d1b0b3d6831f3cdc9cd[m 首页评论
+[33m6871d607f4437f3777433394353afcae1d40beee[m 后台评论 添加上传照片
+[33m698081de7d36246b59c47d00bca1ae8be8564b50[m 预约页面
+[33m63b8c9404d63b0aa531d9ec14d47d71bcbd8a040[m 截取分页修改首页
+[33m5dd4214ff920e38b1551118e26bf9d25b446ec39[m 去掉屏蔽
+[33mf7ad0a00dd00c0bb595f67ca3895f41ba31008f0[m 地址修改  box页面修改
+[33m2a399decf86398d9f11f80744c1c6d42400bf251[m 分页样式
+[33m73fc8c9129a5cec19049d6ca002f9f76030978b0[m 移动滚动加载
+[33me8d1fc56b9bdbe0ffe6b0a059a10dda0988995a6[m 支付
+[33m2193a77ce4c0d153d2e873090c4af8fc6b2770be[m 不登录的话，结算要先登录
+[33m04098f82460e42180fb227687c2cea2a79b8c422[m face 等链接
+[33m473e72366db3679fbd64bb785533567fb4ee8292[m 去掉打印
+[33m0b947a68bae447591d4755d9dc9f2b0b1073781e[m 订单修改
+[33m78adb9c20538f558536279f2ed79a6879674ba54[m order详情 修改
+[33ma0b96081079fc0f7b251c0d63019faa5b964d220[m Merge branch 'HEAD' of https://github.com/zhichaochao/naijia.git
+[33m67f7d5814de3f785bbdc190121b8a0a82db37187[m api
+[33m0a5e845d7ceddcab3c3047937f78bfc2a98e6ae9[m 更新css  移动hot修改
+[33m1f1b8c9245c884d86857fb72f122f011896b5586[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m2f71ecbf78b6b13a5b2af654c05764a69a58c8cf[m api判断
+[33md50a410fe5e4c26b1b71a4533e8666a246cbfe89[m 修改
+[33m4ccc4aec3477511df7752ee3f3cf399e75d75354[m 首页修改  搜索修改
+[33mbc924cd5acbb040a4c91e9441f10e446e873bac0[m 移动端底部  个人中心
+[33m692defb117451f924d3bd4d19b26ce6d5690c6c3[m 页面修改 添加功能
+[33m94cec417686dffec9df666312f11ed864c1d8ec6[m 首页评论跳转
+[33me199f60353e3e8743420d68bf74a89b3225b821b[m 修改
+[33mbbf22c1d4f7374ea58499396dcad3a02ada7d859[m 空页面
+[33mbe49da60f760d25e173727cb3c31cd6ee2f2ee08[m 所有评论页面
+[33mc1f1e7dd6ebfc2ffcdd8d698ecd6b4c1b0e6ce1c[m Merge branch 'master' of https://github.com/zhichaochao/naijia.git
+[33m28f067ccca1488def836acf4725347a70c466290[m 首页
+[33ma3a57d80340e35b3300ce4f3c493c00ae3a4c726[m boke页面
+[33m7c5d695d2673b744ec8c63934152de340c135e52[m yd头部链接
+[33m8f5230a285afbd361400374cab5a7da41d57191b[m 预约 about faq  页面
+[33m14c782077d75cc897fac467aa128a1f4789b8b38[m 密码等成功提示修改
+[33m25169599fa977fd5978178df93ed89c668c0dfe6[m count us
+[33m5207c0196614a43eafb60f7dcbd3ddb8c5bc36e9[m 添加faq等页面
+[33m5bb18afc2d97de33e902056848e32a27a27afd3e[m 滚动加载分页
+[33me99d3a0600bf778577e8e7acbe354d1f94429465[m 版本PHP，引起错误
+[33ma19a851bf59b6a483c23a20fe460fa3c7b414c65[m 上传
+[33m95352bf477a6bb55b4923db48ab2acb2c02768f6[m 更新css  购物车
