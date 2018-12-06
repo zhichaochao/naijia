@@ -18,6 +18,8 @@
         })
       })
     </script>
+  
+
     <title><?=$title?></title>
   </head>
   <body>
@@ -44,7 +46,7 @@
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
               <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
-                <a href="<?php echo $hothref;?>">Hot Sales</a>
+                <a href="<?php echo $hothref;?>">Christmas Sales</a>
               </li>
               <?php foreach($categories as $key => $category) { ?>
               <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
@@ -122,7 +124,7 @@
         <div class="top_nav">
           <ul>
             <li><a href="<?=$home;?>">Home <i></i></a></li>
-            <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
+            <li><a href="<?php echo $hothref;?>">Christmas Sales<i></i></a></li>
             <?php foreach($categories as $key => $category) { ?>
             <li >
               <p class="nav_p active li_p1"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
