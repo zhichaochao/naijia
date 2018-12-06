@@ -131,6 +131,7 @@ class ModelSaleOrder extends Model {
 				'shipping_address_1'      => $order_query->row['shipping_address_1'],
 				'shipping_address_2'      => $order_query->row['shipping_address_2'],
 				'shipping_postcode'       => $order_query->row['shipping_postcode'],
+				'bank_receipt'       => $order_query->row['bank_receipt'],
 				'shipping_city'           => $order_query->row['shipping_city'],
 				'shipping_zone_id'        => $order_query->row['shipping_zone_id'],
 				'shipping_zone'           => $order_query->row['shipping_zone'],

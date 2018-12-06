@@ -768,7 +768,7 @@ class ControllerSaleOrder extends Controller {
 		}
 
 		$order_info = $this->model_sale_order->getOrder($order_id);
-
+// print_r($order_info);exit();
 		if ($order_info) {
 			$this->load->language('sale/order');
 
@@ -902,6 +902,14 @@ class ControllerSaleOrder extends Controller {
 			} else {
 				$data['store_url'] = $order_info['store_url'];
 			}
+		$this->load->model('tool/image');
+
+			if (!empty($order_info['bank_receipt'])) {
+				$data['bank_receipt'] = $this->model_tool_image->resize($order_info['bank_receipt'], 500, 500);
+			} else {
+				$data['bank_receipt'] = $this->model_tool_image->resize('no_image.png', 500, 500);
+			}
+			// print_r($data['bank_receipt']);exit;
 
 			if ($order_info['invoice_no']) {
 				$data['invoice_no'] = $order_info['invoice_prefix'] . $order_info['invoice_no'];

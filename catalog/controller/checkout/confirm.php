@@ -125,7 +125,7 @@ class ControllerCheckoutConfirm extends Controller {
 				$order_data['firstname'] = $customer_info['firstname'];
 				$order_data['lastname'] = $customer_info['lastname'];
 				$order_data['email'] = $customer_info['email'];
-				$order_data['telephone'] = $customer_info['telephone'];
+				// $order_data['telephone'] = $customer_info['telephone'];
 				$order_data['fax'] = $customer_info['fax'];
 				$order_data['custom_field'] = json_decode($customer_info['custom_field'], true);
 			} elseif (isset($this->session->data['guest'])) {
@@ -134,7 +134,7 @@ class ControllerCheckoutConfirm extends Controller {
 				$order_data['firstname'] = $this->session->data['guest']['firstname'];
 				$order_data['lastname'] = $this->session->data['guest']['lastname'];
 				$order_data['email'] = $this->session->data['guest']['email'];
-				$order_data['telephone'] = $this->session->data['guest']['telephone'];
+				// $order_data['telephone'] = $this->session->data['guest']['telephone'];
 				$order_data['fax'] = $this->session->data['guest']['fax'];
 				$order_data['custom_field'] = $this->session->data['guest']['custom_field'];
 			}
@@ -142,6 +142,7 @@ class ControllerCheckoutConfirm extends Controller {
 			$order_data['payment_firstname'] = $this->session->data['payment_address']['firstname'];
 			$order_data['payment_lastname'] = $this->session->data['payment_address']['lastname'];
 			$order_data['payment_company'] = $this->session->data['payment_address']['company'];
+			$order_data['telephone'] = $this->session->data['payment_address']['phone'];
 			$order_data['payment_address_1'] = $this->session->data['payment_address']['address_1'];
 			$order_data['payment_address_2'] = $this->session->data['payment_address']['address_2'];
 			$order_data['payment_city'] = $this->session->data['payment_address']['city'];
