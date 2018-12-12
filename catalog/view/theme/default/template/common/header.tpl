@@ -10,6 +10,8 @@
     <script type="text/javascript" src="/catalog/view/theme/default/js/jquery.min.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/common.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/swiper.js" ></script>
+    <noscript><style type="text/css">body{display:none;}</style></noscript>
+<script type="text/javascript" src="https://us03.lockview.cn/Js/lockview.js?uid=LK5322592"></script>
     <script type="text/javascript">
       $(function () {
         $('#checkout_btn').click(function () {
