@@ -28,21 +28,15 @@ class ControllerCommonEmail extends Controller {
                //发送邮件
                $this->load->language('mail/customer');
                $this->load->model('account/customer');
-               if (isset($this->session->data['email_user_id'])) {
-                   $this->model_tool_image
-               
-
-
-		       $data['user_name'] = '志超';
-		       $data['email'] ='928583371@qq.com';
-		       $data['telephone'] = '312123123';
+               // if (isset($this->session->data['email_user_id'])) {
+           $data['user_name'] = 'lixianga'; 
+           $data['email'] ='1358432408@qq.com';
              
                  //邮箱头部信息
                $message  = $this->language->get('text_website') . ' ' . html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8') . "\n\n";
-		       $message = 'Full Name: ' . $data['user_name'] . "\n\n";
-		       $message .= 'Telephone: ' . $data['telephone'] . "\n\n";
-		       $message .= $this->language->get('text_email') . ' '  .  $data['email']  . "\n\n";
-		       $message .= 'Inquiry Content: '  .  '测试' . "\n\n";
+             $message = 'Full Name: ' .  sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')). "\n\n";
+             $message .= $this->language->get('text_email') . ' '  .  $data['email']  . "\n\n";
+             $message .= 'Inquiry Content: '  .  '测试' . "\n\n";
 
                $mail = new Mail();
                $mail->protocol = $this->config->get('config_mail_protocol');
@@ -55,7 +49,7 @@ class ControllerCommonEmail extends Controller {
 
                $mail->setTo($data['email']);                     //发给系统管理员的邮箱(接收人邮箱)
                $mail->setFrom($this->config->get('config_mail_parameter'));      //发送人
-               $mail->setSender(html_entity_decode($data['user_name'], ENT_QUOTES, 'UTF-8'));    //发送者名字
+               $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));    //发送者名字
                $mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'),'志超'), ENT_QUOTES, 'UTF-8'));
                $mail->setSubject('Naijia Ask for help');  
                                                           //邮件标题
@@ -63,6 +57,43 @@ class ControllerCommonEmail extends Controller {
                $mail->setHtml($this->load->view('mail/contact_us_email',$data));
 
                $mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
+               $mail->send();
+
+               if (in_array('account', (array)$this->config->get('config_mail_alert'))) {
+               $message  = $this->language->get('text_website') . ' ' . html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8') . "\n\n";
+             $message = 'Full Name: ' .  sprintf($this->language->get('text_subject'), html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8')). "\n\n";
+             $message .= $this->language->get('text_email') . ' '  .  $data['email']  . "\n\n";
+             $message .= 'Inquiry Content: '  .  '测试' . "\n\n";
+
+                $mail = new Mail();
+               $mail->protocol = $this->config->get('config_mail_protocol');
+               $mail->parameter = $this->config->get('config_mail_parameter');
+               $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+               $mail->smtp_username = $this->config->get('config_mail_smtp_username');
+               $mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+               $mail->smtp_port = $this->config->get('config_mail_smtp_port');
+               $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+
+              $mail->setTo('2119850506@qq.com');
+              $mail->setFrom($this->config->get('config_mail_parameter'));
+               $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));    //发送者名字
+               $mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'),'志超'), ENT_QUOTES, 'UTF-8'));
+              $mail->setSubject('发给管理员');  
+               // 邮件模板
+               $mail->setHtml($this->load->view('mail/customer_email',$data));
+
+               $mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
+
+              // Send to additional alert emails if new account email is enabled
+              $emails = explode(',', $this->config->get('config_alert_email'));
+
+              foreach ($emails as $email) {
+                if (utf8_strlen($email) > 0 && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  $mail->setTo($email);
+                  $mail->send();
+                }
+              }
+            }
 
                 $json = array();
 
@@ -77,9 +108,10 @@ class ControllerCommonEmail extends Controller {
                }
            $this->response->addHeader('Content-Type: application/json');
            $this->response->setOutput(json_encode($json));
-      }
+      // }
               
-		
+    
     }
+    
 
 }

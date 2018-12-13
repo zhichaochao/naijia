@@ -278,6 +278,7 @@ class ControllerProductHotcategory extends Controller {
     //             $texture = $this->model_catalog_product->getOptionDes('Texture',$result['product_id']);
 				if(!empty($result['special'])){
 			    	$specials=$result['special']['special'];
+			    	$sort_orders=$result['special']['sort_orders'];
 			    	if ($result['special']['percent']>0) {
 			    		$perce=$result['special']['percent'];
 			    		$percents=100-$perce;
@@ -290,6 +291,7 @@ class ControllerProductHotcategory extends Controller {
 			    }else{
 			    	$specials='';
 			    	$percents='';
+			    	$sort_orders='';
 			    	$date_ends='';
 			    }
 			    if (isset($res[0]['image'])){
@@ -297,6 +299,7 @@ class ControllerProductHotcategory extends Controller {
 			    }else{
 			    	$tmp=$image;
 			    }
+			    // print_r($resspecialsults);exit;
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
@@ -306,6 +309,7 @@ class ControllerProductHotcategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'specials'	  => $specials,
+					'sort_orders'	  => $sort_orders,
 					'percent'    => $percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',

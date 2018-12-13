@@ -725,3 +725,10 @@
 2018-11-23 2:35:44 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
 2018-11-23 2:37:29 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
 2018-11-23 2:37:32 - PHP Notice:  Error: MAIL FROM not accepted from server! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 350
+2018-12-12 9:29:01 - PHP Notice:  Error: E-Mail subject required! in D:\phpStudy\PHPTutorial\WWW\hotnajia\system\library\mail.php on line 79
+2018-12-13 1:35:00 - PHP Notice:  Undefined variable: order_info in D:\phpStudy\PHPTutorial\WWW\hotnajia\catalog\controller\checkout\payment.php on line 41
+2018-12-13 2:24:53 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\information_form.tpl on line 130
+2018-12-13 2:24:53 - PHP Notice:  Undefined variable: ydthumb1 in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\information_form.tpl on line 137
+2018-12-13 2:24:53 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\information_form.tpl on line 137
+2018-12-13 2:24:53 - PHP Notice:  Undefined variable: m_image in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\information_form.tpl on line 138
+2018-12-13 2:24:53 - PHP Notice:  Undefined variable: placeholder in D:\phpStudy\PHPTutorial\WWW\hotnajia\admin\view\template\catalog\information_form.tpl on line 198

@@ -11,7 +11,7 @@
     <script type="text/javascript" src="/catalog/view/theme/default/js/common.js" ></script>
     <script type="text/javascript" src="/catalog/view/theme/default/js/swiper.js" ></script>
     <noscript><style type="text/css">body{display:none;}</style></noscript>
-<script type="text/javascript" src="https://us03.lockview.cn/Js/lockview.js?uid=LK5322592"></script>
+<script type="text/javascript" src="http://us03.lockview.cn/Js/lockview.js?uid=LK5322592"></script>
     <script type="text/javascript">
       $(function () {
         $('#checkout_btn').click(function () {
@@ -20,7 +20,21 @@
         })
       })
     </script>
-  
+    <?php foreach ($styles as $style) { ?>
+<link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
+<?php } ?>
+<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+<?php foreach ($links as $link) { ?>
+<link href="<?php echo $link['href']; ?>" rel="<?php echo $link['rel']; ?>" />
+<?php } ?>
+<?php foreach ($scripts as $script) { ?>
+<script src="<?php echo $script; ?>" type="text/javascript"></script>
+<?php } ?>
+<?php foreach ($analytics as $analytic) { ?>
+<?php echo $analytic; ?>
+<?php } ?>
+
+
 
     <title><?=$title?></title>
   </head>
@@ -48,7 +62,7 @@
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
               <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
-                <a href="<?php echo $hothref;?>">Christmas Sales</a>
+                <a href="<?php echo $hothref;?>">Hot Sales</a>
               </li>
               <?php foreach($categories as $key => $category) { ?>
               <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
@@ -126,7 +140,7 @@
         <div class="top_nav">
           <ul>
             <li><a href="<?=$home;?>">Home <i></i></a></li>
-            <li><a href="<?php echo $hothref;?>">Christmas Sales<i></i></a></li>
+            <li><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></li>
             <?php foreach($categories as $key => $category) { ?>
             <li >
               <p class="nav_p active li_p1"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
