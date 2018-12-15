@@ -135,6 +135,43 @@ class ControllerInformationLagosstore extends Controller {
                $mail->smtp_port = $this->config->get('config_mail_smtp_port');
                $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
+               // $mail->setTo($this->config->get('config_serviceemail'));   
+               $mail->setTo($data['email']);                     //发给系统管理员的邮箱(接收人邮箱)
+               $mail->setFrom($this->config->get('config_mail_parameter'));      //发送人
+               $mail->setSender(html_entity_decode($data['user_name'], ENT_QUOTES, 'UTF-8'));    //发送者名字
+               //$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
+               $mail->setSubject('Lagos Shop Reservation');                                                //邮件标题
+               $mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
+               $mail->send();
+
+				$this->load->model('localisation/country');
+
+               $html_data['from_name'] = $data['user_name'];
+               $html_data['email'] = $this->customer->getEmail();
+               $html_data['tel_number'] = $this->customer->getTelephone();
+               $html_data['business_name'] = $data['user_name'];
+               $html_data['ip_address'] = $this->request->server['REMOTE_ADDR'];
+               $html_data['send_page'] = $QUERY_STRING[1];
+
+               $message  = $this->language->get('text_website') . ' ' . html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8') . "\n\n";
+		       $message .= 'Full Name: ' . $data['user_name'] . "\n\n";
+		       $message .= $this->language->get('text_email') . ' '  .  $this->customer->getEmail() . "\n\n";
+		       $message .= 'Reservations: '  .  $data['email'] . "\n\n";
+		       $message .= 'Reservation content: '  .  $data['content'] . "\n\n";
+		       $message .= 'Time of appointmentt: '  .  $data['time'] . "\n\n";
+		       $message .= 'source: '  . $data['url']. "\n\n";
+		       $message .= 'Timely Handling Of Staff'  . "\n\n";
+
+               $mail = new Mail();
+               $mail->protocol = $this->config->get('config_mail_protocol');
+               $mail->parameter = $this->config->get('config_mail_parameter');
+               $mail->smtp_hostname = $this->config->get('config_mail_smtp_hostname');
+               $mail->smtp_username = $this->config->get('config_mail_smtp_username');
+               $mail->smtp_password = html_entity_decode($this->config->get('config_mail_smtp_password'), ENT_QUOTES, 'UTF-8');
+               $mail->smtp_port = $this->config->get('config_mail_smtp_port');
+               $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
+
+               // $mail->setTo($this->config->get('config_serviceemail'));   
                $mail->setTo($this->config->get('config_serviceemail'));                     //发给系统管理员的邮箱(接收人邮箱)
                $mail->setFrom($this->config->get('config_mail_parameter'));      //发送人
                $mail->setSender(html_entity_decode($data['user_name'], ENT_QUOTES, 'UTF-8'));    //发送者名字
@@ -142,6 +179,8 @@ class ControllerInformationLagosstore extends Controller {
                $mail->setSubject('Lagos Shop Reservation');                                                //邮件标题
                $mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
                $mail->send();
+
+
 
             }else{
                $this->session->data['error'] = 'Reservation failure';

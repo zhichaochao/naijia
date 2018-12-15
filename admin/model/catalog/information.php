@@ -1,7 +1,7 @@
 <?php
 class ModelCatalogInformation extends Model {
 	public function addInformation($data) {
-		$this->db->query("INSERT INTO " . DB_PREFIX . "information SET sort_order = '" . (int)$data['sort_order'] . "', bottom = '" . (isset($data['bottom']) ? (int)$data['bottom'] : 0) . "', image = '" . $this->db->escape($data['image']) . "', addtime = NOW(), video = '" . $this->db->escape($data['video']) . "', parent_id = '" . (int)$data['parent_id'] . "', status = '" . (int)$data['status'] . "'");
+		$this->db->query("INSERT INTO " . DB_PREFIX . "information SET sort_order = '" . (int)$data['sort_order'] . "', bottom = '" . (isset($data['bottom']) ? (int)$data['bottom'] : 0) . "', image = '" . $this->db->escape($data['image']) . "', images = '" . $this->db->escape($data['images']) . "', addtime = NOW(), video = '" . $this->db->escape($data['video']) . "', parent_id = '" . (int)$data['parent_id'] . "', status = '" . (int)$data['status'] . "'");
 
 		$information_id = $this->db->getLastId();
 
@@ -31,7 +31,7 @@ class ModelCatalogInformation extends Model {
 	}
 
 	public function editInformation($information_id, $data) {
-		$this->db->query("UPDATE " . DB_PREFIX . "information SET sort_order = '" . (int)$data['sort_order'] . "', bottom = '" . (isset($data['bottom']) ? (int)$data['bottom'] : 0) . "', image = '" . $this->db->escape($data['image']) . "', video = '" . $this->db->escape($data['video']) . "', parent_id = '" . (int)$data['parent_id'] . "', addtime = NOW(), status = '" . (int)$data['status'] . "' WHERE information_id = '" . (int)$information_id . "'");
+		$this->db->query("UPDATE " . DB_PREFIX . "information SET sort_order = '" . (int)$data['sort_order'] . "', bottom = '" . (isset($data['bottom']) ? (int)$data['bottom'] : 0) . "', image = '" . $this->db->escape($data['image']) . "', images = '" . $this->db->escape($data['images']) . "', video = '" . $this->db->escape($data['video']) . "', parent_id = '" . (int)$data['parent_id'] . "', addtime = NOW(), status = '" . (int)$data['status'] . "' WHERE information_id = '" . (int)$information_id . "'");
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "information_description WHERE information_id = '" . (int)$information_id . "'");
 

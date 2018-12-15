@@ -38,7 +38,7 @@
           </h2>
           <p class="p1">
             <span>SHOP ADDRESS:</span>
-           Alausa.obafemi awolowo way. ikeja Lagos, Nigeria
+           House number 1, 7A justice g.b.a. coker estate. Obafemi awolowo way, ikeja Lagos, Nigeria
              <!-- <br style="display: block;" /> 510000  China -->
           </p>
           <p class="p2">

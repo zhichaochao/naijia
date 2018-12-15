@@ -5,7 +5,7 @@
     <div class="vip_con clearfix">
       <div class="text right_text clearfix">
         <div class="bnr clearfix">
-          <img class="changeimage lazyLoad"  data-image="catalog/view/theme/default/img/vip1.jpg" data-mimage="catalog/view/theme/default/img/yd_vip1.jpg" alt="" />
+          <img class="changeimage lazyLoad"  data-image="catalog/view/theme/default/img/vips1.jpg" data-mimage="catalog/view/theme/default/img/yd_vips1.jpg" alt="" />
         </div>
         <div class="form_div clearfix" id="register-form-div">
           <div class="form_text clearfix">
@@ -82,11 +82,9 @@
 
           </div>
           <div class="r_text clearfix">
-            <p>1. In 30/11/2018, you can be our online VIP by just signing up here, 
-              and get a 2K VIP point.<br />
-              2. You can get our S-VIP card directly by your first buying from us in
-              30/11/2018, that you can enjoy all service with 10% off in our Lagos
-              strore. 
+            <p> 1.You can be our online VIP by just signing up here, and get a 20K 
+              VIP point.<br />
+              2.Get S-VIP card if you had purchased over 150K naira from us. 
             </p>
           </div>
           

@@ -1,180 +1,75 @@
 <?php echo $header; ?>
 <div class="in_content clearfix"></div>
 		<!--内容-->
-		<div class="wig3 clearfix">
-			<div class="wig_con clearfix">
-				<div class="top_yd pc_hide clearfix">
-					<h1><a class="fh" href="javascript:;">< BACK</a> Hair Care</h1>
+		<div class="wig32 clearfix">
+			<div class="bg_f clearfix">
+				<div class="wig32_con clearfix">
+
+					<div class="top">
+						<p class="p1"><?php echo $information_fu?></p>
+						<h1 class="bt_h1">
+							<?php echo $title?>
+						</h1>
+						<?php if(empty($images) && empty($video)){ ?>
+						<p class="top_p">
+							<?php echo $meta_title?>
+						</p>
+						<?php } ?>
+					</div>
+					<div class="time">
+						<span><?php echo $addtime?></span>
+					</div>
+					<div class="text clearfix">
+						<!-- zhaopain -->
+						<?php if($video){ ?>
+						<div class="img_vd">
+							<div class="bf_img"></div>
+							<video id="top_video" poster="" src="<?php echo $video?>" height="100%" width="100%" style="display: block;"></video>
+						</div>
+						<?php }else{ ?>
+						<div class="img_vd">
+							<img src="<?php echo $images?>" alt="" />
+						</div>
+						<?php } ?>
+
+						<div class="p_big clearfix">
+						<?php echo $description?>
+						</div>
+						
+						<?php if(!empty($images) || !empty($video)){ ?>
+						<p class="p3 clearfix">
+						<?php echo $meta_title?>
+						</p>
+						<?php } ?>
+
+						<?php if($video){ ?>
+
+						<p class="p2 p_img clearfix">
+							<img src="<?php echo $simages?>"/>
+						<?php }else{ ?>
+						<p class="p2 clearfix">
+						<?php } ?>
+						<?php echo $meta_description?>
+						</p>
+						
+						
+					</div>
+					
 				</div>
-				
-				<h1 class="top_h1 yd_hide clearfix">Hair Care</h1>
-				<p class="top_p clearfix">
-				 The first time you successfully register as a member, you will receive ₦2000 points (only one time for each member account)
-				 Redeem coupons and cash vouchers in VIP Shopping Interface
-				</p>
-				
-				<ul class="wig3_ul clearfix">
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<div class="bf_img"></div>
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<div class="bf_img"></div>
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<div class="pic_img clearfix">
-								<img src="catalog/view/theme/default/img/wig6.jpg"/>
-							</div>
-							<div class="text clearfix">
-								<p class="p1">Release time:2018-09-28</p>
-								<p class="p2">
-									There are Lace Front Wigs, 360 Lace Wigs 
-									and Full/Whole Lace Wigs
-								</p>
-								<p class="p3">
-									There are Lace Front Wigs, 360 Lace Wigs and Full/Whole Lace Wigs that all can be 
-								</p>
-							</div>
-						</a>
-					</li>
-				</ul>
-				
-				<a class="more_a" href="javascript:;">VIEW MORE +</a>
 			</div>
 		</div>
 		
-		
 <?php echo $footer; ?>
+<script>
+	$(function(){
+		let str =$.trim($(".p_big").text())
+		let one =str.slice(0,1);
+		let str_text =  str.slice(1);
+		$(".p_big").text(str_text);
+		let app_text = "<style>.wig32 .wig32_con .p_big:before{content: '"+one+"';}</style>"
+		$(".p_big").append(app_text);
+		
+	})
+</script>
+
 		

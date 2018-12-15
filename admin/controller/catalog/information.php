@@ -419,6 +419,14 @@ class ControllerCatalogInformation extends Controller {
 			$data['image'] = '';
 		}
 
+		if (isset($this->request->post['images'])) {
+			$data['images'] = $this->request->post['images'];
+		} elseif (!empty($information_info)) {
+			$data['images'] = $information_info['images'];
+		} else {
+			$data['images'] = '';
+		}
+
 		if (isset($this->request->post['video'])) {
 			$data['video'] = $this->request->post['video'];
 		} elseif (!empty($information_info)) {
@@ -459,6 +467,14 @@ class ControllerCatalogInformation extends Controller {
 			$data['thumb'] = $this->model_tool_image->resize($information_info['image'], 100, 100);
 		} else {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['images']) && is_file(DIR_IMAGE . $this->request->post['images'])) {
+			$data['thumbs'] = $this->model_tool_image->resize($this->request->post['images'], 100, 100);
+		} elseif (!empty($information_info) && is_file(DIR_IMAGE . $information_info['images'])) {
+			$data['thumbs'] = $this->model_tool_image->resize($information_info['images'], 100, 100);
+		} else {
+			$data['thumbs'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
 		if (isset($this->request->get['information_id'])) {
