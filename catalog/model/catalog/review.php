@@ -180,4 +180,75 @@ class ModelCatalogReview extends Model {
 
 		return $query->rows;
 	}
+	public function getcoupon($limit) {
+		// print_r($limit);exit;
+		if ($limit==3) {
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.uses_total != 0  ORDER BY o.coupon_id desc  limit $limit ");
+		}else{
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.uses_total != 0  ORDER BY o.coupon_id desc   ");
+
+		}
+		
+
+		return $query->rows;
+	}
+	public function couponornot($coupon_id){
+           $customer_id = $this->customer->isLogged() ? $this->customer->getId() : 0;
+            if( empty($coupon_id)|| $customer_id==0){
+                return false;
+            }
+           
+            $sql ="select * from ".DB_PREFIX."customer_coupon   where coupon_id = '".$coupon_id."' AND customer_id =". $customer_id;
+            $query = $this->db->query($sql);
+            // print_r($query->row)
+           if (empty($query->row)) {
+           	return  false;
+           }else {
+           		return  true;
+           }
+          
+            
+          
+	}
+	public function getcoupons($coupon_id) {
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'");
+		if ($query->rows) {
+			return array(
+				'coupon_id'       => $query->row['coupon_id'],
+				'name'       => $query->row['name'],
+				'type'       => $query->row['type'],
+				'discount'       => $query->row['discount'],
+				'date_end'       => $query->row['date_end'],
+				'total'       => $query->row['total'],
+				'name'       => $query->row['name'],
+				);
+		}else{
+		return false;
+		}
+		// return $query->rows;
+	}
+	public function addcoupon($coupon_id) {
+
+		$this->db->query("INSERT INTO " . DB_PREFIX . "customer_coupon SET customer_id = '" . (int)$this->customer->getId() . "', coupon_id = '" . (int)$coupon_id . "'");
+		$querys = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'");
+		$row= $querys->row;
+		$suc =$this->db->query("UPDATE " . DB_PREFIX . "coupon SET uses_total = ".($row['uses_total']-1)." WHERE coupon_id= '" .(int)$coupon_id. "' ");
+		return $suc;
+	}
+	public function getCustomerCoupon() {
+
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_coupon WHERE customer_id = '" . (int)$this->customer->getId(). "'");
+		// $query->rows;
+		if(!empty($query->rows)){
+			foreach ($query->rows as $result) {
+			$coupon_data[$result['coupon_id']] = $this->getcoupons($result['coupon_id']);
+		}
+		return $coupon_data;
+		}else{
+		return false;
+		}
+		
+		
+	}
+	
 }

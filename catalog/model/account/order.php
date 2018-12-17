@@ -235,4 +235,10 @@ class ModelAccountOrder extends Model {
 
 		return $query->row['qty'];
 	}
+
+	public function getOrderStatus($order_status_id,$language_id){
+
+	$order_status_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_status WHERE order_status_id = '" . (int)$order_status_id . "' AND language_id = '" . (int)$language_id . "'");
+	return $order_status_query->row['name'];
+}
 }

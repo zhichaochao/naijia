@@ -57,9 +57,30 @@ class ControllerAccountCoupon extends Controller {
 		}else{
 			$data['home'] =$this->url->link('account/account');
 		}
+
+
+		$this->load->model('catalog/review');
+		$resultcoupon = $this->model_catalog_review->getCustomerCoupon();
+		if($resultcoupon){
+			foreach ($resultcoupon as $result) {
+				$time=time();
+				$data['coupons'][] = array(
+					'coupon_id'=>$result['coupon_id'],
+					'name'=>$result['name'],
+					'type'=>$result['type'],
+			 		'discountp' 			=>floatval($result['discount']),
+			 		'discount' 		=>$this->currency->format(floatval($result['discount']),$this->session->data['currency']),
+			 		'total' 	=> $this->currency->format(floatval($result['total']),$this->session->data['currency']),
+					'status' =>  strtotime($result['date_end'])>$time ? 0:1,
+					'date_end' => date($this->language->get('date_format_short'), strtotime($result['date_end']))
+					);
+
+			}
+		}
 		// print_r($data['home']);exit();
 		$data['add'] = $this->url->link('account/address/add', '', true);
 		$data['back'] = $this->url->link('account/account', '', true);
+		$data['coupon'] = $this->url->link('common/coupon', '', true);
 
 		$data['action'] = $this->url->link('account/address/edit', true);
 

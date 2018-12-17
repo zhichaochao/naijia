@@ -20,46 +20,35 @@
         <!--内容-->
         <div class="intext1 clearfix">
 <!-- 优惠券 -->
-    <!--     <div class="in_coupon clearfix">
+        <div class="in_coupon clearfix">
         <div class="coupon_pic">
           <img  class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/coupon_bg.jpg' data-mimage='catalog/view/theme/default/img/yd_coupon_bg.jpg'/>
         </div>
         
         <ul class="clearfix">
+       <?php foreach ($resultcoupon as $coupons) { ?>
           <li>
             <div class="box clearfix">
-              <div class="text">  
-                <p class="p1"><span>-</span><i>₦</i>2K</p>
-                <p class="p2">FIRST ORDER</p>
-                <button type="button">CLICK&nbsp;&nbsp;> </button>
+              <div class="text">
+           <?php if($coupons['type']=='P') { ?>     
+                <p class="p1"><?=$coupons['discountp'];?>%OFF</p>
+               <?php }else{ ?> 
+                <p class="p1"><span>-</span><i></i><?=$coupons['discount'];?></p>
+               <?php } ?> 
+                
+
+                <p class="p2"><?=$coupons['name'];?></p>
+                <a href="<?php echo $coupon?>"><button type="button">CLICK&nbsp;&nbsp;> </button></a>
               </div>
               <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
               
             </div>
           </li>
-          <li>
-            <div class="box clearfix">
-              <div class="text">  
-                <p class="p1">15%OFF</p>
-                <p class="p2">Halloween Discount </p>
-                <button type="button">CLICK&nbsp;&nbsp;> </button>
-              </div>
-              <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
-            </div>
-          </li>
-          <li>
-            <div class="box clearfix">
-              <div class="text">  
-                <p class="p1"><span>-</span><i>₦</i>5K</p>
-                <p class="p2">The Second Wig</p>
-                <button type="button">CLICK&nbsp;&nbsp;> </button>
-              </div>
-              <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
-            </div>
-          </li>
+        <?php } ?>
+
         </ul>
       
-      </div> -->
+      </div>
 
 
 
@@ -251,7 +240,7 @@
     <?php  } ?>
 
     <!--优惠卷弹窗-->
-<!--     <div class="in_coupon_tc clearfix">
+    <div class="in_coupon_tc clearfix">
       <div class="text clearfix">
         <div class="con clearfix">
           <h1>Discounts&Coupons</br>
@@ -260,13 +249,22 @@
           <div class="close"></div>
           <h2>COUPON</h2>
           <ol class="yhj_ol clearfix">
-            <li class="active">
-              <h3>$5</h3>
-              <p>Spend US $500.00, Get US $5 off</p>
-              <span>Expires:2018/11/30</span>
-              <button class="yh_btn" type="button">Coupon Added</button>
+
+        <?php foreach ($resultcoupons as $coupons) { ?>
+        <!-- 领取成功加 active -->
+            <li class="<?=$coupons['coupon']==1 ?'active':'';?>" >
+              <h3>-<?=$coupons['discount']?></h3>
+
+           <?php if($coupons['type']=='P') { ?> 
+              <p>Spend US <?=$coupons['total']?>, Get US <?=$coupons['discountp']?> %off</p>
+              <?php }else{ ?>
+              <p>Spend US <?=$coupons['total']?>, Get US <?=$coupons['discount']?></p>
+              <?php }?>
+              <span>Expires:<?=$coupons['date_end']?></span>
+              <button class="yh_btn <?=$coupons['coupon']==1 ?'active':'';?>" type="button" onclick="coupon('<?=$coupons['coupon_id']?>',this)">Coupon Added</button>
             </li>
-            <li>
+           <?php  } ?>
+          <!--   <li>
               <h3>15%OFF</h3>
               <p>Spend US $500.00, Get US $5 off</p>
               <span>Expires:2018/11/30</span>
@@ -295,11 +293,11 @@
               <p>Spend US $500.00, Get US $5 off</p>
               <span>Expires:2018/11/30</span>
               <button class="yh_btn" type="button">Get It Now</button>
-            </li>
+            </li> -->
           </ol>
         </div>
       </div>
-    </div> -->
+    </div>
 <?php echo $footer; ?>
 <script>
 function thumbs(review_id,e) {
@@ -396,4 +394,28 @@ function thumbs(review_id,e) {
       }
     })
     })
+     function coupon(coupon_id,e) {
+
+     if (!$(e).hasClass('active')) {
+       $.ajax({
+    url:'<?php echo $addcoupon ;?>',
+    type:'post',
+    data:{'coupon_id':coupon_id},
+    dataType: 'json',
+    success:function(data){
+      // alert(data);
+      if (data.success) {
+        tips("Successful collection","");
+        if(!$(e).hasClass("active")){
+         $(e).addClass("active");
+       }
+      }else{
+        window.location.href="<?php echo $login?>";
+      }
+    }
+   })
+
+  }
+
+  }
   </script>

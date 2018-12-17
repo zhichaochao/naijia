@@ -110,7 +110,7 @@ class ControllerCheckoutSuccess extends Controller {
 		}
 
 		$data['button_continue'] = $this->language->get('button_continue');
-
+// print_r($this->session->data['order_id']);exit;
 		$data['continue'] = $this->url->link('common/home');
 		$data['back'] = $this->url->link('account/order');
 		$data['column_left'] = $this->load->controller('common/column_left');
@@ -121,5 +121,14 @@ class ControllerCheckoutSuccess extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 
 		$this->response->setOutput($this->load->view('checkout/success', $data));
+	}
+	public function sendEmail_1(){
+		$this->load->model('checkout/order');
+		$order_id = $this->session->data['order_id'];
+		$order = $this->model_checkout_order->getOrder($this->session->data['order_id']);
+
+		if(!isset($this->session->data['send_order_id']) || $this->session->data['send_order_id'] != $order_id ){
+			$this->model_checkout_order->sendEmail($order_id, $order['order_status_id']);
+		}
 	}
 }

@@ -301,6 +301,12 @@ class ControllerAccountLogin extends Controller {
 
 			$this->model_account_activity->addActivity('register', $activity_data);
 
+			 $this->session->data['email_action']='register';
+		     $this->session->data['email_user_id']=$this->customer->getId();
+		     // $this->session->data['email_order_id']=$order_id;
+		     $this->load->controller('common/email');
+// print_r($this->session->data['email_action']);
+// print_r($this->session->data['email_user_id']);exit;
 			if (isset($this->request->post['redirect']) && $this->request->post['redirect'] != $this->url->link('account/logout', '', true) && (strpos($this->request->post['redirect'], $this->config->get('config_url')) !== false || strpos($this->request->post['redirect'], $this->config->get('config_ssl')) !== false)) {
 			    $json['redirect'] = str_replace('&amp;', '&', $this->request->post['redirect']);
 			} else {

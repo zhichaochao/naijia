@@ -28,9 +28,10 @@ class ControllerCommonEmail extends Controller {
                //发送邮件
                $this->load->language('mail/customer');
                $this->load->model('account/customer');
-               // if (isset($this->session->data['email_user_id'])) {
-           $data['user_name'] = 'lixianga'; 
-           $data['email'] ='1358432408@qq.com';
+               if (isset($this->session->data['email_user_id'])) {
+                $customer_info = $this->model_account_customer->getCustomer($this->session->data['email_user_id']);
+           $data['user_name'] = $customer_info['firstname'].$customer_info['lastname']; 
+           $data['email'] =$customer_info['email'];
              
                  //邮箱头部信息
                $message  = $this->language->get('text_website') . ' ' . html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8') . "\n\n";
@@ -74,7 +75,8 @@ class ControllerCommonEmail extends Controller {
                $mail->smtp_port = $this->config->get('config_mail_smtp_port');
                $mail->smtp_timeout = $this->config->get('config_mail_smtp_timeout');
 
-              $mail->setTo('2119850506@qq.com');
+              // $mail->setTo('1358432408@qq.com');
+              $mail->setTo($this->config->get('config_email'));
               $mail->setFrom($this->config->get('config_mail_parameter'));
                $mail->setSender(html_entity_decode($this->config->get('config_name'), ENT_QUOTES, 'UTF-8'));    //发送者名字
                $mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'),'志超'), ENT_QUOTES, 'UTF-8'));
@@ -108,7 +110,7 @@ class ControllerCommonEmail extends Controller {
                }
            $this->response->addHeader('Content-Type: application/json');
            $this->response->setOutput(json_encode($json));
-      // }
+      }
               
     
     }

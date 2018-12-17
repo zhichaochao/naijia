@@ -219,6 +219,45 @@ class ControllerCommonHome extends Controller {
                $this->session->data['error'] = 'Submit your proposal to failure.';
             }
 		}
+
+		// youhuiquan 
+		$resultcoupon = $this->model_catalog_review->getcoupon(3);
+		// print_r($resultcoupon);exit;
+		if($resultcoupon){
+		foreach ($resultcoupon as $key => $value) {
+			
+			 $data['resultcoupon'][] = array(
+			 	'coupon_id' 	 => $value['coupon_id'],
+			 	'name'  		=> $value['name'],
+			 	'code' 			=> $value['code'],
+			 	'discountp' 			=>floatval($value['discount']),
+			 	'discount' 		=>$this->currency->format(floatval($value['discount']),$this->session->data['currency']), 
+			 	'type' 			=> $value['type'],
+			 	'total' 	=> $this->currency->format($value['total'],$this->session->data['currency']),
+				'date_end' => date($this->language->get('date_format_short'), strtotime($value['date_end']))
+			 	);
+		}
+		}
+		$resultcoupon = $this->model_catalog_review->getcoupon(0);
+		// print_r($resultcoupon);exit;
+		if($resultcoupon){
+		foreach ($resultcoupon as $key => $value) {
+			 $coupon= $this->model_catalog_review->couponornot($value['coupon_id']);
+			 $data['resultcoupons'][] = array(
+			 	'coupon_id' 	 => $value['coupon_id'],
+			 	'name'  		=> $value['name'],
+			 	'code' 			=> $value['code'],
+			 	'discountp' 			=>floatval($value['discount']),
+			 	'discount' 		=>$this->currency->format(floatval($value['discount']),$this->session->data['currency']), 
+			 	'type' 			=> $value['type'],
+			 	'coupon' 			=> $coupon,
+			 	'total' 	=> $this->currency->format($value['total'],$this->session->data['currency']),
+				'date_end' => date($this->language->get('date_format_short'), strtotime($value['date_end']))
+			 	);
+		}
+		}
+// print_r($data['resultcoupons']);exit;
+
 		 //成功提示
 		if (isset($this->session->data['success'])) {
 			$data['success'] = $this->session->data['success'];
@@ -242,6 +281,8 @@ class ControllerCommonHome extends Controller {
         $data['addthumbs'] = $this->url->link('product/product/addthumbs');
         $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
         $data['login'] = $this->url->link('account/login');
+        $data['coupon'] = $this->url->link('common/coupon');
+        $data['addcoupon'] = $this->url->link('common/coupon/add', '', true);
 
 		
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');

@@ -35,13 +35,16 @@ class ControllerCheckoutPayment extends Controller {
 			}
 
 		}
-
-
+		$this->load->model('account/order');
+		$order_info=$this->model_account_order->getOrder($this->session->data['order_id']);
+		$order_status=$this->model_account_order->getOrderStatus($order_info['order_status_id'],$order_info['language_id']);
 		$data['whatsapp']=$this->config->get('config_telephone');
 		$data['order_number']=$order_info['order_number'];
+		$data['order_status']=$order_status;
 		$data['continue']=$this->url->link('common/home');
 		$data['view_order']=$this->url->link('account/order/info','&order_id='.$this->request->post['order_id']);
-		unset($this->session->data['order_id']);
+		// unset($this->session->data['order_id']);
+		// print_r($this->session->data['order_id']);exit;
 		$data['header'] = $this->load->controller('common/header');
 		$data['footer'] = $this->load->controller('common/footer');
 		$this->response->setOutput($this->load->view('checkout/payment_success', $data));

@@ -19,72 +19,77 @@
           <img class="vip_img" src="catalog/view/theme/default/img/vip.jpg" alt="" />
         </div>
         
-        <!-- <div class="right_text clearfix">
-          <div class="coupon clearfix">
-            <h1>My Coupons </h1>
-            
-            <div class="coupon_text clearfix">
-              <ul class="coupon_ul clearfix">
+       <?php if(isset($coupons)){ ?> 
+          <div class="right_text clearfix">
+                    <div class="coupon clearfix">
+                      <h1>My Coupons </h1>
+                      
+                      <div class="coupon_text clearfix">
+                        <ul class="coupon_ul clearfix">
+                     <?php foreach ($coupons as $coupon) { ?>
+                          <li class="<?=$coupon['status']==1 ?'failed':'';?>" >
+                            <a href="###">
+                              <p class="p1">The full court is  <?php echo $coupon['total']; ?> </p>
+                              <p class="p2"> minus  <?php echo $coupon['discount']; ?>.</p>
+                              <span class="sp_1"><?php echo $coupon['total']; ?></span>
+                              <span class="sp_2"><em>Full court discount</em></span>
+                              <p class="time">Expiration date:<?php echo $coupon['date_end']; ?></p>
+                            </a>
+                          </li>
+                      <?php } ?> 
+                          <!-- <li class="failed">
+                            <a href="###">
+                              <p class="p1">The full court is  ₦500</p>
+                              <p class="p2"> minus  ₦35.</p>
+                              <span class="sp_1">500₦</span>
+                              <span class="sp_2"><em>Full court discount</em></span>
+                              <p class="time">Expiration date:2018-9-26</p>
+                            </a>
+                          </li> -->
 
-                <li>
-                  <a href="###">
-                    <p class="p1">The full court is  ₦500</p>
-                    <p class="p2"> minus  ₦35.</p>
-                    <span class="sp_1">500₦</span>
-                    <span class="sp_2"><em>Full court discount</em></span>
-                    <p class="time">Expiration date:2018-9-26</p>
-                  </a>
-                </li>
-            
-                <li class="failed">
-                  <a href="###">
-                    <p class="p1">The full court is  ₦500</p>
-                    <p class="p2"> minus  ₦35.</p>
-                    <span class="sp_1">500₦</span>
-                    <span class="sp_2"><em>Full court discount</em></span>
-                    <p class="time">Expiration date:2018-9-26</p>
-                  </a>
-                </li>
+                         <!--  <li class="failed">
+                            <a href="###">
+                              <p class="p1">The full court is  ₦500</p>
+                              <p class="p2"> minus  ₦35.</p>
+                              <span class="sp_1">500₦</span>
+                              <span class="sp_2"><em>Full court discount</em></span>
+                              <p class="time">Expiration date:2018-9-26</p>
+                            </a>
+                          </li> -->
 
-                <li class="failed">
-                  <a href="###">
-                    <p class="p1">The full court is  ₦500</p>
-                    <p class="p2"> minus  ₦35.</p>
-                    <span class="sp_1">500₦</span>
-                    <span class="sp_2"><em>Full court discount</em></span>
-                    <p class="time">Expiration date:2018-9-26</p>
-                  </a>
-                </li>
-
+                          
+                        </ul>
+                        
+                      </div>
+                     <!--  <div class="fy_div">
+                        <ul>
+                          <li><a href="###">< Last</a></li>
+                          <li class="active"><a href="###">1</a></li>
+                          <li><a href="###">2</a></li>
+                          <li><a href="###">3</a></li>
+                          <li><a href="###">Next ></a></li>
+                        </ul>
+                      </div> -->
+                    </div>
+                    
+                  </div>
+        <?php }else{ ?> 
+           <!-- STA 空页面-->
+              <div class="right_text clearfix">
+                <div class="null clearfix">
+                  <div class="text clearfix">
+                    <img src="catalog/view/theme/default/img/png/null_1.png"/>
+                    <p>You haven`t get any coupons</p>
+                    <a href="<?php echo $coupon?>">Receive coupons&nbsp;&nbsp;></a>
+                  </div>
+                </div>
                 
-              </ul>
-              
-            </div>
-            <div class="fy_div">
-              <ul>
-                <li><a href="###">< Last</a></li>
-                <li class="active"><a href="###">1</a></li>
-                <li><a href="###">2</a></li>
-                <li><a href="###">3</a></li>
-                <li><a href="###">Next ></a></li>
-              </ul>
-            </div>
-          </div>
-          
-        </div> -->
+              </div>
+              <!-- END -->
+        <?php } ?> 
+        
 
-        <!-- STA 空页面-->
-        <div class="right_text clearfix">
-          <div class="null clearfix">
-            <div class="text clearfix">
-              <img src="catalog/view/theme/default/img/png/null_1.png"/>
-              <p>You haven`t get any coupons</p>
-              <a href="javascript:;" onclick="ling()">Receive coupons&nbsp;&nbsp;></a>
-            </div>
-          </div>
-          
-        </div>
-        <!-- END -->
+        
       
       </div>
       

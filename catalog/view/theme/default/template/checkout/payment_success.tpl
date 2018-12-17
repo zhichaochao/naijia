@@ -20,7 +20,7 @@
 							</dl>
 							<dl>
 								<dt>Order Status</dt>
-								<dd>Being Processed</dd>
+								<dd><?=$order_status;?></dd>
 							</dl>
 							<dl>
 								<dt>Question about this order?</dt>
@@ -53,3 +53,17 @@
 		
 		
 <?php echo $footer; ?>
+<script type="text/javascript">
+//触发发邮件动作
+	$(document).ready(function() {
+    	sendEmail();
+	});
+
+	//发邮件的方法
+	function sendEmail(){
+		$.ajax({
+	        url: 'index.php?route=checkout/success/sendEmail_1',
+	        type: 'post',
+	    });
+	}
+</script>
