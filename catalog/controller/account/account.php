@@ -121,7 +121,7 @@ class ControllerAccountAccount extends Controller {
 		$data['action'] = $this->url->link('account/account', '', true);
 		//修改密码的链接  dyl add
 		$data['changepwd_action'] = $this->url->link('account/account/changepwd', '', true);
-
+		$data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
 		if ($this->request->server['REQUEST_METHOD'] != 'POST') {
 			$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 		}

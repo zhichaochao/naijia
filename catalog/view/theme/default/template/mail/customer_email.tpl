@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<p>
-			 [<?php echo $user_name; ?>] yijingzhuce
+			 [<?php echo $user_name; ?>]
 		</p>
 		<p>Thanks for registering at naijabeautyhair.com</p>
 		<p>Your account has now been created and you can log in by your email address at below link:</p>

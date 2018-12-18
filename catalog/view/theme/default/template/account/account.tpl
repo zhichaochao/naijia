@@ -40,6 +40,10 @@
                 <span class="sp_bot"> Join VIP Program Now</span>
                 <span class="sp_bot2"> Loyalty point 888</span>
               </div>
+              <div class="top clearfix">
+               <span class="sp_lf"> My points</span>
+                <span class="sp_bot"> <?php echo $balance; ?></span>
+              </div>
               
               <ul class="grxx_ul clearfix">
                 <li>

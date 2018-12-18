@@ -1366,6 +1366,7 @@ class ControllerCustomerCustomer extends Controller {
 		$data['column_date_added'] = $this->language->get('column_date_added');
 		$data['column_description'] = $this->language->get('column_description');
 		$data['column_points'] = $this->language->get('column_points');
+		$data['token'] = $this->session->data['token'];
 
 		if (isset($this->request->get['page'])) {
 			$page = $this->request->get['page'];
@@ -1376,10 +1377,11 @@ class ControllerCustomerCustomer extends Controller {
 		$data['rewards'] = array();
 
 		$results = $this->model_customer_customer->getRewards($this->request->get['customer_id'], ($page - 1) * 10, 10);
-
+// print_r($results);exit;
 		foreach ($results as $result) {
 			$data['rewards'][] = array(
 				'points'      => $result['points'],
+				'customer_reward_id'      => $result['customer_reward_id'],
 				'description' => $result['description'],
 				'date_added'  => date($this->language->get('date_format_short'), strtotime($result['date_added']))
 			);
@@ -1401,7 +1403,28 @@ class ControllerCustomerCustomer extends Controller {
 
 		$this->response->setOutput($this->load->view('customer/customer_reward', $data));
 	}
+	public function dereward() {
+		$this->load->language('customer/customer');
 
+		$json = array();
+// print_r($this->request->post['customer_reward_id']);exit;
+		if($this->request->post['customer_reward_id']){
+			$this->load->model('customer/customer');
+			$this->model_customer_customer->dereward($this->request->post['customer_reward_id']);
+		}
+		// if (!$this->user->hasPermission('modify', 'customer/customer')) {
+		// 	$json['error'] = $this->language->get('error_permission');
+		// } else {
+		// 	$this->load->model('customer/customer');
+
+		// 	$this->model_customer_customer->addReward($this->request->get['customer_id'], $this->request->post['description'], $this->request->post['points']);
+
+			$json['success'] = $this->language->get('text_success');
+		// }
+
+		$this->response->addHeader('Content-Type: application/json');
+		$this->response->setOutput(json_encode($json));
+	}
 	public function addReward() {
 		$this->load->language('customer/customer');
 

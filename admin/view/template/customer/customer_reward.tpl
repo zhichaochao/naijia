@@ -5,6 +5,7 @@
         <td class="text-left"><?php echo $column_date_added; ?></td>
         <td class="text-left"><?php echo $column_description; ?></td>
         <td class="text-right"><?php echo $column_points; ?></td>
+        <td class="text-right">编辑</td>
       </tr>
     </thead>
     <tbody>
@@ -14,6 +15,9 @@
         <td class="text-left"><?php echo $reward['date_added']; ?></td>
         <td class="text-left"><?php echo $reward['description']; ?></td>
         <td class="text-right"><?php echo $reward['points']; ?></td>
+         <td class="text-right">
+             <button type="button" onclick="del('<?php echo $reward['customer_reward_id']; ?>')" data-toggle="tooltip" title="删除" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button>
+               </td>
       </tr>
       <?php } ?>
       <tr>
@@ -33,3 +37,23 @@
   <div class="col-sm-6 text-left"><?php echo $pagination; ?></div>
   <div class="col-sm-6 text-right"><?php echo $results; ?></div>
 </div>
+<script>
+function del(customer_reward_id) {
+  $.ajax({
+        url: 'index.php?route=customer/customer/dereward&token=<?php echo $token; ?>',
+        type: 'post',
+        data:{'customer_reward_id':customer_reward_id},
+        dataType: 'json',
+        success:function(json) {
+          // alert(json)
+        if(json){
+          alert(json.success);
+          location.reload();
+        }
+
+        }
+  })
+  // alert(customer_reward_id);
+  // body...
+}
+</script>
