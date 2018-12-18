@@ -30,33 +30,17 @@
                           <li class="<?=$coupon['status']==1 ?'failed':'';?>" >
                             <a href="###">
                               <p class="p1">The full court is  <?php echo $coupon['total']; ?> </p>
-                              <p class="p2"> minus  <?php echo $coupon['discount']; ?>.</p>
+                              <?php if($coupon['type']=='P') { ?> 
+                               <p class="p2"> minus  <?php echo $coupon['discountp']; ?>%off.</p>
+                              <?php }else{ ?>
+                               <p class="p2"> minus  <?php echo $coupon['discount']; ?>.</p>
+                              <?php }?>
                               <span class="sp_1"><?php echo $coupon['total']; ?></span>
                               <span class="sp_2"><em>Full court discount</em></span>
                               <p class="time">Expiration date:<?php echo $coupon['date_end']; ?></p>
                             </a>
                           </li>
                       <?php } ?> 
-                          <!-- <li class="failed">
-                            <a href="###">
-                              <p class="p1">The full court is  ₦500</p>
-                              <p class="p2"> minus  ₦35.</p>
-                              <span class="sp_1">500₦</span>
-                              <span class="sp_2"><em>Full court discount</em></span>
-                              <p class="time">Expiration date:2018-9-26</p>
-                            </a>
-                          </li> -->
-
-                         <!--  <li class="failed">
-                            <a href="###">
-                              <p class="p1">The full court is  ₦500</p>
-                              <p class="p2"> minus  ₦35.</p>
-                              <span class="sp_1">500₦</span>
-                              <span class="sp_2"><em>Full court discount</em></span>
-                              <p class="time">Expiration date:2018-9-26</p>
-                            </a>
-                          </li> -->
-
                           
                         </ul>
                         

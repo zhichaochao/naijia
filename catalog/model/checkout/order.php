@@ -876,6 +876,7 @@ class ModelCheckoutOrder extends Model {
 			$data['text_price'] = $language->get('text_new_price');
 			$data['text_total'] = $language->get('text_new_total');
 			$data['text_footer'] = $language->get('text_new_footer');
+			$data['text_footers'] = $language->get('text_new_footers');
 		
 			$data['logo'] = $this->config->get('config_url') . 'image/' . $this->config->get('config_logo');
 			$data['store_name'] = $order_info['store_name'];
@@ -1132,8 +1133,25 @@ class ModelCheckoutOrder extends Model {
 				$text .= $language->get('text_new_comment') . "\n\n";
 				$text .= $order_info['comment'] . "\n\n";
 			}
-		
-			$text .= $language->get('text_new_footer') . "\n\n";
+
+			if($order_info['payment_method'] =='Standard'){
+				$text .= $language->get('text_new_footer') . "\n\n";
+				// $data['payment_method'] = 'PayPal Payments Standard';
+			}else if($order_info['payment_method'] =='PayPal Express Checkout'){
+
+				$text .= $language->get('text_new_footer') . "\n\n";
+				// $data['payment_method'] ='PayPal Express Checkout';
+			}else if($order_info['payment_method'] =='Paystack'){
+
+				$text .= $language->get('text_new_footer') . "\n\n";
+				// $data['payment_method'] ='Paystack';
+
+			}else if($order_info['payment_method'] =='Directly Bank Transfer'){
+
+				$text .= $language->get('text_new_footers') . "\n\n";
+				// $data['payment_method'] ='Directly Bank Transfer';
+
+			}			
 		
 			//logo  dyl add
 			if ($this->request->server['HTTPS']) {

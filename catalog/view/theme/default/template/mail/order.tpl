@@ -111,7 +111,14 @@
       <?php } ?>
     </tfoot>
   </table>
+ 
+<?php if($payment_method=='Directly Bank Transfer'){ ?>
+  <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_footers; ?></p>
+<?php }else{ ?>
+  
   <p style="margin-top: 0px; margin-bottom: 20px;"><?php echo $text_footer; ?></p>
+<?php } ?>
+
 </div>
 </body>
 </html>

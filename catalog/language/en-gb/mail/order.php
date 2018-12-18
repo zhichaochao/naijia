@@ -1,7 +1,7 @@
 <?php
 // Text
 $_['text_new_subject']          = '%s - Order %s';
-$_['text_new_greeting']         = 'Thank you for your interest in %s products. Your order has been received and will be processed once payment has been confirmed.';
+$_['text_new_greeting']         = 'You just make an order on naijabeautyhair.com This is your order information. Please check and confirm:';
 $_['text_new_received']         = 'You have received an order.';
 $_['text_new_link']             = 'To view your order click on the link below:';
 $_['text_new_order_detail']     = 'Order Details';
@@ -25,7 +25,8 @@ $_['text_new_order_total']      = 'Order Totals';
 $_['text_new_total']            = 'Total';
 $_['text_new_download']         = 'Once your payment has been confirmed you can click on the link below to access your downloadable products:';
 $_['text_new_comment']          = 'The comments for your order are:';
-$_['text_new_footer']           = 'Please reply to this e-mail if you have any questions.';
+$_['text_new_footer']           = 'If any problem, please do not hesitate contact our supports on Whatsapp';
+$_['text_new_footers']           = 'We would check the bank alert and confirm the payment in 1-4 hours.If you have any question please do not hesitate contact us on this email.';
 $_['text_update_subject']       = '%s - Order Update %s';
 $_['text_update_order']         = 'Order ID:';
 $_['text_update_date_added']    = 'Date Ordered:';
