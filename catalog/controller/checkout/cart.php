@@ -324,6 +324,20 @@ class ControllerCheckoutCart extends Controller {
 					}
 				}
 			}
+			$this->load->model('catalog/review');
+			$resultcoupon = $this->model_catalog_review->getCustomerCoupon();
+		// print_r($resultcoupon);exit;
+			if(!empty($resultcoupon)){
+				foreach ($resultcoupon as $results) {
+				$data['coupons'][] = array(
+					'coupon_id'=>$results['coupon_id'],
+					'name'=>$results['name'],
+					'code'=>$results['code'],
+					'discount'=>$this->currency->format(floatval($results['discount']),$this->session->data['currency'])
+					);
+
+				}
+			}
 			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 
 		$this->response->setOutput($this->load->view('checkout/total', $data));

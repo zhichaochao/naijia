@@ -181,12 +181,10 @@ class ModelCatalogReview extends Model {
 		return $query->rows;
 	}
 	public function getcoupon($limit) {
-		// print_r($limit);exit;
 		if ($limit==3) {
-			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.uses_total != 0  ORDER BY o.coupon_id desc  limit $limit ");
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.uses_total != 0  AND o.date_end >= NOW() ORDER BY o.coupon_id desc  limit $limit ");
 		}else{
-			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.uses_total != 0  ORDER BY o.coupon_id desc   ");
-
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.uses_total != 0  AND o.date_end >= NOW() ORDER BY o.coupon_id desc   ");
 		}
 		
 
@@ -217,6 +215,7 @@ class ModelCatalogReview extends Model {
 				'coupon_id'       => $query->row['coupon_id'],
 				'name'       => $query->row['name'],
 				'type'       => $query->row['type'],
+				'code'       => $query->row['code'],
 				'discount'       => $query->row['discount'],
 				'date_end'       => $query->row['date_end'],
 				'total'       => $query->row['total'],
