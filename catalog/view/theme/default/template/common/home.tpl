@@ -26,6 +26,7 @@
         </div>
         
         <ul class="clearfix">
+        <?php if($resultcoupon){?>
        <?php foreach ($resultcoupon as $coupons) { ?>
           <li>
             <div class="box clearfix">
@@ -45,6 +46,8 @@
             </div>
           </li>
         <?php } ?>
+        <?php } ?>
+
 
         </ul>
       
