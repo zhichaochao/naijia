@@ -20,13 +20,14 @@
         <!--内容-->
         <div class="intext1 clearfix">
 <!-- 优惠券 -->
+<?php if($resultcoupon){?>
         <div class="in_coupon clearfix">
         <div class="coupon_pic">
           <img  class="changeimage lazyLoad" data-image='catalog/view/theme/default/img/coupon_bg.jpg' data-mimage='catalog/view/theme/default/img/yd_coupon_bg.jpg'/>
         </div>
         
         <ul class="clearfix">
-        <?php if($resultcoupon){?>
+
        <?php foreach ($resultcoupon as $coupons) { ?>
           <li>
             <div class="box clearfix">
@@ -46,13 +47,13 @@
             </div>
           </li>
         <?php } ?>
-        <?php } ?>
 
 
         </ul>
       
       </div>
 
+        <?php } ?>
 
 
 
@@ -253,6 +254,7 @@
           <h2>COUPON</h2>
           <ol class="yhj_ol clearfix">
 
+        <?php if($resultcoupons){?>
         <?php foreach ($resultcoupons as $coupons) { ?>
         <!-- 领取成功加 active -->
             <li class="<?=$coupons['coupon']==1 ?'active':'';?>" onclick="coupon('<?=$coupons['coupon_id']?>',this)">
@@ -270,6 +272,7 @@
               <span>Expires:<?=$coupons['date_end']?></span>
               <button class="yh_btn" type="button" >Coupon Added</button>
             </li>
+           <?php  } ?>
            <?php  } ?>
           <!--   <li>
               <h3>15%OFF</h3>

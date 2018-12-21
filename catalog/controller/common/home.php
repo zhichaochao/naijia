@@ -237,6 +237,8 @@ class ControllerCommonHome extends Controller {
 				'date_end' => date($this->language->get('date_format_short'), strtotime($value['date_end']))
 			 	);
 		}
+		}else{
+			 $data['resultcoupon']='';
 		}
 		$resultcoupon = $this->model_catalog_review->getcoupon(0);
 		// print_r($resultcoupon);exit;
@@ -255,6 +257,8 @@ class ControllerCommonHome extends Controller {
 				'date_end' => date($this->language->get('date_format_short'), strtotime($value['date_end']))
 			 	);
 		}
+		}else{
+			 $data['resultcoupons']='';
 		}
 // print_r($data['resultcoupons']);exit;
 
