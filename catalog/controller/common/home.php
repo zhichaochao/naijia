@@ -16,6 +16,7 @@ class ControllerCommonHome extends Controller {
 		foreach ($banners as $key => $result) {
 		$banners[$key]['image'] = $this->model_tool_image->resize($result['image'], 1920,800);
 		$banners[$key]['m_image'] = $this->model_tool_image->resize($result['m_image'], 750,500);
+		$banners[$key]['link'] =$result['link'];
 		}
 		// print_r($banners);exit();
 		$data['banners']=$banners;

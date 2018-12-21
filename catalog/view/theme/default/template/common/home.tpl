@@ -6,7 +6,7 @@
                     <div class="swiper-wrapper" style="cursor:-webkit-grab;">
                              <?php if($banners){ foreach ($banners as $banner) { ?>
                         <div class="swiper-slide ban_img">
-                            <img class="changeimage lazyLoad" data-image='<?=$banner["image"]?>' data-mimage='<?=$banner["m_image"]?>'  />
+                            <a href="<?=$banner['link']?>"><img class="changeimage lazyLoad" data-image='<?=$banner["image"]?>' data-mimage='<?=$banner["m_image"]?>'  /></a>
                         </div>
                           <?php }} ?>
                     </div>
