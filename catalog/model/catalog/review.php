@@ -209,7 +209,7 @@ class ModelCatalogReview extends Model {
           
 	}
 	public function getcoupons($coupon_id) {
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'");
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'  AND status='1'");
         $querys = $this->db->query ("SELECT * from " . DB_PREFIX . "coupon_history where coupon_id='" . (int)$coupon_id . "' AND customer_id = '" . (int)$this->customer->getId(). "'");
         if($querys->rows){
         	$usecoupon=1;
