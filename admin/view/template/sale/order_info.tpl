@@ -138,8 +138,12 @@
           <tbody>
             <tr>
               <td class="text-left"><?php echo $payment_address; ?></td>
-              <?php if ($shipping_method) { ?>
-              <td class="text-left"><?php echo $shipping_address; ?></td>
+              <?php if($shippingorpick=='pick'){ ?>
+              <td class="text-left">alausa.obafemi awolowo way. ikeja Lagos，Nigeria </td>
+              <?php }else{ ?>
+                <?php if ($shipping_method) { ?>
+                <td class="text-left"><?php echo $shipping_address; ?></td>
+                <?php } ?>
               <?php } ?>
             </tr>
           </tbody>

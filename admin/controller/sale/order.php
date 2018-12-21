@@ -896,6 +896,7 @@ class ControllerSaleOrder extends Controller {
 
 			$data['store_id'] = $order_info['store_id'];
 			$data['store_name'] = $order_info['store_name'];
+			$data['shippingorpick'] = $order_info['shippingorpick'];
 			
 			if ($order_info['store_id'] == 0) {
 				$data['store_url'] = $this->request->server['HTTPS'] ? HTTPS_CATALOG : HTTP_CATALOG;

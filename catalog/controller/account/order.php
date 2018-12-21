@@ -515,8 +515,12 @@ class ControllerAccountOrder extends Controller {
 				if ($total['code']=='shipping') {
 					$data['shipping_total']= $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']);
 				}
+				if ($total['code']=='coupon') {
+					$data['coupon_total']= $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']);
+					$data['coupon_title']= $total['title'];
+				}
 			}
-
+// print_r($totals);exit;
 			$data['upload_receipt']=$this->url->link('account/order/receipt');
 			$data['comment'] = nl2br($order_info['comment']);
 			// History

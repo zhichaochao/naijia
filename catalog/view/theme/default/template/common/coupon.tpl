@@ -15,10 +15,10 @@
         <?php foreach ($resultcoupons as $coupons) { ?>
           <li class="<?=$coupons['coupon']==1 ?'active':'';?>" onclick="coupon('<?=$coupons['coupon_id']?>',this)">
            <?php if($coupons['type']=='P') { ?>
-            <h3>-<?=$coupons['discount']?></h3>
+            <h3><?=$coupons['discountp']?>%OFF</h3>
             <?php }else{ ?>
 
-            <h3><?=$coupons['discountp']?>%OFF</h3>
+            <h3>-<?=$coupons['discount']?></h3>
             <?php  } ?>
              
             <p>Spend US <?=$coupons['total']?>, Get US <?=$coupons['discount']?>off</p>

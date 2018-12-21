@@ -210,12 +210,19 @@ class ModelCatalogReview extends Model {
 	}
 	public function getcoupons($coupon_id) {
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'");
+        $querys = $this->db->query ("SELECT * from " . DB_PREFIX . "coupon_history where coupon_id='" . (int)$coupon_id . "' AND customer_id = '" . (int)$this->customer->getId(). "'");
+        if($querys->rows){
+        	$usecoupon=1;
+        }else{
+        	$usecoupon=0;
+        }
 		if ($query->rows) {
 			return array(
 				'coupon_id'       => $query->row['coupon_id'],
 				'name'       => $query->row['name'],
 				'type'       => $query->row['type'],
 				'code'       => $query->row['code'],
+				'usecoupon'       => $usecoupon,
 				'discount'       => $query->row['discount'],
 				'date_end'       => $query->row['date_end'],
 				'total'       => $query->row['total'],
@@ -248,6 +255,10 @@ class ModelCatalogReview extends Model {
 		}
 		
 		
+	}
+	public function getCustomerUseCoupon() {
+		$query = $this->db->query("SELECT c.coupon_id,c.name,c.type,c.code,c.total,c.discount FROM " . DB_PREFIX . "coupon c where  c.coupon_id in ( SELECT coupon_id from " . DB_PREFIX . "customer_coupon cc WHERE cc.coupon_id not in (select coupon_id from " . DB_PREFIX . "coupon_history   where customer_id ='" . (int)$this->customer->getId(). "') ) AND c.date_end >= NOW() AND  c.status='1'");
+		return $query->rows;	
 	}
 	
 }

@@ -27,8 +27,12 @@
                       <div class="coupon_text clearfix">
                         <ul class="coupon_ul clearfix">
                      <?php foreach ($coupons as $coupon) { ?>
-                          <li class="<?=$coupon['status']==1 ?'failed':'';?>" >
-                            <a href="###">
+                        <?php if($coupon['usecoupon']==1){ ?> 
+                          <li class="failed">
+                          <?php }else{ ?>  
+                           <li class="<?=$coupon['status']==1 ?'failed':'';?>" >
+                          <?php }?>
+                            <a>
                               <p class="p1">The full court is  <?php echo $coupon['total']; ?> </p>
                               <?php if($coupon['type']=='P') { ?> 
                                <p class="p2"> minus  <?php echo $coupon['discountp']; ?>%off.</p>

@@ -68,6 +68,7 @@ class ControllerAccountCoupon extends Controller {
 					'coupon_id'=>$result['coupon_id'],
 					'name'=>$result['name'],
 					'type'=>$result['type'],
+					'usecoupon'=>$result['usecoupon'],
 			 		'discountp' 			=>floatval($result['discount']),
 			 		'discount' 		=>$this->currency->format(floatval($result['discount']),$this->session->data['currency']),
 			 		'total' 	=> $this->currency->format(floatval($result['total']),$this->session->data['currency']),
@@ -77,7 +78,7 @@ class ControllerAccountCoupon extends Controller {
 
 			}
 		}
-		// print_r($data['home']);exit();
+		// print_r($resultcoupon);exit();
 		$data['add'] = $this->url->link('account/address/add', '', true);
 		$data['back'] = $this->url->link('account/account', '', true);
 		$data['coupon'] = $this->url->link('common/coupon', '', true);

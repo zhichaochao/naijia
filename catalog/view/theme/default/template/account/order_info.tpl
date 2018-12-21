@@ -153,9 +153,10 @@
               <p>Total Products <span><?php echo $subtotals; ?></span></p>
               <p>Total Points <span><?php echo $subtotals; ?></span></p>
               <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
-
-              <!-- <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p> -->
-
+          
+            <?php if(isset($coupon_total)) { ?>
+              <p><i class="xl_i"><?php echo $coupon_title; ?></i> <span><?php echo $coupon_total; ?></span></p>
+            <?php }?>
             </div>
             <hr />
             <p class="total_p active clearfix">
@@ -470,7 +471,10 @@
         <div class="total clearfix">
           <div class="right clearfix">
             <p class="total_p active clearfix">
-              <i class="text_i">Coupon: <i>- ₦5K</i></i>
+            <?php if(isset($coupon_total)) { ?>
+            <i class="text_i">Coupon: <i><?php echo $coupon_total; ?></i></i>
+            <?php }?>
+              
               <span>Total</span>
               <i class="img_i"></i>
               <em><?php echo $total; ?></em>
@@ -481,7 +485,11 @@
               <p>Total Products <span><?php echo $subtotals; ?></span></p>
               <p>Total Points <span><?php echo $subtotals; ?></span></p>
               <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
-              <!-- <p><i class="xl_i">Coupon:Summer Sale</i> <span>-₦5K</span></p> -->
+              <?php if(isset($coupon_total)) { ?>
+              <p><i class="xl_i"><?php echo $coupon_title; ?></i> <span><?php echo $coupon_total; ?></span></p>
+            <?php }?>
+             
+
             </div>
 
             
