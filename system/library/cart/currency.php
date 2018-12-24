@@ -22,6 +22,7 @@ class Currency {
 	}
 
 	public function format($number, $currency, $value = '', $format = true) {
+		// print_r($number);exit;
 		$symbol_left = $this->currencies[$currency]['symbol_left'];
 		$symbol_right = $this->currencies[$currency]['symbol_right'];
 		$decimal_place = $this->currencies[$currency]['decimal_place'];
@@ -33,7 +34,14 @@ class Currency {
 		$amount = $value ? (float)$number * $value : (float)$number;
 		
 		$amount = round($amount, (int)$decimal_place);
-		
+
+		// if($currency=='NGN'){
+			// 
+			if($amount>=1000){
+				$amounts= $amount/1000;
+			}
+		// }
+
 		if (!$format) {
 			return $amount;
 		}
@@ -43,9 +51,49 @@ class Currency {
 		if ($symbol_left) {
 			$string .= $symbol_left;
 		}
+		// print_r($amount);exit;
+		// if($currency=='NGN'){
+			if($amount>=1000){
+				$string .= number_format($amounts, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point')).'K';
+			}else{
+				$string .= number_format($amount, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
+			}
+			// }else{
+			// 	$string .= number_format($amount, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
+			// }
+		if ($symbol_right) {
+			$string .= $symbol_right;
+		}
 
-		$string .= number_format($amount, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
+		return $string;
+	}
+	public function formats($number, $currency, $value = '', $format = true) {
+		// print_r($number);exit;
+		$symbol_left = $this->currencies[$currency]['symbol_left'];
+		$symbol_right = $this->currencies[$currency]['symbol_right'];
+		$decimal_place = $this->currencies[$currency]['decimal_place'];
 
+		if (!$value) {
+			$value = $this->currencies[$currency]['value'];
+		}
+
+		$amount = $value ? (float)$number * $value : (float)$number;
+		
+		$amount = round($amount, (int)$decimal_place);
+
+
+
+		if (!$format) {
+			return $amount;
+		}
+
+		$string = '';
+
+		if ($symbol_left) {
+			$string .= $symbol_left;
+		}
+		// print_r($amount);exit;
+			$string .= number_format($amount, (int)$decimal_place, $this->language->get('decimal_point'), $this->language->get('thousand_point'));
 		if ($symbol_right) {
 			$string .= $symbol_right;
 		}

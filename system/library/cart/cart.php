@@ -124,7 +124,7 @@ class Cart {
 					$old_price=$price;
 						// print_r($price);
 					if ($product_special_query->row['percent']>0) {
-						$price=$price*$product_special_query->row['percent'];
+						$price=$price*$product_special_query->row['percent']/100;
 					}else{
 						$price=$price-$product_special_query->row['price'];
 					}

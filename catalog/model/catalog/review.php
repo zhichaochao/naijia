@@ -241,9 +241,12 @@ class ModelCatalogReview extends Model {
 		$suc =$this->db->query("UPDATE " . DB_PREFIX . "coupon SET uses_total = ".($row['uses_total']-1)." WHERE coupon_id= '" .(int)$coupon_id. "' ");
 		return $suc;
 	}
-	public function getCustomerCoupon() {
-
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_coupon WHERE customer_id = '" . (int)$this->customer->getId(). "'");
+	public function getCustomerCoupon($filter_data) {
+		$limit='';
+		if ($filter_data['limit']>0) {
+			$limit.=' limit '.$filter_data['start'].','.$filter_data['limit'];
+		}
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "customer_coupon WHERE customer_id = '" . (int)$this->customer->getId(). "' order by coupon_id desc".$limit);
 		// $query->rows;
 		if(!empty($query->rows)){
 			foreach ($query->rows as $result) {
@@ -259,6 +262,11 @@ class ModelCatalogReview extends Model {
 	public function getCustomerUseCoupon() {
 		$query = $this->db->query("SELECT c.coupon_id,c.name,c.type,c.code,c.total,c.discount FROM " . DB_PREFIX . "coupon c where  c.coupon_id in ( SELECT coupon_id from " . DB_PREFIX . "customer_coupon cc WHERE cc.coupon_id not in (select coupon_id from " . DB_PREFIX . "coupon_history   where customer_id ='" . (int)$this->customer->getId(). "') ) AND c.date_end >= NOW() AND  c.status='1'");
 		return $query->rows;	
+	}
+	public function getTotalCustomerCoupon() {
+		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "customer_coupon WHERE customer_id = '" . (int)$this->customer->getId() . "' ");
+// print_r($query->row['total']);exit;
+		return $query->row['total'];
 	}
 	
 }

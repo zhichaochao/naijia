@@ -12,6 +12,7 @@
   <tr>
               <td><span><?=$total['title'];?></span></td>
               <td><span><?=$total['text'];?></span></td>
+              <td><span><?=$total['texts'];?></span></td>
             </tr>
                              
                                       <?php } ?>

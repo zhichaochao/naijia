@@ -510,7 +510,7 @@ class ControllerAccountOrder extends Controller {
 					'text'  => $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']),
 				);
 				if ($total['code']=='total') {
-					$data['total']= $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']);
+					$data['total']= $this->currency->formats($total['value'], $order_info['currency_code'], $order_info['currency_value']);
 				}
 				if ($total['code']=='shipping') {
 					$data['shipping_total']= $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']);
