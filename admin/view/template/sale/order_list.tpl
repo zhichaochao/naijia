@@ -3,6 +3,7 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
+      <a  class="btn btn-success" id="btn-success" formaction="<?php echo $explode; ?>">批量导出</a>
         <button type="submit" id="button-shipping" form="form-order" formaction="<?php echo $shipping; ?>" formtarget="_blank" data-toggle="tooltip" title="<?php echo $button_shipping_print; ?>" class="btn btn-info"><i class="fa fa-truck"></i></button>
         <button type="submit" id="button-invoice" form="form-order" formaction="<?php echo $invoice; ?>" formtarget="_blank" data-toggle="tooltip" title="<?php echo $button_invoice_print; ?>" class="btn btn-info"><i class="fa fa-print"></i></button>
         <a href="<?php echo $add; ?>" data-toggle="tooltip" title="<?php echo $button_add; ?>" class="btn btn-primary"><i class="fa fa-plus"></i></a>
@@ -263,6 +264,16 @@ $('#button-delete').on('click', function(e) {
 	} else {
 		return false;
 	}
+});
+
+$('#btn-success').on('click', function(e) {
+  $('#form-order').attr('action', this.getAttribute('formAction'));
+  
+  // if (confirm('<?php echo $text_confirm; ?>')) {
+    $('#form-order').submit();
+  // } else {
+  //   return false;
+  // }
 });
 //--></script> 
   <script src="view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.js" type="text/javascript"></script>

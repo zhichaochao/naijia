@@ -187,6 +187,7 @@ class ControllerSaleOrder extends Controller {
 		$data['shipping'] = $this->url->link('sale/order/shipping', 'token=' . $this->session->data['token'], true);
 		$data['add'] = $this->url->link('sale/order/add', 'token=' . $this->session->data['token'], true);
 		$data['delete'] = $this->url->link('sale/order/delete', 'token=' . $this->session->data['token'], true);
+		$data['explode'] = $this->url->link('sale/order/exportComment', 'token=' . $this->session->data['token'], true);
 
 		$data['orders'] = array();
 
@@ -212,7 +213,7 @@ class ControllerSaleOrder extends Controller {
 				'order_id'      => $result['order_id'],
 				'customer'      => $result['customer'],
 				'order_status'  => $result['order_status'] ? $result['order_status'] : $this->language->get('text_missing'),
-				'total'         => $this->currency->format($result['total'], $result['currency_code'], $result['currency_value']),
+				'total'         => $this->currency->formats($result['total'], $result['currency_code'], $result['currency_value']),
 				'date_added'    => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
 				'date_modified' => date($this->language->get('date_format_short'), strtotime($result['date_modified'])),
 				'shipping_code' => $result['shipping_code'],
@@ -1024,43 +1025,39 @@ class ControllerSaleOrder extends Controller {
 
 			foreach ($products as $product) {
 				$option_data = array();
-
 				$options = $this->model_sale_order->getOrderOptions($this->request->get['order_id'], $product['order_product_id']);
-
 				foreach ($options as $option) {
 					if ($option['type'] != 'file') {
-						$option_data[] = array(
-							'name'  => $option['name'],
-							'value' => $option['value'],
-							'type'  => $option['type']
-						);
+						$value = $option['value'];
 					} else {
 						$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
 
 						if ($upload_info) {
-							$option_data[] = array(
-								'name'  => $option['name'],
-								'value' => $upload_info['name'],
-								'type'  => $option['type'],
-								'href'  => $this->url->link('tool/upload/download', 'token=' . $this->session->data['token'] . '&code=' . $upload_info['code'], true)
-							);
+							$value = $upload_info['name'];
+						} else {
+							$value = '';
 						}
 					}
+
+					$option_data[] = array(
+						'name'  => $option['name'],
+						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
+					);
 				}
 
-				$data['products'][] = array(
+					$data['products'][] = array(
 					'order_product_id' => $product['order_product_id'],
 					'product_id'       => $product['product_id'],
 					'name'    	 	   => $product['name'],
 					'model'    		   => $product['model'],
 					'option'   		   => $option_data,
 					'quantity'		   => $product['quantity'],
-					'price'    		   => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
-					'total'    		   => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value']),
+					'price'    		   => $this->currency->formats($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
+					'total'    		   => $this->currency->formats($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value']),
 					'href'     		   => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $product['product_id'], true)
 				);
 			}
-
+// print_r($data['products']);exit();
 			$data['vouchers'] = array();
 
 			$vouchers = $this->model_sale_order->getOrderVouchers($this->request->get['order_id']);
@@ -1068,7 +1065,7 @@ class ControllerSaleOrder extends Controller {
 			foreach ($vouchers as $voucher) {
 				$data['vouchers'][] = array(
 					'description' => $voucher['description'],
-					'amount'      => $this->currency->format($voucher['amount'], $order_info['currency_code'], $order_info['currency_value']),
+					'amount'      => $this->currency->formats($voucher['amount'], $order_info['currency_code'], $order_info['currency_value']),
 					'href'        => $this->url->link('sale/voucher/edit', 'token=' . $this->session->data['token'] . '&voucher_id=' . $voucher['voucher_id'], true)
 				);
 			}
@@ -1080,7 +1077,7 @@ class ControllerSaleOrder extends Controller {
 			foreach ($totals as $total) {
 				$data['totals'][] = array(
 					'title' => $total['title'],
-					'text'  => $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value'])
+					'text'  => $this->currency->formats($total['value'], $order_info['currency_code'], $order_info['currency_value'])
 				);
 			}
 
@@ -1101,7 +1098,7 @@ class ControllerSaleOrder extends Controller {
 				$data['affiliate'] = '';
 			}
 
-			$data['commission'] = $this->currency->format($order_info['commission'], $order_info['currency_code'], $order_info['currency_value']);
+			$data['commission'] = $this->currency->formats($order_info['commission'], $order_info['currency_code'], $order_info['currency_value']);
 
 			$this->load->model('marketing/affiliate');
 
@@ -1360,6 +1357,89 @@ class ControllerSaleOrder extends Controller {
 			return new Action('error/not_found');
 		}
 	}
+		//导出 
+      public function exportComment(){
+      	require_once DIR_SYSTEM.'SimpleExcel.php';
+      	$this->load->model('sale/order');
+
+      	if (isset($this->request->post['selected'])) {
+			foreach ($this->request->post['selected'] as $order_id) {
+				// print_r($this->request->post['selected']);exit;
+      		$order_info = $this->model_sale_order->getOrder($order_id);
+      		$products = $this->model_sale_order->getOrderProducts($order_id);
+      		 $datas = array();
+	        foreach ($products as $v){
+
+	    //     	$option_data = array();
+					// $options = $this->model_sale_order->getOrderOptions($this->request->get['order_id'], $product['order_product_id']);
+					// foreach ($options as $option) {
+					// 	if ($option['type'] != 'file') {
+					// 		$value = $option['value'];
+					// 	} else {
+					// 		$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
+
+					// 		if ($upload_info) {
+					// 			$value = $upload_info['name'];
+					// 		} else {
+					// 			$value = '';
+					// 		}
+					// 	}
+
+					// 	$option_data[] = array(
+					// 		'name'  => $option['name'],
+					// 		'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
+					// 	);
+					// }
+
+	        	$data['customers'][]=array(
+		            'order_id' => $order_info['order_id'],
+		           	 'firstname' => $order_info['firstname'],
+		            'lastname' => $order_info['lastname'],
+		            'email'=>  $order_info['email'],
+		            'telephone' => $order_info['telephone'],
+		            'payment_method' => $order_info['payment_method'],
+		            'date_added' => $order_info['date_added'],
+		            'shipping_method' => $order_info['shipping_method'],
+		            'total' => $order_info['total'],
+		            'name' => $v['name'],
+		            'model' => $v['model'],
+		            'number' => $v['quantity']
+		            
+	            );
+	        }
+      		}
+      	}
+        $header = array(
+            'order_id' => '*订单ID',
+            'firstname' => '*Firstname',
+            'lastname' => '*Lastname',
+            'email' => '*Email',
+            'telephone' => '*Telephone',
+            'payment_method' => '*payment_method', //支付方式
+            'date_added' => '*date_added', //时间
+            'shipping_method' => '*shipping_method',  //运输方式
+            'total' => '*total', //总价
+
+            'name' => '*name', //商品名称
+            'model' => '*model', //商品型号
+            'number' => '*数量' //数量
+
+            // 'value' => '*属性' //属性
+        );
+
+      	// $this->load->model('customer/allcustomer');
+		// $new_data = $this->model_customer_allcustomer->allgetCustomers($key);
+       
+         ksort($data['customers']);
+
+    
+        $excel = new SimpleExcel();
+        $excel->header = $header;
+        $excel->name = 'order'.date('Y-m-d');
+        $excel->data = $data['customers'];
+        //$excel->fill = array('key'=>'is_main', 'val'=>1);
+        $excel->toString();
+  }
 	
 	protected function validate() {
 		if (!$this->user->hasPermission('modify', 'sale/order')) {
@@ -1753,8 +1833,8 @@ class ControllerSaleOrder extends Controller {
 						'model'    => $product['model'],
 						'option'   => $option_data,
 						'quantity' => $product['quantity'],
-						'price'    => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
-						'total'    => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value'])
+						'price'    => $this->currency->formats($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
+						'total'    => $this->currency->formats($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value'])
 					);
 				}
 
@@ -1765,7 +1845,7 @@ class ControllerSaleOrder extends Controller {
 				foreach ($vouchers as $voucher) {
 					$voucher_data[] = array(
 						'description' => $voucher['description'],
-						'amount'      => $this->currency->format($voucher['amount'], $order_info['currency_code'], $order_info['currency_value'])
+						'amount'      => $this->currency->formats($voucher['amount'], $order_info['currency_code'], $order_info['currency_value'])
 					);
 				}
 
@@ -1776,7 +1856,7 @@ class ControllerSaleOrder extends Controller {
 				foreach ($totals as $total) {
 					$total_data[] = array(
 						'title' => $total['title'],
-						'text'  => $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value'])
+						'text'  => $this->currency->formats($total['value'], $order_info['currency_code'], $order_info['currency_value'])
 					);
 				}
 
@@ -1982,7 +2062,7 @@ class ControllerSaleOrder extends Controller {
 							'jan'      => $product_info['jan'],
 							'isbn'     => $product_info['isbn'],
 							'mpn'      => $product_info['mpn'],
-							'weight'   => $this->weight->format(($product_info['weight'] + $option_weight) * $product['quantity'], $product_info['weight_class_id'], $this->language->get('decimal_point'), $this->language->get('thousand_point'))
+							'weight'   => $this->weight->formats(($product_info['weight'] + $option_weight) * $product['quantity'], $product_info['weight_class_id'], $this->language->get('decimal_point'), $this->language->get('thousand_point'))
 						);
 					}
 				}
