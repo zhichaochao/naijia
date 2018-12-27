@@ -1366,7 +1366,23 @@ class ControllerSaleOrder extends Controller {
 			foreach ($this->request->post['selected'] as $order_id) {
 				// print_r($this->request->post['selected']);exit;
       		$order_info = $this->model_sale_order->getOrder($order_id);
+      		if($order_info['order_status_id']=='1'){
+      			$order_status_id='Pending';
+      		}else if($order_info['order_status_id']=='8'){
+      			$order_status_id='Pending-unfilled';
+      		}else if($order_info['order_status_id']=='7'){
+      			$order_status_id='Canceled';
+      		}else if($order_info['order_status_id']=='5'){
+      			$order_status_id='Complete';
+      		}else if($order_info['order_status_id']=='16'){
+      			$order_status_id='lnvalid';
+      		}else if($order_info['order_status_id']=='14'){
+				$order_status_id='Delivered';
+      		}else if($order_info['order_status_id']=='0'){
+				$order_status_id='error';
+      		}
       		$products = $this->model_sale_order->getOrderProducts($order_id);
+
       		 $datas = array();
 	        foreach ($products as $v){
 
@@ -1403,7 +1419,8 @@ class ControllerSaleOrder extends Controller {
 		            'total' => $order_info['total'],
 		            'name' => $v['name'],
 		            'model' => $v['model'],
-		            'number' => $v['quantity']
+		            'number' => $v['quantity'],
+		            'order_status' => $order_status_id
 		            
 	            );
 	        }
@@ -1422,7 +1439,8 @@ class ControllerSaleOrder extends Controller {
 
             'name' => '*name', //商品名称
             'model' => '*model', //商品型号
-            'number' => '*数量' //数量
+            'number' => '*数量', //数量
+            'order_status' => '*状态' //数量
 
             // 'value' => '*属性' //属性
         );
