@@ -489,6 +489,8 @@ class ControllerCustomerCustomer extends Controller {
 			);
 		}
 
+		$data['importComment'] = $this->url->link('customer/customer/importComment', 'token=' . $this->session->data['token'], 'SSL');
+
 		$data['heading_title'] = $this->language->get('heading_title');
 
 		$data['text_list'] = $this->language->get('text_list');
@@ -667,6 +669,106 @@ class ControllerCustomerCustomer extends Controller {
 
 		$this->response->setOutput($this->load->view('customer/customer_list', $data));
 	}
+
+	public function importComment(){
+		$this->load->language('catalog/review');
+
+		$this->document->setTitle($this->language->get('heading_title'));
+		$data['heading_title'] = 'Customer Import';
+		$data['breadcrumbs'] = array();
+
+		// $data['breadcrumbs'][] = array(
+		// 	'text' => $this->language->get('text_home'),
+		// 	'href' => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], 'SSL')
+		// );
+
+		// $data['breadcrumbs'][] = array(
+		// 	'text' => $this->language->get('heading_title'),
+		// 	'href' => $this->url->link('catalog/customer', 'token=' . $this->session->data['token'], 'SSL')
+		// );
+		$data['text_form'] = !isset($this->request->get['id']) ? $this->language->get('text_add') : $this->language->get('text_edit');
+		$data['entry_import'] = 'import';
+		$data['button_save'] = $this->language->get('button_save');
+		$data['button_cancel'] = $this->language->get('button_cancel');
+
+		$data['error_upload_warning'] = '';
+
+		// if (isset($this->request->get['key'])) {
+  //      		$key=$this->request->get['key'];
+  //      		$data['key']=$this->request->get['key'];
+		// }else{
+		// 	$key=0;
+		// }
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST')) {
+			//	print_r($_FILES);exit;
+			if ((isset( $this->request->files['upload'] )) && (is_uploaded_file($this->request->files['upload']['tmp_name']))) {
+				$file = $this->request->files['upload']['tmp_name'];
+				//
+				$this->load->model('customer/customer');
+				// $uploaded = $this->model_customer_allcustomer->upload($file,$key);
+				$uploaded = $this->model_customer_customer->upload($file);
+					// print_r($uploaded);exit;
+			   // $allrepeat = $this->model_customer_allcustomer->Allrepeat($key);
+			   $allrepeat = $this->model_customer_customer->Allrepeat();
+			   $rows=$allrepeat->rows;
+			   if(empty($rows)){
+			   //	print_r($allrepeat);exit;
+				//获取路由参数
+				// $doneUrl=isset($this->request->get['route']) ? $this->request->get['route'] : "";
+				// $done="addReviewImport:file=".$this->request->files['upload']['name'];
+				// // print_r($done);exit;
+				// //调用父类Controller的方法将操作记录添加入库
+	   //          $this->addUserDone($doneUrl,$done);
+
+				$this->session->data['success'] = 'Import success!'.var_dump($this->request->files['upload']);
+				$this->response->redirect($this->url->link('customer/customer/importComment', 'token=' . $this->session->data['token'], 'SSL'));
+				}else{
+					foreach ($rows as $key=>$value ){
+						$data['rows'][$key] = array(
+							'customer_id'       => $value['customer_id'],
+							'email'	 		 => $value['email']
+							);
+						
+					}
+					$this->session->data['shourows']=$data['rows'];
+					$data['shourow']=$this->session->data['shourows'];
+					//print_r($this->session->data['shourows']);exit;
+				$delrepeat = $this->model_customer_customer->Dellrepeat();
+				}
+
+			}
+			else
+			{
+			    $data['error_upload_warning'] = 'Please upload the file!';
+			}
+		}
+
+		if (isset($this->session->data['error'])) {
+			$data['error_warning'] = $this->session->data['error'];
+			unset($this->session->data['error']);
+		} else {
+			$data['error_warning'] = '';
+		}
+
+		if (isset($this->session->data['success'])) {
+			$data['success'] ="Import success!";
+			unset($this->session->data['success']);
+		} else {
+			$data['success'] = '';
+		}
+
+		
+
+		$data['cancel'] = $this->url->link('customer/customer', 'token=' . $this->session->data['token'], 'SSL');
+		$data['action'] = $this->url->link('customer/customer/importComment', 'token=' . $this->session->data['token'], 'SSL');
+
+		$data['header'] = $this->load->controller('common/header');
+		$data['column_left'] = $this->load->controller('common/column_left');
+		$data['footer'] = $this->load->controller('common/footer');
+
+		$this->response->setOutput($this->load->view('customer/customer_import.tpl', $data));
+    }
 
 	protected function getForm() {
 		$data['heading_title'] = $this->language->get('heading_title');

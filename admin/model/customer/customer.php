@@ -582,4 +582,89 @@ class ModelCustomerCustomer extends Model {
 	public function deleteLoginAttempts($email) {
 		$this->db->query("DELETE FROM `" . DB_PREFIX . "customer_login` WHERE `email` = '" . $this->db->escape($email) . "'");
 	}
+	function upload( $filename) {
+		//print_r($filename);exit();
+		global $config;
+		global $log;
+		$config = $this->config;
+		$log = $this->log;
+
+		$database =& $this->db;
+		ini_set("memory_limit","512M");
+		ini_set("max_execution_time",180);
+
+		chdir( '../system/PHPExcel' );
+		require_once( 'Classes/PHPExcel.php' );
+		chdir( '../../admin' );
+		$inputFileType = PHPExcel_IOFactory::identify($filename);
+		$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+		$objReader->setReadDataOnly(true);
+		$reader = $objReader->load($filename);
+
+		$data = $reader->getSheet(0);
+
+        $highestRow = $data->getHighestRow(); // 取得总行数
+        $highestColumn = $data->getHighestColumn(); // 取得总列数
+        $tmp = [];	
+		for($j=2;$j<=$highestRow;$j++)
+        {
+			$str = '';
+			for($k='A';$k<=$highestColumn;$k++)
+		    {
+			  $str .= iconv('utf-8','gbk',$reader->getActiveSheet()->getCell("$k$j")->getValue()).'\\';//读 取单元格
+			}
+			//explode:函 数把字符串分割为数组。
+            $customer_data =explode("\\",$str);
+            //$tmp[] = $customer_data;
+            // print_r($customer_data);exit;
+			if(count($customer_data)>0 && !empty($this->db->escape(strip_tags($customer_data[3])))){
+				 //print_r($this->db->escape(strip_tags($customer_data[5])));exit();
+					if(!empty($this->db->escape(strip_tags($customer_data[5])))){
+						$password=$this->db->escape(strip_tags($customer_data[5]));
+					}else{
+						$password='88888888';		
+					}
+					// print_r($password);exit;
+					$sql="INSERT INTO " . DB_PREFIX . "customer SET  language_id ='1' , customer_group_id = '" . $this->db->escape(strip_tags($customer_data[0])) . "', firstname = '" . $this->db->escape(strip_tags($customer_data[1])) . "', lastname = '" . $this->db->escape(strip_tags($customer_data[2])) . "', email = '" . $this->db->escape( $customer_data[3]) . "',  telephone = '" . $this->db->escape(strip_tags($customer_data[4])) . "',  salt = '" .$this->db->escape($salt = token(9)). "', password = '" . $this->db->escape(sha1($salt . sha1($salt . sha1($password)))). "',ip = '', token = '', code = '', status = 1,date_added=now(),custom_field = '', fax = '',approved = 1,safe = 0";
+					// print_r($sql);exit;
+					// if ($key>0) {
+					// 	 $d='db'.$key;
+					// 	 $query = $this->$d->query($sql);
+					//  }else{
+						 $query = $this->db->query($sql);
+						 $customer_id = $this->db->getLastId();
+						 if(!empty($this->db->escape(strip_tags($customer_data[6])))){
+						 	$this->db->query( "INSERT INTO " . DB_PREFIX . "customer_reward set customer_id='" . (int)$customer_id . "',order_id=0,description='" . $this->db->escape(strip_tags($customer_data[6])) . "',points='" . $this->db->escape(strip_tags($customer_data[7])) . "',date_added=now()");
+
+						 }
+
+					// }	
+			}
+
+		}
+	}
+
+	public function Allrepeat()
+	{
+		$sql="SELECT a.customer_id,a.email FROM ". DB_PREFIX . "customer a WHERE email IN (SELECT email FROM ". DB_PREFIX . "customer GROUP BY email HAVING count(email) > 1)AND customer_id NOT IN (SELECT min(customer_id) FROM ". DB_PREFIX . "customer GROUP BY email HAVING count(email) > 1)";
+		// if ($key>0) {
+		// 	 $d='db'.$key;
+		// 		$query = $this->$d->query($sql);
+		// 	 }else{
+		 $query = $this->db->query($sql);
+		// }	
+		return $query;
+	}
+	public function Dellrepeat()
+	{
+		$sql= "DELETE FROM ". DB_PREFIX . "customer WHERE email IN (select * from (( SELECT  email  FROM ". DB_PREFIX . "customer GROUP BY email HAVING count(email) > 1 ) a) )AND customer_id NOT IN (
+ 		select * from (( SELECT min(customer_id) FROM ". DB_PREFIX . "customer GROUP BY  email HAVING count(email) > 1 ) b)) ";
+		// if ($key>0) {
+		// 	 $d='db'.$key;
+		// 		$query = $this->$d->query($sql);
+		// 	 }else{
+		 $query = $this->db->query($sql);
+		// }	
+		return $query;
+	}
 }
