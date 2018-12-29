@@ -53,7 +53,7 @@ class ControllerCheckoutSuccess extends Controller {
 			$totals=$this->model_account_order->getOrderTotals($this->session->data['order_id']);
 			foreach ($totals as $key => $value) {
 				$totals[$key]['text']=$this->currency->format($value['value'], $order_info['currency_code']);
-				$totals[$key]['texts']=$this->currency->formats($value['value'], $order_info['currency_code']);
+				// $totals[$key]['texts']=$this->currency->formats($value['value'], $order_info['currency_code']);
 			}
 			$data['totals']=$totals;
 				// print_r($data['totals']);exit();

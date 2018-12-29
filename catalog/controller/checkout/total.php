@@ -49,7 +49,8 @@ class ControllerCheckoutTotal extends Controller {
 				$data[$total['code']] = array(
 					'title' => $total['title'],
 					'value'=> $total['value'],
-					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
+					'text'  => $this->currency->format($total['value'], $this->session->data['currency']),
+					'texts'  => $this->currency->formats($total['value'], $this->session->data['currency'])
 				);
 			}
 			// print_r($data);
