@@ -15,10 +15,10 @@
           <div class="swiper-container">
               <div class="swiper-wrapper">
                   <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image1; ?>' data-mimage='<?php echo $ydimage1; ?>'  /></div>
-                  <div class="swiper-slide" style="cursor: pointer;position: relative;">
+                  <!-- <div class="swiper-slide" style="cursor: pointer;position: relative;">
                     <div class="bf_img" ></div>
                     <video id="my_video" src="<?php echo $video; ?>" width="100%"></video>
-                  </div>
+                  </div> -->
                   <!-- <div class="swiper-slide"><img class="ban_img changeimage lazyLoad" data-image='<?php echo $image2; ?>' data-mimage='<?php echo $ydimage2; ?>'  /></div> -->
               </div>
               <div class="swiper-button-prev"></div>
