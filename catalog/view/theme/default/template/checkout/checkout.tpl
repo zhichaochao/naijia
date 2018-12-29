@@ -202,9 +202,9 @@
         })
 
     }
- $(document).ready(function() {
+ // $(document).ready(function() {
  get_address_jump();
-});
+// });
  function get_address_jump(address_id) {
     var address_id = arguments[0] ? arguments[0] : 0;//设置第一个参数的默认值为0
       $.ajax({
