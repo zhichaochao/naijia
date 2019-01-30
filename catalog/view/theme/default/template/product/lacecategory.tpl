@@ -60,7 +60,7 @@
                       <?php } ?>
                       <?php } ?>
                      </ol>
-                  <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
+                  <p class="pl_p"><?php echo $product['reviews']+20; ?> reviews</p>
                 <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
@@ -284,7 +284,7 @@ function wishlist(product_id,e) {
                                      } 
                                    } 
                                 result+= '</ol>'
-                               +'<p class="pl_p">'+data.products[i].reviews +'reviews'
+                               +'<p class="pl_p">'+(data.products[i].reviews+20) +'reviews'
                               + '</p>'
 
                                if(data.products[i].special) { 

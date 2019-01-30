@@ -191,7 +191,7 @@
               <!--默认展开评价-->
               <li class="active">
               <?php if(!empty($reviews)){ ?>
-                <h2 class="">Reviews (<?php echo $revi; ?>) 
+                <h2 class="">Reviews (<?php echo $revi+20; ?>) 
                   <ol class="start_ols">
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
                       <?php if ($rating < $i) { ?>
@@ -247,7 +247,7 @@
                   </div>
                    <?php } ?>
                   <?php }else{?>
-                  <h2 class="">Reviews (<?php echo $revi; ?>) 
+                  <h2 class="">Reviews (<?php echo $revi+20; ?>) 
                   <ol class="start_ols">
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
                       <?php if ($rating < $i) { ?>

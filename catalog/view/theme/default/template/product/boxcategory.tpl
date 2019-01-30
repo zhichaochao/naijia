@@ -75,7 +75,7 @@
                       <?php } ?>
                       <?php } ?>
                     </ol>
-                    <p class="pl_p"><?php echo $product['reviews']; ?> reviews</p>
+                    <p class="pl_p"><?php echo $product['reviews']+20; ?> reviews</p>
                   </div>
                   <p class="yd_textp">
                     <?php echo $product['meta_description']; ?>
@@ -153,7 +153,7 @@
                                      } 
                                    } 
                                 result+= '</ol>'
-                               +'<p class="pl_p">'+data.products[i].reviews +'reviews'
+                               +'<p class="pl_p">'+(data.products[i].reviews+20) +'reviews'
                               + '</p>'
 
                                if(data.products[i].special) { 

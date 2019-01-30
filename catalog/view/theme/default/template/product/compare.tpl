@@ -84,7 +84,7 @@
               <?php } ?>
               <?php } ?>
               <br />
-              <?php echo $product['reviews']; ?></td>
+              <?php echo $product['reviews']+20; ?></td>
             <?php } ?>
           </tr>
           <?php } ?>

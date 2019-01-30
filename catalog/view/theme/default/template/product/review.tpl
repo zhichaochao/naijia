@@ -14,7 +14,7 @@
               <?php } ?>
             <?php } ?>
           </ol>
-          <p><?php echo $revi; ?> Reviews</p>
+          <p><?php echo $revi+20; ?> Reviews</p>
         </div>
         <?php foreach ($reviews as $review) { ?>
         <ul class="pl_ul clearfix">
