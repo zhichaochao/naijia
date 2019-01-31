@@ -511,6 +511,7 @@ class ModelCustomerCustomer extends Model {
 			$mail->setSender(html_entity_decode($store_name, ENT_QUOTES, 'UTF-8'));
 			$mail->setSubject(sprintf($this->language->get('text_reward_subject'), html_entity_decode($store_name, ENT_QUOTES, 'UTF-8')));
 			$mail->setText($message);
+			// print_r($mail);exit();
 			$mail->send();
 		}
 	}
