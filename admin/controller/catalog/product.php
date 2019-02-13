@@ -400,6 +400,7 @@ class ControllerCatalogProduct extends Controller {
 				'special'    => $special,
 				// 'percent'=$special/ $result['price']*
 				'quantity'   => $result['read_quantity'],
+				'free_postage' => $result['free_postage'],
 				'status'     => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
 				'edit'       => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $result['product_id'] . $url, true)
 			);
@@ -900,6 +901,15 @@ class ControllerCatalogProduct extends Controller {
 			$data['location'] = $product_info['location'];
 		} else {
 			$data['location'] = '';
+		}
+
+		//是否包邮  add by yufeng
+		if(isset($this->request->post['free_postage'])){
+			$data['free_postage'] = $this->request->post['free_postage'];
+		}elseif(!empty($product_info)){
+			$data['free_postage'] = $product_info['free_postage'];
+		}else{
+			$data['free_postage'] = false;
 		}
 
 		$this->load->model('setting/store');

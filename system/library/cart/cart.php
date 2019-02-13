@@ -213,6 +213,7 @@ class Cart {
 					'length_class_id' => $product_query->row['length_class_id'],
 					'recurring'       => $recurring,
 					'date_end'        =>$date_end,
+                    'free_postage'    => $product_query->row['free_postage'] //是否免邮
 				);
 			} else {
 				$this->remove($cart['cart_id']);
@@ -268,10 +269,16 @@ class Cart {
 		$weight = 0;
 
 		foreach ($this->getProducts() as $product) {
+			// print_r($product);exit;
+			if(!$product['free_postage']){
+				
 			if ($product['shipping']) {
 				$weight += $this->weight->convert($product['weight'], $product['weight_class_id'], $this->config->get('config_weight_class_id'));
 			}
+			// print_r(11);
+			}
 		}
+		// print_r(22);exit;
 
 		return $weight;
 	}

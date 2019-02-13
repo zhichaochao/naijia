@@ -229,6 +229,23 @@
                   </label>
                 </div>
               </div>
+
+              <!--是否包邮-->
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-free-postage">是否包邮</label>
+                <div class="col-sm-10">
+                  <select name="free_postage" id="input-free-postage" class="form-control">
+                    <?php if ($free_postage) { ?>
+                    <option value="1" selected="selected">Yes</option>
+                    <option value="0">No</option>
+                    <?php } else { ?>
+                    <option value="1">Yes</option>
+                    <option value="0" selected="selected">No</option>
+                    <?php } ?>
+                  </select>
+                </div>
+              </div>
+              <!--是否包邮-->
            <!--    <div class="form-group">
                 <label class="col-sm-2 control-label"></label>
                 <div class="col-sm-10">
