@@ -355,10 +355,12 @@ class Cart {
 
 	public function hasShipping() {
 		foreach ($this->getProducts() as $product) {
+			if(!$product['free_postage']){
 			if ($product['shipping']) {
 				return true;
 			}
 		}
+	}
 
 		return false;
 	}
