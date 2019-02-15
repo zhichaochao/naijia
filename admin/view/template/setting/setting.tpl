@@ -230,6 +230,14 @@
                   <input type="hidden" name="config_image" value="<?php echo $config_image; ?>" id="input-image" />
                 </div>
               </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-image">产品活动<?php echo $entry_image; ?></label>
+                <div class="col-sm-10"><a href="" id="thumb-images" data-toggle="image" class="img-thumbnails"><img src="<?php echo $thumbs; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="config_images" value="<?php echo $config_images; ?>" id="input-images" />
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-open"><span data-toggle="tooltip" data-container="#tab-general" title="<?php echo $help_open; ?>"><?php echo $entry_open; ?></span></label>
                 <div class="col-sm-10">

@@ -45,7 +45,7 @@ class ControllerCommonFooter extends Controller {
 
 							),
 						3=>array(
-							'title'=>'What App',
+							'title'=>'WhatsApp',
 							'url'=>('http://api.whatsapp.com/send?phone='.$whatsapp),
 							),
 					),

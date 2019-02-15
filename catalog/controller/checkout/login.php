@@ -28,7 +28,7 @@ class ControllerCheckoutLogin extends Controller {
 		} else {
 			$data['account'] = 'register';
 		}
-
+		$data['login']=$this->url->link('account/login', '', true);
 		$data['forgotten'] = $this->url->link('account/forgotten', '', true);
 
 		$this->response->setOutput($this->load->view('checkout/login', $data));

@@ -561,6 +561,22 @@ class ControllerSettingSetting extends Controller {
 			$data['thumb'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
+		if (isset($this->request->post['config_images'])) {
+			$data['config_images'] = $this->request->post['config_images'];
+		} else {
+			$data['config_images'] = $this->config->get('config_images');
+		}
+
+		$this->load->model('tool/image');
+
+		if (isset($this->request->post['config_images']) && is_file(DIR_IMAGE . $this->request->post['config_images'])) {
+			$data['thumbs'] = $this->model_tool_image->resize($this->request->post['config_images'], 100, 100);
+		} elseif ($this->config->get('config_images') && is_file(DIR_IMAGE . $this->config->get('config_images'))) {
+			$data['thumbs'] = $this->model_tool_image->resize($this->config->get('config_images'), 100, 100);
+		} else {
+			$data['thumbs'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 
 		if (isset($this->request->post['config_open'])) {

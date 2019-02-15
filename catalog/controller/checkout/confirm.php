@@ -10,9 +10,9 @@ class ControllerCheckoutConfirm extends Controller {
 			}
 
 			// Validate if shipping method has been set.
-			// if (!isset($this->session->data['shipping_method'])) {
-			// 	$redirect = $this->url->link('checkout/checkout', '', true);
-			// }
+			if (!isset($this->session->data['shipping_method'])) {
+				$redirect = $this->url->link('checkout/checkout', '', true);
+			}
 		} else {
 			unset($this->session->data['shipping_address']);
 			unset($this->session->data['shipping_method']);
