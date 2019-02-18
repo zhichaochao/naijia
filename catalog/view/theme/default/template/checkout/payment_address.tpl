@@ -8,7 +8,7 @@
           <li class="active" id="payment-existing">
               <input type="hidden" name="address_id" id='address_id' value="<?=$address_id;?>">
                 <input type="hidden" id="payment_address" name="payment_address" value="existing" />
-                        <h1>Shipping Address</h1>
+                        <h1>Delivery Address</h1>
                         <div class="form_text clearfix">
                             <ol class="add_ol clearfix">
                                 <?php foreach ($addresses as $add) { ?>
@@ -55,7 +55,7 @@
   <?php if (isset($address)) { ?>
 
     <li class="active"  id="payment-new" >
-                        <h1>Shipping Address</h1>
+                        <h1>Delivery Address</h1>
                         <div class="form_text clearfix">
                             <form  id="payment-new-address">
                                 <label class="clearfix" for="input-payment-firstname">
@@ -134,7 +134,7 @@
 
   <?php }else{ ?>
      <li class="active"  id="payment-new" style="display: <?php echo ($addresses ? 'none' : 'block'); ?>;">
-                        <h1>Shipping Address</h1>
+                        <h1>Delivery Address</h1>
                         <div class="form_text clearfix">
                             <form  id="payment-new-address">
                                 <label class="clearfix" for="input-payment-firstname">

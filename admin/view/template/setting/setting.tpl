@@ -78,9 +78,16 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-meta-slogan">头部标语</label>
+                <label class="col-sm-2 control-label" for="input-meta-slogan">头部标语1</label>
                 <div class="col-sm-10">
                   <textarea name="config_meta_slogan" rows="5" placeholder="<?php echo $entry_meta_slogan; ?>" id="input-meta-slogan" class="form-control"><?php echo $config_meta_slogan; ?></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-meta-slogan">头部标语2</label>
+                <div class="col-sm-10">
+                  <textarea name="config_metas_slogan" rows="5" placeholder="<?php echo $entry_meta_slogan; ?>" id="input-metas-slogan" class="form-control"><?php echo $config_metas_slogan; ?></textarea>
                 </div>
               </div>
 
@@ -232,9 +239,44 @@
               </div>
 
               <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-image">产品活动<?php echo $entry_image; ?></label>
+                <label class="col-sm-2 control-label" for="input-image">产品详情活动<?php echo $entry_image; ?></label>
                 <div class="col-sm-10"><a href="" id="thumb-images" data-toggle="image" class="img-thumbnails"><img src="<?php echo $thumbs; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
                   <input type="hidden" name="config_images" value="<?php echo $config_images; ?>" id="input-images" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-image">购物车礼物<?php echo $entry_image; ?></label>
+                <div class="col-sm-10"><a href="" id="thumb-gimages" data-toggle="image" class="img-gthumbnails"><img src="<?php echo $gthumbs; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="config_gift_images" value="<?php echo $config_gift_images; ?>" id="input-gimages" />
+                </div>
+              </div>
+
+
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-promotion">活动宣传1</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_meta_promotion" value="<?php echo $config_meta_promotion; ?>" placeholder="<?php echo $entry_serviceemail; ?>" id="input-promotion" class="form-control" />
+                  
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-image">活动宣传1<?php echo $entry_image; ?></label>
+                <div class="col-sm-10"><a href="" id="thumb-proimg" data-toggle="image" class="img-gthumbnails"><img src="<?php echo $proimgthumbs; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="config_meta_proimg" value="<?php echo $config_meta_proimg; ?>" id="input-proimg" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-promotion">活动宣传2</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_meta_promotiontwo" value="<?php echo $config_meta_promotiontwo; ?>" placeholder="<?php echo $entry_serviceemail; ?>" id="input-promotion" class="form-control" />
+                  
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-image">活动宣传2<?php echo $entry_image; ?></label>
+                <div class="col-sm-10"><a href="" id="thumb-proimgtwo" data-toggle="image" class="img-gthumbnails"><img src="<?php echo $proimgtwothumbs; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
+                  <input type="hidden" name="config_meta_proimgtwo" value="<?php echo $config_meta_proimgtwo; ?>" id="input-proimgtwo" />
                 </div>
               </div>
 

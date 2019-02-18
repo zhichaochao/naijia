@@ -5,8 +5,40 @@
       <div class="pay_text clearfix">
       
         <div class="text_1 clearfix">
-          <h1>Two steps to place your order.</h1>
-          <p class="lv_p">Order Number:<?=$order_number;?></p>
+          <h1 style="margin-bottom: 0;">Two Steps to complete your payment!</h1>
+          <div class="substep clearfix">
+            <ul class="clearfix">
+              <li class="active">
+                <div class="text" style="background: #fff;">
+                  <span>1</span><em>Make Your Transfer</em>
+                </div>
+              </li>
+              <li>
+                <div class="text" style="background: #fff;">
+                  <span>2</span><em>Upload Your Alert</em>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <h3>Order Review</h3>
+          <h4>Order Number:<?=$order_number;?></h4>
+          <ul class="check_ul clearfix">
+              <?php foreach ($products as $product) { ?>
+              <li class="clearfix">
+                <div class="pic_img"><img src="<?=$product['image'];?>"></div>
+                <div class="text">
+                  <h5><?=$product['name'];?></h5>
+                  <p>Color: <?=$product['color'];?></p>
+                  <?php if($product['option']['selects']){?>
+                       <?php foreach ($product['option']['selects'] as $option) { ?>
+                          <p><?=$option['option_name'];?>: <?=$option['option_value_name'];?></p>
+                  <?php  }} ?>
+                  <p>Quantity: <?=$product['quantity'];?></p>
+                </div>
+              </li>
+            <?php } ?>
+          </ul>
+
           <table class="pay_tb1">
                   <?php foreach ($totals as $key=> $total) { ?>
   <tr>
@@ -27,7 +59,22 @@
         </div>
         
         <div class="text3 clearfix">
-          <h2>2.Please upload the bank alert in 
+        <!--分步-->
+          <div class="substep clearfix">
+            <ul class="clearfix">
+              <li>
+                <div class="text" style="background: #fff;">
+                  <span>1</span><em>Make Your Transfer</em>
+                </div>
+              </li>
+              <li class="active">
+                <div class="text" style="background: #fff;">
+                  <span>2</span><em>Upload Your Alert</em>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <h2 style="position: relative;top: -0.2rem;">2.Please upload the bank alert in 
             <span class="djs_p" title="2018/09/29 19:00:00">
               <span class="int_hour">00</span><i>:</i>
               <span class="int_minute">00</span><i>:</i>

@@ -407,7 +407,7 @@ class ControllerAccountAccount extends Controller {
 		}else{
 			$data['home'] =$this->url->link('common/home');
 		}
-
+		$data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
 		$data['account_left'] = $this->load->controller('account/left');      //新左侧栏
 		$data['content_top'] = $this->load->controller('common/content_top');
 		//$data['content_bottom'] = $this->load->controller('common/content_bottom');
@@ -515,7 +515,7 @@ class ControllerAccountAccount extends Controller {
 		}
 
 
-
+		$data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
 // print_r($this->session->data['yzm']);exit;
 
 		$data['account_left'] = $this->load->controller('account/left');      //新左侧栏

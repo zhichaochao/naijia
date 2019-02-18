@@ -11,7 +11,7 @@
         </h1>
         <h2>COUPON</h2>
         <ol class="yhj_ol clearfix">  
-
+    <?php if(!empty($resultcoupons)){?>
         <?php foreach ($resultcoupons as $coupons) { ?>
           <li class="<?=$coupons['coupon']==1 ?'active':'';?>" onclick="coupon('<?=$coupons['coupon_id']?>',this)">
            <?php if($coupons['type']=='P') { ?>
@@ -27,6 +27,7 @@
             <span>Expires:<?=$coupons['date_end']?></span>
             <button class="yh_btn" type="button" >Coupon Added</button>
           </li>
+           <?php  } ?>
            <?php  } ?>
         </ol>
       </div>

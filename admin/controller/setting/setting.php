@@ -431,6 +431,12 @@ class ControllerSettingSetting extends Controller {
 			$data['config_meta_slogan'] = $this->config->get('config_meta_slogan');
 		}
 
+		if (isset($this->request->post['config_metas_slogan'])) {
+			$data['config_metas_slogan'] = $this->request->post['config_metas_slogan'];
+		} else {
+			$data['config_metas_slogan'] = $this->config->get('config_metas_slogan');
+		}
+
 		if (isset($this->request->post['config_meta_slogans'])) {
 			$data['config_meta_slogans'] = $this->request->post['config_meta_slogans'];
 		} else {
@@ -539,6 +545,18 @@ class ControllerSettingSetting extends Controller {
 			$data['config_serviceemail'] = $this->config->get('config_serviceemail');
 		}
 
+		if (isset($this->request->post['config_meta_promotion'])) {
+			$data['config_meta_promotion'] = $this->request->post['config_meta_promotion'];
+		} else {
+			$data['config_meta_promotion'] = $this->config->get('config_meta_promotion');
+		}
+
+		if (isset($this->request->post['config_meta_promotiontwo'])) {
+			$data['config_meta_promotiontwo'] = $this->request->post['config_meta_promotiontwo'];
+		} else {
+			$data['config_meta_promotiontwo'] = $this->config->get('config_meta_promotiontwo');
+		}
+
 		if (isset($this->request->post['config_fax'])) {
 			$data['config_fax'] = $this->request->post['config_fax'];
 		} else {
@@ -575,6 +593,55 @@ class ControllerSettingSetting extends Controller {
 			$data['thumbs'] = $this->model_tool_image->resize($this->config->get('config_images'), 100, 100);
 		} else {
 			$data['thumbs'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['config_gift_images'])) {
+			$data['config_gift_images'] = $this->request->post['config_gift_images'];
+		} else {
+			$data['config_gift_images'] = $this->config->get('config_gift_images');
+		}
+
+		$this->load->model('tool/image');
+
+		if (isset($this->request->post['config_gift_images']) && is_file(DIR_IMAGE . $this->request->post['config_gift_images'])) {
+			$data['gthumbs'] = $this->model_tool_image->resize($this->request->post['config_gift_images'], 100, 100);
+		} elseif ($this->config->get('config_gift_images') && is_file(DIR_IMAGE . $this->config->get('config_gift_images'))) {
+			$data['gthumbs'] = $this->model_tool_image->resize($this->config->get('config_gift_images'), 100, 100);
+		} else {
+			$data['gthumbs'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+
+		if (isset($this->request->post['config_meta_proimg'])) {
+			$data['config_meta_proimg'] = $this->request->post['config_meta_proimg'];
+		} else {
+			$data['config_meta_proimg'] = $this->config->get('config_meta_proimg');
+		}
+
+		$this->load->model('tool/image');
+
+		if (isset($this->request->post['config_meta_proimg']) && is_file(DIR_IMAGE . $this->request->post['config_meta_proimg'])) {
+			$data['proimgthumbs'] = $this->model_tool_image->resize($this->request->post['config_meta_proimg'], 100, 100);
+		} elseif ($this->config->get('config_meta_proimg') && is_file(DIR_IMAGE . $this->config->get('config_meta_proimg'))) {
+			$data['proimgthumbs'] = $this->model_tool_image->resize($this->config->get('config_meta_proimg'), 100, 100);
+		} else {
+			$data['proimgthumbs'] = $this->model_tool_image->resize('no_image.png', 100, 100);
+		}
+
+		if (isset($this->request->post['config_meta_proimgtwo'])) {
+			$data['config_meta_proimgtwo'] = $this->request->post['config_meta_proimgtwo'];
+		} else {
+			$data['config_meta_proimgtwo'] = $this->config->get('config_meta_proimgtwo');
+		}
+
+		$this->load->model('tool/image');
+
+		if (isset($this->request->post['config_meta_proimgtwo']) && is_file(DIR_IMAGE . $this->request->post['config_meta_proimgtwo'])) {
+			$data['proimgtwothumbs'] = $this->model_tool_image->resize($this->request->post['config_meta_proimgtwo'], 100, 100);
+		} elseif ($this->config->get('config_meta_proimgtwo') && is_file(DIR_IMAGE . $this->config->get('config_meta_proimgtwo'))) {
+			$data['proimgtwothumbs'] = $this->model_tool_image->resize($this->config->get('config_meta_proimgtwo'), 100, 100);
+		} else {
+			$data['proimgtwothumbs'] = $this->model_tool_image->resize('no_image.png', 100, 100);
 		}
 
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);

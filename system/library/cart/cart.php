@@ -198,7 +198,7 @@ class Cart {
 					'minimum'         => $product_query->row['minimum'],
 					'subtract'        => $product_query->row['subtract'],
 					'stock'           => $stock,
-					'stock_quantity'=>$product_query->row['quantity'],
+					'stock_quantity'=>$product_query->row['read_quantity'],
 					'old_price'           => $old_price,
 					'price'           => $price,
 					'total'           => $price * $cart['quantity'],

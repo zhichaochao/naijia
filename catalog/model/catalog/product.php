@@ -1137,7 +1137,7 @@ class ModelCatalogProduct extends Model {
 			    left join " . DB_PREFIX . "product_to_store p2s on p.product_id = p2s.product_id
 			    where p.status = 1 and p.date_available <= NOW() and p2s.store_id = '" . (int)$this->config->get('config_store_id') . "'
 			    and c.category_id = '" . $value['category_id'] . "'
-			    and c.status = 1  order by p.viewed desc, p.date_added desc limit ".$limit;
+			    and c.status = 1  order by p.date_modified desc limit ".$limit;
 			  
 		$query = $this->db->query($sql);
 		}

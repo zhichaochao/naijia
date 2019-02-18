@@ -204,7 +204,7 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 	
-
+			$data['thumbs'] = $this->model_tool_image->resize($this->config->get('config_gift_images'), 800, 800);
 // print_r($data['totals']);exit();
 			$data['continue'] = $this->url->link('common/home');
 

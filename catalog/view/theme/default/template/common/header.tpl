@@ -42,7 +42,11 @@
     <!--头部-->
     <div class="big_nav">
       <div class="gg_nav">
-        <p><i></i><?php echo $slogan?></p>
+      <ul>
+          <li><p><i></i><?php echo $slogan?></p></li>
+          <li><p><i></i><?php echo $sslogan?></p></li>
+        </ul>
+        <!-- <p><i></i><?php echo $slogan?></p> -->
       </div>
       <!--pc导航-->
       <div class="nav clearfix">
@@ -53,6 +57,14 @@
             <a class="logo" href="<?=$home;?>">
               <img src="<?=$logo;?>"/>
             </a>
+            <ol class="img_ol">
+              <li class="fb_li">
+                <a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"></a>
+              </li>
+              <li class="tb_li">
+                <a target="_blank"  href="http://www.instagram.com/<?=$instagram;?>"></a>
+              </li>
+            </ol>
           </div>
         </div>
         <div class="bot">
@@ -62,6 +74,7 @@
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
               <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
+                <div class="hot"><img src="/catalog/view/theme/default/img/hot.gif"/></div>
                 <a href="<?php echo $hothref;?>">Hot Sales</a>
               </li>
               <?php foreach($categories as $key => $category) { ?>
@@ -110,12 +123,12 @@
               <li class="gw_li">
                 <a href="<?=$shopping_cart;?>"><span id='cart_count'><?=$text_cart_items;?></span></a>
               </li>
-              <li class="fb_li">
+              <!-- <li class="fb_li">
                 <a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"></a>
               </li>
               <li class="tb_li">
                 <a target="_blank"  href="http://www.instagram.com/<?=$instagram;?>"></a>
-              </li>
+              </li> -->
             </ol>
             
           </div>

@@ -94,7 +94,8 @@ class ControllerAccountCoupon extends Controller {
 
 			}
 		}
-		
+
+		$data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
 			$coupon_total = $this->model_catalog_review->getTotalCustomerCoupon();
 		// print_r($coupon_total);exit();
 		$pagination = new Pagination();

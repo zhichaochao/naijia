@@ -7,7 +7,7 @@
         <ul class="bt_ul clearfix">
 
           <li class="active">
-            <h1>Create an account, track your order after pay.</h1>
+            <h1>CREATE AN ACCOUNT,COMPLETE YOUR ORDER</h1>
             <div class="form_text clearfix">
     
                 <label class="clearfix" for="">
@@ -25,7 +25,7 @@
                   <input type="password" name="confirm" value="" placeholder="<?php echo $entry_confirm; ?>" id="input-payment-confirm"  />
                   <p class="ts_ps">please enter your Password. </p>
                 </label>
-                <p class="yk_p">already have an account? <a href="<?=$login;?>">Log in</a></p>
+                <p class="yk_p">Already have an account?<a href="<?=$login;?>">Log in</a></p>
              
             </div>
           </li>

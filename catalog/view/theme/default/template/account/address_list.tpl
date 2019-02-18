@@ -9,8 +9,8 @@
         
         <div class="lf_nav">
           <img class="tx_img" src="catalog/view/theme/default/img/png/touxiang.png" alt="" />
-          <h2><?php echo $firstname ?></h2>
-          <p class="p1"><?php echo $telephone ?></p>
+          <h2>My VIP Point:</h2>
+          <p class="p1"><?php echo $balance ?></p>
           
           <ul>
           <?php echo $account_left; ?>

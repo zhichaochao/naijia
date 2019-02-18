@@ -80,6 +80,7 @@ class ControllerCommonHome extends Controller {
 			    }else{
 			    	$tmp=$image;
 			    }
+			    $wishlist= $this->model_catalog_product->wishlistornot($result['product_id']);
 			  $hots[] = array(
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
@@ -98,10 +99,15 @@ class ControllerCommonHome extends Controller {
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+					'wishlist'	  =>$wishlist
 				
 				);
 
 			}
+			$data['wishlist'] = $this->url->link('account/wishlist/add', '', true);
+			$data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);
+
+			$data['hotsproduct'] = $this->url->link('product/hotcategory', '', true);
 			// print_r($hots);exit();
 			$data['hots']=$hots;
 			// 
@@ -132,7 +138,7 @@ class ControllerCommonHome extends Controller {
                 $data['allreviews'][] = array(
                     'review_id'     => $result['review_id'],
                     'href'     =>$this->url->link('product/product','product_id='.$result['product_id']),
-                    'author'        => substr($result['author'],0,-2).'***',
+                    'author'        => substr($result['author'],0,3).'***',
                     'text'          => nl2br($result['text']),
                     'thumbs'          =>$thumbs,
                     'prothumbs'          =>$this->model_tool_image->resize($product_info['image'],400,400),

@@ -246,6 +246,7 @@ class ControllerCommonHeader extends Controller {
 			}
 			
 			$data['slogan']=$this->config->get('config_meta_slogan');
+			$data['sslogan']=$this->config->get('config_metas_slogan');
 // print_r($data['hotsearched']);exit;
 
 		$this->load->model('account/customer');

@@ -58,7 +58,7 @@ class ControllerAccountMessage extends Controller {
 			$data['home'] =$this->url->link('account/account');
 		}
 
-
+	   $data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
        $results = $this->model_account_address->getCustomerMessage();
        $data['messages'] = array();
        foreach ($results as $result) {

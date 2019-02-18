@@ -110,7 +110,18 @@ $(function(){
 		    scrollTop: 0
 		}, 500);
 	})
-	
+	/**点击添加class/取反**/
+	$(".add_class").click(function(){
+		$(this).toggleClass("active")
+	})
+	//头部文字轮播
+	setInterval(function(){
+        $(".gg_nav ul").append("<li>"+$('.gg_nav ul>li').eq(0).html()+"</li>");
+        $(".gg_nav ul").animate({"top":"-0.5rem"},function(){
+        	$('.gg_nav ul>li').eq(0).remove();
+        	$(".gg_nav ul").css("top","0");
+        })
+    }, 2000)
 //	头部导航二级菜单
 	$(".nav_ul>li").hover(function(){
 		$(this).find("ol").stop().slideDown();
@@ -354,6 +365,10 @@ var lazyLoad = (function(){
 lazyLoad.init();
 
 })
+
+
+
+
 
 /**弹窗提示**/
 function tips(tips_text,img,time){

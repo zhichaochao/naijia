@@ -107,8 +107,30 @@ class ControllerProductProduct extends Controller {
         // print_r(  $data['selects']);exit();
        
         $data['options'] = $this->model_catalog_product->getOptionValues();
-     
-    
+        $data['coupon'] = $this->url->link('common/coupon');
+        
+        $this->load->model('catalog/review');
+        $resultcoupon = $this->model_catalog_review->getcoupon(0);
+
+        // print_r($resultcoupon);exit;
+        if($resultcoupon){
+        foreach ($resultcoupon as $key => $value) {
+
+             $coupon= $this->model_catalog_review->couponornot($value['coupon_id']);
+
+             $data['resultcoupons'][] = array(
+                'coupon_id'      => $value['coupon_id'],
+                'name'          => $value['name'],
+                'code'          => $value['code'],
+                'discountp'             =>floatval($value['discount']),
+                'discount'      =>$this->currency->format(floatval($value['discount']),$this->session->data['currency']), 
+                'type'          => $value['type'],
+                'coupon'            => $coupon,
+                'total'     => $this->currency->format($value['total'],$this->session->data['currency']),
+                'date_end' => date($this->language->get('date_format_short'), strtotime($value['date_end']))
+                );
+        }
+        }
 
 // print_r($data['options']);exit;
         
@@ -286,6 +308,7 @@ class ControllerProductProduct extends Controller {
             //购物车数量
         $data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 
+            $data['thumbs'] = $this->model_tool_image->resize($this->config->get('config_images'), 420, 185);
             $this->load->model('catalog/review');
 
             $data['tab_description'] = $this->language->get('tab_description');

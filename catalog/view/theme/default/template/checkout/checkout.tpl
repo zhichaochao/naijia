@@ -3,6 +3,26 @@
     <div class="in_content clearfix"></div>
         <!--内容-->
         <div class="address_con clearfix">
+        <!--分步-->
+                <div class="substep clearfix">
+                    <ul class="clearfix">
+                        <li>
+                            <div class="text">
+                                <span>1</span><em>MY CART</em>
+                            </div>
+                        </li>
+                        <li class="active">
+                            <div class="text">
+                                <span>2</span><em>CHECKOUT</em>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text">
+                                <span>3</span><em>PAYMENT</em>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             <div class="add_con clearfix" >
                 <ul class="bt_ul clearfix" id="collapse-payment-address">
          

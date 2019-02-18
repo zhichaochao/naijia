@@ -21,7 +21,7 @@
               <a class="wjmm_a" href="<?=$forgotten;?>">Forgot your password?</a>
               
               <button class="dl_btn btn" type="submit">LOGIN</button>
-              <p class="dl_p">Don't have account ?<a href="javascript:;"> SIGN UP</a></p>
+              <p class="dl_p">Don't have account ?<a href="<?=$login;?>"> SIGN UP</a></p>
             </div>
             <input type="hidden" name="redirect" value='<?=$checkout;?>'/>
           </form>

@@ -228,7 +228,8 @@ class ControllerAccountAddress extends Controller {
 		}else{
 			$data['home'] =$this->url->link('account/address');
 		}
-
+		$this->load->model('account/customer');
+		$data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
 	    //获取customer表的address_id值
 	    $customerAddressId = $data['address_id'];
 // print_r($customerAddressId);exit;

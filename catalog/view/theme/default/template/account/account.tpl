@@ -9,8 +9,8 @@
           
         <div class="lf_nav">
           <img class="tx_img" src="catalog/view/theme/default/img/png/touxiang.png" alt="" />
-          <h2><?php echo $firstname ?></h2>
-          <p class="p1"><?php echo $telephone ?></p>
+          <h2>My VIP Point:</h2>
+          <p class="p1"><?php echo $balance ?></p>
           
           <ul>
           <?php echo $account_left; ?>
@@ -40,10 +40,10 @@
                 <span class="sp_bot"> Join VIP Program Now</span>
                 <span class="sp_bot2"> Loyalty point 888</span>
               </div>
-              <div class="top clearfix">
+              <!-- <div class="top clearfix">
                <span class="sp_lf"> My points</span>
                 <span class="sp_bot"> <?php echo $balance; ?></span>
-              </div>
+              </div> -->
               
               <ul class="grxx_ul clearfix">
                 <li>

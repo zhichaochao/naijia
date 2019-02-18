@@ -77,7 +77,8 @@ class ControllerCheckoutSuccess extends Controller {
 			unset($this->session->data['message']);
 		
 		}
-
+		$data['products']=$this->session->data['cartproducts'];
+		// print_r($data['products']);exit;
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$data['breadcrumbs'] = array();

@@ -38,12 +38,17 @@
           </h2>
           <p class="p1">
             <span>SHOP ADDRESS:</span>
-           House number 1, 7A justice g.b.a. coker estate. Obafemi awolowo way, ikeja Lagos, Nigeria
+           House number 1, 7A justice g.b.a. coker estate. Obafemi awolowo way, Ikeja Lagos, Nigeria
              <!-- <br style="display: block;" /> 510000  China -->
           </p>
           <p class="p2">
             <span>BUSINESS HOURS:</span>
-             <br />MONDAY - SATURDAY <br />10AM - 6PM
+             <br />MONDAY - SATURDAY ：9AM - 6PM
+             <br />SUNDAY            ：9AM - 6PM
+          </p> 
+          <p class="p2">
+            <span>CONTACT:</span>
+             <br />09060008426
           </p> 
           <?php if (!isset($logins)) { ?>
           <a href="<?php echo $login; ?>"><button class="yy_tcs">Appointment after login</button></a>
@@ -94,7 +99,7 @@
             <button class="tj_btn"   >Make an appointment</button>
           </form>
         </div>
-        <p class="bot_p">QUESTIONS? CALL 02072318833</p>
+        <p class="bot_p">QUESTIONS? CALL 08147034057</p>
       </div>
     </div>
 

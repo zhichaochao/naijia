@@ -91,6 +91,7 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['shipping_required'] = $this->cart->hasShipping();
 		$data['totals']=$this->load->controller('checkout/total');
 		$data['products']=$products;
+		$this->session->data['cartproducts']=$products;
 		// print_r($data['totals']);print_r($data['products']);exit();
 
 		$data['column_left'] = $this->load->controller('common/column_left');

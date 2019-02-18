@@ -8,10 +8,31 @@
       <div class="top_yd clearfix">
         <h1><a class="fh" href="<?=$home;?>">< BACK</a> MY SHOPPING BAG</h1>
       </div>
+      <!--分步-->
+        <div class="substep clearfix">
+          <ul class="clearfix">
+            <li class="active">
+              <div class="text">
+                <span>1</span><em>MY CART</em>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <span>2</span><em>CHECKOUT</em>
+              </div>
+            </li>
+            <li>
+              <div class="text">
+                <span>3</span><em>PAYMENT</em>
+              </div>
+            </li>
+          </ul>
+        </div>
 
       
       <div class="shop_content">
         <div class="text">
+        <p class="free_p">Congrats! You will get a <span>Free Gift Packs</span>.</p>
         <div class="qx">
           <label for="" class="qx_label">
             <input class="check_input" type="checkbox">
@@ -74,7 +95,7 @@
             <div class="bot clearfix">
               <div class="num_label"  data='<?php echo $product['stock_quantity']; ?>'>
                 <span class="sub_span" onclick="cart_sub(<?php echo $product['cart_id']; ?>,this);"><em class="sub" ></em></span>
-                <input type="text" class="num_in" id="quantity_<?php echo $product['cart_id']; ?>"  name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>"  />
+                <input type="text" readonly="readonly" class="num_in" id="quantity_<?php echo $product['cart_id']; ?>"  name="quantity[<?php echo $product['cart_id']; ?>]" value="<?php echo $product['quantity']; ?>"  />
                 <span class="add_span" onclick="cart_add(<?php echo $product['cart_id']; ?>,this);"><em class="add" ></em></span>
               </div>
               <span class="price_zj" id="total_<?php echo $product['cart_id']; ?>"><?php echo $product['total']; ?></span>
@@ -98,14 +119,14 @@
           <li class="<?=$shippingorpick=='shipping'?'active':'';?>">
             <div class="li_label" data='shipping'>
               <i class="ck_i active"></i>
-              <span>Shipping</span>
+              <span>Delivery</span>
             </div>
             <em class="sjx_em"></em>
           </li>
           <li class="<?=$shippingorpick=='shipping'?'':'active';?>">
             <div class="li_label" data='pick'>
               <i class="ck_i"></i>
-              <span>Pick up</span>
+              <span>Pick up in store(Ikeja)</span>
             </div>
             <em class="sjx_em"></em>
           </li>
@@ -173,7 +194,12 @@
     </div>
 
     <?php }?>
-    
+    <!--活动版块介绍--> 
+    <div class="modal hd_modal">
+      <div class="text">
+        <img src="<?php echo $thumbs?>"/>
+      </div>
+    </div>
 <?php echo $footer; ?>
 <?php if(!empty($products)){?>
  <link rel="stylesheet" href="/catalog/view/theme/default/js/select2/css/select2.css" />
@@ -332,6 +358,7 @@ $(document).ready(function(){
       var stock_quantity=$(th).parent().attr('data');
       // alert(stock_quantity);
       // if (num_val<=stock_quantity) {alert('Lack of stock'); return false;}
+      console.log(num_val+"***"+stock_quantity);
       $(th).siblings(".num_in").val(num_val);
       submit_num(id,num_val);
       
@@ -340,9 +367,12 @@ $(document).ready(function(){
   var num_val = $(th).siblings(".num_in").val();
   var stock_quantity=$(th).parent().attr('data');
   // alert(num_val);die;
-  if (num_val<=stock_quantity) {tips('Error：Limited Quantity','gantan',500); return false;}
+  
+  // if (num_val>=stock_quantity) {tips('Error：Limited Quantity','gantan',500); return false;}
       if(num_val>1){
+        
         num_val--;
+        console.log(num_val+"***"+stock_quantity);
         $(th).siblings(".num_in").val(num_val);
       }
         submit_num(id,num_val);
@@ -421,7 +451,18 @@ $(document).ready(function(){
       $(this).find(".check_i").addClass("active");
       $(".shop_type_ul>li").eq($(this).parents("li").index()).addClass("active").siblings("li").removeClass("active");
     })
-    
+    //礼物
+    $(".free_p>span").click(function(){
+      $(".hd_modal").fadeIn();
+      $("body").css("overflow","hidden");
+    })
+    $(".hd_modal").click(function(e){
+      var close = $('.hd_modal .text'); 
+        if(!close.is(e.target) && close.has(e.target).length === 0){
+          $(".hd_modal").fadeOut();
+        $("body").css("overflow","");
+      }
+    })
   // //点击加入心愿列表、
   //   $(".shop_ul .bot .save").click(function(){
   //     if($(this).hasClass("active")){

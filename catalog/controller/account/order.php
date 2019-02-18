@@ -174,7 +174,7 @@ class ControllerAccountOrder extends Controller {
 		$data['header'] = $this->load->controller('common/header');
 
 		$data['goshopping'] = $this->url->link('common/home', '', true);
-
+		$data['balance'] = $this->model_account_customer->getRewardTotal($this->customer->getId());
 		$this->response->setOutput($this->load->view('account/order_list', $data));
 	}
 

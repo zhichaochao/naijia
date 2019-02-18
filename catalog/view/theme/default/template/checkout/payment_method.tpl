@@ -24,7 +24,7 @@
                     </li>
                     <?php }elseif($shippingorpick=='shipping'&&$address){?>
                         <li class="active">
-                        <h1>Your Address</h1>
+                        <h1>Delivery Address</h1>
                         <div class="form_text clearfix">
                             <ol class="add_ol clearfix">
                                 <li class="active zq_li clearfix">
