@@ -270,7 +270,15 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);	
 			}
-			
+
+			if ($this->user->hasPermission('access', 'sale/order')) {
+				$sale[] = array(
+					'name'	   => 'Paystack订单查询',
+					'href'     => $this->url->link('sale/orders', 'token=' . $this->session->data['token'], true),
+					'children' => array()		
+				);	
+			}
+
 			if ($this->user->hasPermission('access', 'sale/recurring')) {	
 				$sale[] = array(
 					'name'	   => $this->language->get('text_recurring'),

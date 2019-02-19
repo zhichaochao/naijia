@@ -134,6 +134,11 @@ class Cart {
 					$date_end='';
 					$old_price='';
 				}
+				if($cart['marking']==1){
+					$price+=10000;
+				}else{
+					$price=$price;
+				}
 				// print_r($price);
 
 				// Reward Points
@@ -222,6 +227,17 @@ class Cart {
 		// print_r($product_data);exit();
 
 		return $product_data;
+	}
+
+	public function addsmark($product_id, $quantity = 1, $product_select_id = 0, $recurring_id = 0,$marking) {
+		unset($this->session->data['cart_ids']);
+		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "' AND `product_select_id` = '" .  (int)$product_select_id . "'");
+
+		if (!$query->row['total']) {
+			$this->db->query("INSERT " . DB_PREFIX . "cart SET api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "', customer_id = '" . (int)$this->customer->getId() . "', session_id = '" . $this->db->escape($this->session->getId()) . "', product_id = '" . (int)$product_id . "', recurring_id = '" . (int)$recurring_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', marking = '" . (int)$marking . "', date_added = NOW()");
+		} else {
+			$this->db->query("UPDATE " . DB_PREFIX . "cart SET quantity = (quantity + " . (int)$quantity . ") WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "'  AND `product_select_id` = '" .  (int)$product_select_id . "'");
+		}
 	}
 
 	public function add($product_id, $quantity = 1, $product_select_id = 0, $recurring_id = 0) {

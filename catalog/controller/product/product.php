@@ -1432,7 +1432,9 @@ class ControllerProductProduct extends Controller {
                       $price_s= $this->currency->format($price['special'], $this->session->data['currency']);
                        $json['html']= '<span>'.$price_s.'</span><del style="color:#999;font-size:18px;font-weight:normal;">'. $price_c.'</del>';
                   }else{
-                        $json['html']= '<span>'. $price_c.'</span>';  
+                    $json['html']= '<span id="make" data='.$price['price'].'>'. $price_c.'</span>'; 
+
+                        // $json['html']= '<span data="$price['price']">'. $price_c.'</span>';  
                     }
             }else{
                 $json=array();
@@ -1445,4 +1447,29 @@ class ControllerProductProduct extends Controller {
          $this->response->setOutput(json_encode($json));
         
     }
+     public function makingdate() {
+        $json = array();
+        if (isset($this->request->post['data'])) {
+            $data = $this->request->post['data'];
+        }
+        if (isset($this->request->post['ma'])) {
+            $ma = $this->request->post['ma'];
+        }
+        // if($data){
+        //     $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
+        // }
+        if($ma==1){
+            $price=$data+10000;
+            // 
+            $price_s= $this->currency->format($price, $this->session->data['currency']);
+            $json['price_s']=$price_s;
+            // print_r($price_c);exit;
+        }else{
+            $price_s= $this->currency->format($data, $this->session->data['currency']);
+            $json['price_s']=$price_s;
+
+        }
+        $this->response->addHeader('Content-Type: application/json');
+         $this->response->setOutput(json_encode($json));
+     }
 }

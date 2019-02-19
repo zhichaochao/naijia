@@ -524,6 +524,10 @@ class ControllerCheckoutCart extends Controller {
 		} else {
 			$product_id = 0;
 		}
+
+		if (isset($this->request->post['making'])) {
+			$marking = (int)$this->request->post['making'];
+		}
 // print_r($this->request->post);exit;
 		$this->load->model('catalog/product');
 
@@ -578,7 +582,7 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
-				$this->cart->add($this->request->post['product_id'], $quantity, $product_select_id, $recurring_id);
+				$this->cart->addsmark($this->request->post['product_id'], $quantity, $product_select_id, $recurring_id,$marking);
 
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
 

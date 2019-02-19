@@ -247,7 +247,20 @@ class ModelSaleOrder extends Model {
 
 		return $query->rows;
 	}
+	// 
+	public function getOrderspt($data= array()) {
+		// print_r($data);exit;
+		$sql = "SELECT * FROM oc_order WHERE email='" .$data. "' AND payment_method ='Paystack' AND order_status_id =0 ";
 
+		$query = $this->db->query($sql);
+
+		return $query->rows;
+	}
+	public function editorderstatuss($order_id,$order_status_id)
+	{
+		$query = $this->db->query("UPDATE `" . DB_PREFIX . "order` SET order_status_id = '" .$order_status_id . "' WHERE order_id = '" . (int)$order_id . "'");
+		
+	}
 	public function getOrderProducts($order_id) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_id . "'");
 

@@ -540,7 +540,7 @@ class ControllerProductCategory extends Controller {
 					'hotsort'	  => $result['hot'],
 					'reviews'	  => $result['reviews'],
 					'percent'    => $percents,
-					'name'        => $result['name'],
+					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'meta_description'        =>utf8_substr(strip_tags($result['meta_description']),0,125).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
