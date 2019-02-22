@@ -51,7 +51,7 @@
           <div class="big_rf clearfix" id="product">
           
           <input type="hidden" name="product_id" value="<?=$product_id?>">
-            <div class="top">
+            <div class="top clearfix">
                 <h1><?php echo $heading_title;?></h1>
               <p class="p1">
                 <?php echo $meta_description;?>
@@ -66,6 +66,9 @@
                  <?php if($min_price==$max_price) {?> <em id="money" class="em2" ><?=$min_price?> </em> <?php }else{?>  <em id="money" class="em2" ><?=$min_price?> -<?=$max_price?></em><?php } ?>
                   <!-- <span class="red_span">44%OFF</span> -->
                   <?php } ?>
+                  <?php if(!empty($resultcoupons)){?>
+                  <a class="get_cop" href="<?php echo $coupon?>"><span>Get Coupon</span></a>
+                  <?php } ?>
                 </div>
               <?php }else{?>
                   <div class="price" >
@@ -74,8 +77,18 @@
                   <?php }else{ ?>
                  <?php if($min_price==$max_price) {?><em id="money" class="em2"><?=$min_price?></em>  <?php }else{?>  <em id="money" class="em2"><?=$min_price?> -<?=$max_price?></em>  <?php } ?>
                    <?php } ?>
+                   <?php if(!empty($resultcoupons)){?>
+                   <a class="get_cop" href="<?php echo $coupon?>"><span>Get Coupon</span></a>
+                    <?php } ?>
                   </div>
-              <?php }?>    
+              <?php }?> 
+
+              <div class="activity clearfix">
+                <div class="img"> <img src="<?php echo $thumbs?>" alt=""></div>
+                <!-- <p>Happy Valentine's Day</p>
+                <button type="button">UP TO 50% OFF</button> -->
+              </div> 
+
             </div>
             
             <ol class="text_ol">
@@ -91,6 +104,7 @@
                   </span>
                   <p class="ts_p"><?=$tips;?></p>
                 </div>
+                <i class="wish_btn add_class <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);"></i>
               </li>
 
               <!--默认选择-->
@@ -163,31 +177,40 @@
               </li>
 
               
-              <li>
-                   
-                      <!-- <button class="shop_a">Add To Shopping Bag</button> -->
-                     <!--  <button class="wish_btn">
-                        <span><i></i> Add To Wish List</span>
-                        <span class="active"><i></i> Saved</span>
-                        
-                      </button> -->
-               <!--    <?php if (!isset($logins)) { ?>
-                <a class="shop_a" href="<?php echo $login; ?>">Please Login First</a>
-                  <?php }?> -->
-
+              <!-- <li>
                   <?php if($quantity>0){ ?>
                 <a class="shop_a" id="button-cart" href="javascript:;"  >Add To Shopping Bag</a>
                   <?php }else{?>
                   <a class="shop_a">Lack of stock</a>
                   <?php } ?>
                  <button class="shop_btn" id="checkout_btns"><span><i ><em class="shop_ac"><?=$text_cart_items;?></em></i> <p>Check Out</p></span></button>
-                <button class="wish_btn <?=$wishlist==1 ?'active':'';?>" onclick="wishlist('<?php echo $product_id; ?>',this);">
-                  <span><i></i> Add To Wish List</span>
-                  <span class="active"><i></i> Saved</span>
-                </button>
-
+              </li> -->
+               <?php if(isset($hot)&& $hot==3){ ?>
+              <!--这个box只有在box的详情页才显示-->
+               <input type="hidden" name="making" value="0" id="making">
+              <li class="clearfix box_li active">
+                <span class="bt_span active">Wig Making Service</span>
+                <ol class="box_ol">
+                  <li value="1"><span>Yes</span></li>
+                  <li value="0" class="active"><span>No</span></li>
+                </ol>
               </li>
-              
+              <?php } ?>
+
+              <li class="clearfix">
+              <?php if($quantity>0){ ?>
+                <button class="shop_a" id="button-cart" href="javascript:;"  >Add To Shopping Bag</button>
+                  <?php }else{?>
+                  <button class="shop_a">Lack of stock</button>
+                  <?php } ?>
+
+                <!-- <button class="shop_a">Add To Shopping Bag</button> -->
+                <?php if($quantity>0){ ?>
+                <button class="buy_a" id="buttons-carts">Buy Now</button>
+                 <?php }else{?>
+                 <button class="buy_a">Lack of stock</button>
+                  <?php } ?>
+              </li>
               <!--默认展开评价-->
               <li class="active">
               <?php if(!empty($reviews)){ ?>
@@ -446,13 +469,13 @@ window.onload=function(){
     // })
     
     //Wish List添加收藏
-    $(".wish_btn").click(function(){
-      if($(this).hasClass("active")){
-        $(this).removeClass("active");
-      }else{
-        $(this).addClass("active");
-      }
-    })
+    // $(".wish_btn").click(function(){
+    //   if($(this).hasClass("active")){
+    //     $(this).removeClass("active");
+    //   }else{
+    //     $(this).addClass("active");
+    //   }
+    // })
     //默认隐藏显示
     $(".bt_span").each(function(){
       if($(this).hasClass("off")){
@@ -461,7 +484,33 @@ window.onload=function(){
         $(this).siblings("ul").slideUp();
       }
     })
+//box_ol
+// $("#form-product li").each(function(){
+//         if ($(this).find('input').val() < 1) {all=0;
+//           $(this).find(".ts_ps").addClass("off");
+//           $(this).find('.slide_ul').show();
+//         }
+//                    
+//       });
 
+  $(".box_ol>li").click(function(){
+    var all=1;
+    $("#form-product li").each(function(){
+        if ($(this).find('input').val() < 1) {all=0;
+          // $(this).find(".ts_ps").addClass("off");
+          $(this).find('.slide_ul').show();
+        }
+                   
+      });
+
+    if(all){
+    $(this).addClass("active").siblings("li").removeClass("active");
+    var val=$(this).val();
+    $('#making').val(val);
+    makingdate();
+  }
+  
+  })
   //   $(".shop_a").click(function(){
       
   // })
@@ -591,6 +640,24 @@ window.onload=function(){
     
     
   })
+function makingdate() {
+  // alert(1);
+ var data =$('#make').attr("data");
+ var m=$('#making').attr("value");
+
+   $.ajax({
+            url: 'index.php?route=product/product/makingdate',
+            type: 'post',
+            dataType: 'json',
+            data: {data:data,ma:m},
+
+            success: function(json) {
+               if (json) {
+                $('#make').html(json['price_s']);
+                }
+             }
+        });
+}
 function changeprice() {
   // alert(111);die;
         //console.log('first');
@@ -607,13 +674,16 @@ function changeprice() {
                 $('#money').html(json['html']);
                 if ($('input[name="quantity"]').val()<json['quantity']) {
                     $('#button-cart').html('Add To Shopping Bag');
+                    $('#buttons-carts').html('Buy Now');
                 }else{
                    $('#button-cart').html('stockout');
+                   $('#buttons-carts').html('stockout');
                 }
                 if (json['percent']) {$('#price').find('.red_span').html('-'+json['percent']+'%OFF');}
               }else{
                 $('#money').html('stockout');
                 $('#button-cart').html('stockout');
+                $('#buttons-carts').html('stockout');
                
                 }
              }
@@ -787,6 +857,58 @@ function wishlist(product_id,e) {
 
              }else{
               $('#button-cart').html('stockout');
+             }
+              },
+              error: function(xhr, ajaxOptions, thrownError) {
+                  alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+              }
+            });
+        }
+
+        
+    });
+</script>
+<!-- 立即购买 -->
+<script type="text/javascript">
+  
+    var product_id = "<?php echo $product_id; ?>";
+    $('#buttons-carts').on('click', function() {
+      var all=1;
+
+      $("#form-product li").each(function(){
+        if ($(this).find('input').val() < 1) {all=0;
+          $(this).find(".ts_ps").addClass("off");
+          $(this).find('.slide_ul').show();
+        }
+                   
+      });
+      // if ($('#button-cart').html()!='stockout') {alert(1);};
+
+        if(all&&$('#buttons-carts').html()!='stockout'){
+            $.ajax({
+            url: 'index.php?route=checkout/checkout',
+            type: 'post',
+             dataType: 'json',
+            data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+           
+     
+            success: function(json) {
+              if (json.success) {
+                // tips('Successful shopping cart');
+                // alert("成功加入购物车");
+            //   $('#cart_count').html(json.total);
+            //   $('.shop_ac').html(json.total);
+            //   if(!$(".shop_a").hasClass("active")){
+            //   $(".shop_a").addClass("active");
+            //   $(".shop_a").siblings(".shop_btn").addClass("active");
+            // }
+            //     $(".cart_li").click();
+
+                
+
+
+             }else{
+              $('#buttons-carts').html('stockout');
              }
               },
               error: function(xhr, ajaxOptions, thrownError) {

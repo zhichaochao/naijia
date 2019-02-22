@@ -527,6 +527,8 @@ class ControllerCheckoutCart extends Controller {
 
 		if (isset($this->request->post['making'])) {
 			$marking = (int)$this->request->post['making'];
+		}else{
+			$marking = 0;
 		}
 // print_r($this->request->post);exit;
 		$this->load->model('catalog/product');
