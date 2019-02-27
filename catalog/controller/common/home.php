@@ -45,7 +45,7 @@ class ControllerCommonHome extends Controller {
 				'sort'               => $sort,
 				'order'              => 'ASC',
 				'start'              => '0',
-				'limit'              => 16
+				'limit'              => 5
 			);
 
 		
