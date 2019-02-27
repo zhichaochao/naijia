@@ -16,6 +16,7 @@ class ControllerProductProduct extends Controller {
 
         $this->load->model('catalog/product');
 
+        $this->model_catalog_product->delCustomcart();
         // $this->load->model('catalog/manufacturer');
 
         // if (isset($this->request->get['manufacturer_id'])) {

@@ -91,6 +91,8 @@ class ControllerAccountOrder extends Controller {
 			foreach ($totals as $key => $value) {
 				if ($value['code']=='shipping') {
 					$shipping_total=$this->currency->format($value['value'], $result['currency_code'], $result['currency_value']);
+				}else{
+					$shipping_total='';
 				}
 			}
 			// $data['add_time']=strtotime($order_info['date_modified']);
@@ -514,6 +516,8 @@ class ControllerAccountOrder extends Controller {
 				}
 				if ($total['code']=='shipping') {
 					$data['shipping_total']= $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']);
+				}else{
+					$data['shipping_total']='';
 				}
 				if ($total['code']=='coupon') {
 					$data['coupon_total']= $this->currency->format($total['value'], $order_info['currency_code'], $order_info['currency_value']);

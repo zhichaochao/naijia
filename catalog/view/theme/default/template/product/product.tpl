@@ -199,14 +199,15 @@
 
               <li class="clearfix">
               <?php if($quantity>0){ ?>
-                <button class="shop_a" id="button-cart" href="javascript:;"  >Add To Shopping Bag</button>
+                <input type="hidden" name="bynow" value="" id="bynow">
+                <button date="0" class="shop_a" id="button-cart" href="javascript:;"  >Add To Shopping Bag</button>
                   <?php }else{?>
                   <button class="shop_a">Lack of stock</button>
                   <?php } ?>
 
                 <!-- <button class="shop_a">Add To Shopping Bag</button> -->
                 <?php if($quantity>0){ ?>
-                <button class="buy_a" id="buttons-carts">Buy Now</button>
+                <button date="1" class="buy_a" id="buttons-carts">Buy Now</button>
                  <?php }else{?>
                  <button class="buy_a">Lack of stock</button>
                   <?php } ?>
@@ -822,7 +823,7 @@ function wishlist(product_id,e) {
     var product_id = "<?php echo $product_id; ?>";
     $('#button-cart').on('click', function() {
       var all=1;
-
+      $("#bynow").attr("value",$(this).attr("date"));
       $("#form-product li").each(function(){
         if ($(this).find('input').val() < 1) {all=0;
           $(this).find(".ts_ps").addClass("off");
@@ -874,6 +875,7 @@ function wishlist(product_id,e) {
     var product_id = "<?php echo $product_id; ?>";
     $('#buttons-carts').on('click', function() {
       var all=1;
+      $("#bynow").attr("value",$(this).attr("date"));
 
       $("#form-product li").each(function(){
         if ($(this).find('input').val() < 1) {all=0;
@@ -882,11 +884,10 @@ function wishlist(product_id,e) {
         }
                    
       });
-      // if ($('#button-cart').html()!='stockout') {alert(1);};
 
         if(all&&$('#buttons-carts').html()!='stockout'){
             $.ajax({
-            url: 'index.php?route=checkout/checkout',
+            url: 'index.php?route=checkout/cart/add',
             type: 'post',
              dataType: 'json',
             data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
@@ -894,22 +895,17 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
-                // tips('Successful shopping cart');
-                // alert("成功加入购物车");
-            //   $('#cart_count').html(json.total);
-            //   $('.shop_ac').html(json.total);
-            //   if(!$(".shop_a").hasClass("active")){
+                window.location.href=json.success;
+                // alert(json.success);die;
+            //     if(!$(".shop_a").hasClass("active")){
             //   $(".shop_a").addClass("active");
             //   $(".shop_a").siblings(".shop_btn").addClass("active");
             // }
-            //     $(".cart_li").click();
-
-                
-
-
-             }else{
-              $('#buttons-carts').html('stockout');
+              // window.location.href="<?php echo $shopping_checkout?>";
              }
+             // else{
+             //  $('#buttons-carts').html('stockout');
+             // }
               },
               error: function(xhr, ajaxOptions, thrownError) {
                   alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

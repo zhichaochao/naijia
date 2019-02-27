@@ -9,6 +9,7 @@ class ControllerCheckoutCart extends Controller {
 		// print_r($this->session->data['cart_ids']);exit();
 		$this->load->model('catalog/product');
 
+		$this->model_catalog_product->delCustomcart();
 		$this->document->setTitle($this->language->get('heading_title'));
 
 		$data['breadcrumbs'] = array();
@@ -530,6 +531,12 @@ class ControllerCheckoutCart extends Controller {
 		}else{
 			$marking = 0;
 		}
+
+		if (isset($this->request->post['bynow'])) {
+			$bynow = (int)$this->request->post['bynow'];
+		}else{
+			$bynow = 1;
+		}
 // print_r($this->request->post);exit;
 		$this->load->model('catalog/product');
 
@@ -584,10 +591,15 @@ class ControllerCheckoutCart extends Controller {
 			}
 
 			if (!$json) {
-				$this->cart->addsmark($this->request->post['product_id'], $quantity, $product_select_id, $recurring_id,$marking);
-
+				$res=$this->cart->addsmark($this->request->post['product_id'], $quantity, $product_select_id, $recurring_id,$marking,$bynow);
+				// print_r($res);exit;
+				if($bynow==0){
 				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+				}else{
+					// $json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/checkout'));
+					$json['success'] = str_replace('&amp;','&',$this->url->link('checkout/checkout','cart_id='.$res));
 
+				}
 				// Unset all shipping and payment methods
 				unset($this->session->data['shipping_method']);
 				unset($this->session->data['shipping_methods']);

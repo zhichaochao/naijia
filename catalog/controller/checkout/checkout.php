@@ -4,7 +4,11 @@ class ControllerCheckoutCheckout extends Controller {
 		// print_r($this->session->data['payment_method']);exit();
 		// Validate cart has products and has stock.
 		// print_r($this->cart->hasStock());exit();
-			// print_r(($this->customer) );exit();
+			if(isset($this->request->get['cart_id'])){
+				$this->session->data['cart_ids']=$this->request->get['cart_id'];
+			}else{
+				$this->session->data['cart_ids']=$this->session->data['cart_ids'];
+			}
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))||(!isset($this->session->data['cart_ids'])||!$this->session->data['cart_ids']) ) {
 			$this->response->redirect($this->url->link('checkout/cart'));
 		}
@@ -100,7 +104,7 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-
+unset($this->session->data['cart_ids']);
 		$this->response->setOutput($this->load->view('checkout/checkout', $data));
 	}
 
