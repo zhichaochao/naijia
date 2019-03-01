@@ -104,7 +104,7 @@ class ControllerProductProduct extends Controller {
             $product_id = 0;
         }
         $data['selects']= $this->model_catalog_product->getProductSelects($product_id);
-
+unset($this->session->data['cart_ids']);
         // print_r(  $data['selects']);exit();
        
         $data['options'] = $this->model_catalog_product->getOptionValues();

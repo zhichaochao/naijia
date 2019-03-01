@@ -6,6 +6,8 @@ class ControllerCheckoutCheckout extends Controller {
 		// print_r($this->cart->hasStock());exit();
 			if(isset($this->request->get['cart_id'])){
 				$this->session->data['cart_ids']=$this->request->get['cart_id'];
+				$this->session->data['shippingorpick']='shipping';
+				$this->session->data['comment']='';
 			}else{
 				$this->session->data['cart_ids']=$this->session->data['cart_ids'];
 			}
@@ -104,7 +106,7 @@ class ControllerCheckoutCheckout extends Controller {
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-unset($this->session->data['cart_ids']);
+
 		$this->response->setOutput($this->load->view('checkout/checkout', $data));
 	}
 
