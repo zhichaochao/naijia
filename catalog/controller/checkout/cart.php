@@ -332,6 +332,7 @@ class ControllerCheckoutCart extends Controller {
 			// print_r($cart_total);exit;
 			$resultcoupon = $this->model_catalog_review->getCustomerUseCoupon();
 		// print_r($resultcoupon);exit;
+			 if ($this->customer->isLogged()) {
 			if(!empty($resultcoupon)){
 				foreach ($resultcoupon as $results) {
 				$data['coupons'][] = array(
@@ -345,6 +346,7 @@ class ControllerCheckoutCart extends Controller {
 					);
 
 				}
+			}
 			}
 			// print_r($data['coupons']);exit;
 			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
