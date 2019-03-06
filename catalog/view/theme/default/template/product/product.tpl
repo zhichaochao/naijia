@@ -61,7 +61,7 @@
                    <?php if(isset($special)){ ?>
                <?php if($min_price==$max_price) {?><em class="em1"><?=$min_price?></em> <?php }else{?>  <em class="em1"><?=$min_price?> -<?=$max_price?></em><?php } ?>
                   <?php if($min_prices==$max_prices) {?> <em id="money" class="em2"><?=$min_prices;?> </em><?php }else{?><em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em><?php } ?>
-                    <span  class="red_span">-<?=$percent;?>%OFF</span>
+                    <!-- <span  class="red_span">-<?=$percent;?>%OFF</span> -->
                   <?php }else{ ?>
                  <?php if($min_price==$max_price) {?> <em id="money" class="em2" ><?=$min_price?> </em> <?php }else{?>  <em id="money" class="em2" ><?=$min_price?> -<?=$max_price?></em><?php } ?>
                   <!-- <span class="red_span">44%OFF</span> -->
