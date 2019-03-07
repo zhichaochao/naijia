@@ -446,7 +446,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pro_det .text_rf {width: 23.95vw;position: relative;right: 7.29vw;top: 0;float: right;}
 	.pro_det .text_rf .top{text-align: center;padding-bottom: 20px;}
 	.pro_det .text_rf h1{font-size: 18px;line-height: 18px;font-family: open_b; margin-bottom: 15px;}
-	.pro_det .text_rf p.p1{color: #666;font-size: 18px;margin-bottom: 15px;text-align: left;}
+	.pro_det .text_rf p.p1{color: #666;font-size: 14px;margin-bottom: 15px;text-align: left;}
 	.pro_det .text_rf em.em1{color: #ccc;font-size: 0.73vw;display: inline-block;line-height: 2.08vw;text-decoration: line-through;margin-left: 5px;}
 	.pro_det .text_rf em.em2{font-size: 1.25vw;line-height: 2.08vw; font-family: open_b; display: inline-block;float: left;color: #ff369d;}
 	.pro_det .text_rf .get_cop{display: inline-block;width: 8.33vw;line-height: 2.08vw;text-align: center;display: inline-block;background: #ff369d;
