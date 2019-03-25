@@ -374,6 +374,14 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()		
 				);	
 			}
+
+			if ($this->user->hasPermission('access', 'customer/inquiries')) {
+				$customer[] = array(
+					'name'	   => '客户询问',
+					'href'     => $this->url->link('customer/inquiries', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
 			
 			if ($customer) {
 				$data['menus'][] = array(
