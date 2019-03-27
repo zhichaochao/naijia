@@ -729,13 +729,19 @@ class ControllerAccountOrder extends Controller {
 		}
 			//结束
 		$http_type = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')) ? 'https:' : 'http:';
-		if($order_info['bank_receipt']){
-			$data['bank_receipt'] =$http_type.'/image'.$order_info['bank_receipt'];
-		}else{
-			$data['bank_receipt']=$order_info['bank_receipt'];
-		}
+			if(!empty($order_info['bank_receipt'])){
+				$resreceipt=explode(",",$order_info['bank_receipt']);
+			foreach ($resreceipt as $k=> $value) {
+				$data['bank_receipt'][]=array(
+						'bank_receipt'=>$http_type.'/image'.$value
+					);
+			}
+			}else{
+				$data['bank_receipt']='';
+			}
+			
 		
-		// print($data['bank_receipt']);exit;
+		// print_r($data['bank_receipt']);exit;
 			$data['continue'] = $this->url->link('account/order', '', true);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
@@ -972,17 +978,35 @@ class ControllerAccountOrder extends Controller {
 	{
 		$this->load->model('checkout/order');
 		// print_r($_FILES);exit();
+		if($_FILES){
+                $path = array();
+                foreach($_FILES['bank_receipt']['name'] as $key=>$row){
+                    if($_FILES['bank_receipt']['error'][$key]==0){
+                        if(($_FILES['bank_receipt']['type'][$key]=='image/gif' || $_FILES['bank_receipt']['type'][$key]=='image/jpeg' || $_FILES['bank_receipt']['type'][$key]=='image/pjpeg' || $_FILES['bank_receipt']['type'][$key]=='image/png')){
 
-		if(!empty($_FILES['uploadPicture']['name'])){
+                            $extend = pathinfo($row); //获取文件名数组
 
-			$img = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).strtolower(strrchr($_FILES['uploadPicture']['name'],"."));
-			$souceName = DIR_IMAGE.'/receipt/'.$img;
-			$moveRes=move_uploaded_file($_FILES['uploadPicture']['tmp_name'],$souceName);
-			if (isset($this->request->post['order_id'])&&$this->request->post['order_id']>0) {
-				$this->model_checkout_order->UploadReceipt($this->request->post['order_id'],'/receipt/'.$img);
-			}
-
-		}
+                            $extend = strtolower($extend["extension"]);                //获取文件的扩展名
+								// 
+                            $filename = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).".".$extend;              //文件的新名称
+                           
+                            $directory = DIR_IMAGE . 'receipt/';
+                             
+                            // $path[] = '../image/receipt/' . $filename;
+                            $path[] = '/receipt/' . $filename;
+							// 
+                           $moveRes=move_uploaded_file($_FILES['bank_receipt']['tmp_name'][$key],$directory.$filename);
+                        }
+                    }
+                }
+            }
+            // print_r($path);exit;
+            if ($moveRes) {
+			$this->load->model('account/order');
+			$this->model_checkout_order->UploadReceipts($this->request->post['order_id'],$path);
+			
+		}    
+		
 		$this->response->redirect($this->url->link('account/order/info','order_id='.$this->request->post['order_id']));
 		// if (!$this->customer->isLogged()) {
 		// 	$this->session->data['redirect'] = $this->url->link('account/order', '', 'SSL');

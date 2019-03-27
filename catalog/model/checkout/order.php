@@ -812,7 +812,18 @@ class ModelCheckoutOrder extends Model {
 
 	public function UploadReceipt($order_id,$receipt)
 	{
-			$this->db->query("UPDATE " . DB_PREFIX . "order SET bank_receipt = '" .$receipt . "' WHERE order_id = '" . (int)$order_id . "'");
+			$res=implode(",",$receipt);
+			$this->db->query("UPDATE " . DB_PREFIX . "order SET bank_receipt = '" .$res. "' WHERE order_id = '" . (int)$order_id . "'");
+			// print_r("UPDATE " . DB_PREFIX . "order SET receipt = '" .$receipt . "' WHERE order_id = '" . (int)$order_id . "'");exit();
+	}
+	public function UploadReceipts($order_id,$receipt)
+	{
+
+			$result=$this->db->query("SELECT bank_receipt FROM " . DB_PREFIX . "order WHERE order_id = '" . (int)$order_id . "'");
+			// print_r($result->row['bank_receipt']);exit;
+			$image=$result->row['bank_receipt'];
+			$res=implode(",",$receipt);
+			$this->db->query("UPDATE " . DB_PREFIX . "order SET bank_receipt = '" .$res .','.$image. "' WHERE order_id = '" . (int)$order_id . "'");
 			// print_r("UPDATE " . DB_PREFIX . "order SET receipt = '" .$receipt . "' WHERE order_id = '" . (int)$order_id . "'");exit();
 	}
 	 /*下单成功发送邮件*/

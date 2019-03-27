@@ -25,16 +25,47 @@ class ControllerCheckoutPayment extends Controller {
 		
 
 
-		if(!empty($_FILES['img']['name'])){
+		if($_FILES){
+                $path = array();
+                foreach($_FILES['bank_receipt']['name'] as $key=>$row){
+                    // if($_FILES['bank_receipt']['error'][$key]==4){
+                    //     continue;
+                    // }
+                    if($_FILES['bank_receipt']['error'][$key]==0){
+                        if(($_FILES['bank_receipt']['type'][$key]=='image/gif' || $_FILES['bank_receipt']['type'][$key]=='image/jpeg' || $_FILES['bank_receipt']['type'][$key]=='image/pjpeg' || $_FILES['bank_receipt']['type'][$key]=='image/png')){
 
-			$img = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).strtolower(strrchr($_FILES['img']['name'],"."));
-			$souceName = DIR_IMAGE.'/receipt/'.$img;
-			$moveRes=move_uploaded_file($_FILES['img']['tmp_name'],$souceName);
-			if (isset($this->request->post['order_id'])&&$this->request->post['order_id']>0) {
-				$this->model_checkout_order->UploadReceipt($this->request->post['order_id'],'/receipt/'.$img);
-			}
+                            $extend = pathinfo($row); //获取文件名数组
 
+                            $extend = strtolower($extend["extension"]);                //获取文件的扩展名
+								// 
+                            $filename = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).".".$extend;              //文件的新名称
+                           
+                            $directory = DIR_IMAGE . 'receipt/';
+                             
+                            // $path[] = '../image/receipt/' . $filename;
+                            $path[] = '/receipt/' . $filename;
+							// 
+                           $moveRes=move_uploaded_file($_FILES['bank_receipt']['tmp_name'][$key],$directory.$filename);
+                        }
+                    }
+                }
+            }
+            // print_r($path);exit;
+            if ($moveRes) {
+			$this->load->model('account/order');
+			$this->model_checkout_order->UploadReceipt($this->request->post['order_id'],$path);
+			
 		}
+		// if(!empty($_FILES['img']['name'])){
+
+		// 	$img = date("YmdHis").substr(md5(mt_rand(0,1000)),0,2).strtolower(strrchr($_FILES['img']['name'],"."));
+		// 	$souceName = DIR_IMAGE.'/receipt/'.$img;
+		// 	$moveRes=move_uploaded_file($_FILES['img']['tmp_name'],$souceName);
+		// 	if (isset($this->request->post['order_id'])&&$this->request->post['order_id']>0) {
+		// 		$this->model_checkout_order->UploadReceipt($this->request->post['order_id'],'/receipt/'.$img);
+		// 	}
+
+		// }
 		$this->load->model('account/order');
 		$order_info=$this->model_account_order->getOrder($this->session->data['order_id']);
 		$order_status=$this->model_account_order->getOrderStatus($order_info['order_status_id'],$order_info['language_id']);

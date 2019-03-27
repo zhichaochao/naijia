@@ -203,16 +203,26 @@
           <span class="span1">Bank Alert</span>
           <span class="span2">Voucher picture</span>
           <div class="hui">
-            <div class="img">
-              <img src="<?php echo $bank_receipt;?>" name="bank_receipt"/>
-              <div class="close" onclick="del_img($(this))"></div>
-            </div>
+              <ul>
+              <?php if($bank_receipt){?>
+              <?php foreach ($bank_receipt as $k=>$bankvalue) { ?>
+              <li>
+                <div class="img">
+                <img src="<?php echo $bankvalue['bank_receipt'];?>" />
+                <div class="close" onclick="del_img($(this))"></div>
+                </div>
+              </li>
+            <?php } ?>
+            <?php } ?>
+              </ul>
+            
+
           </div>
         </div>
         <div class="center clearfix">
           <div class="btn">
             <div class="file_div">
-              <input type="file" name="uploadPicture" id="file" value="<?php echo $bank_receipt;?>" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+              <input type="file" name="bank_receipt[]" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
               <a class="btn1" href="###">Re-upload</a>
             </div>
             <a  href="javascript:;" class="btn2"><input type="submit" value="SUBMIT"></a>
@@ -270,265 +280,7 @@
       <p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
       <?php } ?>
     </div>
-    <!--移动端-->
-    <div class="ordet_con clearfix">
-      <div class="or_content clearfix">
-        <div class="top_yd clearfix">
-          <p><a class="fh" href="<?=$home;?>">< BACK</a> <span>Order No:<?php echo $order_number; ?></span></p>
-        </div>
 
-        <?php if($order_status=='Pending'){?>
-        <?php if($payment_code == 'bank_transfer' ) { ?>
-
-         <?php if(empty($bank_receipt)){?>
-         <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Please finish payment or upload the bank alert.</p>
-          <p class="p1">Or it will be invalid in 
-            <span class="span_r djs_p" title="">
-              <span class="int_hour">00</span><i>:</i>
-              <span class="int_minute">00</span><i>:</i>
-              <span class="int_second">00</span>
-            </span>
-          </p>
-          <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
-        </div>
-
-          <?php }else{ ?>
-          <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Thanks for your order .</p>
-          <p class="p1">· Payment has been completed.</p>
-          <p class="p1">· It will ready to ship in 1- 2 days.</p>
-          <p class="p1">Emails will update to you if your package situation changes.</p>
-        </div>
-         <!--  <p class="p2">
-            Thanks for your order .<br />
-            · Payment has been completed<br />
-            · It will ready to ship in 1- 2 days.<br />
-            Emails will update to you if your <br />
-            package situation changes.
-          </p> -->
-
-          <?php }?>
-
-         <!-- <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Thanks for your order .</p>
-          <p class="p1">· Payment has been completed.</p>
-          <p class="p1">· It will ready to ship in 1- 2 days.</p>
-          <p class="p1">Emails will update to you if your package situation changes.</p>
-          <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
-        </div> -->
-          <!-- <span>Order date:2018-09-07</span> -->
-       <!--  </div> -->
-
-        <?php }else{ ?>
-          <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Please finish payment or upload the bank alert.</p>
-          <p class="p1">Or it will be invalid in 
-            <span class="span_r djs_p" title="">
-              <span class="int_hour">00</span><i>:</i>
-              <span class="int_minute">00</span><i>:</i>
-              <span class="int_second">00</span>
-            </span>
-          </p>
-          <p class="p1">Pay method:<em style="color: red;font-size: 0.24rem;"><?php echo $payment_method; ?></em></p>
-        </div>
-        <?php }?>
-        <!--  -->
-        
-
-        <?php }elseif($order_status=='Complete'){?>
-
-        <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <ul>
-            <li>Pending <span><?php echo $date_added; ?></span></li>
-            <li>Delivered <span><?php echo $delivered_date; ?></span></li>
-            <li>Completed <span><?php echo $date_modified; ?></span></li>
-          </ul>
-          <!-- <a class="modal_btn" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
-          <button class="modal_btn review_tc">Review</button>
-          <!-- <button class="modal_btn" >Review</button> -->
-        </div>
-
-        <?php }elseif($order_status=='Pending-unfilled'){?>
-
-        <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1 class="hei"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Thanks for your order .</p>
-          <p class="p1">· Payment has been completed.</p>
-          <p class="p1">· It will ready to ship in 1- 2 days.</p>
-          <p class="p1">Emails will update to you if your package situation changes.</p>
-        </div>
-
-        <?php }elseif($order_status=='Delivered'){?>
-          <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1 class="lv"><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Your package has been delivered on <?php echo $delivered_date; ?>. </p>
-        </div>
-        <?php }elseif($order_status=='lnvalid'){?>
-
-         <?php if($payment_code == 'paystack') { ?>
-
-          <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Fail to complete payment or <i><br /></i>  upload bank alert in time.</p>
-          <!-- <a class="pay_a" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover to pay</a> -->
-        </div>
-
-         <?php }else{?>
-         <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1><i></i> <span><?php echo $order_status; ?> </span><p>(<?php echo $date_added; ?>)</p></h1>
-          <p class="p1">Fail to complete payment or <i><br /></i>  upload bank alert in time.</p>
-          <a class="pay_a" onclick="javascript:recover_order('<?php echo $order_id; ?>');">Recover to pay</a>
-        </div>
-
-         <?php }?>
-
-        
-
-        <?php }elseif($order_status=='Canceled'){?>
-        <div class="zt_top clearfix">
-          <em class="line_h"></em>
-          <h1 class="hei"><i></i> <span><?php echo $order_status; ?></span><p>(<?php echo $date_added; ?>)</p></h1>
-        </div>
-
-          <?php }?>
-         
-        
-        <div class="pro_order clearfix">
-          <h1>Product information</h1>
-          <ul>
-            <?php foreach ($products as $product) { ?>
-            <li class="clearfix">
-              <a href="###">
-                <div class="pic_img">
-                  <img src="<?php echo $product['order_image']; ?>"/>
-                </div>
-                <p class="ov_text"><?php echo $product['name']; ?></p>
-                <?php foreach ($product['option'] as $option) { ?>
-             <p class="type"> <?php echo $option['name']; ?>: <?php echo $option['value']; ?></p>
-                <?php } ?>
-                <!-- <p class="type">Natural black; 12inch <i><br /></i> 4*13 frontal cap;</p> -->
-                <span class="num">x<?php echo $product['quantity']; ?></span>
-                <!-- <span class="price1">₦100K</span> -->
-                <span class="price2"><?php echo $product['price']; ?></span>
-              </a>
-            </li>
-            <?php } ?>
-          </ul>
-        </div>
-
-        
-        <div class="or_address clearfix">
-          <h1>Shipping Address</h1>
-          <div class="text">
-          <p><?php echo $shipping_address; ?></p>
-          </div>
-        </div>
-         <?php if($payment_code=='bank_transfer') { ?>
-
-          <div class="xianxia clearfix">
-
-          <form  action="<?=$upload_receipt;?>" method="post"  enctype="multipart/form-data"  >
-          <input type="hidden" value="<?php echo $order_id; ?>" name="order_id">
-          <span class="span1">Bank Alert</span>
-          <span class="span2">Voucher picture</span>
-          <div class="hui">
-            <div class="img">
-              <img src="<?php echo $bank_receipt;?>" name="bank_receipt"/>
-              <div class="close" onclick="del_img($(this))"></div>
-            </div>
-          </div>
-          <div class="center">
-            <div class="btn">
-              <div class="file_div">
-                <input type="file" name="uploadPicture" id="file" value="<?php echo $bank_receipt;?>" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
-                <a class="btn1" href="">Re-upload</a>
-              </div>
-              <!-- <a  href="###"></a> -->
-              <input type="submit" value="SUBMIT2">
-            </div>
-          </div>
-          <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
-          </form>
-        </div>
-
-
-        <?php }?>
-        <div class="total clearfix">
-          <div class="right clearfix">
-            <p class="total_p active clearfix">
-            <?php if(isset($coupon_total)) { ?>
-            <i class="text_i">Coupon: <i><?php echo $coupon_total; ?></i></i>
-            <?php }?>
-              
-              <span>Total</span>
-              <i class="img_i"></i>
-              <em><?php echo $total; ?></em>
-              <i class="down_img"></i>
-            </p>
-            <hr />
-            <div class="slide_p clearfix">
-              <p>Total Products <span><?php echo $subtotals; ?></span></p>
-              <p>Total Points <span><?php echo $subtotals; ?></span></p>
-              <p>Total Shipping <span><?php echo $shipping_total; ?></span></p>
-              <?php if(isset($coupon_total)) { ?>
-              <p><i class="xl_i"><?php echo $coupon_title; ?></i> <span><?php echo $coupon_total; ?></span></p>
-            <?php }?>
-             
-
-            </div>
-
-            
-          </div>
-
-            <?php if($order_status=='Pending' || $order_status=='lnvalid'){?>
-              <?php if($payment_code == 'pp_standard' || $payment_code == 'pp_express') { ?>
-              <a class="btn_a hong" href="<?php echo $repay;?>">CONTINUE TO PAY</a>
-            <?php }?>
-            <?php }?>
-
-            <?php if($order_status=='Complete' ){?>
-            <button class="md_btn w_50 contact_tc">CONTACT US</button>
-              <!-- <button class="md_btn w_50">CONTACT US</button> -->
-              <a class="btn_a1 btn_a review_tc" href="javascript:;">REVIEW</a>
-              <!-- <a class="btn_a1 btn_a" href="<?php echo $compltedorder; ?>">REVIEW</a> -->
-              <p class="ms_p pd_no">Please contact us if you have any problem of your order.</p>
-            <?php }?>
-
-             <?php if($order_status=='Delivered'){?>
-              <button class="md_btn w_50 contact_tc">CONTACT US</button>
-              <em class="btn_a1 btn_a"  onclick="javascript:confirm_order('<?php echo $order_id; ?>');">CONFIRM RECEIPT</em>
-              <p class="ms_p pd_no">Your package is on shipping, contact us if you have any problem.</p>
-            <?php }?>
-
-
-            <?php if($order_status=='Pending-unfilled'){?>
-              <a class="btn_a huang contact_tc" href="javascript:;">CONTACT US</a>
-              <p class="ms_p">Your package is on shipping, contact us if you have any problem.</p>
-            <?php }?>
-
-            <?php if($order_status=='Canceled'){?>
-            <a class="btn_a huang" onclick="javascript:recover_order('<?php echo $order_id; ?>');">RE-ORDER</a>
-            <?php }?>
-
-        </div>
-      </div>
-      
-    </div>
     <!--评价弹窗-->
     <div class="review_modal clearfix">
       <div class="text clearfix">
@@ -621,19 +373,26 @@ function bitian() {
             }
         }
         creatImg(imgRUL);
+        var html = $(node).prop("outerHTML");
+        console.log(html)
+        $(node).hide();
+        $(node).siblings('.btn1').text('Countinue Upload');
+        $(".file_div").append(html)
         return imgURL;
     }
  
   //上传选中的图片 显示页面
-    function creatImg(imgRUL){
-        $(".hui img").attr("src",imgRUL);
+     function creatImg(imgRUL){
+        var text_li = '<li><div class="img"><img src="'+imgRUL+'"/>'+
+            '<div class="close" onclick="del_img($(this))"></div></div></li>'
+        
+        $(".hui>ul").append(text_li)
         $(".hui .close").css("display","block");
     }
   
   //删除选中的图片
   function del_img(obj){
-    obj.siblings("img").attr("src","");
-     $(".hui .close").css("display","none");
+    obj.parents("li").remove();
   }
 </script>
 <script>

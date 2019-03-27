@@ -83,14 +83,13 @@
           </h2>
           <div class="pd_div clearfix">
            <form id='batch' action="<?=$upload_receipt;?>" method="post" name="infoForm" enctype="multipart/form-data" onsubmit="return bitian();" >
+           <div class="text_div clearfix">
+              <div class="cs" style="position: relative;">
+              </div>
+          </div>
            <div class="file_div">
-              <input type="file" name="img" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
+              <input type="file" name="bank_receipt[]" id="file" value="" title="上传照片" onchange="getphoto(this)" class="flie_in"/>
               <img class="file_img" src="/catalog/view/theme/default/img/png/icon_58_.png"/>
-          
-            </div>
-            <div class="text_div">
-              <img src="" alt="" />
-              <div class="close" onclick="del_img($(this))"></div>
             </div>
             <p class="tsp_2" >Click to upload</p>
           </div>
@@ -140,16 +139,21 @@
                   reader.readAsDataURL(node.files[0]);
               }
           }
-          creatImg(imgRUL);
-          $(".text_div").css("display","inline-block");
-          $(".tsp_2").css("display","none");
-          $(".file_div").css("display","none");
-          return imgURL;
+            creatImg(imgRUL);
+            var html = node.outerHTML;
+            $(node).hide();
+            console.log(html)
+            $(".file_div").append(html);
+            $(".text_div").css("display","inline-block");
+            return imgURL;
       }
    
     //上传选中的图片 显示页面
       function creatImg(imgRUL){
-          $(".text_div img").attr("src",imgRUL);
+           const img ='<div class="cs" style="position: relative;margin-bottom:0.4rem;"><img src="'+imgRUL+'"  alt="" />'+
+                         ' <div class="close" onclick="del_img($(this))"></div>'+
+                        '</div> '
+          $(".text_div").append(img);
       }
     
     //删除选中的图片
