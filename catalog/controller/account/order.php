@@ -1003,7 +1003,7 @@ class ControllerAccountOrder extends Controller {
             // print_r($path);exit;
             if ($moveRes) {
 			$this->load->model('account/order');
-			$this->model_checkout_order->UploadReceipts($this->request->post['order_id'],$path);
+			$this->model_checkout_order->UploadReceipt($this->request->post['order_id'],$path);
 			
 		}    
 		
