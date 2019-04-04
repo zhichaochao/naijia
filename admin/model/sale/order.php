@@ -172,7 +172,7 @@ class ModelSaleOrder extends Model {
 	}
 
 	public function getOrders($data = array()) {
-		$sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS order_status, o.shipping_code, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified FROM `" . DB_PREFIX . "order` o";
+		$sql = "SELECT o.order_id, CONCAT(o.firstname, ' ', o.lastname) AS customer, (SELECT os.name FROM " . DB_PREFIX . "order_status os WHERE os.order_status_id = o.order_status_id AND os.language_id = '" . (int)$this->config->get('config_language_id') . "') AS order_status, o.shipping_code, o.total, o.currency_code, o.currency_value, o.date_added, o.date_modified, o.order_number FROM `" . DB_PREFIX . "order` o";
 
 		if (isset($data['filter_order_status'])) {
 			$implode = array();
@@ -191,21 +191,22 @@ class ModelSaleOrder extends Model {
 		}
 
 		if (!empty($data['filter_order_id'])) {
-			$sql .= " AND o.order_id = '" . (int)$data['filter_order_id'] . "'";
+			$sql .= " AND o.order_number = '" .$data['filter_order_id'] . "'";
 		}
 
 		if (!empty($data['filter_customer'])) {
 			$sql .= " AND CONCAT(o.firstname, ' ', o.lastname) LIKE '%" . $this->db->escape($data['filter_customer']) . "%'";
 		}
 
-		if (!empty($data['filter_date_added'])) {
-			$sql .= " AND DATE(o.date_added) = DATE('" . $this->db->escape($data['filter_date_added']) . "')";
-		}
-
+		// if (!empty($data['filter_date_added'])) {
+		// 	$sql .= " AND DATE(o.date_added) = DATE('" . $this->db->escape($data['filter_date_added']) . "')";
+		// }
+// print_r(DATE('2019-03-16 09:42:57'));exit;
 		if (!empty($data['filter_date_modified'])) {
-			$sql .= " AND DATE(o.date_modified) = DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
-		}
 
+			// $sql .= " AND DATE(o.date_modified) = DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
+			$sql .= " AND   DATE(o.date_modified) between DATE('" . $this->db->escape($data['filter_date_added']) . "') and DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
+		}
 		if (!empty($data['filter_total'])) {
 			$sql .= " AND o.total = '" . (float)$data['filter_total'] . "'";
 		}
@@ -213,6 +214,7 @@ class ModelSaleOrder extends Model {
 		$sort_data = array(
 			'o.order_id',
 			'customer',
+			'o.order_number',
 			'order_status',
 			'o.date_added',
 			'o.date_modified',
@@ -317,14 +319,19 @@ class ModelSaleOrder extends Model {
 		if (!empty($data['filter_customer'])) {
 			$sql .= " AND CONCAT(firstname, ' ', lastname) LIKE '%" . $this->db->escape($data['filter_customer']) . "%'";
 		}
-
-		if (!empty($data['filter_date_added'])) {
-			$sql .= " AND DATE(date_added) = DATE('" . $this->db->escape($data['filter_date_added']) . "')";
-		}
-
 		if (!empty($data['filter_date_modified'])) {
-			$sql .= " AND DATE(date_modified) = DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
+
+			// $sql .= " AND DATE(o.date_modified) = DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
+			$sql .= " AND   DATE(date_modified) between DATE('" . $this->db->escape($data['filter_date_added']) . "') and DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
 		}
+
+		// if (!empty($data['filter_date_added'])) {
+		// 	$sql .= " AND DATE(date_added) = DATE('" . $this->db->escape($data['filter_date_added']) . "')";
+		// }
+
+		// if (!empty($data['filter_date_modified'])) {
+		// 	$sql .= " AND DATE(date_modified) = DATE('" . $this->db->escape($data['filter_date_modified']) . "')";
+		// }
 
 		if (!empty($data['filter_total'])) {
 			$sql .= " AND total = '" . (float)$data['filter_total'] . "'";

@@ -37,8 +37,8 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="input-order-id"><?php echo $entry_order_id; ?></label>
-                <input type="text" name="filter_order_id" value="<?php echo $filter_order_id; ?>" placeholder="<?php echo $entry_order_id; ?>" id="input-order-id" class="form-control" />
+                <label class="control-label" for="input-order-id">订单号</label>
+                <input type="text" name="filter_order_id" value="<?php echo $filter_order_id; ?>" placeholder="订单号" id="input-order-id" class="form-control" />
               </div>
               <div class="form-group">
                 <label class="control-label" for="input-customer"><?php echo $entry_customer; ?></label>
@@ -71,17 +71,17 @@
             </div>
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="control-label" for="input-date-added"><?php echo $entry_date_added; ?></label>
+                <label class="control-label" for="input-date-added">开始日期</label>
                 <div class="input-group date">
-                  <input type="text" name="filter_date_added" value="<?php echo $filter_date_added; ?>" placeholder="<?php echo $entry_date_added; ?>" data-date-format="YYYY-MM-DD" id="input-date-added" class="form-control" />
+                  <input type="text" name="filter_date_added" value="<?php echo $filter_date_added; ?>" placeholder="开始日期" data-date-format="YYYY-MM-DD" id="input-date-added" class="form-control" />
                   <span class="input-group-btn">
                   <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
                   </span></div>
               </div>
               <div class="form-group">
-                <label class="control-label" for="input-date-modified"><?php echo $entry_date_modified; ?></label>
+                <label class="control-label" for="input-date-modified">结束日期</label>
                 <div class="input-group date">
-                  <input type="text" name="filter_date_modified" value="<?php echo $filter_date_modified; ?>" placeholder="<?php echo $entry_date_modified; ?>" data-date-format="YYYY-MM-DD" id="input-date-modified" class="form-control" />
+                  <input type="text" name="filter_date_modified" value="<?php echo $filter_date_modified; ?>" placeholder="结束日期" data-date-format="YYYY-MM-DD" id="input-date-modified" class="form-control" />
                   <span class="input-group-btn">
                   <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
                   </span></div>
@@ -101,11 +101,17 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_order; ?>"><?php echo $column_order_id; ?></a>
                     <?php } ?></td>
+                    <td class="text-left">
+                    订单号
+                    </td>
                   <td class="text-left"><?php if ($sort == 'customer') { ?>
                     <a href="<?php echo $sort_customer; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_customer; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_customer; ?>"><?php echo $column_customer; ?></a>
                     <?php } ?></td>
+
+                    
+
                   <td class="text-left"><?php if ($sort == 'order_status') { ?>
                     <a href="<?php echo $sort_status; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_status; ?></a>
                     <?php } else { ?>
@@ -140,6 +146,7 @@
                     <?php } ?>
                     <input type="hidden" name="shipping_code[]" value="<?php echo $order['shipping_code']; ?>" /></td>
                   <td class="text-right"><?php echo $order['order_id']; ?></td>
+                  <td class="text-left"><?php echo $order['order_number']; ?></td>
                   <td class="text-left"><?php echo $order['customer']; ?></td>
                   <td class="text-left"><?php echo $order['order_status']; ?></td>
                   <td class="text-right"><?php echo $order['total']; ?></td>

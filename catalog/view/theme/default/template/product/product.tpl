@@ -676,6 +676,10 @@ function changeprice() {
                 if ($('input[name="quantity"]').val()<json['quantity']) {
                     $('#button-cart').html('Add To Shopping Bag');
                     $('#buttons-carts').html('Buy Now');
+                          var making=$('#making').val();
+                          if(making=1){
+                             makingdate();
+                          }
                 }else{
                    $('#button-cart').html('stockout');
                    $('#buttons-carts').html('stockout');

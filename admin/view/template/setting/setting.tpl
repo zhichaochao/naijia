@@ -127,6 +127,55 @@
                   </select>
                 </div>
               </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动页面跳转1</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_href" value="<?php echo $config_href; ?>" placeholder="" id="input-href" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动页面跳转2</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_hrefs" value="<?php echo $config_hrefs; ?>" placeholder="" id="input-hrefs" class="form-control" />
+                </div>
+              </div>
+
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动时间1</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_time1" value="<?php echo $config_time1; ?>" placeholder="" id="input-time1" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动时间2</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_time2" value="<?php echo $config_time2; ?>" placeholder="" id="input-time2" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动时间3</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_time3" value="<?php echo $config_time3; ?>" placeholder="" id="input-time3" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动时间4</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_time4" value="<?php echo $config_time4; ?>" placeholder="" id="input-time4" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动时间5</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_time5" value="<?php echo $config_time5; ?>" placeholder="" id="input-time5" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-telephone">活动月份</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_month" value="<?php echo $config_month; ?>" placeholder="" id="input-month" class="form-control" />
+                </div>
+              </div>
             </div>
             <div class="tab-pane" id="tab-store">
               <div class="form-group required">

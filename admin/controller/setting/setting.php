@@ -539,6 +539,47 @@ class ControllerSettingSetting extends Controller {
 			$data['config_instagram'] = $this->config->get('config_instagram');
 		}
 
+		if (isset($this->request->post['config_href'])) {
+			$data['config_href'] = $this->request->post['config_href'];
+		} else {
+			$data['config_href'] = $this->config->get('config_href');
+		}
+		if (isset($this->request->post['config_hrefs'])) {
+			$data['config_hrefs'] = $this->request->post['config_hrefs'];
+		} else {
+			$data['config_hrefs'] = $this->config->get('config_hrefs');
+		}
+		if (isset($this->request->post['config_time1'])) {
+			$data['config_time1'] = $this->request->post['config_time1'];
+		} else {
+			$data['config_time1'] = $this->config->get('config_time1');
+		}
+		if (isset($this->request->post['config_time2'])) {
+			$data['config_time2'] = $this->request->post['config_time2'];
+		} else {
+			$data['config_time2'] = $this->config->get('config_time2');
+		}
+		if (isset($this->request->post['config_time3'])) {
+			$data['config_time3'] = $this->request->post['config_time3'];
+		} else {
+			$data['config_time3'] = $this->config->get('config_time3');
+		}
+		if (isset($this->request->post['config_time4'])) {
+			$data['config_time4'] = $this->request->post['config_time4'];
+		} else {
+			$data['config_time4'] = $this->config->get('config_time4');
+		}
+		if (isset($this->request->post['config_time5'])) {
+			$data['config_time5'] = $this->request->post['config_time5'];
+		} else {
+			$data['config_time5'] = $this->config->get('config_time5');
+		}
+		if (isset($this->request->post['config_month'])) {
+			$data['config_month'] = $this->request->post['config_month'];
+		} else {
+			$data['config_month'] = $this->config->get('config_month');
+		}
+
 		if (isset($this->request->post['config_serviceemail'])) {
 			$data['config_serviceemail'] = $this->request->post['config_serviceemail'];
 		} else {
