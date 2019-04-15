@@ -127,7 +127,7 @@
                   </select>
                 </div>
               </div>
-              <div class="form-group required">
+              <!-- <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-telephone">活动页面跳转1</label>
                 <div class="col-sm-10">
                   <input type="text" name="config_href" value="<?php echo $config_href; ?>" placeholder="" id="input-href" class="form-control" />
@@ -175,7 +175,7 @@
                 <div class="col-sm-10">
                   <input type="text" name="config_month" value="<?php echo $config_month; ?>" placeholder="" id="input-month" class="form-control" />
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="tab-pane" id="tab-store">
               <div class="form-group required">

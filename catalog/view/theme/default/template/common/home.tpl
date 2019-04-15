@@ -158,14 +158,14 @@
               <div class="map_text clearfix">
                 <dl class="dl_1">
                   <dt>SHOP ADDRESS:</dt>
-                  <dd>House number 1, 7A Justice g.b.a. coker estate, Obafemi awolowo 
-                    way, Ikeja Lagos, Nigeria</dd>
+                  <dd>House number 2, 7a Justice g.b.a Coker estate. Obafemi Awolowo way, alausa secretariat Ikeja Lagos, Nigeria</dd>
                 </dl>
                 <dl class="dl_2">
                   <dt>BUSINESS HOURS:</dt>
-                  <dd>MONDAY - SATURDAY : 9AM - 6PM  </dd>
-                  <dd>SUNDAY : 2PM - 6PM </dd>
-                  <dd>CONTACT : 09060008426</dd>
+                  <dd>MONDAY - FRIDAY : 9AM - 6PM</dd>
+                  <dd>SATURDAY: 9AM - 2PM</dd>
+                  <dd>CONTACT: 09060008426</dd>
+                  <dd>WHATSAPP: 08147034057</dd>
                 </dl>
               </div>
             </div>

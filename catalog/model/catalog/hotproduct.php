@@ -311,7 +311,7 @@ class ModelCatalogHotproduct extends Model {
 			'p.quantity',
 			'p.price',
 			'rating',
-			'p.sort_orders',
+			'p.sort_order',
 			'p.date_added'
 		);
 
@@ -319,15 +319,15 @@ class ModelCatalogHotproduct extends Model {
 			if ($data['sort'] == 'pd.name' || $data['sort'] == 'p.model') {
 				$sql .= " ORDER BY LCASE(" . $data['sort'] . ")";
 			} elseif ($data['sort'] == 'p.price') {
-				$sql .= " ORDER BY (CASE WHEN special IS NOT NULL THEN special WHEN discount IS NOT NULL THEN discount ELSE p.price END)";
+				$sql .= " ORDER BY (CASE WHEN special IS NOT NULL THEN special WHEN discount IS NOT NULL THEN discount ELSE p.sort_order END)";
 			} else {
 				$sql .= " ORDER BY " . $data['sort'];
 			}
 		} else {
-			$sql .= " ORDER BY p.sort_orders";
+			$sql .= " ORDER BY p.sort_order";
 		}
 
-		if (isset($data['order']) && ($data['order'] == 'DESC')) {
+		if (isset($data['order']) && ($data['order'] == 'ASC')) {
 			$sql .= " DESC, LCASE(pd.name) DESC";
 		} else {
 			$sql .= " ASC, LCASE(pd.name) ASC";
@@ -346,7 +346,7 @@ class ModelCatalogHotproduct extends Model {
 		}
 
 		$product_data = array();
-
+// print_r($sql);exit;
 		$query = $this->db->query($sql);
 
 		foreach ($query->rows as $result) {
