@@ -145,7 +145,7 @@ class ControllerCommonHome extends Controller {
                     'length'          => nl2br($result['length']),
                     'style'          => nl2br($result['style']),
                     // 'thumbs'          =>$result['thumbs'],
-                    'rating'        => (int)$result['rating'],
+                    'rating'        => (int)$result['rating']*20,
                     //'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added'])),
                     'date_added'    => date('m/d/Y', strtotime($result['date_added'])),
                     'rating_starts' => $this->ratingStarts($result['rating']),

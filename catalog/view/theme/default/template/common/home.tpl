@@ -99,7 +99,55 @@
               
             </div>
             </div> 
+
             <div class="intext2 clearfix">
+          <div class="text_bt">
+            <h1>COMMENTS</h1>
+            <p>CUSTOMER&nbsp;&nbsp;SHARE</p>
+            <a href="###">View More&nbsp;&nbsp;></a>
+          </div>
+          
+          <div class="in_review clearfix">
+            <ul class="in_ul3 clearfix">
+               <?php if(isset($allreviews)){?>
+                <?php foreach ($allreviews as $review) { ?>
+              <li class="clearfix">
+                <div class="text">
+                  <h2 class="ov_text"><?php echo $review['author']?></h2>
+                  <div class="start">
+                  <?php if($review['rating']>100) { ?>
+                  <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
+                  <?php }else{ ?>
+                  <i class="bg_hui"><i class="bg_red" style="width: <?php echo $review['rating']; ?>%"></i></i>
+                   <?php } ?>
+                    <!-- <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i> -->
+                    <!-- <span>14 Review(s)</span> -->
+                  </div>
+                  <p>
+                   <?php echo $review['text']?>
+                  </p>
+                  <?php if($review['images']){?>
+                   <ul class="clearfix">
+                      <?php foreach ($review['images'] as $k=> $review_images) { ?>
+                      <li><img class="lazyLoad" src="" srcs="<?php echo $review_images['min_img']?>"/></li>
+                     <?php } ?>
+                    </ul>
+                  <?php } ?>
+                <!--   <ul class="clearfix">
+                    <li><img class="lazyLoad" src="" srcs="img/in_ul5s.jpg"/></li>
+                    <li><img class="lazyLoad" src="" srcs="img/in_ul5s.jpg"/></li>
+                    <li><img class="lazyLoad" src="" srcs="img/in_ul5s.jpg"/></li>
+                  </ul> -->
+                  <a href="<?php echo $review['href']?>" onclick="event.stopPropagation()" class="a_btn">Shop Now<em>></em></a>
+                </div>
+              </li>
+               <?php  } ?>
+               <?php  } ?>
+            </ul>
+            
+          </div>
+        </div>
+<!--             <div class="intext2 clearfix">
               <div class="text_bt">
               <h1>COMMENTS</h1>
               <p>CUSTOMER&nbsp;&nbsp;SHARE</p>
@@ -144,7 +192,8 @@
                     </ul>
                 </div>
                 <?php  } ?>
-            </div>
+            </div> -->
+
 
             <div class="intext3 clearfix">
           <div class="content">
