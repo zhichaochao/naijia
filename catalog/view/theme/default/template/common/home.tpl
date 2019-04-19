@@ -104,7 +104,7 @@
           <div class="text_bt">
             <h1>COMMENTS</h1>
             <p>CUSTOMER&nbsp;&nbsp;SHARE</p>
-            <a href="###">View More&nbsp;&nbsp;></a>
+            <a href="<?php echo $homes?>">View More&nbsp;&nbsp;></a>
           </div>
           
           <div class="in_review clearfix">

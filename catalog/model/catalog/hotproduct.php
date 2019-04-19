@@ -311,7 +311,7 @@ class ModelCatalogHotproduct extends Model {
 			'p.quantity',
 			'p.price',
 			'rating',
-			'p.sort_order',
+			'p.sort_orders',
 			'p.date_added'
 		);
 
@@ -319,7 +319,7 @@ class ModelCatalogHotproduct extends Model {
 			if ($data['sort'] == 'pd.name' || $data['sort'] == 'p.model') {
 				$sql .= " ORDER BY LCASE(" . $data['sort'] . ")";
 			} elseif ($data['sort'] == 'p.price') {
-				$sql .= " ORDER BY (CASE WHEN special IS NOT NULL THEN special WHEN discount IS NOT NULL THEN discount ELSE p.sort_order END)";
+				$sql .= " ORDER BY (CASE WHEN special IS NOT NULL THEN special WHEN discount IS NOT NULL THEN discount ELSE p.sort_orders END)";
 			} else {
 				$sql .= " ORDER BY " . $data['sort'];
 			}
