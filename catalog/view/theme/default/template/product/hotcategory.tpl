@@ -23,8 +23,8 @@
             <ul class="clearfix">
               <li><a href="<?php echo $sort_sort_rating?>">Best selling</a></li>
             <li><a href="<?php echo $sort_sort_add?>">Newest</a></li>
-            <li><a href="<?php echo $sort_sort_order?>">Lowest price</a></li>
-            <li><a href="<?php echo $sort_sort_order_d?>">Highest price</a></li>
+            <li><a href="<?php echo $sort_sort_order?>">Highest price</a></li>
+            <li><a href="<?php echo $sort_sort_order_d?>">Lowest price</a></li>
             </ul>
           </div>
         </div>

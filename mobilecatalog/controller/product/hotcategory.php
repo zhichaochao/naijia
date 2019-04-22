@@ -311,14 +311,14 @@ class ControllerProductHotcategory extends Controller {
 					'reviews'	  => $result['reviews'],
 					'specials'	  => $specials,
 					'sort_orders'	  => $sort_orders,
-					'percent'    => $percents,
+					'percent'    => 100-$percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-					'rating'      => $result['rating'],
+					'rating'      => $result['rating']*20,
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
 					'wishlist'	  =>$wishlist
 				);
@@ -838,14 +838,14 @@ class ControllerProductHotcategory extends Controller {
 					'max_name'	  => $result['name'],
 					'reviews'	  => $result['reviews'],
 					'specials'	  => $specials,
-					'percent'    => $percents,
+					'percent'    => 100-$percents,
 					'name'        => utf8_substr(strip_tags($result['name']),0,25).'...',
 					'description' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'price'       => $this->currency->format($result['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
-					'rating'      => $result['rating'],
+					'rating'      => $result['rating']*20,
 					'href'        => $this->url->link('product/product','product_id='.$result['product_id']),
 					'wishlist'	  =>$wishlist
 				);
