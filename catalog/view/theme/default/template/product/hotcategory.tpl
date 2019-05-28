@@ -32,9 +32,59 @@
       
       <div class="pro_text">
         <div class="content">
+        <ul class="pro_ul clearfix">
+              <?php if ($saleproducts) { ?>
+            <?php foreach ($saleproducts as $product) { ?>
+            <li>
+              <a href="<?php echo $product['href']; ?>">
+                <div class="pic_img">
+                  <img  class="top_img lazyLoad" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>"  class="top_img" />
+                   <?php if($product['sort_orders']==1){?>
+                  <?php if($product['specials']){?>
+                  <div class="bg_hui">
+
+                    <p class="djs_p" title="<?php echo $product['date_end']; ?>" >SALE ENDS 
+                      <span class="int_day">00</span>:
+                      <span class="int_hour">00</span>:
+                      <span class="int_minute">00</span>:
+                      <span class="int_second">00</span>
+                    </p>
+                  </div>
+                  <?php } ?>
+                  <?php } ?>
+                </div>
+                <div class="text clearfix">
+                  <h2><?php echo $product['name']; ?></h2>
+                  <ol class="start_ol">
+                   <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
+                      <li class="active"></li>
+                      <?php } ?>
+                      <?php } ?>
+                  </ol>
+                  <p class="pl_p"><?php echo $product['reviews']+20; ?> reviews</p>
+                <?php if(!empty($product['special'])) { ?>
+                     <span class="price"><?php echo $product['special']; ?>
+                     <em><?php echo $product['price']; ?></em></span>
+                  <?php }else{ ?>
+                     <span class="price"><?php echo $product['price']; ?></span>
+                  <?php } ?>
+                     <?php if(!empty($product['special'])) { ?>
+                  <span class="red_span">-<?php echo $product['percent']; ?>%</span> <?php } ?>
+                </div>
+                <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em> 
+              </a>
+              <!-- 收藏 --> 
+              <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"
+              onclick="wishlist('<?php echo $product['product_id']; ?>',this);"
+              ></div>
+            </li>
+            <?php } ?>
+            <?php } ?>
+        </ul>
           <ul class="pro_ul clearfix prolist">
-  
-        
             <?php foreach ($products as $product) { ?>
             <li>
               <a href="<?php echo $product['href']; ?>">
