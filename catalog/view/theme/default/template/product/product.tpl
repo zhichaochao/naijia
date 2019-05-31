@@ -83,7 +83,7 @@
                   </div>
               <?php }?> 
 
-              <div class="activity clearfix">
+              <div class="activity clearfix" style="border:none;">
                 <div class="img"> <img src="<?php echo $thumbs?>" alt=""></div>
                 <!-- <p>Happy Valentine's Day</p>
                 <button type="button">UP TO 50% OFF</button> -->
