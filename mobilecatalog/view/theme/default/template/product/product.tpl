@@ -62,8 +62,8 @@
                     <?php } ?>
               <?php }?> 
 
-              <div class="activity clearfix">
-                <div class="img"> <img src="<?php echo $thumbs?>" alt=""></div>
+              <div class="activity clearfix" style="border:none;">
+                <div class="img"><a href="<?php echo $thumbs_href?>"><img src="<?php echo $thumbs?>" alt=""></a> </div>
               </div> 
 
             </div>

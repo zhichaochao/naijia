@@ -294,6 +294,13 @@
                 </div>
               </div>
 
+              <div class="form-group ">
+                <label class="col-sm-2 control-label" for="input-telephone">产品详情活动链接</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_images_href" value="<?php echo $config_images_href; ?>" placeholder="" id="thumb-images_href" class="form-control" />
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-image">购物车礼物<?php echo $entry_image; ?></label>
                 <div class="col-sm-10"><a href="" id="thumb-gimages" data-toggle="image" class="img-gthumbnails"><img src="<?php echo $gthumbs; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>

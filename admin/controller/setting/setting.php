@@ -586,6 +586,11 @@ class ControllerSettingSetting extends Controller {
 			$data['config_serviceemail'] = $this->config->get('config_serviceemail');
 		}
 
+		if (isset($this->request->post['config_images_href'])) {
+			$data['config_images_href'] = $this->request->post['config_images_href'];
+		} else {
+			$data['config_images_href'] = $this->config->get('config_images_href');
+		}
 		if (isset($this->request->post['config_meta_promotion'])) {
 			$data['config_meta_promotion'] = $this->request->post['config_meta_promotion'];
 		} else {

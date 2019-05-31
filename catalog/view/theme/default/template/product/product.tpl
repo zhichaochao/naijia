@@ -84,7 +84,7 @@
               <?php }?> 
 
               <div class="activity clearfix" style="border:none;">
-                <div class="img"> <img src="<?php echo $thumbs?>" alt=""></div>
+                <div class="img"><a href="<?php echo $thumbs_href?>"><img src="<?php echo $thumbs?>" alt=""></a> </div>
                 <!-- <p>Happy Valentine's Day</p>
                 <button type="button">UP TO 50% OFF</button> -->
               </div> 

@@ -310,6 +310,7 @@ unset($this->session->data['cart_ids']);
         $data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 
             $data['thumbs'] = $this->model_tool_image->resize($this->config->get('config_images'), 420, 185);
+            $data['thumbs_href'] = $this->config->get('config_images_href');
             $this->load->model('catalog/review');
 
             $data['tab_description'] = $this->language->get('tab_description');
