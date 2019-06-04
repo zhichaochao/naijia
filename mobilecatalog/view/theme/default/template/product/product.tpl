@@ -423,10 +423,10 @@ window.onload=function(){
         $(this).parent().siblings(".bt_span").find("em").text($(this).find("span").text());
       }
     })
-    $(".pro_det_ul3>li>span").click(function(){
+    $(".pro_det_ul3>li>span , .pro_det_ul3>li>img").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");
-      $(this).parents("li").find(".slide>em").text($(this).text());
-      $(this).parent().siblings("input").val($(this).attr("value"));
+      $(this).parents("li").find(".slide>em").text($(this).parent().find("span").text());
+      $(this).parent().siblings("input").val($(this).parent().find("span").attr("value"));
       $(this).parent().parent().parent().parent().find('.ts_ps').removeClass('off');
       changeprice();
     })
