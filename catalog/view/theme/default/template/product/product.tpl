@@ -132,16 +132,24 @@
             
                   <li class="clearfix" style="position: relative;">
                     <span class="bt_span <?=$select['main']==0 ?'off':'';?>  slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
-                    <ul class="pro_det_ul3 slide_ul clearfix" style="display: none;">
+                    <ul class="pro_det_ul3 slide_ul clearfix  <?=$select['name']=='Curl Pattern' ?'pattern':'';?>" style="display: none;">
                         <?php $select_option_id=0;?>
                         <?php foreach ($select['selects'] as $k=> $option_value) { ?>
                         <?php if($option_value['main']){$select_option_id=$option_value['option_value_id'];} ?>
                         <?php if($option_value['remark']){?>
-                        <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remark']; ?>)</span></li>
+                        <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?>(<?php echo $option_value['remark']; ?>)</span>
+                           <?php if(!empty($option_value['image'])){?>
+                              <img src="<?php echo $servename?><?php echo $option_value['image']?>"/>
+                           <?php } ?>
+                        </li>
                         <?php }else{?>
-                        <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></span></li>
+                        <li class="<?=$option_value['main']?'active':'';?>"><span  value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></span>
+                          <?php if(!empty($option_value['image'])){?>
+                              <img src="<?php echo $servename?><?php echo $option_value['image']?>"/>
+                           <?php } ?>
+                        </li>
                         <?php } ?>
-                       
+
 
                         <?php } ?>
                            <input type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?=$select_option_id>0? $select_option_id:0; ?>" />

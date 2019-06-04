@@ -382,6 +382,12 @@ unset($this->session->data['cart_ids']);
             }
             // print_r(  $this->session->data['userurl']);exit;
              $data['login'] = $this->url->link('account/login');
+             if ($_SERVER['HTTPS']) {
+                $data['servename'] = 'https://'.$_SERVER['SERVER_NAME'].'/image/';
+              }else{ 
+
+                $data['servename'] = 'http://'.$_SERVER['SERVER_NAME'].'/image/';
+              }
 
             if (isset($this->request->post['email'])) {
                 $data['email'] = $this->request->post['email'];

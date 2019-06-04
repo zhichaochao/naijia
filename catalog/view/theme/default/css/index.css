@@ -499,8 +499,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pro_det .text_rf .pro_det_ul3 li:last-child{margin-bottom: 0;}
 	.pro_det .text_rf .pro_det_ul3 li span{font-size: 16px;color: #666;cursor: pointer;padding-left: 1px;}
 	.pro_det .text_rf .pro_det_ul3 li.active span,
-	.pro_det .text_rf .pro_det_ul3 li:hover span
-	{border-bottom: 1px solid #333;color: #333;}
+	.pro_det .text_rf .pro_det_ul3 li:hover span{border-bottom: 1px solid #333;color: #333;}
 	.pro_det .text_rf .size_p{position: absolute;top: 25px;right: 0;display: inline-block;font-size: 16px;line-height: 16px;border-bottom: 1px solid #333;cursor: pointer;}
 	.pro_det .text_rf .size_p:hover{color: #999;border-bottom: 1px solid #999;}
 	.pro_det .size_img{position: fixed;top: 0;left: 0;z-index: 99;height: 100%;width: 100%;background: rgba(0,0,0,.8);text-align: center;display: none;}
@@ -511,8 +510,12 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.pro_det .text_rf .pro_det_ul4 li{display: inline-block;float: left;margin:0 30px 25px 0px;}
 	.pro_det .text_rf .pro_det_ul4 li span{font-size: 16px;color: #666;cursor: pointer;padding-left: 1px;}
 	.pro_det .text_rf .pro_det_ul4 li.active span,
-	.pro_det .text_rf .pro_det_ul4 li:hover span
-	{border-bottom: 1px solid #333;color: #333;}
+	.pro_det .text_rf .pro_det_ul4 li:hover span{border-bottom: 1px solid #333;color: #333;}
+	.pro_det .text_rf .pattern li{display: inline-block;float: left;width: 33.3%;padding-left: 20px;margin:0 0 20px 0;}
+	.pro_det .text_rf .pattern li span{font-size: 16px;color: #666;cursor: pointer;padding-left: 1px;margin-bottom: 10px;display: inline-block;border-bottom: 1px solid transparent;
+	text-overflow: ellipsis;white-space: nowrap;overflow: hidden;width: 120px;}
+	
+	
 	.pro_det .text_rf .shop_btn{width: 100%;display: none;height: 40px;line-height: 40px;text-align: center;font-size: 16px;color: #dab25e;
 		background: #222;margin: 40px 0 10px 0;border: none;}
 	.pro_det .text_rf .shop_btn.active{display: block;}
