@@ -18,6 +18,7 @@ class ControllerAccountMessage extends Controller {
 		$this->getList();
 	}
 	protected function getList() {
+		
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')

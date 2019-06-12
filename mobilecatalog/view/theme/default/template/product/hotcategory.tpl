@@ -5,21 +5,76 @@
 <input type="hidden" name="sort" value='<?=$sort;?>' id='sort'/>
 <input type="hidden" name="order" value='<?=$order;?>' id='order'/>
 <input type="hidden" name="limit" value='<?=$limit;?>' id='limit'/>
+  <style>
+      .spinner.active{display: block;}
+  .spinner {position: absolute;top: 0.1rem;right: 0.2rem; background: #ff2054;width: 50px;height: 50px;color: #fff;font-size: 12px;display: none;text-align: center;
+      box-sizing: border-box;background-color: #ff00d8;-webkit-animation: swing 3.2s infinite ease-in-out;animation: swing 3.2s infinite ease-in-out;
+  }
+  .spinner i{transform: scale(.8);display: inline-block;position: absolute;bottom: 8px;}
+  .spinner i.lf{left: -2px;}
+  .spinner i.rf{right: -2px;} 
+  .spinner .p{position: absolute;top: 8px;text-align: center;display: block;width: 100%;}
+  /* 摇摆 */
+  @-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(0);}
+    40%{-webkit-transform:rotate(0);}
+      45%{-webkit-transform:rotate(15deg);}
+      50%{-webkit-transform:rotate(-10deg);}
+      55%{-webkit-transform:rotate(5deg);}
+      60%{-webkit-transform:rotate(-5deg);}
+      70%{-webkit-transform:rotate(0deg);}
+      100%{-webkit-transform:rotate(0);}
+  }
+  @-moz-keyframes swing{
+      0%{-webkit-transform:rotate(0);}
+    40%{-webkit-transform:rotate(0);}
+      45%{-webkit-transform:rotate(15deg);}
+      50%{-webkit-transform:rotate(-10deg);}
+      55%{-webkit-transform:rotate(5deg);}
+      60%{-webkit-transform:rotate(-5deg);}
+      70%{-webkit-transform:rotate(0deg);}
+      100%{-webkit-transform:rotate(0);}
+  }
+  @-ms-keyframes swing{
+      0%{-webkit-transform:rotate(0);}
+    40%{-webkit-transform:rotate(0);}
+      45%{-webkit-transform:rotate(15deg);}
+      50%{-webkit-transform:rotate(-10deg);}
+      55%{-webkit-transform:rotate(5deg);}
+      60%{-webkit-transform:rotate(-5deg);}
+      70%{-webkit-transform:rotate(0deg);}
+      100%{-webkit-transform:rotate(0);}
+  }
+  @keyframes swing{
+      0%{-webkit-transform:rotate(0);}
+    40%{-webkit-transform:rotate(0);}
+      45%{-webkit-transform:rotate(15deg);}
+      50%{-webkit-transform:rotate(-10deg);}
+      55%{-webkit-transform:rotate(5deg);}
+      60%{-webkit-transform:rotate(-5deg);}
+      70%{-webkit-transform:rotate(0deg);}
+      100%{-webkit-transform:rotate(0);}
+  }
+    </style>
   <!--内容-->
     <div class="in_content clearfix"></div>
     <div class="top_ban">
       <img src="<?php echo $ydimage1?>"/>
     </div>
     <div class="product clearfix">
-      <ul class="pro_list clearfix prolist">
 
-      <?php foreach ($products as $product) { ?>
+      <ul class="pro_list clearfix prolist">
+      <?php if(!empty($saleproducts)) { ?>
+     <?php foreach ($saleproducts as $product) { ?>
         <li class="clearfix">
           <div class="bg_fff clearfix">
             <div class="pic_img clearfix">
               <a href="<?php echo $product['href']; ?>">
                 <img class="lazyLoad change_img" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
-              </a><em class="red_em <?=$product['hotsort']==1 || $product['hot']==2 ?'active':'';?>">HOT<br />SALE</em>
+              </a>
+              <!-- <?php if(empty($product['special'])) { ?>
+              <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>
+              <?php } ?> -->
             </div>
             <div class="text clearfix">
               <a class="ov_text" href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
@@ -41,7 +96,66 @@
                       <?php } ?>
                       <?php } ?>
                      </ol> -->
-                <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>
+                    <?php if($product['rating']>100) { ?>
+                  <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
+                  <?php }else{ ?>
+                  <i class="bg_hui"><i class="bg_red" style="width: <?php echo $product['rating']; ?>%"></i></i>
+                   <?php } ?>
+                <span>(<?php echo $product['reviews']+20; ?>)</span>
+              </a>
+              <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
+            </div>
+            <?php if(!empty($product['special'])) { ?>
+            <div class="discount"><span class="sp_1">-<?php echo $product['percent']; ?>%</span><span class="sp_2">off</span></div>
+             <?php } ?>
+            <?php if(empty($product['special'])) { ?>
+             <em class="<?=$product['hot']==1 ?'active':'';?> spinner">
+              <p class="p">FREE</p>
+              <i class="lf">HAIR</i> 
+              <i class="rf">IRON</i>
+            </em>
+            <?php } ?>
+          </div>
+        </li>
+         <?php } ?>
+      <?php } ?>
+
+      <?php foreach ($products as $product) { ?>
+        <li class="clearfix">
+          <div class="bg_fff clearfix">
+            <div class="pic_img clearfix">
+              <a href="<?php echo $product['href']; ?>">
+                <img class="lazyLoad change_img" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
+              </a>
+              <?php if(empty($product['special'])) { ?>
+              <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>
+              <?php } ?>
+            </div>
+            <div class="text clearfix">
+              <a class="ov_text" href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a>
+              <div class="price_sp">
+              <?php if(!empty($product['special'])) { ?>
+                <span class="price_sp1"><?php echo $product['special']; ?></span>
+                <span class="price_sp2"><?php echo $product['price']; ?></span>
+                <?php }else{ ?>
+                <span class="price_sp1"><?php echo $product['price']; ?></span>
+                <?php } ?>
+              </div>
+              <a href="<?php echo $product['href']; ?>" class="start">
+                   <!-- <ol class="start_ol">
+                    <?php for ($i = 1; $i <= 5; $i++) { ?>
+                      <?php if ($product['rating'] < $i) { ?>
+                      <li class=""></li>
+                      <?php } else { ?>
+                      <li class="active"></li>
+                      <?php } ?>
+                      <?php } ?>
+                     </ol> -->
+                    <?php if($product['rating']>100) { ?>
+                  <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
+                  <?php }else{ ?>
+                  <i class="bg_hui"><i class="bg_red" style="width: <?php echo $product['rating']; ?>%"></i></i>
+                   <?php } ?>
                 <span>(<?php echo $product['reviews']+20; ?>)</span>
               </a>
               <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
@@ -161,34 +275,46 @@
               page++;
               $('#page').val(page);
                $.ajax({
-                          url: 'index.php?route=product/category/loadpage&page='+page+'&sort='+sort+'&category_id='+category_id+'&limit='+limit ,
+                          url: 'index.php?route=product/hotcategory/loadpage&page='+page+'&sort='+sort+'&category_id='+category_id+'&limit='+limit ,
                           dataType: 'json',
                           success: function(data) {
                             var result="";
                             console.log( data.products );
                             for (var i =0; i < data.products.length ; i++) {
                             var addwinst="wishlist('"+data.products[i].product_id+"'";
-                              result+='<li class="clearfix">'
-                              +'<div class="bg_fff clearfix">'
-                              +'<div class="pic_img clearfix">'
-                              +'<a href="'+data.products[i].href+'">'
-                              +'<img  class="azyLoad change_img" srcs="'+data.products[i].thumb+'" data-src="'+data.products[i].thumbs+'"  class="top_img" />'
-                              +' </a>'
-                                result+='</div>'
-                              + '<div class="text clearfix">'
-                              + '<a class="ov_text" href="'+data.products[i].href+'">'+data.products[i].name +'</a>' 
-                              + '<div class="price_sp">'
+                            result+='<li class="clearfix">'
+                             +'<div class="bg_fff clearfix">'
+                             +'<div class="pic_img clearfix">'
+                             +'<a href="'+data.products[i].href+'">'
+                             +'<img  class="azyLoad change_img" src="'+data.products[i].thumb+'" data-src="'+data.products[i].thumbs+'"  class="top_img" />'
+                             +' </a>'
+                              if(data.products[i].special=='') {
+                              if (data.products[i].hotsort==1) {
+                                    result+='<em class="red_em active">HOT<br />SALE</em>' 
+                                   }else{
+                                    result+='<em class="red_em ">HOT<br />SALE</em>' 
+                                   }
+                                  }
+                             result+='</div>'
+                             + '<div class="text clearfix">'
+                             + '<a class="ov_text" href="'+data.products[i].href+'">'+data.products[i].name +'</a>' 
+                             
+                             + '<div class="price_sp">'
                                if(data.products[i].special) { 
-                                result+= ' <span class="price_sp1">'+data.products[i].specia+'</span>'
+                              result+= ' <span class="price_sp1">'+data.products[i].special+'</span>'
                               + '<span class="price_sp2">'+data.products[i].price+'</span>'
-                                }else{ 
-                              result+= ' <span class="price_sp1">'+data.products[i].price+'</span>'
-                                   } 
+                              }else{ 
+                               result+= ' <span class="price_sp1">'+data.products[i].price+'</span>'
+                                } 
                               + ' </div>'
                               result+= '<a href="'+data.products[i].href+'" class="start">'
-                              + ' <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>'
-                              + ' <span>('+(data.products[i].reviews+20) +')</span>'
-                              + ' </a>'
+                                if(data.products[i].rating>100) {
+                               result+=' <i class="bg_hui"><i class="bg_red" style="width: 100%"></i></i>'
+                               }else{ 
+                               result+= ' <i class="bg_hui"><i class="bg_red" style="width: '+data.products[i].rating+'%"></i></i>'
+                                } 
+                               result+= ' <span>('+(data.products[i].reviews+20) +')</span>'
+                               + ' </a>'
                                // +'<ol class="start_ol">'
                                //    for ($i = 1; $i <= 5; $i++) { 
                                //       if (data.products[i].rating < $i) {
@@ -198,28 +324,25 @@
                                //       } 
                                //     } 
                                //  result+= '</ol>'
-                                   if(data.products[i].special) { 
-                                result+='<span class="red_span">-'+data.products[i].percent+'%</span>'
-                                  } 
+                                // if(data.products[i].special) { 
+                                // result+='<span class="red_span">-'+data.products[i].percent+'%</span>'
+                                // } 
                               result+='</div>'
-                              // if (data.products[i].hot==1) {
-                              //       result+='<em class="red_em active">HOT<br />SALE</em>' 
-                              //      }else{
-                              //       result+='<em class="red_em ">HOT<br />SALE</em>' 
-                              //      }
+
+                             
                               if (data.products[i].wishlist==1) {
-                                    result+='<div class="like add_class active" onclick="'+addwinst+',this);">'
-                                   }else{
-                                    result+='<div class="like add_class" onclick="'+addwinst+',this);" >';
-                              }
+                                result+='<div class="like add_class active" onclick="'+addwinst+',this);">'
+                                 }else{
+                                   result+='<div class="like add_class" onclick="'+addwinst+',this);" >';
+                               }
                             result+='</div>'
                              +'</div>'
                              if(data.products[i].special) { 
                               result+='<div class="discount"><span class="sp_1">-'+data.products[i].percent+'%</span><span class="sp_2">off</span></div>'
-                              } 
+                             } 
                               +'</div>'  
                               +'</li>';
-                            }
+                           }
                            $('.prolist').append(result);
                           }
                        })

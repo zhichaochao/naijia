@@ -342,7 +342,7 @@ class ControllerCheckoutCart extends Controller {
 					'code'=>$results['code'],
 					'cart_total'=>$results['total']<$cart_total?'0':'1',
 					'discountp'=>floatval($results['discount']),
-					'discount'=>$this->currency->format(floatval($results['discount']),$this->session->data['currency'])
+					'discount'=>$this->currency->formats(floatval($results['discount']),$this->session->data['currency'])
 					);
 
 				}
@@ -406,7 +406,7 @@ class ControllerCheckoutCart extends Controller {
 				$json[$total['code']] = array(
 					'title' => $total['title'],
 					'value'=> $total['value'],
-					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
+					'text'  => $this->currency->formats($total['value'], $this->session->data['currency'])
 				);
 			}
 
@@ -465,7 +465,7 @@ class ControllerCheckoutCart extends Controller {
 				$json[$total['code']] = array(
 					'title' => $total['title'],
 					'value'=> $total['value'],
-					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
+					'text'  => $this->currency->formats($total['value'], $this->session->data['currency'])
 				);
 			}
 // unset($this->session->data['coupon']);

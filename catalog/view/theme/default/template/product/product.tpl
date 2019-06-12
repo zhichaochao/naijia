@@ -855,13 +855,14 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
-                // tips('Successful shopping cart');
+              tips("Added Successfully","",1000)
                 // alert("成功加入购物车");
               $('#cart_count').html(json.total);
               $('.shop_ac').html(json.total);
               if(!$(".shop_a").hasClass("active")){
               $(".shop_a").addClass("active");
               $(".shop_a").siblings(".shop_btn").addClass("active");
+
             }
                 $(".cart_li").click();
 

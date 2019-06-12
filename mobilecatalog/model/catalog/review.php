@@ -260,7 +260,7 @@ class ModelCatalogReview extends Model {
 		
 	}
 	public function getCustomerUseCoupon() {
-		$query = $this->db->query("SELECT c.coupon_id,c.name,c.type,c.code,c.total,c.discount FROM " . DB_PREFIX . "coupon c where  c.coupon_id in ( SELECT coupon_id from " . DB_PREFIX . "customer_coupon cc WHERE cc.coupon_id not in (select coupon_id from " . DB_PREFIX . "coupon_history   where customer_id ='" . (int)$this->customer->getId(). "') ) AND c.date_end >= NOW() AND  c.status='1'");
+		$query = $this->db->query("SELECT c.coupon_id,c.name,c.type,c.code,c.total,c.discount FROM " . DB_PREFIX . "coupon c where  c.coupon_id in ( SELECT coupon_id from " . DB_PREFIX . "customer_coupon cc WHERE cc.coupon_id not in (select coupon_id from " . DB_PREFIX . "coupon_history   where customer_id ='" . (int)$this->customer->getId(). "')AND cc.customer_id ='" . (int)$this->customer->getId(). "' ) AND c.date_end >= NOW() AND  c.status='1'");
 		return $query->rows;	
 	}
 	public function getTotalCustomerCoupon() {

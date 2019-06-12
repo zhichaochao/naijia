@@ -4,7 +4,7 @@ class ControllerCommonCoupon extends Controller {
 
 	public function index() {
 		if (!$this->customer->isLogged()) {
-			$this->session->data['redirect'] = $this->url->link('account/address', '', true);
+			$this->session->data['redirect'] = $this->url->link('common/coupon', '', true);
 
 			$this->response->redirect($this->url->link('account/login', '', true));
 		}

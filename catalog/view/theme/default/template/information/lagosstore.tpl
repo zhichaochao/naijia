@@ -38,13 +38,13 @@
           </h2>
           <p class="p1">
             <span>SHOP ADDRESS:</span>
-           House number 1, 7A justice g.b.a. coker estate. Obafemi awolowo way, Ikeja Lagos, Nigeria
+           House number 2, 7a Justice g.b.a Coker estate. Obafemi Awolowo way, alausa secretariat Ikeja Lagos, Nigeria
              <!-- <br style="display: block;" /> 510000  China -->
           </p>
           <p class="p2">
             <span>BUSINESS HOURS:</span>
-             <br />MONDAY - SATURDAY ：9AM - 6PM
-             <br />SUNDAY            ：9AM - 6PM
+             <br />MONDAY - FRIDAY   ：9AM - 6PM
+             <br />SATURDAY          : 9AM - 2PM
           </p> 
           <p class="p2">
             <span>CONTACT:</span>

@@ -8,7 +8,7 @@
               <p>Total Points <span>-₦0K</span></p>
               <p>Total Shipping <span>₦0K</span></p> -->
               <?php if(isset($coupons)){ ?>
-              <p><i class="xl_i">Coupon:<em></em></i> <span></span></p>
+              <p><i class="xl_i active">Coupon:<em></em></i> <span></span></p>
               <ul class="xl_ul clearfix">
                 <?php foreach ($coupons as $coupon) { ?>
                 <!-- 选中加active -->
@@ -30,7 +30,7 @@
                <?php }?>       
             </div>
             
-            <p class="total_p clearfix">
+            <p class="total_p active clearfix">
                <!-- <?php if(isset($coupons)){ ?>
                 <i class="text_i">Coupon: <i>- ₦5K</i></i>
                <?php }?>  -->

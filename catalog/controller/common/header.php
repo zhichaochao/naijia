@@ -2,7 +2,9 @@
 class ControllerCommonHeader extends Controller {
 	public function index() {
 		// print_r($this->url->link('product/hotcategory'));exit();
-		// Analytics
+//print(DIR_APPLICATION);
+		
+// Analytics
 		$this->load->model('extension/extension');
 
 		$data['analytics'] = array();

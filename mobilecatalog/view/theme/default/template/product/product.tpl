@@ -724,6 +724,7 @@ window.onload=function(){
             data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
             success: function(json) {
               if (json.success) {
+                tips("Added Successfully","",1000)
               $('#cart_count').html(json.total);
               $('.shop_ac').html(json.total);
               if(!$(".shop_a").hasClass("active")){

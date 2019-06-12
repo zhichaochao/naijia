@@ -85,7 +85,11 @@
                         <span class="price_sp2">₦169K</span> -->
                       </div>
                       <a href="###" class="start">
-                        <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>
+                       <?php if($hot['rating']>100) { ?>
+                      <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
+                      <?php }else{ ?>
+                      <i class="bg_hui"><i class="bg_red" style="width: <?php echo $hot['rating']; ?>%"></i></i>
+                       <?php } ?>
                         <span><?=$hot['reviews'];?> Review(s)</span>
                       </a>
                       <div class="like add_class <?=$hot['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $hot['product_id']; ?>',this);"></div>
@@ -99,7 +103,6 @@
               
             </div>
             </div> 
-
             <div class="intext2 clearfix">
           <div class="text_bt">
             <h1>COMMENTS</h1>
@@ -147,53 +150,6 @@
             
           </div>
         </div>
-<!--             <div class="intext2 clearfix">
-              <div class="text_bt">
-              <h1>COMMENTS</h1>
-              <p>CUSTOMER&nbsp;&nbsp;SHARE</p>
-              <a href="<?php echo $homes?>">View More&nbsp;&nbsp;></a>
-            </div>
-            <?php if(isset($allreviews)){?>
-                <div class="content">
-                    <ul class="in_ul3 clearfix">
-                      <?php foreach ($allreviews as $review) { ?>
-                        <li class="clearfix">
-                            <div class="con clearfix">
-                                <a class="img_a" >
-                                    <img class="lazyLoad" src="" srcs="<?php echo $review['thumbs']?>"/>
-                                </a>
-                                <div class="text">
-                                    <h2><?php echo $review['author']?></h2>
-                                    <ol>
-                                        <?php for ($i = 1; $i <= 5; $i++) { ?>
-                                          <?php if ($review['rating'] < $i) { ?>
-                                              <li class=""></li>
-                                            <?php } else { ?>
-                                              <li class="active"></li>
-                                          <?php } ?>
-                                       <?php } ?>
-                                    </ol>
-                                    <h3><?php echo $review['style']?> </h3>
-                                    <p>
-                                        <?php echo $review['text']?>
-                                    </p>
-                                     <?php if($review['images']){?>
-                                      <ul class="clearfix">
-                                      <?php foreach ($review['images'] as $k=> $review_images) { ?>
-                                      <li><img class="lazyLoad" src="" srcs="<?php echo $review_images['min_img']?>"/></li>
-                                      <?php } ?>
-                                      </ul>
-                                      <?php } ?>
-                                    <a  class="a_btn" onclick="event.stopPropagation()" href="<?php echo $review['href']?>">Shop now<em>></em></a>
-                                </div>
-                            </div>
-                        </li>
-                        <?php  } ?>
-                    </ul>
-                </div>
-                <?php  } ?>
-            </div> -->
-
 
             <div class="intext3 clearfix">
           <div class="content">

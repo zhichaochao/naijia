@@ -32,9 +32,9 @@
       
       <div class="pro_text">
         <div class="content">
-        <ul class="pro_ul clearfix">
-              <?php if ($saleproducts) { ?>
-            <?php foreach ($saleproducts as $product) { ?>
+          <ul class="pro_ul clearfix prolist">
+            <?php if($saleproducts) { ?>
+         <?php foreach ($saleproducts as $product) { ?>
             <li>
               <a href="<?php echo $product['href']; ?>">
                 <div class="pic_img">
@@ -74,17 +74,21 @@
                      <?php if(!empty($product['special'])) { ?>
                   <span class="red_span">-<?php echo $product['percent']; ?>%</span> <?php } ?>
                 </div>
-                <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em> 
+                <!-- <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>  -->
+                 <em class="<?=$product['hot']==1 ?'active':'';?> spinner">
+                  <p class="p">FREE</p>
+                  <i class="lf">HAIR</i> 
+                  <i class="rf">IRON</i>
+                </em>
               </a>
               <!-- 收藏 --> 
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"
               onclick="wishlist('<?php echo $product['product_id']; ?>',this);"
               ></div>
             </li>
-            <?php } ?>
-            <?php } ?>
-        </ul>
-          <ul class="pro_ul clearfix prolist">
+          <?php } ?>
+          <?php } ?>
+        
             <?php foreach ($products as $product) { ?>
             <li>
               <a href="<?php echo $product['href']; ?>">

@@ -217,7 +217,7 @@ class ControllerProductHotcategory extends Controller {
 
 			$results = $this->model_catalog_hotproduct->getHotproducts($filter_data);
 			$saleresults = $this->model_catalog_hotproduct->getHotproductssale($filter_data);
-			 // print_r($saleresults);exit();
+			 // print_r($results);exit();
 
 			foreach ($results as $result) {
 				if ($result['image']) {
@@ -325,7 +325,6 @@ class ControllerProductHotcategory extends Controller {
 				);
 				//print_r(	$data['products'][0]['href']);exit();
 			}
-			// 
 			foreach ($saleresults as $result) {
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));

@@ -165,7 +165,7 @@
           </li>
         </ul>
         
-        <div class="total clearfix">
+        <div class="total active clearfix">
           <div class="right" id='total'>
             
           </div>
