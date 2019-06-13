@@ -947,6 +947,14 @@ class ControllerCatalogProduct extends Controller {
 			$data['hot'] = 0;
 		}
 
+		if (isset($this->request->post['bannerpro'])) {
+			$data['bannerpro'] = $this->request->post['bannerpro'];
+		} elseif (!empty($product_info)) {
+			$data['bannerpro'] = $product_info['bannerpro'];
+		} else {
+			$data['bannerpro'] = 0;
+		}
+
 		if (isset($this->request->post['price'])) {
 			$data['price'] = $this->request->post['price'];
 		} elseif (!empty($product_info)) {

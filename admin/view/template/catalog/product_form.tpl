@@ -230,6 +230,30 @@
                 </div>
               </div>
 
+                  <div class="form-group">
+                <label class="col-sm-2 control-label">设置在首页</label>
+                <div class="col-sm-10">
+                  <label class="radio-inline">
+                    <?php if ($bannerpro) { ?>
+                    <input type="radio" name="bannerpro" value="1" checked="checked" />
+                    <?php echo $text_yes; ?>
+                    <?php } else { ?>
+                    <input type="radio" name="bannerpro" value="1" />
+                    <?php echo $text_yes; ?>
+                    <?php } ?>
+                  </label>
+                  <label class="radio-inline">
+                    <?php if (!$bannerpro) { ?>
+                    <input type="radio" name="bannerpro" value="0" checked="checked" />
+                    <?php echo $text_no; ?>
+                    <?php } else { ?>
+                    <input type="radio" name="bannerpro" value="0" />
+                    <?php echo $text_no; ?>
+                    <?php } ?>
+                  </label>
+                </div>
+              </div>
+
               <!--是否包邮-->
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-free-postage">是否包邮</label>

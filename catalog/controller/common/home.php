@@ -39,7 +39,7 @@ class ControllerCommonHome extends Controller {
 	$this->load->model('catalog/product');
 		$sort = 'p.sort_order';
 			$filter_data = array(
-				'filter_category_id' => 67,
+				// 'filter_category_id' => 67,
 				'filter_sub_category' => true,       //dyl add
 				'filter_filter'      => array(),
 				'sort'               => $sort,
@@ -50,7 +50,8 @@ class ControllerCommonHome extends Controller {
 
 		
 
-			$results = $this->model_catalog_hotproduct->getHotproducts($filter_data);
+			$results = $this->model_catalog_product->getbannerproducts($filter_data);
+			// print_r($results);exit;
 			$hots=array();
 			foreach ($results as $key => $result) {
 			  $res = $this->model_catalog_product->getProductImages($result['product_id']); 
