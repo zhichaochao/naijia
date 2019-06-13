@@ -14,13 +14,6 @@
                  <?php }} ?>
                 </div>
                 <div class="slide clear clearfix">
-                <div class="total clearfix">
-                 <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
-                      <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-                 <?php }else{?>
-                       <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-                  <?php  }} ?>
-                  </div>
                   <ul class="check_ul clearfix">
                      <?php foreach ($products as $product) { ?>
                          <li class="clearfix">
@@ -39,6 +32,14 @@
                         </li>
                   <?php  } ?>
                   </ul>
+                <div class="total clearfix">
+                 <?php foreach ($totals as $key=> $total) { if($key=='total'){?>
+                      <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                 <?php }else{?>
+                       <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
+                  <?php  }} ?>
+                  </div>
+
                 </div>
                 <div class="shop_search">
                   <p>
