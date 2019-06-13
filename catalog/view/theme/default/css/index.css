@@ -1122,7 +1122,7 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	
 	/********address_con************/
 	.address_con{background: #f5f5f5;padding: 0.2rem 0.15rem 0.6rem 0.15rem;}
-	.address_con .add_con{max-width: 1200px;margin: auto;padding-right: 4.2rem;position: relative;min-height: 779px;}
+	.address_con .add_con{max-width: 1200px;margin: auto;padding-right: 4.2rem;position: relative;min-height: 910px;}
 	.address_con .bt_ul{width:100%;float: left;display: block;position: relative;z-index: 2;}
 	.address_con .bt_ul>li{line-height: 0.6rem;margin-bottom: 0.2rem;background: #fff;padding: 0 0.35rem;}
 	.address_con .bt_ul>li.active{padding-top: 0.2rem;}
