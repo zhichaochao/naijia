@@ -413,6 +413,9 @@ class ControllerCheckoutConfirm extends Controller {
 		} else {
 			$data['redirect'] = $redirect;
 		}
+		if(isset($this->session->data['coupon'])){
+				$data['coupon']=$this->session->data['coupon'];
+			}
 
 		$this->response->setOutput($this->load->view('checkout/confirm', $data));
 	}

@@ -85,6 +85,17 @@
                      <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
                  <?php  }} ?>
               </div>
+                <div class="shop_search">
+                 <p>
+                  If you have coupons, please fill them out. If not, 
+                  please pay.
+                </p>
+                <i class="new-checkout-bot-code" style="color: #f00;"></i>
+                <label for="">
+                <input type="text" id="coupon_code" name="coupon" value="<?php echo @$coupon; ?>" placeholder="coupon code"/>
+                <button  onclick="coupon_code(this)">CONFIRM</button>
+                </label>
+                </div>
             </div>
             <div class="a_btn">
              <?php echo $payment; ?>
@@ -139,6 +150,45 @@ location = '<?php echo $redirect; ?>';
                 $(".slide_h1").siblings(".slide").hide();
             }
         });
-        
+              //      输入框获取焦点显示按钮
+        $(".shop_search input").focus(function(){
+            $(".shop_search button").css("display","block");
+        })  
         });
+  function coupon_code(e) {
+    $.ajax({
+        url: 'index.php?route=extension/total/coupon/jcoupon',
+        type: 'post',
+        data: $('input#coupon_code'),
+        dataType: 'json',
+      
+        success: function(json) {
+       // console.log(json);
+
+            if (json['redirect']) {
+                location = json['redirect'];
+            } else if (json['error']) {
+                if (json['error']) {
+                    $('.new-checkout-bot-code').html( json['error']);
+                }
+               
+            } else {
+                get_total();
+            }
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
+}
+ function get_total() {
+       $.ajax({
+         url: 'index.php?route=checkout/confirm',
+         dataType: 'html',
+        success: function(html) {
+            console.log(html);
+            $('.confirm').html(html);
+        }
+    });
+ }
 </script>

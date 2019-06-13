@@ -53,7 +53,7 @@
                 <?php if(isset($special)){ ?>
                  <?php if($min_prices==$max_prices) {?><em id="money" class="em2"><?=$min_prices;?></em>  <?php }else{?> <em id="money" class="em2"><?=$min_prices;?> -<?=$max_prices;?></em>  <?php } ?>
                   <?php }else{ ?>
-                 <?php if($min_price==$max_price) {?><em id="money" class="em2"><?=$min_price?></em>  <?php }else{?>  <em id="money" class="em1"><?=$min_price?> -<?=$max_price?></em>  <?php } ?>
+                 <?php if($min_price==$max_price) {?><em id="money" class="em1"><?=$min_price?></em>  <?php }else{?>  <em id="money" class="em1"><?=$min_price?> -<?=$max_price?></em>  <?php } ?>
                    <?php } ?>
                   
                   </div> 

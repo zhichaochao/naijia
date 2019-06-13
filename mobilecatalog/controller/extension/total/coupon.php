@@ -54,4 +54,45 @@ class ControllerExtensionTotalCoupon extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+		public function jcoupon() {
+	    $this->load->language('extension/total/coupon');
+	
+	    $json = array();
+	
+	    $this->load->model('extension/total/coupon');
+	// print_r($this->request->post['coupons']);exit;
+	    if (isset($this->request->post['coupon'])) {
+	        $coupon = $this->request->post['coupon'];
+	    } else {
+	        $coupon = '';
+	    }
+	    
+	    if(isset($this->request->post['comment'])) 
+	        $this->session->data['comment'] = strip_tags($this->request->post['comment']);
+	
+	    $coupon_info = $this->model_extension_total_coupon->getCoupon($coupon);
+	    if (empty($this->request->post['coupon'])) {
+	        if(!empty($this->session->data['coupon'])){
+	            unset($this->session->data['coupon']);
+	            $this->session->data['success'] = $this->language->get('text_cancel_success');
+	        }else{
+    	        $json['error'] = $this->language->get('error_empty');
+    	        unset($this->session->data['coupon']);
+	        }
+	    } elseif ($coupon_info) {
+	        if(!empty($this->session->data['coupon']) && $this->session->data['coupon']==$coupon){
+	            unset($this->session->data['coupon']);
+	            $this->session->data['success'] = $this->language->get('text_cancel_success');
+	        }else{
+    	        $this->session->data['coupon'] = $this->request->post['coupon'];
+    	        $this->session->data['success'] = $this->language->get('text_success');
+	        }
+	    } else {
+	        //unset($this->session->data['coupon']);
+	        $json['error'] = $this->language->get('error_coupon');
+	    }
+	
+	    $this->response->addHeader('Content-Type: application/json');
+	    $this->response->setOutput(json_encode($json));
+	}
 }

@@ -73,13 +73,22 @@
 
                                 <p class="p2"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
                                       <?php }else{?>
-
-
                                 <p class="p1"><?=$total['title'];?>: <span><?=$total['text'];?></span></p>
-
+                                <p class="p1" id="jfyutcoupon"></p>
                                 <?php  }} ?>
                                    
                                 </div>
+                             <!--    <div class="shop_search">
+                                <p>
+                                    If you have coupons, please fill them out. If not, 
+                                    please pay.
+                                </p>
+                                <i id="new-checkout-bot-code" style="color: #f00;"></i>
+                                <label for="">
+                                    <input type="text" id="coupon_code" name="coupon" value="" placeholder="coupon code"/>
+                                    <button  onclick="coupon_code(this)">CONFIRM</button>
+                                </label>
+                                </div> -->
                             </div>
                             <!-- <div class="a_btn">
                                 <a onclick="pay();"  class="a_qd_btn">Continue to pay</a>
@@ -138,9 +147,54 @@
                 $(".slide_h1").siblings(".slide").hide();
             }
         });
-        
+        //      输入框获取焦点显示按钮
+        $(".shop_search input").focus(function(){
+            $(".shop_search button").css("display","block");
+        })
         
     })
+    function coupon_code(e) {
+    $.ajax({
+        url: 'index.php?route=extension/total/coupon/jcoupon',
+        type: 'post',
+        data: $('input#coupon_code'),
+        dataType: 'json',
+      
+        success: function(json) {
+       // console.log(json);
+
+            if (json['redirect']) {
+                location = json['redirect'];
+            } else if (json['error']) {
+                if (json['error']) {
+                    $('#new-checkout-bot-code').html( json['error']);
+                }
+               
+            } else {
+                get_total();
+            }
+        },
+        error: function(xhr, ajaxOptions, thrownError) {
+            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+        }
+    });
+}
+ function get_total() {
+       $.ajax({
+         url: 'index.php?route=/checkout/cart/couponuse',
+         dataType: 'json',
+        success: function(json) {
+            // console.log(json.coupon);
+            if(json.coupon){
+                $('#jfyutcoupon').html(json.coupon.title+':'+ '<span>'+json.coupon.text+'</span>');
+            $('.p2').html(json.total.title+':'+ '<span>'+json.total.text+'</span>');
+        }else{
+            $('#jfyutcoupon').html('');
+            $('.p2').html(json.total.title+':'+ '<span>'+json.total.text+'</span>');
+        }
+        }
+    });
+ }
 </script>
 
 
