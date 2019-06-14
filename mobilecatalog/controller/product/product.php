@@ -1468,7 +1468,8 @@ unset($this->session->data['cart_ids']);
         //     $price_c= $this->currency->format($price['price'], $this->session->data['currency']);
         // }
         if($ma==1){
-            $price=$data+10000;
+            $price_w=$this->config->get('config_activity_price');
+            $price=$data+$price_w;
             // 
             $price_s= $this->currency->format($price, $this->session->data['currency']);
             $json['price_s']=$price_s;

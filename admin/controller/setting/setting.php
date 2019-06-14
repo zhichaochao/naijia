@@ -509,6 +509,12 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$data['config_email'] = $this->config->get('config_email');
 		}
+
+		if (isset($this->request->post['config_activity_price'])) {
+			$data['config_activity_price'] = $this->request->post['config_activity_price'];
+		} else {
+			$data['config_activity_price'] = $this->config->get('config_activity_price');
+		}
 		if (isset($this->request->post['config_reward'])) {
 			$data['config_reward'] = $this->request->post['config_reward'];
 		} else {

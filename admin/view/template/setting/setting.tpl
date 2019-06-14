@@ -220,6 +220,15 @@
                   <?php } ?>
                 </div>
               </div>
+
+               <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-activity">活动减价</label>
+                <div class="col-sm-10">
+                  <input type="text" name="config_activity_price" value="<?php echo $config_activity_price; ?>" placeholder="" id="input-activity" class="form-control" />
+                  
+                </div>
+              </div>
+
               <div class="form-group required">
                 <label class="col-sm-2 control-label" for="input-reward"><?php echo $entry_reward; ?></label>
                 <div class="col-sm-10">
