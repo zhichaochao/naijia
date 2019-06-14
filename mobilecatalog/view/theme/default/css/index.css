@@ -521,6 +521,8 @@ display: inline-block;border-radius: 50%;background: #f92d96;text-align: center;
 .pro_det .text_rf .price{display: inline-block;float: left;} 
 .pro_det .text_rf em.em1{font-size: 0.32rem; color: #ff369d;display: inline-block;}
 .pro_det .text_rf em.em2{font-size: 0.28rem;display: inline-block;text-decoration: line-through;color: #999;}
+.pro_det .text_rf em.em1 span{font-size: 0.32rem; color: #ff369d;display: inline-block;}
+.pro_det .text_rf em.em2 span{font-size: 0.28rem; color: #999;display: inline-block;text-decoration: line-through;}
 .pro_det .get_cou{display: inline-block;float: right;width: 2.4rem;height: 0.45rem;
 color: #fff;text-align: center;background: #ff369d;}
 .pro_det .get_cou span{font-size: 0.24rem;display: inline-block;line-height: 0.45rem;position: relative;padding-right: 0.3rem;}
