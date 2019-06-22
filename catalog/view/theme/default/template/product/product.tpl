@@ -129,7 +129,7 @@
               <div id="form-product">
               <?php if ($selects) { ?>
                 <?php foreach ($selects as $select) { ?>  
-            
+             <?php if ($select['type'] == 'radio') { ?> 
                   <li class="clearfix" style="position: relative;">
                     <span class="bt_span <?=$select['main']==0 ?'off':'';?>  slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix  <?=$select['name']=='Curl Pattern' ?'pattern':'';?>" style="display: none;">
@@ -164,6 +164,18 @@
                   </div>
                   <!-- <?php } ?> -->
                   </li>
+             <?php }elseif ($select['type'] == 'select') { ?>
+             <li class="clearfix" style="position: relative;">
+                <span style="display: block;font-size: 18px;margin: 25px 0 0 0;  ">First Heard About Naijabeautyhair:<p class="ts_ps">Please select <?=$select['name']?></p></span>
+                <select id="seleoption" style="width: 60%;height: 40px;border: 1px solid #eee;line-height: 40px;margin:0 0 25px 0;padding: 0 10px;font-size: 14px;">
+                <option value="0">-- Please Select --</option>
+                <?php foreach ($select['selects'] as $k=> $option_value) { ?>
+                  <option value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></option>
+                    <?php } ?>
+                </select>
+                <input id="seleoptionid" type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?=$select_option_id>0? $select_option_id:0; ?>" />
+              </li>
+             <?php } ?>
              
                 <?php }} ?>
                 </div>
@@ -457,7 +469,12 @@ window.onload=function(){
         $(this).parent().siblings(".bt_span").find("em").text($(this).find("span").text());
       }
     })
-
+    $('#seleoption').change(function(){
+      $('#seleoption option:checked').val();
+      // console.log($('#seleoption option:checked').val())
+      $('#seleoptionid').val($('#seleoption option:checked').val());
+       changeprice();
+    })
 
 
 

@@ -289,9 +289,9 @@
        
 
             $('#collapse-payment-address').html(html);
-            if ( $('#address_id').val()>0) {
-                    save_address();
-            }
+            // if ( $('#address_id').val()>0) {
+            //         save_address();
+            // }
         
               
         },

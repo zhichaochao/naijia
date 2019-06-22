@@ -91,7 +91,7 @@
               <div id="form-product">
               <?php if ($selects) { ?>
                 <?php foreach ($selects as $select) { ?>  
-            
+            <?php if ($select['type'] == 'radio') { ?> 
                   <li class="clearfix" style="position: relative;">
                     <span class="bt_span <?=$select['main']==0 ?'off':'';?>  slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
                     <ul class="pro_det_ul3 slide_ul clearfix <?=$select['name']=='Curl Pattern' ?'pattern':'';?>" style="display: none;">
@@ -126,7 +126,18 @@
                   </div>
                   <!-- <?php } ?> -->
                   </li>
-             
+             <?php }elseif ($select['type'] == 'select') { ?>
+             <li class="clearfix">
+              <span style="display: block;height: 0.6rem;font-size: 0.26rem;margin: 0.35rem 0 0 0;">First Heard About Naijabeautyhair:<p class="ts_ps">Please select <?=$select['name']?></p></span>
+              <select  id="seleoption" style="width: 60%;height: 0.6rem;border: 1px solid #eee;line-height: 0.6rem;margin:0 0 0.35rem 0;padding: 0 0.2rem;font-size: 0.22rem;">
+                <option value="0">-- Please Select --</option>
+                 <?php foreach ($select['selects'] as $k=> $option_value) { ?>
+                <option value="<?php echo $option_value['option_value_id']; ?>"><?php echo $option_value['name']; ?></option>
+                 <?php } ?>
+              </select>
+              <input id="seleoptionid" type="hidden" name="option[<?php echo $select['option_id']; ?>]" value="<?=$select_option_id>0? $select_option_id:0; ?>" />
+            </li>
+             <?php } ?>
                 <?php }} ?>
                 </div>
                <?php if(isset($hot)&& $hot==3){ ?>
@@ -422,6 +433,13 @@ window.onload=function(){
         
         $(this).parent().siblings(".bt_span").find("em").text($(this).find("span").text());
       }
+    })
+    
+        $('#seleoption').change(function(){
+      $('#seleoption option:checked').val();
+      // console.log($('#seleoption option:checked').val())
+      $('#seleoptionid').val($('#seleoption option:checked').val());
+       changeprice();
     })
     $(".pro_det_ul3>li>span , .pro_det_ul3>li>img").click(function(){
       $(this).parents("li").addClass("active").siblings("li").removeClass("active");

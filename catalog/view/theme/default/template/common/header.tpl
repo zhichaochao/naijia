@@ -20,6 +20,9 @@
         })
       })
     </script>
+        <!-- Start of  Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=01dae825-e951-47d2-a05b-0d534955e3bf"> </script>
+<!-- End of  Zendesk Widget script -->
     <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>

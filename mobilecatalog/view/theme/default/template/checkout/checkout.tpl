@@ -140,6 +140,7 @@
  get_address_jump();
  function get_address_jump(address_id) {
     var address_id = arguments[0] ? arguments[0] : 0;//设置第一个参数的默认值为0
+    // console.log(address_id);
       $.ajax({
         url: 'index.php?route=checkout/payment_address',
         dataType: 'html',
@@ -147,7 +148,8 @@
         success: function(html) {
             $('#collapse-payment-address').html(html);
             if ( $('#address_id').val()>0) {
-                    save_address();
+                //butijiao
+                    // save_address();
             }
         },
         error: function(xhr, ajaxOptions, thrownError) {
