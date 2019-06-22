@@ -237,7 +237,7 @@
                 </div>
               </div>
               <div class="form-group required">
-                <label class="col-sm-2 control-label" for="input-reward_limit"><?php echo $entry_reward_limit; ?></label>
+                <label class="col-sm-2 control-label" for="input-reward_limit">积分使用限制</label>
                 <div class="col-sm-10">
                   <input type="text" name="config_reward_limit" value="<?php echo $config_reward_limit; ?>" placeholder="<?php echo $entry_reward_limit; ?>" id="input-reward0limit" class="form-control" />
               

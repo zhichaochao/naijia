@@ -4,7 +4,7 @@ class ModelExtensionTotalReward extends Model {
 
 			$this->load->model('account/reward');
 	 		$reward=$this->model_account_reward->getTotalPoints();
-	 		$this->session->data['reward']=$reward>$this->config->get('config_reward_limit')?$this->config->get('config_reward_limit'):$reward;
+	 		$this->session->data['reward']=$reward>$this->config->get('config_reward_limit')?$reward:$this->config->get('config_reward_limit');
 
 		if (isset($this->session->data['reward'])) {
 			$this->load->language('extension/total/reward');
