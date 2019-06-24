@@ -166,7 +166,7 @@
                   </li>
              <?php }elseif ($select['type'] == 'select') { ?>
              <li class="clearfix" style="position: relative;">
-                <span style="display: block;font-size: 18px;margin: 25px 0 0 0;  ">First Heard About Naijabeautyhair:<p class="ts_ps">Please select <?=$select['name']?></p></span>
+                <span style="display: block;font-size: 16px;margin: 25px 0 20px 0;  ">First Heard About Naijabeautyhair:<p class="ts_ps">Please select <?=$select['name']?></p></span>
                 <select id="seleoption" style="width: 60%;height: 40px;border: 1px solid #eee;line-height: 40px;margin:0 0 25px 0;padding: 0 10px;font-size: 14px;">
                 <option value="0">-- Please Select --</option>
                 <?php foreach ($select['selects'] as $k=> $option_value) { ?>
