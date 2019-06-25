@@ -76,10 +76,22 @@
             
             <ul class="nav_ul">
               <li <?=strpos($class,'home') !==false?'class="active"':'';?>><a href="<?=$home;?>">Home</a></li>
+
+          <?php foreach($categorieson as $key => $category) { ?>
               <li <?=strpos($class,'hotcategory') !==false?'class="active"':'';?>>
                 <div class="hot"><img src="/catalog/view/theme/default/img/hot.gif"/></div>
                 <a href="<?php echo $hothref;?>">Hot Sales</a>
+                <?php if( $category['children']){ ?>
+                      <div style="position: absolute;min-width: 600px;left: 0;">
+                      <ol class="nav_ol">
+                         <?php foreach($category['children'] as $k => $child) { ?>
+                        <li><a href="<?=$child['href'];?>"><?=$child['name'];?></a></li>
+                        <?php } ?>
+                      </ol>
+                    </div>
+                      <?php } ?>
               </li>
+                 <?php } ?>
               <?php foreach($categories as $key => $category) { ?>
               <li <?=strpos($class,'category-'.$category['category_id']) !==false?'class="active"':'';?>>
                       <a  <?php if(!$category['children']){ ?>href="<?php echo $category['href'];?>"   <?php } ?>><?php echo $category['name'];?></a>
