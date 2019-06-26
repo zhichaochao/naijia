@@ -407,8 +407,8 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.in_coupon>ul>li p.p1 span{font-size: 0.36rem;line-height: 0.5rem;display: inline-block;float: left;margin-right: 0.05rem;position: relative;top: 0.05rem;}
 	.in_coupon>ul>li p.p1 i{font-size: 0.28rem;line-height: 0.5rem;display: inline-block;float: left;position: relative;top: 0.1rem;}
 	.in_coupon>ul>li p.p2{font-size: 0.24rem;font-family: open; line-height: 0.24rem;display:block;padding-top: 0.1rem;}
-	.in_coupon>ul>li .text button{width: 1.6rem;height: 0.4rem;border: 1px solid #bd8a40;box-sizing: border-box;background: transparent;color: #bd8a40;
-	font-size: 0.2rem;line-height: 0.4rem;position: absolute;bottom: 0.25rem;left: 50%;margin-left: -0.8rem; }
+	.in_coupon>ul>li .text button{height: 0.4rem;border: 1px solid #bd8a40;box-sizing: border-box;background: transparent;color: #bd8a40;
+	font-size: 0.2rem;line-height: 0.4rem;position: relative;top: 0.2rem;padding: 0 0.2rem; }
 	@media only screen and (min-width: 921px) and (max-width: 1280px) {
 		.in_coupon{height: 3rem;}
 		.in_coupon .coupon_pic img{display: block;height: 3rem;width: 100%;}

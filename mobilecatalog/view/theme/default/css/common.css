@@ -1,4 +1,4 @@
-﻿@charset "utf-8";/* CSS Document*/
+@charset "utf-8";/* CSS Document*/
 *{margin: 0;padding: 0;outline: none;}
 *:not(input,textarea){-webkit-touch-callout: none;-webkit-user-select: none;}
 body{background:#fff; width: 100%;max-width: 750px; margin: 0 auto;font:normal 12px 'open','Arial','Microsoft YaHei', '微软雅黑';color: #333;-webkit-touch-callout: inherit ;
@@ -131,8 +131,8 @@ background: url(../img/png/icon_13.png) no-repeat center/100% ;float: left;}
 .yd_nav_modal{width: 83%;height: 100%;background: #1f1f1f;position: fixed;top: 0;right: 100%;z-index: 98;padding-top: 1.1rem;overflow-y: auto;}
 .yd_nav_modal .top_nav{margin-bottom: 1.8rem;padding: 0 0.4rem;}
 .yd_nav_modal .top_nav ul>li{width: 100%;position: relative;border-bottom: 1px solid #666;}
-.yd_nav_modal .top_nav ul>li>a{line-height: 1.2rem;color: #fff;font-size: 0.3rem;display: block;}
-.yd_nav_modal .top_nav ul>li span{font-size: 0.3rem;}
+.yd_nav_modal .top_nav ul>li>a{line-height: 1.2rem;color: #fff;font-size: 0.24rem;display: block;}
+.yd_nav_modal .top_nav ul>li span{font-size: 0.24rem;}
 .yd_nav_modal .top_nav ul>li>a>span.hot{padding-right: 35px;background: url(../img/hot.gif) no-repeat right center/27px;}
 .yd_nav_modal .top_nav ul>li>a>i{display: block;width: 0.12rem;height: 0.2rem;position: absolute;right: 0; top: 50%;margin-top: -0.1rem;
 background: url(../img/png/icon_11.png) no-repeat right center/100%;}

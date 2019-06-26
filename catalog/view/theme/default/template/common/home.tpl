@@ -38,7 +38,7 @@
                       <p class="p1"><span>-</span><i></i><?=$coupons['discount'];?></p>
                      <?php } ?> 
                       <p class="p2"><?=$coupons['name'];?></p>
-                      <a href="<?php echo $coupon?>"><button type="button">CLICK&nbsp;&nbsp;> </button></a>
+                      <a href="<?php echo $coupon?>"><button type="button">Receive Coupon&nbsp;&nbsp;> </button></a>
                     </div>
                     <img src="catalog/view/theme/default/img/coupin_1.jpg" alt="" />         
                   </div>
