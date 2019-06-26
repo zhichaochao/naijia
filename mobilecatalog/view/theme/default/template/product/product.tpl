@@ -94,7 +94,7 @@
             <?php if ($select['type'] == 'radio') { ?> 
                   <li class="clearfix" style="position: relative;">
                     <span class="bt_span <?=$select['main']==0 ?'off':'';?>  slide active">Select <?=$select['name']?> : <em class="length_em"></em> <i></i><p class="ts_ps">Please select <?=$select['name']?></p></span> 
-                    <ul class="pro_det_ul3 slide_ul clearfix <?=$select['name']=='Curl Pattern' ?'pattern':'';?>" style="display: none;">
+                    <ul class="pro_det_ul3 slide_ul clearfix <?=$select['name']=='Curl Pattern' ?'pattern':'';?> <?=$select['name']=='Your Free Wig' ?'pattern':'';?>" style="display: none;">
                         <?php $select_option_id=0;?>
                         <?php foreach ($select['selects'] as $k=> $option_value) { ?>
                         <?php if($option_value['main']){$select_option_id=$option_value['option_value_id'];} ?>
@@ -128,7 +128,7 @@
                   </li>
              <?php }elseif ($select['type'] == 'select') { ?>
              <li class="clearfix">
-              <span style="display: block;height: 0.6rem;font-size: 0.26rem;margin: 0.35rem 0 0 0;">First Heard About Naijabeautyhair:<p class="ts_ps">Please select <?=$select['name']?></p></span>
+              <span style="display: block;height: 0.6rem;font-size: 0.26rem;margin: 0.35rem 0 0 0;"><?=$select['name']?>:<p class="ts_ps">Please select <?=$select['name']?></p></span>
               <select  id="seleoption" style="width: 60%;height: 0.6rem;border: 1px solid #eee;line-height: 0.6rem;margin:0 0 0.35rem 0;padding: 0 0.2rem;font-size: 0.22rem;">
                 <option value="0">-- Please Select --</option>
                  <?php foreach ($select['selects'] as $k=> $option_value) { ?>
