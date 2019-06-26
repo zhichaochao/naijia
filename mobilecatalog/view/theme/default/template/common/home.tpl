@@ -1,7 +1,7 @@
 <?php echo $header; ?>
 <!--banner-->
         <div class="in_content clearfix">
-            <div class="banner">
+            <div class="banner" style="position:relative;">
                 <div class="swiper-container" id="swiper1">
                     <div class="swiper-wrapper" style="cursor:-webkit-grab;">
                              <?php if($banners){ foreach ($banners as $banner) { ?>
