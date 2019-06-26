@@ -42,6 +42,7 @@
               <?php } ?>
             </div>
           </div>
+          <?php if (!isset($product_ids)) { ?>
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-product"><span data-toggle="tooltip" title="<?php echo $help_product; ?>"><?php echo $entry_product; ?></span></label>
             <div class="col-sm-10">
@@ -52,6 +53,9 @@
               <?php } ?>
             </div>
           </div>
+           <?php }else{ ?>
+            <input type="hidden" name="product_id" value="<?php echo $product_ids; ?>" />
+           <?php } ?>
           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-text"><?php echo $entry_text; ?></label>
             <div class="col-sm-10">

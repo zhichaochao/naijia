@@ -151,6 +151,8 @@
                     <a href="<?php echo $sort_status; ?>"><?php echo $column_status; ?></a>
                     <?php } ?></td>
                     <td class="text-center">包邮</td>
+
+                  <td class="text-right">添加评论</td>
                   <td class="text-right"><?php echo $column_action; ?></td>
                 </tr>
               </thead>
@@ -191,6 +193,7 @@
                       NO
                     <?php } ?>
                   </td>
+                  <td class="text-right"><a href="<?php echo $product['reviewadd']; ?>" data-toggle="tooltip" title="已有(<?php echo $product['reviews']; ?>)条评论" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                   <td class="text-right"><a href="<?php echo $product['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>
                 </tr>
                 <?php } ?>

@@ -64,7 +64,76 @@ class ControllerCatalogProduct extends Controller {
 
 		$this->getForm();
 	}
+	public function addreviews() {
+		$this->load->language('catalog/review');
 
+		$this->document->setTitle($this->language->get('heading_title'));
+
+		$this->load->model('catalog/review');
+
+		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForms()) {
+			$this->model_catalog_review->addReview($this->request->post);
+
+			$this->session->data['success'] = $this->language->get('text_success');
+
+			$url = '';
+
+			if (isset($this->request->get['filter_product'])) {
+				$url .= '&filter_product=' . urlencode(html_entity_decode($this->request->get['filter_product'], ENT_QUOTES, 'UTF-8'));
+			}
+
+			if (isset($this->request->get['filter_author'])) {
+				$url .= '&filter_author=' . urlencode(html_entity_decode($this->request->get['filter_author'], ENT_QUOTES, 'UTF-8'));
+			}
+
+			if (isset($this->request->get['filter_status'])) {
+				$url .= '&filter_status=' . $this->request->get['filter_status'];
+			}
+
+			if (isset($this->request->get['filter_date_added'])) {
+				$url .= '&filter_date_added=' . $this->request->get['filter_date_added'];
+			}
+
+			if (isset($this->request->get['sort'])) {
+				$url .= '&sort=' . $this->request->get['sort'];
+			}
+
+			if (isset($this->request->get['order'])) {
+				$url .= '&order=' . $this->request->get['order'];
+			}
+
+			if (isset($this->request->get['page'])) {
+				$url .= '&page=' . $this->request->get['page'];
+			}
+
+			$this->response->redirect($this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, true));
+		}
+
+		$this->getList();
+	}
+	protected function validateForms() {
+		if (!$this->user->hasPermission('modify', 'catalog/review')) {
+			$this->error['warning'] = $this->language->get('error_permission');
+		}
+
+		if (!$this->request->post['product_id']) {
+			$this->error['product'] = $this->language->get('error_product');
+		}
+
+		if ((utf8_strlen($this->request->post['author']) < 3) || (utf8_strlen($this->request->post['author']) > 64)) {
+			$this->error['author'] = $this->language->get('error_author');
+		}
+
+		if (utf8_strlen($this->request->post['text']) < 1) {
+			$this->error['text'] = $this->language->get('error_text');
+		}
+
+		if (!isset($this->request->post['rating']) || $this->request->post['rating'] < 0 || $this->request->post['rating'] > 5) {
+			$this->error['rating'] = $this->language->get('error_rating');
+		}
+
+		return !$this->error;
+	}
 	public function edit() {
 		$this->load->language('catalog/product');
 
@@ -401,7 +470,9 @@ class ControllerCatalogProduct extends Controller {
 				// 'percent'=$special/ $result['price']*
 				'quantity'   => $result['read_quantity'],
 				'free_postage' => $result['free_postage'],
+				'reviews' => $result['reviews']>0 ? $result['reviews']: 0,
 				'status'     => $result['status'] ? $this->language->get('text_enabled') : $this->language->get('text_disabled'),
+				'reviewadd'       => $this->url->link('catalog/review/add', 'token=' . $this->session->data['token'] . '&product_ids=' . $result['product_id'] . $url, true),
 				'edit'       => $this->url->link('catalog/product/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $result['product_id'] . $url, true)
 			);
 		}

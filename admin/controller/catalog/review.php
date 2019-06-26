@@ -499,12 +499,16 @@ class ControllerCatalogReview extends Controller {
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('catalog/review', 'token=' . $this->session->data['token'] . $url, true)
 		);
-
-		if (!isset($this->request->get['review_id'])) {
-			$data['action'] = $this->url->link('catalog/review/add', 'token=' . $this->session->data['token'] . $url, true);
-		} else {
-			$data['action'] = $this->url->link('catalog/review/edit', 'token=' . $this->session->data['token'] . '&review_id=' . $this->request->get['review_id'] . $url, true);
+		if (isset($this->request->get['product_ids'])) {
+			$data['action'] = $this->url->link('catalog/product/addreviews', 'token=' . $this->session->data['token'] . $url, true);
+		}else{
+			if (!isset($this->request->get['review_id'])) {
+				$data['action'] = $this->url->link('catalog/review/add', 'token=' . $this->session->data['token'] . $url, true);
+			} else {
+				$data['action'] = $this->url->link('catalog/review/edit', 'token=' . $this->session->data['token'] . '&review_id=' . $this->request->get['review_id'] . $url, true);
+			}
 		}
+		
 
 		$data['cancel'] = $this->url->link('catalog/review', 'token=' . $this->session->data['token'] . $url, true);
 
@@ -518,6 +522,10 @@ class ControllerCatalogReview extends Controller {
 		$data['token'] = $this->session->data['token'];
 
 		$this->load->model('catalog/product');
+
+		if (isset($this->request->get['product_ids'])) {
+			$data['product_ids'] = $this->request->get['product_ids'];
+		}
 
 		if (isset($this->request->post['product_id'])) {
 			$data['product_id'] = $this->request->post['product_id'];
