@@ -9,12 +9,13 @@
     <div class="in_content clearfix"></div>
     
     <div class="product clearfix">
+     <?php if(!empty($image1)) { ?>
       <div class="pro_ban">
         <div class="content">
           <img class="changeimage lazyLoad" data-image='<?php echo $image1?>' data-mimage='<?php echo $ydimage1?>'  />
         </div>
       </div>
-      
+       <?php } ?>
       <div class="content">
         <div class="top_f clearfix">
           <p><?php echo $product_total; ?> items found</p>
@@ -77,8 +78,8 @@
                 <!-- <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>  -->
                  <em class="<?=$product['hot']==1 ?'active':'';?> spinner">
                   <p class="p">FREE</p>
-                  <i class="lf">HAIR</i> 
-                  <i class="rf">IRON</i>
+                  <i class="lf">FLYAWAY</i>
+                  <i class="rf">TAMER</i>
                 </em>
               </a>
               <!-- 收藏 --> 

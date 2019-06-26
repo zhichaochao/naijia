@@ -102,11 +102,30 @@ class ControllerProductHotcategory extends Controller {
 // print_r($this->request->get['path']);exit;
 		$url = '';
 		if ($this->request->server['HTTPS']) {
-			$data['image1']=HTTPS_SERVER.'image/'.$category_info['image1'];
-			$data['ydimage1']=HTTPS_SERVER.'image/'.$category_info['ydimage1'];
+			if(!empty($category_info['image1'])){
+				$data['image1']=HTTPS_SERVER.'image/'.$category_info['image1'];	
+			}else{
+				$data['image1']="";
+			}
+			if(!empty($category_info['ydimage1'])){
+				$data['ydimage1']=HTTPS_SERVER.'image/'.$category_info['ydimage1'];	
+			}else{
+				$data['ydimage1']="";
+			}
 		}else{
-			$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
-			$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
+			if(!empty($category_info['image1'])){
+				$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];	
+			}else{
+				$data['image1']="";
+			}
+			if(!empty($category_info['ydimage1'])){
+				$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];	
+			}else{
+				$data['ydimage1']="";
+			}
+
+			// $data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
+			// $data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
 		}
 
 
@@ -713,8 +732,19 @@ class ControllerProductHotcategory extends Controller {
 		$category_info = $this->model_catalog_category->getCategory(67);
 // print_r($this->request->get['path']);exit;
 		$url = '';
-			$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
-			$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
+			// $data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];
+			// $data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];
+			
+			if(!empty($category_info['image1'])){
+				$data['image1']=HTTP_SERVER.'image/'.$category_info['image1'];	
+			}else{
+				$data['image1']="";
+			}
+			if(!empty($category_info['ydimage1'])){
+				$data['ydimage1']=HTTP_SERVER.'image/'.$category_info['ydimage1'];	
+			}else{
+				$data['ydimage1']="";
+			}
 
 		if ($category_info) {
 			$this->document->setTitle($category_info['meta_title']);
