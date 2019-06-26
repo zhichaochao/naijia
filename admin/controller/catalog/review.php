@@ -509,8 +509,12 @@ class ControllerCatalogReview extends Controller {
 			}
 		}
 		
-
-		$data['cancel'] = $this->url->link('catalog/review', 'token=' . $this->session->data['token'] . $url, true);
+	if (isset($this->request->get['product_ids'])) {
+			$data['cancel'] = $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, true);
+		}else{
+			$data['cancel'] = $this->url->link('catalog/review', 'token=' . $this->session->data['token'] . $url, true);
+		}
+		
 
 		$this->load->model('tool/image');
 		$data['placeholder'] = $this->model_tool_image->resize('no_image.png', 100, 100);
