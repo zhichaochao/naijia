@@ -78,8 +78,8 @@
                 <!-- <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>  -->
                  <em class="<?=$product['hot']==1 ?'active':'';?> spinner">
                   <p class="p">FREE</p>
-                  <i class="lf">FLYAWAY</i>
-                  <i class="rf">TAMER</i>
+                  <i class="lf">HAIR</i>
+                  <i class="rf">IRON</i>
                 </em>
               </a>
               <!-- 收藏 --> 
