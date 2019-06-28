@@ -43,10 +43,10 @@
               </ol>
             </div>
           <!--返回顶部-->
-          <a href="<?php echo $vip?>"><div class="xf_right">
+       <!--    <a href="<?php echo $vip?>"><div class="xf_right">
             <div class="vip"><span>VIP</span></div>
           </div>
-          </a>
+          </a> -->
   </body>
 </html>
 </footer>
