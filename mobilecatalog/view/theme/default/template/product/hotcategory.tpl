@@ -113,8 +113,9 @@
             <?php if(empty($product['special'])) { ?>
              <em class="<?=$product['hot']==1 ?'active':'';?> spinner">
               <p class="p">FREE</p>
-              <i class="lf">HAIR</i> 
-              <i class="rf">IRON</i>
+              <i>SHIPPING</i>
+              <!-- <i class="lf">HAIR</i> 
+              <i class="rf">IRON</i> -->
             </em>
             <?php } ?>
           </div>
@@ -130,7 +131,7 @@
                 <img class="lazyLoad change_img" srcs="<?php echo $product['thumb']; ?>" data-src="<?php echo $product['thumbs']; ?>" />
               </a>
               <?php if(empty($product['special'])) { ?>
-              <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>
+              <em class="red_em <?=$product['hot']==1 ?'active':'';?>"><p>FREE</p><br /><i>SHIPPING</i></em>
               <?php } ?>
             </div>
             <div class="text clearfix">

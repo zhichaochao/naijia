@@ -2,8 +2,8 @@
 	.spinner {position: absolute;top: 0;right: 20px; background: #ff2054;width: 50px;height: 50px;color: #fff;font-size: 12px;display: none;text-align: center;
 	    box-sizing: border-box;background-color: #ff00d8;-webkit-animation: swing 3.2s infinite ease-in-out;animation: swing 3.2s infinite ease-in-out;
 	}
-	.spinner i{transform: scale(.7);display: inline-block;position: absolute;bottom: 8px;}
-	.spinner i.lf{left: 0;}
+	.spinner i{transform: scale(.8);display: inline-block;position: absolute;bottom: 8px;left: -2px;}
+	.spinner i.lf{left: -2px;}
 	.spinner i.rf{right: 0;} 
 	.spinner .p{position: absolute;top: 8px;text-align: center;display: block;width: 100%;}
 	/* 摇摆 */
@@ -287,10 +287,11 @@ font-size: 16px;text-align: center;line-height: 50px;color: #333;}
 .product .pro_text .pro_ul>li .red_em{position: absolute;top: 0;right: 20px;background: #ff2054;width: 50px;height: 50px;
 color: #fff;font-size: 14px;display: none;text-align: center;padding-top: 9px;box-sizing: border-box;}
 .product .pro_text .pro_ul>li .red_em.active{display: block;}
-
+em.red_em i{font-size: 12px;transform: scale(.8);position: absolute;left: -2px;bottom: 6px;}
 em.red_em{position: absolute;top: 0;right: 20px;background: #ff2054;width: 50px;height: 50px;
 color: #fff;font-size: 14px;display: none;text-align: center;padding-top: 9px;box-sizing: border-box;}
 em.red_em.active{display: block;}
+
 
 .product .pro_text .bg_hui{height: 40px;background: rgba(0,0,0,.4);position: absolute;bottom: 0;left: 0;width: 100%;}
 .product .pro_text .bg_hui p{color: #fff;text-align: center;font-size: 1.04vw;line-height: 40px;height: 40px;}

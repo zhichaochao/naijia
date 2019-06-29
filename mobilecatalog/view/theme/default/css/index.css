@@ -224,7 +224,7 @@ em.red_em.active{display: block;}
 	.spinner {position: absolute;top: 0.1rem;right: 0.2rem; background: #ff2054;width: 0.5rem;height: 0.5rem;color: #fff;font-size: 0.12rem;display: none;text-align: center;
 	    box-sizing: border-box;background-color: #ff00d8;-webkit-animation: swing 3.2s infinite ease-in-out;animation: swing 3.2s infinite ease-in-out;
 	}
-	.spinner i{transform: scale(.7);display: inline-block;position: absolute;bottom: 8px;}
+	.spinner i{transform: scale(.8);display: inline-block;position: absolute;bottom: 8px;left: -2px;}
 	.spinner i.lf{left: 0;}
 	.spinner i.rf{right: 0;} 
 	.spinner .p{position: absolute;top: 8px;text-align: center;display: block;width: 100%;}
@@ -1075,6 +1075,7 @@ margin-top: 4rem;padding: 0.3rem 0.4rem;text-align: center;}
 .list_wish .pro_text .pro_ul>li .top_img:hover{animation:imgnew 2s, 150ms;}
 .list_wish .pro_text .pro_ul>li .red_em{position: absolute;top: 0;left: 0.2rem;background: #ff2054;width: 0.45rem;height: 0.45rem;
 color: #fff;font-size: 0.14rem;display: none;text-align: center;padding-top: 0.06rem;box-sizing: border-box;}
+em.red_em i{font-size: 12px;transform: scale(.8);position: absolute;left: -2px;bottom: 6px;}
 .list_wish .pro_text .pro_ul>li .red_em.active{display: block;}
 .list_wish .pro_text .bg_hui{height: 0.4rem;background: rgba(0,0,0,.4);position: absolute;bottom: 0;left: 0;width: 100%;}
 .list_wish .pro_text .bg_hui p{color: #fff;text-align: center;font-size: 0.18rem;line-height: 0.4rem;height: 0.4rem;}

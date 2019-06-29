@@ -34,7 +34,7 @@
                                <?php } ?>
                               
                             </div>
-                             <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
+                             <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>"><p>FREE</p><br /><i>SHIPPING</i></em> 
                           </a>
                       </div>
                     <?php } ?>

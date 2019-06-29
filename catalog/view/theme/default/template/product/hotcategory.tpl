@@ -78,8 +78,9 @@
                 <!-- <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em>  -->
                  <em class="<?=$product['hot']==1 ?'active':'';?> spinner">
                   <p class="p">FREE</p>
-                  <i class="lf">HAIR</i>
-                  <i class="rf">IRON</i>
+                  <i>SHIPPING</i>
+                  <!-- <i class="lf">HAIR</i>
+                  <i class="rf">IRON</i> -->
                 </em>
               </a>
               <!-- 收藏 --> 
@@ -130,7 +131,7 @@
                      <?php if(!empty($product['special'])) { ?>
                   <span class="red_span">-<?php echo $product['percent']; ?>%</span> <?php } ?>
                 </div>
-                <em class="red_em <?=$product['hot']==1 ?'active':'';?>">HOT<br />SALE</em> 
+                <em class="red_em <?=$product['hot']==1 ?'active':'';?>"><p>FREE</p><br /><i>SHIPPING</i></em> 
               </a>
               <!-- 收藏 --> 
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"

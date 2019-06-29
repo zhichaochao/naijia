@@ -72,7 +72,7 @@
                   </span> -->
                   <!-- <span class="red_span">-56%</span> -->
                 </div>
-                   <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
+                   <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">FREE<br />SHIPPING</em> 
               </a>
               <!-- 收藏 -->
               <div class="sc <?=$product['wishlist']==1 ?'active':'';?>"
