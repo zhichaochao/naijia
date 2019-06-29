@@ -375,8 +375,19 @@ unset($this->session->data['cart_ids']);
                 $this->session->data['redirect']='http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
             }
             
-            
+            $data['numberdeails']=""; 
          }else{
+            $this->load->model('account/customer');
+            $this->load->model('account/address');
+            $customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
+            if(empty($customer_info['telephone'])){
+                $results = $this->model_account_address->getAddresses(); 
+                foreach ($results as $result) {
+                   $data['numberdeails']= $result['phone'];
+                }  
+            }else{
+              $data['numberdeails'] = $customer_info['telephone'];  
+            }
 
                 $data['logins']=1;               
             }

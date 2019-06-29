@@ -229,13 +229,35 @@ class Cart {
 		return $product_data;
 	}
 
-	public function addsmark($product_id, $quantity = 1, $product_select_id = 0, $recurring_id = 0,$marking,$bynow) {
+	public function addsmark($product_id, $quantity = 1, $product_select_id = 0, $recurring_id = 0,$marking,$bynow,$numberdeails) {
 		unset($this->session->data['cart_ids']);
 		$query = $this->db->query("SELECT COUNT(*) AS total FROM " . DB_PREFIX . "cart WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "' AND `product_select_id` = '" .  (int)$product_select_id . "'AND `bynow` = '" .  (int)$bynow . "'AND `marking` = '" .  (int)$marking . "'");
 
 		if (!$query->row['total']) {
+			$querys = $this->db->query("SELECT customer_id,mobile FROM " . DB_PREFIX . "record WHERE customer_id = '" . (int)$this->customer->getId() . "' AND product_id = '" . (int)$product_id . "' AND `product_select_id` = '" .  (int)$product_select_id . "'");
+
+			if(empty($this->customer->getId())){
+
+				$a=$this->db->query("INSERT " . DB_PREFIX . "record SET  customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', mobile = '" . $numberdeails . "', date_added = NOW()");
+
+			}else{
+				if(empty($querys->row)){
+				$a=$this->db->query("INSERT " . DB_PREFIX . "record SET  customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', mobile = '" . $numberdeails . "', date_added = NOW()");
+				$queryd = $this->db->query("SELECT telephone FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int)$this->customer->getId() . "'");
+					if(empty($queryd->row['telephone'])){
+						$bas=$this->db->query("UPDATE " . DB_PREFIX . "customer SET telephone = '" .$numberdeails . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");	
+					}
+				// print_r($queryd);exit;
+				}else{
+					$a=$this->db->query("UPDATE " . DB_PREFIX . "record SET quantity = (quantity + " . (int)$quantity . ") WHERE customer_id = '" . (int)$this->customer->getId() . "' AND product_id = '" . (int)$product_id . "' AND `product_select_id` = '" .  (int)$product_select_id . "'");	
+				}
+			}
+
 			$this->db->query("INSERT " . DB_PREFIX . "cart SET api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "', customer_id = '" . (int)$this->customer->getId() . "', session_id = '" . $this->db->escape($this->session->getId()) . "', product_id = '" . (int)$product_id . "', recurring_id = '" . (int)$recurring_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', marking = '" . (int)$marking . "', bynow = '" . (int)$bynow . "', date_added = NOW()");
 		} else {
+
+			$a=$this->db->query("UPDATE " . DB_PREFIX . "record SET quantity = (quantity + " . (int)$quantity . ") WHERE customer_id = '" . (int)$this->customer->getId() . "' AND product_id = '" . (int)$product_id . "' AND `product_select_id` = '" .  (int)$product_select_id . "'");
+
 			$this->db->query("UPDATE " . DB_PREFIX . "cart SET quantity = (quantity + " . (int)$quantity . ") WHERE api_id = '" . (isset($this->session->data['api_id']) ? (int)$this->session->data['api_id'] : 0) . "' AND customer_id = '" . (int)$this->customer->getId() . "' AND session_id = '" . $this->db->escape($this->session->getId()) . "' AND product_id = '" . (int)$product_id . "' AND recurring_id = '" . (int)$recurring_id . "'  AND `product_select_id` = '" .  (int)$product_select_id . "'");
 		}
 		$cart_id = $this->db->getLastId();

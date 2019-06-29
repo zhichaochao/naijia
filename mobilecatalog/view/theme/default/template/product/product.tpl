@@ -127,7 +127,7 @@
                   <!-- <?php } ?> -->
                   </li>
              <?php }elseif ($select['type'] == 'select') { ?>
-             <li class="clearfix">
+             <li class="clearfix" style="position: relative;">
               <span style="display: block;height: 0.6rem;font-size: 0.26rem;margin: 0.35rem 0 0 0;"><?=$select['name']?>:<p class="ts_ps">Please select <?=$select['name']?></p></span>
               <select  id="seleoption" style="width: 60%;height: 0.6rem;border: 1px solid #eee;line-height: 0.6rem;margin:0 0 0.35rem 0;padding: 0 0.2rem;font-size: 0.22rem;">
                 <option value="0">-- Please Select --</option>
@@ -139,6 +139,10 @@
             </li>
              <?php } ?>
                 <?php }} ?>
+                 <li class="clearfix" style="position: relative;">
+                  <span style="display: block;height: 0.6rem;font-size: 0.26rem;margin: 0.35rem 0 0 0;">Mobile Phone Number:<p class="ts_ps">Please select Mobile Phone Number</p></span>
+                  <input type="text" name="numberdeails" value="<?php echo $numberdeails?>" style="width: 60%;height: 0.6rem;border: 1px solid #eee;line-height: 0.6rem;margin:0 0 0.35rem 0;padding: 0 0.2rem;font-size: 0.22rem;">
+                 </li>
                 </div>
                <?php if(isset($hot)&& $hot==3){ ?>
               <!--这个box只有在box的详情页才显示-->

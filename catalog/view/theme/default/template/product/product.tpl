@@ -178,6 +178,10 @@
              <?php } ?>
              
                 <?php }} ?>
+                <li class="clearfix" style="position: relative;">
+                  <span style="display: block;font-size: 16px;margin: 25px 0 20px 0;  ">Mobile Phone Number:<p class="ts_ps">Please select Mobile Phone Number</p></span>
+                  <input type="text" name="numberdeails" value="<?php echo $numberdeails?>" style="width: 60%;height: 40px;border: 1px solid #eee;line-height: 40px;margin:0 0 25px 0;padding: 0 10px;font-size: 14px;">
+                </li>
                 </div>
               <!--默认不选择-->
               <!-- <p class="size_p">Select Size Guide</p> -->
