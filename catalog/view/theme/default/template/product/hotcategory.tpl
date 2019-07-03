@@ -34,7 +34,7 @@
       <div class="pro_text">
         <div class="content">
           <ul class="pro_ul clearfix prolist">
-            <?php if($saleproducts) { ?>
+            <?php if(isset($saleproducts)) { ?>
          <?php foreach ($saleproducts as $product) { ?>
             <li>
               <a href="<?php echo $product['href']; ?>">

@@ -90,7 +90,7 @@
                       <?php }else{ ?>
                       <i class="bg_hui"><i class="bg_red" style="width: <?php echo $hot['rating']; ?>%"></i></i>
                        <?php } ?>
-                        <span><?=$hot['reviews'];?> Review(s)</span>
+                        <span><?=$hot['reviews']+20;?> Review(s)</span>
                       </a>
                       <div class="like add_class <?=$hot['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $hot['product_id']; ?>',this);"></div>
                     </div>
