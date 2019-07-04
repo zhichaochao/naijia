@@ -438,6 +438,7 @@ unset($this->session->data['cart_ids']);
             // print_r($product_info);exit();
             $results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
             foreach ($results as $result) {
+                if ($result['image']!=$product_info['image']) {
                 $data['images'][] = array(
                 
                     'thumb' => $this->model_tool_image->resize($result['image'], 540, 540),  //小图
@@ -446,6 +447,7 @@ unset($this->session->data['cart_ids']);
                   
                     'thumb2'=> $this->model_tool_image->resize($result['image'], 750, 750)
                 );
+            }
             }
 // print_r($data['images']);exit;
             
