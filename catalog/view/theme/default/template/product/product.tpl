@@ -331,7 +331,8 @@
                   <dl>
                     <dt>Shipping</dt>
                     <!-- <dd>Ready to ship in 1-3 Days</dd> -->
-                    <dd>From Lagos Ready to ship in 1-3 days .</dd>
+                    <dd><em style="font-weight:bold;">Within Lagos:</em> <em style="font-weight:bold;">1-2</em> working days via <em style="font-weight:bold;">GiG</em>.</dd>
+                    <dd><em style="font-weight:bold;">Outside Lagos:</em> <em style="font-weight:bold;">2-4</em> working days via <em style="font-weight:bold;">DHL</em>.</dd>
                   </dl>
                   <dl>
                     <dt>Return Policy</dt>
@@ -347,7 +348,7 @@
                       defective,
                     </dd>
                     
-                    <dd class="dd_s">I can't accept returns for:</dd>
+                    <!-- <dd class="dd_s">I can't accept returns for:</dd>
                     <dd>Custom or personalized orders</dd>
                     
                     <dd class="dd_s">Conditions of return</dd>
@@ -355,7 +356,7 @@
                       Buyers are responsible for return shipping costs. If the item is not 
                       returned in its original condition, the buyer is responsible for any loss 
                       in value.
-                    </dd>
+                    </dd> -->
                   </dl>
                 </div>
               </li>
