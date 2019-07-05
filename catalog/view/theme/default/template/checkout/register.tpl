@@ -36,17 +36,17 @@
               <!--label的class  true是输入正确的一种显示格式-->
                 <label class="clearfix " for="">
                   <span class="pl_span">Frist Name</span>
-                  <input type="text"  name="firstname"  placeholder="<?php echo $entry_firstname; ?>" id="input-payment-firstname" />
+                  <input class="in_1" type="text"  name="firstname"  placeholder="<?php echo $entry_firstname; ?>" id="input-payment-firstname" />
                   <p class="ts_ps">please enter your first name. </p>
                 </label>
                 <label class="clearfix" for="">
                   <span class="pl_span">Last Name</span>
-                  <input type="text"  name="lastname" value="" placeholder="<?php echo $entry_lastname; ?>" id="input-payment-lastname" />
+                  <input class="in_2" type="text"  name="lastname" value="" placeholder="<?php echo $entry_lastname; ?>" id="input-payment-lastname" />
                   <p class="ts_ps ">please enter your last name. </p>
                 </label>
                 <label class="clearfix" for="">
                   <span class="pl_span">Address</span>
-                  <input type="text"  name="address_1" value="" placeholder="<?php echo $entry_address_1; ?>" id="input-payment-address-1" />
+                  <input class="in_3" type="text"  name="address_1" value="" placeholder="<?php echo $entry_address_1; ?>" id="input-payment-address-1" />
                   <p class="ts_ps">please enter your address. </p>
                 </label>
                 <label class="clearfix" for="">
@@ -78,7 +78,7 @@
                 
                 <label class="w_50 fl clearfix" for="input-payment-city">
                   <span class="pl_span">City</span>
-                  <input type="text"  name="city" value="" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" />
+                  <input class="in_4" type="text"  name="city" value="" placeholder="<?php echo $entry_city; ?>" id="input-payment-city" />
                   <p class="ts_ps">please enter your city. </p>
                 </label>
                 
@@ -90,7 +90,7 @@
                 
                 <label class="clearfix clear" for="">
                   <span class="pl_span">Phone</span>
-                  <input type="text" name="phone" value="" placeholder="Phone" id="input-payment-phone" />
+                  <input class="in_5" type="text" name="phone" value="" placeholder="Phone" id="input-payment-phone" />
                   <p class="ts_ps">please enter your phone . </p>
                 </label>
                 
@@ -358,4 +358,80 @@ $('#collapse-payment-address select[name=\'country_id\']').trigger('change');
     
     
   })
+</script>
+<script type="text/javascript">
+
+  
+   $(function(){
+    $("input").focus(function(){
+      $(this).attr("placeholder","");
+      $(this).siblings(".pl_span").css("display","block");
+    })
+    $("input").blur(function(){
+      
+      $(this).attr("placeholder",$(this).siblings(".pl_span").text());
+      $(this).siblings(".pl_span").css("display","none");
+    })
+
+
+     $(".in_1").blur(function(){
+      if($(this).val()!="" && $(this).val().length<=32 && $(this).val().length>=3){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_2").blur(function(){
+      if($(this).val()!="" && $(this).val().length<=32 && $(this).val().length>=3){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_3").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=3){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_4").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=1){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_5").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=7){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+     $(".in_6").blur(function(){
+      var in_2val = $(".in_2").val();
+      if(($(this).val()!="") && ($(this).val().length<=128) && $(this).val().length>=2){
+         $(this).siblings(".ts_ps").removeClass("off"); 
+         $(this).parent().addClass("true");
+      }else{
+          $(this).parent().removeClass("true");
+          $(this).siblings(".ts_ps").addClass("off");
+      }
+     })
+
+   })
 </script>
