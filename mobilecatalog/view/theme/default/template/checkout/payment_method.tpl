@@ -16,7 +16,7 @@
                             <div class="store_address">
                                 <h1>Store Address</h1>
                                 <span>Lagos Store</br >
-                                   alausa.obafemi awolowo way. ikeja Lagos，Nigeria
+                                   House number 2, 7a Justice g.b.a Coker estate. Obafemi Awolowo way, alausa secretariat Ikeja Lagos, Nigeria
                                 </span>
                             </div>
                          

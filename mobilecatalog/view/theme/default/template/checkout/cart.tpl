@@ -155,7 +155,7 @@
           </li>
           <li class="clearfix <?=$shippingorpick=='shipping'?'':'active';?>">
             <p class="pick_1">Lagos Store</p>
-            <p class="pick_2">alausa.obafemi awolowo way. ikeja Lagos，Nigeria</p>
+            <p class="pick_2">House number 2, 7a Justice g.b.a Coker estate. Obafemi Awolowo way, alausa secretariat Ikeja Lagos, Nigeria</p>
           </li>
         </ul>
         

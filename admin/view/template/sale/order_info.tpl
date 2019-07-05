@@ -139,7 +139,7 @@
             <tr>
               <td class="text-left"><?php echo $payment_address; ?></td>
               <?php if($shippingorpick=='pick'){ ?>
-              <td class="text-left">alausa.obafemi awolowo way. ikeja Lagos，Nigeria </td>
+              <td class="text-left">House number 2, 7a Justice g.b.a Coker estate. Obafemi Awolowo way, alausa secretariat Ikeja Lagos, Nigeria</td>
               <?php }else{ ?>
                 <?php if ($shipping_method) { ?>
                 <td class="text-left"><?php echo $shipping_address; ?></td>
