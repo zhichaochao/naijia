@@ -97,7 +97,9 @@
           <input type="hidden" name="order_id" value="<?=$order_id?>" />
           <button class="sub_btn" type="submit">SUBMIT</button>
             </form>
-          <p class="p_ts2">*We will check and confirmed your payment as soon as you submit</p>
+          <p class="p_ts2">*Your order will be ship out within 24hours as long as you upload your payment alert.</p>
+         <p class="p_ts2">*The tracking number will be upload after 24 hours.</p>
+          <p class="p_ts2">*You will receive email or WhatsApp notification about your order status.</p>
         </div>
       </div>
     </div>
