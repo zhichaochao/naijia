@@ -82,7 +82,7 @@
                   <td class="text-left"><?php echo $inquiries['comment']; ?></td>
                   <td class="text-left"><?php echo $inquiries['submitTime']; ?></td>
                   <td class="text-left" onclick="click_jia(<?php echo $inquiries['id']; ?>)">
-                <?php if($inquiries['status']==1){ ?>  
+                <?php if($inquiries['status']==0){ ?>  
                       <h3><font color="red">×</font></h3>
                 <?php }else{?>  
                       <h3><font color="green">√</font></h3>
