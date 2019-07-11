@@ -469,4 +469,94 @@ class ModelSaleOrder extends Model {
 
 		return $query->row['email'];
 	}
+
+	public function getCustomerTell($data = array()) {
+	$sql = "SELECT *, COUNT(*) AS sumCount FROM `" . DB_PREFIX . "record` o";
+		if (!empty($data['mobile'])) {
+				$sql .= " WHERE o.mobile LIKE '%" .$data['mobile'] . "%'";
+			}
+		$sort_data = array(
+			'o.mobile',
+			'o.date_added'
+		);
+		$sql .= " GROUP BY mobile HAVING sumCount > 0";
+		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
+			$sql .= " ORDER BY " . $data['sort'];
+		} else {
+			$sql .= " ORDER BY o.date_added";
+		}
+
+		if (isset($data['order']) && ($data['order'] == 'DESC')) {
+			$sql .= " DESC";
+		} else {
+			$sql .= " ASC";
+		}
+
+		if (isset($data['start']) || isset($data['limit'])) {
+			if ($data['start'] < 0) {
+				$data['start'] = 0;
+			}
+
+			if ($data['limit'] < 1) {
+				$data['limit'] = 20;
+			}
+
+			$sql .= " LIMIT " . (int)$data['start'] . "," . (int)$data['limit'];
+		}
+		$query = $this->db->query($sql);
+
+		return $query->rows;
+
+		}
+
+	public function getTotalCustomerTell($data = array()) {
+		$sql = "SELECT *, COUNT(*) AS sumCount FROM `" . DB_PREFIX . "record` o";
+
+		if (!empty($data['mobile'])) {
+			$sql .= " WHERE mobile LIKE '%" .$data['mobile'] . "%'";
+		}
+
+		$sql .= " GROUP BY mobile HAVING sumCount > 0";
+		$sort_data = array(
+			'o.mobile',
+			'o.date_added'
+		);
+		
+		if (isset($data['sort']) && in_array($data['sort'], $sort_data)) {
+			$sql .= " ORDER BY " . $data['sort'];
+		} else {
+			$sql .= " ORDER BY o.date_added";
+		}
+
+		if (isset($data['order']) && ($data['order'] == 'DESC')) {
+			$sql .= " DESC";
+		} else {
+			$sql .= " ASC";
+		}
+
+		$query = $this->db->query($sql);
+
+		return $query->num_rows;
+	}
+	public function getmobile($mobile) {
+		$sql="SELECT * FROM `" . DB_PREFIX . "record` o WHERE mobile ='" .$mobile . "' order BY o.date_added DESC";
+			$query = $this->db->query($sql);
+			return $query->rows;
+		}
+	public function getmobileoption($product_select_id) {
+			$sql="SELECT psv.*,od.name as option_value_name, d.name as option_name FROM " . DB_PREFIX . "product_select_value psv LEFT JOIN " . DB_PREFIX . "option_value_description od on(od.option_id=psv.option_id AND od.option_value_id =psv.option_value_id AND od.language_id = '" . (int)$this->config->get('config_language_id') . "' ) LEFT JOIN " . DB_PREFIX . "option_description d on(d.option_id=psv.option_id AND d.language_id = '" . (int)$this->config->get('config_language_id') . "' )  WHERE product_select_id ='".(int)$product_select_id."'";
+			$query = $this->db->query($sql);
+			foreach ($query->rows as $option) {
+					$data['option_data'][] = array(
+					'option_name' => $option['option_name'],
+					'option_value_name'       => $option['option_value_name']
+				 	 );
+			  	}
+			return $data['option_data'];
+		}
+	public function getmobileoptionprice($product_select_id) {
+			$select_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_select WHERE product_select_id ='".$product_select_id."'");
+			$price=$select_query->row['price'];
+			return $price;
+		}
 }

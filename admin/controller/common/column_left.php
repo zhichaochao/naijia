@@ -382,7 +382,21 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()
 				);
 			}
-			
+
+			if ($this->user->hasPermission('access', 'sale/customertell')) {
+				$customer[] = array(
+					'name'	   => '客户手机号',
+					'href'     => $this->url->link('sale/customertell', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
+			if ($this->user->hasPermission('access', 'customer/subscribe')) {
+				$customer[] = array(
+					'name'	   => '客户订阅',
+					'href'     => $this->url->link('customer/subscribe', 'token=' . $this->session->data['token'], true),
+					'children' => array()
+				);
+			}
 			if ($customer) {
 				$data['menus'][] = array(
 					'id'       => 'menu-customer',
