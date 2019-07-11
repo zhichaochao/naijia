@@ -38,9 +38,10 @@
         <ul class="fot_ul2 clearfix">
           <li><img src="/catalog/view/theme/default/img/png/fot1.png"/></li>
           <li><img src="/catalog/view/theme/default/img/png/fot2.png"/></li>
-          <li><img src="/catalog/view/theme/default/img/png/fot3.png"/></li>
+          <li><img src="/catalog/view/theme/default/img/png/fot6.png"/></li>
+          <!-- <li><img src="/catalog/view/theme/default/img/png/fot3.png"/></li>
           <li><img src="/catalog/view/theme/default/img/png/fot4.png"/></li>
-          <li><img src="/catalog/view/theme/default/img/png/fot5.png"/></li>
+          <li><img src="/catalog/view/theme/default/img/png/fot5.png"/></li> -->
         </ul>
       </div>
       

@@ -310,11 +310,14 @@
                 <h2 class="slide_h2">Payment Method <em class="jian"></em></h2>
                 <div class="slide_text">
                   <ul class="pay_ul pay_img clearfix">
-                    <li><img src="catalog/view/theme/default/img/png/fot1_.png"/></li>
+                    <!-- <li><img src="catalog/view/theme/default/img/png/fot1_.png"/></li>
                     <li><img src="catalog/view/theme/default/img/png/fot2_.png"/></li>
                     <li><img src="catalog/view/theme/default/img/png/fot3_.png"/></li>
                     <li><img src="catalog/view/theme/default/img/png/fot4_.png"/></li>
-                    <li><img src="catalog/view/theme/default/img/png/fot5_.png"/></li>
+                    <li><img src="catalog/view/theme/default/img/png/fot5_.png"/></li> -->
+                    <li><img src="catalog/view/theme/default/img/png/fot6_.png"/></li>
+                    <li><img src="catalog/view/theme/default/img/png/fot7_.png"/></li>
+                    <li><img src="catalog/view/theme/default/img/png/fot8_.png"/></li>
                   </ul>
                 </div>
               </li>

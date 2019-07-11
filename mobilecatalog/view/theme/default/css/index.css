@@ -327,7 +327,7 @@ background-size: 0.12rem 0.2rem;}
 
 .in_ul3>li{width: 100%;float: left;display: block;margin-bottom: 0.2rem;}
 
-.in_ul3>li .text p{font-size: 16px;color: #666;line-height: 20px;max-height: 80px; text-align: justify;
+.in_ul3>li .text p{font-size: 16px;color: #666;line-height: 20px;max-height: 80px;height: 80px; text-align: justify;
 display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 4;overflow: hidden;}
 .in_ul3>li .text a.a_btn:hover{background: #f92d96;color: #fff;}
 
@@ -651,14 +651,19 @@ background-size: 0.28rem 0.28rem;}
 .pro_det .text_rf .slide_text dl dd.dd_s{color: #333;padding-top: 0.15rem;padding-bottom: 0.05rem;}
 .pro_det .text_rf .slide_text .details video{display: block;margin-bottom: 0.3rem;}
 .pro_det .text_rf .pay_ul{padding-bottom: 0;}
-.pro_det .text_rf .pay_ul>li{display: inline-block;float: left;line-height: 0.4rem;margin-right: 0.5rem;}
+.pro_det .text_rf .pay_ul>li{display: inline-block;float: left;line-height: 0.6rem;margin-right: 0.5rem;}
 .pro_det .text_rf .pay_ul>li:last-child{margin-right: 0;}
 .pro_det .text_rf .pay_ul>li img{display: inline-block;vertical-align: middle;}
-.pro_det .text_rf .pay_img>li:nth-child(1) img{width: 0.93rem;height: 0.24rem;}
+/* .pro_det .text_rf .pay_img>li:nth-child(1) img{width: 0.93rem;height: 0.24rem;}
 .pro_det .text_rf .pay_img>li:nth-child(2) img{width: 1.33rem;height: 0.26rem;}
 .pro_det .text_rf .pay_img>li:nth-child(3) img{width: 0.55rem;height: 0.18rem;}
 .pro_det .text_rf .pay_img>li:nth-child(4) img{width: 0.55rem;height: 0.41rem;}
-.pro_det .text_rf .pay_img>li:nth-child(5) img{width: 1.36rem;height: 0.45rem;}
+.pro_det .text_rf .pay_img>li:nth-child(5) img{width: 1.36rem;height: 0.45rem;} */
+.pro_det .text_rf .pay_img>li:nth-child(1) img{width: 1.63rem;height: 0.53rem;}
+.pro_det .text_rf .pay_img>li:nth-child(2) img{width: 1.56rem;height: 0.44rem;}
+.pro_det .text_rf .pay_img>li:nth-child(3) img{width: 2.56rem;height: 0.31rem;}
+
+
 .pro_det .text_rf .share_img>li:nth-child(1) img{width: 0.35rem;height: 0.35rem;}
 .pro_det .text_rf .share_img>li:nth-child(2) img{width: 0.31rem;height: 0.31rem;}
 .pro_det .text_rf .pay_ul>li a{display: block;}
