@@ -238,14 +238,14 @@ class Cart {
 
 			if(empty($this->customer->getId())){
 
-				$a=$this->db->query("INSERT " . DB_PREFIX . "record SET  customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', mobile = '" . $numberdeails . "', date_added = NOW()");
+				$a=$this->db->query("INSERT " . DB_PREFIX . "record SET  customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', mobile = '" .trim($numberdeails,'+') . "', date_added = NOW()");
 
 			}else{
 				if(empty($querys->row)){
-				$a=$this->db->query("INSERT " . DB_PREFIX . "record SET  customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', mobile = '" . $numberdeails . "', date_added = NOW()");
+				$a=$this->db->query("INSERT " . DB_PREFIX . "record SET  customer_id = '" . (int)$this->customer->getId() . "', product_id = '" . (int)$product_id . "', product_select_id = '" . (int)$product_select_id . "', quantity = '" . (int)$quantity . "', mobile = '" .trim($numberdeails,'+'). "', date_added = NOW()");
 				$queryd = $this->db->query("SELECT telephone FROM " . DB_PREFIX . "customer WHERE customer_id = '" . (int)$this->customer->getId() . "'");
 					if(empty($queryd->row['telephone'])){
-						$bas=$this->db->query("UPDATE " . DB_PREFIX . "customer SET telephone = '" .$numberdeails . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");	
+						$bas=$this->db->query("UPDATE " . DB_PREFIX . "customer SET telephone = '" .trim($numberdeails,'+') . "' WHERE customer_id = '" . (int)$this->customer->getId() . "'");	
 					}
 				// print_r($queryd);exit;
 				}else{
