@@ -1206,7 +1206,7 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 				$mail->setText($text);
 				// print_r($mail);exit();
 				if($order_info['email']){
-				 // $mail->send();
+				 $mail->send();
 				}
 	
 				// Admin Alert Mail
@@ -1358,7 +1358,7 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 				$mail->setSubject(html_entity_decode($subject, ENT_QUOTES, 'UTF-8'));
 				$mail->setText($message);
 					// print_r($mail);exit();
-				// $mail->send();
+				$mail->send();
 			}
 		}
 	}
