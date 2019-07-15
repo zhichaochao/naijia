@@ -809,7 +809,13 @@ class ModelCheckoutOrder extends Model {
 			}
 		}
 	}
-public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $notify = false, $override = false) {
+public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $notify = false, $override = false, $shippingNumber = '') {
+	// print_r($shippingNumber);exit;
+		if(!empty($shippingNumber)){
+			$shippingNumbers=substr($shippingNumber,1);
+		}else{
+			$shippingNumbers='';
+		}
 		$order_info = $this->getOrder($order_id);
 		
 		if ($order_info) {
@@ -885,7 +891,7 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 			}
 
 			// Update the DB with the new statuses
-			$this->db->query("UPDATE `" . DB_PREFIX . "order` SET order_status_id = '" . (int)$order_status_id . "', date_modified = NOW() WHERE order_id = '" . (int)$order_id . "'");
+			$this->db->query("UPDATE `" . DB_PREFIX . "order` SET order_status_id = '" . (int)$order_status_id . "', shippingNumber = '" . $shippingNumbers . "', date_modified = NOW() WHERE order_id = '" . (int)$order_id . "'");
 
 			$this->db->query("INSERT INTO " . DB_PREFIX . "order_history SET order_id = '" . (int)$order_id . "', order_status_id = '" . (int)$order_status_id . "', notify = '" . (int)$notify . "', comment = '" . $this->db->escape($comment) . "', date_added = NOW()");
 
@@ -1330,7 +1336,30 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 					$message .= $language->get('text_update_order_status') . "\n\n";
 					$message .= $order_status_query->row['name'] . "\n\n";
 				}
-	
+					//运单号
+				if ($order_status_id==5) {
+
+					if(!empty($shippingNumber)){
+						$sh=substr($shippingNumber,0,1);
+						$shippingNumbers=substr($shippingNumber,1);
+						if($sh=='D'){
+
+							$t_company=', please track it on www.dhl.com.';
+							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via DHL, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
+							$message .= 'Any question, feel free to contact us.'. "\n\n";
+							$message .= 'Best regards.'. "\n\n";
+							$message .= 'Naija Beauty Hair Team.'. "\n\n";
+						}else{
+
+							$t_company=', please track it on www.giglogistics.ng.';
+							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via GIG, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
+							$message .= 'Any question, feel free to contact us.'. "\n\n";
+							$message .= 'Best regards.'. "\n\n";
+							$message .= 'Naija Beauty Hair Team.'. "\n\n";
+						}
+					}
+				}
+
 				if ($order_info['customer_id']) {
 					$message .= $language->get('text_update_link') . "\n";
 					$message .= $order_info['store_url'] . 'index.php?route=account/order/info&order_id=' . $order_id . "\n\n";

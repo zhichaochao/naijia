@@ -164,6 +164,7 @@ class ModelSaleOrder extends Model {
 				'accept_language'         => $order_query->row['accept_language'],
 				'date_added'              => $order_query->row['date_added'],
 				'shippingorpick'              => $order_query->row['shippingorpick'],
+				'shippingNumber'              => $order_query->row['shippingNumber'],
 				'date_modified'           => $order_query->row['date_modified']
 			);
 		} else {

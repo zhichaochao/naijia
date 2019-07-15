@@ -242,6 +242,16 @@
                     </select>
                   </div>
                 </div>
+
+                <!--物流号-->
+                <?php if($order_status_id==5){ $style="display:block;"; }else{ $style="display:none;"; }?>                
+                <div class="form-group required" id="shippingNumber" style="<?php echo $style;?>">
+                  <label class="col-sm-2 control-label" for="input-shippingNumber">运单号<span style="color: red;">(*D||G  大写 不能用空格)</span></label>
+                  <div class="col-sm-10">
+                    <input type="text" id="shippingNumbervalue" name="shippingNumber" value="<?php echo $shippingNumber ; ?>" id="input-shippingNumber"/>
+                  </div>
+                </div>
+                <!--/物流号-->
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="input-override"><span data-toggle="tooltip" title="<?php echo $help_override; ?>"><?php echo $entry_override; ?></span></label>
                   <div class="col-sm-10">
@@ -650,7 +660,7 @@ $('#button-history').on('click', function() {
 		url: '<?php echo $catalog; ?>index.php?route=api/order/historys&token=' + token + '&store_id=<?php echo $store_id; ?>&order_id=<?php echo $order_id; ?>',
 		type: 'post',
 		dataType: 'json',
-		data: 'order_status_id=' + encodeURIComponent($('select[name=\'order_status_id\']').val()) + '&notify=' + ($('input[name=\'notify\']').prop('checked') ? 1 : 0) + '&override=' + ($('input[name=\'override\']').prop('checked') ? 1 : 0) + '&append=' + ($('input[name=\'append\']').prop('checked') ? 1 : 0) + '&comment=' + encodeURIComponent($('textarea[name=\'comment\']').val()),
+		data: 'order_status_id=' + encodeURIComponent($('select[name=\'order_status_id\']').val()) + '&notify=' + ($('input[name=\'notify\']').prop('checked') ? 1 : 0) + '&override=' + ($('input[name=\'override\']').prop('checked') ? 1 : 0) + '&append=' + ($('input[name=\'append\']').prop('checked') ? 1 : 0) + '&comment=' + encodeURIComponent($('textarea[name=\'comment\']').val())+ '&shippingNumber=' + encodeURIComponent($('#shippingNumbervalue').val()),
 		beforeSend: function() {
 			$('#button-history').button('loading');
 		},
@@ -691,7 +701,21 @@ function changeStatus(){
 		}
 	});
 }
-
+//dyl add
+$("#input-order-status").change(function(){ 
+  var order_status=$("#input-order-status").val();
+  if(order_status==5){
+     $("#shippingNumber").show();
+  }else{
+     $("#shippingNumber").hide();   
+    } 
+  if(order_status==7 || order_status==16){
+    $("#comment").addClass("required");
+  }else{
+    $("#comment").removeClass("required"); 
+  }
+});
+//dyl add,end
 function addOrderInfo(){
 	var status_id = $('select[name="order_status_id"]').val();
 

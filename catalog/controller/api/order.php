@@ -853,7 +853,8 @@ class ControllerApiOrder extends Controller {
 				'order_status_id',
 				'notify',
 				'override',
-				'comment'
+				'comment',
+				'shippingNumber'
 			);
 
 			foreach ($keys as $key) {
@@ -869,11 +870,16 @@ class ControllerApiOrder extends Controller {
 			} else {
 				$order_id = 0;
 			}
-
+			if (isset($this->request->post['shippingNumber'])) {
+				$shippingNumber = $this->request->post['shippingNumber'];
+			} else {
+				$shippingNumber = '';
+			}
+// print_r($this->request->post['shippingNumber']);exit;
 			$order_info = $this->model_checkout_order->getOrder($order_id);
 
 			if ($order_info) {
-				$this->model_checkout_order->addOrderHistoryss($order_id, $this->request->post['order_status_id'], $this->request->post['comment'], $this->request->post['notify'], $this->request->post['override']);
+				$this->model_checkout_order->addOrderHistoryss($order_id, $this->request->post['order_status_id'], $this->request->post['comment'], $this->request->post['notify'], $this->request->post['override'],$shippingNumber);
 
 				$json['success'] = $this->language->get('text_success');
 			} else {

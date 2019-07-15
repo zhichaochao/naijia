@@ -565,6 +565,7 @@ class ControllerSaleOrder extends Controller {
 			$data['shipping_custom_field'] = $order_info['shipping_custom_field'];
 			$data['shipping_method'] = $order_info['shipping_method'];
 			$data['shipping_code'] = $order_info['shipping_code'];
+			$data['shippingNumber'] = $order_info['shippingNumber'];
 
 			// Products
 			$data['order_products'] = array();
@@ -652,6 +653,7 @@ class ControllerSaleOrder extends Controller {
 			$data['shipping_custom_field'] = array();
 			$data['shipping_method'] = '';
 			$data['shipping_code'] = '';
+			$data['shippingNumber'] = '';
 
 			$data['order_products'] = array();
 			$data['order_vouchers'] = array();
@@ -1192,7 +1194,8 @@ class ControllerSaleOrder extends Controller {
 					}
 				}
 			}
-
+			// Shipping
+			$data['shippingNumber'] = $order_info['shippingNumber'];   //dyl add
 			// Custom fields
 			$data['payment_custom_fields'] = array();
 
