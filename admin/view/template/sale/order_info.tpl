@@ -246,7 +246,7 @@
                 <!--物流号-->
                 <?php if($order_status_id==5){ $style="display:block;"; }else{ $style="display:none;"; }?>                
                 <div class="form-group required" id="shippingNumber" style="<?php echo $style;?>">
-                  <label class="col-sm-2 control-label" for="input-shippingNumber">运单号<span style="color: red;">(*D||G  大写 不能用空格)</span></label>
+                  <label class="col-sm-2 control-label" for="input-shippingNumber">运单号<span style="color: red;">(*D||G开头 大写 不能用空格)</span></label>
                   <div class="col-sm-10">
                     <input type="text" id="shippingNumbervalue" name="shippingNumber" value="<?php echo $shippingNumber ; ?>" id="input-shippingNumber"/>
                   </div>

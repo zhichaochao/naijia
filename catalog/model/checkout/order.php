@@ -1346,16 +1346,10 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 
 							$t_company=', please track it on www.dhl.com.';
 							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via DHL, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
-							$message .= 'Any question, feel free to contact us.'. "\n\n";
-							$message .= 'Best regards.'. "\n\n";
-							$message .= 'Naija Beauty Hair Team.'. "\n\n";
 						}else{
 
 							$t_company=', please track it on www.giglogistics.ng.';
 							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via GIG, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
-							$message .= 'Any question, feel free to contact us.'. "\n\n";
-							$message .= 'Best regards.'. "\n\n";
-							$message .= 'Naija Beauty Hair Team.'. "\n\n";
 						}
 					}
 				}
@@ -1371,7 +1365,7 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 				}
 	
 				$message .= $language->get('text_update_footer');
-	
+				$message .= 'Naija Beauty Hair Team.'. "\n\n";
 				$mail = new Mail();
 				$mail->protocol = $this->config->get('config_mail_protocol');
 				$mail->parameter = $this->config->get('config_mail_parameter');
