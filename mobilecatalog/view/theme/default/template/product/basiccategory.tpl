@@ -35,13 +35,13 @@
                       <?php } ?>
                       <?php } ?>
                      </ol> -->
-                     <?php if($product['rating']>100) { ?>
+                   <!--   <?php if($product['rating']>100) { ?>
                   <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
                   <?php }else{ ?>
                   <i class="bg_hui"><i class="bg_red" style="width: <?php echo $product['rating']; ?>%"></i></i>
                    <?php } ?>
-                <!-- <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i> -->
-                <span>(<?php echo $product['reviews']+20; ?>)</span>
+                <!-- <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i> 
+                <span>(<?php echo $product['reviews']+20; ?>)</span> -->
               </a>
               <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
             </div>
@@ -81,12 +81,12 @@
                       <?php } ?>
                       <?php } ?>
                      </ol> -->
-                <?php if($product['rating']>100) { ?>
+               <!--  <?php if($product['rating']>100) { ?>
                   <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
                   <?php }else{ ?>
                   <i class="bg_hui"><i class="bg_red" style="width: <?php echo $product['rating']; ?>%"></i></i>
                    <?php } ?>
-                <span>(<?php echo $product['reviews']+20; ?>)</span>
+                <span>(<?php echo $product['reviews']+20; ?>)</span> -->
               </a>
               <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
             </div>
@@ -126,12 +126,12 @@
                       <?php } ?>
                       <?php } ?>
                      </ol> -->
-                <?php if($product['rating']>100) { ?>
+            <!--     <?php if($product['rating']>100) { ?>
                   <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
                   <?php }else{ ?>
                   <i class="bg_hui"><i class="bg_red" style="width: <?php echo $product['rating']; ?>%"></i></i>
                    <?php } ?>
-                <span>(<?php echo $product['reviews']+20; ?>)</span>
+                <span>(<?php echo $product['reviews']+20; ?>)</span> -->
               </a>
               <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
             </div>

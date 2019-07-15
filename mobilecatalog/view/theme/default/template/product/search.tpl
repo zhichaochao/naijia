@@ -54,12 +54,12 @@
                   <?php }?>
                 </div>
                 <a href="<?php echo $product['href']; ?>" class="start">
-                 <?php if($product['rating']>100) { ?>
+                 <!-- <?php if($product['rating']>100) { ?>
                   <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
                   <?php }else{ ?>
                   <i class="bg_hui"><i class="bg_red" style="width: <?php echo $product['rating']; ?>%"></i></i>
-                   <?php } ?>
-                  <span>(<?php echo $product['reviews']+20; ?>)</span>
+                   <?php } ?> -->
+                  <!-- <span>(<?php echo $product['reviews']+20; ?>)</span> -->
                 </a>
                 <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>"  onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
               </div>
@@ -218,12 +218,12 @@ $('select[name=\'category_id\']').trigger('change');
                                    } 
                               + ' </div>'
                               result+= '<a href="'+data.products[i].href+'" class="start">'
-                                if(data.products[i].rating>100) {
-                               result+=' <i class="bg_hui"><i class="bg_red" style="width: 100%"></i></i>'
-                               }else{ 
-                               result+= ' <i class="bg_hui"><i class="bg_red" style="width: '+data.products[i].rating+'%"></i></i>'
-                                } 
-                               result+= ' <span>('+(data.products[i].reviews+20) +')</span>'
+                               //  if(data.products[i].rating>100) {
+                               // result+=' <i class="bg_hui"><i class="bg_red" style="width: 100%"></i></i>'
+                               // }else{ 
+                               // result+= ' <i class="bg_hui"><i class="bg_red" style="width: '+data.products[i].rating+'%"></i></i>'
+                               //  } 
+                               // result+= ' <span>('+(data.products[i].reviews+20) +')</span>'
                               + ' </a>'
                                // +'<ol class="start_ol">'
                                //    for ($i = 1; $i <= 5; $i++) { 

@@ -53,7 +53,7 @@
                 </div>
                 <div class="text clearfix">
                   <h2><?php echo $product['name']; ?></h2>
-                  <ol class="start_ol">
+                 <!--  <ol class="start_ol">
                     <?php for ($i = 1; $i <= 5; $i++) { ?>
                       <?php if ($product['rating'] < $i) { ?>
                       <li class=""></li>
@@ -61,8 +61,8 @@
                       <li class="active"></li>
                       <?php } ?>
                       <?php } ?>
-                     </ol>
-                  <p class="pl_p"><?php echo $product['reviews']+20; ?> reviews</p>
+                     </ol> -->
+                  <!-- <p class="pl_p"><?php echo $product['reviews']+20; ?> reviews</p> -->
                 <?php if(!empty($product['special'])) { ?>
                      <span class="price"><?php echo $product['special']; ?>
                      <em><?php echo $product['price']; ?></em></span>
@@ -145,17 +145,17 @@
                             + '<div class="text clearfix">'
                                + '<h2>'+data.products[i].name
                              +' </h2>'
-                               +'<ol class="start_ol">'
-                                  for ($i = 1; $i <= 5; $i++) { 
-                                     if (data.products[i].rating < $i) {
-                                    result+= '<li class=""></li>'
-                                     } else { 
-                                    result+='<li class="active"></li>'
-                                     } 
-                                   } 
-                                result+= '</ol>'
-                               +'<p class="pl_p">'+(data.products[i].reviews+20) +'reviews'
-                              + '</p>'
+                               // +'<ol class="start_ol">'
+                               //    for ($i = 1; $i <= 5; $i++) { 
+                               //       if (data.products[i].rating < $i) {
+                               //      result+= '<li class=""></li>'
+                               //       } else { 
+                               //      result+='<li class="active"></li>'
+                               //       } 
+                               //     } 
+                               //  result+= '</ol>'
+                              //  +'<p class="pl_p">'+(data.products[i].reviews+20) +'reviews'
+                              // + '</p>'
 
                                if(data.products[i].special) { 
 

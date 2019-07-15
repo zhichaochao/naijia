@@ -84,14 +84,14 @@
                       <!--   <span class="price_sp1">₦69K</span>
                         <span class="price_sp2">₦169K</span> -->
                       </div>
-                      <a href="###" class="start">
+                    <!--   <a href="###" class="start">
                        <?php if($hot['rating']>100) { ?>
                       <i class="bg_hui"><i class="bg_red" style="width:100%"></i></i>
                       <?php }else{ ?>
                       <i class="bg_hui"><i class="bg_red" style="width: <?php echo $hot['rating']; ?>%"></i></i>
                        <?php } ?>
                         <span><?=$hot['reviews']+20;?> Review(s)</span>
-                      </a>
+                      </a> -->
                       <div class="like add_class <?=$hot['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $hot['product_id']; ?>',this);"></div>
                     </div>
                   </div>

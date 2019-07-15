@@ -302,11 +302,11 @@ em.red_em.active{display: block;}
 .product .pro_text .start_ol>li{width:17px;height:16px;display: block;float: left;background: url(../img/png/icon_8_.png) no-repeat;background-size: 100%;margin-right: 2px;}
 .product .pro_text .start_ol>li.active{background: url(../img/png/icon_8.png) no-repeat;background-size: 100%;}
 .product .pro_text .text .pl_p{display: inline-block;float: left;font-size: 0.16rem;color: #888;padding-left: 5px;}
-.product .pro_text .text .price{display: block;font-size: 20px;clear: both;margin-top: 20px;float: left;}
+.product .pro_text .text .price{display: block;font-size: 20px;clear: both;float: left;}
 .product .pro_text .text .price em{color: #aaa;font-size:16px;}
 .product .pro_text .text .red_span{color: #fff;font-size: 16px;display: block;width: 60px;height: 30px;line-height: 30px;text-align: center;
 position: absolute;right: 20px;bottom: 23px;background: #ff2054;}
-.product .pro_text .sc{position: absolute;bottom: 1rem;right: 0.2rem;width: 22px;height: 20px;display: block;
+.product .pro_text .sc{position: absolute;bottom: 0.65rem;right: 0.2rem;width: 22px;height: 20px;display: block;
 background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cursor: pointer;}
 .product .pro_text .sc.active{background: url(../img/png/icon_27_.png) no-repeat;background-size: 22px 20px;}
 @media only screen and (min-width: 921px) and (max-width: 1280px) {

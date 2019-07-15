@@ -18,7 +18,7 @@
             <div class="lb_4pic clearfix">
               <div class="swiper-container in_ul2 swiper1">
                   <div class="swiper-wrapper">
-                  
+                <?php if(isset($basicproducts1)){?>
                   <?php foreach ($basicproducts1 as $product) { ?>
                      <div class="swiper-slide clearfix">
                           <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
@@ -37,6 +37,7 @@
                              <em class="red_em <?=$product['hotsort']==1 ?'active':'';?>"><p>FREE</p><br /><i>SHIPPING</i></em> 
                           </a>
                       </div>
+                    <?php } ?>
                     <?php } ?>
                   </div> 
                   <div class="swiper-button-next"></div>
@@ -65,6 +66,7 @@
             <div class="top_lb clearfix">
               <div class="swiper-container swiper2">
                   <div class="swiper-wrapper">
+                   <?php if(isset($basicproducts1)){?>
                   <?php foreach ($basicproducts1 as $product) { ?>
                 <div class="swiper-slide clearfix">
                     <a class="in_ul2_a clearfix" href="<?php echo $product['href']; ?>">
@@ -81,7 +83,7 @@
                       </div>
                     </a>
                 </div>
-               <?php } ?>
+               <?php } }?>
                   </div>
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
@@ -95,6 +97,7 @@
                 <p>Natural & Glueless & Realistic Wig </p>
               </div>
               <ol class="wig_ol clearfix">
+              <?php if(isset($basicproducts2)){?>
             <?php foreach ($basicproducts2 as $product) { ?>
                 <li>
                   <a href="<?php echo $product['href']; ?>">
@@ -111,7 +114,7 @@
                          
                   </a><em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 
                 </li>
-                     <?php } ?>
+                     <?php } }?>
               </ol>
             </li>
             <li class="clearfix">
@@ -121,6 +124,7 @@
               </div>
               
               <ol class="wig_ol clearfix">
+              <?php if(isset($basicproducts3)){?>
                   <?php foreach ($basicproducts3 as $product) { ?>
                 <li>
                   <a href="<?php echo $product['href']; ?>">
@@ -133,7 +137,7 @@
 
                        <?php }else{ ?>
                        <span><?php echo $product['price']; ?></span>
-                        <?php } ?>
+                        <?php }} ?>
                     </div>
                     
                   </a><em class="red_em <?=$product['hotsort']==1 ?'active':'';?>">HOT<br />SALE</em> 

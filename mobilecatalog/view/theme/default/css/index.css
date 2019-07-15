@@ -21,7 +21,7 @@
 .pro_list .pic_img{padding:0.1rem 0.1rem 0 0.1rem;}
 .pro_list .pic_img a{display: block;}
 .pro_list .pic_img a img{display: block;}
-.pro_list .text{padding: 0 15px;text-align: left;position: relative;}
+.pro_list .text{padding:0 15px 15px 0.1rem;text-align: left;position: relative;}
 .pro_list .text .ov_text{display: block;font-size: 0.24rem;line-height: 0.24rem;padding: 0.15rem 0;}
 .pro_list .text .ov_text:hover{color: #f92d96;}
 .pro_list .price_sp .price_sp1{color: #f92d96;font-size: 0.26rem;display: inline-block;font-family: open_b;} 

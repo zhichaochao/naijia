@@ -40,8 +40,8 @@
                       <?php } ?>
                       <?php } ?>
                      </ol> -->
-                <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>
-                <span>(<?php echo $product['reviews']+20; ?>)</span>
+                <!-- <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>
+                <span>(<?php echo $product['reviews']+20; ?>)</span> -->
               </a>
               <div class="like add_class <?=$product['wishlist']==1 ?'active':'';?>" onclick="wishlist('<?php echo $product['product_id']; ?>',this);"></div>
             </div>
@@ -224,8 +224,8 @@ function wishlist(product_id,e) {
                                    } 
                               + ' </div>'
                               result+= '<a href="'+data.products[i].href+'" class="start">'
-                              + ' <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>'
-                              + ' <span>('+(data.products[i].reviews+20) +')</span>'
+                              // + ' <i class="bg_hui"><i class="bg_red" style="width: 50%"></i></i>'
+                              // + ' <span>('+(data.products[i].reviews+20) +')</span>'
                               + ' </a>'
                                // +'<ol class="start_ol">'
                                //    for ($i = 1; $i <= 5; $i++) { 
