@@ -1346,10 +1346,15 @@ public function addOrderHistoryss($order_id, $order_status_id, $comment = '', $n
 
 							$t_company=', please track it on www.dhl.com.';
 							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via DHL, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
-						}else{
+						}else if($sh=='G'){
 
 							$t_company=', please track it on www.giglogistics.ng.';
 							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via GIG, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
+						}else{
+
+							$t_company=', please track it on www.fedex.com.';
+							$message .= 'Thank you for shopping with Naija Beauty Hair.You order has been shipped out via FedEx, the tracking number is '.$shippingNumbers.$t_company. "\n\n";
+
 						}
 					}
 				}
