@@ -27,13 +27,22 @@
 
                 </li>
                 <?php } ?>
-               <?php }?>       
+                </ul>
+               <?php }else{?>     
+               <div class="shop_search">
+                  <label for="">
+                    <!-- <input type="text" placeholder="Coupon Code"> -->
+                    <input type="text" id="coupon_code" name="coupon" value="<?php echo @$coupon; ?>" placeholder="Coupon Code"/>
+                    <!-- <button style="display: block;">CONFIRM</button> -->
+                    <button onclick="coupond(this)" type="button">CONFIRM</button>
+                    <i class="new-checkout-bot-code" ></i>
+                  </label>
+                </div> 
+                <?php } ?> 
             </div>
             
             <p class="total_p active clearfix">
-               <!-- <?php if(isset($coupons)){ ?>
-                <i class="text_i">Coupon: <i>- ₦5K</i></i>
-               <?php }?>  -->
+
               <span>Total</span>
               <i class="img_i"></i>
               <em id="totals_coupon"><?=$totals['total']['text']?></em>
@@ -116,5 +125,35 @@
                 }
               })
               }
+            }
+            function coupond (e) {
+             var input=document.getElementById("coupon_code").value;
+             if(input!=''){
+                   $.ajax({
+                  url:'<?php echo $coupon_url?>',
+                   data: $('input#coupon_code'),
+                  type: 'post',
+                  dataType: 'json',
+                  success: function(json) {
+                    console.log(json);
+                    $('#totals_coupon').html(json.total.text);
+                    $('#jfyut').html(json.coupon.title+'<span>'+json.coupon.text+'</span>');
+
+                  }
+                })
+             }else{
+                  $.ajax({
+                  url:'<?php echo $delcoupon_url?>',
+                   data: $('input#coupon_code'),
+                  type: 'post',
+                  dataType: 'json',
+                  success: function(json) {
+                     $('#totals_coupon').html(json.total.text);
+                    $('#jfyut').html('');
+
+                  }
+                })
+             }
+           
             }
         </script>

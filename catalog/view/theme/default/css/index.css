@@ -787,6 +787,13 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	background: url(../img/png/icon_7_.png) no-repeat center center;background-size: 0.16rem 0.1rem;}
 	.shop_con .total .total_p.active i.img_i{transform: rotate(0deg);}
 	.shop_con .total .slide_p{background: #f5f5f5;padding: 0.2rem;border-bottom: 1px solid #ddd;}
+	.shop_con .total .shop_search label{width: 100%; position: relative; display: block;  margin: 1.04vw 0 0.25vw 0;}
+	.shop_con .total .shop_search label input{border: 1px solid #e4e4e4;color: #333; padding: 0 0.52vw;height: 40px;line-height: 40px;font-size: 16px;}
+	.shop_con .total .shop_search label button{position: absolute;top: 0;right: 0;width: 96px;height: 40px;color: #fff;
+    background: #f92d96;border: none;border-left: 1px solid #e4e4e4;font-size: 16px;}
+	.shop_con .total .shop_search label i{padding-top: 5px;font-size: 12px;line-height: 14px; color: #FF2330;display: block;}
+	
+	
 	
 	.shop_con .total .btn_a{display: block;width: 100%;background: #f92d96;font-size: 0.16rem;
 	line-height: 0.5rem;text-align: center;color: #fff;margin:0.2rem 0 0.3rem 0;}
@@ -921,9 +928,13 @@ background: url(../img/png/icon_27.png) no-repeat;background-size: 22px 20px;cur
 	.order_con .or_nav .ornav_ol{background: #fff;}
 	.order_con .or_nav .ornav_ol>li{width: 20%;float: left;text-align: center;}
 	.order_con .or_nav .ornav_ol>li a{font-size: 0.2rem;font-weight: normal;display: inline-block; height: 0.5rem;line-height: 0.5rem;width: 1.1rem;
-	border-bottom: 0.03rem solid transparent;box-sizing: border-box;}
+	border-bottom: 0.03rem solid transparent;box-sizing: border-box;position: relative;}
 	.order_con .or_nav .ornav_ol>li.active a,
 	.order_con .or_nav .ornav_ol>li:hover a{color: #dab25e;border-bottom: 0.03rem solid #dab25e;}
+	.order_con .or_nav .ornav_ol>li a >span{border-radius: 50%;background: #FF2330;color: #fff;
+	font-size: 14px;height: 20px;line-height: 20px;width: 20px;display: none;position: absolute;top: 7px;}
+	.order_con .or_nav .ornav_ol>li a >span.active{display: inline-block;}
+	
 	.order_con .or_ul{padding-bottom: 0.2rem;}
 	.order_con .or_ul>li{background: #fff;margin-bottom: 0.2rem;}
 	.order_con .or_ul>li p.p1{padding: 0 0.2rem;line-height: 0.54rem;border-bottom: 2px solid #f5f5f5;}

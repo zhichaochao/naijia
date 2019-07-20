@@ -784,6 +784,14 @@ background: url(../img/png/icon_7_.png) no-repeat center center/0.2rem 0.11rem;t
 .shop_con .total .total_p .img_i{display: none;}
 .shop_con .total .total_p span{font-size: 0.36rem;font-family: open_b; display: inline-block;float: left;}
 .shop_con .total .total_p em{font-size: 0.36rem;color: #ff369d; display: inline-block;float: right;font-family: open_b;}
+.shop_con .shop_search{background: #f0f0f0;padding: 1.20vw;}
+.shop_con .shop_search p{font-size: 0.2rem;color: #555;line-height: 0.3rem;}
+.shop_con .shop_search label{width: 100%;position: relative;display: block;margin: 0.2rem 0;}
+.shop_con .shop_search input{border: 1px solid #e4e4e4;color: #333;padding: 0 0.2rem;height: 45px;line-height: 45px;font-size: 20px;}
+.shop_con .shop_search button{position: absolute;top: 0;right:0;width: 96px;height: 45px;color: #fff;background: #ff369d;border: none;
+border-left: 1px solid #e4e4e4;font-size: 16px;}
+.shop_con .shop_search i{font-size: 0.18rem;color: #FF2330;display: inline-block;padding-top: 0.05rem;line-height: 0.2rem;}
+
 .shop_con .total .btn_a{display: block;width: 100%;background: #ff369d;font-size: 0.24rem;line-height: 0.6rem;
 text-align: center;color: #333;margin-bottom: 0.5rem;border-radius: 5px;color: #fff;}
 .shop_con .label_are span{font-size: 0.2rem;display: block;margin-bottom: 0.1rem;}
@@ -898,8 +906,13 @@ padding: 0 0.14rem;font-size: 0.18rem;color: #fff;font-weight: bold;line-height:
 .order_con .or_nav .ornav_ol{background: #fff;}
 .order_con .or_nav .ornav_ol>li{width: 20%;float: left;text-align: center;}
 .order_con .or_nav .ornav_ol>li a{font-size: 0.22rem;font-weight: bold;display: inline-block; height: 0.6rem;line-height: 0.6rem;width: 1.1rem;
-border-bottom: 0.04rem solid transparent;box-sizing: border-box;}
+border-bottom: 0.04rem solid transparent;box-sizing: border-box;position: relative;}
 .order_con .or_nav .ornav_ol>li.active a{border-bottom: 0.04rem solid #dab25e;color: #dab25e;}
+.order_con .or_nav .ornav_ol>li a span{font-size: 0.14rem;width: 0.2rem;height: 0.2rem;line-height: 0.2rem;
+display:none;border-radius: 50%;background: #FF2330;color: #fff;position: absolute;right: 0;top: 0.1rem;}
+.order_con .or_nav .ornav_ol>li a span.active{display: inline-block;}
+
+
 .order_con .or_ul{padding-bottom: 0.2rem;}
 .order_con .or_ul>li{background: #fff;margin-bottom: 0.2rem;}
 .order_con .or_ul>li p.p1{padding: 0 0.2rem;line-height: 0.54rem;border-bottom: 2px solid #f5f5f5;height: 0.54rem;display: block;}

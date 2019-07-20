@@ -76,6 +76,15 @@
               <li class="tb_li">
                 <a target="_blank"  href="http://www.instagram.com/<?=$instagram;?>"></a>
               </li>
+                 <li class="dl_li">
+                <a href="<?php echo $login_li?>"></a>
+              </li>
+              <li class="sc_li">
+                <a href="<?=$wishlist;?>"><span id='wishlist_count'><?php echo $text_wishlist; ?></span></a>
+              </li>
+              <li class="gw_li">
+                <a href="<?=$shopping_cart;?>"><span id='cart_count'><?=$text_cart_items;?></span></a>
+              </li>
             </ol>
           </div>
         </div>
@@ -138,7 +147,7 @@
             </ul>
             
             <ol class="img_ol">
-              <li class="dl_li">
+         <!--      <li class="dl_li">
                 <a href="<?php echo $login_li?>"></a>
               </li>
               <li class="sc_li">
@@ -146,7 +155,7 @@
               </li>
               <li class="gw_li">
                 <a href="<?=$shopping_cart;?>"><span id='cart_count'><?=$text_cart_items;?></span></a>
-              </li>
+              </li> -->
               <!-- <li class="fb_li">
                 <a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"></a>
               </li>
