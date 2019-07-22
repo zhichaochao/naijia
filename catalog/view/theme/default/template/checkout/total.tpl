@@ -42,7 +42,7 @@
             </div>
             
             <p class="total_p active clearfix">
-
+              <i class="text_i" style="display: none;"><i></i></i>
               <span>Total</span>
               <i class="img_i"></i>
               <em id="totals_coupon"><?=$totals['total']['text']?></em>
@@ -137,7 +137,16 @@
                   success: function(json) {
                     console.log(json);
                     $('#totals_coupon').html(json.total.text);
+                    if(json.coupon){
                     $('#jfyut').html(json.coupon.title+'<span>'+json.coupon.text+'</span>');
+                    $('.text_i').html(json.coupon.title+'<i>'+json.coupon.text+'</i>');
+                    $('.text_i').css('display','block');
+                      }else{
+                         $('#jfyut').html('');
+                         $('.text_i').html('');
+                         $('.text_i').css('display','none');
+
+                    }
 
                   }
                 })
@@ -150,6 +159,8 @@
                   success: function(json) {
                      $('#totals_coupon').html(json.total.text);
                     $('#jfyut').html('');
+                    $('.text_i').html('');
+                    $('.text_i').css('display','none');
 
                   }
                 })
