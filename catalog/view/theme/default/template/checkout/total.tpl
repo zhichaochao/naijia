@@ -42,7 +42,7 @@
             </div>
             
             <p class="total_p active clearfix">
-              <i class="text_i" style="display: none;"><i></i></i>
+              <i class="text_i" style="display: none;color: red;"><i></i></i>
               <span>Total</span>
               <i class="img_i"></i>
               <em id="totals_coupon"><?=$totals['total']['text']?></em>

@@ -68,6 +68,8 @@ class ControllerAccountOrder extends Controller {
 		$data['status'] =$status;
 // print_r($data['status']);exit;
 		$results = $this->model_account_order->getOrders(($page - 1) * $limit, $limit,$status);
+		$totalresults = $this->model_account_order->getOrderstotal(($page - 1) * $limit, $limit,$status);
+		$data['totalresults'] =$totalresults;
 		// print_r($results);exit;
 		foreach ($results as $result) {
 			//$product_total = $this->model_account_order->getTotalOrderProductsByOrderId($result['order_id']);

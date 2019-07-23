@@ -142,6 +142,23 @@ class ModelAccountOrder extends Model {
 
 		return $query->rows;
 	}
+		public function getOrderstotal($start = 0, $limit = 30,$status) {
+		if ($start < 0) {
+			$start = 0;
+		}
+
+		if ($limit < 1) {
+			$limit = 1;
+		}
+			if($status==16){
+				$query = $this->db->query("SELECT NOW() as now,o.order_id,o.order_number, o.firstname, o.lastname, os.name as status, o.date_added,o.date_modified,o.bank_receipt, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.order_status_id ='" . (int)$status . "'  AND  o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' OR o.order_status_id ='7' AND  o.customer_id = '" . (int)$this->customer->getId() . "'  ORDER BY o.order_id DESC  ");
+			}else{
+				$query = $this->db->query("SELECT NOW() as now,o.order_id,o.order_number, o.firstname, o.lastname, os.name as status, o.date_added,o.date_modified,o.bank_receipt, o.payment_code, o.total, o.currency_code, o.currency_value FROM `" . DB_PREFIX . "order` o LEFT JOIN " . DB_PREFIX . "order_status os ON (o.order_status_id = os.order_status_id) WHERE o.order_status_id ='" . (int)$status . "' AND  o.customer_id = '" . (int)$this->customer->getId() . "' AND o.order_status_id > '0' AND o.del = '0'AND o.store_id = '" . (int)$this->config->get('config_store_id') . "' AND os.language_id = '" . (int)$this->config->get('config_language_id') . "' ORDER BY o.order_id DESC  ");
+			}
+		
+
+		return $query->num_rows;
+	}
 	public function deleteWishlist($order_id) {
 		$this->db->query("UPDATE " . DB_PREFIX ."order SET del = '1' WHERE customer_id = '" . (int)$this->customer->getId() . "' AND order_id = '" . (int)$order_id . "'");		
 	}
