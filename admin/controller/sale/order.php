@@ -1399,32 +1399,110 @@ class ControllerSaleOrder extends Controller {
       		}else if($order_info['order_status_id']=='0'){
 				$order_status_id='error';
       		}
+      		if($order_info['shippingorpick']=='pick'){
+      			$payment_address='自取';
+      			$shipping_address='自取';
+      		}else{
+      			if ($order_info['payment_address_format']) {
+				$format = $order_info['payment_address_format'];
+			} else {
+				$format = '{firstname} {lastname}' . "\n" . '{company}' . "\n" . '{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone}' . "\n" . '{country}';
+			}
+
+			$find = array(
+				'{firstname}',
+				'{lastname}',
+				'{company}',
+				'{address_1}',
+				'{address_2}',
+				'{city}',
+				'{postcode}',
+				'{zone}',
+				'{zone_code}',
+				'{country}'
+			);
+
+			$replace = array(
+				'firstname' => $order_info['payment_firstname'],
+				'lastname'  => $order_info['payment_lastname'],
+				'company'   => $order_info['payment_company'],
+				'address_1' => $order_info['payment_address_1'],
+				'address_2' => $order_info['payment_address_2'],
+				'city'      => $order_info['payment_city'],
+				'postcode'  => $order_info['payment_postcode'],
+				'zone'      => $order_info['payment_zone'],
+				'zone_code' => $order_info['payment_zone_code'],
+				'country'   => $order_info['payment_country']
+			);
+
+			$payment_address = str_replace(array("\r\n", "\r", "\n"), '    ', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '    ', trim(str_replace($find, $replace, $format))));
+
+			// Shipping Address
+			if ($order_info['shipping_address_format']) {
+				$format = $order_info['shipping_address_format'];
+			} else {
+				$format = '{firstname} {lastname}' . "\n" . '{company}' . "\n" . '{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone}' . "\n" . '{country}';
+			}
+
+			$find = array(
+				'{firstname}',
+				'{lastname}',
+				'{company}',
+				'{address_1}',
+				'{address_2}',
+				'{city}',
+				'{postcode}',
+				'{zone}',
+				'{zone_code}',
+				'{country}'
+			);
+
+			$replace = array(
+				'firstname' => $order_info['shipping_firstname'],
+				'lastname'  => $order_info['shipping_lastname'],
+				'company'   => $order_info['shipping_company'],
+				'address_1' => $order_info['shipping_address_1'],
+				'address_2' => $order_info['shipping_address_2'],
+				'city'      => $order_info['shipping_city'],
+				'postcode'  => $order_info['shipping_postcode'],
+				'zone'      => $order_info['shipping_zone'],
+				'zone_code' => $order_info['shipping_zone_code'],
+				'country'   => $order_info['shipping_country']
+			);
+
+			$shipping_address = str_replace(array("\r\n", "\r", "\n"), '    ', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '    ', trim(str_replace($find, $replace, $format))));
+      			
+      		}
+
       		$products = $this->model_sale_order->getOrderProducts($order_id);
 
       		 $datas = array();
 	        foreach ($products as $v){
 
-	    //     	$option_data = array();
-					// $options = $this->model_sale_order->getOrderOptions($this->request->get['order_id'], $product['order_product_id']);
-					// foreach ($options as $option) {
-					// 	if ($option['type'] != 'file') {
-					// 		$value = $option['value'];
-					// 	} else {
-					// 		$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
+	        	$option_data = array();
+					$options = $this->model_sale_order->getOrderOptions($order_id, $v['order_product_id']);
+					foreach ($options as  $option) {
+						if ($option['type'] != 'file') {
+							$value = $option['value'];
+						} else {
+							$upload_info = $this->model_tool_upload->getUploadByCode($option['value']);
 
-					// 		if ($upload_info) {
-					// 			$value = $upload_info['name'];
-					// 		} else {
-					// 			$value = '';
-					// 		}
-					// 	}
+							if ($upload_info) {
+								$value = $upload_info['name'];
+							} else {
+								$value = '';
+							}
+						}
 
-					// 	$option_data[] = array(
-					// 		'name'  => $option['name'],
-					// 		'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
-					// 	);
-					// }
-
+						$option_data[] = array(
+							'name'  => $option['name'],
+							'value' =>$value
+						);
+					
+					}
+				$option_data_option = array_reduce($option_data, function ($result, $value) {
+				    return array_merge($result, array_values($value));
+				}, array())	;	
 	        	$data['customers'][]=array(
 		            'order_id' => $order_info['order_id'],
 		           	 'firstname' => $order_info['firstname'],
@@ -1438,10 +1516,30 @@ class ControllerSaleOrder extends Controller {
 		            'name' => $v['name'],
 		            'model' => $v['model'],
 		            'number' => $v['quantity'],
+		            'value' =>implode(',',$option_data_option),
+		            'address' => isset($shipping_address)?$shipping_address:$payment_address,
 		            'order_status' => $order_status_id
 		            
 	            );
 	        }
+	        	    $data['customers'][]=array(
+		            'order_id' => '',
+		           	 'firstname' => '',
+		            'lastname' => '',
+		            'email'=>  '',
+		            'telephone' => '',
+		            'payment_method' => '',
+		            'date_added' => '',
+		            'shipping_method' => '',
+		            'total' => '',
+		            'name' => '',
+		            'model' => '',
+		            'number' => '',
+		            'value' => '',
+		            'address' => '',
+		            'order_status' => ''
+		            
+	            );
       		}
       	}
         $header = array(
@@ -1458,13 +1556,10 @@ class ControllerSaleOrder extends Controller {
             'name' => '*name', //商品名称
             'model' => '*model', //商品型号
             'number' => '*数量', //数量
-            'order_status' => '*状态' //数量
-
-            // 'value' => '*属性' //属性
+            'value' => '*属性', //属性
+            'address' => '*地址', //地址
+            'order_status' => '*状态' //状态
         );
-
-      	// $this->load->model('customer/allcustomer');
-		// $new_data = $this->model_customer_allcustomer->allgetCustomers($key);
        
          ksort($data['customers']);
 
