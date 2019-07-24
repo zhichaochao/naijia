@@ -1381,9 +1381,17 @@ class ControllerSaleOrder extends Controller {
       	$this->load->model('sale/order');
 
       	if (isset($this->request->post['selected'])) {
-			foreach ($this->request->post['selected'] as $order_id) {
-				// print_r($this->request->post['selected']);exit;
-      		$order_info = $this->model_sale_order->getOrder($order_id);
+      			$order_ids=$this->request->post['selected'];
+      		}else{
+      			$order_ids=array();
+      			$orders = $this->model_sale_order->getOrders($data =array());
+				foreach ($orders as $key => $value) {
+				   $order_ids[]=$value['order_id'];
+				 }
+      		}
+      		// print_r($order_ids);exit;
+	foreach ($order_ids as $order_id) {
+		$order_info = $this->model_sale_order->getOrder($order_id);
       		if($order_info['order_status_id']=='1'){
       			$order_status_id='Pending';
       		}else if($order_info['order_status_id']=='8'){
@@ -1517,7 +1525,7 @@ class ControllerSaleOrder extends Controller {
 		            'model' => $v['model'],
 		            'number' => $v['quantity'],
 		            'value' =>implode(',',$option_data_option),
-		            'address' => isset($shipping_address)?$shipping_address:$payment_address,
+		            'address' => !empty($shipping_address)?$shipping_address:$payment_address,
 		            'order_status' => $order_status_id
 		            
 	            );
@@ -1540,8 +1548,7 @@ class ControllerSaleOrder extends Controller {
 		            'order_status' => ''
 		            
 	            );
-      		}
-      	}
+      }	
         $header = array(
             'order_id' => '*订单ID',
             'firstname' => '*Firstname',
