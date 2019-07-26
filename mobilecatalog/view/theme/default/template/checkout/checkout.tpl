@@ -2,7 +2,7 @@
 
     <div class="in_content clearfix"></div>
         <!--内容-->
-        <div class="address_con clearfix">
+        <div class="address_con clearfix" style="padding:0rem 0.15rem 0rem 0.15rem;">
             <div class="add_con clearfix" >
                 <ul class="bt_ul clearfix" id="collapse-payment-address">
                 </ul>
@@ -50,6 +50,7 @@
                 </div>
             </div>
         </div>
+        <style>body{padding-bottom:0.6rem;}</style>
 <script>
 
     function pay() {
@@ -194,4 +195,3 @@
     })
 })
 </script>
-<?php echo $footer; ?>

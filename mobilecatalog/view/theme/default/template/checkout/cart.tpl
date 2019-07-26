@@ -125,7 +125,10 @@
         </ol>
         <ul class="shop_type_ul clearfix" id="shop_type_ul">
           <li class="<?=$shippingorpick=='shipping'?'active':'';?> clearfix">
-            <label for="country_id">
+            <p class="che">Shipment via GIG/DHL</p>
+              <p>Within Lagos: 1-2 working days</p>
+              <p>Outside Lagos: 2-4 working days</p>
+            <label for="country_id" style="display: none;">
               <span>Country</span>
               
               <div class="select clearfix">
@@ -142,16 +145,16 @@
                 </select>
               </div>
             </label>
-            <label for="zone_id">
+            <label for="zone_id" style="display: none;">
               <span>City</span>
               <select name="zone_id" id='zone_id' onchange ="get_address_cost();">
                
               </select>
             </label>
-            <span class="ship_span" id='shipping_cost'>Shipping Cost:  </span>
+            <span style="display: none;" class="ship_span" id='shipping_cost'>Shipping Cost:  </span>
             <!-- <p class="ship_p">Get shipping cost here<i><br /></i> NOTE* Final cost based on pratice</p> -->
-            <button type="button" class="get_ship"><span>Get shipping cost here</span> </button>
-              <p class="ship_p">NOTE* Final cost based on pratice</p>
+            <button style="display: none;" type="button" class="get_ship"><span>Get shipping cost here</span> </button>
+              <p style="display: none;" class="ship_p">NOTE* Final cost based on pratice</p>
           </li>
           <li class="clearfix <?=$shippingorpick=='shipping'?'':'active';?>">
             <p class="pick_1">Lagos Store</p>
