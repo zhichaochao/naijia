@@ -1352,7 +1352,9 @@ class ControllerCustomerCustomer extends Controller {
 
 		foreach ($results as $result) {
 			$data['histories'][] = array(
-				'comment'    => $result['comment'],
+				'order_id'    => $result['order_id'],
+				'order_number'    => $result['order_number'],
+				'order_status'    => $result['order_status'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added']))
 			);
 		}

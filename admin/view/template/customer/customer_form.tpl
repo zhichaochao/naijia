@@ -601,7 +601,7 @@
             <div class="tab-pane" id="tab-history">
               <div id="history"></div>
               <br />
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-comment"><?php echo $entry_comment; ?></label>
                 <div class="col-sm-10">
                   <textarea name="comment" rows="8" placeholder="<?php echo $entry_comment; ?>" id="input-comment" class="form-control"></textarea>
@@ -609,7 +609,7 @@
               </div>
               <div class="text-right">
                 <button id="button-history" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><i class="fa fa-plus-circle"></i> <?php echo $button_history_add; ?></button>
-              </div>
+              </div> -->
             </div>
             <div class="tab-pane" id="tab-transaction">
               <div id="transaction"></div>
@@ -990,37 +990,37 @@ $('#history').delegate('.pagination a', 'click', function(e) {
 
 $('#history').load('index.php?route=customer/customer/history&token=<?php echo $token; ?>&customer_id=<?php echo $customer_id; ?>');
 
-$('#button-history').on('click', function(e) {
-	e.preventDefault();
+// $('#button-history').on('click', function(e) {
+// 	e.preventDefault();
 
-	$.ajax({
-		url: 'index.php?route=customer/customer/addhistory&token=<?php echo $token; ?>&customer_id=<?php echo $customer_id; ?>',
-		type: 'post',
-		dataType: 'json',
-		data: 'comment=' + encodeURIComponent($('#tab-history textarea[name=\'comment\']').val()),
-		beforeSend: function() {
-			$('#button-history').button('loading');
-		},
-		complete: function() {
-			$('#button-history').button('reset');
-		},
-		success: function(json) {
-			$('.alert').remove();
+// 	$.ajax({
+// 		url: 'index.php?route=customer/customer/addhistory&token=<?php echo $token; ?>&customer_id=<?php echo $customer_id; ?>',
+// 		type: 'post',
+// 		dataType: 'json',
+// 		data: 'comment=' + encodeURIComponent($('#tab-history textarea[name=\'comment\']').val()),
+// 		beforeSend: function() {
+// 			$('#button-history').button('loading');
+// 		},
+// 		complete: function() {
+// 			$('#button-history').button('reset');
+// 		},
+// 		success: function(json) {
+// 			$('.alert').remove();
 
-			if (json['error']) {
-				 $('#tab-history').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div></div>');
-			}
+// 			if (json['error']) {
+// 				 $('#tab-history').prepend('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div></div>');
+// 			}
 
-			if (json['success']) {
-				$('#tab-history').prepend('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div></div>');
+// 			if (json['success']) {
+// 				$('#tab-history').prepend('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + ' <button type="button" class="close" data-dismiss="alert">&times;</button></div></div>');
 
-				$('#history').load('index.php?route=customer/customer/history&token=<?php echo $token; ?>&customer_id=<?php echo $customer_id; ?>');
+// 				$('#history').load('index.php?route=customer/customer/history&token=<?php echo $token; ?>&customer_id=<?php echo $customer_id; ?>');
 
-				$('#tab-history textarea[name=\'comment\']').val('');
-			}
-		}
-	});
-});
+// 				$('#tab-history textarea[name=\'comment\']').val('');
+// 			}
+// 		}
+// 	});
+// });
 //--></script>
   <script type="text/javascript"><!--
 $('#transaction').delegate('.pagination a', 'click', function(e) {

@@ -2,16 +2,20 @@
   <table class="table table-bordered">
     <thead>
       <tr>
+        <td class="text-left">订单ID</td>
+        <td class="text-left">订单号</td>
+        <td class="text-left">订单状态</td>
         <td class="text-left"><?php echo $column_date_added; ?></td>
-        <td class="text-left"><?php echo $column_comment; ?></td>
       </tr>
     </thead>
     <tbody>
       <?php if ($histories) { ?>
       <?php foreach ($histories as $history) { ?>
       <tr>
+        <td class="text-left"><?php echo $history['order_id']; ?></td>
+        <td class="text-left"><?php echo $history['order_number']; ?></td>
+        <td class="text-left"><?php echo $history['order_status']; ?></td>
         <td class="text-left"><?php echo $history['date_added']; ?></td>
-        <td class="text-left"><?php echo $history['comment']; ?></td>
       </tr>
       <?php } ?>
       <?php } else { ?>
