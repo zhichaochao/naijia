@@ -1354,7 +1354,7 @@ class ControllerCustomerCustomer extends Controller {
 			$data['histories'][] = array(
 				'order_id'    => $result['order_id'],
 				'order_number'    => $result['order_number'],
-				'order_status'    => $result['order_status'],
+				'order_status'    => empty($result['order_status'])?'Canceled':$result['order_status'],
 				'date_added' => date($this->language->get('date_format_short'), strtotime($result['date_added']))
 			);
 		}
