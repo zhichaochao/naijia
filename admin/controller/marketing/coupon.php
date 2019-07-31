@@ -437,6 +437,14 @@ class ControllerMarketingCoupon extends Controller {
 			$data['shipping'] = '';
 		}
 
+		if (isset($this->request->post['alertcode'])) {
+			$data['alertcode'] = $this->request->post['alertcode'];
+		} elseif (!empty($coupon_info)) {
+			$data['alertcode'] = $coupon_info['alertcode'];
+		} else {
+			$data['alertcode'] = '';
+		}
+		
 		if (isset($this->request->post['total'])) {
 			$data['total'] = $this->request->post['total'];
 		} elseif (!empty($coupon_info)) {
