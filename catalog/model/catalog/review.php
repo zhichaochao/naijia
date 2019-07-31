@@ -190,6 +190,15 @@ class ModelCatalogReview extends Model {
 
 		return $query->rows;
 	}
+
+	public function getalertcoupon() {
+		
+			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE status='1' AND o.alertcode = '1'  AND o.date_end >= NOW() ORDER BY o.coupon_id desc limit 1   ");
+	
+		
+
+		return $query->rows;
+	}
 	public function couponornot($coupon_id){
            $customer_id = $this->customer->isLogged() ? $this->customer->getId() : 0;
             if( empty($coupon_id)|| $customer_id==0){

@@ -396,11 +396,53 @@
         
       </div>
     </div>
+    <!-- 全部弹窗 -->
+    <style type="text/css">
+      .modal_con{width: 100%;height: 100%;background: rgba(0,0,0,.5);position: fixed;top: 0;left: 0;z-index: 9999;display: none;}
+      .modal_con .text{display: flex;width: 100%;height: 100%;}
+      .modal_con .center{margin: auto;display: block;background: #f8f3f0;width: 80%;min-height: 3.5rem;padding: 0 5%;max-width: 600px;
+      box-sizing: border-box;text-align: center;position: relative;border-radius: 10px;}
+      .modal_con .center img{display: block;}
+      .modal_con .center h1{font-size: 0.36rem;line-height:0.4rem; font-weight: normal;padding: 0.5rem 0 0.3rem 0;font-style: italic;}
+      .modal_con .center p.p1{font-size: 0.24rem;line-height: 0.4rem;}
+      .modal_con .center h2{color: #ff6767;border: 2px dashed #ff9f9f;width: 60%;text-align: center;margin-left: 20%;font-size: 0.32rem;margin-top: 0.3rem;line-height:0.6rem;}
+      .modal_con .center p.p2{font-size: 0.16rem;color: #666;margin-top: 0.3rem;}
+      .modal_con .close{position: absolute;right: 15px;top: 15px;display: block;width: 25px;height: 25px;cursor: pointer;transition: .5s;}
+      .modal_con .close:hover{transform: rotate(90deg);}
+      .modal_con .close em{position: relative;top: 12px;transform: rotate(45deg);}
+      .modal_con .close em:after{content: "";width: 25px;height: 1.2px;background: #333;display: block;transform: rotate(45deg);position: relative;top: -1px;}
+      .modal_con .close em:before{content: "";width: 25px;height: 1.2px;background: #333;display: block;transform: rotate(-45deg);}
+    </style>
+     <?php  if(isset($resultalertcoupon)){?>
+    <div class="modal_con">
+      <div class="text">
+        <div class="center">
+          <h1>CONGRATS!</h1>
+          <p class="p1">A coupon code just for you</p>
+          <h2><?php echo $resultalertcoupon; ?></h2>
+          <p class="p2">Apply it when you checkout to get more discount!</p>
+          <div class="close"><em></em></div>
+        </div>
+      </div>
+    </div>
+      <?php } ?>
 <?php echo $footer; ?>
 
 <script>
 window.onload=function(){
   $(function(){
+    $(".modal_con .close").click(function(){
+      $(".modal_con").fadeOut();
+              sessionStorage.setItem("modal",'a');
+          
+    })
+        
+        if( sessionStorage.getItem("modal")!='a'){
+      setTimeout(function(){
+        $(".modal_con").fadeIn();
+      },5000);
+        }
+
      $('#checkout_btns').click(function () {
           location.href='<?=$shopping_cart;?>';
           

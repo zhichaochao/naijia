@@ -113,7 +113,7 @@ unset($this->session->data['cart_ids']);
         $this->load->model('catalog/review');
         $resultcoupon = $this->model_catalog_review->getcoupon(0);
 
-        // print_r($resultcoupon);exit;
+
         if($resultcoupon){
         foreach ($resultcoupon as $key => $value) {
 
@@ -132,9 +132,13 @@ unset($this->session->data['cart_ids']);
                 );
         }
         }
-
-// print_r($data['options']);exit;
+                //获取弹窗优惠券
+        $resultalertcoupon = $this->model_catalog_review->getalertcoupon();
         
+          if($resultalertcoupon){
+             $data['resultalertcoupon'] = $resultalertcoupon[0]['code'];
+            }
+        // print_r($data['resultalertcoupon']);exit;
         $this->load->model('catalog/product');
 
         $product_info = $this->model_catalog_product->getProduct($product_id);

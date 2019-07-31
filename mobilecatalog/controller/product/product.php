@@ -132,7 +132,12 @@ unset($this->session->data['cart_ids']);
                 );
         }
         }
-
+        //获取弹窗优惠券
+        $resultalertcoupon = $this->model_catalog_review->getalertcoupon();
+        
+          if($resultalertcoupon){
+             $data['resultalertcoupon'] = $resultalertcoupon[0]['code'];
+            }
 // print_r($data['options']);exit;
         
         $this->load->model('catalog/product');
