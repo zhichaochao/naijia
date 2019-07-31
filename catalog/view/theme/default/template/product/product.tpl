@@ -923,7 +923,7 @@ function wishlist(product_id,e) {
      
             success: function(json) {
               if (json.success) {
-              tips("Added Successfully","",1000)
+              tips("Added Successfully","",3000)
                 // alert("成功加入购物车");
               $('#cart_count').html(json.total);
               $('.shop_ac').html(json.total);

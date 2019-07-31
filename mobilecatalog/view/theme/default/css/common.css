@@ -151,15 +151,15 @@ background: url(../img/png/icon_23.png) no-repeat right center/100%;}
 
 /**弹窗提示**/
 .popup_tips{position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: transparent;z-index: 999;}
-.popup_tips .text{min-width: 2.2rem;max-width: 4rem; min-height: 1rem;display: inline-block;background: rgba(0,0,0,.8);text-align: center;
-position: absolute;top: 40%;left: 50%;margin-left: -1.1rem; border-radius: 5px;padding: 0.2rem 0;}
+.popup_tips .text{min-width: 3rem;max-width: 6rem; min-height: 1.5rem;display: inline-block;background: rgba(0,0,0,.8);text-align: center;
+position: absolute;top: 40%;left: 50%;margin-left: -1.5rem; border-radius: 5px;padding: 0.4rem 0;}
 .popup_tips .text .top{height: 0.6rem;position: relative;}
-.popup_tips .text .top.mr span{width: 0.12rem;height: 2px;background: #ff0000;display: block;
-position: absolute;top: 50%;left: 50%;margin-top: -1px;margin-left: -0.06rem;transform: rotate(225deg);}
-.popup_tips .text .top.mr span:before{content: "";display: block;height: 0.2rem;width: 2px;background: #ff0000;}
+.popup_tips .text .top.mr span{width: 0.24rem;height: 2px;background: #ff0000;display: block;
+position: absolute;top: 50%;left: 50%;margin-top: -1px;margin-left: -0.24rem;transform: rotate(225deg);}
+.popup_tips .text .top.mr span:before{content: "";display: block;height: 0.44rem;width: 2px;background: #ff0000;}
 .popup_tips .text .top.gantan span{width: 0.32rem;height: 0.32rem;display: block;background: url(../img/png/gantan.png) no-repeat center/0.32rem;
 position: absolute;top: 50%;left: 50%;margin-top: -0.16rem;margin-left: -0.16rem;}
-.popup_tips .text p{font-size: 0.2rem;color: #fff;padding: 0 0.2rem ;box-sizing: border-box;}
+.popup_tips .text p{font-size: 0.36rem;color: #fff;padding: 0 0.4rem ;box-sizing: border-box;}
 
 	
 	
