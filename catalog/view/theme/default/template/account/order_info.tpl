@@ -219,6 +219,8 @@
 
           </div>
         </div>
+        
+        <?php if($order_status =='Pending' || $order_status =='Pending-unfilled' ){?>
         <div class="center clearfix">
           <div class="btn">
             <div class="file_div">
@@ -230,6 +232,7 @@
           </div>
           <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
         </div>
+            <?php } ?>
         </form>
       </div>
 <?php } ?>

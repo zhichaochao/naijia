@@ -206,6 +206,7 @@
               <div class="close" onclick="del_img($(this))"></div>
             </div> -->
           </div>
+          <?php if($order_status =='Pending' || $order_status =='Pending-unfilled' ){?>
           <div class="center">
             <div class="btn">
               <div class="file_div">
@@ -217,6 +218,7 @@
             </div>
           </div>
           <p class="p1">*We will check and confirmed your payment as soon as you submit.</p>
+          <?php } ?>
           </form>
         </div>
 
