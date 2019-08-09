@@ -259,6 +259,7 @@ function wishlist(product_id,e) {
       if (data.success) {
          // tips('Cancel the collection');
         $('#wishlist_count').html(data.total);
+          $(e).removeClass("active");
       }
                // location.reload(); 
     }
@@ -275,6 +276,7 @@ function wishlist(product_id,e) {
       if (data.success) {
          // tips('Collection Success');
         $('#wishlist_count').html(data.total);
+        $(e).addClass("active");
       }
                // location.reload(); 
     }
@@ -363,13 +365,13 @@ function wishlist(product_id,e) {
       })
     }
     //收藏
-    $(".sc").click(function(){
-      if($(this).hasClass("active")){
-        $(this).removeClass("active");
-      }else{
-        $(this).addClass("active");
-      }
-    })
+    // $(".sc").click(function(){
+    //   if($(this).hasClass("active")){
+    //     $(this).removeClass("active");
+    //   }else{
+    //     $(this).addClass("active");
+    //   }
+    // })
     
     //产品鼠标经过换图
     $(".product .pro_text .pro_ul>li .top_img").hover(function(){

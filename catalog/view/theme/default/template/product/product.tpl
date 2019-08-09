@@ -317,7 +317,7 @@
               </li>
               
               <li class="active">
-                <h2 class="slide_h2">Details <em class="jian"></em></h2>
+                <h2 class="slide_h2">Details <em class="jian active"></em></h2>
                 <div class="slide_text">
                   <div class="details">
                     <?=$description;?>
@@ -326,7 +326,7 @@
               </li>
               
               <li class="active">
-                <h2 class="slide_h2">Shipping & Returns <em class="jian"></em></h2>
+                <h2 class="slide_h2">Shipping & Returns <em class="jian active"></em></h2>
                 <div class="slide_text">
                   <dl>
                     <dt>Shipping</dt>
@@ -361,7 +361,7 @@
                 </div>
               </li>
               <li class="active">
-                <h2 class="slide_h2">Payment Method <em class="jian"></em></h2>
+                <h2 class="slide_h2">Payment Method <em class="jian active"></em></h2>
                 <div class="slide_text">
                   <ul class="pay_ul pay_img clearfix">
                     <!-- <li><img src="catalog/view/theme/default/img/png/fot1_.png"/></li>
@@ -377,7 +377,7 @@
               </li>
               
               <li class="active">
-                <h2 class="slide_h2">Share <em class="jian"></em></h2>
+                <h2 class="slide_h2">Share <em class="jian active"></em></h2>
                 <div class="slide_text">
                   <ul class="pay_ul share_img clearfix">
                     <li><a target="_blank"  href="http://www.facebook.com/<?=$facebook;?>"><img src="catalog/view/theme/default/img/png/icon_35_.png"/></a></li>
