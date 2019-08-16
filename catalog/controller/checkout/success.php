@@ -43,7 +43,7 @@ class ControllerCheckoutSuccess extends Controller {
 		
 			$data['add_time']=strtotime($order_info['date_modified']);
 			$data['now_time']=strtotime($order_info['now']);
-			$data['lest_time']=$data['add_time']+60*30-$data['now_time'];
+			$data['lest_time']=$data['add_time']+60*60-$data['now_time'];
 			// print_r($data['lest_time']);
 			// print_r($order_info['date_modified']);
 			// print_r(date('Y-m-d H:i',$data['add_time']+60*30));exit();

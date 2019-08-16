@@ -115,7 +115,7 @@ class ControllerAccountOrder extends Controller {
 				'products'   => $order_products,
 				'order_number'   => $result['order_number'],
 				// 'lest_time'   => date("Y-m-d H:i:s",strtotime($result['date_modified'])+60*30-$now_time),
-				'lest_time'   => strtotime($result['date_modified'])+60*30-strtotime($result['now']),
+				'lest_time'   => strtotime($result['date_modified'])+60*60-strtotime($result['now']),
 			
 				'status'     => $result['status'],
 				'bank_receipt'     => $result['bank_receipt'],
@@ -329,7 +329,7 @@ class ControllerAccountOrder extends Controller {
 
 			$data['add_time']=strtotime($order_info['date_modified']);
 			$data['now_time']=strtotime($order_info['now']);
-			$data['lest_time']=$data['add_time']+60*30-$data['now_time'];
+			$data['lest_time']=$data['add_time']+60*60-$data['now_time'];
 // print_r($data['now_time']);exit;
 			$add_time=strtotime($order_info['date_modified']);
     		$now_time=strtotime($order_info['now']);
@@ -869,7 +869,7 @@ class ControllerAccountOrder extends Controller {
 				$message .= "Thank you for your recent order. Unfortunately, your order has been canceled. Welcome to visit our online shop again. " . "\n\n";
 				$message .= "If you have any questions, please don’t hesitate to send emails to ".$config_email."" . "\n\n";
 				$message .= "Best Regards. " . "\n\n";
-				$message .= "Hot Beauty Hair Team. " . "\n\n";
+				$message .= "Naija Beauty Hair Team. " . "\n\n";
 
 			    $mail = new Mail();
 				$mail->protocol = $this->config->get('config_mail_protocol');

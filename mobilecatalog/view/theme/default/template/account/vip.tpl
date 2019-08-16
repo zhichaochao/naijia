@@ -143,10 +143,10 @@
           
           <div class="text_5 clearfix">
             <div class="div_text">
-              <h1 class="vip_h1">HOW DOES HOT BEAUTY HAIR'S VIP PROGRAM WORKS?</h1>
+              <h1 class="vip_h1">HOW DOES NAIJA BEAUTY HAIR'S VIP PROGRAM WORKS?</h1>
             
               <p class="p1_text">
-                Hot Beauty Hair's VIP program includes 4 stages and each stage will enjoy different price discount. Our system has 
+                Naija Beauty Hair's VIP program includes 4 stages and each stage will enjoy different price discount. Our system has 
                 the record of purchase history and we can calculate your VIP level according to how much you have spent.
               </p>
               <ul>

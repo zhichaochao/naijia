@@ -112,7 +112,7 @@ class ControllerInformationCompany extends Controller {
                $mail->setFrom($this->config->get('config_mail_parameter'));      //发送人
                $mail->setSender(html_entity_decode($data['user_name'], ENT_QUOTES, 'UTF-8'));    //发送者名字
                //$mail->setSubject(html_entity_decode(sprintf($this->language->get('email_subject'), $this->request->post['name']), ENT_QUOTES, 'UTF-8'));
-               $mail->setSubject('Hot Beauty Hair Contact Us Inquiry');                                                //邮件标题
+               $mail->setSubject('Naija Beauty Hair Contact Us Inquiry');                                                //邮件标题
                $mail->setHtml($this->load->view('mail/contact_us_email',$html_data));
                $mail->setText(html_entity_decode($message, ENT_QUOTES, 'UTF-8'));
                $mail->send();

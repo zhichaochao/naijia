@@ -870,7 +870,7 @@ class ControllerAccountOrder extends Controller {
 				$message .= "Thank you for your recent order. Unfortunately, your order has been canceled. Welcome to visit our online shop again. " . "\n\n";
 				$message .= "If you have any questions, please don’t hesitate to send emails to ".$config_email."" . "\n\n";
 				$message .= "Best Regards. " . "\n\n";
-				$message .= "Hot Beauty Hair Team. " . "\n\n";
+				$message .= "Naija Beauty Hair Team. " . "\n\n";
 
 			    $mail = new Mail();
 				$mail->protocol = $this->config->get('config_mail_protocol');

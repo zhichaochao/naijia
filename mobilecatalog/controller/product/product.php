@@ -1375,7 +1375,7 @@ unset($this->session->data['cart_ids']);
                 $html_data['sku'] = trim($pro_model);
                 $html_data['send_page'] = 'product-wholesale-inquiry';
                 $view = 'mail/product_email';
-                $title = 'Hot Beauty Hair Product Inquiry';
+                $title = 'Naija Beauty Hair Product Inquiry';
                 $this->send($name, $reply_to, $html_data, $view, $title);
             }
 
@@ -1383,7 +1383,7 @@ unset($this->session->data['cart_ids']);
             if(trim($send_page) == 'information-contact'){
                 $html_data['send_page'] = $send_page;
                 $view = 'mail/contact_us_email';
-                $title = 'Hot Beauty Hair Contact Us Inquiry';
+                $title = 'Naija Beauty Hair Contact Us Inquiry';
                 $this->send($name, $reply_to, $html_data, $view, $title);
 
             }
@@ -1392,7 +1392,7 @@ unset($this->session->data['cart_ids']);
             if(trim($send_page) == 'information-contact_us-addContactusenquiry'){
                 $html_data['send_page'] = $contact_send_page;
                 $view = 'mail/contact_us_email';
-                $title = 'Hot Beauty Hair Contact Us Inquiry';
+                $title = 'Naija Beauty Hair Contact Us Inquiry';
                 $this->send($name, $reply_to, $html_data, $view, $title);
             }
         }

@@ -24,7 +24,7 @@ class ControllerAccountVip extends Controller {
 			$account_url = $this->url->link('account/account');
 			$data['user_name'] = '<a href="'.$account_url.'">Please complete personal information!</a>';
 		} else {
-			$data['user_name'] = 'Dear '.$this->customer->getFirstName().' '.$this->customer->getLastName().' Welcome to Hot Beauty Hair Vip Clup';
+			$data['user_name'] = 'Dear '.$this->customer->getFirstName().' '.$this->customer->getLastName().' Welcome to Naija Beauty Hair Vip Clup';
 		}
         
 		//所有支付成功历史订单的价格总计
