@@ -187,8 +187,13 @@ class ControllerSaleOrder extends Controller {
 		$data['shipping'] = $this->url->link('sale/order/shipping', 'token=' . $this->session->data['token'], true);
 		$data['add'] = $this->url->link('sale/order/add', 'token=' . $this->session->data['token'], true);
 		$data['delete'] = $this->url->link('sale/order/delete', 'token=' . $this->session->data['token'], true);
-		$data['explode'] = $this->url->link('sale/order/exportComment', 'token=' . $this->session->data['token'], true);
 
+
+		if (isset($this->request->get['filter_order_status'])) {
+			$data['explode'] = $this->url->link('sale/order/exportComment', 'token=' . $this->session->data['token'].'&filter_order_status='.$filter_order_status, true);
+		}else{
+			$data['explode'] = $this->url->link('sale/order/exportComment', 'token=' . $this->session->data['token'], true);
+		}
 		$data['orders'] = array();
 
 		$filter_data = array(
@@ -1382,6 +1387,17 @@ class ControllerSaleOrder extends Controller {
 
       	if (isset($this->request->post['selected'])) {
       			$order_ids=$this->request->post['selected'];
+      		}else if(isset($this->request->get['filter_order_status'])){
+
+      			$filter_order_status=$this->request->get['filter_order_status'];
+      			$filter_data=array(
+      				'filter_order_status'  => $filter_order_status
+      				);
+      			$orders = $this->model_sale_order->getOrders($filter_data);
+      			
+				foreach ($orders as $key => $value) {
+				   $order_ids[]=$value['order_id'];
+				 }
       		}else{
       			$order_ids=array();
       			$orders = $this->model_sale_order->getOrders($data =array());

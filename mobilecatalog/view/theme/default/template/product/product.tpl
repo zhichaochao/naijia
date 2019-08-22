@@ -141,7 +141,7 @@
                 <?php }} ?>
                  <li class="clearfix" style="position: relative;">
                   <span style="display: block;height: 0.6rem;font-size: 0.26rem;margin: 0.35rem 0 0 0;">Mobile Phone Number:<p class="ts_ps">Please select Mobile Phone Number</p></span>
-                  <input type="text" name="numberdeails" value="<?php echo $numberdeails?>" style="width: 60%;height: 0.6rem;border: 1px solid #eee;line-height: 0.6rem;margin:0 0 0.35rem 0;padding: 0 0.2rem;font-size: 0.22rem;">
+                  <input type="text" name="numberdeails" value="<?php echo $numberdeails?>" style="width: 60%;height: 0.6rem;border: 1px solid #eee;line-height: 0.6rem;margin:9px 0 0.35rem 0;padding: 0 0.2rem;font-size: 0.22rem;">
                  </li>
                 </div>
                <?php if(isset($hot)&& $hot==3){ ?>
