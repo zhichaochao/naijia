@@ -24,12 +24,12 @@ class ControllerProductSearch extends Controller {
 
 		if (isset($this->request->get['tag'])) {
 			$tag = $this->request->get['tag'];
-		} elseif (isset($this->request->get['search'])) {
-			$tag = $this->request->get['search'];
+		} elseif (isset($this->request->post['search'])) {
+			$tag = $this->request->post['search'];
 		} else {
 			$tag = '';
 		}
-
+// print_r($tag);exit();
 		if (isset($this->request->get['description'])) {
 			$description = $this->request->get['description'];
 		} else {
@@ -211,7 +211,7 @@ class ControllerProductSearch extends Controller {
 
 		$data['products'] = array();
 
-		if (isset($this->request->get['search']) || isset($this->request->get['tag'])) {
+		if (isset($this->request->post['search']) || isset($this->request->get['tag']) || isset($this->request->get['search'])) {
 			$filter_data = array(
 				'filter_name'         => $search,
 				'filter_tag'          => $tag,
