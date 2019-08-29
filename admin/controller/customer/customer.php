@@ -1704,7 +1704,7 @@ class ControllerCustomerCustomer extends Controller {
 
 		$customer_info = $this->model_customer_customer->getCustomer($customer_id);
 		$customeraddres = $this->model_customer_customer->getCustomeraddres($customer_id);
-		// print_r($customeraddres);exit;
+		// print_r($customer_info);exit;
 	        if ($customer_info){
 		        if($customeraddres){
 		        	$format ='{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone_name}' . "\n" . '{country_name}';
@@ -1734,7 +1734,8 @@ class ControllerCustomerCustomer extends Controller {
 	     		}
 	        	$data['customers'][]=array(
 		            'customer_id' 	=> $customer_info['customer_id'],
-		           	'firstname' 	=> $customer_info['firstname'].     $customer_info['lastname'],
+		           	'firstname' 	=> $customer_info['firstname'],
+		           	'lastname' 		=> $customer_info['lastname'],
 		            'email'			=>  $customer_info['email'],
 		            'telephone'		=>  !empty($customer_info['telephone'])?$customer_info['telephone']:$telephone,
 		            'address' 		=> $payment_address
@@ -1743,6 +1744,7 @@ class ControllerCustomerCustomer extends Controller {
 	        	    $data['customers'][]=array(
 		            'customer_id' 	=> '',
 		           	'firstname' 	=> '',
+		           	'lastname' 		=> '',
 		            'email'			=>  '',
 		            'telephone'		=> '',
 		            'address' 		=> ''
@@ -1752,6 +1754,7 @@ class ControllerCustomerCustomer extends Controller {
 		        $header = array(
 		            'customer_id'	=> '*用户ID',
 		            'firstname' 	=> '*Firstname',
+		            'lastname' 		=> '*Lastname',
 		            'email' 		=> '*Email',
 		            'telephone' 	=> '*Telephone',
 		            'address' 		=> '*地址', 
