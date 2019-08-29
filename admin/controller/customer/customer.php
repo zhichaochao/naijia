@@ -1762,7 +1762,7 @@ class ControllerCustomerCustomer extends Controller {
 		        ksort($data['customers']);
 		        $excel = new SimpleExcel();
 		        $excel->header = $header;
-		        $excel->name = 'customers'.date('Y-m-d');
+		        $excel->name = '网站客户信息导出customers'.date('Y-m-d');
 		        $excel->data = $data['customers'];
 		        $excel->toString();
   		
