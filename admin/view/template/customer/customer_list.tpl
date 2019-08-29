@@ -3,6 +3,7 @@
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
+      <a  class="btn btn-success" id="btn-success" formaction="<?php echo $explode; ?>">批量导出</a>
       <a href="<?php echo $importComment; ?>" id="exportData" data-toggle="tooltip" title="import" class="btn btn-success">
          导入
         </a>
@@ -204,6 +205,15 @@
     </div>
   </div>
   <script type="text/javascript"><!--
+  $('#btn-success').on('click', function(e) {
+  $('#form-customer').attr('action', this.getAttribute('formAction'));
+  
+  // if (confirm('<?php echo $text_confirm; ?>')) {
+    $('#form-customer').submit();
+  // } else {
+  //   return false;
+  // }
+});
 $('#button-filter').on('click', function() {
 	url = 'index.php?route=customer/customer&token=<?php echo $token; ?>';
 	

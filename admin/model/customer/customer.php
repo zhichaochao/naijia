@@ -668,4 +668,62 @@ class ModelCustomerCustomer extends Model {
 		// }	
 		return $query;
 	}
+		public function getCustomeraddres($customer_id)
+	{
+		$sql="SELECT * FROM ". DB_PREFIX . "address a WHERE customer_id='" . (int)$customer_id . "'limit 1";
+		$query = $this->db->query($sql);
+		if ($query->num_rows) {
+			$address_1  =$query->row['address_1'];
+			$address_2  =$query->row['address_2'];
+			$phone		=$query->row['phone'];
+			$city 		=$query->row['city'];
+			$postcode 	=$query->row['postcode'];
+			$company 	=$query->row['company'];
+
+		} else {
+			$address_1  ='';
+			$address_2  ='';
+			$phone		='';
+			$city 		='';
+			$postcode 	='';
+			$company 	='';
+
+		}
+		if ($query->row) {
+			$country_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "country` WHERE country_id = '" . (int)$query->row['country_id'] . "'");
+
+			if ($country_query->num_rows) {
+				$country_name = $country_query->row['name'];
+			} else {
+				$country_name = '';
+			}
+
+			$zone_query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "zone` WHERE zone_id = '" . (int)$query->row['zone_id'] . "'");
+
+			if ($zone_query->num_rows) {
+				$zone_name = $zone_query->row['name'];
+				$zone_code = $zone_query->row['code'];
+			} else {
+				$zone_name = '';
+				$zone_code = '';
+			}
+		}else{
+			$country_name = '';
+			$zone_name = '';
+			$zone_code = '';
+		}
+		return array(
+				'address_1'            => $address_1,
+				'address_2'            => $address_2,
+				'country_name'         => $country_name,
+				'zone_name'            => $zone_name,
+				'city'            	   => $city,
+				'postcode'             => $postcode,
+				'zone_code'            => $zone_code,
+				'company'              => $company,
+				'phone'            	   => $phone
+			);
+	    // print_r($query);exit;
+		// return $query;
+	}
 }

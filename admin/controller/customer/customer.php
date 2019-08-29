@@ -490,7 +490,7 @@ class ControllerCustomerCustomer extends Controller {
 		}
 
 		$data['importComment'] = $this->url->link('customer/customer/importComment', 'token=' . $this->session->data['token'], 'SSL');
-
+		$data['explode'] = $this->url->link('customer/customer/exportComment', 'token=' . $this->session->data['token'], true);
 		$data['heading_title'] = $this->language->get('heading_title');
 
 		$data['text_list'] = $this->language->get('text_list');
@@ -1687,4 +1687,81 @@ class ControllerCustomerCustomer extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+	//导出 
+      public function exportComment(){
+      	require_once DIR_SYSTEM.'SimpleExcel.php';
+      	$this->load->model('customer/customer');
+      	if (isset($this->request->post['selected'])) {
+      			$customer_ids=$this->request->post['selected'];
+      		}else{
+      			$customer_ids=array();
+      			$rescustomer_ids = $this->model_customer_customer->getCustomers($data =array());
+				foreach ($rescustomer_ids as $key => $value) {
+				   $customer_ids[]=$value['customer_id'];
+				 }
+      		}
+	foreach ($customer_ids as $customer_id) {
+
+		$customer_info = $this->model_customer_customer->getCustomer($customer_id);
+		$customeraddres = $this->model_customer_customer->getCustomeraddres($customer_id);
+		// print_r($customeraddres);exit;
+	        if ($customer_info){
+		        if($customeraddres){
+		        	$format ='{address_1}' . "\n" . '{address_2}' . "\n" . '{city} {postcode}' . "\n" . '{zone_name}' . "\n" . '{country_name}';
+		        	$find = array(
+					'{address_1}',
+					'{address_2}',
+					'{city}',
+					'{postcode}',
+					'{country_name}',
+					'{zone_name}',
+				);
+
+				$replace = array(
+					'address_1' 	=> $customeraddres['address_1'],
+					'address_2' 	=> $customeraddres['address_2'],
+					'city'      	=> $customeraddres['city'],
+					'postcode'  	=> $customeraddres['postcode'],
+					'country_name'  => $customeraddres['country_name'],
+					'zone_name'   	=> $customeraddres['zone_name']
+			);
+
+					$payment_address = str_replace(array("\r\n", "\r", "\n"), '    ', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '    ', trim(str_replace($find, $replace, $format))));
+					$telephone =$customeraddres['phone'];
+	     		}else{
+			     	$payment_address ='';
+			     	$telephone ='';
+	     		}
+	        	$data['customers'][]=array(
+		            'customer_id' 	=> $customer_info['customer_id'],
+		           	'firstname' 	=> $customer_info['firstname'].     $customer_info['lastname'],
+		            'email'			=>  $customer_info['email'],
+		            'telephone'		=>  !empty($customer_info['telephone'])?$customer_info['telephone']:$telephone,
+		            'address' 		=> $payment_address
+		            
+	            );
+	        	    $data['customers'][]=array(
+		            'customer_id' 	=> '',
+		           	'firstname' 	=> '',
+		            'email'			=>  '',
+		            'telephone'		=> '',
+		            'address' 		=> ''
+	            );
+      		}	
+      }
+		        $header = array(
+		            'customer_id'	=> '*用户ID',
+		            'firstname' 	=> '*Firstname',
+		            'email' 		=> '*Email',
+		            'telephone' 	=> '*Telephone',
+		            'address' 		=> '*地址', 
+		        );
+		        ksort($data['customers']);
+		        $excel = new SimpleExcel();
+		        $excel->header = $header;
+		        $excel->name = 'customers'.date('Y-m-d');
+		        $excel->data = $data['customers'];
+		        $excel->toString();
+  		
+		}
 }
