@@ -1,9 +1,9 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://hotnajia.com/');
+define('HTTP_SERVER', 'http://www.naijabeautyhair.com/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://hotnajia.com/');
+define('HTTPS_SERVER', 'https://www.naijabeautyhair.com/');
 define('DIR_ROOT', str_replace('\\', '/', __DIR__).'/');
 if(isMobile()){//移动设备访问m站目录
 	define('DIR_APPLICATION', DIR_ROOT.'mobilecatalog/');

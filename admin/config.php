@@ -1,11 +1,11 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://hotnajia.com/admin/');
-define('HTTP_CATALOG', 'http://hotnajia.com/');
+define('HTTP_SERVER', 'http://www.naijabeautyhair.com/admin/');
+define('HTTP_CATALOG', 'http://www.naijabeautyhair.com/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://hotnajia.com/admin/');
-define('HTTPS_CATALOG', 'http://hotnajia.com/');
+define('HTTPS_SERVER', 'https://www.naijabeautyhair.com/admin/');
+define('HTTPS_CATALOG', 'https://www.naijabeautyhair.com/');
 
 // DIR
 // DIR
