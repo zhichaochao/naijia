@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="GtTqbRa3BUZH5uTRU6rO_KEQCWomDYOpoFE5FcozXq4" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/catalog/view/theme/default/css/common.css" />
