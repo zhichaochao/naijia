@@ -7,9 +7,9 @@
 <input type="hidden" name="limit" value='<?=$limit;?>' id='limit'/>
   <!--内容-->
     <div class="in_content clearfix"></div>
-    <div class="top_ban">
+    <!-- <div class="top_ban">
       <img src="<?php echo $ydimage1?>"/>
-    </div>
+    </div> -->
     <div class="product clearfix">
       <ul class="pro_list clearfix prolist">
 

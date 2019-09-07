@@ -80,12 +80,12 @@
         <div class="top_nav">
           <ul>
             <li><a href="<?=$home;?>">Home <i></i></a></li>
-            <li><a href="<?php echo $hothref;?>"><span class="hot">Hot Sales </span><i></i></a>
-            </li>
+           <!--  <li><a href="<?php echo $hothref;?>"><span class="hot">Hot Sales </span><i></i></a>
+            </li> -->
             <!-- 以下是 hotsale有子类的时候用 -->
-            <!-- <?php foreach($categorieson as $key => $category) { ?>
-            <li><a href="<?php echo $hothref;?>"><span class="hot">Hot Sales </span><i></i></a>
-            </li>
+            <?php foreach($categorieson as $key => $category) { ?>
+            <!-- <li><a href="<?php echo $hothref;?>"><span class="hot">Hot Sales </span><i></i></a>
+            </li> -->
             <li >
               <p class="nav_p active li_p2"><a href="<?php echo $hothref;?>">Hot Sales <i></i></a></p>
               
@@ -97,7 +97,7 @@
                     </ol>
                     <?php } ?>
                   </li>
-            <?php } ?> -->
+            <?php } ?>
             <?php foreach($categories as $key => $category) { ?>
             <li >
               <p class="nav_p active li_p1"><a href="<?php echo $category['href'];?>"><?php echo $category['name'];?><i></i></a></p>
