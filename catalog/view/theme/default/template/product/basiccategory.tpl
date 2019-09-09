@@ -189,6 +189,9 @@ function wishlist(product_id,e) {
       if (data.success) {
          // tips('Collection Success');
         $('#wishlist_count').html(data.total);
+      }else{
+        tips('Please login first','gantan',1000);
+        $(e).removeClass("active");
       }
                // location.reload(); 
     }

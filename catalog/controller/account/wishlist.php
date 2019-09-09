@@ -160,7 +160,7 @@ $url = '';
 
 // print_r($data['products']);exit;
 		$data['continue'] = $this->url->link('account/account', '', true);
-		$data['wishlist_delete'] = $this->url->link('account/wishlist/delete');
+		$data['wishlist_delete'] = $this->url->link('account/wishlist/delete', '', true);
 		if(isset($_SERVER['HTTP_REFERER'])){
 			$data['home'] =$_SERVER['HTTP_REFERER'];
 		}else{
@@ -209,17 +209,18 @@ $url = '';
 
 				$json['total'] =  $this->model_account_wishlist->getTotalWishlist();
 			} else {
-				if (!isset($this->session->data['wishlist'])) {
-					$this->session->data['wishlist'] = array();
-				}
+				$json['error'] ='Please login first';
+				// if (!isset($this->session->data['wishlist'])) {
+				// 	$this->session->data['wishlist'] = array();
+				// }
 
-				$this->session->data['wishlist'][] = $this->request->post['product_id'];
+				// $this->session->data['wishlist'][] = $this->request->post['product_id'];
 
-				$this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
+				// $this->session->data['wishlist'] = array_unique($this->session->data['wishlist']);
 
-				$json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
+				// $json['success'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', true), $this->url->link('account/register', '', true), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));
 
-				$json['total'] = (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
+				// $json['total'] = (isset($this->session->data['wishlist']) ? count($this->session->data['wishlist']) : 0);
 			}
 		}
 

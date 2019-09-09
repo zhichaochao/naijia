@@ -160,6 +160,9 @@ function wishlist(product_id,e) {
       if (data.success) {
         $('#wishlist_count').html(data.total);
         $(e).addClass("active");
+      }else{
+        tips('Please login first','gantan',1000);
+        $(e).removeClass("active");
       }
                // location.reload(); 
     }

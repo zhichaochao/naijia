@@ -165,7 +165,7 @@ class ControllerCheckoutCart extends Controller {
 						$recurring .= sprintf($this->language->get('text_payment_cancel'), $this->currency->format($this->tax->calculate($product['recurring']['price'] * $product['quantity'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']), $product['recurring']['cycle'], $frequencies[$product['recurring']['frequency']], $product['recurring']['duration']);
 					}
 				}
-
+				$wishlist= $this->model_catalog_product->wishlistornot($product['product_id']);	
 				$data['products'][] = array(
 					'product_id'   => $product['product_id'],
 					'cart_id'   => $product['cart_id'],
@@ -183,12 +183,12 @@ class ControllerCheckoutCart extends Controller {
 					'reward'    => ($product['reward'] ? sprintf($this->language->get('text_points'), $product['reward']) : ''),
 					'price'     => $price,
 					'total'     => $total,
-					'wish'			=>$this->model_catalog_product->wishlistornot($product['product_id']),
+					'wish'			=>empty($wishlist) ? 0:1 ,
 					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
 				);
 			}
             $this->session->data['cart_total']=$cart_total;
-			// print_r( $this->session->data['cart_total']);exit();
+            
 
 			// Gift Voucher
 			$data['vouchers'] = array();
