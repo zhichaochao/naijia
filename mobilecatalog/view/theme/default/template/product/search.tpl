@@ -115,6 +115,9 @@ $('select[name=\'category_id\']').trigger('change');
             success:function(data){
               if (data.success) {
                 $('#wishlist_count').html(data.total);
+              }else{
+                tips('Please login first','gantan',1000);
+                $(e).removeClass("active");
               }
             }
          })
