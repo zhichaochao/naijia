@@ -119,7 +119,7 @@ class ControllerCheckoutRegister extends Controller {
 		}
 		$this->document->setTitle('register');
 		// $data['title']='guest';
-		$data['action']=$this->url->link('checkout/register/save');
+		$data['action']=$this->url->link('checkout/register/save', '', true);
 		$data['login']=$this->url->link('account/login','&checkout=1');
 		// print_r(	$data['login']);exit();
 

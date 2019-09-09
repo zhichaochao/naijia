@@ -14,7 +14,7 @@ class ControllerExtensionPaymentBankTransfer extends Controller {
 		$this->session->data['wait_href']=$this->url->link('extension/payment/bank_transfer/confirm');
 
 
-		$data['continue'] = $this->url->link('checkout/payment');
+		$data['continue'] = $this->url->link('checkout/payment', '', true);
 
 		return $this->load->view('extension/payment/bank_transfer', $data);
 	}
