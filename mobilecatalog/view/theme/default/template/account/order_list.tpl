@@ -24,8 +24,8 @@
           
           <div class="or_nav">
             <ol class="ornav_ol clearfix">
-              <li class="<?=$status==1 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=1">Pending<span class="<?=$status==1 ?'active':'';?>"><?php echo $totalresults?></span></a></li>
-              <li class="<?=$status==8 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=8">Unfilled<span class="<?=$status==8 ?'active':'';?>"><?php echo $totalresults?></span></a></li>
+              <li class="<?=$status==1 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=1">Pending <span class="<?=$status==1&&$totalresults!=0 ?'active':'';?>"><?php echo $totalresults?></span></a></li>
+              <li class="<?=$status==8 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=8">Unfilled<span class="<?=$status==8&&$totalresults!=0 ?'active':'';?>"><?php echo $totalresults?></span></a></li>
               <li class="<?=$status==14 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=14">Delivered</a></li>
               <li class="<?=$status==5 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=5">Complete</a></li>
               <li class="<?=$status==16 ?'active':'';?>"><a href="<?php echo $sortorders?>&status=16">Invalid</a></li>
