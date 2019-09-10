@@ -57,7 +57,7 @@ class ControllerCheckoutSuccess extends Controller {
 			}
 			$data['totals']=$totals;
 				// print_r($data['totals']);exit();
-			$data['upload_receipt']=$this->url->link('checkout/payment/success');
+			$data['upload_receipt']=$this->url->link('checkout/payment/success', '', true);
 
 			// print_r($data['bank']);exit();
 

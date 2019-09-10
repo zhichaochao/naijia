@@ -527,7 +527,7 @@ class ControllerAccountOrder extends Controller {
 				}
 			}
 // print_r($totals);exit;
-			$data['upload_receipt']=$this->url->link('account/order/receipt');
+			$data['upload_receipt']=$this->url->link('account/order/receipt', '', true);
 			$data['comment'] = nl2br($order_info['comment']);
 			// History
 			$data['histories'] = array();
