@@ -80,9 +80,9 @@ class ControllerInformationLagosstore extends Controller {
          		}else{
                 $data['logins']=1;               
             	}
-             $data['login'] = $this->url->link('account/login');
+             $data['login'] = $this->url->link('account/login', '', true);
 
-			$data['action'] = $this->url->link('information/lagosstore');
+			$data['action'] = $this->url->link('information/lagosstore', '', true);
 			if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 					$ap="";
 				  $temp_x=$this->request->post['posTypeSelect'];

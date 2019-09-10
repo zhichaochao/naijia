@@ -339,7 +339,7 @@ class ControllerAccountAddress extends Controller {
 		$data['add'] = $this->url->link('account/address/add', '', true);
 		$data['back'] = $this->url->link('account/account', '', true);
 
-		$data['action'] = $this->url->link('account/address/edit', true);
+		$data['action'] = $this->url->link('account/address/edit','', true);
 
 		$data['column_left'] = $this->load->controller('common/column_left');
 		//$data['column_right'] = $this->load->controller('common/column_right');
@@ -378,7 +378,7 @@ class ControllerAccountAddress extends Controller {
 		} else {
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_edit_address'),
-				'href' => $this->url->link('account/address/edit', 'address_id=' . $this->request->get['address_id'], true)
+				'href' => $this->url->link('account/address/edit', 'address_id=' . $this->request->get['address_id'],'', true)
 			);
 		}
 
@@ -485,7 +485,7 @@ class ControllerAccountAddress extends Controller {
 		if (!isset($this->request->post['address_id'])) {
 			$data['action'] = $this->url->link('account/address/add', '', true);
 		} else {
-			$data['action'] = $this->url->link('account/address/edit', 'address_id=' . $this->request->post['address_id'], true);
+			$data['action'] = $this->url->link('account/address/edit', 'address_id=' . $this->request->post['address_id'], '',true);
 		}
 // print_r($this->request->post['address_id']);exit();
 		if (isset($this->request->get['address_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {

@@ -45,7 +45,7 @@ class ControllerInformationCompany extends Controller {
 		}
         //用户名
         
-		$data['action'] = $this->url->link('information/company');
+		$data['action'] = $this->url->link('information/company', '', true);
 
 
 		if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
@@ -155,7 +155,7 @@ class ControllerInformationCompany extends Controller {
 
 
 
-			$data['continue'] = $this->url->link('common/home');
+			$data['continue'] = $this->url->link('common/home', '', true);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');

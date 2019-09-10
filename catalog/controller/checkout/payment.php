@@ -73,7 +73,7 @@ class ControllerCheckoutPayment extends Controller {
 		$data['order_number']=$order_info['order_number'];
 		$data['order_status']=$order_status;
 		$data['continue']=$this->url->link('common/home');
-		$data['view_order']=$this->url->link('account/order/info','&order_id='.$this->session->data['order_id']);
+		$data['view_order']=$this->url->link('account/order/info','&order_id='.$this->session->data['order_id'], '', true);
 		$this->load->model('tool/image');
 		// 活动宣传1
 		$data['promotion']=$this->config->get('config_meta_promotion');

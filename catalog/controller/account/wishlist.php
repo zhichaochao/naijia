@@ -149,7 +149,7 @@ $url = '';
 					'price'      => $this->currency->format($product_info['price'],$this->session->data['currency']),
 					'special'     => $specials>0? $this->currency->format($specials,$this->session->data['currency']) : '',
 					'hot'    => $product_info['hot'],
-					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id']),
+					'href'       => $this->url->link('product/product', 'product_id=' . $product_info['product_id'], '', true),
 					'remove'     => $this->url->link('account/wishlist', 'remove=' . $product_info['product_id'])
 				);
 				// print_r($data['products']);exit;

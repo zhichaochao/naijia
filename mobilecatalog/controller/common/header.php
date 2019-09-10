@@ -79,7 +79,7 @@ class ControllerCommonHeader extends Controller {
 		$data['logged'] = $this->customer->isLogged();
 		$data['account'] = $this->url->link('account/account', '', true);
 		$data['register'] = $this->url->link('account/register', '', true);
-		$data['search_url'] = $this->url->link('product/search');
+		$data['search_url'] = $this->url->link('product/search', '', true);
 		$data['searchdel'] = $this->url->link('common/header/delete');
 
 		$data['category'] = $this->url->link('product/category');
@@ -280,7 +280,7 @@ class ControllerCommonHeader extends Controller {
 // print_r($data['hotsearched']);exit;
 
 		$this->load->model('account/customer');
-$data['action'] = $this->url->link('common/home');
+$data['action'] = $this->url->link('common/home', '', true);
 		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
 		// print_r($customer_info);exit;
 		if (!empty($customer_info)) {

@@ -99,7 +99,7 @@ class ControllerCommonHome extends Controller {
 				
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating']*20,
-					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id']),
+					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'], '', true),
 					'wishlist'	  =>$wishlist
 				
 				);
@@ -138,7 +138,7 @@ class ControllerCommonHome extends Controller {
                $product_info = $this->model_catalog_product->getProduct($result['product_id']);
                 $data['allreviews'][] = array(
                     'review_id'     => $result['review_id'],
-                    'href'     =>$this->url->link('product/product','product_id='.$result['product_id']),
+                    'href'     =>$this->url->link('product/product','product_id='.$result['product_id'], '', true),
                     'author'        => substr($result['author'],0,3).'***',
                     'text'          => nl2br($result['text']),
                     'thumbs'          =>$thumbs,
@@ -290,17 +290,17 @@ class ControllerCommonHome extends Controller {
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		 // dianzan
-        $data['addthumbs'] = $this->url->link('product/product/addthumbs');
-        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
-        $data['login'] = $this->url->link('account/login');
-        $data['coupon'] = $this->url->link('common/coupon');
+        $data['addthumbs'] = $this->url->link('product/product/addthumbs', '', true);
+        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs', '', true);
+        $data['login'] = $this->url->link('account/login', '', true);
+        $data['coupon'] = $this->url->link('common/coupon', '', true);
         $data['addcoupon'] = $this->url->link('common/coupon/add', '', true);
 
 		
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
-		$data['homes'] = $this->url->link('information/allreviews');
+		$data['homes'] = $this->url->link('information/allreviews', '', true);
 
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}

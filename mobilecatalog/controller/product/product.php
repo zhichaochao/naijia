@@ -108,7 +108,7 @@ unset($this->session->data['cart_ids']);
         // print_r(  $data['selects']);exit();
        
         $data['options'] = $this->model_catalog_product->getOptionValues();
-        $data['coupon'] = $this->url->link('common/coupon');
+        $data['coupon'] = $this->url->link('common/coupon', '', true);
         
         $this->load->model('catalog/review');
         $resultcoupon = $this->model_catalog_review->getcoupon(0);
@@ -211,7 +211,7 @@ unset($this->session->data['cart_ids']);
                       $data['selfimage']='';
                 }
                 // print_r( $data['selfimage']);exit();
-            $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id']);
+            $data['selfhref']    = $this->url->link('product/product', 'product_id=' . $this->request->get['product_id'], '', true);
             // print_r($data['selfhref']);exit;
             $data['revi'] = $product_info['reviews'];
             $data['rating'] = $product_info['rating'];
@@ -309,7 +309,7 @@ unset($this->session->data['cart_ids']);
 
             $data['delewishlist'] = $this->url->link('account/wishlist/delete', '', true);
 
-            $data['review_tpl'] = $this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id']);
+            $data['review_tpl'] = $this->url->link('product/product/review', 'product_id=' . $this->request->get['product_id'], '', true);
 
             //购物车数量
         $data['text_cart_items'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
@@ -567,7 +567,7 @@ unset($this->session->data['cart_ids']);
             }
 
             //评论提交的地址
-            $data['reviews_action'] = $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id']);
+            $data['reviews_action'] = $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'], '', true);
 
             // $data['reviews'] = sprintf($this->language->get('text_reviews'), (int)$product_info['reviews']);
             // $data['rating'] = (int)$product_info['rating'];
@@ -919,9 +919,9 @@ unset($this->session->data['cart_ids']);
         }
 
         // dianzan
-        $data['addthumbs'] = $this->url->link('product/product/addthumbs');
-        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
-        $data['login'] = $this->url->link('account/login');
+        $data['addthumbs'] = $this->url->link('product/product/addthumbs', '', true);
+        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs', '', true);
+        $data['login'] = $this->url->link('account/login', '', true);
 
         $data['revi'] = $product_info['reviews'];
         $data['rating'] = $product_info['rating'];
@@ -960,7 +960,7 @@ unset($this->session->data['cart_ids']);
         if(isset($_SERVER['HTTP_REFERER'])){
             $data['home'] =$_SERVER['HTTP_REFERER'];
         }
-        $data['action'] = $this->url->link('product/product/write', true);
+        $data['action'] = $this->url->link('product/product/write', '', true);
 
         $data['order_id']=$this->request->get['order_id'];
       // print_r($data['order_id']);exit;

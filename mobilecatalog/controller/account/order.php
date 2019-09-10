@@ -26,10 +26,10 @@ class ControllerAccountOrder extends Controller {
 		$data['column_date_added'] = $this->language->get('column_date_added');
 		$data['column_action'] = $this->language->get('column_action');
 
-		$data['orderdel'] = $this->url->link('account/order/delete');
-		$data['orderrecover'] = $this->url->link('account/order/recover');
-		$data['orderconfirm'] = $this->url->link('account/order/confirm');
-		$data['sortorders'] = $this->url->link('account/order');
+		$data['orderdel'] = $this->url->link('account/order/delete', '', true);
+		$data['orderrecover'] = $this->url->link('account/order/recover', '', true);
+		$data['orderconfirm'] = $this->url->link('account/order/confirm', '', true);
+		$data['sortorders'] = $this->url->link('account/order', '', true);
 
 		$data['button_view'] = $this->language->get('button_view');
 		$data['button_continue'] = $this->language->get('button_continue');
@@ -135,7 +135,7 @@ class ControllerAccountOrder extends Controller {
 			);
 			
 		}
-		$data['view'] = $this->url->link('account/order/info');
+		$data['view'] = $this->url->link('account/order/info', '', true);
 		// print_r($data['orders']);exit();
 		// 
 		$customer_info = $this->model_account_customer->getCustomer($this->customer->getId());
@@ -262,8 +262,8 @@ class ControllerAccountOrder extends Controller {
 			$data['email'] = $this->config->get('config_email');
 
 
-			$data['orderrecover'] = $this->url->link('account/order/recover');
-			$data['orderconfirm'] = $this->url->link('account/order/confirm');
+			$data['orderrecover'] = $this->url->link('account/order/recover', '', true);
+			$data['orderconfirm'] = $this->url->link('account/order/confirm', '', true);
 
 			if (isset($this->session->data['error'])) {
 				$data['error_warning'] = $this->session->data['error'];
@@ -948,7 +948,7 @@ class ControllerAccountOrder extends Controller {
 	    if($error==1){
 	    	$this->response->redirect( $this->url->link('account/order/cancel', 'order_id=' . $order_id.'&tips=1', true));
 	    	}else{
-	    		 $this->response->redirect($this->url->link('checkout/payment'));
+	    		 $this->response->redirect($this->url->link('checkout/payment', '', true));
 
 	    	}
 	
@@ -973,7 +973,7 @@ class ControllerAccountOrder extends Controller {
 	    //$this->load->model('account/order');
 	    //$order_info = $this->model_account_order->getOrder($order_id);
 
-	    $this->response->redirect($this->url->link('checkout/success','order_id='.$order_id));
+	    $this->response->redirect($this->url->link('checkout/success','order_id='.$order_id, '', true));
 	}
 	public function receipt()
 	{

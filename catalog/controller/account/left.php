@@ -9,39 +9,39 @@ class ControllerAccountLeft extends Controller {
                 array(
                
                     'name' => 'My Orders',
-                    'url' => $this->url->link('account/order')
+                    'url' => $this->url->link('account/order', '', true)
                 ),
                 //账户信息
                 array(
                 
                  
                     'name' => 'My Profile',
-                    'url' => $this->url->link('account/account')
+                    'url' => $this->url->link('account/account', '', true)
                 ),
                 //我的地址
                 array(
                  
                  
                     'name' => 'My Addresses',
-                    'url' => $this->url->link('account/address')
+                    'url' => $this->url->link('account/address', '', true)
                 ),
                 //我的心愿单
                 array(
                  
                 
                     'name' => 'My Favorites',
-                    'url' => $this->url->link('account/wishlist')
+                    'url' => $this->url->link('account/wishlist', '', true)
                 ),
                 //会员等级
                 array(
                  
                     'name' => 'My Coupon',
-                    'url' => $this->url->link('account/coupon')
+                    'url' => $this->url->link('account/coupon', '', true)
                 ),
                  array(
                  
                     'name' => 'My Message',
-                    'url' => $this->url->link('account/message')
+                    'url' => $this->url->link('account/message', '', true)
                 ),
                 //优惠劵
                 // array(

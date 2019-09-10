@@ -43,7 +43,7 @@ class ControllerInformationHelp extends Controller {
         $data['user_name'] = $this->customer->getFirstName().' '.$this->customer->getLastName();
         if($data['user_name'] == ' ') $data['user_name'] = $this->customer->getEmail();
 		//feedback提交
-		$data['action'] = $this->url->link('information/help');
+		$data['action'] = $this->url->link('information/help', '', true);
 
 		// $data['email'] = $this->config->get('config_email');
 		// $data['telephone'] = $this->config->get('config_telephone');

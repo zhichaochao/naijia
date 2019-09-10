@@ -64,7 +64,7 @@ class ControllerInformationAllreviews extends Controller {
 
                 $data['allreviews'][] = array(
                     'review_id'     => $result['review_id'],
-                    'href'     =>$this->url->link('product/product','product_id='.$result['product_id']),
+                    'href'     =>$this->url->link('product/product','product_id='.$result['product_id'], '', true),
                     'author'        => substr($result['author'],0,-2).'***',
                     'text'          => nl2br($result['text']),
                     'thumbs'          =>$thumbs,
@@ -87,8 +87,8 @@ class ControllerInformationAllreviews extends Controller {
         // }
 
         // dianzan
-        $data['addthumbs'] = $this->url->link('product/product/addthumbs');
-        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs');
+        $data['addthumbs'] = $this->url->link('product/product/addthumbs', '', true);
+        $data['deletethumbs'] = $this->url->link('product/product/deletethumbs', '', true);
 
         // $data['revi'] = $product_info['reviews'];
         // $data['rating'] = $product_info['rating'];
@@ -104,7 +104,7 @@ class ControllerInformationAllreviews extends Controller {
 
 		
 
-			$data['continue'] = $this->url->link('common/home');
+			$data['continue'] = $this->url->link('common/home', '', true);
 
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
