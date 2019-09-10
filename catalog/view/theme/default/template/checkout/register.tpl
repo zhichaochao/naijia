@@ -112,7 +112,7 @@
    
       
           
-          <li class="active pc_no">
+         <!--  <li class="active pc_no">
             
             <div class="form_text">
                     <div class="check_order  clearfix "  >
@@ -162,14 +162,14 @@
                             </div>
                             <div class="a_btn">
                                 <!-- <a onclick="pay();"  class="a_qd_btn">Continue to pay</a> -->
-                            </div>
+                     <!--        </div>
                         </div>
             </div>
-          </li>
+          </li> --> 
         </ul>
       
          </form>
-                <div class="fixed clearfix">
+              <!--   <div class="fixed clearfix">
                     <div class="fixed_text clearfix">
                         <div class="in_content clearfix"></div>
                         <div class="check_order yd_no clearfix confirm"  >
@@ -219,11 +219,11 @@
                             </div>
                             <div class="a_btn">
                                 <!-- <a onclick="pay();"  class="a_qd_btn">Continue to pay</a> -->
-                            </div>
+                          <!--   </div>
                         </div>
                     
                     </div>
-                </div>
+                </div> -->
       
       </div>
     </div>
