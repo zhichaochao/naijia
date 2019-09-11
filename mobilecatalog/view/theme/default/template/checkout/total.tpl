@@ -33,7 +33,7 @@
                   <label for="">
                    <input type="text" id="coupon_code" name="coupon" value="<?php echo @$coupon; ?>" placeholder="Coupon Code"/>
                     <button style="display: block;" onclick="coupond(this)" type="button">CONFIRM</button>
-                    <i></i>
+                    <i class="new-checkout-bot-code"></i>
                   </label>
                 </div> 
                <!-- <div class="shop_search">
@@ -143,10 +143,14 @@
                   success: function(json) {
                     console.log(json);
                     $('#totals_coupon').html(json.total.text);
+                    if (json['error']) {
+                    $('.new-checkout-bot-code').html( json['error']);
+                     }
                     if(json.coupon){
                     $('#jfyut').html(json.coupon.title+'<span>'+json.coupon.text+'</span>');
                     $('.text_i').html(json.coupon.title+'<i style="float: right;">'+json.coupon.text+'</i>');
                     $('.text_i').css('display','block');
+                     $('.new-checkout-bot-code').html( '');
                       }else{
                          $('#jfyut').html('');
                          $('.text_i').html('');
@@ -167,6 +171,7 @@
                     $('#jfyut').html('');
                      $('.text_i').html('');
                     $('.text_i').css('display','none');
+                    $('.new-checkout-bot-code').html('');
 
                   }
                 })

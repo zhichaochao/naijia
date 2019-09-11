@@ -418,7 +418,25 @@ class ControllerCheckoutCart extends Controller {
 
 		$json = array();
 		$this->session->data['coupon']=$this->request->post['coupon'];
+		
+		$this->load->language('extension/total/coupon');
 
+		$json = array();
+
+		$this->load->model('extension/total/coupon');
+
+		$coupon = $this->request->post['coupon'];
+		
+
+		$coupon_info = $this->model_extension_total_coupon->getCoupon($coupon);
+		if ($coupon_info) {
+			
+		} else {
+			$json['error'] = $this->language->get('error_coupon');
+		}
+		if(!isset($json['error'])){
+			$json['error'] ='';
+		}
 		$totals = array();
 			$taxes = $this->cart->getTaxes();
 			$total = 0;

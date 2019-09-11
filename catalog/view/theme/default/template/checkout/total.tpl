@@ -137,10 +137,14 @@
                   success: function(json) {
                     console.log(json);
                     $('#totals_coupon').html(json.total.text);
+                     if (json['error']) {
+                    $('.new-checkout-bot-code').html( json['error']);
+                     }
                     if(json.coupon){
                     $('#jfyut').html(json.coupon.title+'<span>'+json.coupon.text+'</span>');
                     $('.text_i').html(json.coupon.title+'<i>'+json.coupon.text+'</i>');
                     $('.text_i').css('display','block');
+                    $('.new-checkout-bot-code').html('');
                       }else{
                          $('#jfyut').html('');
                          $('.text_i').html('');
@@ -160,6 +164,7 @@
                      $('#totals_coupon').html(json.total.text);
                     $('#jfyut').html('');
                     $('.text_i').html('');
+                    $('.new-checkout-bot-code').html('');
                     $('.text_i').css('display','none');
 
                   }
