@@ -16,13 +16,14 @@
 									<h1>THANK YOU</h1>
 								</div>
 								<p>Please check your email for more information  about this order</p>
-								
+								<?php if (!empty($promotion)) { ?>	
 								<div class="huodong">
 									<ul>
 										<li data-src="<?php echo $promotionimg?>"><?php echo $promotion?> <img src="/catalog/view/theme/default/img/hot.gif"/></li>
 										<li data-src="<?php echo $promotionimgs?>"><?php echo $promotions?><img src="/catalog/view/theme/default/img/hot.gif"/></li>
 									</ul>
 								</div>
+								  <?php } ?>
 							</div>
 						<hr />
 						<div class="right clearfix">
