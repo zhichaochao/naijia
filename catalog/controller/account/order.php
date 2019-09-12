@@ -417,12 +417,18 @@ class ControllerAccountOrder extends Controller {
 			$data['shipping_address'] = str_replace(array("\r\n", "\r", "\n"), '<br />', preg_replace(array("/\s\s+/", "/\r\r+/", "/\n\n+/"), '<br />', trim(str_replace($find, $replace, $format))));
  			 // print_r($data['shipping_address']);exit;
  			$data['replace'] = $replace;
- 			$data['shipping_firstname'] = $order_info['shipping_firstname'];
- 			$data['shipping_addres'] = $order_info['shipping_address_1'];
+ 			$data['shipping_firstname'] = $order_info['payment_firstname'].$order_info['payment_lastname'];
+ 			// $data['shipping_addres'] = $order_info['shipping_address_1'];
  			$data['shipping_telephones'] = $order_info['telephone'];
 
  			// var_dump($data['shipping_telephones']);exit;
 			$data['shipping_method'] = $order_info['shipping_method'];
+
+			if(empty($data['shipping_address'])){
+				$data['shipping_addres']=$data['payment_address'];
+			}else{
+				$data['shipping_addres']=$data['shipping_address'];
+			}
 // print_r($data['shipping_method']);exit;
 			//物流号 dyl add
 			// if ($order_info['shippingNumber']) {
