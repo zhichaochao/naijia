@@ -163,6 +163,7 @@
     function del_img(obj){
       obj.siblings("img").attr("src","");
       obj.parent().css("display","none");
+      $("#file").remove();
       $(".file_div").css("display","block");
     }
     
