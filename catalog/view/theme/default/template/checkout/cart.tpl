@@ -136,6 +136,7 @@
              <p class="che">Shipment via GIG/DHL</p>
               <p>Within Lagos: 1-2 working days</p>
               <p>Outside Lagos: 2-4 working days</p>
+              <p>Ship Worldwide: 2-4 working days</p>
             <label for="country_id" style="display: none">
               <span>Country</span>
               
