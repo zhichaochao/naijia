@@ -60,7 +60,7 @@
                             <input type="hidden" name="agree" value="1" />
                             <ol class="pay_ol clearfix">  
                                 <?php if($currency=='NGN'){ ?>
-                             <?php foreach ($payment_methods as $payment_method) { if($payment_method['code']!='pp_express'){?>
+                             <?php foreach ($payment_methods as $payment_method) { ?>
                           
                                 <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
                                 <?php if($payment_method['code']=='paystack'){ ?>
@@ -76,7 +76,7 @@
                                     <em>₦</em>
                                 </li>
                      
-                                <?php }}}else{?>
+                                <?php }}else{?>
                             <?php foreach ($payment_methods as $payment_method) {if($payment_method['code']=='pp_express'){ ?>
                           
                                 <li class="<?= $code == $payment_method['code']?'active':''; ?> clearfix <?php echo $payment_method['code']; ?>" data="<?php echo $payment_method['code']; ?>">
