@@ -396,6 +396,7 @@ function bitian() {
   //删除选中的图片
  function del_img(obj){
     obj.parents("li").remove();
+    $("#file").remove();
   }
 </script>
 <script>
