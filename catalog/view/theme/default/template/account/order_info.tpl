@@ -209,7 +209,7 @@
               <li>
                 <div class="img">
                 <img src="<?php echo $bankvalue['bank_receipt'];?>" />
-                <div class="close" onclick="del_img($(this))"></div>
+                <div class="closes" onclick="del_img($(this))"></div>
                 </div>
               </li>
             <?php } ?>
