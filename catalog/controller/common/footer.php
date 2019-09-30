@@ -91,8 +91,8 @@ class ControllerCommonFooter extends Controller {
 
 							),
 						3=>array(
-							'title'=>'Hot To Order',
-							'url'=>$this->url->link('information/hottoorder'),
+							'title'=>'About Us',
+							'url'=>$this->url->link('information/company'),
 
 							),
 					),

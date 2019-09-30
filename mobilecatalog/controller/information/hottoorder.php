@@ -40,7 +40,7 @@ class ControllerInformationHottoorder extends Controller {
 
 
 		
-				$this->response->setOutput($this->load->view('information/hottoorder', $data));
+				$this->response->setOutput($this->load->view('information/vip', $data));
 			
 		
 
