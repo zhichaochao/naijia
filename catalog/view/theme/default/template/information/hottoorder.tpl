@@ -1,6 +1,8 @@
 <?php echo $header; ?>
 
-    
+    <style>
+        .text img{display: block;float: left;margin: 0 !important;}
+    </style>
     <div class="in_content clearfix"></div>
     <!--内容-->
     
