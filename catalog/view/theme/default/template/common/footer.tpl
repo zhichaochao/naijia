@@ -6,7 +6,7 @@
 
         <?php foreach($informations as $key => $information) { ?>
           <li>
-            <h1><?php echo $information['title']; ?> <img class="fot_img" src="<?php echo $information['image']; ?>" /></h1>
+            <h1><?php echo $information['title']; ?><img class="fot_img" src="<?php echo $information['image']; ?>" /></h1>
             <ol class="fot_ol">
             <?php foreach($information['child'] as $subkey=>$subval) { ?> 
               <li><a href="<?php echo $subval['url']; ?>"><?php echo $subval['title']; ?></a></li>
