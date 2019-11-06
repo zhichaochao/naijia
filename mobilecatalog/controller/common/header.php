@@ -337,6 +337,13 @@ $data['action'] = $this->url->link('common/home', '', true);
 			$data['class'] = 'common-home';
 		}
 // print_r($this->request->get['route']);exit();
+		if ($_SERVER['HTTPS']) {
+
+			 $data['mobileurl']='https://www.naijabeautyhair.com'.$_SERVER['REQUEST_URI'];
+		}else{
+
+			  $data['mobileurl']='http://www.naijabeautyhair.com'.$_SERVER['REQUEST_URI'];
+		}
 
 		return $this->load->view('common/header', $data);
 	}
