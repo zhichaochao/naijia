@@ -279,7 +279,7 @@ class ModelCatalogReview extends Model {
 	}
 
 	public function getfullCoupon($coupon_id) {
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon o WHERE coupon_id = '" . (int)$coupon_id . "'  AND o.date_end >= NOW()  AND o.status='1'");
 
 		return $query->row;
 	}

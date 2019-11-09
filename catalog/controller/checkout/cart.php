@@ -187,7 +187,7 @@ class ControllerCheckoutCart extends Controller {
 					'href'      => $this->url->link('product/product', 'product_id=' . $product['product_id'])
 				);
 			}
-            $this->session->data['cart_total']=$cart_total;
+            $this->session->data['cart_total']= substr($this->currency->format($cart_total, $this->session->data['currency']),1);
             
             if(REDUCTION){
             	$this->load->model('catalog/review');
@@ -354,7 +354,7 @@ class ControllerCheckoutCart extends Controller {
 				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
 				if(!empty($fullcoupon)){
 
-					$fulltotal=$fullcoupon['total'];
+					$fulltotal=substr($this->currency->format($fullcoupon['total'], $this->session->data['currency']),1);
 					$code=$fullcoupon['code'];
 
 					if($cart_total>=$fulltotal){
