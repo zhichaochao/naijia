@@ -189,7 +189,24 @@ class ControllerCheckoutCart extends Controller {
 			}
             $this->session->data['cart_total']=$cart_total;
 			// print_r( $this->session->data['cart_total']);exit();
+             if(REDUCTION){
+            	$this->load->model('catalog/review');
+				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
+				if(!empty($fullcoupon)){
 
+					$fulltotal=$fullcoupon['total'];
+					$code=$fullcoupon['code'];
+
+					if($cart_total>=$fulltotal){
+						$this->session->data['coupon']=$code;
+
+						// print_r($cart_total);exit;
+					}else{
+						unset($this->session->data['coupon']);
+						// print_r(2);exit;
+					}
+				}
+			}
 			// Gift Voucher
 			$data['vouchers'] = array();
 
@@ -329,6 +346,25 @@ class ControllerCheckoutCart extends Controller {
 			}
 			$this->load->model('catalog/review');
 			$cart_total=$this->session->data['cart_total'];
+
+			if(REDUCTION){
+
+				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
+				if(!empty($fullcoupon)){
+
+					$fulltotal=$fullcoupon['total'];
+					$code=$fullcoupon['code'];
+
+					if($cart_total>=$fulltotal){
+						$this->session->data['coupon']=$code;
+
+						// print_r($cart_total);exit;
+					}else{
+						unset($this->session->data['coupon']);
+						// print_r(2);exit;
+					}
+				}
+			}
 			// print_r($cart_total);exit;
 			$resultcoupon = $this->model_catalog_review->getCustomerUseCoupon();
 		// print_r($resultcoupon);exit;

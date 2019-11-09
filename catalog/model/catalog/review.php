@@ -277,5 +277,11 @@ class ModelCatalogReview extends Model {
 // print_r($query->row['total']);exit;
 		return $query->row['total'];
 	}
+
+	public function getfullCoupon($coupon_id) {
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "coupon WHERE coupon_id = '" . (int)$coupon_id . "'");
+
+		return $query->row;
+	}
 	
 }

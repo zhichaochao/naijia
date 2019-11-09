@@ -189,7 +189,24 @@ class ControllerCheckoutCart extends Controller {
 			}
             $this->session->data['cart_total']=$cart_total;
             
+            if(REDUCTION){
+            	$this->load->model('catalog/review');
+				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
+				if(!empty($fullcoupon)){
 
+					$fulltotal=$fullcoupon['total'];
+					$code=$fullcoupon['code'];
+
+					if($cart_total>=$fulltotal){
+						$this->session->data['coupon']=$code;
+
+						// print_r($cart_total);exit;
+					}else{
+						unset($this->session->data['coupon']);
+						// print_r(2);exit;
+					}
+				}
+			}
 			// Gift Voucher
 			$data['vouchers'] = array();
 
@@ -329,25 +346,48 @@ class ControllerCheckoutCart extends Controller {
 			}
 			$this->load->model('catalog/review');
 			$cart_total=$this->session->data['cart_total'];
-			// print_r($cart_total);exit;
-			$resultcoupon = $this->model_catalog_review->getCustomerUseCoupon();
-		// print_r($resultcoupon);exit;
-			 if ($this->customer->isLogged()) {
-			if(!empty($resultcoupon)){
-				foreach ($resultcoupon as $results) {
-				$data['coupons'][] = array(
-					'coupon_id'=>$results['coupon_id'],
-					'name'=>$results['name'],
-					'type'=>$results['type'],
-					'code'=>$results['code'],
-					'cart_total'=>$results['total']<$cart_total?'0':'1',
-					'discountp'=>floatval($results['discount']),
-					'discount'=>$this->currency->formats(floatval($results['discount']),$this->session->data['currency'])
-					);
+			
+			
+		
+			if(REDUCTION){
 
+				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
+				if(!empty($fullcoupon)){
+
+					$fulltotal=$fullcoupon['total'];
+					$code=$fullcoupon['code'];
+
+					if($cart_total>=$fulltotal){
+						$this->session->data['coupon']=$code;
+
+						// print_r($cart_total);exit;
+					}else{
+						unset($this->session->data['coupon']);
+						// print_r(2);exit;
+					}
 				}
 			}
-			}
+				// print_r($cart_total);exit;
+				$resultcoupon = $this->model_catalog_review->getCustomerUseCoupon();
+			// print_r($resultcoupon);exit;
+				 if ($this->customer->isLogged()) {
+					if(!empty($resultcoupon)){
+						foreach ($resultcoupon as $results) {
+						$data['coupons'][] = array(
+							'coupon_id'=>$results['coupon_id'],
+							'name'=>$results['name'],
+							'type'=>$results['type'],
+							'code'=>$results['code'],
+							'cart_total'=>$results['total']<$cart_total?'0':'1',
+							'discountp'=>floatval($results['discount']),
+							'discount'=>$this->currency->formats(floatval($results['discount']),$this->session->data['currency'])
+							);
+
+						}
+					}
+				}
+			
+			
 			// print_r($data['coupons']);exit;
 			$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 			$data['coupon_url'] = $this->url->link('checkout/cart/couponuse', '', true);
