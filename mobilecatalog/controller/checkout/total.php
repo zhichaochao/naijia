@@ -53,6 +53,24 @@ class ControllerCheckoutTotal extends Controller {
 					'texts'  => $this->currency->formats($total['value'], $this->session->data['currency'])
 				);
 			}
+			if(REDUCTION){
+				$cart_total=substr($this->currency->format($total['value'], $this->session->data['currency']),1);
+            	$this->load->model('catalog/review');
+				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
+				if(!empty($fullcoupon)){
+
+					$fulltotal=substr($this->currency->format($fullcoupon['total'], $this->session->data['currency']),1);
+					// print_r($fulltotal);
+					$code=$fullcoupon['code'];
+
+					if($cart_total>=$fulltotal){
+						$this->session->data['coupon']=$code;
+
+						// print_r($cart_total);exit;
+					}
+				
+				}
+			}
 			// print_r($data);
 
 			return $data;

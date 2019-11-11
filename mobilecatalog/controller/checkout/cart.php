@@ -194,7 +194,7 @@ class ControllerCheckoutCart extends Controller {
 				$fullcoupon = $this->model_catalog_review->getfullCoupon(14);
 				if(!empty($fullcoupon)){
 
-					$fulltotal=$fullcoupon['total'];
+					$fulltotal=substr($this->currency->format($fullcoupon['total'], $this->session->data['currency']),1);
 					$code=$fullcoupon['code'];
 
 					if($cart_total>=$fulltotal){
@@ -202,7 +202,7 @@ class ControllerCheckoutCart extends Controller {
 
 						// print_r($cart_total);exit;
 					}else{
-						unset($this->session->data['coupon']);
+						// unset($this->session->data['coupon']);
 						// print_r(2);exit;
 					}
 				}
