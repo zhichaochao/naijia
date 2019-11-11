@@ -361,15 +361,15 @@
      })
           
   //当窗口改变宽度时执行此函数
-    window.onresize=resizeBannerImage;
-    function resizeBannerImage()
-    {
-      var winW = $(window).width();
+    // window.onresize=resizeBannerImage;
+    // function resizeBannerImage()
+    // {
+    //   var winW = $(window).width();
       
-       if( winW <920) {
-      /* 这里是要执行的代码 */
-        // alert(winW);
-        window.location.href='<?php  echo $mobileurl ?>';
-      }
-    } 
+    //    if( winW <920) {
+    //   /* 这里是要执行的代码 */
+    //     // alert(winW);
+    //     window.location.href='<?php  echo $mobileurl ?>';
+    //   }
+    // } 
     </script>
