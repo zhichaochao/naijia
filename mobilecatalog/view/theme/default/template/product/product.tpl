@@ -45,9 +45,9 @@
                   <?php } ?>
                   
                 </div>
-                <?php if(!empty($resultcoupons)){?>
+               <!--  <?php if(!empty($resultcoupons)){?>
                   <a class="get_cou" href="<?php echo $coupon?>"><span>Get Coupon</span></a>
-                  <?php } ?>
+                  <?php } ?> -->
               <?php }else{?>
                   <div class="price" >
                 <?php if(isset($special)){ ?>
@@ -57,9 +57,9 @@
                    <?php } ?>
                   
                   </div> 
-                  <?php if(!empty($resultcoupons)){?>
+                 <!--  <?php if(!empty($resultcoupons)){?>
                    <a class="get_cou" href="<?php echo $coupon?>"><span>Get Coupon</span></a>
-                    <?php } ?>
+                    <?php } ?> -->
               <?php }?> 
 
               <div class="activity clearfix" style="border:none;">
