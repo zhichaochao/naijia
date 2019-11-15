@@ -70,7 +70,10 @@ function modification($filename) {
 		$file = DIR_MODIFICATION . 'admin/' .  substr($filename, strlen(DIR_APPLICATION));
 	} elseif (defined('DIR_OPENCART')) {
 		$file = DIR_MODIFICATION . 'install/' .  substr($filename, strlen(DIR_APPLICATION));
-	} else {
+	} elseif(MOBILE){
+
+		$file = DIR_MODIFICATION . 'mobilecatalog/' . substr($filename, strlen(DIR_APPLICATION));
+	}else{
 		$file = DIR_MODIFICATION . 'catalog/' . substr($filename, strlen(DIR_APPLICATION));
 	}
 

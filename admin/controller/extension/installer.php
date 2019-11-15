@@ -177,6 +177,14 @@ class ControllerExtensionInstaller extends Controller {
 							if (is_file($file) && substr($zip_name, 0, 15) == 'upload/catalog/') {
 								$json['overwrite'][] = substr($zip_name, 7);
 							}
+							
+							// Compare catalog files
+							$file = DIR_CATALOG_MOB . substr($zip_name, 21);
+
+							if (is_file($file) && substr($zip_name, 0, 21) == 'upload/mobilecatalog/') {
+								$json['overwrite'][] = substr($zip_name, 13);
+							}
+
 
 							// Compare image files
 							$file = DIR_IMAGE . substr($zip_name, 13);
@@ -254,110 +262,110 @@ class ControllerExtensionInstaller extends Controller {
 
 		$json = array();
 
-		if (!$this->user->hasPermission('modify', 'extension/installer')) {
-			$json['error'] = $this->language->get('error_permission');
-		}
+		// if (!$this->user->hasPermission('modify', 'extension/installer')) {
+		// 	$json['error'] = $this->language->get('error_permission');
+		// }
 
-		// Check FTP status
-		if (!$this->config->get('config_ftp_status')) {
-			$json['error'] = $this->language->get('error_ftp_status');
-		}
+		// // Check FTP status
+		// if (!$this->config->get('config_ftp_status')) {
+		// 	$json['error'] = $this->language->get('error_ftp_status');
+		// }
 
-		$directory = DIR_UPLOAD . $this->request->post['path'] . '/upload/';
+		// $directory = DIR_UPLOAD . $this->request->post['path'] . '/upload/';
 
-		if (!is_dir($directory) || substr(str_replace('\\', '/', realpath($directory)), 0, strlen(DIR_UPLOAD)) != DIR_UPLOAD) {
-			$json['error'] = $this->language->get('error_directory');
-		}
+		// if (!is_dir($directory) || substr(str_replace('\\', '/', realpath($directory)), 0, strlen(DIR_UPLOAD)) != DIR_UPLOAD) {
+		// 	$json['error'] = $this->language->get('error_directory');
+		// }
 
-		if (!$json) {
-			// Get a list of files ready to upload
-			$files = array();
+		// if (!$json) {
+		// 	// Get a list of files ready to upload
+		// 	$files = array();
 
-			$path = array($directory . '*');
+		// 	$path = array($directory . '*');
 
-			while (count($path) != 0) {
-				$next = array_shift($path);
+		// 	while (count($path) != 0) {
+		// 		$next = array_shift($path);
 
-				foreach ((array)glob($next) as $file) {
-					if (is_dir($file)) {
-						$path[] = $file . '/*';
-					}
+		// 		foreach ((array)glob($next) as $file) {
+		// 			if (is_dir($file)) {
+		// 				$path[] = $file . '/*';
+		// 			}
 
-					$files[] = $file;
-				}
-			}
+		// 			$files[] = $file;
+		// 		}
+		// 	}
 
-			// Connect to the site via FTP
-			$connection = ftp_connect($this->config->get('config_ftp_hostname'), $this->config->get('config_ftp_port'));
+		// 	// Connect to the site via FTP
+		// 	$connection = ftp_connect($this->config->get('config_ftp_hostname'), $this->config->get('config_ftp_port'));
 
-			if ($connection) {
-				$login = ftp_login($connection, $this->config->get('config_ftp_username'), $this->config->get('config_ftp_password'));
+		// 	if ($connection) {
+		// 		$login = ftp_login($connection, $this->config->get('config_ftp_username'), $this->config->get('config_ftp_password'));
 
-				if ($login) {
-					if ($this->config->get('config_ftp_root')) {
-						$root = ftp_chdir($connection, $this->config->get('config_ftp_root'));
-					} else {
-						$root = ftp_chdir($connection, '/');
-					}
+		// 		if ($login) {
+		// 			if ($this->config->get('config_ftp_root')) {
+		// 				$root = ftp_chdir($connection, $this->config->get('config_ftp_root'));
+		// 			} else {
+		// 				$root = ftp_chdir($connection, '/');
+		// 			}
 
-					if ($root) {
-						foreach ($files as $file) {
-							$destination = substr($file, strlen($directory));
+		// 			if ($root) {
+		// 				foreach ($files as $file) {
+		// 					$destination = substr($file, strlen($directory));
 
-							// Upload everything in the upload directory
-							// Many people rename their admin folder for security purposes which I believe should be an option during installation just like setting the db prefix.
-							// the following code would allow you to change the name of the following directories and any extensions installed will still go to the right directory.
-							if (substr($destination, 0, 5) == 'admin') {
-								$destination = basename(DIR_APPLICATION) . substr($destination, 5);
-							}
+		// 					// Upload everything in the upload directory
+		// 					// Many people rename their admin folder for security purposes which I believe should be an option during installation just like setting the db prefix.
+		// 					// the following code would allow you to change the name of the following directories and any extensions installed will still go to the right directory.
+		// 					if (substr($destination, 0, 5) == 'admin') {
+		// 						$destination = basename(DIR_APPLICATION) . substr($destination, 5);
+		// 					}
 
-							if (substr($destination, 0, 7) == 'catalog') {
-								$destination = basename(DIR_CATALOG) . substr($destination, 7);
-							}
+		// 					if (substr($destination, 0, 7) == 'catalog') {
+		// 						$destination = basename(DIR_CATALOG) . substr($destination, 7);
+		// 					}
 
-							if (substr($destination, 0, 5) == 'image') {
-								$destination = basename(DIR_IMAGE) . substr($destination, 5);
-							}
+		// 					if (substr($destination, 0, 5) == 'image') {
+		// 						$destination = basename(DIR_IMAGE) . substr($destination, 5);
+		// 					}
 
-							if (substr($destination, 0, 6) == 'system') {
-								$destination = basename(DIR_SYSTEM) . substr($destination, 6);
-							}
+		// 					if (substr($destination, 0, 6) == 'system') {
+		// 						$destination = basename(DIR_SYSTEM) . substr($destination, 6);
+		// 					}
 
-							if (is_dir($file)) {
-								$lists = ftp_nlist($connection, substr($destination, 0, strrpos($destination, '/')));
+		// 					if (is_dir($file)) {
+		// 						$lists = ftp_nlist($connection, substr($destination, 0, strrpos($destination, '/')));
 
-								// Basename all the directories because on some servers they don't return the fulll paths.
-								$list_data = array();
+		// 						// Basename all the directories because on some servers they don't return the fulll paths.
+		// 						$list_data = array();
 
-								foreach ($lists as $list) {
-									$list_data[] = basename($list);
-								}
+		// 						foreach ($lists as $list) {
+		// 							$list_data[] = basename($list);
+		// 						}
 
-								if (!in_array(basename($destination), $list_data)) {
-									if (!ftp_mkdir($connection, $destination)) {
-										$json['error'] = sprintf($this->language->get('error_ftp_directory'), $destination);
-									}
-								}
-							}
+		// 						if (!in_array(basename($destination), $list_data)) {
+		// 							if (!ftp_mkdir($connection, $destination)) {
+		// 								$json['error'] = sprintf($this->language->get('error_ftp_directory'), $destination);
+		// 							}
+		// 						}
+		// 					}
 
-							if (is_file($file)) {
-								if (!ftp_put($connection, $destination, $file, FTP_BINARY)) {
-									$json['error'] = sprintf($this->language->get('error_ftp_file'), $file);
-								}
-							}
-						}
-					} else {
-						$json['error'] = sprintf($this->language->get('error_ftp_root'), $root);
-					}
-				} else {
-					$json['error'] = sprintf($this->language->get('error_ftp_login'), $this->config->get('config_ftp_username'));
-				}
+		// 					if (is_file($file)) {
+		// 						if (!ftp_put($connection, $destination, $file, FTP_BINARY)) {
+		// 							$json['error'] = sprintf($this->language->get('error_ftp_file'), $file);
+		// 						}
+		// 					}
+		// 				}
+		// 			} else {
+		// 				$json['error'] = sprintf($this->language->get('error_ftp_root'), $root);
+		// 			}
+		// 		} else {
+		// 			$json['error'] = sprintf($this->language->get('error_ftp_login'), $this->config->get('config_ftp_username'));
+		// 		}
 
-				ftp_close($connection);
-			} else {
-				$json['error'] = sprintf($this->language->get('error_ftp_connection'), $this->config->get('config_ftp_hostname'), $this->config->get('config_ftp_port'));
-			}
-		}
+		// 		ftp_close($connection);
+		// 	} else {
+		// 		$json['error'] = sprintf($this->language->get('error_ftp_connection'), $this->config->get('config_ftp_hostname'), $this->config->get('config_ftp_port'));
+		// 	}
+		// }
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));

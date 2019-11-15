@@ -168,6 +168,10 @@ class ControllerExtensionModification extends Controller {
 							$path = DIR_CATALOG . substr($file, 8);
 						}
 
+						if ((substr($file, 0, 13) == 'mobilecatalog')) {
+							$path = DIR_CATALOG_MOB . substr($file, 14);
+						}
+
 						if ((substr($file, 0, 5) == 'admin')) {
 							$path = DIR_APPLICATION . substr($file, 6);
 						}
@@ -184,6 +188,10 @@ class ControllerExtensionModification extends Controller {
 									// Get the key to be used for the modification cache filename.
 									if (substr($file, 0, strlen(DIR_CATALOG)) == DIR_CATALOG) {
 										$key = 'catalog/' . substr($file, strlen(DIR_CATALOG));
+									}
+
+									if (substr($file, 0, strlen(DIR_CATALOG_MOB)) == DIR_CATALOG_MOB) {
+										$key = 'mobilecatalog/' . substr($file, strlen(DIR_CATALOG_MOB));
 									}
 
 									if (substr($file, 0, strlen(DIR_APPLICATION)) == DIR_APPLICATION) {
